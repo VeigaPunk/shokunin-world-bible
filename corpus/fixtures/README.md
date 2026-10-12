@@ -439,3 +439,30 @@ this round changes neither occupancy nor global tick schema. Withheld
 ordering is unassessed, not proof a dependency is satisfied, absent, or
 canonically false. Fixture descriptions describe input fields, not
 source testimony; citation IDs do not prove chronology or event truth.
+
+## Round 21: malformed dependency member must not mask occupancy
+
+`r21-clean/` and `r21-malformed/` differ only in second-row
+`depends_on` (`[]` versus `[null]`). Both rows otherwise have one
+resolved actor, distinct uniquely indexed places and tick 9. The
+`r21-*-reverse/` pair reverses place order; `r21-same-place/`,
+`r21-invalid-tick/`, `r21-wrong-kind-place/`, and
+`r21-ambiguous-actor/` test that malformed-list recovery does not
+weaken occupancy's certainty guards. Run from repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r21-clean
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r21-malformed
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r21-malformed-reverse
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r21-invalid-tick
+```
+
+A list containing a non-string dependency member still reports
+`expected event-id strings`; **all** member-wise dependency processing
+for that row is skipped. Independent occupied-slot comparison/store
+continues under the same unique-actor, unique-place-kind, nonnegative
+tick guards. The paired malformed input therefore retains the list
+error and adds its known-place booking; same-place and ineligible
+actor/place/time controls do not gain an unsupported booking. This is
+checker-input coverage, not evidence that either fixture event or its
+location is source-attested or canon.

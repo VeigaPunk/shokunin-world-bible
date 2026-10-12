@@ -202,3 +202,12 @@ Exactly typed integer ticks enter the timeline; bool/float fail required-field s
 | Negative prerequisite and separate valid inverted prerequisite to one dependent | Keep valid-edge inversion while invalid edge remains unassessed. | `fixtures/r20-mixed-edges/`; per-edge only, not graph-level proof. |
 
 Unknown, ambiguous, self and repeated dependency-ID diagnostics retain their own behavior. Malformed tick types fail required-field screening; accepted negative integers retain raw rows/IDs. This checker does not validate source-text chronology, causal truth or canon.
+
+## Round 21 — malformed dependency member and independent occupancy
+
+| Two same-actor/tick fixture rows | Checker findings | Limit |
+|---|---|---|
+| Distinct known places; second `depends_on: []` versus `[null]` | Clean-list pair has known-place `double-booked`; malformed pair retains `expected event-id strings` **and** the same independent booking. | `fixtures/r21-{clean,malformed}/` differ only in dependency list; reversed place order at `r21-{clean-reverse,malformed-reverse}/`. |
+| Same place or ineligible actor/place/tick with `[null]` | Keep dependency type and existing certainty diagnostics; no definite booking added. | `fixtures/r21-{same-place,invalid-tick,wrong-kind-place,ambiguous-actor}/`. |
+
+A malformed list member makes **all dependency-member lookup on that row** unassessed; it does not invalidate otherwise resolved actor/place/tick occupancy. No coercion or partial list recovery is claimed. Fixture descriptions and source IDs do not prove event occurrence, source text, or canon.

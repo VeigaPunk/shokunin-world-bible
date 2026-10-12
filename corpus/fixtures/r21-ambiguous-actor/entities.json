@@ -1,0 +1,57 @@
+[
+  {
+    "id": "mira",
+    "kind": "character",
+    "name": "Mira",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Mira carried the blue seal.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "harbor",
+    "kind": "place",
+    "name": "Lantern Harbor",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "Lantern Harbor has a registry.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "tower",
+    "kind": "place",
+    "name": "North Tower",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "North Tower has a watch bell.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "seal",
+    "kind": "item",
+    "name": "Blue Seal",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "The seal accompanied Mira.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "mira",
+    "kind": "character",
+    "name": "Fixture duplicate actor",
+    "first_appearance": "courier-log",
+    "claims": []
+  }
+]

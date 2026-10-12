@@ -239,9 +239,6 @@ def check(directory):
         source(row['source_id'], location + '.source_id')
         if row['tick'] < 0:
             errors.append(f'{location}.tick: must be nonnegative')
-        if not all(isinstance(dep, str) for dep in row['depends_on']):
-            errors.append(f'{location}.depends_on: expected event-id strings')
-            continue
         comparable_place = place_id_count == 1 and entities[row['place_id']]['kind'] == 'place'
         if actor_id_count == 1 and comparable_place and row['tick'] >= 0:
             slot = (row['entity_id'], row['tick'])
@@ -250,6 +247,9 @@ def check(directory):
                 errors.append(f'{location}: double-booked {row["entity_id"]!r} at tick {row["tick"]} in {previous} ({prior_place!r}) and {row["place_id"]!r}')
             else:
                 occupied[slot] = (location, row['place_id'])
+        if not all(isinstance(dep, str) for dep in row['depends_on']):
+            errors.append(f'{location}.depends_on: expected event-id strings')
+            continue
         seen_dependencies = set()
         for dep_index, dep in enumerate(row['depends_on']):
             dep_location = f'{location}.depends_on[{dep_index}]'
