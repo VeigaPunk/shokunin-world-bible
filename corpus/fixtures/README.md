@@ -308,3 +308,27 @@ interval, first-bell conversion, or causal link to Mira's arrival. The clean
 checker result validates schema/IDs and stated local timeline rules only;
 manual comparison of excerpt and event wording establishes internal
 correspondence, not independent corroboration or canon.
+
+## Round 16: absent place IDs and occupancy certainty
+
+`r16-valid-places/` has one uniquely identified `mira` at tick 7 in
+`harbor` and `tower`; `r16-missing-place/` changes only the second
+`place_id` to missing `unlisted`; `r16-missing-first/` puts missing place
+in the first event. `r16-mixed-three/` has known `harbor`, missing
+`unlisted`, then known `tower` on the same actor/tick. Run from repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r16-valid-places
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r16-missing-place
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r16-missing-first
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r16-mixed-three
+```
+
+An absent place ID retains its dangling finding and event row but cannot
+participate in a **definite different resolved places** occupancy comparison.
+The known harbor/tower pair still double-books, even with a missing row
+between them. Skipping the unresolved row means the possible conflict is
+not assessed, not disproven. This round does not change existing behavior
+for duplicate place IDs or unique non-place entities, which have separate
+diagnostics but may still enter raw-ID occupancy comparisons; it does not
+claim a general place-identity resolver or source-text/canon truth.

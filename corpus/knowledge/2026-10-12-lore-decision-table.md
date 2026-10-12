@@ -152,3 +152,13 @@ Malformed rows missing required fields do not count; a nonempty but unrecognized
 | No attribution to Mira's Blue Seal | “I do not attribute it to Mira’s Blue Seal.” | This does not prove the seal did or did not cause the mark. |
 
 No new entity claim/relation was added. The original `registrar-copy` and all inherited JSON rows remain unchanged; its “first bell” has no proven numeric tick conversion. Checker does not read excerpts. These newly authored in-world sentences are internally inspectable fiction, not recovered evidence or independent corroboration.
+
+## Round 16 — missing place and definite occupancy
+
+| Same uniquely screened actor/tick place references | Output policy | Limit |
+|---|---|---|
+| Two unique resolved places, distinct IDs | Retain `double-booked`. | `fixtures/r16-valid-places/`: `harbor` and `tower`. |
+| One or both place IDs absent (count zero) | Keep each dangling-place finding; do not compare/store missing-place event in occupancy. | `fixtures/r16-{missing-place,missing-first}/`; no conclusion that the event is at either known place or conflict-free. |
+| Known place, absent place, distinct known place | Keep dangling for middle row and definite booking for the known pair. | `fixtures/r16-mixed-three/`; unresolved row cannot hide supported conflict. |
+
+Duplicate IDs and uniquely identified non-place rows retain old separate diagnostics and old raw-ID occupancy behavior in this round; do **not** generalize this missing-place guard to those cases without a new experiment. Source IDs resolve citations, not locations or canon.
