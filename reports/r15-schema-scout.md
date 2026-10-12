@@ -1,0 +1,19 @@
+# Round 15 schema scout — raw observations and recommendations
+
+## Raw observations
+
+Inspected `.shokunin/lore/LOG.md` Round 15 declaration, `corpus/fixtures/check_bible.py`, and the active `corpus/fixtures/r10-registry-witness/{sources,entities,relations,timeline,contradictions}.json` plus `registrar-copy-excerpt.md` and `corpus/fixtures/README.md`.
+
+- The checker’s timeline schema requires each row to have exactly no enforced closed-key set, but at minimum these required, correctly typed, nonempty fields: `id` (string), `tick` (integer), `entity_id` (string), `place_id` (string), `depends_on` (list), `description` (string), `source_id` (string). `tick` must be nonnegative. Each dependency element must be a string; self/repeated dependencies, unknown/ambiguous event IDs, and dependencies whose uniquely resolved event tick is not strictly earlier are reported. (Checker `FIELDS`, timeline loop.)
+- Timeline event IDs are indexed; duplicate IDs are reported. A dependency can be checked against its target only when exactly one schema-valid timeline row has that ID. Entity references are checked against entity IDs; missing IDs are dangling, duplicate entity IDs are ambiguous for actor/place use, and a unique `place_id` must resolve to a `place`. (Checker `index`, `event_id_counts`, timeline loop.)
+- `source_id` must resolve to exactly one schema-valid source row; absent or repeated source IDs are reported as unknown/ambiguous. This validates identity only, not source wording or truth. (Checker `source_status` / `source`.)
+- The existing r10 source ID `registrar-copy` is a single source row. Its metadata describes invented in-world text and says Sella reports her own observation, not omniscient truth or Mira’s actual destination. `registrar-copy-excerpt.md` says Sella kept the carbon after leaving the destination blank; it says nothing about a later inspection, mark, or mark origin.
+- Existing event `registry-entry` has `tick: 1`, `entity_id: "sella"`, `place_id: "harbor"`, `depends_on: []`, and cites `registrar-copy`. README round-10 explicitly treats its tick as a local authoring convention, not proof that “first bell” converts to tick 1 or evidence of exact simultaneity. Timeline dependencies require strictly earlier ticks.
+- The checker does not parse excerpt text or establish its support for a description. README round-10 requires manual phrase comparison and says even that cannot establish independent corroboration, witness honesty, or canon truth.
+
+## Recommendations (not observed requirements)
+
+- For the proposed follow-up, add one timeline event to a **separate copy/new fixture**, retaining all r10 rows. Use a fresh event ID; `entity_id: "sella"`, `place_id: "harbor"`, and `source_id: "registrar-copy"` are the existing uniquely resolving IDs that match the declared location, observer, and in-world note.
+- A simple internally ordered row can use `tick: 2` and `depends_on: ["registry-entry"]`. This expresses local ordering after the tick-1 entry without claiming that “first bell” is a verified numeric time. The tick is a fixture convention, not an independently observed time. Alternatively, another unique earlier event could serve as dependency, but is not needed for this scoped claim.
+- Keep the description and authored note narrow and clause-aligned: Sella looks again at the carbon she kept; she records a blurred blue oval mark; she cannot identify its origin, and does not attribute it to Mira’s Blue Seal. Do not imply that she saw the mark at the original entry, that Mira made it, or that the mark is evidence of the seal.
+- No new entity, relation, contradiction, or source row appears necessary for this one follow-up event. The checker would accept an event’s source ID by identity alone; human review must check the note against every assertion. Validate with the normal checker CLI, then have a non-author inspect clause correspondence and compare the declared baseline outputs/hashes.

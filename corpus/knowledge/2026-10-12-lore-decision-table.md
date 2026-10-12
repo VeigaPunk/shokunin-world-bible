@@ -141,3 +141,14 @@ A malformed duplicate entity row is excluded from the schema-valid count. This d
 | More than one | Retain round-12 per-event ambiguous actor findings and skip occupancy. | `fixtures/r12-ambiguous-actor/` does not resolve whether duplicate rows mean one or two actors. |
 
 Malformed rows missing required fields do not count; a nonempty but unrecognized `kind` string does count and gets a separate unknown-kind finding. This is structural identity handling, not evidence that either cited event occurred or that a possible conflict is absent.
+
+## Round 15 — bounded follow-up account and source limits
+
+| New `r15-carbon-followup/` assertion | Exact `sella-carbon-followup-excerpt.md` clause | Limit |
+|---|---|---|
+| Sella's later look at retained carbon at harbor | “Later, at Lantern Harbor, I looked again at the carbon I had kept.” | Relative later report only; tick 3/dependency is a fixture ordering choice, not clock conversion or independent custody proof. |
+| Report of blurred blue oval mark on carbon | “I saw a blurred blue oval mark on it.” | Sella's authored observation, not verified objective provenance or a claim it came from the Blue Seal. |
+| Origin unidentified to Sella | “I cannot identify where the mark came from” | Does not prove origin is unknowable to everyone. |
+| No attribution to Mira's Blue Seal | “I do not attribute it to Mira’s Blue Seal.” | This does not prove the seal did or did not cause the mark. |
+
+No new entity claim/relation was added. The original `registrar-copy` and all inherited JSON rows remain unchanged; its “first bell” has no proven numeric tick conversion. Checker does not read excerpts. These newly authored in-world sentences are internally inspectable fiction, not recovered evidence or independent corroboration.

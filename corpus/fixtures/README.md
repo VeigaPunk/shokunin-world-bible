@@ -285,3 +285,26 @@ pass the checker’s required-field shape gate, not an independently proven
 character identity: a string `kind` outside the allowed kinds still counts
 and is separately flagged. Raw events and in-world citations remain; source
 ID resolution does not prove actor identity or either event’s truth.
+
+## Round 15: Sella's later carbon note
+
+`r15-carbon-followup/` is a separate fictional micro-bible copied from
+`r10-registry-witness/`: all old JSON rows and the original registrar excerpt
+remain intact. It adds the invented `sella-carbon-followup` private note and
+one Sella event at local tick 3 depending on `registry-entry` (tick 1). Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r15-carbon-followup
+```
+
+In the **newly authored, not recovered** excerpt, Sella reports looking
+again at the carbon she kept, seeing a blurred blue oval mark, and not
+knowing its origin. She expressly does **not** attribute the mark to Mira's
+Blue Seal. The text does not say who made the mark, when it appeared, why
+Sella looked again, whether it indicates a destination, or whether the
+account is true. Its blue appearance alone is not seal provenance. Tick 3
+and the dependency express author-chosen later ordering, not an elapsed
+interval, first-bell conversion, or causal link to Mira's arrival. The clean
+checker result validates schema/IDs and stated local timeline rules only;
+manual comparison of excerpt and event wording establishes internal
+correspondence, not independent corroboration or canon.
