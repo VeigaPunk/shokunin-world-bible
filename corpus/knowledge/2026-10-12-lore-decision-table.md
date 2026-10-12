@@ -55,3 +55,14 @@ and output are retained in `corpus/live/rejected-r4/` and
 `corpus/live/runs/20261012T163450Z/`; `reports/r4-axis-adjudicator.md` states
 coverage improved narrowly but calibration harmed. An equal string is not
 evidence of shared identity, invalid canon, or in-world attestation.
+
+## Round 6 — explicit item chain, not inferred possession
+
+| Input condition | Decision / output | Fixture evidence and boundary |
+|---|---|---|
+| No `provenance` field on an item | No chain asserted; preserve existing checks | `fixtures/consistent/entities.json` cites the seal but asserts no ordered acquisition/transfer. |
+| First cited record is acquisition with null `from_holder`, followed by strictly later cited transfers whose `from_holder` equals preceding `to_holder` | Structurally continuous chain; do not infer semantic truth | `fixtures/item-chain-valid/entities.json`; `sources.json` resolves the fictional source IDs. |
+| Last transfer names a different predecessor from the prior record's `to_holder` | Report local chain break; retain both assertions and do not choose a source | `fixtures/item-chain-broken/entities.json` changes last `from_holder` from `harbor` to `mira`. |
+| Same-item ticks are equal/reversed, holder ID ambiguous, or present provenance malformed | Report input/order issue; do not silently construct a chain | Checker shape checks; independent negative probes needed before claiming specific error coverage. |
+
+Ticks in this optional field are local ordering labels and are not cross-validated against `timeline.json`; `carries` and prose are not transfer evidence. Neither a valid chain nor an in-world source ID establishes that the cited record supports the transfer or proves canon. Holder IDs are entity references, not a legal ownership assertion.

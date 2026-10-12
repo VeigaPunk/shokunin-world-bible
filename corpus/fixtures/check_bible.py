@@ -111,6 +111,82 @@ def check(directory):
     entity_id_counts = {}
     for _, entity in data['entities']:
         entity_id_counts[entity['id']] = entity_id_counts.get(entity['id'], 0) + 1
+
+    for location, item in data['entities']:
+        if 'provenance' not in item:
+            continue
+        label = location + '.provenance'
+        records = item['provenance']
+        if item['kind'] != 'item':
+            errors.append(f'{label}: only valid on item entities')
+        if not isinstance(records, list):
+            errors.append(f'{label}: expected array')
+            continue
+        previous_holder = None
+        previous_tick = None
+        can_check_chain = item['kind'] == 'item' and entity_id_counts[item['id']] == 1
+        for i, record in enumerate(records):
+            record_label = f'{label}[{i}]'
+            if not isinstance(record, dict):
+                errors.append(f'{record_label}: expected object')
+                previous_holder = previous_tick = None
+                can_check_chain = False
+                continue
+            expected_keys = {'tick', 'from_holder', 'to_holder', 'source_id'}
+            if set(record) != expected_keys:
+                errors.append(f'{record_label}: expected exactly tick, from_holder, to_holder, source_id')
+                previous_holder = previous_tick = None
+                can_check_chain = False
+                continue
+            tick = record['tick']
+            from_holder = record['from_holder']
+            to_holder = record['to_holder']
+            source_id = record['source_id']
+            valid = True
+            if type(tick) is not int or tick < 0:
+                errors.append(f'{record_label}.tick: required nonnegative integer')
+                valid = False
+            if from_holder is not None and (not isinstance(from_holder, str) or not from_holder.strip()):
+                errors.append(f'{record_label}.from_holder: required null or nonempty entity id')
+                valid = False
+            if not isinstance(to_holder, str) or not to_holder.strip():
+                errors.append(f'{record_label}.to_holder: required nonempty entity id')
+                valid = False
+            elif entity_id_counts.get(to_holder, 0) == 0:
+                errors.append(f'{record_label}.to_holder: dangling entity {to_holder!r}')
+                valid = False
+            elif entity_id_counts[to_holder] != 1:
+                valid = False
+            if from_holder is not None:
+                if not isinstance(from_holder, str) or not from_holder.strip():
+                    valid = False
+                elif entity_id_counts.get(from_holder, 0) == 0:
+                    errors.append(f'{record_label}.from_holder: dangling entity {from_holder!r}')
+                    valid = False
+                elif entity_id_counts[from_holder] != 1:
+                    valid = False
+            if not isinstance(source_id, str) or not source_id.strip():
+                errors.append(f'{record_label}.source_id: required nonempty source id')
+                valid = False
+            else:
+                source(source_id, record_label + '.source_id')
+                if source_id not in sources:
+                    valid = False
+            if not valid:
+                previous_holder = previous_tick = None
+                can_check_chain = False
+                continue
+            if can_check_chain:
+                if previous_tick is not None:
+                    if tick <= previous_tick:
+                        errors.append(f'{record_label}.tick: provenance tick {tick} must be greater than previous tick {previous_tick}')
+                    if from_holder != previous_holder:
+                        errors.append(f'{record_label}: provenance chain break; expected from_holder {previous_holder!r}, got {from_holder!r}')
+                elif from_holder is not None:
+                    errors.append(f'{record_label}: provenance chain break; first record must have from_holder null')
+            previous_holder = to_holder
+            previous_tick = tick
+
     allied = [row for _, row in data['relations'] if row['type'] == 'allied_with']
     for location, row in data['relations']:
         left, right = row['from'], row['to']

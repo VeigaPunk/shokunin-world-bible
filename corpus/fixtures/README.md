@@ -92,3 +92,28 @@ status are under `../live/runs/20261012T164316Z/`. These bibles exercise
 input handling, not new checker behavior or canon truth. Do not treat the
 absence of cascaded errors in these deliberately low-cascade probes as a
 promise about other malformed files.
+
+## Round 6: explicit item provenance chain
+
+The two `item-chain-*` bibles copy `consistent/` and add an optional
+`provenance` list only to item `seal`. Its first record is a source-cited
+acquisition (null `from_holder`, `mira` as initial holder, tick 0). Later
+records explicitly transfer it to `harbor` at tick 3 and `tower` at tick 4.
+The valid and broken fixtures differ only at the last transfer's
+`from_holder`: valid `harbor`; broken `mira`. Run from repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/item-chain-valid
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/item-chain-broken
+```
+
+The first should exit 0; the second reports the last record's chain break
+without changing either cited assertion. Missing `provenance` on other items
+means no chain is asserted, not a failed provenance check. A present malformed
+list, ambiguous duplicate IDs, or equal/reversed ticks are not silently
+interpreted as a valid chain. Tick order is local to these explicit records,
+not linked automatically to timeline events. Holder IDs are entity IDs; their
+kind need not mean legal ownership. A citation resolves to an invented in-world
+record, but the checker does not inspect its text or prove a transfer happened.
+No history is inferred from `carries`, entity claims, timeline descriptions,
+or game mechanics; missing transfers do not prove an item was stationary.
