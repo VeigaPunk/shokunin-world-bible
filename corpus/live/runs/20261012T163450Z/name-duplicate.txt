@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/name-duplicate
+exit_code=1
+VIOLATION: entities[0] and entities[1]: duplicate display name 'Mira' for distinct entity IDs 'mira-one' and 'mira-two'; review, do not merge
+1 violation(s); no canon changed

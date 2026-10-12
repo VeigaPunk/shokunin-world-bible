@@ -68,3 +68,13 @@ The valid contradictory fixture still exits 1 on the same original three
 violations; the malformed sibling exits 1 with those three plus a ledger-local
 unknown-event violation. Neither command chooses an in-world winner, edits
 canon, or verifies game mechanics.
+
+## Round 4 rejected experiment (not active checker behavior)
+
+The exact-name detector and paired inputs are archived under
+`../live/rejected-r4/`; the observed CLI output is preserved under
+`../live/runs/20261012T163450Z/`. The experiment distinguished exact equal
+strings, but wrongly emitted a hard `VIOLATION` / exit 1 for legitimate
+homonyms. It was rejected for calibration harm and the active checker restored
+to round 3. These archived inputs are **not** active fixtures. See
+`../../LOG.md` round-4 closure and `../../reports/r4-axis-adjudicator.md`.

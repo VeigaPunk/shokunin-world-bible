@@ -1,4 +1,4 @@
-# lore scorecard — round 3
+# lore scorecard — round 4 rejected; last admitted round 3
 
 Owned axes: depth, coverage, calibration. Scores remain unassigned without a
 quality rubric; row counts and exit codes are measurements, not scores or verdicts.
@@ -9,5 +9,5 @@ quality rubric; row counts and exit codes are measurements, not scores or verdic
 | coverage | unmeasured | round 2: `python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/ally-reciprocal` → exit 0 and `ally-one-way` → exit 1, one relation-local symmetry report; preserved in `corpus/live/runs/20261012T161753Z/`; baseline work commit `d094160bbaa4675d966532e15629d0d6ec728750` had no faction symmetry rule; work commit cited in round-2 report | r2 |
 | calibration | unmeasured | independent verifier `lore-r1-independent-verifier` reran both commands, confirmed limits, and left all SHONEN boxes unchecked | r1 |
 
-planned: consider name/citation collision rule or malformed-bible decision table as one next axis move; duplicate-source-ID witness precision and aliases remain uncovered.
-retired: none.
+planned: round 5 can test malformed-bible error-pattern calibration independently; round-4 duplicate-name rule remains rejected. No active name check. Duplicate-source-ID witness precision and aliases remain uncovered.
+retired: hard-failing exact duplicate names without sourced uniqueness; round 4 showed calibration harm. Scores unchanged because the round was rejected.

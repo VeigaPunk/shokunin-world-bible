@@ -45,3 +45,13 @@ The checker does not establish treaty authenticity, source agreement, faction on
 | One structural error has only one cited side | Keep its ordinary diagnostic outside the two-sided ledger | `fixtures/contradictions/relations.json` references absent `missing-map`; there is no second claim to cite. |
 
 The ledger is not exhaustive, does not infer conflicts from arbitrary prose, and does not adjudicate source reliability or select canon. Its citations are the existing fictional event `source_id` values; no real-world method citation establishes an in-world claim.
+
+## Round 4 — rejected exact-name experiment
+
+An exact-name review detector was tried and independently replayed, then
+rejected because it gave legitimate homonyms a `VIOLATION` and exit 1. The
+active checker has **no** name-collision rule. Experimental checker, fixtures,
+and output are retained in `corpus/live/rejected-r4/` and
+`corpus/live/runs/20261012T163450Z/`; `reports/r4-axis-adjudicator.md` states
+coverage improved narrowly but calibration harmed. An equal string is not
+evidence of shared identity, invalid canon, or in-world attestation.

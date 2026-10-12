@@ -1,0 +1,17 @@
+# Round 4 name scout — baseline schema and indexing
+
+## Observed baseline (commit `5ceb0e431f686ed0ee29f11b66939c8f661dcc63`)
+
+- `.shokunin/lore/corpus/fixtures/check_bible.py` defines `FIELDS['entities']` as required `id: str`, `kind: str`, `name: str`, `first_appearance: str`, and `claims: list`. For string fields it rejects whitespace-only values (`row[field].strip()`), but stores and compares the original strings; it does not trim or normalize names.
+- `KINDS` restricts the entity `kind` to `character`, `place`, `faction`, or `item`. A schema-valid name therefore is a nonempty string on a row whose required fields have valid Python JSON types; the kind check is a later semantic validation.
+- The local `index(section)` builds a dictionary keyed only by `id`. On duplicate ID it emits `duplicate <section> id ...`, then assigns the later row over the earlier one. `entities = index('entities')` is used to resolve relation/timeline endpoints. There is no index keyed by `name` and no name-collision test. In particular, two distinct IDs with identical names pass this part of baseline validation.
+- Every entity's `first_appearance` is checked as a source ID, and each claim is checked for a nonempty `statement` plus resolvable `source_id`. These cite the entity's appearance and claims, not a separately defined name assertion; the schema has no alias, canonical-name, locale, or disambiguation field. See the fixture convention in `.shokunin/lore/corpus/fixtures/README.md`.
+- Existing names are distinct in `.shokunin/lore/corpus/fixtures/{consistent,contradictions,contradictions-ledger-malformed}/entities.json` (Mira, Lantern Harbor, North Tower, Blue Seal). The alliance pair in `.shokunin/lore/corpus/fixtures/{ally-reciprocal,ally-one-way}/entities.json` also has distinct names (Quay Guild, Bell Wardens). These establish baseline clean examples, not a canon-wide uniqueness axiom.
+
+## Recommended boundary (recommendation, not observed behavior)
+
+Implement only exact, case-sensitive equality of the original `name` string among schema-valid entity records with **distinct IDs**. Emit a local diagnostic naming both `entities[index]` locations, both IDs, and the exact duplicate name. Do not merge records or change ID-based indexing. Do not make whitespace trimming, case-folding, Unicode normalization, alias matching, transliteration, or cross-kind exclusions implicit. Do not claim names must be globally unique in actual canon: this is a targeted duplicate-display-name diagnostic, not a lore truth rule.
+
+To keep the rule from conflating independent schema failures, compare only rows already admitted by the entity required-field/type validation; require the two IDs to differ. Duplicate IDs are already diagnosed by the ID index and should not themselves be the trigger for this distinct-ID rule. A same-name pair with different IDs is the negative-case violation; existing distinct-name fixtures remain clean. If an explicit disambiguation mechanism is later desired, it needs a specified schema field and cited fixture evidence before it can suppress a collision; the current schema defines none. Existing `first_appearance`/claim sources do not prove that two equal display names refer to one identity or are impossible.
+
+This recommendation stays within round 4's declared exact duplicate display-name coverage move. It does not infer collisions from aliases or narrative text and does not resolve canon.
