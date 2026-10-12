@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r22-unknown-mixed
+exit_code=1
+VIOLATION: timeline[1].depends_on: expected event-id strings
+VIOLATION: timeline[1].depends_on: unknown event 'missing'
+2 violation(s); no canon changed

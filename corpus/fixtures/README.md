@@ -466,3 +466,29 @@ error and adds its known-place booking; same-place and ineligible
 actor/place/time controls do not gain an unsupported booking. This is
 checker-input coverage, not evidence that either fixture event or its
 location is source-attested or canon.
+
+## Round 22: string dependencies beside malformed members
+
+`r22-clean-inversion/` has one string edge (`r20-prereq` tick 2
+to `r20-dependent` tick 1). `r22-mixed-last/` differs only by adding
+`null`; `r22-mixed-first/` reverses member order.
+`r22-multiple-invalid/` includes `null`, an object and an array before
+a valid string edge; `r22-unknown-mixed/` and `r22-self-repeated/`
+check existing string-ID findings. `r22-valid-order/` remains clean
+and `r22-malformed-only/` has no string edge to inspect. Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r22-clean-inversion
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r22-mixed-last
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r22-multiple-invalid
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r22-self-repeated
+```
+
+Any non-string member retains **one row-level** `expected event-id
+strings` diagnostic before member findings. Each non-string is skipped
+before ID/set lookup; string siblings are inspected in input order
+under existing self/repeated/unknown/ambiguous/tick-valid inversion
+rules. Neither malformed-member coercion nor a claim that its edge is
+satisfied is made. Occupancy remains independent. These are fixture
+inputs, not quoted chronology from `courier-log`; citation identity
+does not establish event truth or canon.

@@ -211,3 +211,14 @@ Unknown, ambiguous, self and repeated dependency-ID diagnostics retain their own
 | Same place or ineligible actor/place/tick with `[null]` | Keep dependency type and existing certainty diagnostics; no definite booking added. | `fixtures/r21-{same-place,invalid-tick,wrong-kind-place,ambiguous-actor}/`. |
 
 A malformed list member makes **all dependency-member lookup on that row** unassessed; it does not invalidate otherwise resolved actor/place/tick occupancy. No coercion or partial list recovery is claimed. Fixture descriptions and source IDs do not prove event occurrence, source text, or canon.
+
+## Round 22 — partial safe inspection of mixed dependency lists
+
+| Dependent `depends_on` fixture input | Checker finding policy | Limit |
+|---|---|---|
+| `["r20-prereq"]` versus `["r20-prereq", null]` | Retain valid string-edge inversion in both; mixed adds one row-level type finding **before** inversion. | `fixtures/r22-{clean-inversion,mixed-last}/`; member order reversed in `r22-mixed-first/`. |
+| `null`, object, array, then valid string | Emit one type finding, skip all invalid members without hashing/lookup, still inspect string edge. | `fixtures/r22-multiple-invalid/`; invalid edges unassessed, not satisfied. |
+| Unknown string or repeated self strings beside `null` | Preserve existing string diagnostics in input order, plus single type finding. | `fixtures/r22-{unknown-mixed,self-repeated}/`. |
+| Ordered valid edge or malformed member alone | Keep clean ordered case or one type error alone. | `fixtures/r22-{valid-order,malformed-only}/`; occupancy and global schema unchanged. |
+
+A string edge's checker ordering is input-level only. The cited source ID does not attest chronology, occurrence or canon, and no truth is inferred for skipped malformed edges.

@@ -247,11 +247,13 @@ def check(directory):
                 errors.append(f'{location}: double-booked {row["entity_id"]!r} at tick {row["tick"]} in {previous} ({prior_place!r}) and {row["place_id"]!r}')
             else:
                 occupied[slot] = (location, row['place_id'])
-        if not all(isinstance(dep, str) for dep in row['depends_on']):
+        dependencies = row['depends_on']
+        if not all(isinstance(dep, str) for dep in dependencies):
             errors.append(f'{location}.depends_on: expected event-id strings')
-            continue
         seen_dependencies = set()
-        for dep_index, dep in enumerate(row['depends_on']):
+        for dep_index, dep in enumerate(dependencies):
+            if not isinstance(dep, str):
+                continue
             dep_location = f'{location}.depends_on[{dep_index}]'
             if dep == row['id']:
                 errors.append(f'{dep_location}: self dependency {dep!r}')
