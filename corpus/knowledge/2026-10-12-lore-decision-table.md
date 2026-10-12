@@ -191,3 +191,14 @@ The checker retains raw timeline rows. Its guard for occupied slots now requires
 | Known valid-time pair around invalid middle, or after invalid first | Retain each invalid-tick finding and known-place pair booking. | `fixtures/r19-{valid-around-negative,negative-first-valid}/`; selected orders only. |
 
 Exactly typed integer ticks enter the timeline; bool/float fail required-field screening. Negative integer rows remain available to existing dependency validation, whose raw-tick inversion policy is not changed here. No source ID, event description or checker output establishes source-text time/canon; possible conflict at invalid numeric tick remains unassessed.
+
+## Round 20 — invalid negative tick endpoint in dependency ordering
+
+| Unique dependency ID and endpoint tick inputs | Ordering result | Limit |
+|---|---|---|
+| Prereq/dependent `0,1` versus `0,-1` | Valid control clean; negative dependent retains invalid-tick finding but withholds raw-tick inversion. | `fixtures/r20-{valid-order,negative-dependent}/` differ only in dependent tick; suppressed comparison does not prove edge satisfied. |
+| `-1,1` and `-2,-1` | Retain each negative-tick diagnostic; do not compare ordering across invalid endpoint. | `fixtures/r20-{negative-prereq,both-negative}/`; do not count absence of inversion as definite valid chronology. |
+| Valid `2,1` and equal `1,1` | Preserve inversion finding for nonnegative endpoints; equal tick also produces distinct occupied-slot finding. | `fixtures/r20-{valid-inversion,valid-equal}/`; occupancy is separate. |
+| Negative prerequisite and separate valid inverted prerequisite to one dependent | Keep valid-edge inversion while invalid edge remains unassessed. | `fixtures/r20-mixed-edges/`; per-edge only, not graph-level proof. |
+
+Unknown, ambiguous, self and repeated dependency-ID diagnostics retain their own behavior. Malformed tick types fail required-field screening; accepted negative integers retain raw rows/IDs. This checker does not validate source-text chronology, causal truth or canon.

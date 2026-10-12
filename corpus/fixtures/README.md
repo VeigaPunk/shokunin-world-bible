@@ -410,3 +410,32 @@ the earlier exact-`int` required-field screen and are not examples of
 this rule. The suppressed negative-time comparison is unassessed, not
 proof the events could not occur or conflict. Fixture descriptions
 are input-scoped, not source testimony; no source-text/canon claim.
+
+## Round 20: invalid negative tick in dependency ordering
+
+`r20-valid-order/` uses prerequisite/dependent ticks `0,1`;
+`r20-negative-dependent/` differs only in dependent tick `-1`.
+`r20-negative-prereq/` differs from valid order only in prerequisite
+tick `-1`. `r20-valid-inversion/` (`2,1`) and `r20-valid-equal/`
+(`1,1`) preserve nonnegative ordering findings; `r20-both-negative/`
+retains both tick diagnostics. `r20-mixed-edges/` tests an invalid
+prerequisite edge and a separate valid-to-valid inversion on one row.
+Run from repo root, for example:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-negative-dependent
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-negative-prereq
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-valid-inversion
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-mixed-edges
+```
+
+An indexed negative integer tick retains its invalid-tick finding
+and event/dependency references, but no **definite timeline inversion**
+comparison is made on an edge with either endpoint negative. Other
+dependency-ID diagnostics (self, repeated, unknown, ambiguous) are
+unchanged; each valid-to-valid edge still compares independently. The
+valid-equal fixture also has a separate same-tick occupancy finding;
+this round changes neither occupancy nor global tick schema. Withheld
+ordering is unassessed, not proof a dependency is satisfied, absent, or
+canonically false. Fixture descriptions describe input fields, not
+source testimony; citation IDs do not prove chronology or event truth.

@@ -264,7 +264,8 @@ def check(directory):
                     errors.append(f'{location}.depends_on: unknown event {dep!r}')
                 elif count > 1:
                     errors.append(f'{dep_location}: ambiguous dependency event {dep!r}')
-                elif events[dep]['tick'] >= row['tick']:
+                elif (events[dep]['tick'] >= 0 and row['tick'] >= 0
+                      and events[dep]['tick'] >= row['tick']):
                     errors.append(f'{location}.depends_on: timeline inversion {dep!r} tick {events[dep]["tick"]} not before {row["id"]!r} tick {row["tick"]}')
     return errors
 
