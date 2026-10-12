@@ -89,3 +89,14 @@ This rule never ranks, merges, or deletes sources. A unique ID is necessary for 
 | List has non-string member or unresolved ID | Preserve existing type/unknown-ID diagnostic; no fabricated event | Original checker list guard and ID lookup; not a new semantic rule. |
 
 No source text is inspected to show a dependency is actually attested. This check does not traverse a causal graph or resolve ambiguous duplicated event IDs, and it never repairs lore.
+
+## Round 9 — ambiguous dependency target identity
+
+| Referenced timeline event ID (schema-valid rows) | Diagnostic / decision | Example and limit |
+|---|---|---|
+| Zero matching records | Keep existing unknown-event finding. | No event can be chosen. |
+| Exactly one matching record | Keep strict-earlier tick comparison. | `fixtures/r9-unique-control/` has one earlier `same`; no dependency finding. |
+| More than one matching record | Report `ambiguous dependency event` at first referenced dependency-list index; skip target tick comparison. Retain duplicate timeline-ID finding and both records. | `fixtures/r9-dup-{low-high,high-low}/` swap only the two `same` rows. A last-row inversion or apparent valid order is not justified. |
+| Repeated dependency token, regardless of target identity | Retain round-8 list-indexed repeat finding and one lookup per distinct token. | Input list integrity is independent of duplicate event records. |
+
+Counts concern schema-valid timeline rows; no textual source support, causal inference, or canon selection follows from a matching ID.

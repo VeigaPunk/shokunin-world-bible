@@ -166,3 +166,26 @@ error. The event's cited source ID is checked for uniqueness, not for
 textual support of the dependency claim. Duplicate timeline event IDs remain
 an ambiguity outside this round's rule; no graph-cycle or game-mechanics
 verification is claimed.
+
+## Round 9: ambiguous prerequisite event IDs
+
+`r9-dup-low-high/` and `r9-dup-high-low/` contain the same three
+fictional timeline event records; only the order of the two `same` target
+rows (ticks 1 and 5) changes. `consumer` at tick 3 depends on `same`.
+`r9-unique-control/` retains one tick-1 target and the same consumer. Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r9-dup-low-high
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r9-dup-high-low
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r9-unique-control
+```
+
+A prerequisite ID resolves only when exactly one schema-valid timeline
+event has that ID. An absent ID keeps its unknown-event report; multiple
+matching events get a local ambiguous-dependency report and **no tick
+comparison** for that reference. Both duplicate event rows and their
+duplicate-ID finding remain; array order does not choose a canonical target.
+Unique targets retain the strict-earlier rule. Every event cites the
+fictional `courier-log` ID, which is checked for unique identity, not
+source-text support for an event or dependency. This does not establish
+causal truth, a graph cycle, or game mechanics.
