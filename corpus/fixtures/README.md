@@ -189,3 +189,28 @@ Unique targets retain the strict-earlier rule. Every event cites the
 fictional `courier-log` ID, which is checked for unique identity, not
 source-text support for an event or dependency. This does not establish
 causal truth, a graph cycle, or game mechanics.
+
+## Round 10: a bounded second account of the departure
+
+`r10-registry-witness/` copies the five `consistent/` JSON tables, retaining
+all original rows, and adds one source, one character, one relation, and one
+timeline event. Its `registrar-copy-excerpt.md` is **invented fictional in-world
+text**, not recovered evidence. Run from the repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r10-registry-witness
+```
+
+The excerpt says Sella, a registrar at Lantern Harbor, recorded seeing Mira
+leave at first bell. At Mira's request, Sella left the registry destination
+blank and kept the carbon. The new entity claim, `records_departure` relation,
+and `registry-entry` event cite `registrar-copy` and correspond to those
+clauses. The private `courier-log` route remains separately cited and
+unchanged. The blank public destination does **not** assert a different
+destination or settle whether Sella's report is true. Both the new entry
+and departure are assigned local tick 1 as an authoring convention, not proof
+of exact simultaneity, within-tick ordering, or a conversion from `first bell`;
+no dependency joins equal ticks.
+The clean checker result validates structure and citation-ID resolution only.
+A reader must compare excerpt wording with claims; even that comparison does
+not establish independent corroboration, witness honesty, or canon truth.

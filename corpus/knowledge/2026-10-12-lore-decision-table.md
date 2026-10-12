@@ -100,3 +100,13 @@ No source text is inspected to show a dependency is actually attested. This chec
 | Repeated dependency token, regardless of target identity | Retain round-8 list-indexed repeat finding and one lookup per distinct token. | Input list integrity is independent of duplicate event records. |
 
 Counts concern schema-valid timeline rows; no textual source support, causal inference, or canon selection follows from a matching ID.
+
+## Round 10 — authored registry account, manual claim correspondence
+
+| New assertion in `fixtures/r10-registry-witness/` | Exact invented `registrar-copy-excerpt.md` clause | Limit |
+|---|---|---|
+| `sella` named character, claimed registrar at Lantern Harbor | “I, Sella, registrar there” after “at Lantern Harbor” | Attributed fictional self-description, not independent identity proof. |
+| `sella` `records_departure` of `mira` | “recorded seeing Mira leave” | The record claims Sella saw and recorded this; it does not independently prove the departure. |
+| `registry-entry` at harbor assigned the same local tick as `departure`, destination omitted at Mira's request and carbon kept | “At first bell at Lantern Harbor”; “At Mira’s request, I left the registry destination blank and kept the carbon.” | Tick 1 is an authoring convention, not independent proof of simultaneity or a clock conversion; blank destination is no conflicting destination assertion. |
+
+The checker does not parse the excerpt or certify that source text entails the JSON. `courier-log` and `archive-ledger` baseline assertions remain unchanged and have no excerpt in this fixture; do not claim textual support for them. This is an authored second perspective, not external corroboration or canon resolution.
