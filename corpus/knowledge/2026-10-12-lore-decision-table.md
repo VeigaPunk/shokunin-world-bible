@@ -222,3 +222,11 @@ A malformed list member makes **all dependency-member lookup on that row** unass
 | Ordered valid edge or malformed member alone | Keep clean ordered case or one type error alone. | `fixtures/r22-{valid-order,malformed-only}/`; occupancy and global schema unchanged. |
 
 A string edge's checker ordering is input-level only. The cited source ID does not attest chronology, occurrence or canon, and no truth is inferred for skipped malformed edges.
+
+## Round 23 — witnessed-absence note class
+
+| Input condition | Decision / output | Fixture evidence and limit |
+|---|---|---|
+| A named speaker reports, in a newly authored private note, that a named thing was not found at a named place. The note does not state a cause, does not say the thing was absent as world fact, and does not identify the thing with Mira’s Blue Seal or with the r15 mark. | Record the report as a **witnessed-absence** note. Map each clause to a fixture field by hand. Do not delete entities, clear occupancy, or treat the report as proof. | `fixtures/r23-note-class/` excerpt, timeline event `strip-absence-note`, and `witnessed-absence-clause-map.md`. Checker does not read the excerpt. Source-text truth is unverified. Distinct from `fixtures/r15-carbon-followup/` (present mark, origin unknown, not attributed to the Blue Seal). |
+
+The checker still validates schema, citations, relations, and timeline structure only. A clean run is not a prose check and not canon.

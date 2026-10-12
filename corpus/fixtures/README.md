@@ -492,3 +492,21 @@ rules. Neither malformed-member coercion nor a claim that its edge is
 satisfied is made. Occupancy remains independent. These are fixture
 inputs, not quoted chronology from `courier-log`; citation identity
 does not establish event truth or canon.
+
+## Round 23: witnessed-absence note class
+
+`r23-note-class/` is a separate fictional micro-bible. Sella reports that
+she looked for Mira’s outbound route strip on the registry hook rack at
+Lantern Harbor and did not find it. That is a witnessed-absence note:
+a named speaker reports a named thing was not present. It is not the
+r15 mark observation. The clause map is
+`r23-note-class/witnessed-absence-clause-map.md`. The checker does not
+read that file. Run from repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r23-note-class
+```
+
+Clean output means schema, citations, relations, and timeline structure
+only. It does not mean the absence report is true, that the strip never
+existed, or that the note says anything about Mira’s Blue Seal.
