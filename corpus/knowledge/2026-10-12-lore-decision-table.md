@@ -110,3 +110,14 @@ Counts concern schema-valid timeline rows; no textual source support, causal inf
 | `registry-entry` at harbor assigned the same local tick as `departure`, destination omitted at Mira's request and carbon kept | “At first bell at Lantern Harbor”; “At Mira’s request, I left the registry destination blank and kept the carbon.” | Tick 1 is an authoring convention, not independent proof of simultaneity or a clock conversion; blank destination is no conflicting destination assertion. |
 
 The checker does not parse the excerpt or certify that source text entails the JSON. `courier-log` and `archive-ledger` baseline assertions remain unchanged and have no excerpt in this fixture; do not claim textual support for them. This is an authored second perspective, not external corroboration or canon resolution.
+
+## Round 11 — timeline place entity identity
+
+| `place_id` count among schema-valid entity rows | Field-local decision | Control and boundary |
+|---|---|---|
+| Zero | Existing dangling entity finding. | `fixtures/r11-dangling-place/`: `unlisted`; no invented entity. |
+| One, kind `place` | Accepted by kind check. | `fixtures/consistent/`: unique `harbor`, clean. |
+| One, other kind | Existing `not a place`. | `fixtures/r11-unique-nonplace/`: unique `mira` character. |
+| More than one | Ambiguous place entity; skip last-wins kind classification and retain duplicate-ID finding. | `fixtures/r11-{place-character,character-place}/` differ only in duplicate `harbor` row order; both cite existing fictional `archive-ledger` but source identity does not settle entity identity. |
+
+This is an input-key ambiguity for timeline places, not a duplicate-name rule or a global entity-resolution policy. It says nothing about canon truth, occupancy semantics, or source-text entailment.

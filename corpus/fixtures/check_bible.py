@@ -227,7 +227,10 @@ def check(directory):
         for field in ('entity_id', 'place_id'):
             if row[field] not in entities:
                 errors.append(f'{location}.{field}: dangling entity {row[field]!r}')
-        if row['place_id'] in entities and entities[row['place_id']]['kind'] != 'place':
+        place_id_count = entity_id_counts.get(row['place_id'], 0)
+        if place_id_count > 1:
+            errors.append(f'{location}.place_id: ambiguous place entity {row["place_id"]!r}')
+        elif place_id_count == 1 and entities[row['place_id']]['kind'] != 'place':
             errors.append(f'{location}.place_id: not a place {row["place_id"]!r}')
         source(row['source_id'], location + '.source_id')
         if row['tick'] < 0:

@@ -214,3 +214,28 @@ no dependency joins equal ticks.
 The clean checker result validates structure and citation-ID resolution only.
 A reader must compare excerpt wording with claims; even that comparison does
 not establish independent corroboration, witness honesty, or canon truth.
+
+## Round 11: ambiguous place entity IDs
+
+The fictional `r11-place-character/` and `r11-character-place/` fixtures
+copy the clean bible and add a second schema-valid entity row with ID
+`harbor` but kind `character`. Only the order of the `harbor` place and
+character rows differs. `r11-unique-nonplace/` changes the departure's
+`place_id` to the unique character `mira`; `r11-dangling-place/` changes it
+to missing `unlisted`. The original `consistent/` is the unique-place control.
+From the repo root run the checker on each fixture directory:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r11-place-character
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r11-character-place
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r11-unique-nonplace
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r11-dangling-place
+```
+
+When a timeline `place_id` names more than one **schema-valid** entity row,
+the checker reports an ambiguous place entity at that field and retains the
+duplicate-entity-ID finding, rather than choosing a kind from the last row.
+For exactly one target it still checks `kind == place`; an absent ID keeps
+its dangling-reference report. This does not change relation endpoints,
+actor identity or occupancy rules, resolve duplicate entities, reject equal
+display names, or prove the source text supports either entity record.
