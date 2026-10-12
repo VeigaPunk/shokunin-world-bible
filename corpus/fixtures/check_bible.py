@@ -242,8 +242,8 @@ def check(directory):
         if not all(isinstance(dep, str) for dep in row['depends_on']):
             errors.append(f'{location}.depends_on: expected event-id strings')
             continue
-        comparable_place = place_id_count != 1 or entities[row['place_id']]['kind'] == 'place'
-        if actor_id_count == 1 and place_id_count != 0 and comparable_place:
+        comparable_place = place_id_count == 1 and entities[row['place_id']]['kind'] == 'place'
+        if actor_id_count == 1 and comparable_place:
             slot = (row['entity_id'], row['tick'])
             if slot in occupied and occupied[slot][1] != row['place_id']:
                 previous, prior_place = occupied[slot]

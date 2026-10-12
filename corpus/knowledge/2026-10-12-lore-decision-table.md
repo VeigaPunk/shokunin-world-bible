@@ -172,3 +172,13 @@ Duplicate IDs and uniquely identified non-place rows retain old separate diagnos
 | Wrong-kind row first, middle, or last around known distinct places | Keep `not a place` and the known harbor/tower pair finding in each tested order. | `fixtures/r17-wrong-{first,middle,last}/`; selected schedules do not prove exhaustive pairwise handling. |
 
 The guard applies only to exactly one indexed entity row with `kind != 'place'`, not duplicate/ambiguous IDs, whose separate diagnostics and raw-ID occupancy behavior remain. Required-field malformed entities are excluded from the index; unknown but nonempty kind remains indexed and wrong-kind. Fixture descriptions and unique source IDs are not source-text or canon proof; suppressed possible conflicts remain unassessed.
+
+## Round 18 — ambiguous place entity ID
+
+| Same uniquely screened actor/tick inputs | Definite occupancy decision | Limit |
+|---|---|---|
+| Unique `tower` + unique `harbor` versus otherwise identical input with second complete `harbor` entity | Keep known-pair booking in `r18-unique-pair`; retain duplicate/ambiguous findings but withhold booking involving `harbor` in `r18-duplicate-pair`. | The added entity row is the only paired difference; neither display name nor cited source resolves duplicate ID. |
+| Ambiguous `harbor` first or with mixed-kind duplicate | Retain ambiguity finding; do not store/compare that row. | `r18-duplicate-reverse`, `r18-mixed-kind`; ambiguity is by ID count even when kinds differ. |
+| Known `tower`, ambiguous `harbor`, known test-only `quay`; also ambiguous first | Retain tower/quay booking and ambiguity finding. | `r18-known-through-ambiguous`, `r18-duplicate-first-known`; finite order controls, not exhaustive pairwise proof. |
+
+The checker retains raw timeline rows. Its guard for occupied slots now requires a unique actor and exactly one required-field-screened entity row with `kind == 'place'` for each participating event. This is an input-ID diagnostic, not a source-text or canon verdict. Unknown actual locations and any conflict involving an ambiguous row remain unassessed.

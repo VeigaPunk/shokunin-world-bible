@@ -356,3 +356,31 @@ row, not an assertion from `courier-log`. Withholding a finding involving
 conflict. Count-zero missing IDs retain round-16 behavior; duplicate or
 ambiguous place IDs still have their old raw-ID occupancy behavior.
 The checker does not establish source-text support or canon.
+
+## Round 18: ambiguous place IDs and occupancy certainty
+
+`r18-unique-pair/` has one uniquely indexed `harbor` and one `tower`
+row for uniquely indexed actor `mira` at tick 9. `r18-duplicate-pair/`
+differs only by an additional complete place entity with ID `harbor`;
+`r18-duplicate-reverse/` reverses event order. `r18-mixed-kind/` duplicates
+that ID with a character instead. `r18-known-through-ambiguous/` and
+`r18-duplicate-first-known/` use fixture-only uniquely indexed `quay`
+to check the known tower/quay pair with ambiguous harbor between or first.
+Run from repo root, for example:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r18-unique-pair
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r18-duplicate-pair
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r18-known-through-ambiguous
+```
+
+The duplicate-ID and ambiguous-place findings remain. An ambiguously
+indexed `place_id` neither compares nor enters a **definite different
+uniquely resolved places** occupied slot; the known tower/quay pair
+still yields its own finding in these tested orders. Count-zero IDs and
+unique wrong-kind IDs retain rounds 16 and 17 behavior. Fixture event
+descriptions describe input fields only. The extra `quay` and duplicate
+entity are test rows, not attested fictional facts; `source_id` identity
+does not attest them. Exclusion leaves any actual conflict involving an
+ambiguous row unassessed, not disproved, and the checker does not
+establish source-text support or canon.
