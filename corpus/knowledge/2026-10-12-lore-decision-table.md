@@ -121,3 +121,13 @@ The checker does not parse the excerpt or certify that source text entails the J
 | More than one | Ambiguous place entity; skip last-wins kind classification and retain duplicate-ID finding. | `fixtures/r11-{place-character,character-place}/` differ only in duplicate `harbor` row order; both cite existing fictional `archive-ledger` but source identity does not settle entity identity. |
 
 This is an input-key ambiguity for timeline places, not a duplicate-name rule or a global entity-resolution policy. It says nothing about canon truth, occupancy semantics, or source-text entailment.
+
+## Round 12 — occupancy depends on actor identity
+
+| Actor ID count among schema-valid entity rows | Decision for two same-tick different-place events | Interpretation |
+|---|---|---|
+| Exactly one | Retain `double-booked` same-actor diagnostic. | `fixtures/r12-unique-actor/` supports the local input convention, not source truth. |
+| More than one | Report `ambiguous actor entity` at each affected event's actor field; do not assert definite same-actor double-booking. Preserve duplicate entity ID and raw events. | `fixtures/r12-ambiguous-actor/` does not prove whether duplicate rows describe one or two actors; conflict remains indeterminate. |
+| Zero | Retain prior dangling-entity diagnostic **and** prior occupancy behavior for this round. | Existing dangling ID can still produce a misleading double-booked message; excluded from this single move and recorded as a limit. |
+
+A malformed duplicate entity row is excluded from the schema-valid count. This does not decide canon identity or use cited source metadata to infer witness truth.

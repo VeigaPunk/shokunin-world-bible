@@ -227,6 +227,10 @@ def check(directory):
         for field in ('entity_id', 'place_id'):
             if row[field] not in entities:
                 errors.append(f'{location}.{field}: dangling entity {row[field]!r}')
+        actor_id_count = entity_id_counts.get(row['entity_id'], 0)
+        ambiguous_actor = actor_id_count > 1
+        if ambiguous_actor:
+            errors.append(f'{location}.entity_id: ambiguous actor entity {row["entity_id"]!r}')
         place_id_count = entity_id_counts.get(row['place_id'], 0)
         if place_id_count > 1:
             errors.append(f'{location}.place_id: ambiguous place entity {row["place_id"]!r}')
@@ -238,12 +242,13 @@ def check(directory):
         if not all(isinstance(dep, str) for dep in row['depends_on']):
             errors.append(f'{location}.depends_on: expected event-id strings')
             continue
-        slot = (row['entity_id'], row['tick'])
-        if slot in occupied and occupied[slot][1] != row['place_id']:
-            previous, prior_place = occupied[slot]
-            errors.append(f'{location}: double-booked {row["entity_id"]!r} at tick {row["tick"]} in {previous} ({prior_place!r}) and {row["place_id"]!r}')
-        else:
-            occupied[slot] = (location, row['place_id'])
+        if not ambiguous_actor:
+            slot = (row['entity_id'], row['tick'])
+            if slot in occupied and occupied[slot][1] != row['place_id']:
+                previous, prior_place = occupied[slot]
+                errors.append(f'{location}: double-booked {row["entity_id"]!r} at tick {row["tick"]} in {previous} ({prior_place!r}) and {row["place_id"]!r}')
+            else:
+                occupied[slot] = (location, row['place_id'])
         seen_dependencies = set()
         for dep_index, dep in enumerate(row['depends_on']):
             dep_location = f'{location}.depends_on[{dep_index}]'

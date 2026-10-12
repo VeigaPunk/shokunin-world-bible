@@ -239,3 +239,27 @@ For exactly one target it still checks `kind == place`; an absent ID keeps
 its dangling-reference report. This does not change relation endpoints,
 actor identity or occupancy rules, resolve duplicate entities, reject equal
 display names, or prove the source text supports either entity record.
+
+## Round 12: uncertain actor identity in occupancy reports
+
+`r12-unique-actor/` and `r12-ambiguous-actor/` both describe two distinct
+event records for actor ID `mira` at tick 7, one at `harbor` and one at
+`tower`. The second fixture differs only by adding a schema-valid, cited
+entity row that **reuses** ID `mira`; this is input identity ambiguity, not
+evidence of a second canon Mira. Run from the repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r12-unique-actor
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r12-ambiguous-actor
+```
+
+The unique actor triggers the existing definite same-actor `double-booked`
+rule. If multiple schema-valid entity rows share the actor ID, each affected
+timeline row instead gets an `ambiguous actor entity` finding and no
+**definite** occupancy inference. The raw event rows and duplicate-ID
+finding stay. This does not show that the events refer to different actors
+or that an occupancy conflict is impossible: the duplicate rows might also
+describe one actor. Dangling actor IDs retain older output in this round,
+including a possible `double-booked` message; that separate known limitation
+is not evidence of one real actor. Unique in-world citation IDs resolve
+source identity only, not actor identity or source-text/canon truth.
