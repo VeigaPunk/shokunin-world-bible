@@ -241,11 +241,19 @@ def check(directory):
             errors.append(f'{location}: double-booked {row["entity_id"]!r} at tick {row["tick"]} in {previous} ({prior_place!r}) and {row["place_id"]!r}')
         else:
             occupied[slot] = (location, row['place_id'])
-        for dep in row['depends_on']:
-            if dep not in events:
-                errors.append(f'{location}.depends_on: unknown event {dep!r}')
-            elif events[dep]['tick'] >= row['tick']:
-                errors.append(f'{location}.depends_on: timeline inversion {dep!r} tick {events[dep]["tick"]} not before {row["id"]!r} tick {row["tick"]}')
+        seen_dependencies = set()
+        for dep_index, dep in enumerate(row['depends_on']):
+            dep_location = f'{location}.depends_on[{dep_index}]'
+            if dep == row['id']:
+                errors.append(f'{dep_location}: self dependency {dep!r}')
+            if dep in seen_dependencies:
+                errors.append(f'{dep_location}: repeated dependency {dep!r}')
+            else:
+                seen_dependencies.add(dep)
+                if dep not in events:
+                    errors.append(f'{location}.depends_on: unknown event {dep!r}')
+                elif events[dep]['tick'] >= row['tick']:
+                    errors.append(f'{location}.depends_on: timeline inversion {dep!r} tick {events[dep]["tick"]} not before {row["id"]!r} tick {row["tick"]}')
     return errors
 
 

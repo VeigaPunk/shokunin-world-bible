@@ -143,3 +143,26 @@ citations. A structural holder-chain finding (if any) refers to input fields,
 not sourced canon when citations are ambiguous. Old unique-source fixtures
 remain unchanged. Multiple local reports are intentional and do not imply
 multiple underlying duplicate IDs. No source is selected or rewritten.
+
+## Round 8: dependency-list integrity
+
+`r8-deps-distinct/` and `r8-deps-anomalous/` are fictional copies of the
+consistent bible. Only `timeline[1].depends_on` differs: `['departure']` in
+the control and `['departure', 'departure', 'arrival']` in the anomaly. Both
+event rows keep their in-world `courier-log` source ID. Run from the repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r8-deps-distinct
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r8-deps-anomalous
+```
+
+The repeated earlier `departure` is an input-list duplicate that the old
+checker accepted; the explicit self `arrival` is a list anomaly and also
+retains the existing equal-tick inversion diagnostic. Each repeated
+occurrence is reported locally; the checker does not remove an entry or
+interpret causal truth. Existing unknown-ID/tick checks apply once to each
+distinct dependency ID so repeated entries do not duplicate the same lookup
+error. The event's cited source ID is checked for uniqueness, not for
+textual support of the dependency claim. Duplicate timeline event IDs remain
+an ambiguity outside this round's rule; no graph-cycle or game-mechanics
+verification is claimed.

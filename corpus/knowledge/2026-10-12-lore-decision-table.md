@@ -78,3 +78,14 @@ Ticks in this optional field are local ordering labels and are not cross-validat
 | Provenance record source ambiguous | Report local ambiguity; structural holder/tick findings, if present, concern input consistency rather than sourced canon | `fixtures/r7-item-ambiguous/` retains an otherwise continuous chain. |
 
 This rule never ranks, merges, or deletes sources. A unique ID is necessary for a qualified reference in this checker, but it is not evidence that the fictional document says the asserted thing, is reliable, or tells the truth. Local per-reference reports are deliberately plural when one duplicated ID is reused.
+
+## Round 8 — timeline prerequisite-list integrity
+
+| Input condition | Decision / output | Fixture evidence and boundary |
+|---|---|---|
+| One valid earlier prerequisite ID once in `depends_on` | No list-integrity finding; existing strict-tick check applies | `fixtures/r8-deps-distinct/timeline.json` cites fictional `courier-log`. |
+| Same prerequisite ID repeated within one event list | Report repeated occurrence at that list index; do not remove it; check target/tick once per distinct ID | `fixtures/r8-deps-anomalous/timeline.json` repeats earlier `departure`. This is a local input convention, not proof of a canon contradiction. |
+| Event ID appears in its own prerequisite list | Report explicit self-dependency and preserve existing same-tick inversion finding | Same anomalous fixture lists `arrival` as its own prerequisite; baseline already reported inversion on that ID. |
+| List has non-string member or unresolved ID | Preserve existing type/unknown-ID diagnostic; no fabricated event | Original checker list guard and ID lookup; not a new semantic rule. |
+
+No source text is inspected to show a dependency is actually attested. This check does not traverse a causal graph or resolve ambiguous duplicated event IDs, and it never repairs lore.
