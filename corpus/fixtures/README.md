@@ -78,3 +78,17 @@ strings, but wrongly emitted a hard `VIOLATION` / exit 1 for legitimate
 homonyms. It was rejected for calibration harm and the active checker restored
 to round 3. These archived inputs are **not** active fixtures. See
 `../../LOG.md` round-4 closure and `../../reports/r4-axis-adjudicator.md`.
+
+## Round 5: measured malformed-input matrix
+
+The five `r5-*` directories each copy the clean five-table bible and change
+only one file or field. From the repo root, run the checker against each
+`r5-missing-file`, `r5-invalid-json`, `r5-wrong-top-level`, `r5-row-shape`, and
+`r5-invalid-citation` directory with the command form above. The clean
+`consistent` bible is the control. The observed exit codes, diagnostic classes,
+exact mutation list and limits are in
+`../knowledge/2026-10-12-malformed-error-patterns.md`; full stdout and exit
+status are under `../live/runs/20261012T164316Z/`. These bibles exercise
+input handling, not new checker behavior or canon truth. Do not treat the
+absence of cascaded errors in these deliberately low-cascade probes as a
+promise about other malformed files.
