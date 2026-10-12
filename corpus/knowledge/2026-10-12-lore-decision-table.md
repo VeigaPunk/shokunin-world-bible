@@ -66,3 +66,15 @@ evidence of shared identity, invalid canon, or in-world attestation.
 | Same-item ticks are equal/reversed, holder ID ambiguous, or present provenance malformed | Report input/order issue; do not silently construct a chain | Checker shape checks; independent negative probes needed before claiming specific error coverage. |
 
 Ticks in this optional field are local ordering labels and are not cross-validated against `timeline.json`; `carries` and prose are not transfer evidence. Neither a valid chain nor an in-world source ID establishes that the cited record supports the transfer or proves canon. Holder IDs are entity references, not a legal ownership assertion.
+
+## Round 7 — source-ID uniqueness before qualification
+
+| Input condition | Decision / output | Fixture evidence and limit |
+|---|---|---|
+| Referenced `source_id` appears once in `sources.json` | Qualify by unambiguous ID only | `fixtures/ally-reciprocal/` and `fixtures/item-chain-valid/` are clean; no source-text support inferred. |
+| ID absent | Preserve `unknown in-world source` at reference | `fixtures/r5-invalid-citation/relations.json`. |
+| ID appears at least twice | Retain global duplicate-ID finding and report `ambiguous in-world source` at each affected reference; preserve both records | `fixtures/r7-item-ambiguous/` has repeated `archive-ledger`; old last-wins dictionary no longer qualifies it as a unique citation. |
+| Reverse alliance edge cites ambiguous ID, forward edge unique | Reverse is not qualified; report missing qualified reciprocal at forward relation in addition to ambiguity | `fixtures/r7-ally-reverse-ambiguous/`; a distinct uniquely cited reverse edge could still satisfy reciprocity. |
+| Provenance record source ambiguous | Report local ambiguity; structural holder/tick findings, if present, concern input consistency rather than sourced canon | `fixtures/r7-item-ambiguous/` retains an otherwise continuous chain. |
+
+This rule never ranks, merges, or deletes sources. A unique ID is necessary for a qualified reference in this checker, but it is not evidence that the fictional document says the asserted thing, is reliable, or tells the truth. Local per-reference reports are deliberately plural when one duplicated ID is reused.

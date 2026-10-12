@@ -51,6 +51,9 @@ def check(directory):
         return result
 
     sources = index('sources')
+    source_id_counts = {}
+    for _, source_row in data['sources']:
+        source_id_counts[source_row['id']] = source_id_counts.get(source_row['id'], 0) + 1
     entities = index('entities')
     events = index('timeline')
     index('contradictions')
@@ -58,9 +61,17 @@ def check(directory):
     for _, event in data['timeline']:
         event_id_counts[event['id']] = event_id_counts.get(event['id'], 0) + 1
 
+    def source_status(source_id):
+        count = source_id_counts.get(source_id, 0)
+        return 'unknown' if count == 0 else 'unique' if count == 1 else 'ambiguous'
+
     def source(source_id, location):
-        if source_id not in sources:
+        status = source_status(source_id)
+        if status == 'unknown':
             errors.append(f'{location}: unknown in-world source {source_id!r}')
+        elif status == 'ambiguous':
+            errors.append(f'{location}: ambiguous in-world source {source_id!r}')
+        return status
 
     allowed_assertion_fields = {'place_id', 'tick', 'depends_on'}
     for location, row in data['contradictions']:
@@ -82,8 +93,11 @@ def check(directory):
                 errors.append(f'{side_location}.event_id: expected exactly one timeline event {event_id!r}')
                 continue
             event = events[event_id]
-            if event['source_id'] not in sources:
+            event_source_status = source_status(event['source_id'])
+            if event_source_status == 'unknown':
                 errors.append(f'{side_location}: event {event_id!r} has no resolvable source_id')
+            elif event_source_status == 'ambiguous':
+                source(event['source_id'], side_location + '.source_id')
         claim_a, claim_b = row['claim_a'], row['claim_b']
         if (isinstance(claim_a, dict) and isinstance(claim_b, dict)
                 and claim_a.get('event_id') == claim_b.get('event_id')
@@ -125,6 +139,7 @@ def check(directory):
         previous_holder = None
         previous_tick = None
         can_check_chain = item['kind'] == 'item' and entity_id_counts[item['id']] == 1
+        chain_has_ambiguous_source = False
         for i, record in enumerate(records):
             record_label = f'{label}[{i}]'
             if not isinstance(record, dict):
@@ -169,9 +184,11 @@ def check(directory):
                 errors.append(f'{record_label}.source_id: required nonempty source id')
                 valid = False
             else:
-                source(source_id, record_label + '.source_id')
-                if source_id not in sources:
+                citation_status = source(source_id, record_label + '.source_id')
+                if citation_status == 'unknown':
                     valid = False
+                elif citation_status == 'ambiguous':
+                    chain_has_ambiguous_source = True
             if not valid:
                 previous_holder = previous_tick = None
                 can_check_chain = False
@@ -179,11 +196,11 @@ def check(directory):
             if can_check_chain:
                 if previous_tick is not None:
                     if tick <= previous_tick:
-                        errors.append(f'{record_label}.tick: provenance tick {tick} must be greater than previous tick {previous_tick}')
+                        errors.append(f'{record_label}.tick: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance tick {tick} must be greater than previous tick {previous_tick}')
                     if from_holder != previous_holder:
-                        errors.append(f'{record_label}: provenance chain break; expected from_holder {previous_holder!r}, got {from_holder!r}')
+                        errors.append(f'{record_label}: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance chain break; expected from_holder {previous_holder!r}, got {from_holder!r}')
                 elif from_holder is not None:
-                    errors.append(f'{record_label}: provenance chain break; first record must have from_holder null')
+                    errors.append(f'{record_label}: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance chain break; first record must have from_holder null')
             previous_holder = to_holder
             previous_tick = tick
 
@@ -199,7 +216,7 @@ def check(directory):
         reciprocal = any(
             candidate['from'] == right and candidate['to'] == left
             and candidate['type'] == 'allied_with'
-            and candidate['source_id'] in sources
+            and source_status(candidate['source_id']) == 'unique'
             for candidate in allied
         )
         if not reciprocal:

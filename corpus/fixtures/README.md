@@ -117,3 +117,29 @@ kind need not mean legal ownership. A citation resolves to an invented in-world
 record, but the checker does not inspect its text or prove a transfer happened.
 No history is inferred from `carries`, entity claims, timeline descriptions,
 or game mechanics; missing transfers do not prove an item was stationary.
+
+## Round 7: duplicate source IDs are ambiguous, not qualifying citations
+
+A source ID is a usable citation witness only if exactly one valid row in
+`sources.json` has that ID. An absent ID remains `unknown`; a repeated ID
+retains the global duplicate-ID violation **and** gets a local `ambiguous
+in-world source` report at each reference. Both source rows remain untouched;
+array order does not choose one. This checks ID identity only, not whether
+the cited fictional record supports an assertion.
+
+Run the isolated new cases:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r7-ally-reverse-ambiguous
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r7-item-ambiguous
+```
+
+The first has a uniquely cited forward faction alliance but a reverse edge
+whose `harbor-compact` ID appears twice; it reports duplicate ID, local
+ambiguous reverse citation, and a missing **qualified** reciprocal. The
+second copies the valid item chain but duplicates cited `archive-ledger`; it
+reports duplicate ID and affected local first-appearance/claim/provenance
+citations. A structural holder-chain finding (if any) refers to input fields,
+not sourced canon when citations are ambiguous. Old unique-source fixtures
+remain unchanged. Multiple local reports are intentional and do not imply
+multiple underlying duplicate IDs. No source is selected or rewritten.
