@@ -34,3 +34,14 @@ The rows below describe a **local, invented-world data convention**, not a unive
 | Endpoint missing, either endpoint not a faction, self-edge, or relation type not exactly `allied_with` | Outside this reciprocal-pair rule; existing dangling-endpoint/citation checks remain applicable | `fixtures/contradictions/relations.json` and `fixtures/consistent/relations.json` guard unrelated directed relations |
 
 The checker does not establish treaty authenticity, source agreement, faction ontology beyond `kind`, or semantic truth. A reciprocal record is a sourced assertion, not an editorial resolution.
+
+## Round 3 — editorial contradiction ledger
+
+| Input condition | Decision / output | Evidence and limit |
+|---|---|---|
+| Two distinct `claim_a` / `claim_b` event-field pointers resolve to uniquely identified timeline events with valid source IDs, and `why` is nonempty | Accept ledger record structurally, preserve both source-cited events; continue ordinary checks | `fixtures/contradictions/{timeline,contradictions,sources}.json`. The reason is unchecked editorial text, not proof of conflict or truth. |
+| A pointer's event/field is missing, ambiguous, or uncited, or `why` is absent | Report a ledger-local violation; never alter either assertion | `fixtures/contradictions-ledger-malformed/contradictions.json` has `absent-event`. |
+| `contradictions.json` is absent or invalid JSON | Report load/schema violation like other required tables | Empty `[]` is explicit in fixtures without a pair; absence does not prove none exist. |
+| One structural error has only one cited side | Keep its ordinary diagnostic outside the two-sided ledger | `fixtures/contradictions/relations.json` references absent `missing-map`; there is no second claim to cite. |
+
+The ledger is not exhaustive, does not infer conflicts from arbitrary prose, and does not adjudicate source reliability or select canon. Its citations are the existing fictional event `source_id` values; no real-world method citation establishes an in-world claim.

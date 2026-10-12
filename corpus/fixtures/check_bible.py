@@ -11,6 +11,7 @@ FIELDS = {
     'relations': {'from': str, 'to': str, 'type': str, 'source_id': str},
     'timeline': {'id': str, 'tick': int, 'entity_id': str, 'place_id': str,
                  'depends_on': list, 'description': str, 'source_id': str},
+    'contradictions': {'id': str, 'claim_a': dict, 'claim_b': dict, 'why': str},
 }
 
 
@@ -52,10 +53,42 @@ def check(directory):
     sources = index('sources')
     entities = index('entities')
     events = index('timeline')
+    index('contradictions')
+    event_id_counts = {}
+    for _, event in data['timeline']:
+        event_id_counts[event['id']] = event_id_counts.get(event['id'], 0) + 1
 
     def source(source_id, location):
         if source_id not in sources:
             errors.append(f'{location}: unknown in-world source {source_id!r}')
+
+    allowed_assertion_fields = {'place_id', 'tick', 'depends_on'}
+    for location, row in data['contradictions']:
+        for side_name in ('claim_a', 'claim_b'):
+            side = row[side_name]
+            side_location = f'{location}.{side_name}'
+            if not isinstance(side, dict):
+                errors.append(f'{side_location}: expected object with event_id and field')
+                continue
+            event_id = side.get('event_id')
+            field = side.get('field')
+            if not isinstance(event_id, str) or not event_id.strip():
+                errors.append(f'{side_location}.event_id: required nonempty string')
+                continue
+            if not isinstance(field, str) or field not in allowed_assertion_fields:
+                errors.append(f'{side_location}.field: expected one of {sorted(allowed_assertion_fields)}')
+                continue
+            if event_id_counts.get(event_id, 0) != 1:
+                errors.append(f'{side_location}.event_id: expected exactly one timeline event {event_id!r}')
+                continue
+            event = events[event_id]
+            if event['source_id'] not in sources:
+                errors.append(f'{side_location}: event {event_id!r} has no resolvable source_id')
+        claim_a, claim_b = row['claim_a'], row['claim_b']
+        if (isinstance(claim_a, dict) and isinstance(claim_b, dict)
+                and claim_a.get('event_id') == claim_b.get('event_id')
+                and claim_a.get('field') == claim_b.get('field')):
+            errors.append(f'{location}: claim_a and claim_b references must differ')
 
     for location, row in data['entities']:
         if row['kind'] not in KINDS:

@@ -39,3 +39,32 @@ schema requires every entity claim, relation, and event to cite an in-world
 source. Omit uncertain assertions rather than present them as uncited canon.
 All entries here are invented for this fixture. Do not infer any real-world
 historical facts from them.
+
+## Round 3: explicit contradiction records
+
+Every example bible now includes a required `contradictions.json` array; bibles
+with no asserted pair use `[]`. Omission is an input error, not evidence that
+there are no contradictions. Each entry has a unique `id`, two references
+`claim_a` and `claim_b` of the form `{ "event_id": "...", "field": "..." }`,
+and nonempty `why`. Allowed fields are `place_id`, `tick`, `depends_on` in an
+existing uniquely identified timeline event with a resolvable in-world
+`source_id`. The event's own source is the citation for that assertion; the
+ledger does not copy a source, text, or paraphrase that could disagree with it.
+The checker validates pointers and required text, not the truth of citations
+or whether `why` accurately explains a semantic contradiction.
+
+The original `contradictions/contradictions.json` preserves two pairs: the
+arrival versus false-sighting places, and the arrival dependency on later versus
+the later event's tick. The dangling `missing-map` endpoint has no second
+cited assertion, so remains an ordinary checker diagnostic **outside** the
+two-sided ledger. A malformed reference sibling demonstrates a ledger-local
+error while retaining all original records:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/contradictions-ledger-malformed
+```
+
+The valid contradictory fixture still exits 1 on the same original three
+violations; the malformed sibling exits 1 with those three plus a ledger-local
+unknown-event violation. Neither command chooses an in-world winner, edits
+canon, or verifies game mechanics.
