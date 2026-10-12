@@ -242,7 +242,7 @@ def check(directory):
         if not all(isinstance(dep, str) for dep in row['depends_on']):
             errors.append(f'{location}.depends_on: expected event-id strings')
             continue
-        if not ambiguous_actor:
+        if actor_id_count == 1:
             slot = (row['entity_id'], row['tick'])
             if slot in occupied and occupied[slot][1] != row['place_id']:
                 previous, prior_place = occupied[slot]

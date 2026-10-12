@@ -131,3 +131,13 @@ This is an input-key ambiguity for timeline places, not a duplicate-name rule or
 | Zero | Retain prior dangling-entity diagnostic **and** prior occupancy behavior for this round. | Existing dangling ID can still produce a misleading double-booked message; excluded from this single move and recorded as a limit. |
 
 A malformed duplicate entity row is excluded from the schema-valid count. This does not decide canon identity or use cited source metadata to infer witness truth.
+
+## Round 13 — occupancy with an absent actor key
+
+| Matching required-field-screened entity rows for `timeline.entity_id` | Report and occupancy behavior | Limit |
+|---|---|---|
+| Zero | Keep dangling actor finding at each affected event; do not compare/update occupancy for that ID. | `fixtures/r13-missing-actor/` has `unlisted` in two tick-7 records; possible same-actor conflict remains unassessed. |
+| One | Retain strict same-tick/different-place double-booking. | `fixtures/r13-unique-actor/` uses `mira` with identical event structure. |
+| More than one | Retain round-12 per-event ambiguous actor findings and skip occupancy. | `fixtures/r12-ambiguous-actor/` does not resolve whether duplicate rows mean one or two actors. |
+
+Malformed rows missing required fields do not count; a nonempty but unrecognized `kind` string does count and gets a separate unknown-kind finding. This is structural identity handling, not evidence that either cited event occurred or that a possible conflict is absent.

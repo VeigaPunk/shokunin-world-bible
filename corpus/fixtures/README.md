@@ -263,3 +263,25 @@ describe one actor. Dangling actor IDs retain older output in this round,
 including a possible `double-booked` message; that separate known limitation
 is not evidence of one real actor. Unique in-world citation IDs resolve
 source identity only, not actor identity or source-text/canon truth.
+
+## Round 13: absent actor ID in occupancy
+
+`r13-missing-actor/` and `r13-unique-actor/` copy the round-12 unique-actor
+fixture with the same two tick-7 event records and valid place/source IDs.
+Only their `entity_id` fields differ: `unlisted` resolves to no entity row;
+`mira` resolves to one. Run from the repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r13-missing-actor
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r13-unique-actor
+```
+
+A missing actor keeps a dangling finding at each event but does not enter
+the definite same-actor occupancy comparison. This means its possible
+conflict is **unassessed**, not disproven. One identified actor still gets
+`double-booked` at two places on one tick; multiple matching rows retain
+round-12 `ambiguous actor entity` findings. Entity-ID counts use rows that
+pass the checker’s required-field shape gate, not an independently proven
+character identity: a string `kind` outside the allowed kinds still counts
+and is separately flagged. Raw events and in-world citations remain; source
+ID resolution does not prove actor identity or either event’s truth.
