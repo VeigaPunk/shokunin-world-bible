@@ -21,3 +21,16 @@ prevents a cycle among events with valid integer ticks. The seed checklist is
 a proposal, not a claim that these other checks ran. A future round may add
 explicit contradiction records with `claim_a` / `claim_b` / `why`; none is
 silently resolved in round 1.
+
+## Round 2 — faction alliance convention
+
+The rows below describe a **local, invented-world data convention**, not a universal claim about political alliances. The corresponding `ally-*` fixtures cite the invented `harbor-compact` in `sources.json`; they do not draw on a real-world source.
+
+| Input condition | Decision / output | Fixture evidence |
+|---|---|---|
+| Exact `allied_with` relation links two distinct factions, and a separately cited reverse `allied_with` row exists with a resolvable in-world source ID | This rule passes; each row remains independently cited | `fixtures/ally-reciprocal/{entities,relations,sources}.json` |
+| Same forward row, no qualified reverse row | Report missing reciprocal at the forward relation location; never create or select canon | `fixtures/ally-one-way/{entities,relations,sources}.json` |
+| Reverse row is present but its `source_id` does not resolve | Report its citation error and missing *qualified* reciprocal for the forward row | `fixtures/check_bible.py` relation and citation passes; independent verifier probe required |
+| Endpoint missing, either endpoint not a faction, self-edge, or relation type not exactly `allied_with` | Outside this reciprocal-pair rule; existing dangling-endpoint/citation checks remain applicable | `fixtures/contradictions/relations.json` and `fixtures/consistent/relations.json` guard unrelated directed relations |
+
+The checker does not establish treaty authenticity, source agreement, faction ontology beyond `kind`, or semantic truth. A reciprocal record is a sourced assertion, not an editorial resolution.

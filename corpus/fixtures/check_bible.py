@@ -74,6 +74,28 @@ def check(directory):
                 errors.append(f'{location}.{endpoint}: dangling entity {row[endpoint]!r}')
         source(row['source_id'], location + '.source_id')
 
+    # Only distinct, resolvable faction pairs participate; self-edges are out of scope.
+    entity_id_counts = {}
+    for _, entity in data['entities']:
+        entity_id_counts[entity['id']] = entity_id_counts.get(entity['id'], 0) + 1
+    allied = [row for _, row in data['relations'] if row['type'] == 'allied_with']
+    for location, row in data['relations']:
+        left, right = row['from'], row['to']
+        if row['type'] != 'allied_with' or left == right:
+            continue
+        if (left not in entities or right not in entities
+                or entity_id_counts[left] != 1 or entity_id_counts[right] != 1
+                or entities[left]['kind'] != 'faction' or entities[right]['kind'] != 'faction'):
+            continue
+        reciprocal = any(
+            candidate['from'] == right and candidate['to'] == left
+            and candidate['type'] == 'allied_with'
+            and candidate['source_id'] in sources
+            for candidate in allied
+        )
+        if not reciprocal:
+            errors.append(f'{location}: allied_with faction relation {left!r} -> {right!r} lacks a sourced reciprocal relation')
+
     occupied = {}
     for location, row in data['timeline']:
         for field in ('entity_id', 'place_id'):
