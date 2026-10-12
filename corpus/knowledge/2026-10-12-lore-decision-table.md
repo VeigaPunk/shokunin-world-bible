@@ -162,3 +162,13 @@ No new entity claim/relation was added. The original `registrar-copy` and all in
 | Known place, absent place, distinct known place | Keep dangling for middle row and definite booking for the known pair. | `fixtures/r16-mixed-three/`; unresolved row cannot hide supported conflict. |
 
 Duplicate IDs and uniquely identified non-place rows retain old separate diagnostics and old raw-ID occupancy behavior in this round; do **not** generalize this missing-place guard to those cases without a new experiment. Source IDs resolve citations, not locations or canon.
+
+## Round 17 — unique non-place entity as timeline place
+
+| Same uniquely screened actor/tick place inputs | Definite occupancy decision | Limit |
+|---|---|---|
+| Paired second ID `tower` (unique place) versus `mira` (unique character) after `harbor` | Keep `double-booked` for `tower`; keep `not a place` but withhold definite booking for `mira`. | `fixtures/r17-{valid-places,wrong-after}/` differ only in second-row `place_id`. Actual location of wrong-kind row unassessed. |
+| Unique wrong-kind ID before a known place | Keep `not a place`; do not store wrong-kind row as occupied. | `fixtures/r17-wrong-before/` is the reversed two-event control. |
+| Wrong-kind row first, middle, or last around known distinct places | Keep `not a place` and the known harbor/tower pair finding in each tested order. | `fixtures/r17-wrong-{first,middle,last}/`; selected schedules do not prove exhaustive pairwise handling. |
+
+The guard applies only to exactly one indexed entity row with `kind != 'place'`, not duplicate/ambiguous IDs, whose separate diagnostics and raw-ID occupancy behavior remain. Required-field malformed entities are excluded from the index; unknown but nonempty kind remains indexed and wrong-kind. Fixture descriptions and unique source IDs are not source-text or canon proof; suppressed possible conflicts remain unassessed.

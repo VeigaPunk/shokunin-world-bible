@@ -332,3 +332,27 @@ not assessed, not disproven. This round does not change existing behavior
 for duplicate place IDs or unique non-place entities, which have separate
 diagnostics but may still enter raw-ID occupancy comparisons; it does not
 claim a general place-identity resolver or source-text/canon truth.
+
+## Round 17: unique wrong-kind place IDs and occupancy certainty
+
+`r17-valid-places/` and `r17-wrong-after/` are a paired input: only
+second-row `place_id` differs (`tower` versus `mira`, an indexed
+`character`). `r17-wrong-before/` puts the wrong-kind row first.
+`r17-wrong-{first,middle,last}/` place it before, between, or after
+the distinct known `harbor` and `tower` rows. Run, for example:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r17-valid-places
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r17-wrong-after
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r17-wrong-first
+```
+
+A uniquely indexed non-place entity remains a `not a place` finding but
+is not a resolved place for a **definite different resolved places**
+occupancy comparison. The known harbor/tower pair remains reportable
+in the three tested orders. Each fixture description is about the input
+row, not an assertion from `courier-log`. Withholding a finding involving
+`mira` as a place does not prove its actual location or absence of a
+conflict. Count-zero missing IDs retain round-16 behavior; duplicate or
+ambiguous place IDs still have their old raw-ID occupancy behavior.
+The checker does not establish source-text support or canon.
