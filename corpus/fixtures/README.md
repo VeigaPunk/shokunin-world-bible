@@ -384,3 +384,29 @@ entity are test rows, not attested fictional facts; `source_id` identity
 does not attest them. Exclusion leaves any actual conflict involving an
 ambiguous row unassessed, not disproved, and the checker does not
 establish source-text support or canon.
+
+## Round 19: negative timeline ticks and occupancy certainty
+
+`r19-valid-tick/` and `r19-negative-tick/` differ only in both
+`timeline.tick` values (`9` versus `-1`), with a unique actor and
+two uniquely indexed places. `r19-valid-around-negative/` has
+valid/invalid/valid ticks `9,-1,9` with known distinct valid places;
+`r19-negative-first-valid/` has invalid/valid/valid ticks `-1,9,9`.
+Run from repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r19-valid-tick
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r19-negative-tick
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r19-valid-around-negative
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r19-negative-first-valid
+```
+
+A negative integer tick retains `must be nonnegative` and its raw
+event row but does not compare/store occupied slots. Distinct known
+places at nonnegative tick still report `double-booked` across an
+invalid-time row in these orders. Only occupancy changes; dependency
+inversion still uses raw admitted integer ticks. Bool/float ticks fail
+the earlier exact-`int` required-field screen and are not examples of
+this rule. The suppressed negative-time comparison is unassessed, not
+proof the events could not occur or conflict. Fixture descriptions
+are input-scoped, not source testimony; no source-text/canon claim.

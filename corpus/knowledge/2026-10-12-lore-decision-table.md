@@ -182,3 +182,12 @@ The guard applies only to exactly one indexed entity row with `kind != 'place'`,
 | Known `tower`, ambiguous `harbor`, known test-only `quay`; also ambiguous first | Retain tower/quay booking and ambiguity finding. | `r18-known-through-ambiguous`, `r18-duplicate-first-known`; finite order controls, not exhaustive pairwise proof. |
 
 The checker retains raw timeline rows. Its guard for occupied slots now requires a unique actor and exactly one required-field-screened entity row with `kind == 'place'` for each participating event. This is an input-ID diagnostic, not a source-text or canon verdict. Unknown actual locations and any conflict involving an ambiguous row remain unassessed.
+
+## Round 19 — negative timeline tick and definite occupancy
+
+| Unique actor, two uniquely indexed places | Occupancy output | Limit |
+|---|---|---|
+| Paired same-tick `9` versus `-1` | Keep known-place booking at `9`; keep two invalid-tick findings at `-1` but withhold definite booking. | `fixtures/r19-{valid-tick,negative-tick}/` differ only in `tick` values; invalid time is not disproved narrative occurrence. |
+| Known valid-time pair around invalid middle, or after invalid first | Retain each invalid-tick finding and known-place pair booking. | `fixtures/r19-{valid-around-negative,negative-first-valid}/`; selected orders only. |
+
+Exactly typed integer ticks enter the timeline; bool/float fail required-field screening. Negative integer rows remain available to existing dependency validation, whose raw-tick inversion policy is not changed here. No source ID, event description or checker output establishes source-text time/canon; possible conflict at invalid numeric tick remains unassessed.
