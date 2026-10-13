@@ -611,3 +611,24 @@ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixt
 Exit 0 establishes only existing schema/citation-reference consistency.
 The checker never reads the Markdown and cannot establish prose support,
 source authenticity, carrying truth, ownership, chronology, or canon.
+
+## Round 29: clean structure is not prose support
+
+`r29-near-miss/` preserves all five `r28-courier-excerpt/` JSON tables
+byte-for-byte. Its newly authored fictional excerpt instead says “The blue
+seal was near Mira.” The manual `negative-clause-map.md` marks only
+`relations[0].type=carries` **unsupported by this excerpt**: proximity
+does not entail carrying. It does not mark the unchanged relation false
+or contradicted. The names-to-IDs match remains a fixture-local editorial
+choice. Compare the two clauses and structural runs:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r28-courier-excerpt
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r29-near-miss
+```
+
+Both exit 0 because the checker only reads JSON and does not inspect prose.
+A human clause check accepts the r28 lexical `carried` conditional on the
+editorial ID alignments and rejects r29 proximity as support for `carries`;
+neither result authenticates a source or decides canon. Other JSON claims
+are unassessed by these two sentences.
