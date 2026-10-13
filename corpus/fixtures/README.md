@@ -981,3 +981,14 @@ input structure and supplied-index membership only, not source-text support,
 fictional-world evidence, truth, canon, or rights. The `r67-claim-source-*`
 fixtures compare empty, whitespace, and nonempty claim IDs with the source
 index unavailable; `r67-claim-source-loaded-empty` contrasts a loaded index.
+
+## Round 72: attributed Vela slate-reading claim
+
+`r72-vela-slate-claim/` clones the r43 fixture and appends one fictional,
+unverified first-person source plus one cited claim to the existing Vela entity.
+Its excerpt distinguishes the wording Vela says she could read from her
+tentative inference about an unknown writer; the clause map points to the
+appended records and labels the claim as paraphrase. No timeline event, date,
+Bell-7 reference, sequence, relation, dependency, or contradiction is added.
+This preserves attribution only: the checker cannot verify the excerpt, slate,
+writer, chronology, canon, or depth.
