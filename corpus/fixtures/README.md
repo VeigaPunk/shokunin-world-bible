@@ -721,3 +721,24 @@ Sella's own registry entry in r10 and her non-finding report in r23. The
 envelope is not identified as the carbon, route strip, Blue Seal, or a
 carrier of any particular contents. No owner, recipient, motive, truth or
 canon is inferred from the report.
+
+## Round 34: hearing a report is not seeing the action
+
+`r34-tarin-hearsay/` keeps all five r33 JSON tables byte-for-byte but
+changes its newly authored fictional excerpt to “I, Tarin, heard that Sella
+placed an unlabeled paper envelope on the Lantern Harbor registry desk.”
+`modality-contrast-map.md` marks unchanged `reports seeing` character and
+event text **unsupported by this excerpt as direct sight**. It supports only
+Tarin's report of hearing a placement assertion; the informant, their
+knowledge and the event's truth remain unknown. Compare:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r33-tarin-envelope
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r34-tarin-hearsay
+```
+
+Both exit 0 because the checker ignores prose and maps. A human reviewer
+must distinguish r33's direct-sighting **report** from r34's hearsay
+**report**. Neither proves the placement occurred, makes the unchanged
+JSON canonically false, identifies envelope contents, or authenticates a
+source. Names-to-IDs and event tick remain fixture-local choices.
