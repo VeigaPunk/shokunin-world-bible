@@ -570,3 +570,24 @@ The malformed raw row remains present and invalid. No endpoint-ambiguity
 finding is a statement about **schema-admitted rows only**, not a finding
 that the world contains one seal, that the rejected row is false, or that
 `courier-log` supports either claim. No canon is resolved.
+
+## Round 27: two ambiguous endpoints of the same relation
+
+`r27-target-only/` copies the admitted duplicate-`seal` case.
+`r27-both-ambiguous/` adds only one admitted duplicate `mira` entity row
+with a locally resolvable fictional `courier-log` first-appearance ID and
+no claims. Both keep the same cited `mira -> seal` relation and all other
+tables unchanged. Compare them with:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r27-target-only
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r27-both-ambiguous
+```
+
+The both case reports `relations[0].from` and `relations[0].to` ambiguity
+for that **one** relation. It also reports both duplicate IDs and two
+independent timeline actor-ambiguity findings because existing events name
+`mira`. Those findings are retained, not silently resolved. The target-only
+control retains only the relation `to` ambiguity. None of these diagnostics
+proves the relation or either duplicated row is true or canonical; the
+checker does not choose an entity row.
