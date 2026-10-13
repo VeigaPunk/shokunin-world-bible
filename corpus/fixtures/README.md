@@ -896,3 +896,25 @@ Both exit 0 because the checker reads JSON, not Vela's prose. A human
 must assess attribution and strength fidelity; the date/non-sighting,
 source authenticity, external bell origin, Sella/envelope absence and
 canon remain unverified. This is not an automated prose check.
+
+## Round 43: another attributed view of Vela’s reported location
+
+`r43-jorin-vela-sighting/` retains the r41 fixture and adds a fictional
+first-person `jorin-note` excerpt, source, Jorin character claim and one
+Jorin-attributed event. Jorin says he saw Vela on the Lantern Harbor east
+steps from the registry doorway during what **he called** Bell-7, and did not
+see who, if anyone, struck a bell. `jorin-clause-map.md` traces the exact
+phrases and warns that the inherited r41 `vela-clause-map.md` quotes the older
+r40 wording; use the actual r41 Vela excerpt and `strength-contrast-map.md`
+for that difference.
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r41-vela-direct-bell
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r43-jorin-vela-sighting
+```
+
+Both exit 0 **structurally**. The new cross-account comparison concerns
+Vela’s **reported** position only, conditional on referent and occasion. The
+shared Bell-7 label and tick 3 do not verify one occasion or objective ringing,
+striker, Sella/envelope absence, chronology, authenticity or canon. Neither
+checker nor citation decides those questions.
