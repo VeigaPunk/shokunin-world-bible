@@ -698,3 +698,26 @@ one duplicate-ID plus seven ambiguous references; the unique control is
 clean. Lack of reference-ambiguity findings in the malformed case does **not**
 make the raw row disappear or prove unique in-world evidence, source truth,
 canon, real-world rights, or AI-training permission.
+
+## Round 33: Tarin's reported placement observation
+
+`r33-tarin-envelope/` copies the clean five-table bible and appends one
+fictional source `tarin-note`, two cited character rows (`tarin`, `sella`),
+and a source-cited event in which **Tarin reports seeing** Sella place an
+unlabeled paper envelope on the Lantern Harbor registry desk. The separate
+newly authored `tarin-note-excerpt.md` gives that single first-person
+sentence; `clause-map.md` maps speaker, participant, action, object and
+location by hand. Names-to-IDs are fixture-local editorial alignments.
+The new event's tick 3 is a local sequence label, not an observed time or
+assertion of causation. Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r33-tarin-envelope
+```
+
+A clean checker result establishes only structural and source-ID-reference
+validity; it never reads the excerpt. This observation is distinct from
+Sella's own registry entry in r10 and her non-finding report in r23. The
+envelope is not identified as the carbon, route strip, Blue Seal, or a
+carrier of any particular contents. No owner, recipient, motive, truth or
+canon is inferred from the report.

@@ -1,0 +1,25 @@
+# Round 33 scribe — clause-to-field map
+
+Scope: proposed separate `consistent/`-derived fictional micro-bible; this is a manual traceability plan, not a claim that the checker validates prose. Round 33 declares one event: Tarin reports seeing Sella place an unlabeled paper envelope on the Lantern Harbor registry desk (`.shokunin/lore/LOG.md:514-515`). The excerpt must be explicitly newly authored in-world, not recovered evidence.
+
+## Clause map
+
+| Exact excerpt clause (proposed) | Fixture field(s) | Bound interpretation / excluded inference |
+|---|---|---|
+| “At Lantern Harbor” | `timeline[2].place_id = harbor`; existing `entities[harbor].name` | Event is situated at this named fixture place. Existing place/source claims remain unchanged. |
+| “I, Tarin” | new `timeline[2].entity_id = tarin`; new `entities` row `id=tarin`, `kind=character`, `name=Tarin`, `first_appearance=r33-tarin-note`; a minimal Tarin claim cited to `r33-tarin-note` if required by schema | The authored first-person speaker identifies themself as Tarin. It establishes neither an independently verified identity nor a real witness. |
+| “saw Sella place” | event `description` records the reported seeing/placing; new Sella character row only if absent in derived bible, otherwise reuse existing row | Tarin reports an observation. Do not turn it into objective narrator truth, assert Sella’s motive, or claim corroboration. Phrase with explicit reporter attribution. |
+| “an unlabeled paper envelope” | same event description; no envelope entity/claims required | Only paper-envelope and unlabeled attributes are asserted. Do not assign owner, sender, recipient, contents, seal, markings, route, or significance. Do not assert envelope contents or Blue Seal connection. |
+| “on the Lantern Harbor registry desk” | `timeline[2].place_id=harbor`; event description | Desk is the reported placement surface at the harbor; avoid introducing a separately identified desk/place entity absent need. No inference that desk is registry hook rack or that envelope entered/was filed in a register. |
+| source attribution | new `sources` row `id=r33-tarin-note` and every new event / entity claim `source_id=r33-tarin-note`; excerpt labels itself newly authored fictional text | Citation means only “this authored excerpt is the fixture’s cited source,” not source authenticity, truth, independent evidence, permission, or canon. |
+| fixture ordering (if event follows inherited timeline) | local next tick (baseline consistent max tick 2, `.shokunin/lore/corpus/fixtures/consistent/timeline.json:1-18`); `depends_on` only if schema/order requires, and not implying causation | Tick is local fixture ordering, not a clock time. Avoid claiming chronology beyond chosen placement or causal connection to departure/arrival. |
+
+## Explicit exclusions
+
+No envelope contents, recipient, destination, ownership, sender, Blue Seal/mark/seal relation, carbon relation, reason or motive, causal consequence, entry in a registry, independent witness/corroboration, recovered-source status, source-text truth, real-world rights/AI-training permission, game mechanics, or canon truth. In particular, do not infer from the old registry-witness episode that this envelope is the carbon, or from Mira’s existing Blue Seal rows that it is sealed/marked. The precedent distinguishes a reported event from fact: r10 says equal local tick does not prove simultaneity (`.shokunin/lore/LOG.md:144,147`); r23’s manual map limits a report to what the speaker says, not world truth (`.shokunin/lore/corpus/fixtures/r23-note-class/witnessed-absence-clause-map.md:1-18`).
+
+## Risks and falsifiable check
+
+Risks: (1) unqualified “Sella placed” can silently upgrade Tarin’s report to fact; make the event prose explicitly “Tarin reports seeing…”; (2) “registry desk” can imply an actual register entry—do not encode one; (3) reusing Sella/harbor IDs with inconsistent first-appearance/source assumptions; (4) tick/dependency could imply unsupported timing or causality; (5) using `first_appearance` as historical truth rather than fixture index. The r23 precedent explicitly says the checker does not read the manual map and `first_appearance` is an index, not historical first appearance (`.../r23-note-class/witnessed-absence-clause-map.md:1-18`).
+
+Falsifiable acceptance: inspect the new excerpt and JSON side by side. For every new actor/place/action/attribute clause, identify an exact excerpt span and its corresponding cited field; reject if any field asserts more than the clause or cites another source. Then run `python3 .shokunin/lore/corpus/fixtures/check_bible.py <new-case>` and require exit 0; this only tests structure/reference validity, not prose entailment. Non-author review must find no envelope content, attribution/Blue Seal association, or source-truth claim. Round 33 further requires all 84 prior CLI outputs (stdout/stderr/exit) exact and all 419 existing JSON paths byte-identical (`.shokunin/lore/LOG.md:515`). A mismatch falsifies the regression condition; unsupported mapping falsifies the depth claim. No checker/fixture/LOG/README edit is made here.
