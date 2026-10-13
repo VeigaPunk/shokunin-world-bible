@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r60-unavailable
+exit_code=1
+VIOLATION: entities.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+1 violation(s); no canon changed
