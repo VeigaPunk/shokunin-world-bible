@@ -550,3 +550,23 @@ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixt
 The unique control exits 0. The ambiguous input reports the duplicate entity
 ID and a `relations[0].to` ambiguity, while its `from` endpoint stays unique.
 The checker does not select a row, verify story text, or resolve canon.
+
+## Round 26: malformed duplicate target is not an admitted target
+
+`r26-to-malformed/` copies `r25-to-ambiguous/` and changes only the
+second raw `seal` row's required `name` value to `""`. The checker reports
+`entities[4].name: required nonempty str`, screens that row out of its
+admitted entity set, and therefore does **not** report a duplicate admitted
+ID or ambiguous `relations[0].to`. Contrast the unmodified admitted-duplicate
+fixture and the clean unique-target control:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r26-to-malformed
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r25-to-ambiguous
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r25-to-unique
+```
+
+The malformed raw row remains present and invalid. No endpoint-ambiguity
+finding is a statement about **schema-admitted rows only**, not a finding
+that the world contains one seal, that the rejected row is false, or that
+`courier-log` supports either claim. No canon is resolved.

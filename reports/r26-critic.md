@@ -1,0 +1,15 @@
+# Round 26 critic — screening claim limits
+
+## Falsification attempt
+
+The declared outcome is plausible under the checker, but the proposed calibration inference is narrow and should not be read as resolution of the raw data. `.shokunin/lore/corpus/fixtures/check_bible.py:32-43` appends only rows whose required fields all pass; `.shokunin/lore/corpus/fixtures/check_bible.py:119-129` counts admitted entity IDs and emits endpoint ambiguity only when that count is greater than one. Thus a blank-name duplicate would no longer trigger `relations[0].to: ambiguous entity 'seal'`; this establishes only the validator’s admitted-row boundary. It does not establish that `seal` is unique in the input, that the rejected row is semantically irrelevant, or that it is not canon.
+
+The r25 fixture is not an independent test of malformed-row screening: `.shokunin/lore/corpus/fixtures/r25-to-ambiguous/entities.json:49-56` has a second `seal` row with a populated name, and `.shokunin/lore/corpus/fixtures/r25-to-ambiguous/relations.json:2-6` points `mira -> seal`. Replaying that fixture currently emits both duplicate-ID and ambiguous endpoint diagnostics (observed with the fixture checker), but it says nothing by itself about malformed duplicate behavior. The unique control `.shokunin/lore/corpus/fixtures/r25-to-unique/entities.json` has one admitted `seal` row and the same relation; it cannot establish what happens to a malformed second row either.
+
+Potential test flaw: changing the duplicate’s name to empty makes it malformed in a way that can be mistaken for content-quality failure, but the only warranted conclusion is required-field screening. It does not demonstrate all malformed row classes are screened identically. Likewise, no-ambiguity must not be promoted into canon proof: the raw second row remains present and was excluded by a schema rule, not adjudicated.
+
+## Risk and test
+
+Risk: readers may infer entity uniqueness or source/canon truth from absence of an ambiguity diagnostic. Avoid that wording. State explicitly that `data['entities']` contains only schema-admitted rows and that ambiguity is counted over those rows; malformed raw rows remain violations, not evidence resolved in favor of the valid row. Do not change the checker based on this fixture.
+
+Test: create the proposed matched malformed duplicate case from `r25-to-ambiguous` by changing only the second `seal` row’s required `name` to `""`; verify against `.shokunin/lore/corpus/fixtures/check_bible.py:37-43` behavior that it reports the required-name violation and omits `relations[0].to: ambiguous entity 'seal'`, while the unmodified admitted-duplicate case still reports that ambiguity and `r25-to-unique` remains clean. Compare all five JSON tables to ensure only that one field differs from the admitted duplicate. This tests one schema-screening boundary only; it does not prove canonical uniqueness, source-text truth, or behavior for other malformed fields. If reports are written, label result “no admitted duplicate endpoint,” never “unique target/canon.”
