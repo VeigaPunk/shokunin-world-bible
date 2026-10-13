@@ -1,0 +1,22 @@
+# Round 44 citation scout — source support and actor-kind boundary
+
+## Finding
+
+**No-go on a character-only `entity_id` guard.** The premises conflate an identifier's structural kind with what an invented source says. Current evidence supports checking entity-ID existence/ambiguity, but not the assertion that every timeline subject must be a character. Do not implement a kind restriction absent an explicit schema convention and independently justified rule. This is not a claim that a place necessarily acts in a particular fictional event.
+
+## Evidence and scope
+
+- The JSON contract requires `timeline.entity_id` to be a string, not a character: `.shokunin/lore/corpus/fixtures/check_bible.py:7-14`. In timeline validation the checker diagnoses dangling and ambiguous actor IDs, but looks up `kind` only for `place_id`; occupancy is keyed by actor ID/tick without actor-kind test: `check_bible.py:228-252`. Thus the hypothesized place-actor CLEAN outcome is mechanically plausible, but a structural omission alone does not establish a defect.
+- README language says “A character cannot occupy different places at the same tick” (`.shokunin/lore/corpus/fixtures/README.md:29-34`). This scopes the occupancy invariant to character occupancy; it does not declare that all timeline `entity_id`s are characters. README separately cautions that citation-ID checks do not prove prose support or `why` semantics (`README.md:47-54`), and that source records are invented and must not be mistaken for real-world facts (`README.md:36-41`).
+- The r11 cases concern `place_id` kind validation, not actor kind: `.shokunin/lore/corpus/fixtures/README.md:218-241`. r12 describes repeated `mira` events and duplicate actor-ID ambiguity, explicitly distinguishing structural ID ambiguity from canon identity (`README.md:243-265`). Neither supplies a character-only actor contract.
+- r21 tests malformed dependencies while occupancy requires uniquely resolved actor/place and nonnegative tick; it is not a kind test (`README.md:443-468`). Its fixture descriptions explicitly say inputs are not source testimony. The checker’s present actor gate is count-based, unlike its explicit `kind == 'place'` check (`check_bible.py:233-246`).
+- Fictional support is deliberately bounded. r28/r29 show checker CLEAN for both lexical carrying and a near-miss proximity excerpt because Markdown is not read (`README.md:595-634`). r30 distinguishes textual negation from canon falsity (`README.md:636-656`). r33/r34 and r40/r41 similarly preserve attribution/modality and warn that clean output cannot attest truth (`README.md:702-744`, `860-898`). r43 adds another *fictional* account of Vela's reported position, conditional on referent/occasion, not objective fact (`README.md:900-920`). These precedents prohibit treating a fixture citation as evidentiary proof of actor ontology.
+- r44 LOG itself calls the field a generic entity ID and the character-actor convention unestablished; it explicitly says non-character subjects may be legitimate and directs scouts to veto invented ontology (`.shokunin/lore/LOG.md:737-741`).
+
+## Risks / limits
+
+A place actor might be semantically odd for a particular event description, but deciding that requires claim/prose interpretation outside this structural checker. A blanket rule rejecting all place/faction/item actors could reject valid event models (for example an event about a faction or item) and would falsely turn an editorial preference into canon. Conversely, allowing any unique entity ID does not prove the cited source supports that event; it only means the checker does not enforce an actor-kind convention. Do not say this experiment establishes fictional truth, source authenticity, historical facts, rights, or training permission.
+
+## Falsifiable decision
+
+**GO only if** an existing normative schema/README contract (not merely the example phrase about character occupancy) says timeline actors must be characters, and a minimal pair differing only in `entity_id` kind demonstrates a mismatch against that declared contract while a character control remains CLEAN. Cite that contract and verify both CLI outputs; otherwise **NO-GO** for checker/fixture changes. Current inspected evidence does not meet that threshold, so recommend no implementation. A future project owner could explicitly adopt such a schema rule, but that would be a new decision, not a conclusion from the fictional citations or r11/r12/r21 precedents.
