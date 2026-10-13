@@ -876,3 +876,23 @@ truth. Vela's tentative sound identification does not establish which bell
 sounded. Her non-sighting does not establish absence, refute Tarin or
 support Sella; a shared local tick 3 does not authenticate the Bell-7 date
 or synchronize accounts. No envelope contents or canon outcome follows.
+
+## Round 41: tentative versus direct identification in an attributed report
+
+`r41-vela-direct-bell/` keeps all five r40 JSON files byte-for-byte but
+changes Vela's fictional excerpt from “heard two strokes I took to be the
+registry bell” to “heard the registry bell strike twice.” Its new editorial
+`strength-contrast-map.md` notes that the fixed claim/event still says
+“she took to be.” That remains a *compatible weaker summary*, not a false
+record; it loses the stronger excerpt's reported confidence. Neither
+excerpt establishes that the registry bell objectively rang.
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r40-vela-listener
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r41-vela-direct-bell
+```
+
+Both exit 0 because the checker reads JSON, not Vela's prose. A human
+must assess attribution and strength fidelity; the date/non-sighting,
+source authenticity, external bell origin, Sella/envelope absence and
+canon remain unverified. This is not an automated prose check.
