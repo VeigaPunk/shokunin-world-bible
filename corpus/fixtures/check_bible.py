@@ -37,6 +37,7 @@ def check(directory):
     data = {}
     entities_available = False
     sources_available = False
+    timeline_available = False
     for section, fields in FIELDS.items():
         path = directory / (section + '.json')
         loaded = True
@@ -58,6 +59,8 @@ def check(directory):
             entities_available = True
         elif section == 'sources' and loaded:
             sources_available = True
+        elif section == 'timeline' and loaded:
+            timeline_available = True
         data[section] = []
         for index, row in enumerate(rows):
             location = f'{section}[{index}]'
@@ -120,6 +123,9 @@ def check(directory):
                 continue
             if not isinstance(field, str) or field not in allowed_assertion_fields:
                 errors.append(f'{side_location}.field: expected one of {sorted(allowed_assertion_fields)}')
+                continue
+            if not timeline_available:
+                errors.append(f'{side_location}.event_id: cannot assess event {event_id!r}: timeline.json unavailable')
                 continue
             if event_id_counts.get(event_id, 0) != 1:
                 errors.append(f'{side_location}.event_id: expected exactly one timeline event {event_id!r}')
