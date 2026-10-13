@@ -1,0 +1,21 @@
+# Round 57 non-author reviewer — explicit cycle diagnostic
+
+## Verdict
+
+**Material coverage: NO-GO.** Do not add a graph-cycle diagnostic or build the proposed candidate. The checklist's “timeline acyclicity” row is explicitly unmeasured, but that is an initial desideratum, not evidence of an actionable omission. Under the declared strict-earlier convention, every fully resolved directed cycle necessarily contains an edge already rejected by the checker. No supplied scout establishes a separate editorial action that cycle identity enables beyond reading the local inversion(s).
+
+## Evidence and distinction
+
+The active dependency loop (`corpus/fixtures/check_bible.py:253-274`) checks member types, self/repetition, unknown and ambiguous IDs, and then compares a uniquely resolved edge only if both ticks are nonnegative. It has no graph traversal. Round 8 added repeated-list detection; its adjudicator explicitly distinguished the new repeated-earlier case from a self-edge already failing equal-tick inversion. Round 9 guarded ambiguous IDs instead of selecting a last-wins tick. Round 20 bounded ordering comparison to nonnegative endpoints, and Round 22 retained valid string siblings while skipping malformed members. These are important local guards, not prior cycle detection.
+
+For a cycle of distinct, uniquely resolved events with nonnegative integer ticks, assume every dependency satisfies prerequisite tick < dependent tick. Chaining those inequalities around the directed loop yields tick < itself, impossible. Thus at least one edge has prerequisite tick >= dependent tick and triggers the existing `timeline inversion`. This is a proof about the admitted numeric convention, not about whether the fictional dependencies are true. A proposed cycle/acyclic pair with equal inversion counts could establish that topology differs; it does not establish that the distinction improves an operator decision. The pair scout's concrete construction is a proposal, not a run. The graph scout did run an out-of-repository two-event reciprocal probe: one existing inversion, exit 1; the valid-order acyclic control was clean. That confirms existing edge detection in that probe, but it is not a matched-inversion control and supplies no distinct operator use.
+
+The boundary cases do not make a safe graph feature automatic. Negative endpoints retain invalid-tick findings and their comparisons are withheld (r20's scope: unassessed, not satisfied). Unknown/ambiguous IDs are not uniquely resolved endpoints (r9); malformed members are not graph edges, while r22 demonstrates eligible string siblings are still checked. Self/repeat members already have local findings (r8/r22). Any traversal would need an explicit policy for excluding these cases and preserving all local outputs; no evidence shows that extra policy buys material coverage.
+
+## Practical editorial action
+
+For a valid-tick cycle, the existing inversion line identifies a specific dependency edge and its two ticks; the practical action is to review that edge/reference and correct the input schedule or dependency assertion as editorially appropriate. A matched acyclic graph with the same inversion count likewise calls for review of its reported edge(s). Without a concrete task where the cycle label changes that next action (for example, a downstream process requiring cycle-member paths rather than edge findings), a cycle line merely names the shape of already-invalid ordering and risks duplicate noise. It must not trigger automatic sorting/correction or be described as causal validation, source-text support, canon, truth, rights, or game-mechanics verification.
+
+## Falsifier
+
+Reconsider only upon a minimal, schema-valid unique-ID cycle and an acyclic control matched for inversion count and relevant local findings, together with a documented real editorial/operator task where knowing the cycle members changes a decision that the existing edge-local output cannot support. Show exact raw output and that a narrowly specified graph rule preserves the existing inversion/local findings while excluding malformed, unknown, ambiguous, and negative-tick references rather than promoting them to certain edges. If the pair only makes the cycle visible as a graph fact, with no changed action, NO-GO stands. No candidate was edited or run for this review.
