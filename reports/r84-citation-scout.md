@@ -1,0 +1,24 @@
+# Round 84 citation scout — duplicate event IDs and local occupancy
+
+## Scope and evidence
+
+Read the Round 84 declaration in `.shokunin/lore/LOG.md`, the fixture README, the active `corpus/fixtures/check_bible.py`, and the cited prior reports `r9-axis-adjudicator.md`, `r12-citation-scout.md`, `r16-citation-scout.md`, `r19-citation-scout.md`, `r37-axis-adjudicator.md`, `r52-citation-scout.md`, and `r70-axis-adjudicator.md`. This is a read-only citation/attribution review, not an independent matched-pair replay or a verdict on the proposed axis move.
+
+## What the checker can say about these rows
+
+- The checker has distinct identifier namespaces for timeline-event `id`, entity IDs, and source IDs. The duplicate-event index diagnoses repeated timeline IDs; it does not select a canonical duplicate row. Round 9's order-swapped dependency controls/adjudication show why a reference to a repeated event ID must not be resolved by last-wins selection (`reports/r9-axis-adjudicator.md`). Round 37 similarly documents that an ambiguous ledger event endpoint gets an exact-one/cardinality finding rather than a selected endpoint (`reports/r37-axis-adjudicator.md`).
+- Occupancy uses each admitted timeline row's supplied `entity_id`, `tick`, and `place_id`. The current checker reports duplicate actor/place entity IDs, requires a unique actor and uniquely resolved entity of kind `place`, diagnoses negative ticks, and only compares occupancy at nonnegative ticks (`check_bible.py`, timeline occupancy loop around lines 270–294). Its occupied-slot key is `(entity_id, tick)`; the double-booked message compares the stored and current `place_id`. It does not use the timeline event `id` to decide whether the two raw rows occupy the same slot.
+- Consequently, a duplicate event ID makes references *to that ID* ambiguous, but by itself does not erase either admitted raw timeline row or make their supplied actor/tick/place fields uncomparable. A duplicate-ID warning and a same-actor/same-local-tick/different-place `double-booked` diagnostic can be independently actionable structural findings. Suppressing the latter solely because event IDs duplicate would require a demonstrated reason why raw row-field comparison is not assessable; the identifier collision alone does not establish that.
+- A unique `source_id` means only that exactly one admitted source row has that ID; ambiguous/unknown source IDs produce reference diagnostics. The checker does not read cited prose to test support for a row's actor, tick, place, or occurrence. This identity-versus-entailment boundary is also explicit in `r12-citation-scout.md`, `r16-citation-scout.md`, and `r52-citation-scout.md`.
+
+## Fictional attribution and boundaries
+
+Any named people, places, event descriptions, source excerpts, and source reliability notes in the fixture corpus are authored fictional and unverified material. The timeline JSON rows are constructed input assertions, not independent evidence that an event occurred. Structural citation resolution does not authenticate an excerpt, prove that a source says what a row claims, establish an actual location or time, or resolve fictional canon. The README describes ticks as a local invented sequence; a numeric tick is not a real-world date or independently sourced chronology (`r19-citation-scout.md`). A double-booked finding is a comparison of supplied fields, not proof of a real or canonical contradiction. Conversely, withholding a comparison would leave the input pattern unassessed, not prove there was no conflict.
+
+The proposed matched event pair should therefore be described strictly as checker inputs: same uniquely identified actor, same nonnegative local tick, distinct uniquely typed places, with either distinct event IDs or a duplicated event ID. Keep source citations labeled as registry references only. Do not describe either row as a true report, do not infer which duplicate event ID is the “real” event, and do not convert local tick into story chronology beyond the fixture convention.
+
+Nothing in these structural citation checks establishes or addresses real-world copyright, licensing, permission, or ownership. The reference ledger's method citations and rights caveats are separate from fictional source records (`corpus/knowledge/reference-ledger.md`). No canon, rights, or game-mechanics conclusion follows here.
+
+## Citation-scout assessment
+
+The key boundary is that duplicate *event identity* affects resolution of references to an event ID, while occupancy is currently computed directly from each admitted row's actor/tick/place fields. This makes it unsafe to assume duplicate IDs necessarily invalidate a field-level occupancy comparison. Whether a changed diagnostic would improve editorial calibration must be demonstrated by the actual matched outputs and a concrete different safe repair action; this report alone does not recommend suppressing or qualifying the existing warning.
