@@ -856,3 +856,23 @@ source finding. This probes zero matching source rows, not the duplicated-
 source ambiguity tested in r7's temporary ledger `claim_a` probe and
 r38's rejected audit. It is an existing checker path, not a new rule or
 proof that Sella lied, that her excerpt is false or that canon is settled.
+
+## Round 40: Vela's attributed auditory report
+
+`r40-vela-listener/` derives from r35, preserving Tarin's and Sella's
+fictional excerpts and their unresolved ledger. A newly authored Vela note
+reports that she heard two strokes **she took to be** the registry bell
+while on Lantern Harbor's east steps during her source-claimed Bell-7. She
+reports that she did not see Sella or an envelope. The fixture appends a
+separately cited Vela character and report event; `vela-clause-map.md`
+traces the wording. Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r40-vela-listener
+```
+
+A clean result checks JSON structure and citation IDs, not the excerpt's
+truth. Vela's tentative sound identification does not establish which bell
+sounded. Her non-sighting does not establish absence, refute Tarin or
+support Sella; a shared local tick 3 does not authenticate the Bell-7 date
+or synchronize accounts. No envelope contents or canon outcome follows.
