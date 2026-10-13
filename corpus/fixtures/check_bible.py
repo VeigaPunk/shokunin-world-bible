@@ -148,7 +148,7 @@ def check(directory):
         source(row['first_appearance'], location + '.first_appearance')
         for i, claim in enumerate(row['claims']):
             label = f'{location}.claims[{i}]'
-            if not isinstance(claim, dict) or not isinstance(claim.get('statement'), str) or not claim['statement'].strip() or not isinstance(claim.get('source_id'), str):
+            if not isinstance(claim, dict) or not isinstance(claim.get('statement'), str) or not claim['statement'].strip() or not isinstance(claim.get('source_id'), str) or not claim['source_id'].strip():
                 errors.append(f'{label}: expected nonempty statement and source_id')
             else:
                 source(claim['source_id'], label + '.source_id')

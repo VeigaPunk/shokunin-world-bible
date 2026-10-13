@@ -970,3 +970,14 @@ Matched controls: `r61-direct-*` vary only the source table against `consistent`
 `timeline_available` is true only when `timeline.json` decodes as a top-level array. On unavailable timeline, the checker retains its file/shape diagnostic and emits a per-pointer `cannot assess event …: timeline.json unavailable` for structurally valid ledger sides; this preserves affected-reference locations without claiming the event is absent. Side/object/id/field and same-reference checks, plus source/entity/relation checks, remain independent. Timeline dependencies have no rows to inspect after whole-file failure, so no dependency findings are invented.
 
 Loaded `[]`, partial arrays, and duplicate event IDs remain available indexes and retain existing membership/cardinality behavior. Invalid rows filtered from a decoded array do not make that table unavailable. `r62-*` fixtures pair unavailable states (missing, malformed JSON, duplicate member, nonarray) with loaded empty, partial, duplicate and matched controls over `r39-ledger-source-missing`; matched controls use identical other tables except specifically named malformed-side/independent-relation probes. These checks cover supplied JSON ID membership only, not fictional event occurrence, truth, chronology, source-text support, canon, or rights.
+
+## Round 67: claim citation field presence
+
+Each entity claim requires a nonempty `statement` and nonempty `source_id`, even
+when `sources.json` is unavailable. The checker resolves membership of a
+nonempty ID only when that index loads; an unavailable index is reported
+separately and does not establish whether a citation is valid. This checks
+input structure and supplied-index membership only, not source-text support,
+fictional-world evidence, truth, canon, or rights. The `r67-claim-source-*`
+fixtures compare empty, whitespace, and nonempty claim IDs with the source
+index unavailable; `r67-claim-source-loaded-empty` contrasts a loaded index.
