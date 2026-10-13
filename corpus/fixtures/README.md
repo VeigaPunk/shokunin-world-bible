@@ -992,3 +992,7 @@ appended records and labels the claim as paraphrase. No timeline event, date,
 Bell-7 reference, sequence, relation, dependency, or contradiction is added.
 This preserves attribution only: the checker cannot verify the excerpt, slate,
 writer, chronology, canon, or depth.
+
+## Round 73: attributed Jorin slate-reading report
+
+`r73-jorin-slate-claim/` clones r72 and appends one fictional, unverified Jorin source plus one cited claim to the existing Jorin entity. The new first-person excerpt reports different wording from Vela’s r72 account; an editorial note leaves slate/inscription identity, reading time, and source relationship unresolved. No timeline event, relation, or contradiction row is added. Checker cleanliness verifies structure and source-ID resolution only, not prose support, slate truth, or depth.
