@@ -1,0 +1,31 @@
+# Round 69 schema scout — contradiction-side validity gate
+
+## Finding
+
+The active checker’s same-reference finding is presently gated only by both values being dictionaries and raw equality of `.get("event_id")` and `.get("field")`; it does **not** require either side to be a structurally valid reference. The smallest structurally meaningful gate is local to each side: dictionary, a nonempty string `event_id`, and `field` in `{'place_id', 'tick', 'depends_on'}`. Emit the same-reference finding only if **both** sides meet that gate and their `(event_id, field)` pairs are equal. Keep each side’s existing local validation and all existing behavior for fully valid identical references.
+
+This is a structure/validity gate, not a resolvability gate. Whether a syntactically valid ID resolves exactly once in `timeline.json`, and whether that event’s `source_id` resolves, are separate downstream checks. Do not condition the pair-equality guard on timeline availability, event membership/cardinality, or source resolvability. A valid-shaped but unknown event ID can still participate in a duplicate-reference structural finding; the membership checker separately says whether the index can assess or resolve it.
+
+## Active validation path (HEAD declared in `.shokunin/lore/LOG.md`, Round 69 declaration)
+
+- `.shokunin/lore/corpus/fixtures/check_bible.py:25-32` declares `contradictions` top-level rows with `claim_a`/`claim_b` as dictionaries; the generic table validator at `:65-76` requires exact declared field types and only admits rows whose required top-level fields are valid. It does not validate the nested side schema.
+- The nested side loop at `:111-126` defines allowed fields as `place_id`, `tick`, and `depends_on`; checks each side is a dict (`:113-118`), then requires a nonblank string event ID (`:119-123`) and an allowed string field (`:124-126`). The `continue`s mean malformed event IDs or fields do not proceed to timeline membership checking.
+- Resolvability is distinct and later: `:127-132` reports unavailable timeline or requires exactly one matching event; `:133-138` then checks the resolved event’s source status. These checks are currently performed per side.
+- The problematic pair check follows at `:139-143`: only dictionary-ness is tested, then raw `.get()` values are compared. Thus two dictionaries with both keys absent compare equal (`None == None`); equal empty/whitespace event IDs or equal unsupported fields also pass the equality predicate. In `r62-malformed-side`, the two sides have the same nonempty event ID and the same unsupported field `bogus`; current output includes two local invalid-field findings **and** `contradictions[0]: claim_a and claim_b references must differ`. This is direct evidence that an invalid side can generate the pair finding.
+
+## Relevant fixtures and observed controls
+
+Commands below used the active checker: `python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/<fixture>`.
+
+- `.shokunin/lore/corpus/fixtures/r62-malformed-side/contradictions.json` gives both sides event ID `tarin-envelope-observation` and field `bogus`; its `timeline.json` is malformed. Observed exit 1 includes the timeline loader error, both `claim_a.field`/`claim_b.field: expected one of ...`, and the same-reference finding. This fixture demonstrates malformed **field** on both sides; it does not exercise absent or blank nested keys.
+- `.shokunin/lore/corpus/fixtures/r62-loaded/contradictions.json` uses well-formed, identical-schema sides with distinct references; its timeline contains both referenced event IDs, while the Sella event has an unknown source. Observed output is only the independent ledger-side no-resolvable-source finding and timeline unknown-source finding; no same-reference finding. This is a control for existing distinct valid references and separate source resolution, not a valid-identical pair control.
+- `.shokunin/lore/corpus/fixtures/r62-empty/` and `r62-partial/` keep the ledger structure but vary loaded timeline contents. The checker reports missing event IDs (two for loaded-empty, one for partial), showing membership/cardinality is distinct from local shape validation. `.shokunin/lore/corpus/fixtures/r62-missing/` reports `cannot assess event ...: timeline.json unavailable`, not an absent-event claim; its report documents availability behavior.
+- `.shokunin/lore/reports/r62-executor.md` (“Exact output evidence”) records the malformed-side same-reference result, loaded source control, unavailable/empty/partial behavior, and independent checks. `.shokunin/lore/reports/r62-reviewer.md` (“Independent fixture replay” and “Diff and scope audit”) independently maps local shape checks versus the later index lookup/source status, and specifically notes malformed-side retains the pair finding. These reports are prior-round evidence, not proof that every r69 control exists.
+
+## Exact validity gate and limits
+
+For the proposed r69 structural condition, each side is locally valid for comparison iff it is a dictionary, `event_id` is a string with non-whitespace content, and `field` is a string belonging to the current allowed set. If both pass and their event IDs and fields are equal, keep the existing same-reference finding. If either fails, keep its independent local malformed-side diagnostics but do not add the pair finding. In particular, check `event_id` and `field` independently for the comparison gate; do not accidentally make timeline lookup/source resolution a prerequisite.
+
+The current fixtures establish malformed-field behavior and distinct-reference/index/source controls, but I found no existing matched fixture pair for malformed-both, malformed-one, valid-identical, and valid-different side references. The Round 69 declaration in `.shokunin/lore/LOG.md` sets those as required controls. A focused fixture/replay must supply them before claiming the declaration’s improvement criteria are met; this scouting report itself does not establish a material calibration gain, candidate behavior, or regression result.
+
+This describes validation of supplied ledger input only. It is not a claim about an actual story contradiction, source-text support, canon, rights, or game mechanics.
