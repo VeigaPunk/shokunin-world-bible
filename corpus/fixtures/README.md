@@ -904,9 +904,11 @@ first-person `jorin-note` excerpt, source, Jorin character claim and one
 Jorin-attributed event. Jorin says he saw Vela on the Lantern Harbor east
 steps from the registry doorway during what **he called** Bell-7, and did not
 see who, if anyone, struck a bell. `jorin-clause-map.md` traces the exact
-phrases and warns that the inherited r41 `vela-clause-map.md` quotes the older
-r40 wording; use the actual r41 Vela excerpt and `strength-contrast-map.md`
-for that difference.
+phrases. The current r41 and r43 `vela-clause-map.md` files were corrected in
+r48 to quote their local direct excerpts; older creation-time reports accurately
+describe the formerly stale inherited maps. Use `strength-contrast-map.md` for
+the r40 tentative versus r41 direct wording and its fixed, weaker but compatible
+JSON summary—not as an objective bell claim.
 
 ```sh
 python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r41-vela-direct-bell
