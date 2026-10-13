@@ -35,19 +35,25 @@ FIELDS = {
 def check(directory):
     errors = []
     data = {}
+    entities_available = False
     for section, fields in FIELDS.items():
         path = directory / (section + '.json')
+        loaded = True
         try:
             rows = json.loads(path.read_text(encoding='utf-8'), object_pairs_hook=unique_object)
         except DuplicateMemberError as exc:
             errors.append(f"{path.name}: duplicate object member {exc.name!r}; cannot load JSON")
             rows = []
+            loaded = False
         except (OSError, UnicodeError, json.JSONDecodeError) as exc:
             errors.append(f'{path.name}: cannot load JSON: {exc}')
             rows = []
+            loaded = False
         if not isinstance(rows, list):
             errors.append(f'{path.name}: expected array')
             rows = []
+        elif section == 'entities' and loaded:
+            entities_available = True
         data[section] = []
         for index, row in enumerate(rows):
             location = f'{section}[{index}]'
@@ -141,12 +147,13 @@ def check(directory):
         entity_id_counts[entity['id']] = entity_id_counts.get(entity['id'], 0) + 1
 
     for location, row in data['relations']:
-        for endpoint in ('from', 'to'):
-            entity_id = row[endpoint]
-            if entity_id not in entities:
-                errors.append(f'{location}.{endpoint}: dangling entity {entity_id!r}')
-            elif entity_id_counts[entity_id] > 1:
-                errors.append(f'{location}.{endpoint}: ambiguous entity {entity_id!r}')
+        if entities_available:
+            for endpoint in ('from', 'to'):
+                entity_id = row[endpoint]
+                if entity_id not in entities:
+                    errors.append(f'{location}.{endpoint}: dangling entity {entity_id!r}')
+                elif entity_id_counts[entity_id] > 1:
+                    errors.append(f'{location}.{endpoint}: ambiguous entity {entity_id!r}')
         source(row['source_id'], location + '.source_id')
 
     for location, item in data['entities']:
@@ -229,6 +236,8 @@ def check(directory):
 
     allied = [row for _, row in data['relations'] if row['type'] == 'allied_with']
     for location, row in data['relations']:
+        if not entities_available:
+            continue
         left, right = row['from'], row['to']
         if row['type'] != 'allied_with' or left == right:
             continue
@@ -247,23 +256,24 @@ def check(directory):
 
     occupied = {}
     for location, row in data['timeline']:
-        for field in ('entity_id', 'place_id'):
-            if row[field] not in entities:
-                errors.append(f'{location}.{field}: dangling entity {row[field]!r}')
         actor_id_count = entity_id_counts.get(row['entity_id'], 0)
-        ambiguous_actor = actor_id_count > 1
-        if ambiguous_actor:
-            errors.append(f'{location}.entity_id: ambiguous actor entity {row["entity_id"]!r}')
         place_id_count = entity_id_counts.get(row['place_id'], 0)
-        if place_id_count > 1:
-            errors.append(f'{location}.place_id: ambiguous place entity {row["place_id"]!r}')
-        elif place_id_count == 1 and entities[row['place_id']]['kind'] != 'place':
-            errors.append(f'{location}.place_id: not a place {row["place_id"]!r}')
+        comparable_place = False
+        if entities_available:
+            for field in ('entity_id', 'place_id'):
+                if row[field] not in entities:
+                    errors.append(f'{location}.{field}: dangling entity {row[field]!r}')
+            if actor_id_count > 1:
+                errors.append(f'{location}.entity_id: ambiguous actor entity {row["entity_id"]!r}')
+            if place_id_count > 1:
+                errors.append(f'{location}.place_id: ambiguous place entity {row["place_id"]!r}')
+            elif place_id_count == 1 and entities[row['place_id']]['kind'] != 'place':
+                errors.append(f'{location}.place_id: not a place {row["place_id"]!r}')
+            comparable_place = place_id_count == 1 and entities[row['place_id']]['kind'] == 'place'
         source(row['source_id'], location + '.source_id')
         if row['tick'] < 0:
             errors.append(f'{location}.tick: must be nonnegative')
-        comparable_place = place_id_count == 1 and entities[row['place_id']]['kind'] == 'place'
-        if actor_id_count == 1 and comparable_place and row['tick'] >= 0:
+        if entities_available and actor_id_count == 1 and comparable_place and row['tick'] >= 0:
             slot = (row['entity_id'], row['tick'])
             if slot in occupied and occupied[slot][1] != row['place_id']:
                 previous, prior_place = occupied[slot]

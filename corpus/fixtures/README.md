@@ -951,3 +951,10 @@ member policy. This candidate retains the invalid-JSON handling path and adds a
 separate stable duplicate-member diagnostic. No claim is made that r5's limited
 probes prove all malformed inputs are cascade-free. See
 `../../reports/r59-executor.md` for raw candidate output and replay limits.
+
+
+## Round 60: unavailable entity index
+
+Entity-reference conclusions require a successfully parsed `entities.json` top-level array. If the file is missing, invalid JSON (including rejected duplicate members), or has a non-array top level, the checker retains its load/shape diagnostic and does not call referenced entities dangling, ambiguous, the wrong kind, or infer occupancy/alliance conclusions from the unavailable index. It still validates other tables, source citations, timeline tick and dependency rules, and independent schema. Provenance entity lookups naturally have no rows to process when the full entity file is unavailable.
+
+A successfully loaded empty array is available and therefore referenced IDs are checked as dangling. A loaded array is available even if row validation rejects some rows: only retained valid rows enter the index, so a reference present only in a rejected row can still be reported dangling from the loaded input. A valid partial array likewise reports absent IDs as dangling; duplicate valid IDs retain prior ambiguity behavior. These findings are about loaded input rows, not a complete fictional-world registry. This policy is limited to entity-table availability; it does not suppress checks because sources or timeline tables are unavailable and does not establish fictional-world absence, canon, source truth, or rights. The `r60-unavailable`, `r60-empty`, and `r60-partial` fixtures share the other four tables to isolate that distinction. `r60-unavailable-independent` keeps the same unavailable `entities.json` but adds a negative tick, unknown source and unknown dependency to confirm those independent diagnostics survive.
