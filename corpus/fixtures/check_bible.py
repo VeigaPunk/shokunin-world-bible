@@ -115,16 +115,19 @@ def check(directory):
             else:
                 source(claim['source_id'], label + '.source_id')
 
-    for location, row in data['relations']:
-        for endpoint in ('from', 'to'):
-            if row[endpoint] not in entities:
-                errors.append(f'{location}.{endpoint}: dangling entity {row[endpoint]!r}')
-        source(row['source_id'], location + '.source_id')
-
     # Only distinct, resolvable faction pairs participate; self-edges are out of scope.
     entity_id_counts = {}
     for _, entity in data['entities']:
         entity_id_counts[entity['id']] = entity_id_counts.get(entity['id'], 0) + 1
+
+    for location, row in data['relations']:
+        for endpoint in ('from', 'to'):
+            entity_id = row[endpoint]
+            if entity_id not in entities:
+                errors.append(f'{location}.{endpoint}: dangling entity {entity_id!r}')
+            elif entity_id_counts[entity_id] > 1:
+                errors.append(f'{location}.{endpoint}: ambiguous entity {entity_id!r}')
+        source(row['source_id'], location + '.source_id')
 
     for location, item in data['entities']:
         if 'provenance' not in item:

@@ -510,3 +510,25 @@ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixt
 Clean output means schema, citations, relations, and timeline structure
 only. It does not mean the absence report is true, that the strip never
 existed, or that the note says anything about Mira’s Blue Seal.
+
+## Round 24: ambiguous relation endpoint IDs
+
+A relation endpoint names an entity ID, not a chosen row. The checker reports
+`relations[i].from` or `.to: ambiguous entity` when that ID occurs in more
+than one structurally admitted entity row. It retains the existing duplicate
+entity-ID finding; it does not select the first or last row or adjudicate
+which cited claim is true. The same endpoint has exactly one of these input
+outcomes:
+
+| Matching admitted entity rows | Endpoint finding |
+|---|---|
+| 0 | `dangling entity` (existing) |
+| 1 | None |
+| More than 1 | `ambiguous entity` at the relation endpoint |
+
+Run `r12-ambiguous-actor` and `r12-unique-actor` with the checker command
+above. Their `relations.json` records cite the fictional `courier-log`; the
+ambiguous fixture duplicates `mira`, which the `from` endpoint names. The
+unique control does not. This tests identifier resolution, not whether the
+source text supports the relation. No real-world reference or rights claim
+is involved.
