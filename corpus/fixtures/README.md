@@ -996,3 +996,7 @@ writer, chronology, canon, or depth.
 ## Round 73: attributed Jorin slate-reading report
 
 `r73-jorin-slate-claim/` clones r72 and appends one fictional, unverified Jorin source plus one cited claim to the existing Jorin entity. The new first-person excerpt reports different wording from Vela’s r72 account; an editorial note leaves slate/inscription identity, reading time, and source relationship unresolved. No timeline event, relation, or contradiction row is added. Checker cleanliness verifies structure and source-ID resolution only, not prose support, slate truth, or depth.
+
+## Round 83: Vela joint non-sighting scope
+
+`r83-vela-joint-nonsighting/` clones the r40 Vela fixture and changes only the excerpt clause “I did not see Sella or an envelope” to “I did not see Sella with an envelope.” The inherited claim and event retain their broader separate-target paraphrase to expose the scope mismatch; `scope-contrast-map.md` describes the distinction and its limits. The five JSON files and all other inherited files are unchanged. Both variants are fictional and unverified; checker CLEAN means structural validation and source-ID resolution only, not excerpt support, truth, canon, rights, or mechanics.
