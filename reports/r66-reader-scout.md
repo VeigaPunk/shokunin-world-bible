@@ -1,0 +1,18 @@
+# Round 66 reader-scout — R59 example and current R60 behavior
+
+## Independent decision: NO-GO on material calibration
+
+The R59 paragraph is factually stale as an unqualified description of current checker behavior, but the evidence does not establish a material operator misdirection after the following R60 section. R59 says “Other files are still checked” and “as shown by `r59-nested-duplicate/`, unloading an entity table can consequently produce dangling-reference findings in other tables.” Read locally, this presents the six cascades as the fixture’s current behavior. The R60 section immediately below explicitly says that when `entities.json` is unavailable, “the checker ... does not call referenced entities dangling, ambiguous, the wrong kind,” and identifies duplicate-member rejection as one unavailability case. It also explains that independent checks continue. Thus an operator following the complete active README has the governing correction and repair distinction; the concern is a reader who stops at R59 or treats its historical example as live output. Plausible, but no evidence here that this produces a consequential mistaken action rather than a brief inconsistency.
+
+This is not a mere fact correction verdict: calibration improves locally if R59’s historical status is made explicit, but the materiality threshold is unmet given R60’s adjacent and specific rule. Recommend NO-GO / no README edit on this evidence. A narrowly labeled historical example could reduce ambiguity without harm, but benefit is not demonstrated as material; do not rewrite the old report or imply historical execution was wrong.
+
+## Concrete evidence
+
+- Active README R59 currently says unloading an entity table “can consequently produce dangling-reference findings in other tables,” and links to `../../reports/r59-executor.md` “for raw candidate output and replay limits.” That executor accurately records the creation-time `r59-nested-duplicate` output: duplicate-member diagnostic plus six dangling findings, `7 violation(s); no canon changed`.
+- Active README R60, below R59, directly governs the same case: duplicate-member rejection makes entities unavailable; unavailable entity index suppresses dangling conclusions. It distinguishes a successfully loaded empty array (which does produce dangling findings) and says these findings concern loaded rows, not world absence.
+- Current direct CLI replay today: `python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r59-nested-duplicate` (actual path `.shokunin/...`) exits 1, stdout is only `VIOLATION: entities.json: duplicate object member 'source_id'; cannot load JSON` and `1 violation(s); no canon changed`; stderr empty. No six dangling findings. The mismatch is real, but R60 already states why.
+- R60 executor records that `r59-nested-duplicate` was the sole changed pre-existing fixture in its stated 99-directory HEAD replay; intended delta was removal of the six entity-reference conclusions, not a change in duplicate parsing. R59 executor’s creation-time output remains valid historical evidence.
+
+## Falsifier / boundary
+
+Evidence of an operator actually using R59 alone to infer active dangling findings or to take the wrong repair action despite R60 would falsify this NO-GO materiality judgment. Conversely, an explicit “at creation time; superseded by R60” label would settle the stale-current wording, but its incremental benefit over the existing adjacent R60 correction is unproven here. Do not infer entity/world absence, source support, canon, or rights from either output. No old reports, README, checker, fixtures, or log were edited.
