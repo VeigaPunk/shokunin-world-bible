@@ -1,0 +1,26 @@
+# Round 52 scribe — event citation versus input collision
+
+**Scope:** decision-table draft only. This report changes no fixture, checker, README, LOG, or commit. Proposed language is not an implemented rule or measured r52 output.
+
+## Evidence and distinction
+
+At the declared r52 baseline, the timeline loop independently calls `source(row['source_id'], ...)` and then, when actor/place/tick guards pass, emits `double-booked` from the raw `(entity_id, tick)` slot and differing `place_id` (`.shokunin/lore/corpus/fixtures/check_bible.py:242-250`). It does not condition that collision on source status. `source_status` distinguishes zero/one/multiple source rows and `source()` reports unknown/ambiguous locally (`check_bible.py:64-74`). Thus a collision is an **input-field comparison**, not an established sourced narrative conflict.
+
+The existing policy precedent is narrower: ambiguous citations in item provenance annotate downstream chain/tick findings “input-structural finding, not sourced-canon” (`check_bible.py:145-206`). This is not a general rule that every diagnostic tied to an ambiguous source is qualified. Round 7's report proposed that a repeated source ID is not a unique citation witness and does not resolve source support (`reports/r7-scribe.md`, especially its ambiguity wording and limits); it does not establish that a valid occupancy comparison is false or should be suppressed. Round 12 expressly withholds *actor* collision inference when actor identity is ambiguous, but preserves a uniquely identified actor's raw occupancy rule (`corpus/fixtures/README.md:243-265`). These are distinct uncertainty dimensions: source-ID multiplicity does not establish actor-ID multiplicity.
+
+## Bounded decision table (proposal; require measured paired evidence)
+
+| Timeline event source ID | Input actor/place/tick conditions | Collision output decision | What the result does not establish |
+|---|---|---|---|
+| Exactly one source row | Existing eligible actor, valid unique place, nonnegative tick; same actor/tick appears at a distinct place | Preserve existing `double-booked` output byte-for-byte. | A unique pointer does not prove the cited prose supports this location, the event happened, or the actor truly occupied it. |
+| More than one source row (ambiguous citation) | Same eligible raw input-field pair | Keep the raw `double-booked` comparison visible; if a bounded policy is approved, qualify this diagnostic as an input-structural finding, not sourced-canon. Keep each local ambiguous `source_id` and duplicate-source finding. Do not hide, suppress, or resolve the collision. | Duplicate source ID neither proves nor disproves a fictional location, any source's content/support, an event, or canon. This does not say two rows are one source or choose a winner. |
+| No source row (unknown citation) | Same eligible raw input-field pair | **Out of proposal / unresolved.** Existing unknown-source and collision findings remain as currently emitted pending separate evidence and decision. | Do not extend ambiguous-source qualification to unknown pointers by analogy; no citation is not evidence for or against the input-field comparison. |
+| Actor/place/tick fails existing occupancy guards | Any citation status | Preserve those existing guards/findings; this proposal creates no new occupancy inference. | Source status cannot cure ambiguous actor/place or invalid tick. |
+
+The optional qualifier must be attached only to the collision diagnostic for an event whose source ID is actually ambiguous; it must not be mistaken for suppression. Do not generalize to every event-related diagnostic, claim, relation, or prose comparison. If the checker cannot identify which event(s) in the pair carry ambiguity in its collision message, retain a truthful qualifier without implying both sources are ambiguous, or reject the proposed wording.
+
+## Falsifiable go/no-go
+
+**Go only if** a schema-valid pair/control demonstrates the difference: unique-source control retains its exact existing collision text; an otherwise identical variant with a duplicated valid source ID retains the same raw collision, local ambiguity/duplicate findings, and adds a clearly scoped structural-not-sourced qualifier only where applicable. A baseline run must show whether any existing fixture output would change; archive the exact command, stdout/stderr, exit code, and fixture bytes. Independent replay must also verify the declared 95 old checker tuples and 474 JSON paths or account for every affected output. A reviewer must explain a concrete calibration benefit beyond the already explicit local source-ambiguity findings, and confirm no collision is hidden or overqualified.
+
+**No-go** if prior policy already makes the distinction clear enough, if the qualifier adds noise or obscures the preserved input collision, if unique-source output changes, if ambiguous rows are conflated with unknown IDs, or if baseline/replay exposes unaccounted outputs. Even a go is calibration only; depth and coverage unchanged. A uniquely cited event still is not proof of source-text support, actual occupancy, or canon. An ambiguous source ID neither proves nor disproves any fictional location/source prose/canon.
