@@ -742,3 +742,30 @@ must distinguish r33's direct-sighting **report** from r34's hearsay
 **report**. Neither proves the placement occurred, makes the unchanged
 JSON canonically false, identifies envelope contents, or authenticates a
 source. Names-to-IDs and event tick remain fixture-local choices.
+
+## Round 35: two cited reports, one unresolved Bell-7 conflict
+
+`r35-bell7-conflict/` derives from the r33 direct-sighting report. Its
+newly authored Tarin excerpt says Tarin saw Sella place an unlabeled paper
+envelope on the Lantern Harbor registry desk during Bell-7, claimed to be
+the sole seventh-watch registry-bell sounding on the seventh day of
+Embermonth, year 12. A separately authored
+Sella excerpt names that same date/ringing and says she was physically at
+North Tower throughout it and never at Lantern Harbor during it. The date
+and unique-ringing status are claims in these fictional notes, not
+authenticated chronology.
+`manual-clause-pointer-map.md` maps both accounts and the editorial
+`contradictions.json` pair: Tarin's `place_id` is the reported observation
+scene, not a second actor=Sella event; Sella's `place_id` is her own
+reported location. Under the stated identity, place and unique-occasion
+assumptions, the accounts conflict as **reports**. Neither wins.
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r35-bell7-conflict
+```
+
+A clean result validates schema and resolvable pointers, not the semantic
+conflict, source reliability or canon. Both source texts require manual
+review. The equal local tick 3 is not a Bell-7 time conversion or proof of
+external synchronization. Nothing identifies the envelope's contents,
+owner, recipient, motive or any Blue Seal/carbon/route-strip connection.
