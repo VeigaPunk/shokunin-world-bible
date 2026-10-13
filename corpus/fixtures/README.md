@@ -813,3 +813,25 @@ input ID cannot select which event assertion `claim_a` means. Neither this
 error nor a clean control settles the two attributed reports, authenticates
 sources, tests their prose or chooses canon. The Harbor pointer remains
 Tarin's reported sighting scene, not a second Sella-actor occupancy row.
+
+## Round 38: rejected source-ambiguity experiment (not active fixtures)
+
+The proposed `r38-ledger-source-{unique,ambiguous}/` pair is archived at
+`../live/rejected-r38/`, not in this active fixture directory. The unique
+case copies r35; the negative appends a second row with the
+`sella-bell7-note` source ID. From the repo root, inspect the archived
+experiment with:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/live/rejected-r38/r38-ledger-source-unique
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/live/rejected-r38/r38-ledger-source-ambiguous
+```
+
+The control exits 0; the negative exits 1 with duplicate source-ID,
+ledger `claim_b.source_id`, and `timeline[3].source_id` ambiguity findings.
+The experiment is reproducible, but **not an admitted coverage gain**:
+round 7's independent reviewer already exercised the same ledger source-
+ambiguity branch in a temporary `claim_a` probe. Opposite ledger side and
+committed audit artifact do not constitute a new checker input boundary.
+Neither result chooses a source row, a true testimony or canon. See round
+38 LOG closure and `reports/r38-axis-adjudicator.md`.
