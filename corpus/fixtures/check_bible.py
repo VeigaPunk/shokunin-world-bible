@@ -36,6 +36,7 @@ def check(directory):
     errors = []
     data = {}
     entities_available = False
+    sources_available = False
     for section, fields in FIELDS.items():
         path = directory / (section + '.json')
         loaded = True
@@ -52,8 +53,11 @@ def check(directory):
         if not isinstance(rows, list):
             errors.append(f'{path.name}: expected array')
             rows = []
-        elif section == 'entities' and loaded:
+            loaded = False
+        if section == 'entities' and loaded:
             entities_available = True
+        elif section == 'sources' and loaded:
+            sources_available = True
         data[section] = []
         for index, row in enumerate(rows):
             location = f'{section}[{index}]'
@@ -88,6 +92,8 @@ def check(directory):
         event_id_counts[event['id']] = event_id_counts.get(event['id'], 0) + 1
 
     def source_status(source_id):
+        if not sources_available:
+            return 'unavailable'
         count = source_id_counts.get(source_id, 0)
         return 'unknown' if count == 0 else 'unique' if count == 1 else 'ambiguous'
 
@@ -168,7 +174,7 @@ def check(directory):
             continue
         previous_holder = None
         previous_tick = None
-        can_check_chain = item['kind'] == 'item' and entity_id_counts[item['id']] == 1
+        can_check_chain = sources_available and item['kind'] == 'item' and entity_id_counts[item['id']] == 1
         chain_has_ambiguous_source = False
         for i, record in enumerate(records):
             record_label = f'{label}[{i}]'
@@ -215,7 +221,7 @@ def check(directory):
                 valid = False
             else:
                 citation_status = source(source_id, record_label + '.source_id')
-                if citation_status == 'unknown':
+                if citation_status in ('unknown', 'unavailable'):
                     valid = False
                 elif citation_status == 'ambiguous':
                     chain_has_ambiguous_source = True
@@ -251,7 +257,7 @@ def check(directory):
             and source_status(candidate['source_id']) == 'unique'
             for candidate in allied
         )
-        if not reciprocal:
+        if not reciprocal and sources_available:
             errors.append(f'{location}: allied_with faction relation {left!r} -> {right!r} lacks a sourced reciprocal relation')
 
     occupied = {}
