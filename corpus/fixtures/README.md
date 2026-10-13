@@ -591,3 +591,23 @@ independent timeline actor-ambiguity findings because existing events name
 control retains only the relation `to` ambiguity. None of these diagnostics
 proves the relation or either duplicated row is true or canonical; the
 checker does not choose an entity row.
+
+## Round 28: constructed courier-log clause map
+
+`r28-courier-excerpt/` copies all five `consistent/` JSON tables and adds
+`courier-log-excerpt.md` and `relation-clause-map.md`. The first is a **newly
+authored fictional** one-sentence excerpt, “I, Mira, carried the blue seal.”
+The second manually maps only the sentence's carrying action to the existing
+`relations[0]` `carries` relation. Matching the named speaker and object to
+IDs `mira` and `seal` is a fixture-local editorial choice, not a conclusion
+from the sentence alone. The near-miss “the seal was near Mira” would not
+support `carries`. Other entity claims and timeline events copied from the
+clean fixture remain outside this excerpt's support. Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r28-courier-excerpt
+```
+
+Exit 0 establishes only existing schema/citation-reference consistency.
+The checker never reads the Markdown and cannot establish prose support,
+source authenticity, carrying truth, ownership, chronology, or canon.
