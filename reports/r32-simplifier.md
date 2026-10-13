@@ -1,0 +1,11 @@
+# Round 32 simplifier: minimal fixture-only proposal
+
+## Minimal artifact and evidence
+
+Create one fixture by copying the Round 31 admitted-duplicate input byte-for-byte, then blank only `title` on its second `courier-log` row in `sources.json`. Keep its first `courier-log` record and all other files unchanged. The canonical base source rows and `courier-log` title are shown in `.shokunin/lore/corpus/fixtures/consistent/sources.json:7-13`; the Round 31 declaration specifies the admitted-duplicate input and the precise proposed mutation (`.shokunin/lore/LOG.md:497-498`). This uses the r26 malformed-duplicate pattern only as precedent for a one-required-field screening probe, not as a novel screening rule: r26 removed `name` from a repeated entity row (`.shokunin/lore/reports/r26-simplifier.md`, “Smallest implementation”).
+
+## Falsifiable test and scope
+
+`check_bible.py` requires a nonempty string for each source field and appends only valid rows (`.shokunin/lore/corpus/fixtures/check_bible.py:8-10,32-43`); it then counts IDs only in that admitted list (`:53-56`). Therefore the mutated row should emit `sources[2].title: required nonempty str`, but should not emit a duplicate `sources` ID finding nor ambiguous-source citation findings caused by a second admitted `courier-log`. Run the malformed variant alongside r31's valid admitted-duplicate case and unique control: malformed must have the required-title error and lack those duplicate/ambiguous findings; valid duplicate must retain its eight structural findings; unique control exits 0. Record full output/exit results, not just the target diagnostic. Falsify this proposal if the malformed row contributes to the source-ID count or yields any of the seven ambiguity-reference findings.
+
+Regression gate: replay all 83 pre-existing fixture outputs (stdout/stderr/exit) and confirm all 414 pre-existing JSON path bytes unchanged, per `.shokunin/lore/LOG.md:498`. This is calibration of the checker's admitted-source count only. The raw duplicate remains; absence of ambiguity does not establish real-world uniqueness, evidence falsity, rights clearance, or canon. Risk: a blank title tests one required-field gate only; it says nothing about other malformed values or source credibility. No checker changes or canon/rights inference are proposed.

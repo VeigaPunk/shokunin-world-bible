@@ -677,3 +677,24 @@ checker rule nor claims to be the first ambiguous relation citation.
 Duplicated in-world IDs do not establish whether source prose supports
 `carries`, whether the relation is true or false, or any real-world rights
 or AI-training permission. No canon is resolved.
+
+## Round 32: malformed duplicate source row is still raw input
+
+`r32-source-malformed/` copies `r31-source-ambiguous/` and changes only
+the **second** raw `courier-log` source row's required `title` value to
+`""`. Its `id` is still `courier-log`; all other fields and the four
+non-source JSON tables are unchanged. Compare:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r32-source-malformed
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r31-source-ambiguous
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r31-source-unique
+```
+
+The malformed case exits 1 with `sources[2].title: required nonempty str`
+only: this checker excludes the invalid raw row before indexing admitted
+source IDs and resolving citations. The admitted duplicate still produces
+one duplicate-ID plus seven ambiguous references; the unique control is
+clean. Lack of reference-ambiguity findings in the malformed case does **not**
+make the raw row disappear or prove unique in-world evidence, source truth,
+canon, real-world rights, or AI-training permission.
