@@ -835,3 +835,24 @@ ambiguity branch in a temporary `claim_a` probe. Opposite ledger side and
 committed audit artifact do not constitute a new checker input boundary.
 Neither result chooses a source row, a true testimony or canon. See round
 38 LOG closure and `reports/r38-axis-adjudicator.md`.
+
+## Round 39: unresolved event source at a ledger endpoint
+
+`r39-ledger-source-unique/` is a byte-identical r35 Bell-7 copy.
+`r39-ledger-source-missing/` differs only at Sella's timeline event
+`source_id`: `sella-bell7-note` becomes absent `missing-sella-note`.
+The cited fictional excerpt still exists, but this event's ID pointer to
+an in-world source row no longer resolves. Both ledger event IDs remain
+unique. Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r39-ledger-source-unique
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r39-ledger-source-missing
+```
+
+The control exits 0. The negative exits 1 with a ledger `claim_b` “event
+has no resolvable source_id” finding and a `timeline[3].source_id` unknown-
+source finding. This probes zero matching source rows, not the duplicated-
+source ambiguity tested in r7's temporary ledger `claim_a` probe and
+r38's rejected audit. It is an existing checker path, not a new rule or
+proof that Sella lied, that her excerpt is false or that canon is settled.
