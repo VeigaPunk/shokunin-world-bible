@@ -1,0 +1,19 @@
+# Round 54 — citation scout
+
+## Scope and evidence
+
+I read the round 54 proposal in `.shokunin/lore/LOG.md` and inspected the literal r10/r15 excerpts and the r43/r49 adjudications. R10 `r10-registry-witness/registrar-copy-excerpt.md` labels its text “invented fixture text (not recovered evidence)”; Sella says she left the destination blank and “kept the carbon.” R15 repeats that text and adds `r15-carbon-followup/sella-carbon-followup-excerpt.md`, labeled “newly authored ... (not recovered evidence)”: Sella says she later looked again at “the carbon I had kept,” saw a “blurred blue oval mark,” cannot identify its origin, and does not attribute it to Mira’s Blue Seal. Thus even Sella’s same-carbon reference is her own reported continuity, not independently authenticated physical identity or mark provenance.
+
+The r54 proposal is hypothetical. It suggests Jorin reporting that Sella showed him what she called the retained carbon and that he saw a blurred oval on that sheet. No Jorin source/excerpt, built fixture, checker result, actual same-carbon evidence, handoff/receipt, source of the mark, or Blue Seal link is present in the reviewed evidence. `r43-axis-adjudicator.md` admitted only a narrow comparison between separately attributed reports of Vela at the same named location; explicitly no common occasion or external authentication. That precedent does not establish this item's identity or an equivalent meaningful cross-account consequence. `r49-axis-adjudicator.md` rejected an unbuilt Sella-only reported handoff as immaterial and warned that a `to_holder` edge would inflate her report into a holder transition; a source pointer does not make prose entailment or receipt.
+
+## Judgment: NO-GO on material depth
+
+A source pointer can identify which fictional text is being represented; it cannot convert an attributed visual report into a verified object, observation event, chain of custody, or corroborating fact. Even if the proposed text were authored and cited, the bounded defensible statement would be only: Jorin reports seeing a displayed sheet that Sella identified as her retained carbon, and reports a visual mark resembling the one Sella described. The accounts do not establish that it is the same physical carbon, when Sella showed it relative to her earlier inspection, who made the mark, or any relationship to Blue Seal. An editorial event/actor/place row or CLEAN structural checker result would not establish those propositions.
+
+I judge no material narrative depth gain on the current hypothesis: it risks manufactured corroboration of the same reported mark, while the identity and temporal link needed to connect the accounts remain open. At most it adds another attributed observation; unlike r43's explicit shared named-place comparison, it lacks a sufficiently established referent for a useful comparison. Do not build or encode a custody transition to rescue the premise. Coverage is unchanged (no rule change); calibration is unchanged if all uncertainty is preserved, but would be harmed by representing same-carbon continuity, actual handoff/receipt, or mark provenance as settled. This is a pre-build judgment, not an observed checker verdict.
+
+## Assumptions and falsifier
+
+Assumptions: the r10/r15 excerpts and r43/r49 adjudications cited above are the relevant record; “material depth” requires more than another source/claim row or ungrounded apparent corroboration. This is fictional corpus material only; none establishes objective canon, real-world history, ownership, copyright/license status, or permission to use or train on it.
+
+Falsifier: a newly authored, independently reviewable Jorin excerpt plus a bounded source-to-claim map and non-author reader evidence could show a meaningful consequence that remains valuable without asserting same physical carbon, unsupported timing, custody, mark origin, Blue Seal identity, or canon. Until such evidence exists, NO-GO.
