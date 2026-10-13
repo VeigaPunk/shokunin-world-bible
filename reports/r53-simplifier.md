@@ -1,0 +1,17 @@
+# Round 53 simplifier — reported strip handling
+
+## Decision before build: NO-GO
+
+Do not build the proposed Mira note or fixture on present evidence. A new first-person report that Mira folded *her* outbound route strip into *her* satchel could create a conditional contrast with Sella’s later reported non-finding, but it currently supplies only another invented assertion. Its depth depends on unestablished object identity and compatible sequencing; it would not demonstrate actual custody or explain Sella’s search. Prefer no-go over adding a source, event, and comparison map without a distinct, consequential reader gain.
+
+## Evidence and limits
+
+- The r23 excerpt says only: “Later at Lantern Harbor, I, Sella, looked for Mira’s outbound route strip on the registry hook rack. I did not find it there” (`.shokunin/lore/corpus/fixtures/r23-note-class/sella-absence-note-excerpt.md:5`). The map explicitly limits this to Sella’s reported non-finding, not proof of world-absence, cause, or strip identity with the Blue Seal/carbon (`.shokunin/lore/corpus/fixtures/r23-note-class/witnessed-absence-clause-map.md:7-20`). Its event is editorially ordered after departure, not a clock fact (`.shokunin/lore/corpus/fixtures/r23-note-class/timeline.json:1-29`).
+- r10 says Sella recorded seeing Mira leave, left destination blank at Mira’s request, and kept the carbon (`.shokunin/lore/corpus/fixtures/r10-registry-witness/registrar-copy-excerpt.md:5`). r15 says Sella later inspected “the carbon I had kept,” saw a blurred blue oval, could not identify its origin, and did not attribute it to Mira’s Blue Seal (`.shokunin/lore/corpus/fixtures/r15-carbon-followup/sella-carbon-followup-excerpt.md:5`). Neither passage concerns custody of the route strip.
+- The r23 simplifier defines the existing contribution as a distinct Sella-reported witnessed-absence class, not a factual missing-object finding (`.shokunin/lore/reports/r23-simplifier.md:8-14,40-43`). R43 warns that another attributed account can be mere witness-count inflation and demands a specific useful cross-account distinction (`.shokunin/lore/reports/r43-simplifier.md:13-19`). R49 rejected a newly reported disposition where the recipient/name alone added no consequential depth beyond r10/r15 (`.shokunin/lore/reports/r49-simplifier.md:13-21`). A Mira version must clear the same materiality bar, not count as depth merely because speaker and item differ.
+
+## If reconsidered; strict limits
+
+Only reconsider if a non-author review identifies a concrete interpretive consequence unavailable from the existing absence report alone. Any hypothetical Mira text must be explicitly newly authored fiction and say only what she reports doing; no checker result exists. Keep any comparison conditional on the speakers referring to the same strip and on a compatible sequence. No holder/custody edge, receipt, verified object identity, shared occasion, cause, theft, objective absence, or truth claim. Do not link the strip to the Blue Seal, carbon, blue mark, rights, or permission. Preserve Sella’s wording and its limits.
+
+**Falsifier:** if independent readers cannot name a specific useful distinction beyond “Mira says she handled a strip,” or if the proposed account needs unsupported identity/timing to explain Sella’s non-finding, reject it. Also reject any mapping that turns a speaker’s report into established custody or fact. Until that test passes, no build.
