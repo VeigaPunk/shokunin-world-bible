@@ -920,3 +920,34 @@ Vela’s **reported** position only, conditional on referent and occasion. The
 shared Bell-7 label and tick 3 do not verify one occasion or objective ringing,
 striker, Sella/envelope absence, chronology, authenticity or canon. Neither
 checker nor citation decides those questions.
+
+
+## Round 59: repeated JSON object member names
+
+The checker parses each table with an object-pairs hook. If **any** object in a
+JSON file repeats a member name (including nested `claims`, ledger references,
+or provenance objects), that whole file is treated as unloadable. It reports
+`<file>: duplicate object member '<name>'; cannot load JSON` and does not choose
+either value. The parser hook has no reliable row/path context, so the message
+names the file and member only. Other files are still checked; as shown by
+`r59-nested-duplicate/`, unloading an entity table can consequently produce
+dangling-reference findings in other tables. Those are consequences of missing
+loaded rows, not proof that entities are absent. Unique-member files retain the
+existing validation behavior.
+
+The isolated `r59-duplicate-harbor-tower/` and
+`r59-duplicate-tower-harbor/` fixtures begin from the five consistent tables. Both
+set arrival tick to 1 and `depends_on` to `[]`; only the order of duplicate,
+valid `place_id` values differs. `r59-unique-control/` keeps the same equal-tick, empty-dependency rows
+with a single tower choice; it reports the expected input-field double-booking. The previous checker silently used the final duplicate member: in this
+controlled equal-tick case the two orders flipped between a double-booking
+finding and CLEAN. The candidate instead rejects both files, without making a
+place choice. This is a parser/input rule, not a story truth, chronology, canon,
+source-support, or rights determination.
+
+The `r5-*` malformed-input matrix exercises missing files, invalid JSON,
+wrong top-level shape, row shape, and citations; it does not define duplicate
+member policy. This candidate retains the invalid-JSON handling path and adds a
+separate stable duplicate-member diagnostic. No claim is made that r5's limited
+probes prove all malformed inputs are cascade-free. See
+`../../reports/r59-executor.md` for raw candidate output and replay limits.

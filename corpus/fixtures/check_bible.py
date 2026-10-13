@@ -5,6 +5,23 @@ import json
 from pathlib import Path
 
 KINDS = {'character', 'place', 'faction', 'item'}
+
+
+class DuplicateMemberError(ValueError):
+    def __init__(self, name):
+        self.name = name
+        super().__init__(name)
+
+
+def unique_object(pairs):
+    result = {}
+    for name, value in pairs:
+        if name in result:
+            raise DuplicateMemberError(name)
+        result[name] = value
+    return result
+
+
 FIELDS = {
     'sources': {'id': str, 'title': str, 'kind': str, 'reliability_note': str},
     'entities': {'id': str, 'kind': str, 'name': str, 'first_appearance': str, 'claims': list},
@@ -21,7 +38,10 @@ def check(directory):
     for section, fields in FIELDS.items():
         path = directory / (section + '.json')
         try:
-            rows = json.loads(path.read_text(encoding='utf-8'))
+            rows = json.loads(path.read_text(encoding='utf-8'), object_pairs_hook=unique_object)
+        except DuplicateMemberError as exc:
+            errors.append(f"{path.name}: duplicate object member {exc.name!r}; cannot load JSON")
+            rows = []
         except (OSError, UnicodeError, json.JSONDecodeError) as exc:
             errors.append(f'{path.name}: cannot load JSON: {exc}')
             rows = []
