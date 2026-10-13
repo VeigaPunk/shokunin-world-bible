@@ -532,3 +532,21 @@ ambiguous fixture duplicates `mira`, which the `from` endpoint names. The
 unique control does not. This tests identifier resolution, not whether the
 source text supports the relation. No real-world reference or rights claim
 is involved.
+
+## Round 25: separate `to`-endpoint probe
+
+`r25-to-unique/` is a byte-for-byte copy of the five `consistent/` JSON
+tables. `r25-to-ambiguous/` differs only by one extra structurally admitted
+`seal` item row in `entities.json`, whose `first_appearance` cites the local
+fictional `courier-log` source and whose `claims` list is empty. Both retain
+identical cited `mira -> seal` relations; the extra row tests ID collision,
+not a second established seal or an endorsed relation. Run from repo root:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r25-to-unique
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r25-to-ambiguous
+```
+
+The unique control exits 0. The ambiguous input reports the duplicate entity
+ID and a `relations[0].to` ambiguity, while its `from` endpoint stays unique.
+The checker does not select a row, verify story text, or resolve canon.

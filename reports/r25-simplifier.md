@@ -1,0 +1,17 @@
+# Round 25 simplifier: fixture-only proposal
+
+## Smallest implementation
+
+Keep `check_bible.py` unchanged. Add one paired fixture directory pair under `.shokunin/lore/corpus/fixtures/` by copying the five JSON files from `consistent/` (or the existing `r12-ambiguous-actor/` base), then change only `relations.json` endpoint values and add one schema-valid, cited duplicate entity row in the ambiguous case. The clean counterpart should retain one endpoint ID; the ambiguous counterpart should have two admitted entity rows with that same ID. Use `to: "seal"` for both relation records; for ambiguity add another entity with `id: "seal"` and valid required fields/citations. Keep `from` uniquely resolved, so the diagnostic isolates `.to`, and keep relation fields/source identical. Do not change the checker or add a both-endpoints case unless the paired `to` case leaves the claim untested.
+
+If reusing `r12-ambiguous-actor`, avoid inheriting its duplicated `mira` because that already makes `from` ambiguous: instead start from `consistent/` or make this a separate pair. Existing relation schema is `{from,to,type,source_id}`: `.shokunin/lore/corpus/fixtures/consistent/relations.json:1-7`. Its `mira` and `seal` rows are in `entities.json:1-50`; a compact duplicate can mirror the valid `seal` row at `r12-ambiguous-actor/entities.json:39-48`. The established duplicate pattern is an extra admitted `mira` row at `r12-ambiguous-actor/entities.json:51-60`, with the unchanged relation naming it at `relations.json:1-7`. Round 24 already describes zero/one/many endpoint expectations in `LOG.md:359-360`; the checker should be left alone.
+
+## Evidence and risks
+
+- The baseline relation points `from=mira`, `to=seal`, and cites `courier-log` (`consistent/relations.json:1-7`); the baseline entity rows include unique `seal` (`consistent/entities.json:39-50`). Thus changing the endpoint to a duplicated `seal` cleanly targets `.to` without adding relation truth.
+- The paired fixture concept can follow the already-used duplicate-row setup (`r12-ambiguous-actor/entities.json:51-60`) but must not copy its unrelated duplicate `mira`, or it will confound `from`.
+- Since prior baseline is 73 fixture directories / 364 JSON paths per Round 25 declaration in `.shokunin/lore/LOG.md` Round 25, add only new directories/files; verify every old JSON path/content and all old stdout/stderr/exit tuples unchanged.
+- A both-sides duplicate case is unnecessary for the stated missing coverage: one fixture with duplicate `to` and uniquely resolved `from` directly probes the untested side. If testing both sides, use a distinct case, expect two endpoint-local reports, and ensure no row selection or truth inference.
+- Risk: a duplicate ID also produces the existing duplicate-entity diagnostic. That is expected and should be distinguished from the relation-local `.to` ambiguity. Ensure duplicate row passes structural admission and its citation resolves, otherwise it may fail to exercise ambiguity counting.
+- Risk: duplicating the `from` endpoint (as in r12) would not prove `.to` behavior; malformed/uncited entity rows could likewise fail to count.
+- Risk: descriptions or source records could be read as canon assertions. Label added rows as fixture-only test data; cited IDs establish only structural resolution, not textual support or canon. No real-world rights claims or game mechanics are implicated.

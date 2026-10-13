@@ -1,0 +1,22 @@
+# Round 25 citation scout — source-ID trace
+
+Scope: inspect proposed/pre-existing fixture material for in-world citation links and risks; no checker or fixture edits. The Round 25 declaration is in `.shokunin/lore/LOG.md` (Round 25 section): it proposes a duplicate-`to` fixture, optional both-sides case, and unique-ID control, with citations retained.
+
+## Citation traces (path:line)
+
+- `.shokunin/lore/corpus/fixtures/r23-note-class/sources.json:2-6,8-12,15-18` defines `archive-ledger`, `courier-log`, and the explicitly newly authored `sella-absence-note`. Its reliability notes constrain the records: ledger records movements, courier log is first-person, and Sella's non-finding is expressly not proof of absence or a claim about Mira's Blue Seal.
+- `.shokunin/lore/corpus/fixtures/r23-note-class/entities.json:3-11` cites Mira's `first_appearance` and carried-seal claim to `courier-log`; `:15-23` cites Harbor's registry to `archive-ledger`; `:27-35` cites the tower/bell details to `archive-ledger`; `:39-47` cites the Blue Seal and accompanying claim to `courier-log`; `:51-59` cites Sella's entity and limited report to `sella-absence-note`.
+- `.shokunin/lore/corpus/fixtures/r23-note-class/relations.json:2-7` gives the unique relation `mira -> seal`, type `carries`, with `source_id: courier-log` (lines 3-6). Both endpoints have corresponding entity IDs and cited claims in the preceding file. This is the strongest nearby unique-ID/cited-relation control I found, but it does not probe duplicated `to`.
+- `.shokunin/lore/corpus/fixtures/r12-ambiguous-actor/entities.json:3-11` cites the first `mira` row's appearance/claim to `courier-log`; `:51-59` introduces a second `mira` with appearance and claim cited to `archive-ledger`. `.shokunin/lore/corpus/fixtures/r12-ambiguous-actor/relations.json:2-7` cites `mira -> seal` to `courier-log`. Both duplicate rows are structurally admitted and cited, so this tests endpoint-ID ambiguity, not a missing citation.
+- `.shokunin/lore/corpus/fixtures/r21-ambiguous-actor/entities.json:3-11` likewise cites first `mira` to `courier-log`, while `:51-56` has an explicitly labelled duplicate actor row also referencing `courier-log`. Its relation is cited at `.shokunin/lore/corpus/fixtures/r21-ambiguous-actor/relations.json:2-7`. It provides a second ambiguity precedent, but also duplicates `from`, not `to`.
+- `.shokunin/lore/corpus/knowledge/reference-ledger.md:1-12` states that real-world method references are not in-world canon, and that fictional story facts are separately cited to each bible's `sources.json`. Avoid using that ledger as fixture source evidence.
+
+## Risks and coverage advice
+
+1. Existing cited examples above establish citation shape, not the proposed missing test: no r25 fixtures were present per the Round 25 LOG declaration. Duplicate `to` needs a new fixture with its own `sources.json`, at least two admitted entity rows sharing the target ID, and a relation citation that resolves to an in-fixture source. Do not present the citation as proving the relation's truth.
+2. Keep the pair controlled: duplicate-target fixture and unique-target control should retain identical source definitions and relation content/citation; alter only the second target entity row (or other single declared dimension). If including both endpoints duplicated, make it a separate case so each endpoint diagnostic is attributable.
+3. Make both duplicate rows structurally valid and separately cite their claims/appearances. Otherwise a malformed or uncited row could fail admission and make “ambiguous target” a false conclusion. Do not infer which row is intended or select one as canon.
+4. A distinct source citation on the duplicate target row is acceptable only as metadata; the checker validates IDs/references, not what the fictional record says. As in `r12-ambiguous-actor`, rows cite different records, but this does not prove they denote the same person (`entities.json:3-11,51-59`). The test should assert only duplicate ID resolution behavior.
+5. Reuse of `courier-log`/`seal` from `r23-note-class` can reduce incidental variation, but copy the source record into every fixture directory. Fixture validation is local; a citation cannot resolve across sibling fixture folders.
+
+Bottom line: source-ID usage in precedent fixtures is explicit and locally resolvable; the needed citation-dimension is not yet independently covered for duplicated relation `to`. No lore truth, canon, or game-mechanics inference is warranted.
