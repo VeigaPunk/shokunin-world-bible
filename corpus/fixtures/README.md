@@ -654,3 +654,26 @@ clause check distinguishes conditional lexical support (`carried`), no
 support but no denial (`near`), and an explicitly negated clause (`did not
 carry`) in this constructed text. None of these judges source authenticity,
 world truth, canon, or other copied JSON facts.
+
+## Round 31: ambiguous source ID on a `carries` relation
+
+`r31-source-unique/` copies the five JSON tables from `consistent/`.
+`r31-source-ambiguous/` adds only one admitted `sources.json` row reusing
+`courier-log`; its other four tables, including `mira -> seal / carries`,
+are unchanged. Run both:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r31-source-unique
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r31-source-ambiguous
+```
+
+The unique control exits 0. The ambiguous input reports **eight** input
+findings: duplicate source ID, four entity citation references, one
+`relations[0].source_id` ambiguity, and two timeline citation references.
+This is a controlled *non-alliance relation* case.
+`r7-ally-reverse-ambiguous/` already tests a reverse `allied_with`
+relation with an ambiguous source ID; this round neither invents a new
+checker rule nor claims to be the first ambiguous relation citation.
+Duplicated in-world IDs do not establish whether source prose supports
+`carries`, whether the relation is true or false, or any real-world rights
+or AI-training permission. No canon is resolved.
