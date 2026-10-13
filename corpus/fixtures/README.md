@@ -769,3 +769,25 @@ conflict, source reliability or canon. Both source texts require manual
 review. The equal local tick 3 is not a Bell-7 time conversion or proof of
 external synchronization. Nothing identifies the envelope's contents,
 owner, recipient, motive or any Blue Seal/carbon/route-strip connection.
+
+## Round 36: wrong-date source near-miss
+
+`r36-bell7-wrong-date/` copies the r35 fixture byte-for-byte except
+that Sella's newly authored excerpt says the **eighth** rather than the
+**seventh** day of Embermonth, year 12, and adds an editorial
+`date-contrast-map.md`. All five JSON tables, including the Sella event
+and contradiction rationale still claiming the seventh, remain identical.
+Tarin's excerpt still says the seventh. Sella's retained “that same Bell-7
+ringing” conflicts with her explicit eighth-day clause; the source texts
+do not establish a shared unique occasion. That is a prose/record mismatch,
+not a finding that either report or the JSON is canonically false.
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r35-bell7-conflict
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r36-bell7-wrong-date
+```
+
+Both should exit 0 because the checker reads JSON, not excerpts or maps.
+A human must decline r35's conditional same-ringing conflict **from the
+r36 source pair**; neither matching tick 3, valid citation IDs nor ledger
+`why` settles the date, truth, source authenticity or canon.
