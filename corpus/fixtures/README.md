@@ -791,3 +791,25 @@ Both should exit 0 because the checker reads JSON, not excerpts or maps.
 A human must decline r35's conditional same-ringing conflict **from the
 r36 source pair**; neither matching tick 3, valid citation IDs nor ledger
 `why` settles the date, truth, source authenticity or canon.
+
+## Round 37: ambiguous contradiction-ledger endpoint
+
+`r37-ledger-unique/` is a byte-identical copy of r35's Bell-7 fixture.
+`r37-ledger-ambiguous/` differs only by appending a second, identical
+`tarin-envelope-observation` timeline row at index 4; the existing
+`bell7-location-reports` ledger still points `claim_a` at that event ID
+and `claim_b` at the unique `sella-bell7-presence` ID. Run:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r37-ledger-unique
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r37-ledger-ambiguous
+```
+
+The control exits 0. The duplicate exits 1 with a timeline duplicate-ID
+finding **and** a ledger-local `claim_a.event_id` exact-one finding; `claim_b`
+remains uniquely resolved. This exercises the ledger count guard, not a new
+checker rule: r9 already covers generic duplicate timeline IDs. A duplicated
+input ID cannot select which event assertion `claim_a` means. Neither this
+error nor a clean control settles the two attributed reports, authenticates
+sources, tests their prose or chooses canon. The Harbor pointer remains
+Tarin's reported sighting scene, not a second Sella-actor occupancy row.
