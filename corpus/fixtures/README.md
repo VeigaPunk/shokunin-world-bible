@@ -632,3 +632,25 @@ A human clause check accepts the r28 lexical `carried` conditional on the
 editorial ID alignments and rejects r29 proximity as support for `carries`;
 neither result authenticates a source or decides canon. Other JSON claims
 are unassessed by these two sentences.
+
+## Round 30: explicit textual conflict is not canon falsity
+
+`r30-explicit-negation/` copies the five JSON tables from the r28 positive
+and r29 proximity fixtures byte-for-byte. Its newly authored fictional
+excerpt says “I, Mira, did not carry the blue seal.” The manual
+`textual-conflict-map.md` labels a conflict with only the unchanged
+`relations[0].type=carries` claim, **conditional** on editorial Mira/seal
+ID matching and the same proposition/occasion. It neither resolves the
+record nor says Mira never carried the seal. Compare all three:
+
+```sh
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r28-courier-excerpt
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r29-near-miss
+python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r30-explicit-negation
+```
+
+All exit 0 structurally because the checker ignores Markdown. A human
+clause check distinguishes conditional lexical support (`carried`), no
+support but no denial (`near`), and an explicitly negated clause (`did not
+carry`) in this constructed text. None of these judges source authenticity,
+world truth, canon, or other copied JSON facts.
