@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node",
+    "scripts/ufo-mission-result.mjs",
+    "create",
+    "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/rounds/r86/result-input.json"
+  ],
+  "exit_code": 0,
+  "stderr": ""
+}

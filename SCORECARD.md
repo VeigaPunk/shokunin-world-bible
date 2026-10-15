@@ -12,3 +12,39 @@ quality rubric; row counts and exit codes are measurements, not scores or verdic
 planned: r85 (devin, ADMIT) — masked-defect calibration: holder dup silently latches can_check_chain=False hiding a real break; sealed-confirmed operative danger. r86 candidate: voiced ambiguous-entity repair + latch marker, needs 133-tuple replay.
 planned: another independently falsifiable move only; source-text truth remains unverified, and the r15 blue mark must not be called a Blue Seal trace. Round-4 duplicate-name detector remains rejected; no active name check or alias coverage.
 retired: hard-failing exact duplicate names without sourced uniqueness; round 4 showed calibration harm. Scores unchanged because the round was rejected.
+
+## Round 86 — blocked interactive attempt; prior counter declaration corrected
+
+This section supersedes the preceding “Fleet round 1” counter interpretation,
+not its historical bytes. The launch counter did not reset completed craft
+history. Highest inspected landed round is r85 (`fc2c3cc`); this attempt is
+r86, not a newly completed round. Total historically verified rounds was not
+re-audited; increment from this attempt is zero.
+
+| LIVE axis | r86 verdict | Evidence and limit |
+|---|---|---|
+| depth | unchanged | No integrated lore or comparison-rule change. |
+| coverage | unchanged | No admitted surface or fictional-input change. |
+| calibration | unchanged | Candidate disclosure is mechanically observed but unadmitted: required alias bindings prevent the validated 32-scope batch. No improved verdict from an undispatched plan. |
+
+Scores remain unmeasured. Calibration is the existing falsifiability
+tie-break among unmeasured axes, not a numerical lowest-axis claim.
+
+Measurement: `python3 .ufo/rounds/r86/diagnose.py`, exit 0, against baseline
+`5eb9451baff217c19d5786405f9b2aa500b7c1b7` and dirty inherited checker SHA-256
+`e8f241623aa84eb1dce192a03c9e70b8f4ba386344f0b22a99ba1ac0d4942132`.
+Full evidence: `.ufo/rounds/r86/diagnostic.stdout.json` and
+`diagnostic.process.json`: 133/133 inherited CLI tuples unchanged; 705/705
+inherited JSON files byte-identical; five original probes and seven scratch
+cases. These counts are preservation/diagnostic measurements, not expertise
+scores or proof of a sound round. Gate registry/self-test remain unavailable.
+
+Learning trends: expansion unchanged; quality unchanged; discernment
+unchanged. No outside admit/reject spot-check or promotion is claimed.
+
+planned: authorized routing owner supplies content `@m_composer`, audit /
+review / scout / critic `@m_grok`, connector `@m_antigravity` with `@m_zfl`
+fallback on the canonical taxonomy surface. Then a fresh L1 session may
+continue the pending r86 candidate after reconciling this blocked attempt.
+Receipt authority and missing lane contracts are separate named debt.
+retired: none added; no saturation or arbitrary round-count stop.

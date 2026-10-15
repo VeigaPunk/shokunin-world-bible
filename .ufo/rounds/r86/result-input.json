@@ -1,0 +1,425 @@
+{
+  "runId": "shk-lore-interactive-20261015T050057Z",
+  "sessionId": "shk-lore-interactive-20261015T050057Z",
+  "round_validity": "unsound",
+  "loop_stop": "blocked",
+  "mission_goal": "incomplete",
+  "subagents": [
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "ToHolder",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "FromHolder",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "BothFields",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "FirstRecord",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "TailContinuity",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "TailTicks",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "PrefixBreak",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "PrefixTick",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "PriorNonobject",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "PriorWrongKeys",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "BadTickSameRow",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "DanglingTo",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "DanglingFrom",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "InvalidHolderTypes",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "RepeatedAmbiguity",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "IndependentItems",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "OwnItemDuplicate",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "NonitemProvenance",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "SourcesUnavailable",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "SourceUnknown",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "SourceAmbiguous",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "UnreferencedDuplicate",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "DuplicatePermutation",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "UniqueControls",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "CollateralChecks",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "LegacyReplay",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "InputPreservation",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "CliContract",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "ReaderBoundary",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "GuideAudit",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "LearningRecord",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    },
+    {
+      "outcome": "aborted",
+      "state": "not_started",
+      "item": "BoundaryConnector",
+      "body": "Validated planned scope only; no native dispatch. Required taxonomy-to-alias binding is absent; no substitution or host remediation authorized.",
+      "stopReason": "required_alias_bindings_missing",
+      "axes": [
+        "calibration",
+        "depth",
+        "coverage"
+      ],
+      "milestone": "r86 blocked before dispatch"
+    }
+  ]
+}
