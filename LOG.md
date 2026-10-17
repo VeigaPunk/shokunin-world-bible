@@ -2679,3 +2679,23 @@ These entries supersede the named assertions, not their filed bytes. Evidence: `
   Evidence: the org's Devin wiki index lists this repo's generated wiki;
   sibling lane READMEs carry the same `**Wiki:**` header.
   Documentation-only change; no round run, no axis moved.
+
+## Round 94 — FOLLOW-UP declaration before dispatch (2026-10-17)
+
+The r94 WORK checkpoint (commit `abbc3e0`, 32 Luna-max seats, W20 recorded
+failed-output gap) is committed but unjudged. Declared before dispatch, per
+protocol: one batched AgentSwarm FOLLOW-UP of 40 seats on
+`opencode-go/deepseek-v4.1-flash`, each seat leaf with an exclusive report at
+`.ufo/waves/round-94/followup/F<NN>-<role>.md`. Seat scopes: C1 product
+verification (checker/support/map/whole-claim/comparison/continuity), C2 tool
+verification (self-test, r93/r94/frozen positives, negative controls,
+contract persistence), preservation (984-pin census vs baseline `9c2eea3`,
+mutation replays, full inherited-tuple regression), doc parity (boundary doc
+default+self-test), freshness, operability, adjacency, anti-overclaim critic,
+per-axis verdict seats F-depth/coverage/calibration/operability/freshness/
+adjacency, one final all-axis adjudicator, SHONEN/format check, debt ledger,
+and W25 docs/registry integration review. Admission rule: admit only if every
+C1/C2 claim verifies on the delivered revision and no axis is harmed;
+per-axis verdicts, no scalars; harmed/unprovable reported as such. Evidence
+and actual agent IDs recorded only after the dispatch returns. No r95 start
+before this closure; no capability row before a demonstrated final result.
