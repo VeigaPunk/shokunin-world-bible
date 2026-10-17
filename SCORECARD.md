@@ -432,3 +432,35 @@ coverage gaps + scratch relocation (BR-03/BR-05); doc polish BR-07/08/11/12/19/2
 carried r93 items CR-01/02/05/06/07. Process debts: poll helper (CR-07),
 r94-shape spec validator (CC-13 accepted), roster arithmetic as data.
 saturation: not declared (no rubric). retired: none.
+
+## Round 95 — closed, ADMITTED (2026-10-17)
+
+Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash` (5 producer
+seats with exclusive byte-ownership + 59 verifier/judge seats on a poll-wait
+protocol; dispatch returned `completed: 64`, receipt 64/64 with three
+late landings). Baseline `fb118c4`; closure `dcb2d92`. V29 all-axis
+adjudication: ADMIT with seven conditions, all landed at closure. Scores
+remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: `schema_drift` class closed — the r94 BR-02 mutation (renamed claims key + removed map row) now exits 1 with a stable FINDING (V29 variants A/B + V01/V16 reproductions; old tool PASSes — the blind spot is real and now closed); self-test 20→22 persisted cases (`map_missing`, `invalid_arguments`, both load-bearing per V02/V38); zero fixture regressions (r93 12/12, r94 14/14, frozen r93 replay, r87/r89 exit 2 fail-closed all unchanged). Bounds: drift scope = claim-shaped records under unexpected entity keys (relations/timeline/nested variants silent — r96 debt); `schema_drift` not pinned by a persisted self-test case; deletion class still exits 0 (non-gating INVENTORY MISMATCH only). |
+| depth | improved (bounded) | C2: `corpus/fixtures/r95-crossing-aftermath/` — first reported non-performance against a crossing-scoped agreement: Aru's aftermath note + tick-11 event depending on the tick-10 decision; 5/1/3 → 5/1/4, sources 3→4, 15 map obligations (14 inherited parsed-value identical + 1 new event row), check_bible CLEAN, census 168→169, r94 fixture byte-untouched (V09 12/12 inherited rows equal; V50 byte-prefix). Two adversarial whole-claim reviews (V12/V36) confirm the crossing-only scope — no other-duty/breach assertion constructible. Bounds: Aru's report only; checker validates structure not testimony. |
+| coverage | improved (bounded) | C3: `map_obligations` covers the r88-m3 legacy map dialect — r88 from exit 2 `unsupported_map` to `raw=10 mapped=10` + `TOTAL-ROWS 12/12` (declaration denominator corrected: 12/12 names total rows, not obligations) with ZERO corpus modification; r87/r89 stay exit 2 fail-closed (all 23 fixture dirs swept); all five support_check receipts unchanged. Bounds: exactly one dialect added; V37-D1 hidden-second-pointer soundness gap in the legacy acceptance path (MEDIUM, r96 debt); `map_obligations` reads pointer/source-ID columns only — anchor/span/mode coverage remains `support_check`'s. |
+| operability | improved (bounded) | 22-case self-test replayable; documented commands run as written (V21/V42); exit contract 0/1/2 preserved (V03/V35). Bounds: BR-05 self-test scratch under repo root; `--help` RESULT-less exit 0. |
+| freshness | unchanged (no improvement; no material harm) | Live pins fresh (checker `ff9fd2aa…` reproduced; C9 row 4 appended — DISCRIMINATION HELD + expected control); P5 note's stale tool-revision pin (`9224a684…` vs delivered `d1c239cc…`) self-caveated in place, correctable next touch; corpus/README stale "20 persisted cases" line fixed at closure. |
+| adjacency | unchanged (PASS) | PROVINCE byte-identical; no sibling writes (V18/V22/V28); rights/mechanics refused; mythology stays editorial. |
+
+Learning trends: expansion improved (169 dirs; aftermath class; r88 dialect
+under the gate); quality improved (schema_drift closure demonstrated
+before/against the old tool; 15/15 obligations with adversarial scope review);
+discernment improved (V29 reconciled 15 conflict classes — denominator slips
+corrected not netted; late landings distinguished from failures; the
+session-cwd stray-write defect now recorded as a harness property).
+
+planned (r96): second 64-seat deepseek-flash round. Debt head items:
+deletion class (silent PASS, MISMATCH-receipt-only); `schema_drift`
+self-test pinning; drift scope widening decision; V37-D1 legacy-dialect
+hidden-second-pointer; BR-01 dependency-reduction detection (carried since
+r94); BR-05 scratch relocation; poll-helper/process debts. saturation: not
+declared. retired: none.
