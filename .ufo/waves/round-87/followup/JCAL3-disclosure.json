@@ -1,0 +1,150 @@
+{
+ "seat": "JCAL3",
+ "role": "calibration judge #3 (method-varied)",
+ "revision": "2b48ca7",
+ "part": "masked-fixture per-record disclosure, independently verified",
+ "fixtures": {
+  "r87-masked-break-from-ambiguous": {
+   "item_index": 3,
+   "record_count": 3,
+   "stop_index": 0,
+   "ambiguous_field": "from_holder",
+   "ambiguous_id": "dup",
+   "run_new": {
+    "command": "python3 -I corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-from-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]\n6 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "f6ec78fbeac0c25826048e1c36a1dafb0d40a667979f4333451e84d8174ccb4a"
+   },
+   "run_prec1": {
+    "command": "python3 -I /tmp/jcal3/old/check_bible.py corpus/fixtures/r87-masked-break-from-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "5f0841d17af979f05836668a78dfdad21172602a79090db1abc6333dda754f65"
+   },
+   "per_record_disclosure_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]"
+   ],
+   "expected_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]"
+   ],
+   "one_disclosure_per_record_at_or_after_stop": true,
+   "global_notice_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+   ],
+   "chain_or_tick_findings_at_or_after_stop": [],
+   "assessment_never_resumes": true,
+   "chooses_among_duplicate_identities": false,
+   "added_vs_prec1": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "6 violation(s); no canon changed"
+   ],
+   "removed_findings_vs_prec1": [],
+   "removed_lines_vs_prec1": [
+    "3 violation(s); no canon changed"
+   ]
+  },
+  "r87-masked-break-to-ambiguous": {
+   "item_index": 3,
+   "record_count": 3,
+   "stop_index": 0,
+   "ambiguous_field": "to_holder",
+   "ambiguous_id": "dup",
+   "run_new": {
+    "command": "python3 -I corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-to-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\n6 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "bded9b133e16d975903ddb5cc945643097a740cd3fae85f41f03410cc073d72b"
+   },
+   "run_prec1": {
+    "command": "python3 -I /tmp/jcal3/old/check_bible.py corpus/fixtures/r87-masked-break-to-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "6e481decf921857ae7e0f213f141755656963a9b19a77701e32c25985839a37d"
+   },
+   "per_record_disclosure_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]"
+   ],
+   "expected_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]"
+   ],
+   "one_disclosure_per_record_at_or_after_stop": true,
+   "global_notice_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+   ],
+   "chain_or_tick_findings_at_or_after_stop": [],
+   "assessment_never_resumes": true,
+   "chooses_among_duplicate_identities": false,
+   "added_vs_prec1": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "6 violation(s); no canon changed"
+   ],
+   "removed_findings_vs_prec1": [],
+   "removed_lines_vs_prec1": [
+    "3 violation(s); no canon changed"
+   ]
+  }
+ },
+ "unmask_test": {
+  "r87-masked-break-from-ambiguous": {
+   "method": "scratch copy with the second \"dup\" entity row removed (holder resolves uniquely)",
+   "prec1": {
+    "command": "python3 -I /tmp/jcal3/old/check_bible.py /tmp/jcal3/unmask/r87-masked-break-from-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[3].provenance[0]: provenance chain break; first record must have from_holder null\n1 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "c0508f8a16660d2adb3e38a68ac44b98f00c9c909cb44b43d5d10232d92da185"
+   },
+   "new": {
+    "command": "python3 -I corpus/fixtures/check_bible.py /tmp/jcal3/unmask/r87-masked-break-from-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[3].provenance[0]: provenance chain break; first record must have from_holder null\n1 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "c0508f8a16660d2adb3e38a68ac44b98f00c9c909cb44b43d5d10232d92da185"
+   },
+   "identical_prec1_vs_new": true
+  },
+  "r87-masked-break-to-ambiguous": {
+   "method": "scratch copy with the second \"dup\" entity row removed (holder resolves uniquely)",
+   "prec1": {
+    "command": "python3 -I /tmp/jcal3/old/check_bible.py /tmp/jcal3/unmask/r87-masked-break-to-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[3].provenance[1]: provenance chain break; expected from_holder 'dup', got 'mira'\n1 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "8556e2ae36a176b724f83677da6bac6d6b662b6e653ce0015d367fc68d04c1cd"
+   },
+   "new": {
+    "command": "python3 -I corpus/fixtures/check_bible.py /tmp/jcal3/unmask/r87-masked-break-to-ambiguous",
+    "cwd": "/tmp/jcal3/arch-2b48ca7",
+    "exit": 1,
+    "stdout": "VIOLATION: entities[3].provenance[1]: provenance chain break; expected from_holder 'dup', got 'mira'\n1 violation(s); no canon changed\n",
+    "stderr": "",
+    "stdout_sha256": "8556e2ae36a176b724f83677da6bac6d6b662b6e653ce0015d367fc68d04c1cd"
+   },
+   "identical_prec1_vs_new": true
+  }
+ }
+}

@@ -1,0 +1,53 @@
+{
+  "head": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+  "purpose": "reachability of the `input-structural finding, not sourced-canon` qualifier, and co-occurrence with unqualified holder-ambiguity disclosure lines",
+  "corpus_sweep": {
+    "command": "for d in corpus/fixtures/*/; do python3 corpus/fixtures/check_bible.py \"$d\" | grep -c \"not sourced-canon\"; done",
+    "fixtures_with_entities": 138,
+    "fixtures_emitting_qualifier": 0
+  },
+  "cases": [
+    {
+      "case": "scratch-ambiguous-source-break",
+      "fixture_path": "/tmp/r87-E2b-Oeij0h/amb-source-break",
+      "exit_code": 1,
+      "provenance_lines": [
+        "VIOLATION: entities[3].provenance[1].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[2].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'"
+      ],
+      "qualified_chain_findings": [
+        "VIOLATION: entities[3].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'"
+      ],
+      "unqualified_disclosure_lines": []
+    },
+    {
+      "case": "scratch-qualified-break-plus-unqualified-disclosure",
+      "fixture_path": "/tmp/r87-E2c-y4E9AG/mixed",
+      "exit_code": 1,
+      "provenance_lines": [
+        "VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'",
+        "VIOLATION: entities[6].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[6].first_appearance: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[1].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[2].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "VIOLATION: entities[4].provenance[1].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[4].provenance[1]",
+        "13 violation(s); no canon changed"
+      ],
+      "qualified_chain_findings": [
+        "VIOLATION: entities[3].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'"
+      ],
+      "unqualified_disclosure_lines": [
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[4].provenance[1]"
+      ]
+    }
+  ]
+}

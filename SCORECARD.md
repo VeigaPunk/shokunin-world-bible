@@ -88,3 +88,35 @@ Populated by the lane at each round start per the `SCORECARD.md` contract; no en
 ## Retired
 
 - none retired; record with justification when an axis is retired.
+
+## Round 87 — luna round 1 of 12 (2026-10-17)
+
+Two-wave regimen round: work wave (39 seats, `openai-codex/gpt-6-luna-max`),
+follow-up wave (32 seats, `hyper/deepseek-v4.1-flash`); evidence under
+`.ufo/waves/round-87/` (work) and `.ufo/waves/round-87/followup/` (judging +
+integration). Baseline `28706dc`; work commits `03c6746` (C1), `e4708cb`
+(C3), `2b48ca7` (wave evidence); C2 + round record in this section's commit.
+Scores remain unmeasured — no 0–10 rubric exists; every row below is a claim
+carrying its counting command and measured commit.
+
+| LIVE axis | r87 verdict | Evidence and limit |
+|---|---|---|
+| calibration | improved (bounded) | C1 `03c6746`: masked-break disclosure repair in `corpus/fixtures/check_bible.py`. Before: one item-global notice, every later comparison silently skipped (`corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous` → 3 findings, no local disclosure). After: per-record disclosure naming the holder field, id, and origin record at the stop record and every later record; assessment never resumes, no identity is chosen, fictional records untouched. Counting: `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-to-ambiguous` → 6 findings, exit 1 (3 pre-C1); closure census 145 dirs with the prior 133 tuples byte-identical (0 changed vs `patches/B1-tuples.json`). Corroboration: JCAL1 (156 cases, purely additive), H1–H4, C6, V1/V4, I3, JCAL3. Bounds: disclosure fires only for holder-ambiguity stops (unavailable-sources suppression stays silent — table row/limit 31-bound and JDEP3 P5); mixed-stop over-attribution is a carried-over semantic, not a C1 regression (JCAL4); the shape-invalid-ambiguous residual vector stays silent (table row 32, JCAL1 debt 1); tick-inversion/holder-swap are disclosed-as-unassessed, not reported (H3-D2); the stop record emits two near-duplicate notices (E2; polish debt). |
+| depth | improved | C2: `corpus/knowledge/r87-provenance-chain-decision-table.md` — 35 rows across five lifecycle phases; every row carries condition, code anchor (`file:line`), exact emitted signature, a durable fixture, and a replayed observed output (14/14 + 5/5 receipts byte-exact per JDEP1/JDEP3). Attack-closure probes landed for every uncovered class the follow-up attacker demonstrated (row-shape gate silent-skip boundary, shape-invalid ambiguous record, same-record multi-invalidity, unknown-kind + provenance, non-item + ambiguous holder, source-prefix variants); the `rope` latch row now demonstrates its claim with a valid would-break record (35 → 34 findings). Supersedes the baseline-only D1/D2 drafts. |
+| coverage | improved (bounded) | C3 `e4708cb`: `corpus/fixtures/r87-myth-cluster/` — 7 entities (2 factions), 4 relations incl. a reciprocal `allied_with` pair, 4 timeline events with 3 `depends_on` edges, one place contradiction reported-not-resolved (`gate-witness` vs `dune-register`), a symbolism clause map, and an ETCSL/Sumerian sourced-inspiration note keeping attribution / rights / AI-training-permission as three distinct open questions. Counting: cluster replay `CLEAN`, exit 0; closure census 133 → 145 fixture dirs. Bounds: positive-path surface — no new checker finding template; allied edges share one source (`shell-charter`); OBS-1 support gap (the attributed claim that the hymn names the Mother-Tide Gate is unverifiable from the delivered excerpt — Q1/JCOV4); documentation sub-axis unchanged (no `## Round 87` section in `corpus/fixtures/README.md` — debt). |
+
+Learning trends: expansion improved (coverage 133 → 145 dirs, new myth-cluster
+class); quality improved (depth: 35-row decision table; calibration: per-record
+disclosure repair); discernment improved (every claim names its own bounds;
+41-item debt ledger recorded at `.ufo/waves/round-87/followup/Q2-debt.json`).
+
+planned (r88, from Q3 with L1 adoption): (1) calibration — close the residual
+malformed-ambiguous path and stop-cause accuracy (lowest-axis obligation);
+(2) coverage — second sourced-mythology cluster with passage-level locators and
+a clause→element symbolism index, repairing OBS-1; (3) depth — sourced-inspiration
+decision table (closes S2's missing-precedent debt).
+saturation: not declared — no rubric exists; the stagnation nudge is not
+triggered. retired: none.
+
+SHONEN unchanged: all four boxes `[~]`/`[ ]` with resolvable pointers (P4);
+no `[x]` — no named non-author verifier this round.

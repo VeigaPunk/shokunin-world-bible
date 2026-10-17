@@ -1,0 +1,78 @@
+{
+ "seat": "JCAL3",
+ "role": "calibration judge #3 (method-varied)",
+ "revision": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+ "revision_short": "2b48ca7",
+ "tree_source": "git archive 2b48ca7 | tar -x -C /tmp/jcal3/arch-2b48ca7 (commit tree only; worktree never read)",
+ "archive_tree_hash": "73422a138bbb5e987c83bc18191310ba34c13082",
+ "delivered_checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+ "archive_checker_sha256_matches_delivered": true,
+ "interpreter": "3.14.7",
+ "isolated_mode": true,
+ "argv_form": "python3 -I corpus/fixtures/check_bible.py corpus/fixtures/<name> (cwd = archive root)",
+ "traversal": "random.Random(870).shuffle(sorted immediate child dirs)",
+ "dir_count": 138,
+ "exit_counts": {
+  "0": 30,
+  "1": 108
+ },
+ "violation_total": 272,
+ "stderr_nonempty": [],
+ "new_dirs": [
+  "r87-chain-unique-broken",
+  "r87-chain-unique-valid",
+  "r87-masked-break-from-ambiguous",
+  "r87-masked-break-to-ambiguous",
+  "r87-myth-cluster"
+ ],
+ "new_dir_tuples": {
+  "r87-chain-unique-broken": {
+   "exit": 1,
+   "stdout_sha256": "6d2e1487098a48da83c3b11274cc2c332a60a4ef70a968e22b88b663bdcf0fbf",
+   "violation_count": 1
+  },
+  "r87-chain-unique-valid": {
+   "exit": 0,
+   "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+   "violation_count": 0
+  },
+  "r87-masked-break-from-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "f6ec78fbeac0c25826048e1c36a1dafb0d40a667979f4333451e84d8174ccb4a",
+   "violation_count": 6
+  },
+  "r87-masked-break-to-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "bded9b133e16d975903ddb5cc945643097a740cd3fae85f41f03410cc073d72b",
+   "violation_count": 6
+  },
+  "r87-myth-cluster": {
+   "exit": 0,
+   "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+   "violation_count": 0
+  }
+ },
+ "order_independence": {
+  "sorted_vs_seed870": "0 diffs",
+  "seed870_vs_seed99": "0 diffs",
+  "seed870_repeat": "0 diffs"
+ },
+ "prior_tuple_baseline_1": "B1-tuples.json (pre-C1 checker tuples, JCAL1 baseline)",
+ "prior_tuple_baseline_1_changed": [],
+ "prior_tuple_baseline_1_missing": [],
+ "prior_tuple_baseline_2": "r86 diagnostic.stdout.json fixture_runs[].before (baseline checker 88c9b1d on baseline corpus 5eb9451)",
+ "prior_tuple_baseline_2_changed": [],
+ "cross_artifact_i3_r87_extended_tuples_diffs": [],
+ "cross_artifact_i3_entry_count": 138,
+ "cross_artifact_jcov2_exit_histogram": "{\"0\":30,\"1\":108} (JCOV2-adjacency.json census)",
+ "argv_path_form_sensitivity": {
+  "absolute_vs_root_relative_changed_tuples": [
+   "corpus/fixtures/r5-missing-file",
+   "corpus/fixtures/r62-missing",
+   "corpus/fixtures/r67-claim-source-unavailable-control",
+   "corpus/fixtures/r67-claim-source-unavailable-empty",
+   "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+  ],
+  "cause": "OSError text embeds the argv path for missing-file fixtures; canonical root-relative form required for byte comparison"
+ }
+}

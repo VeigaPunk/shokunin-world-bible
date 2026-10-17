@@ -1,0 +1,77 @@
+{
+  "seat": "H1",
+  "scope": "all directories under corpus containing at least one of sources/entities/relations/timeline/contradictions .json",
+  "baseline": {
+    "revision": "28706dc",
+    "dirs": 142,
+    "exit0": 32,
+    "findings": 274,
+    "stderr_nonempty": 0
+  },
+  "delivered": {
+    "revision": "2b48ca7",
+    "dirs": 147,
+    "exit0": 34,
+    "findings": 292,
+    "stderr_nonempty": 0
+  },
+  "removed_dirs": [],
+  "added_dirs": [
+    "corpus/fixtures/r87-chain-unique-broken",
+    "corpus/fixtures/r87-chain-unique-valid",
+    "corpus/fixtures/r87-masked-break-from-ambiguous",
+    "corpus/fixtures/r87-masked-break-to-ambiguous",
+    "corpus/fixtures/r87-myth-cluster"
+  ],
+  "changed_dir_count": 3,
+  "changed_dirs": {
+    "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": 5,
+      "delivered_findings": 7,
+      "added_findings": [
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+      ],
+      "removed_findings": [],
+      "preexisting_findings_byte_preserved_in_order": true,
+      "baseline_stdout_sha256": "0e80580fd7bea5c789aa5186c667d6f8aced66048d5ad758d7c9af493e565174",
+      "delivered_stdout_sha256": "5ce27e4fbe03607e9afb9f8585c2db6f116d0d523805bc3e2f08455f6fc77799"
+    },
+    "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": 3,
+      "delivered_findings": 4,
+      "added_findings": [
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[2]"
+      ],
+      "removed_findings": [],
+      "preexisting_findings_byte_preserved_in_order": true,
+      "baseline_stdout_sha256": "9acd7377f01921027c4a48282776041869af6326c8f7682af142a1325e91a9c9",
+      "delivered_stdout_sha256": "548c7436d94fe00ccbb9cddf79948ea35ea78569ff29e8b00303b62e74939bce"
+    },
+    "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": 3,
+      "delivered_findings": 5,
+      "added_findings": [
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]"
+      ],
+      "removed_findings": [],
+      "preexisting_findings_byte_preserved_in_order": true,
+      "baseline_stdout_sha256": "d4d6edfcf0625b407f938e70ab5e3cc8efe7341a29b11583d08c94ea39dfaa53",
+      "delivered_stdout_sha256": "4e9bcd6a139e53d8badb45177206379ddde757179dc75dc7b6d197da83a963dd"
+    }
+  },
+  "cross_check": {
+    "x4_declared_fixture_count": 142,
+    "x4_declared_before_findings": 274,
+    "x4_declared_after_findings": 279,
+    "x4_declared_added_tuple_count": 5,
+    "matches_observed": true
+  }
+}
