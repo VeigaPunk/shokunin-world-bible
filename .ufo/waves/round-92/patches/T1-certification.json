@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "seat": "T1",
+  "overall": "FAIL",
+  "target": "corpus/knowledge/holder-assessment-boundary.md",
+  "candidate_selection": {
+    "status": "FAIL",
+    "reason": "No selected, integrated round-92 document is present at the required target. The tracked target remains the r91 baseline. B3 explicitly excludes proposed patches from certification.",
+    "d1_report_present": false,
+    "d1_patch": {
+      "present": true,
+      "sha256": "92c9baf71c70b3fe845c8f2d7309934fe64523e0963072f484f259ef0ac462f9",
+      "state": "PROPOSAL_NOT_APPLIED"
+    },
+    "d2_report_present": true,
+    "d2_patch": {
+      "present": true,
+      "sha256": "55495d1002baa2776abf93c8bd0df26bd39493ba8cbe4b2dddac77aaf6c8d428",
+      "state": "PROPOSAL_NOT_APPLIED"
+    }
+  },
+  "checker": {
+    "path": "corpus/fixtures/check_bible.py",
+    "expected_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "observed_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+  },
+  "checks": [
+    {
+      "id": "selected_deliverable_available",
+      "gate": "input",
+      "status": "FAIL",
+      "evidence": "D1.md is absent; D2.md and both D1/D2 patch proposals are present, but corpus/knowledge/holder-assessment-boundary.md remains the tracked baseline at SHA-256 c0c59dafc32c7fdc52f30352359b2c252e7607c76010063231b8f89d223911c9. Neither proposal was applied or certified."
+    },
+    {
+      "id": "A1_delivered_checker_sha256",
+      "gate": "A",
+      "status": "PASS",
+      "evidence": "Observed checker SHA-256 equals B3's required ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421."
+    },
+    {
+      "id": "A2_candidate_citation_revision_resolution",
+      "gate": "A",
+      "status": "FAIL",
+      "evidence": "No candidate document is available to resolve. On the baseline, the explicit historical 5eb9451 anchor resolves, but the current relation-ambiguity citation check_bible.py:182 is stale: the delivered checker span is line 184. Baseline result: 1/2 anchors."
+    },
+    {
+      "id": "B_candidate_receipt_replay",
+      "gate": "B",
+      "status": "FAIL",
+      "evidence": "The selected candidate is unavailable, so its receipts cannot be certified. Baseline-only control replay passed 3/3 receipt blocks and 14/14 cases with byte-identical stdout, expected exit codes, and empty stderr; this is not a candidate pass."
+    },
+    {
+      "id": "C_candidate_content_anchors",
+      "gate": "C",
+      "status": "FAIL",
+      "evidence": "The selected candidate is unavailable. Baseline-only content/AST resolution is 1/2: historical 5eb9451 span 212-224 passes; current delivered-checker relation ambiguity citation 182 fails against derived span 184."
+    },
+    {
+      "id": "D1_exactly_one_h1",
+      "gate": "D",
+      "status": "FAIL",
+      "evidence": "No candidate is available. Baseline h1_count=2; expected exactly 1."
+    },
+    {
+      "id": "D2_unique_normalized_headings",
+      "gate": "D",
+      "status": "FAIL",
+      "evidence": "No candidate is available. Baseline duplicates the normalized title 'holder-assessment boundary: reading provenance ambiguity disclosures' at lines 1 and 8."
+    },
+    {
+      "id": "D3_zero_instruction_markers",
+      "gate": "D",
+      "status": "FAIL",
+      "evidence": "No candidate is available. Baseline markers are 'instruction sheet' at line 5 and 'Skipped as named debt' at line 6."
+    },
+    {
+      "id": "E1_delivered_checker_c9_ast",
+      "gate": "E",
+      "status": "PASS",
+      "evidence": "AST probe confirms tick comparison span 324-326 does not call holder_identity_detail and does use chain_has_ambiguous_source; null-holder guard span 169-170 returns None."
+    },
+    {
+      "id": "E2_candidate_c9_wording_and_contradiction_check",
+      "gate": "E",
+      "status": "FAIL",
+      "evidence": "The selected candidate is unavailable. Baseline has all 5/5 positive C9 phrases but also retains the superseded holder-qualified tick claim; c9_legacy_tick_conflict=true, so Gate E fails."
+    },
+    {
+      "id": "C1_round92_r8_r9_residual_edges_landed",
+      "gate": "C1 residual edges",
+      "status": "FAIL",
+      "evidence": "The delivered decision table scores 0/4 for the R8 inseparable/whole-element branch, failed-gate-not-proof wording, R9 manual review gate, and lexical-receipt boundary. E1 provides proposal wording only; D2.md says no tracked decision-table change is claimed."
+    }
+  ],
+  "baseline_control": {
+    "document_sha256": "c0c59dafc32c7fdc52f30352359b2c252e7607c76010063231b8f89d223911c9",
+    "document_lines": 549,
+    "gate_b_receipt_replay": {
+      "status": "PASS",
+      "receipts": "3/3",
+      "cases": "14/14",
+      "stderr": "empty for all cases"
+    },
+    "gate_c_anchors": {
+      "status": "FAIL",
+      "resolved": "1/2",
+      "historical_5eb9451_anchor": "PASS",
+      "current_relation_anchor_182_vs_184": "FAIL"
+    },
+    "gate_d_structure": {
+      "status": "FAIL",
+      "h1_count": 2,
+      "duplicate_headings": [
+        {
+          "title": "holder-assessment boundary: reading provenance ambiguity disclosures",
+          "lines": [1, 8]
+        }
+      ],
+      "instruction_markers": [
+        {
+          "line": 5,
+          "text": "instruction sheet"
+        },
+        {
+          "line": 6,
+          "text": "Skipped as named debt"
+        }
+      ]
+    },
+    "gate_e_document_c9": {
+      "status": "FAIL",
+      "positive_phrases": "5/5",
+      "legacy_tick_conflict": true
+    },
+    "gate_e_checker_ast": {
+      "status": "PASS",
+      "tick_span": [324, 326],
+      "null_guard_span": [169, 170]
+    },
+    "r8_r9_delivered_table": {
+      "status": "FAIL",
+      "checks": "0/4"
+    }
+  }
+}
