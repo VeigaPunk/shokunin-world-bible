@@ -1,0 +1,597 @@
+diff --git a/corpus/fixtures/r87-f2-chain-unique-broken/README.md b/corpus/fixtures/r87-f2-chain-unique-broken/README.md
+new file mode 100644
+index 0000000..34011af
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-broken/README.md
+@@ -0,0 +1,1 @@
++Unique-holder broken-chain control: the final record says `tala` after the preceding record names `willow`; this mismatch is deliberate checker-test input, not evidence about custody or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-f2-chain-unique-broken` from the lane root; expected result is one final-record chain-break finding, exit 1.
+diff --git a/corpus/fixtures/r87-f2-chain-unique-broken/contradictions.json b/corpus/fixtures/r87-f2-chain-unique-broken/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-broken/contradictions.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-broken/entities.json b/corpus/fixtures/r87-f2-chain-unique-broken/entities.json
+new file mode 100644
+index 0000000..4c4db12
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-broken/entities.json
+@@ -0,0 +1,63 @@
++[
++  {
++    "id": "tala",
++    "kind": "character",
++    "name": "Tala Venn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "nacre",
++    "kind": "character",
++    "name": "Nacre Sorn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "willow",
++    "kind": "character",
++    "name": "Willow Pell",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "rill",
++    "kind": "character",
++    "name": "Rill Aven",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "sunwheel",
++    "kind": "item",
++    "name": "Sunwheel Token",
++    "first_appearance": "f2-moon-ledger",
++    "claims": [],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "tala",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 3,
++        "from_holder": "tala",
++        "to_holder": "nacre",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "nacre",
++        "to_holder": "willow",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 5,
++        "from_holder": "tala",
++        "to_holder": "rill",
++        "source_id": "f2-moon-ledger"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-broken/relations.json b/corpus/fixtures/r87-f2-chain-unique-broken/relations.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-broken/relations.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-broken/sources.json b/corpus/fixtures/r87-f2-chain-unique-broken/sources.json
+new file mode 100644
+index 0000000..9a52efe
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-broken/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "f2-moon-ledger",
++    "title": "F2 Moon Ledger (synthetic fixture source)",
++    "kind": "fixture input",
++    "reliability_note": "Authored checker probe data; not attestation or canon."
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-broken/timeline.json b/corpus/fixtures/r87-f2-chain-unique-broken/timeline.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-broken/timeline.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-valid/README.md b/corpus/fixtures/r87-f2-chain-unique-valid/README.md
+new file mode 100644
+index 0000000..c8ef6eb
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-valid/README.md
+@@ -0,0 +1,1 @@
++Unique-holder clean control: four cited item-provenance records have strictly increasing local ticks and a continuous holder chain. This authored micro-bible is test scaffolding, not a claim about custody or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-f2-chain-unique-valid` from the lane root; expected result is CLEAN, exit 0.
+diff --git a/corpus/fixtures/r87-f2-chain-unique-valid/contradictions.json b/corpus/fixtures/r87-f2-chain-unique-valid/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-valid/contradictions.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-valid/entities.json b/corpus/fixtures/r87-f2-chain-unique-valid/entities.json
+new file mode 100644
+index 0000000..2eb5586
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-valid/entities.json
+@@ -0,0 +1,63 @@
++[
++  {
++    "id": "tala",
++    "kind": "character",
++    "name": "Tala Venn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "nacre",
++    "kind": "character",
++    "name": "Nacre Sorn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "willow",
++    "kind": "character",
++    "name": "Willow Pell",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "rill",
++    "kind": "character",
++    "name": "Rill Aven",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "sunwheel",
++    "kind": "item",
++    "name": "Sunwheel Token",
++    "first_appearance": "f2-moon-ledger",
++    "claims": [],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "tala",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 3,
++        "from_holder": "tala",
++        "to_holder": "nacre",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "nacre",
++        "to_holder": "willow",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 9,
++        "from_holder": "willow",
++        "to_holder": "rill",
++        "source_id": "f2-moon-ledger"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-valid/relations.json b/corpus/fixtures/r87-f2-chain-unique-valid/relations.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-valid/relations.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-valid/sources.json b/corpus/fixtures/r87-f2-chain-unique-valid/sources.json
+new file mode 100644
+index 0000000..9a52efe
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-valid/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "f2-moon-ledger",
++    "title": "F2 Moon Ledger (synthetic fixture source)",
++    "kind": "fixture input",
++    "reliability_note": "Authored checker probe data; not attestation or canon."
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-chain-unique-valid/timeline.json b/corpus/fixtures/r87-f2-chain-unique-valid/timeline.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-chain-unique-valid/timeline.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-from-ambiguous/README.md b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/README.md
+new file mode 100644
+index 0000000..3935439
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/README.md
+@@ -0,0 +1,1 @@
++Masked-break `from_holder` case: `provenance[1]` names duplicated holder ID `aster`; `provenance[2]` has valid unique holder references and continues from `nacre`; `provenance[3]` deliberately breaks from `tala` rather than the prior `willow`. The duplicated rows and mismatch are synthetic test scaffolding, not a choice between identities or evidence about custody. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-f2-masked-break-from-ambiguous` from the lane root; baseline should report the ambiguity and one stop notice but not the later comparison.
+diff --git a/corpus/fixtures/r87-f2-masked-break-from-ambiguous/contradictions.json b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/contradictions.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-from-ambiguous/entities.json b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/entities.json
+new file mode 100644
+index 0000000..2670dc5
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/entities.json
+@@ -0,0 +1,77 @@
++[
++  {
++    "id": "tala",
++    "kind": "character",
++    "name": "Tala Venn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "nacre",
++    "kind": "character",
++    "name": "Nacre Sorn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "willow",
++    "kind": "character",
++    "name": "Willow Pell",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "rill",
++    "kind": "character",
++    "name": "Rill Aven",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "sunwheel",
++    "kind": "item",
++    "name": "Sunwheel Token",
++    "first_appearance": "f2-moon-ledger",
++    "claims": [],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "tala",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 3,
++        "from_holder": "aster",
++        "to_holder": "nacre",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "nacre",
++        "to_holder": "willow",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 5,
++        "from_holder": "tala",
++        "to_holder": "rill",
++        "source_id": "f2-moon-ledger"
++      }
++    ]
++  },
++  {
++    "id": "aster",
++    "kind": "character",
++    "name": "Aster Holt",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "aster",
++    "kind": "character",
++    "name": "Aster Dune",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-masked-break-from-ambiguous/relations.json b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/relations.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/relations.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-from-ambiguous/sources.json b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/sources.json
+new file mode 100644
+index 0000000..9a52efe
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "f2-moon-ledger",
++    "title": "F2 Moon Ledger (synthetic fixture source)",
++    "kind": "fixture input",
++    "reliability_note": "Authored checker probe data; not attestation or canon."
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-masked-break-from-ambiguous/timeline.json b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/timeline.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-from-ambiguous/timeline.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-null-post-stop/README.md b/corpus/fixtures/r87-f2-masked-break-null-post-stop/README.md
+new file mode 100644
+index 0000000..16cc493
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-null-post-stop/README.md
+@@ -0,0 +1,1 @@
++Null post-stop probe: `provenance[1]` has ambiguous `from_holder` ID `aster`; the first later entry, `provenance[2]`, has `from_holder: null`; `provenance[3]` deliberately disagrees with `provenance[2]`’s `willow`. Null is schema-valid, and both entries are synthetic checker-test scaffolding, not evidence about custody or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-f2-masked-break-null-post-stop` from the lane root; this probes whether a post-stop null passes silently and the later mismatch remains unreported.
+diff --git a/corpus/fixtures/r87-f2-masked-break-null-post-stop/contradictions.json b/corpus/fixtures/r87-f2-masked-break-null-post-stop/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-null-post-stop/contradictions.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-null-post-stop/entities.json b/corpus/fixtures/r87-f2-masked-break-null-post-stop/entities.json
+new file mode 100644
+index 0000000..6cf8b62
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-null-post-stop/entities.json
+@@ -0,0 +1,77 @@
++[
++  {
++    "id": "tala",
++    "kind": "character",
++    "name": "Tala Venn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "nacre",
++    "kind": "character",
++    "name": "Nacre Sorn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "willow",
++    "kind": "character",
++    "name": "Willow Pell",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "rill",
++    "kind": "character",
++    "name": "Rill Aven",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "sunwheel",
++    "kind": "item",
++    "name": "Sunwheel Token",
++    "first_appearance": "f2-moon-ledger",
++    "claims": [],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "tala",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 3,
++        "from_holder": "aster",
++        "to_holder": "nacre",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": null,
++        "to_holder": "willow",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 5,
++        "from_holder": "tala",
++        "to_holder": "rill",
++        "source_id": "f2-moon-ledger"
++      }
++    ]
++  },
++  {
++    "id": "aster",
++    "kind": "character",
++    "name": "Aster Holt",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "aster",
++    "kind": "character",
++    "name": "Aster Dune",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-masked-break-null-post-stop/relations.json b/corpus/fixtures/r87-f2-masked-break-null-post-stop/relations.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-null-post-stop/relations.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-null-post-stop/sources.json b/corpus/fixtures/r87-f2-masked-break-null-post-stop/sources.json
+new file mode 100644
+index 0000000..9a52efe
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-null-post-stop/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "f2-moon-ledger",
++    "title": "F2 Moon Ledger (synthetic fixture source)",
++    "kind": "fixture input",
++    "reliability_note": "Authored checker probe data; not attestation or canon."
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-masked-break-null-post-stop/timeline.json b/corpus/fixtures/r87-f2-masked-break-null-post-stop/timeline.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-null-post-stop/timeline.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-to-ambiguous/README.md b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/README.md
+new file mode 100644
+index 0000000..aa6bb8d
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/README.md
+@@ -0,0 +1,1 @@
++Masked-break `to_holder` case: `provenance[1]` names duplicated holder ID `aster`; `provenance[2]` has valid unique holder references as an intermediate record; `provenance[3]` deliberately breaks from `tala` rather than the prior `willow`. The duplicated rows and mismatch are synthetic test scaffolding, not a choice between identities or evidence about custody. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-f2-masked-break-to-ambiguous` from the lane root; baseline should report the ambiguity and one stop notice but not the later comparison.
+diff --git a/corpus/fixtures/r87-f2-masked-break-to-ambiguous/contradictions.json b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/contradictions.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-to-ambiguous/entities.json b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/entities.json
+new file mode 100644
+index 0000000..2bf902e
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/entities.json
+@@ -0,0 +1,77 @@
++[
++  {
++    "id": "tala",
++    "kind": "character",
++    "name": "Tala Venn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "nacre",
++    "kind": "character",
++    "name": "Nacre Sorn",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "willow",
++    "kind": "character",
++    "name": "Willow Pell",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "rill",
++    "kind": "character",
++    "name": "Rill Aven",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "sunwheel",
++    "kind": "item",
++    "name": "Sunwheel Token",
++    "first_appearance": "f2-moon-ledger",
++    "claims": [],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "tala",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 3,
++        "from_holder": "tala",
++        "to_holder": "aster",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "nacre",
++        "to_holder": "willow",
++        "source_id": "f2-moon-ledger"
++      },
++      {
++        "tick": 5,
++        "from_holder": "tala",
++        "to_holder": "rill",
++        "source_id": "f2-moon-ledger"
++      }
++    ]
++  },
++  {
++    "id": "aster",
++    "kind": "character",
++    "name": "Aster Holt",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  },
++  {
++    "id": "aster",
++    "kind": "character",
++    "name": "Aster Dune",
++    "first_appearance": "f2-moon-ledger",
++    "claims": []
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-masked-break-to-ambiguous/relations.json b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/relations.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/relations.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r87-f2-masked-break-to-ambiguous/sources.json b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/sources.json
+new file mode 100644
+index 0000000..9a52efe
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "f2-moon-ledger",
++    "title": "F2 Moon Ledger (synthetic fixture source)",
++    "kind": "fixture input",
++    "reliability_note": "Authored checker probe data; not attestation or canon."
++  }
++]
+diff --git a/corpus/fixtures/r87-f2-masked-break-to-ambiguous/timeline.json b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/timeline.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-f2-masked-break-to-ambiguous/timeline.json
+@@ -0,0 +1,1 @@
++[]

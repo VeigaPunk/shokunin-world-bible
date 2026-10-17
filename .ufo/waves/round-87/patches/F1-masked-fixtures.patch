@@ -1,0 +1,636 @@
+diff --git c/corpus/fixtures/r87-chain-unique-broken/README.md i/corpus/fixtures/r87-chain-unique-broken/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..639fa498cc2d7aea75562f029071a1c6e6dece8f
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-broken/README.md
+@@ -0,0 +1 @@
++This authored fictional micro-bible is the unique-holder broken-chain control: all holders and citations resolve uniquely, but the final transfer gives `mira` as `from_holder` after the prior record transferred the seal to `harbor`. The mismatch is injected test scaffolding, not evidence about custody; source IDs resolve only to supplied in-world records and do not establish source support or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-chain-unique-broken` from the lane root; the expected result is a reported final-record chain break and exit 1.
+diff --git c/corpus/fixtures/r87-chain-unique-broken/contradictions.json i/corpus/fixtures/r87-chain-unique-broken/contradictions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-broken/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/r87-chain-unique-broken/entities.json i/corpus/fixtures/r87-chain-unique-broken/entities.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..b1d6d3e36838656a5e5446a8c5d4adc3a9166e80
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-broken/entities.json
+@@ -0,0 +1,70 @@
++[
++  {
++    "id": "mira",
++    "kind": "character",
++    "name": "Mira",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "Mira carried the blue seal.",
++        "source_id": "courier-log"
++      }
++    ]
++  },
++  {
++    "id": "harbor",
++    "kind": "place",
++    "name": "Lantern Harbor",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "Lantern Harbor has a registry.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "tower",
++    "kind": "place",
++    "name": "North Tower",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "North Tower has a watch bell.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "seal",
++    "kind": "item",
++    "name": "Blue Seal",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "The seal accompanied Mira.",
++        "source_id": "courier-log"
++      }
++    ],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "mira",
++        "source_id": "courier-log"
++      },
++      {
++        "tick": 3,
++        "from_holder": "mira",
++        "to_holder": "harbor",
++        "source_id": "archive-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "mira",
++        "to_holder": "tower",
++        "source_id": "archive-ledger"
++      }
++    ]
++  }
++]
+diff --git c/corpus/fixtures/r87-chain-unique-broken/relations.json i/corpus/fixtures/r87-chain-unique-broken/relations.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..189083cc5324e9c1d282d51724c76a490aa8cd9b
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-broken/relations.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "from": "mira",
++    "to": "seal",
++    "type": "carries",
++    "source_id": "courier-log"
++  }
++]
+diff --git c/corpus/fixtures/r87-chain-unique-broken/sources.json i/corpus/fixtures/r87-chain-unique-broken/sources.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..aaaba0bb4b9ce11d936576896a9cc21848a64996
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-broken/sources.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "id": "archive-ledger",
++    "title": "Lantern Harbor Registry, year 12",
++    "kind": "fictional municipal record",
++    "reliability_note": "in-world fiction; records movements, not omniscient truth"
++  },
++  {
++    "id": "courier-log",
++    "title": "Courier Mira’s Route Log, year 12",
++    "kind": "fictional personal log",
++    "reliability_note": "in-world fiction; first-person account"
++  }
++]
+diff --git c/corpus/fixtures/r87-chain-unique-broken/timeline.json i/corpus/fixtures/r87-chain-unique-broken/timeline.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dc09a2461941aaf4d90a982335f2a069774cc2e7
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-broken/timeline.json
+@@ -0,0 +1,22 @@
++[
++  {
++    "id": "departure",
++    "tick": 1,
++    "entity_id": "mira",
++    "place_id": "harbor",
++    "depends_on": [],
++    "description": "Mira departs the harbor.",
++    "source_id": "courier-log"
++  },
++  {
++    "id": "arrival",
++    "tick": 2,
++    "entity_id": "mira",
++    "place_id": "tower",
++    "depends_on": [
++      "departure"
++    ],
++    "description": "Mira reaches the tower.",
++    "source_id": "courier-log"
++  }
++]
+diff --git c/corpus/fixtures/r87-chain-unique-valid/README.md i/corpus/fixtures/r87-chain-unique-valid/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..fb81a58dce0e73589e68be755701aa4e6a7b6e28
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-valid/README.md
+@@ -0,0 +1 @@
++This authored fictional micro-bible is the unique-holder control for provenance-chain assessment: `seal` begins with a null `from_holder`, then transfers through uniquely identified `mira`, `harbor`, and `tower` holders in strictly increasing local ticks. The entries are fixture scaffolding, not evidence of true custody; source IDs resolve only to supplied in-world records and do not establish source support or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-chain-unique-valid` from the lane root; the expected result is CLEAN with exit 0.
+diff --git c/corpus/fixtures/r87-chain-unique-valid/contradictions.json i/corpus/fixtures/r87-chain-unique-valid/contradictions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-valid/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/r87-chain-unique-valid/entities.json i/corpus/fixtures/r87-chain-unique-valid/entities.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..4e59418fd86f71a488595d18c012af1aca386388
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-valid/entities.json
+@@ -0,0 +1,70 @@
++[
++  {
++    "id": "mira",
++    "kind": "character",
++    "name": "Mira",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "Mira carried the blue seal.",
++        "source_id": "courier-log"
++      }
++    ]
++  },
++  {
++    "id": "harbor",
++    "kind": "place",
++    "name": "Lantern Harbor",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "Lantern Harbor has a registry.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "tower",
++    "kind": "place",
++    "name": "North Tower",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "North Tower has a watch bell.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "seal",
++    "kind": "item",
++    "name": "Blue Seal",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "The seal accompanied Mira.",
++        "source_id": "courier-log"
++      }
++    ],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "mira",
++        "source_id": "courier-log"
++      },
++      {
++        "tick": 3,
++        "from_holder": "mira",
++        "to_holder": "harbor",
++        "source_id": "archive-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "harbor",
++        "to_holder": "tower",
++        "source_id": "archive-ledger"
++      }
++    ]
++  }
++]
+diff --git c/corpus/fixtures/r87-chain-unique-valid/relations.json i/corpus/fixtures/r87-chain-unique-valid/relations.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..189083cc5324e9c1d282d51724c76a490aa8cd9b
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-valid/relations.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "from": "mira",
++    "to": "seal",
++    "type": "carries",
++    "source_id": "courier-log"
++  }
++]
+diff --git c/corpus/fixtures/r87-chain-unique-valid/sources.json i/corpus/fixtures/r87-chain-unique-valid/sources.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..aaaba0bb4b9ce11d936576896a9cc21848a64996
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-valid/sources.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "id": "archive-ledger",
++    "title": "Lantern Harbor Registry, year 12",
++    "kind": "fictional municipal record",
++    "reliability_note": "in-world fiction; records movements, not omniscient truth"
++  },
++  {
++    "id": "courier-log",
++    "title": "Courier Mira’s Route Log, year 12",
++    "kind": "fictional personal log",
++    "reliability_note": "in-world fiction; first-person account"
++  }
++]
+diff --git c/corpus/fixtures/r87-chain-unique-valid/timeline.json i/corpus/fixtures/r87-chain-unique-valid/timeline.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dc09a2461941aaf4d90a982335f2a069774cc2e7
+--- /dev/null
++++ i/corpus/fixtures/r87-chain-unique-valid/timeline.json
+@@ -0,0 +1,22 @@
++[
++  {
++    "id": "departure",
++    "tick": 1,
++    "entity_id": "mira",
++    "place_id": "harbor",
++    "depends_on": [],
++    "description": "Mira departs the harbor.",
++    "source_id": "courier-log"
++  },
++  {
++    "id": "arrival",
++    "tick": 2,
++    "entity_id": "mira",
++    "place_id": "tower",
++    "depends_on": [
++      "departure"
++    ],
++    "description": "Mira reaches the tower.",
++    "source_id": "courier-log"
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-from-ambiguous/README.md i/corpus/fixtures/r87-masked-break-from-ambiguous/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e92a6846fb1a2046512e0df7c3a51fa746f45554
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-from-ambiguous/README.md
+@@ -0,0 +1 @@
++This authored fictional micro-bible is the `from_holder` direction of the provenance assessment probe: the first record names duplicated holder ID `dup` as its source, and two individually valid later records follow it. The duplicate rows are test scaffolding, not a choice between identities or evidence about custody; source IDs resolve only to supplied in-world records and do not establish source support or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-from-ambiguous` from the lane root; the baseline should report the ambiguous first holder and stop notice, but does not locally disclose that later record comparisons were skipped.
+diff --git c/corpus/fixtures/r87-masked-break-from-ambiguous/contradictions.json i/corpus/fixtures/r87-masked-break-from-ambiguous/contradictions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-from-ambiguous/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/r87-masked-break-from-ambiguous/entities.json i/corpus/fixtures/r87-masked-break-from-ambiguous/entities.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..983641d8dee401895831ac57706442860e9f5b52
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-from-ambiguous/entities.json
+@@ -0,0 +1,84 @@
++[
++  {
++    "id": "mira",
++    "kind": "character",
++    "name": "Mira",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "Mira carried the blue seal.",
++        "source_id": "courier-log"
++      }
++    ]
++  },
++  {
++    "id": "harbor",
++    "kind": "place",
++    "name": "Lantern Harbor",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "Lantern Harbor has a registry.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "tower",
++    "kind": "place",
++    "name": "North Tower",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "North Tower has a watch bell.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "seal",
++    "kind": "item",
++    "name": "Blue Seal",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "The seal accompanied Mira.",
++        "source_id": "courier-log"
++      }
++    ],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": "dup",
++        "to_holder": "mira",
++        "source_id": "courier-log"
++      },
++      {
++        "tick": 3,
++        "from_holder": "mira",
++        "to_holder": "harbor",
++        "source_id": "archive-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "harbor",
++        "to_holder": "tower",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "dup",
++    "kind": "character",
++    "name": "Red Keeper (fixture row)",
++    "first_appearance": "archive-ledger",
++    "claims": []
++  },
++  {
++    "id": "dup",
++    "kind": "character",
++    "name": "Blue Keeper (fixture row)",
++    "first_appearance": "archive-ledger",
++    "claims": []
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-from-ambiguous/relations.json i/corpus/fixtures/r87-masked-break-from-ambiguous/relations.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..189083cc5324e9c1d282d51724c76a490aa8cd9b
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-from-ambiguous/relations.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "from": "mira",
++    "to": "seal",
++    "type": "carries",
++    "source_id": "courier-log"
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-from-ambiguous/sources.json i/corpus/fixtures/r87-masked-break-from-ambiguous/sources.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..aaaba0bb4b9ce11d936576896a9cc21848a64996
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-from-ambiguous/sources.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "id": "archive-ledger",
++    "title": "Lantern Harbor Registry, year 12",
++    "kind": "fictional municipal record",
++    "reliability_note": "in-world fiction; records movements, not omniscient truth"
++  },
++  {
++    "id": "courier-log",
++    "title": "Courier Mira’s Route Log, year 12",
++    "kind": "fictional personal log",
++    "reliability_note": "in-world fiction; first-person account"
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-from-ambiguous/timeline.json i/corpus/fixtures/r87-masked-break-from-ambiguous/timeline.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dc09a2461941aaf4d90a982335f2a069774cc2e7
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-from-ambiguous/timeline.json
+@@ -0,0 +1,22 @@
++[
++  {
++    "id": "departure",
++    "tick": 1,
++    "entity_id": "mira",
++    "place_id": "harbor",
++    "depends_on": [],
++    "description": "Mira departs the harbor.",
++    "source_id": "courier-log"
++  },
++  {
++    "id": "arrival",
++    "tick": 2,
++    "entity_id": "mira",
++    "place_id": "tower",
++    "depends_on": [
++      "departure"
++    ],
++    "description": "Mira reaches the tower.",
++    "source_id": "courier-log"
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-to-ambiguous/README.md i/corpus/fixtures/r87-masked-break-to-ambiguous/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..f30d8412cdc1172137f33730c1bbef1e13eaf6e8
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-to-ambiguous/README.md
+@@ -0,0 +1 @@
++This authored fictional micro-bible is a provenance assessment probe: `seal` first names duplicated holder ID `dup`, then record 1 has individually valid unique holder IDs but gives `mira` as `from_holder` instead of the preceding `dup` ID, with a later continuous record to test whether checks resume. The duplicate rows are test scaffolding, not a choice between identities or evidence about custody; source IDs resolve only to supplied in-world records and do not establish source support or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-to-ambiguous` from the lane root; the baseline should report the ambiguous first holder and stop notice, but does not locally disclose that later record comparisons were skipped.
+diff --git c/corpus/fixtures/r87-masked-break-to-ambiguous/contradictions.json i/corpus/fixtures/r87-masked-break-to-ambiguous/contradictions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-to-ambiguous/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/r87-masked-break-to-ambiguous/entities.json i/corpus/fixtures/r87-masked-break-to-ambiguous/entities.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..1052616abfd8050b7adb1abc367995638e4a4ea6
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-to-ambiguous/entities.json
+@@ -0,0 +1,84 @@
++[
++  {
++    "id": "mira",
++    "kind": "character",
++    "name": "Mira",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "Mira carried the blue seal.",
++        "source_id": "courier-log"
++      }
++    ]
++  },
++  {
++    "id": "harbor",
++    "kind": "place",
++    "name": "Lantern Harbor",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "Lantern Harbor has a registry.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "tower",
++    "kind": "place",
++    "name": "North Tower",
++    "first_appearance": "archive-ledger",
++    "claims": [
++      {
++        "statement": "North Tower has a watch bell.",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "seal",
++    "kind": "item",
++    "name": "Blue Seal",
++    "first_appearance": "courier-log",
++    "claims": [
++      {
++        "statement": "The seal accompanied Mira.",
++        "source_id": "courier-log"
++      }
++    ],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "dup",
++        "source_id": "courier-log"
++      },
++      {
++        "tick": 3,
++        "from_holder": "mira",
++        "to_holder": "harbor",
++        "source_id": "archive-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "harbor",
++        "to_holder": "tower",
++        "source_id": "archive-ledger"
++      }
++    ]
++  },
++  {
++    "id": "dup",
++    "kind": "character",
++    "name": "Red Keeper (fixture row)",
++    "first_appearance": "archive-ledger",
++    "claims": []
++  },
++  {
++    "id": "dup",
++    "kind": "character",
++    "name": "Blue Keeper (fixture row)",
++    "first_appearance": "archive-ledger",
++    "claims": []
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-to-ambiguous/relations.json i/corpus/fixtures/r87-masked-break-to-ambiguous/relations.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..189083cc5324e9c1d282d51724c76a490aa8cd9b
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-to-ambiguous/relations.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "from": "mira",
++    "to": "seal",
++    "type": "carries",
++    "source_id": "courier-log"
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-to-ambiguous/sources.json i/corpus/fixtures/r87-masked-break-to-ambiguous/sources.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..aaaba0bb4b9ce11d936576896a9cc21848a64996
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-to-ambiguous/sources.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "id": "archive-ledger",
++    "title": "Lantern Harbor Registry, year 12",
++    "kind": "fictional municipal record",
++    "reliability_note": "in-world fiction; records movements, not omniscient truth"
++  },
++  {
++    "id": "courier-log",
++    "title": "Courier Mira’s Route Log, year 12",
++    "kind": "fictional personal log",
++    "reliability_note": "in-world fiction; first-person account"
++  }
++]
+diff --git c/corpus/fixtures/r87-masked-break-to-ambiguous/timeline.json i/corpus/fixtures/r87-masked-break-to-ambiguous/timeline.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dc09a2461941aaf4d90a982335f2a069774cc2e7
+--- /dev/null
++++ i/corpus/fixtures/r87-masked-break-to-ambiguous/timeline.json
+@@ -0,0 +1,22 @@
++[
++  {
++    "id": "departure",
++    "tick": 1,
++    "entity_id": "mira",
++    "place_id": "harbor",
++    "depends_on": [],
++    "description": "Mira departs the harbor.",
++    "source_id": "courier-log"
++  },
++  {
++    "id": "arrival",
++    "tick": 2,
++    "entity_id": "mira",
++    "place_id": "tower",
++    "depends_on": [
++      "departure"
++    ],
++    "description": "Mira reaches the tower.",
++    "source_id": "courier-log"
++  }
++]

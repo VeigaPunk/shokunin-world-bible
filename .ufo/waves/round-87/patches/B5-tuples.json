@@ -1,0 +1,1553 @@
+{
+  "seat": "B5",
+  "baseline_commit": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+  "result_basis": "baseline-only; replayed on an isolated archive; no round-87 candidate patch applied",
+  "scope": {
+    "assigned_selector": "^[g-z]",
+    "assigned_fixture_count": 128,
+    "assigned_fixture_dirs": [
+      "item-chain-broken",
+      "item-chain-valid",
+      "r10-registry-witness",
+      "r11-character-place",
+      "r11-dangling-place",
+      "r11-place-character",
+      "r11-unique-nonplace",
+      "r12-ambiguous-actor",
+      "r12-unique-actor",
+      "r13-missing-actor",
+      "r13-unique-actor",
+      "r15-carbon-followup",
+      "r16-missing-first",
+      "r16-missing-place",
+      "r16-mixed-three",
+      "r16-valid-places",
+      "r17-valid-places",
+      "r17-wrong-after",
+      "r17-wrong-before",
+      "r17-wrong-first",
+      "r17-wrong-last",
+      "r17-wrong-middle",
+      "r18-duplicate-first-known",
+      "r18-duplicate-pair",
+      "r18-duplicate-reverse",
+      "r18-known-through-ambiguous",
+      "r18-mixed-kind",
+      "r18-unique-pair",
+      "r19-negative-first-valid",
+      "r19-negative-tick",
+      "r19-valid-around-negative",
+      "r19-valid-tick",
+      "r20-both-negative",
+      "r20-mixed-edges",
+      "r20-negative-dependent",
+      "r20-negative-prereq",
+      "r20-valid-equal",
+      "r20-valid-inversion",
+      "r20-valid-order",
+      "r21-ambiguous-actor",
+      "r21-clean",
+      "r21-clean-reverse",
+      "r21-invalid-tick",
+      "r21-malformed",
+      "r21-malformed-reverse",
+      "r21-same-place",
+      "r21-wrong-kind-place",
+      "r22-clean-inversion",
+      "r22-malformed-only",
+      "r22-mixed-first",
+      "r22-mixed-last",
+      "r22-multiple-invalid",
+      "r22-self-repeated",
+      "r22-unknown-mixed",
+      "r22-valid-order",
+      "r23-note-class",
+      "r25-to-ambiguous",
+      "r25-to-unique",
+      "r26-to-malformed",
+      "r27-both-ambiguous",
+      "r27-target-only",
+      "r28-courier-excerpt",
+      "r29-near-miss",
+      "r30-explicit-negation",
+      "r31-source-ambiguous",
+      "r31-source-unique",
+      "r32-source-malformed",
+      "r33-tarin-envelope",
+      "r34-tarin-hearsay",
+      "r35-bell7-conflict",
+      "r36-bell7-wrong-date",
+      "r37-ledger-ambiguous",
+      "r37-ledger-unique",
+      "r39-ledger-source-missing",
+      "r39-ledger-source-unique",
+      "r40-vela-listener",
+      "r41-vela-direct-bell",
+      "r43-jorin-vela-sighting",
+      "r5-invalid-citation",
+      "r5-invalid-json",
+      "r5-missing-file",
+      "r5-row-shape",
+      "r5-wrong-top-level",
+      "r59-duplicate-harbor-tower",
+      "r59-duplicate-tower-harbor",
+      "r59-nested-duplicate",
+      "r59-unique-control",
+      "r60-empty",
+      "r60-partial",
+      "r60-unavailable",
+      "r60-unavailable-independent",
+      "r61-allied-empty",
+      "r61-allied-unavailable",
+      "r61-direct-ambiguous",
+      "r61-direct-duplicate-member",
+      "r61-direct-empty",
+      "r61-direct-malformed",
+      "r61-direct-nonarray",
+      "r61-direct-partial",
+      "r61-direct-unavailable",
+      "r61-independent-empty",
+      "r61-independent-unavailable",
+      "r61-ledger-unavailable",
+      "r62-duplicate",
+      "r62-duplicate-member",
+      "r62-empty",
+      "r62-independent",
+      "r62-loaded",
+      "r62-malformed",
+      "r62-malformed-side",
+      "r62-missing",
+      "r62-nonarray",
+      "r62-partial",
+      "r67-claim-source-loaded-control",
+      "r67-claim-source-loaded-empty",
+      "r67-claim-source-unavailable-control",
+      "r67-claim-source-unavailable-empty",
+      "r67-claim-source-unavailable-whitespace",
+      "r7-ally-reverse-ambiguous",
+      "r7-item-ambiguous",
+      "r72-vela-slate-claim",
+      "r73-jorin-slate-claim",
+      "r8-deps-anomalous",
+      "r8-deps-distinct",
+      "r83-vela-joint-nonsighting",
+      "r9-dup-high-low",
+      "r9-dup-low-high",
+      "r9-unique-control"
+    ],
+    "complement_selector": "^[0-9a-f]",
+    "complement_fixture_count": 5,
+    "complement_replayed": false,
+    "complement_file_count": 25
+  },
+  "tuples": [
+    {
+      "fixture": "item-chain-broken",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/item-chain-broken"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b335d2e70726f76656e616e63655b325d3a2070726f76656e616e636520636861696e20627265616b3b2065787065637465642066726f6d5f686f6c6465722027686172626f72272c20676f7420276d697261270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "item-chain-valid",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/item-chain-valid"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r10-registry-witness",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r10-registry-witness"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r11-character-place",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r11-character-place"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b325d2e69643a206475706c696361746520656e7469746965732069642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a20616d626967756f757320706c61636520656e746974792027686172626f72270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r11-dangling-place",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r11-dangling-place"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a2064616e676c696e6720656e746974792027756e6c6973746564270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r11-place-character",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r11-place-character"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b325d2e69643a206475706c696361746520656e7469746965732069642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a20616d626967756f757320706c61636520656e746974792027686172626f72270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r11-unique-nonplace",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r11-unique-nonplace"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a206e6f74206120706c61636520276d697261270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r12-ambiguous-actor",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r12-ambiguous-actor"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e74697469657320696420276d697261270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e66726f6d3a20616d626967756f757320656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b305d2e656e746974795f69643a20616d626967756f7573206163746f7220656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b315d2e656e746974795f69643a20616d626967756f7573206163746f7220656e7469747920276d697261270a342076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r12-unique-actor",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r12-unique-actor"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r13-missing-actor",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r13-missing-actor"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e656e746974795f69643a2064616e676c696e6720656e746974792027756e6c6973746564270a56494f4c4154494f4e3a2074696d656c696e655b315d2e656e746974795f69643a2064616e676c696e6720656e746974792027756e6c6973746564270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r13-unique-actor",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r13-unique-actor"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r15-carbon-followup",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r15-carbon-followup"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r16-missing-first",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r16-missing-first"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a2064616e676c696e6720656e746974792027756e6c6973746564270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r16-missing-place",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r16-missing-place"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a2064616e676c696e6720656e746974792027756e6c6973746564270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r16-mixed-three",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r16-mixed-three"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a2064616e676c696e6720656e746974792027756e6c6973746564270a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r16-valid-places",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r16-valid-places"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r17-valid-places",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r17-valid-places"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r17-wrong-after",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r17-wrong-after"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a206e6f74206120706c61636520276d697261270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r17-wrong-before",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r17-wrong-before"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a206e6f74206120706c61636520276d697261270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r17-wrong-first",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r17-wrong-first"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a206e6f74206120706c61636520276d697261270a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b315d202827686172626f72272920616e642027746f776572270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r17-wrong-last",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r17-wrong-last"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a56494f4c4154494f4e3a2074696d656c696e655b325d2e706c6163655f69643a206e6f74206120706c61636520276d697261270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r17-wrong-middle",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r17-wrong-middle"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a206e6f74206120706c61636520276d697261270a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203720696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r18-duplicate-first-known",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r18-duplicate-first-known"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e7469746965732069642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a20616d626967756f757320706c61636520656e746974792027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b315d202827746f776572272920616e64202771756179270a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r18-duplicate-pair",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r18-duplicate-pair"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e7469746965732069642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a20616d626967756f757320706c61636520656e746974792027686172626f72270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r18-duplicate-reverse",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r18-duplicate-reverse"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e7469746965732069642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a20616d626967756f757320706c61636520656e746974792027686172626f72270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r18-known-through-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r18-known-through-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e7469746965732069642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a20616d626967756f757320706c61636520656e746974792027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827746f776572272920616e64202771756179270a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r18-mixed-kind",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r18-mixed-kind"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e7469746965732069642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a20616d626967756f757320706c61636520656e746974792027686172626f72270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r18-unique-pair",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r18-unique-pair"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827746f776572272920616e642027686172626f72270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r19-negative-first-valid",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r19-negative-first-valid"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b315d202827746f776572272920616e642027686172626f72270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r19-negative-tick",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r19-negative-tick"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b315d2e7469636b3a206d757374206265206e6f6e6e656761746976650a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r19-valid-around-negative",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r19-valid-around-negative"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827746f776572272920616e642027686172626f72270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r19-valid-tick",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r19-valid-tick"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827746f776572272920616e642027686172626f72270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r20-both-negative",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r20-both-negative"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b315d2e7469636b3a206d757374206265206e6f6e6e656761746976650a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r20-mixed-edges",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r20-mixed-edges"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b325d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d76616c69642d6127207469636b2032206e6f74206265666f726520277232302d76616c69642d6327207469636b20310a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r20-negative-dependent",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r20-negative-dependent"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e7469636b3a206d757374206265206e6f6e6e656761746976650a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r20-negative-prereq",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r20-negative-prereq"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r20-valid-equal",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r20-valid-equal"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203120696e2074696d656c696e655b305d202827746f776572272920616e642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d70726572657127207469636b2031206e6f74206265666f726520277232302d646570656e64656e7427207469636b20310a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r20-valid-inversion",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r20-valid-inversion"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d70726572657127207469636b2032206e6f74206265666f726520277232302d646570656e64656e7427207469636b20310a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r20-valid-order",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r20-valid-order"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-ambiguous-actor",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-ambiguous-actor"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e74697469657320696420276d697261270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e66726f6d3a20616d626967756f757320656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b305d2e656e746974795f69643a20616d626967756f7573206163746f7220656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b315d2e656e746974795f69643a20616d626967756f7573206163746f7220656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a352076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-clean",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-clean"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827746f776572272920616e642027686172626f72270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-clean-reverse",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-clean-reverse"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-invalid-tick",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-invalid-tick"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b315d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-malformed",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-malformed"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827746f776572272920616e642027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-malformed-reverse",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-malformed-reverse"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203920696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-same-place",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-same-place"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r21-wrong-kind-place",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r21-wrong-kind-place"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a206e6f74206120706c61636520276d697261270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-clean-inversion",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-clean-inversion"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d70726572657127207469636b2032206e6f74206265666f726520277232302d646570656e64656e7427207469636b20310a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-malformed-only",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-malformed-only"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-mixed-first",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-mixed-first"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d70726572657127207469636b2032206e6f74206265666f726520277232302d646570656e64656e7427207469636b20310a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-mixed-last",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-mixed-last"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d70726572657127207469636b2032206e6f74206265666f726520277232302d646570656e64656e7427207469636b20310a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-multiple-invalid",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-multiple-invalid"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d70726572657127207469636b2032206e6f74206265666f726520277232302d646570656e64656e7427207469636b20310a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-self-repeated",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-self-repeated"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e5b305d3a2073656c6620646570656e64656e637920277232302d646570656e64656e74270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20277232302d646570656e64656e7427207469636b2031206e6f74206265666f726520277232302d646570656e64656e7427207469636b20310a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e5b315d3a2073656c6620646570656e64656e637920277232302d646570656e64656e74270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e5b315d3a20726570656174656420646570656e64656e637920277232302d646570656e64656e74270a352076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-unknown-mixed",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-unknown-mixed"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a206578706563746564206576656e742d696420737472696e67730a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a20756e6b6e6f776e206576656e7420276d697373696e67270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r22-valid-order",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r22-valid-order"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r23-note-class",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r23-note-class"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r25-to-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r25-to-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e74697469657320696420277365616c270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e746f3a20616d626967756f757320656e7469747920277365616c270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r25-to-unique",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r25-to-unique"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r26-to-malformed",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r26-to-malformed"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e6e616d653a207265717569726564206e6f6e656d707479207374720a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r27-both-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r27-both-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e74697469657320696420277365616c270a56494f4c4154494f4e3a20656e7469746965735b355d2e69643a206475706c696361746520656e74697469657320696420276d697261270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e66726f6d3a20616d626967756f757320656e7469747920276d697261270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e746f3a20616d626967756f757320656e7469747920277365616c270a56494f4c4154494f4e3a2074696d656c696e655b305d2e656e746974795f69643a20616d626967756f7573206163746f7220656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b315d2e656e746974795f69643a20616d626967756f7573206163746f7220656e7469747920276d697261270a362076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r27-target-only",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r27-target-only"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b345d2e69643a206475706c696361746520656e74697469657320696420277365616c270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e746f3a20616d626967756f757320656e7469747920277365616c270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r28-courier-excerpt",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r28-courier-excerpt"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r29-near-miss",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r29-near-miss"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r30-explicit-negation",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r30-explicit-negation"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r31-source-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r31-source-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365735b325d2e69643a206475706c696361746520736f75726365732069642027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b305d2e66697273745f617070656172616e63653a20616d626967756f757320696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b335d2e66697273745f617070656172616e63653a20616d626967756f757320696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b335d2e636c61696d735b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b315d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a382076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r31-source-unique",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r31-source-unique"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r32-source-malformed",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r32-source-malformed"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365735b325d2e7469746c653a207265717569726564206e6f6e656d707479207374720a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r33-tarin-envelope",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r33-tarin-envelope"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r34-tarin-hearsay",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r34-tarin-hearsay"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r35-bell7-conflict",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r35-bell7-conflict"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r36-bell7-wrong-date",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r36-bell7-wrong-date"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r37-ledger-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r37-ledger-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b345d2e69643a206475706c69636174652074696d656c696e652069642027746172696e2d656e76656c6f70652d6f62736572766174696f6e270a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6576656e745f69643a2065787065637465642065786163746c79206f6e652074696d656c696e65206576656e742027746172696e2d656e76656c6f70652d6f62736572766174696f6e270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r37-ledger-unique",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r37-ledger-unique"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r39-ledger-source-missing",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r39-ledger-source-missing"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f623a206576656e74202773656c6c612d62656c6c372d70726573656e63652720686173206e6f207265736f6c7661626c6520736f757263655f69640a56494f4c4154494f4e3a2074696d656c696e655b335d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f7572636520276d697373696e672d73656c6c612d6e6f7465270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r39-ledger-source-unique",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r39-ledger-source-unique"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r40-vela-listener",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r40-vela-listener"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r41-vela-direct-bell",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r41-vela-direct-bell"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r43-jorin-vela-sighting",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r43-jorin-vela-sighting"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r5-invalid-citation",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r5-invalid-citation"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2072656c6174696f6e735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027616273656e742d736f75726365270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r5-invalid-json",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r5-invalid-json"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203220636f6c756d6e20312028636861722032290a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r5-missing-file",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r5-missing-file"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a205b4572726e6f20325d204e6f20737563682066696c65206f72206469726563746f72793a2027636f727075732f66697874757265732f72352d6d697373696e672d66696c652f636f6e74726164696374696f6e732e6a736f6e270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r5-row-shape",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r5-row-shape"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d3a206578706563746564206f626a6563740a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r5-wrong-top-level",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r5-wrong-top-level"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e732e6a736f6e3a2065787065637465642061727261790a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r59-duplicate-harbor-tower",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r59-duplicate-harbor-tower"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a206475706c6963617465206f626a656374206d656d6265722027706c6163655f6964273b2063616e6e6f74206c6f6164204a534f4e0a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r59-duplicate-tower-harbor",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r59-duplicate-tower-harbor"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a206475706c6963617465206f626a656374206d656d6265722027706c6163655f6964273b2063616e6e6f74206c6f6164204a534f4e0a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r59-nested-duplicate",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r59-nested-duplicate"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965732e6a736f6e3a206475706c6963617465206f626a656374206d656d6265722027736f757263655f6964273b2063616e6e6f74206c6f6164204a534f4e0a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r59-unique-control",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r59-unique-control"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203120696e2074696d656c696e655b305d202827686172626f72272920616e642027746f776572270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r60-empty",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r60-empty"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2072656c6174696f6e735b305d2e66726f6d3a2064616e676c696e6720656e7469747920276d697261270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e746f3a2064616e676c696e6720656e7469747920277365616c270a56494f4c4154494f4e3a2074696d656c696e655b305d2e656e746974795f69643a2064616e676c696e6720656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a2064616e676c696e6720656e746974792027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b315d2e656e746974795f69643a2064616e676c696e6720656e7469747920276d697261270a56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a2064616e676c696e6720656e746974792027746f776572270a362076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r60-partial",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r60-partial"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2072656c6174696f6e735b305d2e746f3a2064616e676c696e6720656e7469747920277365616c270a56494f4c4154494f4e3a2074696d656c696e655b305d2e706c6163655f69643a2064616e676c696e6720656e746974792027686172626f72270a56494f4c4154494f4e3a2074696d656c696e655b315d2e706c6163655f69643a2064616e676c696e6720656e746974792027746f776572270a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r60-unavailable",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r60-unavailable"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20332028636861722032290a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r60-unavailable-independent",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r60-unavailable-independent"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20332028636861722032290a56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b315d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027616273656e74270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a20756e6b6e6f776e206576656e7420276d697373696e67270a342076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-allied-empty",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-allied-empty"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b305d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027686172626f722d636f6d70616374270a56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027686172626f722d636f6d70616374270a56494f4c4154494f4e3a20656e7469746965735b315d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027686172626f722d636f6d70616374270a56494f4c4154494f4e3a20656e7469746965735b315d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027686172626f722d636f6d70616374270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027686172626f722d636f6d70616374270a56494f4c4154494f4e3a2072656c6174696f6e735b305d3a20616c6c6965645f776974682066616374696f6e2072656c6174696f6e2027717561792d6775696c6427202d3e202762656c6c2d77617264656e7327206c61636b73206120736f7572636564207265636970726f63616c2072656c6174696f6e0a362076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-allied-unavailable",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-allied-unavailable"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-direct-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-direct-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365735b325d2e69643a206475706c696361746520736f75726365732069642027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b315d2e66697273745f617070656172616e63653a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b315d2e636c61696d735b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e66697273745f617070656172616e63653a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e636c61696d735b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a352076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-direct-duplicate-member",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-direct-duplicate-member"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a206475706c6963617465206f626a656374206d656d62657220276964273b2063616e6e6f74206c6f6164204a534f4e0a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-direct-empty",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-direct-empty"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b305d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b315d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b315d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b335d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b335d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b315d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a31312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-direct-malformed",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-direct-malformed"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-direct-nonarray",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-direct-nonarray"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2065787065637465642061727261790a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-direct-partial",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-direct-partial"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b305d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b335d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b335d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b315d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a372076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-direct-unavailable",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-direct-unavailable"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-independent-empty",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-independent-empty"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b305d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b315d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b315d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b335d2e66697273745f617070656172616e63653a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b335d2e636c61696d735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a20656e7469746965735b305d2e70726f76656e616e63653a206f6e6c792076616c6964206f6e206974656d20656e7469746965730a56494f4c4154494f4e3a20656e7469746965735b305d2e70726f76656e616e63655b305d2e746f5f686f6c6465723a2064616e676c696e6720656e7469747920276e6f626f6479270a56494f4c4154494f4e3a20656e7469746965735b305d2e70726f76656e616e63655b305d2e66726f6d5f686f6c6465723a2064616e676c696e6720656e74697479202767686f7374270a56494f4c4154494f4e3a20656e7469746965735b305d2e70726f76656e616e63655b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b305d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b305d2e646570656e64735f6f6e3a20756e6b6e6f776e206576656e7420276d697373696e672d6576656e74270a56494f4c4154494f4e3a2074696d656c696e655b315d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f757263652027636f75726965722d6c6f67270a31372076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-independent-unavailable",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-independent-unavailable"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a56494f4c4154494f4e3a20656e7469746965735b305d2e70726f76656e616e63653a206f6e6c792076616c6964206f6e206974656d20656e7469746965730a56494f4c4154494f4e3a20656e7469746965735b305d2e70726f76656e616e63655b305d2e746f5f686f6c6465723a2064616e676c696e6720656e7469747920276e6f626f6479270a56494f4c4154494f4e3a20656e7469746965735b305d2e70726f76656e616e63655b305d2e66726f6d5f686f6c6465723a2064616e676c696e6720656e74697479202767686f7374270a56494f4c4154494f4e3a2074696d656c696e655b305d2e7469636b3a206d757374206265206e6f6e6e656761746976650a56494f4c4154494f4e3a2074696d656c696e655b305d2e646570656e64735f6f6e3a20756e6b6e6f776e206576656e7420276d697373696e672d6576656e74270a362076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r61-ledger-unavailable",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r61-ledger-unavailable"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b315d2e636c61696d5f622e6576656e745f69643a2065787065637465642065786163746c79206f6e652074696d656c696e65206576656e742027616273656e742d6576656e74270a56494f4c4154494f4e3a2072656c6174696f6e735b315d2e746f3a2064616e676c696e6720656e7469747920276d697373696e672d6d6170270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20276c6174657227207469636b2033206e6f74206265666f726520276172726976616c27207469636b20320a56494f4c4154494f4e3a2074696d656c696e655b325d3a20646f75626c652d626f6f6b656420276d69726127206174207469636b203220696e2074696d656c696e655b315d202827746f776572272920616e642027686172626f72270a352076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-duplicate",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-duplicate"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b345d2e69643a206475706c69636174652074696d656c696e652069642027646570617274757265270a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f623a206576656e74202773656c6c612d62656c6c372d70726573656e63652720686173206e6f207265736f6c7661626c6520736f757263655f69640a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e5b305d3a20616d626967756f757320646570656e64656e6379206576656e742027646570617274757265270a56494f4c4154494f4e3a2074696d656c696e655b335d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f7572636520276d697373696e672d73656c6c612d6e6f7465270a342076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-duplicate-member",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-duplicate-member"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a206475706c6963617465206f626a656374206d656d626572202778273b2063616e6e6f74206c6f6164204a534f4e0a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6576656e745f69643a2063616e6e6f7420617373657373206576656e742027746172696e2d656e76656c6f70652d6f62736572766174696f6e273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6576656e745f69643a2063616e6e6f7420617373657373206576656e74202773656c6c612d62656c6c372d70726573656e6365273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-empty",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-empty"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6576656e745f69643a2065787065637465642065786163746c79206f6e652074696d656c696e65206576656e742027746172696e2d656e76656c6f70652d6f62736572766174696f6e270a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6576656e745f69643a2065787065637465642065786163746c79206f6e652074696d656c696e65206576656e74202773656c6c612d62656c6c372d70726573656e6365270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-independent",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-independent"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6576656e745f69643a2063616e6e6f7420617373657373206576656e742027746172696e2d656e76656c6f70652d6f62736572766174696f6e273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6576656e745f69643a2063616e6e6f7420617373657373206576656e74202773656c6c612d62656c6c372d70726573656e6365273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a56494f4c4154494f4e3a2072656c6174696f6e735b305d2e66726f6d3a2064616e676c696e6720656e7469747920276e6f742d616e2d656e74697479270a342076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-loaded",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-loaded"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f623a206576656e74202773656c6c612d62656c6c372d70726573656e63652720686173206e6f207265736f6c7661626c6520736f757263655f69640a56494f4c4154494f4e3a2074696d656c696e655b335d2e736f757263655f69643a20756e6b6e6f776e20696e2d776f726c6420736f7572636520276d697373696e672d73656c6c612d6e6f7465270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-malformed",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-malformed"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6576656e745f69643a2063616e6e6f7420617373657373206576656e742027746172696e2d656e76656c6f70652d6f62736572766174696f6e273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6576656e745f69643a2063616e6e6f7420617373657373206576656e74202773656c6c612d62656c6c372d70726573656e6365273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-malformed-side",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-malformed-side"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a20457870656374696e672070726f7065727479206e616d6520656e636c6f73656420696e20646f75626c652071756f7465733a206c696e65203120636f6c756d6e20322028636861722031290a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6669656c643a206578706563746564206f6e65206f66205b27646570656e64735f6f6e272c2027706c6163655f6964272c20277469636b275d0a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6669656c643a206578706563746564206f6e65206f66205b27646570656e64735f6f6e272c2027706c6163655f6964272c20277469636b275d0a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d3a20636c61696d5f6120616e6420636c61696d5f62207265666572656e636573206d757374206469666665720a342076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-missing",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-missing"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a205b4572726e6f20325d204e6f20737563682066696c65206f72206469726563746f72793a2027636f727075732f66697874757265732f7236322d6d697373696e672f74696d656c696e652e6a736f6e270a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6576656e745f69643a2063616e6e6f7420617373657373206576656e742027746172696e2d656e76656c6f70652d6f62736572766174696f6e273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6576656e745f69643a2063616e6e6f7420617373657373206576656e74202773656c6c612d62656c6c372d70726573656e6365273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-nonarray",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-nonarray"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e652e6a736f6e3a2065787065637465642061727261790a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f612e6576656e745f69643a2063616e6e6f7420617373657373206576656e742027746172696e2d656e76656c6f70652d6f62736572766174696f6e273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6576656e745f69643a2063616e6e6f7420617373657373206576656e74202773656c6c612d62656c6c372d70726573656e6365273a2074696d656c696e652e6a736f6e20756e617661696c61626c650a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r62-partial",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r62-partial"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20636f6e74726164696374696f6e735b305d2e636c61696d5f622e6576656e745f69643a2065787065637465642065786163746c79206f6e652074696d656c696e65206576656e74202773656c6c612d62656c6c372d70726573656e6365270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r67-claim-source-loaded-control",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r67-claim-source-loaded-control"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r67-claim-source-loaded-empty",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r67-claim-source-loaded-empty"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d3a206578706563746564206e6f6e656d7074792073746174656d656e7420616e6420736f757263655f69640a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r67-claim-source-unavailable-control",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r67-claim-source-unavailable-control"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a205b4572726e6f20325d204e6f20737563682066696c65206f72206469726563746f72793a2027636f727075732f66697874757265732f7236372d636c61696d2d736f757263652d756e617661696c61626c652d636f6e74726f6c2f736f75726365732e6a736f6e270a312076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r67-claim-source-unavailable-empty",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r67-claim-source-unavailable-empty"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a205b4572726e6f20325d204e6f20737563682066696c65206f72206469726563746f72793a2027636f727075732f66697874757265732f7236372d636c61696d2d736f757263652d756e617661696c61626c652d656d7074792f736f75726365732e6a736f6e270a56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d3a206578706563746564206e6f6e656d7074792073746174656d656e7420616e6420736f757263655f69640a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r67-claim-source-unavailable-whitespace",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365732e6a736f6e3a2063616e6e6f74206c6f6164204a534f4e3a205b4572726e6f20325d204e6f20737563682066696c65206f72206469726563746f72793a2027636f727075732f66697874757265732f7236372d636c61696d2d736f757263652d756e617661696c61626c652d776869746573706163652f736f75726365732e6a736f6e270a56494f4c4154494f4e3a20656e7469746965735b305d2e636c61696d735b305d3a206578706563746564206e6f6e656d7074792073746174656d656e7420616e6420736f757263655f69640a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r7-ally-reverse-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r7-ally-reverse-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365735b325d2e69643a206475706c696361746520736f75726365732069642027686172626f722d636f6d70616374270a56494f4c4154494f4e3a2072656c6174696f6e735b315d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027686172626f722d636f6d70616374270a56494f4c4154494f4e3a2072656c6174696f6e735b305d3a20616c6c6965645f776974682066616374696f6e2072656c6174696f6e2027717561792d6775696c6427202d3e202762656c6c2d77617264656e7327206c61636b73206120736f7572636564207265636970726f63616c2072656c6174696f6e0a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r7-item-ambiguous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r7-item-ambiguous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a20736f75726365735b325d2e69643a206475706c696361746520736f75726365732069642027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b315d2e66697273745f617070656172616e63653a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b315d2e636c61696d735b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e66697273745f617070656172616e63653a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b325d2e636c61696d735b305d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b335d2e70726f76656e616e63655b315d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a56494f4c4154494f4e3a20656e7469746965735b335d2e70726f76656e616e63655b325d2e736f757263655f69643a20616d626967756f757320696e2d776f726c6420736f757263652027617263686976652d6c6564676572270a372076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r72-vela-slate-claim",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r72-vela-slate-claim"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r73-jorin-slate-claim",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r73-jorin-slate-claim"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r8-deps-anomalous",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r8-deps-anomalous"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e5b315d3a20726570656174656420646570656e64656e63792027646570617274757265270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e5b325d3a2073656c6620646570656e64656e637920276172726976616c270a56494f4c4154494f4e3a2074696d656c696e655b315d2e646570656e64735f6f6e3a2074696d656c696e6520696e76657273696f6e20276172726976616c27207469636b2032206e6f74206265666f726520276172726976616c27207469636b20320a332076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r8-deps-distinct",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r8-deps-distinct"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r83-vela-joint-nonsighting",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r83-vela-joint-nonsighting"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r9-dup-high-low",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r9-dup-high-low"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e69643a206475706c69636174652074696d656c696e65206964202773616d65270a56494f4c4154494f4e3a2074696d656c696e655b325d2e646570656e64735f6f6e5b305d3a20616d626967756f757320646570656e64656e6379206576656e74202773616d65270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r9-dup-low-high",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r9-dup-low-high"
+      ],
+      "exit_status": 1,
+      "stdout_hex": "56494f4c4154494f4e3a2074696d656c696e655b315d2e69643a206475706c69636174652074696d656c696e65206964202773616d65270a56494f4c4154494f4e3a2074696d656c696e655b325d2e646570656e64735f6f6e5b305d3a20616d626967756f757320646570656e64656e6379206576656e74202773616d65270a322076696f6c6174696f6e2873293b206e6f2063616e6f6e206368616e6765640a",
+      "stderr_hex": ""
+    },
+    {
+      "fixture": "r9-unique-control",
+      "argv": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r9-unique-control"
+      ],
+      "exit_status": 0,
+      "stdout_hex": "434c45414e3a20736368656d612c206369746174696f6e732c2072656c6174696f6e732c2074696d656c696e653b20302076696f6c6174696f6e730a",
+      "stderr_hex": ""
+    }
+  ]
+}

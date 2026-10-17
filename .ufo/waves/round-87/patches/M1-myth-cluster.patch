@@ -1,0 +1,295 @@
+diff --git a/corpus/fixtures/r87-myth-cluster/README.md b/corpus/fixtures/r87-myth-cluster/README.md
+new file mode 100644
+index 0000000..896b70c
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/README.md
+@@ -0,0 +1,11 @@
++# R87 myth cluster: The First Answering
++
++This fixture presents a small fictional cosmology in which two shore factions keep separate beacons, an item marks the transition from dark sea to lamp-light, and their accounts of an alliance are independently recorded. The sources are in-world evidence labels for this fixture, not external claims about real traditions.
++
++The item claims are mapped clause-by-clause in `symbolism-clause-map.md`. `sourced-inspiration.md` names one high-level real-world mythology parallel and keeps attribution, rights, and AI-training permission as separate open questions. It does not establish a canon link or resolve any of those questions.
++
++Run the fixture validator from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster
++```
+diff --git a/corpus/fixtures/r87-myth-cluster/contradictions.json b/corpus/fixtures/r87-myth-cluster/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r87-myth-cluster/entities.json b/corpus/fixtures/r87-myth-cluster/entities.json
+new file mode 100644
+index 0000000..a396144
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/entities.json
+@@ -0,0 +1,66 @@
++[
++  {
++    "id": "dawn-weir",
++    "kind": "faction",
++    "name": "Dawn Weir",
++    "first_appearance": "source-appearance-dawn-weir",
++    "claims": [
++      {
++        "statement": "The Dawn Weir tends the eastern shore beacon during the First Answering.",
++        "source_id": "source-claim-dawn-weir"
++      }
++    ]
++  },
++  {
++    "id": "undertide-choir",
++    "kind": "faction",
++    "name": "Undertide Choir",
++    "first_appearance": "source-appearance-undertide-choir",
++    "claims": [
++      {
++        "statement": "The Undertide Choir tends the western shore beacon during the First Answering.",
++        "source_id": "source-claim-undertide-choir"
++      }
++    ]
++  },
++  {
++    "id": "vesper",
++    "kind": "character",
++    "name": "Vesper",
++    "first_appearance": "source-appearance-vesper",
++    "claims": [
++      {
++        "statement": "Vesper carries the Bell of First Wake between the two shores.",
++        "source_id": "source-claim-vesper"
++      }
++    ]
++  },
++  {
++    "id": "first-wake-bell",
++    "kind": "item",
++    "name": "Bell of First Wake",
++    "first_appearance": "source-appearance-bell",
++    "claims": [
++      {
++        "statement": "Its bowl is made of dark-blue nacre, recalling the sea before the first lamps.",
++        "source_id": "source-claim-bell-material"
++      },
++      {
++        "statement": "At the First Answering, its single note signaled both shores to kindle their lamps.",
++        "source_id": "source-claim-bell-rite"
++      }
++    ]
++  },
++  {
++    "id": "stillwater-cove",
++    "kind": "place",
++    "name": "Stillwater Cove",
++    "first_appearance": "source-appearance-cove",
++    "claims": [
++      {
++        "statement": "Stillwater Cove lies between the eastern and western beacon shores.",
++        "source_id": "source-claim-cove"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r87-myth-cluster/relations.json b/corpus/fixtures/r87-myth-cluster/relations.json
+new file mode 100644
+index 0000000..2e69dfc
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/relations.json
+@@ -0,0 +1,26 @@
++[
++  {
++    "from": "dawn-weir",
++    "to": "undertide-choir",
++    "type": "allied_with",
++    "source_id": "source-alliance-dawn-to-choir"
++  },
++  {
++    "from": "undertide-choir",
++    "to": "dawn-weir",
++    "type": "allied_with",
++    "source_id": "source-alliance-choir-to-dawn"
++  },
++  {
++    "from": "vesper",
++    "to": "first-wake-bell",
++    "type": "carries",
++    "source_id": "source-relation-vesper-carries-bell"
++  },
++  {
++    "from": "undertide-choir",
++    "to": "stillwater-cove",
++    "type": "tends",
++    "source_id": "source-relation-choir-tends-cove"
++  }
++]
+diff --git a/corpus/fixtures/r87-myth-cluster/sourced-inspiration.md b/corpus/fixtures/r87-myth-cluster/sourced-inspiration.md
+new file mode 100644
+index 0000000..5dd2ecc
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/sourced-inspiration.md
+@@ -0,0 +1,9 @@
++# Sourced inspiration: a high-level mythology parallel
++
++The cluster's image of light withheld in darkness and restored through a communal response has a limited structural parallel in the Amaterasu cave episode in the Japanese *Kojiki*. Reference: *The Kojiki*, translated by Basil Hall Chamberlain, “The Kojiki” entry at the Internet Sacred Text Archive (https://sacred-texts.com/shi/kj/index.htm). This note identifies one point of comparison only; it does not claim that the fictional rite is a retelling, that the traditions are equivalent, or that the source establishes fictional canon. No wording from the cited work is reproduced here.
++
++Open questions, kept distinct:
++
++- **Attribution — open:** What bibliographic and source-community attribution should accompany any later use of this parallel?
++- **Rights — open:** What rights, if any, apply to the cited edition, translation, or any contemplated reuse? This note makes no rights determination.
++- **AI-training permission — open:** Has the relevant rights-holder or source community granted permission for AI training on the relevant material? Unknown; no permission is asserted.
+diff --git a/corpus/fixtures/r87-myth-cluster/sources.json b/corpus/fixtures/r87-myth-cluster/sources.json
+new file mode 100644
+index 0000000..228e794
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/sources.json
+@@ -0,0 +1,104 @@
++[
++  {
++    "id": "source-appearance-dawn-weir",
++    "title": "Dawn Weir beacon roll, opening leaf",
++    "kind": "in-world harbor register",
++    "reliability_note": "Fictional registry fragment; identifies the faction's first recorded appearance."
++  },
++  {
++    "id": "source-claim-dawn-weir",
++    "title": "Dawn Weir beacon roll, First Answering entry",
++    "kind": "in-world harbor register",
++    "reliability_note": "Fictional registry fragment; reports the eastern beacon duty."
++  },
++  {
++    "id": "source-appearance-undertide-choir",
++    "title": "Undertide Choir tide-book, opening leaf",
++    "kind": "in-world ritual ledger",
++    "reliability_note": "Fictional tide-book fragment; identifies the faction's first recorded appearance."
++  },
++  {
++    "id": "source-claim-undertide-choir",
++    "title": "Undertide Choir tide-book, First Answering entry",
++    "kind": "in-world ritual ledger",
++    "reliability_note": "Fictional tide-book fragment; reports the western beacon duty."
++  },
++  {
++    "id": "source-appearance-vesper",
++    "title": "Vesper's route slate, first entry",
++    "kind": "in-world travel record",
++    "reliability_note": "Fictional route-slate fragment; identifies Vesper's first recorded appearance."
++  },
++  {
++    "id": "source-claim-vesper",
++    "title": "Vesper's route slate, cove crossing",
++    "kind": "in-world travel record",
++    "reliability_note": "Fictional route-slate fragment; records the bell crossing."
++  },
++  {
++    "id": "source-appearance-bell",
++    "title": "Stillwater reliquary inventory, first leaf",
++    "kind": "in-world inventory",
++    "reliability_note": "Fictional inventory fragment; identifies the bell's first recorded appearance."
++  },
++  {
++    "id": "source-claim-bell-material",
++    "title": "Stillwater reliquary inventory, material note",
++    "kind": "in-world inventory",
++    "reliability_note": "Fictional inventory fragment; describes the bowl and its attached image."
++  },
++  {
++    "id": "source-claim-bell-rite",
++    "title": "First Answering chant, bell verse",
++    "kind": "in-world ritual text",
++    "reliability_note": "Fictional chant fragment; relates the bell-note to both beacon fires."
++  },
++  {
++    "id": "source-appearance-cove",
++    "title": "Stillwater Cove sounding chart, opening note",
++    "kind": "in-world navigational chart",
++    "reliability_note": "Fictional chart note; identifies the cove's first recorded appearance."
++  },
++  {
++    "id": "source-claim-cove",
++    "title": "Stillwater Cove sounding chart, shore description",
++    "kind": "in-world navigational chart",
++    "reliability_note": "Fictional chart note; places the cove between both beacon shores."
++  },
++  {
++    "id": "source-alliance-dawn-to-choir",
++    "title": "Dawn Weir compact, eastern witness copy",
++    "kind": "in-world treaty record",
++    "reliability_note": "Fictional treaty copy; records the Dawn Weir's account of the compact."
++  },
++  {
++    "id": "source-alliance-choir-to-dawn",
++    "title": "Undertide Choir compact, western witness copy",
++    "kind": "in-world treaty record",
++    "reliability_note": "Fictional treaty copy; records the Undertide Choir's separate account of the compact."
++  },
++  {
++    "id": "source-relation-vesper-carries-bell",
++    "title": "Vesper's route slate, custody notation",
++    "kind": "in-world travel record",
++    "reliability_note": "Fictional route-slate fragment; records Vesper's custody of the bell."
++  },
++  {
++    "id": "source-relation-choir-tends-cove",
++    "title": "Undertide Choir tide-book, cove watch",
++    "kind": "in-world ritual ledger",
++    "reliability_note": "Fictional tide-book fragment; records the Choir's tending of the cove."
++  },
++  {
++    "id": "source-timeline-first-answering-begins",
++    "title": "First Answering chant, opening verse",
++    "kind": "in-world ritual text",
++    "reliability_note": "Fictional chant fragment; places the rite's opening at Stillwater Cove."
++  },
++  {
++    "id": "source-timeline-bell-answer",
++    "title": "First Answering chant, answering verse",
++    "kind": "in-world ritual text",
++    "reliability_note": "Fictional chant fragment; places Vesper's bell-note after the rite begins."
++  }
++]
+diff --git a/corpus/fixtures/r87-myth-cluster/symbolism-clause-map.md b/corpus/fixtures/r87-myth-cluster/symbolism-clause-map.md
+new file mode 100644
+index 0000000..a3199df
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/symbolism-clause-map.md
+@@ -0,0 +1,8 @@
++# Symbolism clause map: Bell of First Wake
++
++The item entity is `first-wake-bell` in `entities.json`. These mappings describe the narrative imagery in the cited in-world claims; they do not establish additional canon beyond those claims.
++
++| Narrative clause in the item claim | Source | Symbol carried |
++| --- | --- | --- |
++| “Its bowl is made of dark-blue nacre, recalling the sea before the first lamps.” | `source-claim-bell-material` | Dark nacre evokes the pre-light sea in the cluster's own image system. The sentence itself records a recollection, not a historical explanation of cosmology. |
++| “At the First Answering, its single note signaled both shores to kindle their lamps.” | `source-claim-bell-rite` | One note answered across two shores: a symbol of shared response and reciprocal accord, rather than a claim that the bell created the light. |
+diff --git a/corpus/fixtures/r87-myth-cluster/timeline.json b/corpus/fixtures/r87-myth-cluster/timeline.json
+new file mode 100644
+index 0000000..ab4549c
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/timeline.json
+@@ -0,0 +1,22 @@
++[
++  {
++    "id": "first-answering-begins",
++    "tick": 1,
++    "entity_id": "dawn-weir",
++    "place_id": "stillwater-cove",
++    "depends_on": [],
++    "description": "The First Answering rite begins at Stillwater Cove.",
++    "source_id": "source-timeline-first-answering-begins"
++  },
++  {
++    "id": "vesper-rings-bell",
++    "tick": 2,
++    "entity_id": "vesper",
++    "place_id": "stillwater-cove",
++    "depends_on": [
++      "first-answering-begins"
++    ],
++    "description": "After the rite begins, Vesper rings the Bell of First Wake.",
++    "source_id": "source-timeline-bell-answer"
++  }
++]

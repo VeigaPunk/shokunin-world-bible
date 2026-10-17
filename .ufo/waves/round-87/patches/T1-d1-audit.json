@@ -1,0 +1,116 @@
+{
+  "seat": "T1",
+  "revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+  "scope": "D1 decision-table file availability checked twice; absent, so directly audited the provenance checker block against named fixture runs.",
+  "decision_table": {
+    "path": ".ufo/waves/round-87/patches/D1-decision-table.md",
+    "status": "not_found",
+    "checks": [
+      {
+        "timestamp": "2026-10-17T01:06:50.404927953-03:00",
+        "method": "Glob exact path in /home/vgpnk/Projects/shokunin/lore-shokunin",
+        "observed": "No matches found"
+      },
+      {
+        "timestamp": "2026-10-17T01:08:04.137468369-03:00",
+        "method": "Glob exact path in /home/vgpnk/Projects/shokunin/lore-shokunin; 73.7 seconds after the first check",
+        "observed": "No matches found"
+      }
+    ],
+    "row_by_row_diff": "not_possible_no_table_rows_or_recorded_outputs"
+  },
+  "source_audit": [
+    {
+      "lines": "181-185",
+      "condition": "Comparison gate initializes enabled only when sources are available, the entity kind is item, and the item ID is unique.",
+      "observed_behavior": "No initial per-record disclosure is emitted for an ineligible chain."
+    },
+    {
+      "lines": "188-198",
+      "condition": "A non-object provenance record or a record with a non-exact key set resets prior state and permanently disables comparisons for this item.",
+      "observed_behavior": "The schema finding is emitted, then processing continues; there is no unassessed disclosure for this or later records."
+    },
+    {
+      "lines": "203-230",
+      "condition": "Invalid ticks, holder shapes, dangling holders, or ambiguous holder references invalidate the record; ambiguous holders are tracked separately.",
+      "observed_behavior": "Dangling references are explicitly named. Ambiguous references are explicitly named and lead to the one-shot notice below."
+    },
+    {
+      "lines": "231-233",
+      "condition": "First ambiguous holder reference, from_holder or to_holder.",
+      "observed_behavior": "Emits one notice at that record, worded to cover this and all later records; boolean suppresses additional notices. This is not the requested per-record tail disclosure."
+    },
+    {
+      "lines": "234-245",
+      "condition": "Missing/invalid source reference and any other invalid record.",
+      "observed_behavior": "Unknown or unavailable sources invalidate and latch the chain off. Ambiguous source IDs set the structural-finding prefix flag but do not themselves invalidate. Any invalid record permanently sets can_check_chain false."
+    },
+    {
+      "lines": "247-255",
+      "condition": "Unique, valid record while comparison gate remains enabled.",
+      "observed_behavior": "Checks strict tick increase and holder continuity (including null from_holder on the first record), then advances prior holder/tick. Once latched off, later records do not re-enable comparisons."
+    }
+  ],
+  "replays": [
+    {
+      "name": "r85-control",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-control",
+      "exit_code": 0,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "name": "r85-unique-break-control",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-unique-break-control",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'\n1 violation(s); no canon changed"
+    },
+    {
+      "name": "r85-masked-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed"
+    },
+    {
+      "name": "r85-isolated-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[2].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed"
+    },
+    {
+      "name": "r85-harbor-repro",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-harbor-repro",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'harbor'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[2].from_holder: ambiguous entity 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n5 violation(s); no canon changed"
+    },
+    {
+      "name": "item-chain-valid",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/item-chain-valid",
+      "exit_code": 0,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "name": "item-chain-broken",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/item-chain-broken",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'\n1 violation(s); no canon changed"
+    }
+  ],
+  "findings": [
+    {
+      "id": "T1-D1-MISSING",
+      "severity": "blocked",
+      "detail": "No D1 table was available at either required check, so no table rows or recorded outputs could be replayed or diffed. C2 row-by-row verification remains unperformed."
+    },
+    {
+      "id": "T1-C1-TAIL-DISCLOSURE-GAP",
+      "severity": "confirmed_on_revision",
+      "detail": "r85-masked-ambiguous emits one unassessed notice at provenance[1] and no local disclosure at provenance[2], despite the comparison latch remaining off. Its matched unique-break control reports the record-2 chain break. Current code preserves conservative non-resumption and does not select a duplicate identity, but does not meet C1's per-record disclosure requirement."
+    },
+    {
+      "id": "T1-C2-COVERAGE-GAP",
+      "severity": "follow_up",
+      "detail": "The absent D1 table leaves the full stop/latch and emitted-signature inventory unaudited row by row. The source review identifies initial ineligibility, malformed record/key-set latches, invalid-record latches, ambiguous-source prefix behavior, and comparison findings for explicit table coverage."
+    }
+  ],
+  "writes_to_checker_or_fixtures": false
+}
