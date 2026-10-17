@@ -1,0 +1,19 @@
+{
+  "round": 94,
+  "regimen_round": 8,
+  "baseline_commit": "9c2eea3b58a090f8820c7a723d2f6a22b46ae52b",
+  "state": "work-candidate-followup-pending",
+  "claims": [{"id":"C1","axis":"depth","type":"measurable","target":"source-supported paired-crossing continuation and bounded cross-myth design record"},{"id":"C2","axis":"calibration","type":"capability-acquisition","target":"raw JSON to canonical map obligation comparison"}],
+  "work": {
+    "requested_model": "openai-codex/gpt-6-luna-max",
+    "requested_seats": 32,
+    "seat_ids": ["W01","W02","W03","W04","W05","W06","W07","W08","W09","W10","W11","W12","W13","W14","W15","W16","W17","W18","W19","W20","W21","W22","W23","W24","W25","W26","W27","W28","W29","W30","W31","W32"],
+    "status": "completed",
+    "result": "work-receipt.json",
+    "served_backend_echo": null
+  },
+  "followup": {"requested_model":"opencode-go/deepseek-v4.1-flash","requested_seats":32,"status":"not-dispatched","result":null},
+  "boundaries": {"existing_fixtures":"read-only","existing_tools":"read-only","siblings":"read-only","pushes":false,"capability_admission":"pending actual follow-up","outside_non_author_verification":false},
+  "expected_C1_counts": {"baseline":{"entities":4,"relations":0,"timeline":2},"candidate":{"entities":5,"relations":1,"timeline":3},"canonical_map_obligations":14},
+  "expected_preservation": {"fixture_directories_before":167,"inherited_tuple_changes":0,"checker_sha256":"ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"}
+}

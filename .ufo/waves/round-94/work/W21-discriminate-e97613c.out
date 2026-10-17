@@ -1,0 +1,3 @@
+usage: discriminate_check.py [-h] [--checker {delivered,e97613c}]
+                             [--repo-root REPO_ROOT]
+discriminate_check.py: error: argument --checker: invalid choice: 'e97613cc276f5fa9cac49ff1900798cf6863c020' (choose from 'delivered', 'e97613c')

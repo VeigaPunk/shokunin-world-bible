@@ -1,0 +1,916 @@
+{
+  "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "expected_checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "expected_head": "9c2eea3b58a090f8820c7a723d2f6a22b46ae52b",
+  "expected_tuple_source": ".ufo/waves/round-93/deepseek/F02-tuples.json",
+  "fixtures": [
+    {
+      "all_variants_match": true,
+      "expected_missing_sections": [
+        "contradictions"
+      ],
+      "fixture": "r5-missing-file",
+      "missing_sections": [
+        "contradictions"
+      ],
+      "runs": [
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_F02_tuple": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "corpus/fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "variant": "canonical_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "./corpus/fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "./corpus/fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "variant": "dot_relative_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r5-missing-file/"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "corpus/fixtures/r5-missing-file/",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "variant": "trailing_slash_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "7a81d5020245c2e6c95b53b8ef6a1ed41e96ea9da638cd57d3226c673a18026b",
+          "variant": "absolute_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/../fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "corpus/fixtures/../fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "473d78006d1aaf11fc2bed1fd1896ee666544764f86c5151857175a0e3ca77b4",
+          "variant": "dotdot_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "corpus/fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "variant": "resolved_python_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "corpus/fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "variant": "seed0_python3",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "corpus/fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "variant": "seed1_python3",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r5-missing-file"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "path_argument": "corpus/fixtures/r5-missing-file",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+          "variant": "random_seed_python3",
+          "violation_count": 1
+        }
+      ]
+    },
+    {
+      "all_variants_match": true,
+      "expected_missing_sections": [
+        "timeline"
+      ],
+      "fixture": "r62-missing",
+      "missing_sections": [
+        "timeline"
+      ],
+      "runs": [
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_F02_tuple": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "corpus/fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "variant": "canonical_python3_isolated",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "./corpus/fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "./corpus/fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "variant": "dot_relative_python3_isolated",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r62-missing/"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "corpus/fixtures/r62-missing/",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "variant": "trailing_slash_python3_isolated",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "a96b823cda6825d932d537b8117dec1724112e8213c206a73b9be4271d529bc5",
+          "variant": "absolute_python3_isolated",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/../fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "corpus/fixtures/../fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "d849c365f55eb86d22ba87ab8b2eadc70b93789bc119a18e08b150770c47b255",
+          "variant": "dotdot_python3_isolated",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "corpus/fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "variant": "resolved_python_isolated",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "corpus/fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "variant": "seed0_python3",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "corpus/fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "variant": "seed1_python3",
+          "violation_count": 3
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r62-missing"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "path_argument": "corpus/fixtures/r62-missing",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+          "variant": "random_seed_python3",
+          "violation_count": 3
+        }
+      ]
+    },
+    {
+      "all_variants_match": true,
+      "expected_missing_sections": [
+        "sources"
+      ],
+      "fixture": "r67-claim-source-unavailable-control",
+      "missing_sections": [
+        "sources"
+      ],
+      "runs": [
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_F02_tuple": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "variant": "canonical_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "./corpus/fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "./corpus/fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "variant": "dot_relative_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-control/"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-control/",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "variant": "trailing_slash_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "b38074b66abe86ed0732517952bfe8eb0ade383e53d798dae4a7b255773ffebe",
+          "variant": "absolute_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/../fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "corpus/fixtures/../fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "886b4d416c5fb492516ca31e3e051f82754346fe4eaea7a004b12a8b9314c559",
+          "variant": "dotdot_python3_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "variant": "resolved_python_isolated",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "variant": "seed0_python3",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "variant": "seed1_python3",
+          "violation_count": 1
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-control"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-control",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+          "variant": "random_seed_python3",
+          "violation_count": 1
+        }
+      ]
+    },
+    {
+      "all_variants_match": true,
+      "expected_missing_sections": [
+        "sources"
+      ],
+      "fixture": "r67-claim-source-unavailable-empty",
+      "missing_sections": [
+        "sources"
+      ],
+      "runs": [
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_F02_tuple": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "variant": "canonical_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "./corpus/fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "./corpus/fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "variant": "dot_relative_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-empty/"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-empty/",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "variant": "trailing_slash_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "f6b3f765522ce373229980b91eb6bdcafba1502b73fd108c3e430cccf726c7ee",
+          "variant": "absolute_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/../fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "corpus/fixtures/../fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "b152e8b95b885e3263bb1344c7630f33b01ed72483f55c152a5581c8f695675a",
+          "variant": "dotdot_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "variant": "resolved_python_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "variant": "seed0_python3",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "variant": "seed1_python3",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-empty"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-empty",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+          "variant": "random_seed_python3",
+          "violation_count": 2
+        }
+      ]
+    },
+    {
+      "all_variants_match": true,
+      "expected_missing_sections": [
+        "sources"
+      ],
+      "fixture": "r67-claim-source-unavailable-whitespace",
+      "missing_sections": [
+        "sources"
+      ],
+      "runs": [
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_F02_tuple": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "variant": "canonical_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "./corpus/fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "./corpus/fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "variant": "dot_relative_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-whitespace/"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-whitespace/",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "variant": "trailing_slash_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "b3235e6483055012f50f7aad79ec2dc8615300b5b577c7b826bcda3052b99f98",
+          "variant": "absolute_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/../fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "corpus/fixtures/../fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "08a25538c4e3712da4148f665b969805d9bf49ce525892617ddb3ffed3992616",
+          "variant": "dotdot_python3_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "-I",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "variant": "resolved_python_isolated",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "variant": "seed0_python3",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "variant": "seed1_python3",
+          "violation_count": 2
+        },
+        {
+          "argv": [
+            "python3",
+            "corpus/fixtures/check_bible.py",
+            "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+          ],
+          "exit": 1,
+          "matches_canonical_after_path_normalization": true,
+          "normalization_issues": [],
+          "normalized_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "path_argument": "corpus/fixtures/r67-claim-source-unavailable-whitespace",
+          "path_rewrite_count": 1,
+          "stderr_len": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+          "variant": "random_seed_python3",
+          "violation_count": 2
+        }
+      ]
+    }
+  ],
+  "head": "9c2eea3b58a090f8820c7a723d2f6a22b46ae52b",
+  "normalization": "Only the exact quoted missing JSON path in its Errno diagnostic is rewritten to the canonical relative path; all other stdout bytes, exit status, violation count, and stderr are compared exactly.",
+  "probe": "W22 check_bible missing-file reproducibility",
+  "python3_path": "/usr/bin/python3",
+  "python_version": "3.14.7 (main, Aug 10 2026, 07:46:56) [GCC 16.1.1 20260728]",
+  "result": "PASS",
+  "sys_executable": "/usr/bin/python3",
+  "variants_per_fixture": 9
+}
