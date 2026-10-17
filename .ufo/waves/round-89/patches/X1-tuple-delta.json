@@ -1,0 +1,120 @@
+{
+  "baseline_commit": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94",
+  "candidate_commit": "51b286b+X1-scratch",
+  "scope": "All directories recursively under corpus/fixtures with at least one of contradictions.json, entities.json, relations.json, sources.json, timeline.json.",
+  "tuple_definition": "Per directory: CLI exit code, complete stdout, complete stderr.",
+  "before": {
+    "directories": 149,
+    "exit_counts": {
+      "1": 118,
+      "0": 31
+    },
+    "violation_lines": 367,
+    "stderr_cases": 0
+  },
+  "after": {
+    "directories": 149,
+    "exit_counts": {
+      "1": 118,
+      "0": 31
+    },
+    "violation_lines": 367,
+    "stderr_cases": 0
+  },
+  "unchanged_tuple_count": 145,
+  "changed_tuple_count": 4,
+  "added_directories": [],
+  "removed_directories": [],
+  "exit_status_changes": [],
+  "stderr_changes": [],
+  "changes": [
+    {
+      "path": "corpus/fixtures/r87-probe-multi-invalid",
+      "command": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r87-probe-multi-invalid"
+      ],
+      "before": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'vault'\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'vault'\nVIOLATION: entities[5].provenance[1].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]\n5 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "e73bb6fe4e2390aa41922ea87ceca832b486b306619d8a5f1f8ec5d3838bc8e3",
+        "violation_lines": 5
+      },
+      "after": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'vault'\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'vault'\nVIOLATION: entities[5].provenance[1].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault'; source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[5].provenance[1]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault'; source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[5].provenance[1]\n5 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "254cc7818ff8e9139dca1c310f1f51045ae917baacacfc66ed2079fa9b89cd5b",
+        "violation_lines": 5
+      }
+    },
+    {
+      "path": "corpus/fixtures/r87-probe-record-and-chain",
+      "command": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r87-probe-record-and-chain"
+      ],
+      "before": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: sources[3].id: duplicate sources id 'ambig-source'\nVIOLATION: entities[9].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0]: expected object\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2].tick: required nonnegative integer\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3].tick: required nonnegative integer\nVIOLATION: entities[3].provenance[4]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[4].from_holder: required null or nonempty entity id\nVIOLATION: entities[3].provenance[5]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[5].to_holder: required nonempty entity id\nVIOLATION: entities[3].provenance[6]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[6].to_holder: dangling entity 'ghost'\nVIOLATION: entities[3].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[7].from_holder: dangling entity 'ghost2'\nVIOLATION: entities[3].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[8].source_id: required nonempty source id\nVIOLATION: entities[3].provenance[9]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[9].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[3].provenance[10]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[10]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[4].provenance[0]: provenance chain break; first record must have from_holder null\nVIOLATION: entities[4].provenance[1].tick: provenance tick 0 must be greater than previous tick 0\nVIOLATION: entities[4].provenance[3].tick: provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[4].provenance[4]: provenance chain break; expected from_holder 'tower', got 'mira'\nVIOLATION: entities[4].provenance[5]: provenance chain break; expected from_holder 'tower', got 'mira'\nVIOLATION: entities[4].provenance[6].tick: provenance tick 3 must be greater than previous tick 5\nVIOLATION: entities[4].provenance[6]: provenance chain break; expected from_holder 'harbor', got 'tower'\nVIOLATION: entities[4].provenance[7].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]\nVIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[6].provenance[0].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]\nVIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]\nVIOLATION: entities[6].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[7].provenance[1].source_id: ambiguous in-world source 'ambig-source'\nVIOLATION: entities[7].provenance[2].source_id: ambiguous in-world source 'ambig-source'\nVIOLATION: entities[7].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'\n46 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "0394cd33aa81cec788582938bff8b95d30043a17813fa5e0870de8c3e56631e1",
+        "violation_lines": 46
+      },
+      "after": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: sources[3].id: duplicate sources id 'ambig-source'\nVIOLATION: entities[9].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0]: expected object\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2].tick: required nonnegative integer\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3].tick: required nonnegative integer\nVIOLATION: entities[3].provenance[4]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[4].from_holder: required null or nonempty entity id\nVIOLATION: entities[3].provenance[5]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[5].to_holder: required nonempty entity id\nVIOLATION: entities[3].provenance[6]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[6].to_holder: dangling entity 'ghost'\nVIOLATION: entities[3].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[7].from_holder: dangling entity 'ghost2'\nVIOLATION: entities[3].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[8].source_id: required nonempty source id\nVIOLATION: entities[3].provenance[9]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[9].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[3].provenance[10]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[10]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[4].provenance[0]: provenance chain break; first record must have from_holder null\nVIOLATION: entities[4].provenance[1].tick: provenance tick 0 must be greater than previous tick 0\nVIOLATION: entities[4].provenance[3].tick: provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[4].provenance[4]: provenance chain break; expected from_holder 'tower', got 'mira'\nVIOLATION: entities[4].provenance[5]: provenance chain break; expected from_holder 'tower', got 'mira'\nVIOLATION: entities[4].provenance[6].tick: provenance tick 3 must be greater than previous tick 5\nVIOLATION: entities[4].provenance[6]: provenance chain break; expected from_holder 'harbor', got 'tower'\nVIOLATION: entities[4].provenance[7].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[4].provenance[7]\nVIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[4].provenance[7]\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[6].provenance[0].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[6].provenance[0]\nVIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[6].provenance[0]\nVIOLATION: entities[6].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[7].provenance[1].source_id: ambiguous in-world source 'ambig-source'\nVIOLATION: entities[7].provenance[2].source_id: ambiguous in-world source 'ambig-source'\nVIOLATION: entities[7].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'\n46 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "1e32d8eaeeea1608c0ba74ddb68f524c47181fee125523c7360a4e2e4ae09617",
+        "violation_lines": 46
+      }
+    },
+    {
+      "path": "corpus/fixtures/r88-mixed-stop",
+      "command": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r88-mixed-stop"
+      ],
+      "before": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[0].source_id: unknown in-world source 'f1-mixed-missing-source'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].to_holder: ambiguous entity 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\n6 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "403a1c1b8be2d7ff988713fdccf00234f5ee91e46ec95cf64a5bba936bb4148c",
+        "violation_lines": 6
+      },
+      "after": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[0].source_id: unknown in-world source 'f1-mixed-missing-source'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].to_holder: ambiguous entity 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]\n6 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "7179e0ccef3e3aa07a9782d9c60ebfbe6a9d004202ed24f28079dd7a11f702b5",
+        "violation_lines": 6
+      }
+    },
+    {
+      "path": "corpus/fixtures/r88-nonholder-stop",
+      "command": [
+        "python3",
+        "corpus/fixtures/check_bible.py",
+        "corpus/fixtures/r88-nonholder-stop"
+      ],
+      "before": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'f1-nonholder-missing-source'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\n4 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "8a0756c32f7b69968b6f2b12c7b743aec8abb7e2e14fdc1f779f4069ef96f76f",
+        "violation_lines": 4
+      },
+      "after": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'f1-nonholder-missing-source'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]\n4 violation(s); no canon changed\n",
+        "stderr": "",
+        "stdout_sha256": "b5ff4b29194ca64b98282bd08450785b2b46901a3b3da2f042ad35a2a6565529",
+        "violation_lines": 4
+      }
+    }
+  ]
+}

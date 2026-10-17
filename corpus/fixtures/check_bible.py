@@ -35,6 +35,8 @@ FIELDS = {
 def check(directory):
     errors = []
     data = {}
+    raw_entity_id_counts = {}
+    raw_source_id_counts = {}
     entities_available = False
     sources_available = False
     timeline_available = False
@@ -67,6 +69,11 @@ def check(directory):
             if not isinstance(row, dict):
                 errors.append(f'{location}: expected object')
                 continue
+            if section in ('entities', 'sources'):
+                identifier = row.get('id')
+                raw_id_counts = raw_entity_id_counts if section == 'entities' else raw_source_id_counts
+                if isinstance(identifier, str) and identifier.strip():
+                    raw_id_counts[identifier] = raw_id_counts.get(identifier, 0) + 1
             valid = True
             for field, expected in fields.items():
                 if field not in row or type(row[field]) is not expected or (expected is str and not row[field].strip()):
@@ -158,6 +165,13 @@ def check(directory):
     for _, entity in data['entities']:
         entity_id_counts[entity['id']] = entity_id_counts.get(entity['id'], 0) + 1
 
+    def holder_identity_detail(holder_id, reference):
+        raw_count = raw_entity_id_counts.get(holder_id, 0)
+        indexed_count = entity_id_counts.get(holder_id, 0)
+        if raw_count == 1 and indexed_count == 1:
+            return None
+        return f'{reference} {holder_id!r} is not uniquely resolvable ({raw_count} raw entity rows carry this id, but only {indexed_count} is in the resolved index)'
+
     for location, row in data['relations']:
         if entities_available:
             for endpoint in ('from', 'to'):
@@ -239,23 +253,24 @@ def check(directory):
             valid = True
             record_holder_ambiguous = False
             ambiguous_holder_references = []
-            record_stop_cause = None
+            record_stop_causes = []
             if type(tick) is not int or tick < 0:
                 errors.append(f'{record_label}.tick: required nonnegative integer')
                 valid = False
-                record_stop_cause = 'malformed record (invalid tick)'
+                record_stop_causes.append('malformed record (invalid tick)')
             if from_holder is not None and (not isinstance(from_holder, str) or not from_holder.strip()):
                 errors.append(f'{record_label}.from_holder: required null or nonempty entity id')
                 valid = False
-                record_stop_cause = record_stop_cause or 'malformed record (invalid from_holder)'
+                record_stop_causes.append('malformed record (invalid from_holder)')
             if not isinstance(to_holder, str) or not to_holder.strip():
                 errors.append(f'{record_label}.to_holder: required nonempty entity id')
                 valid = False
-                record_stop_cause = record_stop_cause or 'malformed record (invalid to_holder)'
+                record_stop_causes.append('malformed record (invalid to_holder)')
             elif entity_id_counts.get(to_holder, 0) == 0:
                 errors.append(f'{record_label}.to_holder: dangling entity {to_holder!r}')
                 valid = False
-                record_stop_cause = record_stop_cause or f'dangling holder to_holder {to_holder!r}'
+                raw_presence = 'present in raw entities but' if raw_entity_id_counts.get(to_holder, 0) else 'absent from raw entities and'
+                record_stop_causes.append(f'holder reference to_holder {to_holder!r} {raw_presence} absent from the resolved index')
             elif entity_id_counts[to_holder] != 1:
                 errors.append(f'{record_label}.to_holder: ambiguous entity {to_holder!r}')
                 record_holder_ambiguous = True
@@ -267,7 +282,8 @@ def check(directory):
                 elif entity_id_counts.get(from_holder, 0) == 0:
                     errors.append(f'{record_label}.from_holder: dangling entity {from_holder!r}')
                     valid = False
-                    record_stop_cause = record_stop_cause or f'dangling holder from_holder {from_holder!r}'
+                    raw_presence = 'present in raw entities but' if raw_entity_id_counts.get(from_holder, 0) else 'absent from raw entities and'
+                    record_stop_causes.append(f'holder reference from_holder {from_holder!r} {raw_presence} absent from the resolved index')
                 elif entity_id_counts[from_holder] != 1:
                     errors.append(f'{record_label}.from_holder: ambiguous entity {from_holder!r}')
                     record_holder_ambiguous = True
@@ -278,36 +294,60 @@ def check(directory):
                     f'{field} {holder_id!r}'
                     for field, holder_id in ambiguous_holder_references
                 )
-                record_stop_cause = record_stop_cause or f'ambiguous holder identity {cause}'
+                record_stop_causes.append(f'ambiguous holder identity {cause}')
             if not isinstance(source_id, str) or not source_id.strip():
                 errors.append(f'{record_label}.source_id: required nonempty source id')
                 valid = False
-                record_stop_cause = record_stop_cause or 'malformed record (invalid source_id)'
+                record_stop_causes.append('malformed record (invalid source_id)')
             else:
                 citation_status = source(source_id, record_label + '.source_id')
                 if citation_status == 'unknown':
                     valid = False
-                    record_stop_cause = record_stop_cause or f'unknown source {source_id!r}'
+                    raw_presence = 'present in raw sources but' if raw_source_id_counts.get(source_id, 0) else 'absent from raw sources and'
+                    record_stop_causes.append(f'source reference {source_id!r} {raw_presence} absent from the resolved index')
                 elif citation_status == 'unavailable':
                     valid = False
-                    record_stop_cause = record_stop_cause or 'source table unavailable'
+                    record_stop_causes.append('source table unavailable')
                 elif citation_status == 'ambiguous':
                     chain_has_ambiguous_source = True
             if not valid:
                 previous_holder = previous_tick = None
                 if first_stop is None:
-                    first_stop = (record_stop_cause or 'malformed record', record_label)
+                    first_stop = ('; '.join(record_stop_causes) or 'malformed record', record_label)
                     if not disclosure_emitted:
                         report_unassessed(record_label)
                 continue
             if first_stop is None:
                 if previous_tick is not None:
+                    transition_holder_details = [
+                        holder_identity_detail(previous_holder, 'expected from_holder'),
+                        holder_identity_detail(from_holder, 'from_holder'),
+                    ]
+                    transition_holder_details = [detail for detail in transition_holder_details if detail]
                     if tick <= previous_tick:
-                        errors.append(f'{record_label}.tick: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance tick {tick} must be greater than previous tick {previous_tick}')
+                        prefix = 'input-structural finding, not sourced-canon; ' if chain_has_ambiguous_source or transition_holder_details else ''
+                        identity_note = (
+                            f'holder identity is not uniquely resolvable: {"; ".join(transition_holder_details)}; '
+                            if transition_holder_details else ''
+                        )
+                        errors.append(f'{record_label}.tick: {prefix}{identity_note}provenance tick {tick} must be greater than previous tick {previous_tick}')
                     if from_holder != previous_holder:
-                        errors.append(f'{record_label}: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance chain break; expected from_holder {previous_holder!r}, got {from_holder!r}')
+                        expected_detail = holder_identity_detail(previous_holder, 'expected from_holder')
+                        from_detail = holder_identity_detail(from_holder, 'from_holder')
+                        if expected_detail or from_detail:
+                            expected_clause = expected_detail or f'expected from_holder {previous_holder!r}'
+                            observed_clause = f'got {from_holder!r}'
+                            if from_detail:
+                                observed_clause += f'; {from_detail}'
+                            errors.append(f'{record_label}: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: {expected_clause}; {observed_clause}')
+                        else:
+                            errors.append(f'{record_label}: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance chain break; expected from_holder {previous_holder!r}, got {from_holder!r}')
                 elif from_holder is not None:
-                    errors.append(f'{record_label}: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance chain break; first record must have from_holder null')
+                    from_detail = holder_identity_detail(from_holder, 'from_holder')
+                    if from_detail:
+                        errors.append(f'{record_label}: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: {from_detail}; first record must have from_holder null')
+                    else:
+                        errors.append(f'{record_label}: {"input-structural finding, not sourced-canon; " if chain_has_ambiguous_source else ""}provenance chain break; first record must have from_holder null')
             previous_holder = to_holder
             previous_tick = tick
 
