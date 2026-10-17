@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "seat": "JCAL2",
+  "role": "discrimination judge (follow-up wave)",
+  "wave": "lore round-91 FOLLOW-UP",
+  "repo": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+  "head_commit": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+  "work_commits": ["6332115", "c2ab3d0"],
+  "baseline_commit": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+  "wait_checks": [
+    {"n": 1, "timestamp": "2026-10-17T08:33:55-03:00", "head": "c2ab3d0", "porcelain_lines": 1},
+    {"n": 2, "timestamp": "2026-10-17T08:34:55-03:00", "head": "c2ab3d0", "porcelain_lines": 1},
+    {"terminal": "waitchecks_done", "porcelain_note": "single untracked path = sibling followup/ directory"}
+  ],
+  "checkers": {
+    "e97613c": {
+      "sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+      "source_command": "git show e97613cc276f5fa9cac49ff1900798cf6863c020:corpus/fixtures/check_bible.py",
+      "scratch_copy": "/tmp/lore-r91-JCAL2/checker-e97613c.py"
+    },
+    "delivered": {
+      "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "source": "corpus/fixtures/check_bible.py at c2ab3d0 (same hash at a7c6a17; r91 commits untouched)",
+      "scratch_copy": "/tmp/lore-r91-JCAL2/checker-delivered.py"
+    },
+    "x3revert": {
+      "sha256": "87d7f2b503172497d7727d81a0563051e1bc5248e738b3fd8249241185fda3f4",
+      "build_command": "cp delivered; patch --batch --fuzz=0 -R -p1 < .ufo/waves/round-90/patches/X3-c1-tickonly.patch",
+      "apply_result": "Hunk #1 succeeded at 321 (offset 2 lines).",
+      "scratch_copy": "/tmp/lore-r91-JCAL2/revert/corpus/fixtures/check_bible.py"
+    },
+    "x2revert": {
+      "sha256": "2cc5db538cb69574a002097dba26d4fe5fc6303e71070d6e3bc2defe17a4a264",
+      "build_command": "cp delivered; patch --batch --fuzz=0 -R -p1 < .ufo/waves/round-90/patches/X2-c1-nullonly.patch",
+      "scratch_copy": "/tmp/lore-r91-JCAL2/x2revert/corpus/fixtures/check_bible.py"
+    }
+  },
+  "differential": {
+    "command": "python3 /tmp/lore-r91-JCAL2/measure.py diff",
+    "runs": {
+      "r91-c1-null-chain@e97613c": {"exit": 1, "stderr_empty": true, "stdout_sha256": "3a337ba4bba9c829f9b2bba9657e61d8838ad491d44c0861fa1d6f9d40e05c89"},
+      "r91-c1-null-chain@delivered": {"exit": 1, "stderr_empty": true, "stdout_sha256": "615dc0564f531352a574ef2f53c48be42f4e53ad1fac4aa88756e4bba2fada5b"},
+      "r91-c1-tick-unresolved@e97613c": {"exit": 1, "stderr_empty": true, "stdout_sha256": "71b4ea433d85ba52f11482a5d089c564641702989763ced39d61c5eee3748e85"},
+      "r91-c1-tick-unresolved@delivered": {"exit": 1, "stderr_empty": true, "stdout_sha256": "d754e96f7c01e6fb6eff12168a732d5a6125f428a9207bd74fc49bbdcbb25d88"}
+    },
+    "changed_line_indexes": {"r91-c1-null-chain": [0], "r91-c1-tick-unresolved": [1]},
+    "line_counts": {"r91-c1-null-chain": [2, 2], "r91-c1-tick-unresolved": [4, 4]},
+    "readme_match": {
+      "r91-c1-null-chain": {"e97613c": true, "delivered": true},
+      "r91-c1-tick-unresolved": {"e97613c": true, "delivered": true}
+    },
+    "receipts_cross_check": "stdout hashes equal C10.md recorded receipts; full outputs match C8.md stdout blocks"
+  },
+  "census": {
+    "command": "python3 /tmp/lore-r91-JCAL2/measure.py census   (+ census2.py for the X2 arm)",
+    "total_dirs": 166,
+    "changed_e97613c_vs_delivered": ["r91-c1-null-chain", "r91-c1-tick-unresolved"],
+    "exit_changes_e97613c_vs_delivered": [],
+    "stderr_changes_e97613c_vs_delivered": [],
+    "changed_delivered_vs_x3revert": ["r91-c1-tick-unresolved"],
+    "changed_delivered_vs_x2revert": ["r91-c1-null-chain"]
+  },
+  "revert_flips": {
+    "x3_tick": {
+      "tick_revert_stdout_sha256": "71b4ea433d85ba52f11482a5d089c564641702989763ced39d61c5eee3748e85",
+      "equals_e97613c_stdout": true,
+      "changed_lines_vs_delivered": [1],
+      "chain_break_line_unchanged": true,
+      "null_fixture_output_unchanged": true
+    },
+    "x2_null": {
+      "null_revert_stdout_sha256": "3a337ba4bba9c829f9b2bba9657e61d8838ad491d44c0861fa1d6f9d40e05c89",
+      "equals_e97613c_stdout": true,
+      "tick_fixture_output_unchanged": true
+    }
+  },
+  "c9_watch": {
+    "path": "corpus/knowledge/r91-c9-watch.md",
+    "tracked": true,
+    "landing_commit": "6332115",
+    "pinned_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "pinned_equals_delivered": true,
+    "probe_block": {
+      "delivered_hash_line": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+      "null_chain": {"exit": 1, "violations": 1, "stderr_bytes": 0, "line": "VIOLATION: entities[3].provenance[1]: provenance chain break; expected from_holder 'mira', got None"},
+      "tick_unresolved": {"exit": 1, "violations": 3, "stderr_bytes": 0, "invalid_duplicate_diagnostic": "VIOLATION: entities[1].first_appearance: required nonempty str", "tick_line": "VIOLATION: entities[4].provenance[1].tick: provenance tick 1 must be greater than previous tick 3", "chain_break_qualified_line_unchanged": true}
+    }
+  },
+  "falsification_trigger": {
+    "verbatim_placeholder_line": "bash syntax error, exit 2 (`syntax error near unexpected token`); placeholder must be substituted as the trigger text requires",
+    "substituted": {
+      "counterexample": "r91-c1-tick-unresolved", "control": "r91-c1-null-chain",
+      "counterexample_exit": 1, "counterexample_stdout_lines": 4, "counterexample_stderr_bytes": 0,
+      "control_exit": 1, "control_stdout_lines": 2, "control_stderr_bytes": 0
+    },
+    "checker_hash_commands": {
+      "delivered": "sha256sum corpus/fixtures/check_bible.py",
+      "e97613c": "git show e97613cc276f5fa9cac49ff1900798cf6863c020:corpus/fixtures/check_bible.py | sha256sum"
+    },
+    "assessment": "concrete and runnable after substitution; gates 1-4 are specific, checkable statements; recording requirements reachable"
+  },
+  "boundary": {
+    "head_stable_through_run": true,
+    "tracked_fixtures_and_watch_clean": true,
+    "repo_writes": [".ufo/waves/round-91/followup/JCAL2.md", ".ufo/waves/round-91/followup/JCAL2-receipts.json"],
+    "no_commit": true,
+    "scratch_retained": true,
+    "scratch_path": "/tmp/lore-r91-JCAL2",
+    "scratch_files": 15
+  }
+}

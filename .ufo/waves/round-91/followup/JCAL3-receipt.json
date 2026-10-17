@@ -1,0 +1,91 @@
+{
+  "seat": "JCAL3",
+  "mission": "fixture/README judge: both-checker blocks, JSON validity, corpus-wide id uniqueness, r91-c9-watch content",
+  "head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+  "wait_checks": {
+    "checks": [
+      "2026-10-17T08:32:34-03:00 c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+      "2026-10-17T08:33:34-03:00 c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7"
+    ],
+    "stable": true
+  },
+  "checker_hashes": {
+    "delivered_file": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "a7c6a17_blob": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "c2ab3d0_blob": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "e97613c_blob": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "r91_no_change": true
+  },
+  "readme_blocks": {
+    "comparator": "python3 /tmp/jcal3/readme_compare.py -> ALL_MATCH",
+    "r91-c1-null-chain": {
+      "e97613c": {"byte_match": true, "sha256": "3a337ba4bba9c829f9b2bba9657e61d8838ad491d44c0861fa1d6f9d40e05c89"},
+      "delivered": {"byte_match": true, "sha256": "615dc0564f531352a574ef2f53c48be42f4e53ad1fac4aa88756e4bba2fada5b"}
+    },
+    "r91-c1-tick-unresolved": {
+      "e97613c": {"byte_match": true, "sha256": "71b4ea433d85ba52f11482a5d089c564641702989763ced39d61c5eee3748e85"},
+      "delivered": {"byte_match": true, "sha256": "d754e96f7c01e6fb6eff12168a732d5a6125f428a9207bd74fc49bbdcbb25d88"}
+    },
+    "exit_and_stderr": "all four runs exit=1, stderr=0 bytes"
+  },
+  "old_to_delivered_line_diff": {
+    "r91-c1-null-chain": "1c1 only (count line byte-identical)",
+    "r91-c1-tick-unresolved": "2c2 only (first_appearance and qualified chain-break lines byte-identical; only tick line changes)"
+  },
+  "construction_claims": {
+    "null_chain_copies_item_chain_valid": "diff -r: only entities.json seal provenance rows differ + README added; other four sections identical",
+    "null_chain_delivered_violations": 1,
+    "tick_fixture_trace": "f3-dup raw rows [1,2] (row 1 invalid first_appearance ''), resolved-index count 1; record0 tick 3 to f3-dup; record1 tick 1 from mira"
+  },
+  "json_validity": {"files": 10, "valid": 10, "duplicate_members": 0, "load_errors": 0},
+  "id_audit": {
+    "fixture_dirs": 166,
+    "raw_duplicate_groups_total": 37,
+    "pre_existing_groups": 36,
+    "new_fixture_dups": {"r91-c1-null-chain": 0, "r91-c1-tick-unresolved": ["entities:f3-dup[1,2] shadowed by invalid row; no duplicate-id violation emitted"]},
+    "cross_fixture_replay": {"f3-dup": 3, "f3-seal": 3, "mira": 141, "harbor": 140, "seal": 135, "tower": 134, "courier-log": 132, "archive-ledger": 127},
+    "invariant": "per-dataset valid-row uniqueness holds for both new fixtures; cross-fixture id reuse is corpus norm"
+  },
+  "census_delta": {
+    "dirs_a7c6a17": 164,
+    "dirs_c2ab3d0": 166,
+    "added_files": 12,
+    "modified_files": [
+      "corpus/fixtures/r87-myth-cluster/claim-excerpt-map.md",
+      "corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md",
+      "corpus/fixtures/r89-inspiration-paraphrase/claim-to-excerpt-map.md"
+    ],
+    "removed_files": 0,
+    "datasets_changed": 0,
+    "matches_claim": "0 changed + 2 new of 166 at dataset level; 3 doc-level edits are C2's documented wording fix"
+  },
+  "all_166_run": {"blocks": 166, "exit0": 32, "exit1": 134, "matches_jcal5_summary": true},
+  "c9_watch": {
+    "path": "corpus/knowledge/r91-c9-watch.md",
+    "sha256": "698a84567e8d34dffed8276af537ff7385099e2a52943dd4823c29e2df98ad2c",
+    "added_in": "6332115",
+    "unchanged_after_add": true,
+    "landed_equals_s1_patch": true,
+    "hash_pin_verified": true,
+    "probe_claims_verified": true,
+    "trigger": "four conjunctive gates + probe template + record list + decision rule (no automatic checker change)",
+    "owner": "S1 for r91, hands off to role 'next C1 calibration owner at closure' (no named successor yet)"
+  },
+  "notes": [
+    "B3-before-state.json tick receipt used ticks 2->1 ('previous tick 2') vs shipped fixture 3->1; shape-exact, not byte-exact. READMEs + this report carry the byte-exact e97613c replay.",
+    "Closure should name the C9 successor explicitly (role-level handoff).",
+    "Corpus-wide id uniqueness is not an invariant; a future cross-fixture registry would need exemptions for 36 pre-existing raw-duplicate groups plus r91-c1-tick-unresolved f3-dup."
+  ],
+  "verdicts": {
+    "C1_calibration_fixtures_readmes": "improved (bounded)",
+    "C1_c9_watch": "improved (bounded)",
+    "fixture_hygiene_json_validity": "improved for r91 additions; unchanged (no harm) corpus-wide",
+    "census_precision": "improved-verified",
+    "C2_command_hardening": "not judged by this seat",
+    "C3_edge_decisions": "not judged by this seat"
+  },
+  "cross_check": {
+    "sibling_receipts_carrying_same_output_hashes": ["H4-c1-discrimination.json", "H4-census.json", "JCAL5-delta.json"],
+    "b3_receipt_null_stdout_sha256_match": true
+  }
+}

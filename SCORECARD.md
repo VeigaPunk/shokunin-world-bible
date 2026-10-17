@@ -74,6 +74,7 @@ retired: none added; no saturation or arbitrary round-count stop.
 | Capability | What it can now do | Evidence pointer | First-working round |
 |---|---|---|---|
 | provenance stop-cause assessment | For any provenance-chain stop the checker latches (15+ cause classes), emit at the stop record and every later record a disclosure naming the cause that actually latched, never a later ambiguity | `for d in r88-shape-ambiguous-armed r88-mixed-stop r88-nonholder-stop; do python3 corpus/fixtures/check_bible.py corpus/fixtures/$d; done` → 5/6/4 findings, exit 1 | r88 |
+| checker-regression discrimination | Detect a silent revert of the r90 gate pair (null-gate / integer-only tick) via the discriminating fixture pair + C9 watch: `DISCRIMINATION HELD` exit 0 on the delivered checker, `REGRESSION-DETECTED` exit 2 under the pre-fix checker | `.ufo/waves/round-91/followup/JDEP4-check.md` (verbatim runnable; bounds: the two r90 gates only; repo-relative census args) | r91 |
 | in-world excerpt support verification | Verify every source-attributed in-world JSON fact against delivered excerpt prose by fixed-string anchor (D1 support rule), delivery-mode declaration (R9), and declared line-span enforcement; exit code + N/N print is the receipt | `python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster` → 22/22 exit 0; `... r88-m3-maya-cluster` → 10/10 exit 0; paraphrase demo retelling-only | r89 |
 
 Rows enter only through a round that demonstrates the capability running (`AXES.md` §Capabilities); none enter through this rollout.
@@ -255,3 +256,45 @@ SHONEN: box 1 `[ ]`; box 2 `[~]` (three LOG records now); box 3 `[~]`
 instruction surfaces true — still no external verifier); box 4 `[~]`
 (province-clean; chousa crossrefs now canonical; kotodama acknowledgement
 untriggered).
+
+## Round 91 — luna round 5 of 12 (2026-10-17)
+
+Two-wave regimen round: work wave (33 seats, `openai-codex/gpt-6-luna-max`),
+follow-up wave (32 seats on `alibaba-token-plan/deepseek-v4.1-flash` per the
+operator directive; 2 seats interrupted without output — JCAL4/JCOV5, material
+covered by siblings). Spec `wave-spec.md` + `wave-spec.json` (r90-Q2-P2
+partially landed). Baseline `a7c6a17`; work commits `6332115`+`c2ab3d0`;
+closure = this commit.
+
+| LIVE axis | r91 verdict | Evidence and limit |
+|---|---|---|
+| calibration | improved (bounded) | C1: two durable DISCRIMINATING fixtures (`r91-c1-null-chain`, `r91-c1-tick-unresolved`) — outputs differ between the e97613c checker and the delivered checker exactly on the repaired lines; a simulated single-gate revert flips only its own fixture (JCAL2/C10); `corpus/knowledge/r91-c9-watch.md` pins the shipped hash + four-gate falsification trigger (reproduced verbatim by JCAL1). Census: 166 dirs, **0 changed + 2 new, 0 exit changes** — five independent censuses (JCAL1/JCAL5/H2/H4/W1). Bounds (CAL-D1…D6): watch wording; census path-convention sensitivity (5 fixtures embed the argv path); one judge's B3 tick receipt is shape-not-byte exact. The r89 hedge classes stay closed. |
+| coverage | improved (bounded) | C2: the support command hardened — inventory assertion, distinct-anchor/duplicate reporting, retelling-anchor WARNs, `JSON-FACTS`/`EDITORIAL`/`TOTAL` split (M2+M6 stack). Receipts on the delivered tree: r87 14+8, r88-m3 10 **plus the expected unreferenced-declaration WARN** (the surfaced JCOV3-F4 finding — the two Spence comparisons are bullets, not rows; r92 row-add), paraphrase demo retelling-only; all five r90 silent-failure vectors now fail or warn (JCOV1). M2's two contract deviations (exit 2 on missing inventory; no RESULT FAIL/ERROR summaries) are README-documented named debt. Bounds (COV-D1…D5): inventory counts are self-attested; WARN semantics reviewed and non-inflating. |
+| depth | improved (bounded) | C3: the three prospective edges decided — R8 failed-gate disposition + withhold-scope precedence + note-removal timing; R9 reprint boundary (item-specific auditable tie per D2, applied; support limited to the identified reprint's checked wording); R10 source_id namespace scoping (cluster-local ids; a bare shared id is a namespace collision, never identity). Register correctly absent; the namespace rule's worked negative case demonstrated (JDEP3). **Boundary-doc harm (fourth recurrence of the class, repaired by deferral):** the r90 closure had mis-landed CB1's instruction sheet; the r91 integration's range-based reconstruction was found uncertifiable by the follow-up (JAXIS/H5/CB1: seams, duplicate headings, 36/54 stale anchors, superseded checker pinned as delivered). Closure resolution per JAXIS's caveat: the doc was restored to the last certifiable contract (e97613c) with a SUPERSEDED-PENDING banner naming exactly what the C9 ruling superseded and handing the anchor-based re-derivation to r92 — explicit deferral, not another rushed landing. Recorded transparently; not netted. |
+
+Learning trends: expansion improved (166 dirs; discrimination machinery corpus-resident);
+quality improved (receipts that fail closed; a falsification-watch artifact with a runnable
+trigger); discernment improved (two failed doc reconstructions were caught by the follow-up
+and resolved by honest deferral — the process caught what integration missed, twice).
+
+Capabilities (third row adopted per JDEP4 with L1 ruling; the no-row reading was rejected
+because the mechanism meets the AXES gate — demonstrated running): **checker-regression
+discrimination** — detect a silent revert of the r90 gate pair via the r91 fixture pair +
+watch: `DISCRIMINATION HELD` exit 0 on the delivered checker, `REGRESSION-DETECTED` exit 2
+when run under the e97613c checker (verbatim runnable check:
+`.ufo/waves/round-91/followup/JDEP4-check.md`). Bounds: scope = the two r90-repaired gates;
+censuses must use repo-relative args; the C9 falsification trigger stays prospective.
+
+planned (r92, from Q1 with L1 adoption): (1) depth — the anchor-based boundary-doc
+re-derivation (the r92 head item; r91 deferred it explicitly) + JDEP2's residual edges;
+(2) coverage — the two Spence comparison rows in the r88-m3 map (closes the WARN) +
+M2 contract-deviation cleanup (RESULT FAIL/ERROR summaries; exit-code alignment);
+(3) calibration — the C9 watch's first periodic re-check + path-convention census note
+in the fixtures README. Process (Q2): commit the poll helper (still not landed),
+finish wave-spec.json + validator, scratch budgets with named thresholds.
+saturation: not declared (no rubric). retired: none.
+
+SHONEN: box 1 `[ ]`; box 2 `[~]` (four LOG records); box 3 `[~]` (the discrimination
+check is a committed runnable command; the boundary doc is deliberately in a declared
+SUPERSEDED-PENDING state — executability preserved, completeness deferred); box 4 `[~]`
+(province-clean; chousa crossrefs canonical; kotodama acknowledgement untriggered).

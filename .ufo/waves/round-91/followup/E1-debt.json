@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "seat": "E1",
+  "wave": "lore round-91 FOLLOW-UP",
+  "mission": "wording/debt note",
+  "repo": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+  "head_commit": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+  "baseline_commit": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+  "delivered_checker": {
+    "path": "corpus/fixtures/check_bible.py",
+    "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "lines": 428,
+    "unchanged_since_baseline": true,
+    "receipt": "git diff --quiet a7c6a17..c2ab3d0 -- corpus/fixtures/check_bible.py; exit=0"
+  },
+  "axes_verdicts": {
+    "A1_replayable_wording_fidelity": "improved (bounded)",
+    "A2_boundary_doc_coverage": "improved (bounded)",
+    "A3_single_revision_prose_consistency": "harmed (bounded)",
+    "A4_debt_accounting": "unchanged"
+  },
+  "receipts": {
+    "null_chain_readme": {
+      "e97613c_block_sha256": "3a337ba4bba9c829f9b2bba9657e61d8838ad491d44c0861fa1d6f9d40e05c89",
+      "delivered_block_sha256": "615dc0564f531352a574ef2f53c48be42f4e53ad1fac4aa88756e4bba2fada5b",
+      "block_equals_measured_stdout": true,
+      "exit": 1,
+      "stderr_bytes": 0
+    },
+    "tick_unresolved_readme": {
+      "e97613c_block_sha256": "71b4ea433d85ba52f11482a5d089c564641702989763ced39d61c5eee3748e85",
+      "delivered_block_sha256": "d754e96f7c01e6fb6eff12168a732d5a6125f428a9207bd74fc49bbdcbb25d88",
+      "block_equals_measured_stdout": true,
+      "exit": 1,
+      "stderr_bytes": 0,
+      "b3_receipt_probe_ticks": "2 -> 1 (durable fixture: 3 -> 1)"
+    },
+    "boundary_doc_pasted_blocks": {
+      "cases": 14,
+      "all_match_delivered_replay": true,
+      "command": "python3 corpus/fixtures/check_bible.py <path> for each case, text compared to doc"
+    },
+    "boundary_doc_line_provenance": {
+      "delivered_lines": 549,
+      "e97613c_lines": 630,
+      "r90_proposal_lines": 316,
+      "in_old_only": 400,
+      "in_proposal_only": 84,
+      "in_both": 60,
+      "h1_titles": 2,
+      "verified_at_claims": 2,
+      "mentions_1b09f3f": 15,
+      "mentions_ca7f9ef": 7,
+      "splice_joints_at_lines": [40, 61, 69, 132, 185, 243, 405, 479, 499]
+    },
+    "support_check_runs": {
+      "r87-myth-cluster": {"inventory": "14/14; 8/8; 22/22; 22/22", "result": "PASS", "exit": 0},
+      "r88-m3-maya-cluster": {"inventory": "10/10; 0/0; 10/10; 6/6", "warn": "unreferenced excerpt declaration: source-excerpt.md (mode=verbatim)", "result": "PASS WITH WARNINGS", "exit": 0},
+      "r89-inspiration-paraphrase": {"inventory": "1/1; 0/0; 1/1; 1/1", "retelling_support_only": "1 entries (1/1 anchors)", "result": "PASS", "exit": 0}
+    },
+    "support_check_scratch_probes": {
+      "missing_inventory": {"stderr": "FAIL: map must contain exactly one expected inventory declaration", "exit": 2},
+      "duplicate_row": {"stdout": "FAIL: duplicate mapped row entities.json#/0/claims/0 appears 2 times", "exit": 1},
+      "missing_retelling_anchor": {"stdout": "WARN: retelling anchor not found for entities.json#/0/claims/0; excluded from source support", "result": "PASS WITH WARNINGS", "exit": 0},
+      "scratch": "/dev/shm/e1r91 (swept)"
+    }
+  },
+  "debt": [
+    {
+      "id": "R91-E1-BOUNDARY-ROW3-STALE",
+      "file": "corpus/knowledge/holder-assessment-boundary.md",
+      "line": 179,
+      "finding": "r89 row kept alongside its r90 replacement (line 184); asserts tick findings are identity-qualified; the quoted string 'holder identity is not uniquely resolvable' is absent from the delivered checker (grep -c -> 0; tick line at check_bible.py:326).",
+      "trigger": "next boundary-doc touch; replace with the r90 proposal D1/D2 block"
+    },
+    {
+      "id": "R91-E1-BOUNDARY-SPLICE-FRAGMENTS",
+      "file": "corpus/knowledge/holder-assessment-boundary.md",
+      "lines": [1, 8, 40, 46, 51, 61, 69, 78, 132, 243, 405, 479, 531],
+      "finding": "duplicate H1 and verified-at; orphan r89 fragments from insertion-style reconstruction",
+      "trigger": "next boundary-doc touch"
+    },
+    {
+      "id": "R91-E1-BOUNDARY-STALE-COUNTS",
+      "file": "corpus/knowledge/holder-assessment-boundary.md",
+      "lines": [464, 469, 485, 490],
+      "finding": "conflicting provenance-directory counts (29 at 1b09f3f vs 33 at ca7f9ef) retained side by side; Rules text bullet duplicated",
+      "trigger": "next boundary-doc touch"
+    },
+    {
+      "id": "R91-E1-BOUNDARY-R90-SECTION",
+      "file": "corpus/knowledge/holder-assessment-boundary.md",
+      "lines": [494, 495, 496],
+      "finding": "'stated only here ... until a Round 90 section lands' is stale: corpus/fixtures/README.md:1016 has had '## Round 90: hedged-shapes repair + support machinery' since a7c6a17",
+      "trigger": "next boundary-doc touch"
+    },
+    {
+      "id": "R91-E1-DEBT-ACCOUNTING",
+      "file": "corpus/knowledge/holder-assessment-boundary.md",
+      "line": 6,
+      "finding": "exactly one 'Skipped as named debt' statement in the delivered tree (D1); the claimed second skipped item is not identifiable; D12.3 unapplied (SCORECARD.md:185 still 'one-line fix queued for r90'; grep -c hedged-shape SCORECARD.md -> 0)",
+      "trigger": "r92 planner"
+    },
+    {
+      "id": "R91-E1-WATCH-PRECISION",
+      "file": "corpus/knowledge/r91-c9-watch.md",
+      "line": 20,
+      "finding": "B3 pin is exact for the null chain but shape-level for the tick line (B3 ticks 2->1 vs durable fixture 3->1)",
+      "trigger": "next C1 calibration owner"
+    }
+  ],
+  "scratch": {"created": "/dev/shm/e1r91", "removed": true, "tmp_files": 0},
+  "no_tracked_writes": true
+}
