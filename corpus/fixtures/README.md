@@ -1150,3 +1150,26 @@ source-row denominator and omitted the editorial rows. The checker verifies
 mapped-row inventory, fixed-string anchors, spans, and declared delivery
 modes; it does not compare the map against every raw JSON fact or decide
 whole-claim meaning, truth, or semantic source support.
+
+## Round 94 — `r94-paired-crossing` (2026-10-17)
+
+Added at round 94: an explicit continuation of `r88-m3-maya-cluster`. One newly authored in-world minute (`crossing-minute`) supports one relation (`agreed_co_stewardship_for_this_crossing`, bounded "for this crossing only") and one tick-10 event (`paired-crossing-decision`) depending on BOTH named tick-9 events. Inherited r88 records are parsed-value identical; the r88 fixture itself is untouched. Every source-attributed record carries a canonical `file.json#/pointer` map row with exact in-span anchors and R9 delivery modes (14 obligations + 2 separate editorial comparison rows).
+
+Replay commands and receipts (measured on the delivered candidate):
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r94-paired-crossing
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/support_check.py corpus/fixtures/r94-paired-crossing
+# JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16; MODES 16/16; VALIDATED-ROWS 16/16 / RESULT PASS   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r94-paired-crossing
+# OBLIGATIONS raw=14 mapped=14 / RESULT PASS   exit 0
+```
+
+Structural CLEAN is structural only; the support receipt is lexical/map-declared; `map_obligations` covers raw-JSON↔map completeness and source-ID agreement only. Whole-claim review of the new minute and the cross-myth design comparison remain manual reviews (`corpus/knowledge/r94-cross-myth-design-comparison.md`).
+
+### 2026-10-17 census re-declaration and pin note
+
+A full repo-relative corpus run at the r94 delivered revision observed **168 fixture directories: 34 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero stderr**. This supersedes the r93 snapshot counts in this file's Round-93 section (167/33/134/421) as a measured statement at this revision, not a pinned invariant.
+
+Dated pin note: this Round-94 append changed this file's bytes. The W05 preservation pin for this file recorded at `.ufo/waves/round-94/work/W05-baseline-corpus.sha256` (`a13d1af3…`) no longer matches; the other 983 pins of that baseline are unaffected. The census above is measured at the delivered candidate revision; see the round-94 LOG closure entry.

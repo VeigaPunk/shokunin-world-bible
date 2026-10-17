@@ -77,3 +77,14 @@ Rows follow the fleet schema in `../PROTOCOL.md:360-406`. `boundary_doc_check` n
 - **pinned-values path:** the selected cluster's map and excerpt files (examples: `corpus/fixtures/r89-inspiration-paraphrase/claim-to-excerpt-map.md` and `corpus/fixtures/r87-myth-cluster/claim-excerpt-map.md`); the map stores declared inventory/modes/anchors. No independent digest/frozen snapshot is checked.
 - **scope:** one cluster's inventory, row shape, delivery-mode declarations, exact anchors, excerpt paths and line spans; does not decide whole-claim entailment, translation identity/fidelity, rights, permission, or canon
 - **owner:** `lore-shokunin`
+
+### Raw-obligation mapping completeness
+
+- **name:** `map_obligations`
+- **gate/probe:** gate
+- **entry command:** `python3 corpus/tools/map_obligations.py <cluster-directory>` (repository root; optional `--frozen <dir>` demonstration: `python3 corpus/tools/map_obligations.py --frozen .ufo/waves/round-94/frozen/map-obligations-r93`)
+- **code → class:** `0 → clean`; `1 → failed` (failed obligation comparison: `missing_obligation` / `duplicate_mapping` / `phantom_obligation` / `source_id_mismatch`); `2 → could-not-evaluate`; other codes → `could-not-evaluate`
+- **self-test command:** `python3 corpus/tools/map_obligations.py --self-test`; 20 cases with independently persisted expected exits and finding IDs in `corpus/tools/map-obligations-contract.json`, executed as real CLI subprocesses in an isolated tree
+- **pinned-values path:** `corpus/tools/map-obligations-contract.json` plus the digest-pinned snapshot `.ufo/waves/round-94/frozen/map-obligations-r93/expected.json` (four input digests)
+- **scope:** canonical one-obligation-per-row mapping completeness and source-ID agreement between raw fixture JSON and the cluster's Markdown map, for the canonical map form used by the r93 and r94 clusters; legacy map forms exit 2 `unsupported_map` (fail-closed). No entailment, fidelity, authenticity, chronology, rights, permission, or canon judgment. Bounded residuals BR-01…BR-04 and BR-16 of the round-94 debt ledger apply.
+- **owner:** `lore-shokunin`

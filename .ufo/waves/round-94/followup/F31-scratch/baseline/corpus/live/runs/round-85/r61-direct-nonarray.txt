@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-direct-nonarray
+exit_code=1
+VIOLATION: sources.json: expected array
+1 violation(s); no canon changed

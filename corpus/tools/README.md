@@ -84,3 +84,16 @@ Argparse syntax errors also use exit 2, so exit 2 alone is not proof of regressi
 ### 2026-10-17 correction: the R9 manual-review object
 
 This dated correction supersedes the phrase "the R9 manual review of the boundary document" in the sentence above; the filed sentence remains unrewritten as history. `corpus/knowledge/holder-assessment-boundary.md` carries no R9 gate, so it is not that review's object. The R9 manual gate applies to translation-backed R5 claims: a named non-submitter reviewer inspects the exact delivered translation item, and the outcome is recorded as a per-claim `R9 manual review` entry adjacent to the claim in its claim-to-excerpt map (`corpus/knowledge/r88-sourced-inspiration-decision-table.md`, R9 appendix — "Manual R9 gate (required for translation-backed R5 claims)" and "Required record"). Corrected reading of the superseded sentence: `support_check.py`'s `RESULT PASS` is a lexical preflight for its mapped excerpts; it never replaces that per-claim manual review and never certifies that the whole claim is adequately supported.
+
+### Round-94 addendum: `map_obligations.py`
+
+Added in r94 (admitted at round-94 closure). Run from the repository root:
+
+```sh
+python3 corpus/tools/map_obligations.py corpus/fixtures/r94-paired-crossing   # OBLIGATIONS raw=14 mapped=14 / RESULT PASS, exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r93-m2-kojiki-cluster # OBLIGATIONS raw=12 mapped=12 / RESULT PASS, exit 0
+python3 corpus/tools/map_obligations.py --self-test                           # 20/20 SELF-TEST PASS / RESULT PASS, exit 0
+python3 corpus/tools/map_obligations.py --frozen .ufo/waves/round-94/frozen/map-obligations-r93  # SNAPSHOT digests=verified / RESULT PASS, exit 0
+```
+
+The tool enumerates raw source-attributed obligations (entity `first_appearance` and each claim, relations, timeline events) and compares them one-to-one with canonical `file.json#/pointer` rows in the cluster's Markdown map. Exit contract: `0` clean; `1` failed comparison; `2` could-not-evaluate (unsupported map grammar, malformed raw JSON, invalid paths, usage errors). One terminal RESULT line on operational paths; note `--help` exits 0 with zero RESULT lines, so exit 0 alone is not a PASS. It closes the lexical blind spot where `support_check` PASSes although a raw JSON claim has no map row (demonstrated at round 94 on scratch copies); it does not judge textual entailment, delivery mode, source authentication, chronology, rights, permission, or canon. Self-test scratch is created under the repository root and is not gitignored (bounded residual BR-05, relocation candidate for r95). Expected exits and finding IDs are persisted in `corpus/tools/map-obligations-contract.json`; the frozen r93 snapshot pins four input digests under `.ufo/waves/round-94/frozen/map-obligations-r93/expected.json`.

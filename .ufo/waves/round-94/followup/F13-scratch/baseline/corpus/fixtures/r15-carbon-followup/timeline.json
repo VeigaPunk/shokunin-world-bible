@@ -1,0 +1,42 @@
+[
+  {
+    "id": "departure",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "arrival",
+    "tick": 2,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [
+      "departure"
+    ],
+    "description": "Mira reaches the tower.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "registry-entry",
+    "tick": 1,
+    "entity_id": "sella",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "At first bell, Sella records seeing Mira leave; at Mira’s request she leaves the registry destination blank and keeps the carbon.",
+    "source_id": "registrar-copy"
+  },
+  {
+    "id": "carbon-followup",
+    "tick": 3,
+    "entity_id": "sella",
+    "place_id": "harbor",
+    "depends_on": [
+      "registry-entry"
+    ],
+    "description": "Sella reports looking again at the carbon she kept and observing a blurred blue oval mark whose origin she cannot identify; she does not attribute it to Mira’s Blue Seal.",
+    "source_id": "sella-carbon-followup"
+  }
+]
