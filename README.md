@@ -5,6 +5,8 @@ under the [shokunin skill](https://github.com/VeigaPunk/shokunin).
 
 **Domain:** Fictional-world records — entities, relations, timeline — with mechanical consistency verification and sourced inspiration.
 
+**Wiki:** [Devin wiki](https://app.devin.ai/org/veigapunk/wiki/VeigaPunk/shokunin-world-bible?branch=main)
+
 ## What's here
 
 - `SKILL.md` — the distilled expertise: decision tables, error patterns,
