@@ -464,3 +464,34 @@ self-test pinning; drift scope widening decision; V37-D1 legacy-dialect
 hidden-second-pointer; BR-01 dependency-reduction detection (carried since
 r94); BR-05 scratch relocation; poll-helper/process debts. saturation: not
 declared. retired: none.
+
+## Round 96 — closed, ADMITTED (2026-10-17)
+
+Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash` (6 producer
+seats, exclusive byte-ownership; 58 verifiers; two late landings V43/V58
+from a mutual poll-wait, self-recorded). Baseline `dcb2d92`; closure
+`f3e09f9`. V38 all-axis adjudication: ADMIT with eight conditions, all
+discharged at closure. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: the r95 deletion class now exits 1 with stable `inventory_mismatch` (adjudicator's old-tool exit 0 vs delivered exit 1 on identical mutation copies); `dual_pointer` closes V37-D1 — all three hidden-pointer forms exit 1, false-positive controls clean (legitimate prose and r88's real cells still PASS); self-test 24/24 with both new pins proven load-bearing by neutralization and expectation-flip perturbations. Bounds: a consistently regenerated declaration still exits 0; the two added pins are droppable (23/24 passes — subset-tolerant loader); `dual_pointer` has no persisted pin. |
+| depth | improved (bounded) | C2: `corpus/fixtures/r96-crossing-response/` — second first-person account, same occasion, unresolved: Evin's tick-12 response at Salt Court; 5/1/4→5/1/5, sources 4→5, 16/16 obligations (15 inherited rows diff-free outside the namespace column), check_bible CLEAN, support 16/16 + TOTAL 18/18, census 169→170 with zero inherited changes. Two adversarial reviews confirm no accusation/winner/contradiction is constructible (`contradictions.json` stays `[]` — genuinely distinct from the r35 class). Bounds: cosmetic map delimiter cell + one stale "new relation" sentence left frozen as adjudicated (r97 candidates). |
+| coverage | improved (bounded) | C3: `corpus/tools/dependency_freeze.py` + contract — the sixth registry gate; closes BR-01's JSON-edge half (the r94 reduction invisible to every prior gate now exits 1 `REDUCTION-DETECTED`); chain 4/4 clean; ADDITION/ENDPOINT exit 1; exit-2 surface complete; 14/14 persisted self-test; zero corpus modification. Bounds: V23's confirmed FAIL discharged at closure (foreign `c3red` scratch pin written by verifier V41's `--freeze` probe — removed, contract `c65ac3bd…`); no path binding; BR-01 prose half open; `--freeze` unguarded (integration-time only). |
+| operability | improved (bounded) | Both self-tests replay; documented commands run as written; 0/1/2 contracts hold. Bounds: BR-05 scratch; `--freeze` write hazard recorded. |
+| freshness | unchanged (no improvement; no material harm) | All artifacts green at closure; no stale pins; closure-side doc gaps landed (C-8). |
+| adjacency | unchanged (not harmed) | PROVINCE byte-identical; zero parent-tree strays this round; V37's unfinished adjacency battery recorded — verdict rests on V31 + L1 checks. |
+
+Learning trends: expansion improved (170 dirs; response class; sixth gate);
+quality improved (gating inventory; freeze gate with three detection
+classes; pins proven load-bearing); discernment improved (V38 reconciled
+fifteen conflicts; V23's FAIL recorded and discharged by removal, not
+re-rolled; the mutual poll-wait liveness class documented; a verifier's
+byte-ownership breach self-disclosed and corrected).
+
+planned (r97): third 64-seat deepseek-flash round. Debt head items:
+`--freeze` scope guard or delivery-time-only marking; path binding for
+freeze receipts; BR-01 prose half; `dual_pointer` self-test pin; droppable-pin
+loader tightening; cosmetic r96 map fixes; BR-05 scratch relocation;
+poll-helper hardening (mutual-wait escape); process: host `/tmp` inode
+exhaustion workaround. saturation: not declared. retired: none.
