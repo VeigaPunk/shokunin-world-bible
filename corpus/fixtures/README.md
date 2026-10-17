@@ -1009,3 +1009,7 @@ writer, chronology, canon, or depth.
 
 `r88-shape-ambiguous-armed/`, `r88-mixed-stop/`, `r88-nonholder-stop/` pin the first-stop cause-disclosure repair (C1, commit `2ea9ef1`); `r88-m3-maya-cluster/` is the second sourced-mythology cluster (Spence 1913 Maya parallel, delivered excerpt + clause→element map; C2, same commit). The r88 checker names the first stop cause of every provenance chain; the r87 probe expectations above carry revision notes where the counts moved.
 
+## Round 89: cause branches + support completion
+
+`r89-c1-invalid-tick/`, `r89-c1-invalid-from-holder/`, `r89-c1-invalid-to-holder/`, `r89-c1-malformed-source-id/`, `r89-c1-multi-cause-valid/` pin the first-stop cause branches incl. the valid-key combined summary (C1, commit `1b09f3f`); `r89-f2-dangling-to/`, `r89-f2-dangling-from/`, `r89-f2-invalid-source-id/` pin the FN-1 resolved-index wording; `r89-fn2-unresolved-chain-break/` + `r89-fn2-control/` pin the FN-2 qualification. `r89-inspiration-paraphrase/` demonstrates the R9 delivery-mode rule (paraphrase supports only the retelling). The r87 cluster gained four delivered in-world source excerpts (`gate-witness-excerpt.md`, `dune-register-excerpt.md`, `shell-charter-excerpt.md`, `tide-bell-tally-excerpt.md`) completing 14/14 anchor support. First-stop cause contract: `corpus/knowledge/holder-assessment-boundary.md` (r89 refresh).
+

@@ -2,7 +2,7 @@
 
 Purpose: pin the r87 shape-ambiguous residual with a fixture-local duplicate holder id. Record `[0]` has the ambiguous `to_holder` and an extra key; record `[1]` is shape-valid but its non-null `from_holder` would violate the first-record chain rule if assessed after the malformed record reset.
 
-## Expected after the C1 fix (integration verification pending)
+## Expected after the C1 fix (verified at closure — follow-up seats V2/JCAL3 line-by-line)
 
 - Checker exit: `1` (intentional duplicate entity id and provenance shape violation remain findings).
 - The shape-invalid dict at `entities[4].provenance[0]` still reports its exact-key violation and its ambiguous `to_holder` `f1-shape-dup`.

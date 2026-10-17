@@ -1,0 +1,124 @@
+{
+  "seat": "JDEP2",
+  "wave": "round-89 followup",
+  "role": "Depth judge #2 (attack R8-R10)",
+  "judged_tree": "1b09f3f",
+  "baseline": "51b286b",
+  "governing_artifact": "corpus/knowledge/r88-sourced-inspiration-decision-table.md:22-24",
+  "checker_scope_grep": {
+    "cmd": "grep -n 'excerpt\\|inspiration\\|delivery\\|paraphrase\\|translation\\|knowledge\\|cross-cluster' corpus/fixtures/check_bible.py",
+    "stdout": "",
+    "exit": 1,
+    "meaning": "the checker never reads the table, notes, excerpts, maps or register; the rows are the sole governing text"
+  },
+  "probes": [
+    {
+      "case": "R8-general-motif-plausible-but-unrecorded-influence",
+      "question": "An element parallels a named real-world work but nothing records the influence (no provenance note, no map, no ledger row). What is required?",
+      "fixture_dir": "/tmp/jdep2/probes/r8-motif-unrecorded",
+      "distinguishing_facts": [
+        "two elements, no inspiration note/map/ledger row",
+        "low-water-crossing = general motif (threshold crossing at low water, bowl laid down)",
+        "seven-stair-descent = distinctive sequence (seven thresholds, one item of dress laid aside each, bowl last) parallel to ETCSL 1.4.1 lines 122-163"
+      ],
+      "files": {
+        "README.md": "# R8 probe A - plausible-but-unrecorded influence\n\nTwo elements, no recorded provenance for either (no inspiration note, no symbolism\nmap, no reference-ledger row):\n\n- `low-water-crossing`: a general motif (threshold crossing at low water; a bowl laid down).\n- `seven-stair-descent`: a distinctive sequence (seven successive thresholds, one item of\n  dress laid aside at each, bowl reached last) parallel to ETCSL 1.4.1 lines 122-163.\n",
+        "contradictions.json": "[]\n",
+        "entities.json": "[\n  {\n    \"id\": \"keeper\",\n    \"kind\": \"character\",\n    \"name\": \"The Keeper\",\n    \"first_appearance\": \"shore-liturgy\",\n    \"claims\": [\n      {\n        \"statement\": \"The keeper is named in shore-liturgy.\",\n        \"source_id\": \"shore-liturgy\"\n      }\n    ]\n  },\n  {\n    \"id\": \"seven-stair-descent\",\n    \"kind\": \"place\",\n    \"name\": \"Seven-Stair Descent\",\n    \"first_appearance\": \"shore-liturgy\",\n    \"claims\": [\n      {\n        \"statement\": \"At each of the seven stairs the keeper lays aside one item of dress before the bowl is reached.\",\n        \"source_id\": \"shore-liturgy\"\n      }\n    ]\n  },\n  {\n    \"id\": \"low-water-crossing\",\n    \"kind\": \"place\",\n    \"name\": \"Low-Water Crossing\",\n    \"first_appearance\": \"shore-liturgy\",\n    \"claims\": [\n      {\n        \"statement\": \"The keeper crosses at low water and lays a bowl down at the threshold.\",\n        \"source_id\": \"shore-liturgy\"\n      }\n    ]\n  }\n]\n",
+        "relations.json": "[]\n",
+        "sources.json": "[\n  {\n    \"id\": \"shore-liturgy\",\n    \"title\": \"Shore Liturgy of the Seven Stairs\",\n    \"kind\": \"fictional liturgy\",\n    \"reliability_note\": \"Newly authored fictional liturgy; no real-world influence is recorded in this fixture.\"\n  }\n]\n",
+        "timeline.json": "[\n  {\n    \"id\": \"descent-begins\",\n    \"tick\": 1,\n    \"entity_id\": \"keeper\",\n    \"place_id\": \"seven-stair-descent\",\n    \"depends_on\": [],\n    \"description\": \"The keeper begins the descent of the seven stairs and lays aside the first item.\",\n    \"source_id\": \"shore-liturgy\"\n  }\n]\n"
+      },
+      "replay": {
+        "cmd": "python3 corpus/fixtures/check_bible.py /tmp/jdep2/probes/r8-motif-unrecorded",
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+        "stderr": "",
+        "exit": 0
+      },
+      "classification": "uncovered",
+      "gap": "R8's dispositions require either recorded provenance or a recorded general motif; with nothing recorded the element marker `external-only / unverified inspiration` has no home, and the withholding branch ('the screen is unresolved') presupposes a recorded screen. Strict reading defaults to R2, which disclaims 'omitting a source that actually informed the work'; loose reading withholds the element. Two readings, different canon outcomes, no required artifact named.",
+      "landed_instance": "corpus/fixtures/r87-myth-cluster/inspiration-note.md:5 records the ETCSL motif (R8 general-motif branch) but the fixture carries 0 occurrences of `external-only`; the r89 integration notes scope R8 prospectivity only against the Spence row."
+    },
+    {
+      "case": "R9-translation-translator-named-version-unknown",
+      "question": "A delivered excerpt declares mode `translation` and names the translator, but the source text/version is not identified. Does the claim carry R5 support, and what must be recorded?",
+      "fixture_dir": "/tmp/jdep2/probes/r9-translation-unknown-version",
+      "distinguishing_facts": [
+        "excerpt declares `**Delivery mode:** translation` and `**Translator:** M. A. Translator`",
+        "`**Source version:** not recorded`",
+        "map declares mode+translator, anchor matches at line 11"
+      ],
+      "files": {
+        "claim-to-excerpt-map.md": "# Claim-to-excerpt map\n\n| Claim pointer | In-world source | Excerpt path and lines | Delivery mode / translator | Anchor | R9 support result |\n|---|---|---|---|---|---|\n| `entities.json#/0/claims/0` | `river-codex` | `river-codex-excerpt.md:11` | `translation`; M. A. Translator (source version not recorded) | `the ring upon the fourth stair` | Undetermined: the translator is named but no source version is identified. |\n",
+        "contradictions.json": "[]\n",
+        "entities.json": "[\n  {\n    \"id\": \"fourth-stair\",\n    \"kind\": \"place\",\n    \"name\": \"Fourth Stair\",\n    \"first_appearance\": \"river-codex\",\n    \"claims\": [\n      {\n        \"statement\": \"The River Codex records the ring set upon the fourth stair.\",\n        \"source_id\": \"river-codex\"\n      }\n    ]\n  }\n]\n",
+        "relations.json": "[]\n",
+        "river-codex-excerpt.md": "# River Codex delivered excerpt\n\n**Delivery mode:** translation (rendering by M. A. Translator)\n\n**Translator:** M. A. Translator\n\n**Source version:** not recorded\n\n## Excerpt\n\nThe keeper set the ring upon the fourth stair.\n",
+        "sources.json": "[\n  {\n    \"id\": \"river-codex\",\n    \"title\": \"River Codex\",\n    \"kind\": \"fictional codex\",\n    \"reliability_note\": \"Newly authored fictional codex; the delivered excerpt is a translation whose source version is not identified.\"\n  }\n]\n",
+        "timeline.json": "[]\n"
+      },
+      "replay": {
+        "cmd": "python3 corpus/fixtures/check_bible.py /tmp/jdep2/probes/r9-translation-unknown-version",
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+        "stderr": "",
+        "exit": 0
+      },
+      "anchor_check": {
+        "cmd": "grep -nF -- 'the ring upon the fourth stair' /tmp/jdep2/probes/r9-translation-unknown-version/river-codex-excerpt.md",
+        "stdout": "11:The keeper set the ring upon the fourth stair.",
+        "exit": 0
+      },
+      "classification": "uncovered",
+      "gap": "Declaration clause asks for the version only 'when known' (compliant), while the eligibility clause requires 'an identified translation tied to a named source text/version' (not satisfied). The row prescribes a disposition only for the paraphrase/summary branch (`not delivered / unverified`); for an unknown-version translation it names no marker, no open-question record, and no statement whether the mode label may remain `translation`. The mode set is closed at four values, so the label conceals the eligibility defect."
+    },
+    {
+      "case": "R10-shared-referent-name-different-occasions",
+      "question": "Two clusters name the same referent but on different occasions. Is a register entry required?",
+      "fixture_dir": "/tmp/jdep2/probes/r10-cluster-a + /tmp/jdep2/probes/r10-cluster-b",
+      "distinguishing_facts": [
+        "both clusters carry a timeline event with id `moon-basin-vow`",
+        "cluster A: tick 3, place mother-tide-gate, 'Saltmonth 4'",
+        "cluster B: tick 7, place reed-arch, 'Saltmonth 9'"
+      ],
+      "files": {
+        "r10-cluster-a": {
+          "contradictions.json": "[]\n",
+          "entities.json": "[\n  {\n    \"id\": \"keeper\",\n    \"kind\": \"character\",\n    \"name\": \"The Keeper\",\n    \"first_appearance\": \"gate-witness\",\n    \"claims\": [\n      {\n        \"statement\": \"The keeper is named in gate-witness.\",\n        \"source_id\": \"gate-witness\"\n      }\n    ]\n  },\n  {\n    \"id\": \"mother-tide-gate\",\n    \"kind\": \"place\",\n    \"name\": \"Mother Tide Gate\",\n    \"first_appearance\": \"gate-witness\",\n    \"claims\": [\n      {\n        \"statement\": \"mother-tide-gate is named in the register.\",\n        \"source_id\": \"gate-witness\"\n      }\n    ]\n  }\n]\n",
+          "relations.json": "[]\n",
+          "sources.json": "[\n  {\n    \"id\": \"gate-witness\",\n    \"title\": \"Gate Witness\",\n    \"kind\": \"fictional register\",\n    \"reliability_note\": \"Newly authored fictional register.\"\n  }\n]\n",
+          "timeline.json": "[\n  {\n    \"id\": \"moon-basin-vow\",\n    \"tick\": 3,\n    \"entity_id\": \"keeper\",\n    \"place_id\": \"mother-tide-gate\",\n    \"depends_on\": [],\n    \"description\": \"The Moon-Basin Vow was held at mother-tide-gate in Saltmonth 4.\",\n    \"source_id\": \"gate-witness\"\n  }\n]\n"
+        },
+        "r10-cluster-b": {
+          "contradictions.json": "[]\n",
+          "entities.json": "[\n  {\n    \"id\": \"keeper\",\n    \"kind\": \"character\",\n    \"name\": \"The Keeper\",\n    \"first_appearance\": \"reed-arch-register\",\n    \"claims\": [\n      {\n        \"statement\": \"The keeper is named in reed-arch-register.\",\n        \"source_id\": \"reed-arch-register\"\n      }\n    ]\n  },\n  {\n    \"id\": \"reed-arch\",\n    \"kind\": \"place\",\n    \"name\": \"Reed Arch\",\n    \"first_appearance\": \"reed-arch-register\",\n    \"claims\": [\n      {\n        \"statement\": \"reed-arch is named in the register.\",\n        \"source_id\": \"reed-arch-register\"\n      }\n    ]\n  }\n]\n",
+          "relations.json": "[]\n",
+          "sources.json": "[\n  {\n    \"id\": \"reed-arch-register\",\n    \"title\": \"Reed Arch Register\",\n    \"kind\": \"fictional register\",\n    \"reliability_note\": \"Newly authored fictional register.\"\n  }\n]\n",
+          "timeline.json": "[\n  {\n    \"id\": \"moon-basin-vow\",\n    \"tick\": 7,\n    \"entity_id\": \"keeper\",\n    \"place_id\": \"reed-arch\",\n    \"depends_on\": [],\n    \"description\": \"The Moon-Basin Vow was held at reed-arch in Saltmonth 9.\",\n    \"source_id\": \"reed-arch-register\"\n  }\n]\n"
+        }
+      },
+      "replay": [
+        {
+          "cmd": "python3 corpus/fixtures/check_bible.py /tmp/jdep2/probes/r10-cluster-a",
+          "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+          "stderr": "",
+          "exit": 0
+        },
+        {
+          "cmd": "python3 corpus/fixtures/check_bible.py /tmp/jdep2/probes/r10-cluster-b",
+          "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+          "stderr": "",
+          "exit": 0
+        },
+        {
+          "cmd": "python3 corpus/fixtures/check_bible.py /tmp/jdep2/probes/r10-cluster-a /tmp/jdep2/probes/r10-cluster-b",
+          "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: '/tmp/jdep2/probes/r10-cluster-a /tmp/jdep2/probes/r10-cluster-b/sources.json'\nVIOLATION: entities.json: cannot load JSON: [Errno 2] No such file or directory: '/tmp/jdep2/probes/r10-cluster-a /tmp/jdep2/probes/r10-cluster-b/entities.json'\nVIOLATION: relations.json: cannot load JSON: [Errno 2] No such file or directory: '/tmp/jdep2/probes/r10-cluster-a /tmp/jdep2/probes/r10-cluster-b/relations.json'\nVIOLATION: timeline.json: cannot load JSON: [Errno 2] No such file or directory: '/tmp/jdep2/probes/r10-cluster-a /tmp/jdep2/probes/r10-cluster-b/timeline.json'\nVIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: '/tmp/jdep2/probes/r10-cluster-a /tmp/jdep2/probes/r10-cluster-b/contradictions.json'\n5 violation(s); no canon changed",
+          "stderr": "",
+          "exit": 1
+        }
+      ],
+      "classification": "uncovered (partial: the no-entry answer is covered, the required record is not)",
+      "gap": "The durable register entry is required only 'For each supported incompatible pair' - this pair is compatible (different occasions), so no entry. But the row's other branch fires only 'If identity or occasion is unestablished': here identity rests on a shared name (no identity test is stated) and the occasion is established different, so neither branch's trigger cleanly applies. Reading (i) - different occasion establishes distinct referents - requires nothing; reading (ii) - the name overlap leaves identity unestablished - requires a candidate discrepancy plus missing evidence, whose destination the row never names. D1's draft contained the explicit guard 'similar names or wording alone do not establish identity' (D1-rows.md, 1 occurrence); the integrated row is D2's text (sequence ratio 0.9998) and that guard is absent (0 occurrences in the delivered table). No artifact is required to record that the overlap was compared and dismissed, so the manual gate leaves no audit trail.",
+      "register_state": "corpus/knowledge/cross-cluster-contradictions.md absent; only the demo corpus/knowledge/r89-cross-cluster-contradiction.md exists"
+    }
+  ]
+}

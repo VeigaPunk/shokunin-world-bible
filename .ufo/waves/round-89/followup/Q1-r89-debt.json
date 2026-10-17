@@ -1,0 +1,566 @@
+{
+  "seat": "Q1",
+  "wave": "round-89 follow-up (world-bible lane)",
+  "judged_tree": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+  "baseline": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94",
+  "delivered_checker_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+  "counting_rule": "A row enters this ledger if it is (a) a debt on the delivered r89 tree at 1b09f3f, (b) a residue of a r89 declared claim C1/C2/C3, (c) an unlanded alternative artifact of the delivered round, or (d) a process debt the round's own follow-up seats named. Dispositions are verdicts, never scalars. Evidence pointers are paths (plus line spans where the source has them) inside lore-shokunin; every 'measured' claim below was re-run by this seat on the delivered tree unless a sibling is named as the sole receipt.",
+  "inputs_read": [
+    ".ufo/waves/round-89/wave-spec.md (incl. clerk landing record), all 32 work-wave seat reports, the 34 patch artifacts in .ufo/waves/round-89/patches/",
+    "follow-up wave at read time: CB1, CB1-boundary-refresh, E1, E1-drift.json, H1, H2, H3, H4, H5, JAXIS, JCAL1, JCAL3, JCAL5, JCOV1, JCOV2, JCOV3, JCOV4, JCOV5, JDEP1, JDEP2, JDEP3, JDEP4, K1, P3, P3-log-r89, P4-shonen, Q2, SE2, V2 found; read in full except where noted (P3.md headings only, JCAL5-delta.json / JAXIS-verdicts.json / JCOV1-probes.json / JCOV3-probes.json / JDEP1-receipts.json in part); the wave grew during this seat's two 60 s wait-checks (38 -> 42 -> 51 files at 04:31:15 / 04:32:15 / 04:33:15 -03:00), so late arrivals are named by their seat id only",
+    ".ufo/waves/round-88/followup/Q1-r88-debt.json (49 rows; open rows carried here as r88_carryover)",
+    "delivered corpus: corpus/fixtures/check_bible.py, corpus/fixtures/README.md, corpus/fixtures/r87-myth-cluster/*, corpus/fixtures/r89-*/README.md, corpus/knowledge/{holder-assessment-boundary.md,r87-provenance-chain-decision-table.md,r88-sourced-inspiration-decision-table.md,reference-ledger.md,r89-cross-cluster-contradiction.md}, l0-questions.md, LOG.md, SCORECARD.md, SHONEN.md, PROVINCE.md",
+    "sibling repos (read-only, via the follow-up seats that audited them): kotodama-shokunin (PROVINCE.md, worldbible-integration-contract.md), chousa-shokunin (PROVINCE.md, claim-verification-r2.md, archives-verified-r9.md)"
+  ],
+  "self_measured_receipts": [
+    "python3 /dev/shm/q1/receipts.py (delivered checker, all direct corpus/fixtures dirs) -> dirs=160 exits={0:32,1:128} violations=399 stderr_nonempty=0",
+    "same census diffed against .ufo/waves/round-89/patches/B1-tuples.json (149 keys) -> added=11 removed=0 changed=4 exit_flips=[] violation_count_changes=[]; changed names = r87-probe-multi-invalid, r87-probe-record-and-chain, r88-mixed-stop, r88-nonholder-stop",
+    "sha256sum corpus/fixtures/check_bible.py -> e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "replay of the command recorded in .ufo/waves/round-89/patches/M4-verify.json before.d1_support.command -> 'D1 r87 ... facts=22 OK=8 not-OK=14' while the same file's after block claims facts_supported=22 (Q89-011)",
+    "delivered-output scan over all 160 dirs -> 'present in raw ' occurrences = 0 ; 'not uniquely resolvable' = 1 (one dir) ; 'absent from the resolved index' = 21 (Q89-003, Q89-004)",
+    "grep -c 'r89' corpus/fixtures/README.md -> 0 ; last sections '## Round 87' :1004, '## Round 88' :1008 (Q89-030)",
+    "grep -n 'none yet' SCORECARD.md -> 76:| — none yet — | | | | (structured capabilities table empty) (Q89-028)",
+    "grep -rhoE 'external-only / [a-z ]+' corpus/ | sort | uniq -c -> 1 'text not delivered at lore', 1 'unverified', 1 'unverified inspiration' (three variants) (Q89-014, Q89-019)",
+    "grep -rn '**Delivery mode:**' corpus/ | wc -l -> 1 (only the R9 demo) (Q89-013)",
+    "grep -n 'Spence' corpus/knowledge/reference-ledger.md -> 13 (fourth row after the table's closing paragraph) (Q89-020)",
+    "sed -n '19,25p' corpus/knowledge/r88-sourced-inspiration-decision-table.md -> R8/R9/R10 rows at :21-:23 with no header or delimiter row above them (Q89-026)",
+    "grep -rl 'integration verification pending\\|Expected after the C1 fix' corpus/fixtures/*/README.md | wc -l -> 9 (Q89-007)",
+    "grep -rl \"dangling holder\\|unknown source '\" corpus/fixtures/*/README.md -> r87-probe-record-and-chain, r89-f2-dangling-from, r89-f2-dangling-to, r89-f2-invalid-source-id (Q89-007)",
+    "grep -c 'Only the shape-invalid branch combines two cause phrases' corpus/knowledge/holder-assessment-boundary.md -> 1 ; file 492 lines, sha256 65fe6cfeb33ebe6e… ; its own banner lines 5 and 7 still read 're-verified against the r88 checker (dcacffd6)' and 'PROPOSAL — not applied' (Q89-029, Q89-033)",
+    "sed -n '1,4p' corpus/knowledge/r87-provenance-chain-decision-table.md -> SUPERSEDED (round-88 closure) banner present (refutes CB1-R16's 'not marked historical' clause; see Q89-036)",
+    "grep -c '^## Round 89' LOG.md -> 0 ; grep -c 'Round 89' SCORECARD.md -> 0 (Q89-043)",
+    "wc -l l0-questions.md -> 5 (K1's authorized premise-correction append present, untracked-modified at read time)",
+    "test -e SKILL.md -> ABSENT ; grep -c 'r89' corpus/fixtures/README.md -> 0 (Q89-028/Q89-030 box-1/box-3 inputs)"
+  ],
+  "axis_state": {
+    "calibration": {
+      "verdict": "improved (bounded)",
+      "sources": ["JCAL1 (4 changed + 11 new of 160, 0 exit flips, 0 violation-count changes, 145 unchanged tuples)", "JCAL3 (10 fixtures replayed + 9-mutation discriminating matrix)", "JCAL5-delta.json (seeded order, python3 -I, independently regenerated baseline: identical census)", "P3-log-r89 (per-axis table)", "H2/H1 (independent census reproductions)", "V2 (checker == X1 patch byte-for-byte, patch hash 8789dcb4… matches X1's record)"],
+      "trades_and_bounds": ["expectation layer: Q89-007 (4 stale READMEs + 9 pending READMEs)", "over-qualification: Q89-001, Q89-002", "coverage of the new wording: Q89-003", "manifest invisibility: Q89-004"]
+    },
+    "coverage": {
+      "verdict": "improved (bounded)",
+      "sources": ["JCOV1 (14/14 anchors; 1/7 -> 7/7 pointers; 22/22 under the anchor rule; ETCSL marker)", "JCOV2 (excerpt discipline + ledger sub-scope)", "JCOV3 (R9 negative demo + R10 record: 7/7 rule statements, 17/17 record elements)", "JCOV4 (fresh-eyes province audit; 14/14)", "JCOV5 (chousa/kotodama rejected-fit; 22/22 corroboration)", "JDEP4 (32/32 facts across two clusters)"],
+      "trades_and_bounds": ["no in-corpus map: Q89-012", "receipt not reproducible: Q89-011", "R9 mode undeclared: Q89-013", "R8 marker: Q89-014", "row-5 cell: Q89-015", "cluster README: Q89-016"]
+    },
+    "depth": {
+      "verdict": "harmed (bounded) recommended by JAXIS at 1b09f3f; improved (bounded) on the artifact surface once the drafted repairs are applied (r88's sequence: follow-up rules harmed, closure repairs, record shows improved)",
+      "sources": ["JDEP1 (rows replay; owner/prospective scoping; append column-consistent)", "JDEP3 (R10 register integrity; 55-id unscoped-sweep hazard)", "JDEP4 (FOR a second capabilities row, conditional on the table repair)", "JAXIS (per-axis recommendation table: depth harmed (bounded); admission: do not admit as-is, repair then admit with R1-R4)", "JCAL5 (doc_parity_check: the boundary doc contradicts the delivered checker at :169)", "P3-log-r89 (depth row: 'a documentation harm is recorded, not netted')"],
+      "trades_and_bounds": ["governance sub-cases undecided 3/3: Q89-023, Q89-024, Q89-025 (JDEP2)", "rendering: Q89-026", "instruction surface: Q89-029, Q89-030, Q89-031, Q89-032, Q89-033, Q89-050", "capability registry: Q89-028", "cross-reference residue: Q89-047, Q89-048"],
+      "note": "JAXIS is a recommendation to the L1; the L1 owns the verdict. This ledger does not rule it."
+    },
+    "lowest_axis_reading": "depth — see r90_proposal.lowest_axis_basis"
+  },
+  "r88_carryover": {
+    "note": "r88 ledger .ufo/waves/round-88/followup/Q1-r88-debt.json carried 49 rows (42 open incl. unlanded). Status below is at 1b09f3f, measured by this seat or by the named r89 sibling.",
+    "closed_by_r89": {
+      "Q88-014": "ETCSL delivery-status marker landed in-table (JCOV1/JCOV2/CB1/JCOV4); literal-token residue re-opened as Q89-019",
+      "Q88-017": "the 14 metadata-only r87 facts now carry delivered anchors -> 22/22 under the anchor rule (JCOV1/JCOV4/JCOV5/P3)",
+      "Q88-030": "the 'complete summary' claim is now met on the valid-key branch and fixture-pinned (JCAL1/JCAL3/H3); the r88 SCORECARD wording still needs retiring -> Q89-029(b)/claim 1",
+      "Q88-031": "the six unexercised first-cause branches now have durable fixtures (8 cause-branch dirs) (JCAL3/P3); discriminating-power residue -> Q89-008",
+      "Q88-032": "the shipped r89 wording matches E1's wording spec verbatim (JCAL1); the wave statement's paraphrase differs -> Q89-009",
+      "Q88-035": "closed in substance for r89: no integrator amendment to the checker (V2), hash equals the seat-verified patch; the general AMEND-artifact rule stays open -> Q89-040"
+    },
+    "re_drifted_by_r89": {
+      "Q88-024": "boundary doc repaired at 51b286b, stale again at 1b09f3f -> Q89-029 (E1 DR-1..DR-15, CB1-R1..R15, H2 F5, H5 item 2, JCAL5 doc_parity_check)",
+      "Q88-025": "r87 decision table pinned SUPERSEDED at 51b286b; its quoted retired strings remain inside the pinned snapshot (CB1-R16 clause refuted, Q89-036)",
+      "Q88-026": "seven r87 fixture READMEs repaired at 51b286b; four READMEs stale again at 1b09f3f (three r89-authored + r87-probe-record-and-chain) -> Q89-007",
+      "Q88-027": "fixtures README gained Round 87/88 sections at 51b286b; no Round 89 section at 1b09f3f -> Q89-030"
+    },
+    "still_open_unchanged": {
+      "Q88-001/002": "the two r61 compatibility exceptions remain historical facts; both dirs are in the 145 unchanged tuples at r89, so no new exception was created",
+      "Q88-003..010": "unlanded r88 alternatives (Kojiki/Voluspa clusters, F2-r88 fixtures, X2/X3/X4 C1 variants, D2 table draft, M4-obs1 repoint) - still unlanded; r89 adds its own set -> Q89-022",
+      "Q88-011": "single passage locator bound (r88 cluster) - unchanged",
+      "Q88-012/013": "r88 clause-map quote and Spence registration: the Spence row landed at 51b286b but outside the table -> Q89-020",
+      "Q88-015/016/018": "decision-table opening/scope-sentence/tense items: row-5 cell stale again on the r89 touch -> Q89-015",
+      "Q88-019": "inspiration-note 'explicitly rejects' wording - unchanged at r89 (not touched)",
+      "Q88-020/021/022/023": "r88 cluster richness, shared-tick naming, cluster README exit code, three stop-README revision notes - unchanged; the 'integration verification pending' class recurred at larger scale -> Q89-007",
+      "Q88-028": "round-record updates are proposals only -> Q89-043",
+      "Q88-029": "kotodama boundary: contract now tracked in kotodama (K1); lore's §1 read/record still unrecorded (K1 F3)",
+      "Q88-033": "house-style qualifier duality - unchanged",
+      "Q88-034": "pre-loop stop origin (entity-level) scope decision - unchanged",
+      "Q88-036..039": "roster integrity, dependency waiting, batch resume, census redundancy - re-stated by Q2 -> Q89-038/040",
+      "Q88-040": "closed as transient at r88; the latent recurrence confirmed (.gitignore still lacks __pycache__) -> Q89-044",
+      "Q88-041/042": "consolidated r87 coverage/evidence-labeling carriages - unchanged",
+      "Q88-044": "capability pre-claim risk: the structured table is still empty at 1b09f3f -> Q89-028",
+      "Q88-045": "H5 dependency gap at r88; the r89 analogue is the poll-protocol deadline spread -> Q89-038"
+    }
+  },
+  "debts": [
+    {
+      "id": "Q89-001",
+      "class": "calibration / over-qualification (behaviour)",
+      "description": "A definite chain break whose observed from_holder is JSON null is reported as a *possible* identity mismatch with a misleading detail ('0 raw entity rows carry this id, but only 0 is in the resolved index'), i.e. the FN-2 qualification fires where no identity exists to resolve. Baseline emitted the definite form; r89 downgrades it.",
+      "evidence": "followup/E1.md DR-5 (severity M); followup/P3-log-r89.md named debt 2; followup/CB1.md CB1-R7; check_bible.py:327-342 holder_identity_detail path",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 2: restrict the predicate to non-null ids and to identity-dependent comparisons; add a durable fixture for a null from_holder on a later record."
+    },
+    {
+      "id": "Q89-002",
+      "class": "calibration / over-qualification (superset)",
+      "description": "A definite tick-order finding (tick <= previous_tick) carries 'input-structural finding, not sourced-canon' plus a holder-identity note whenever a transition holder is unresolved, including a schema-valid None; holder resolution is not a cause of tick ordering. Nothing is suppressed, but the sourcing label of a real finding is softened.",
+      "evidence": "followup/H3.md finding 6 (probe fn2-tick-qualification-superset); followup/P3-log-r89.md named debt 1; followup/E1.md DR-4",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 2: narrow the qualifier to identity-dependent findings, or record the superset as an accepted bound with the reason in the contract doc."
+    },
+    {
+      "id": "Q89-003",
+      "class": "calibration / coverage of the new wording",
+      "description": "The FN-1 second branch ('present in raw sources/entities but absent from the resolved index') has zero durable fixtures: a delivered-output scan over all 160 directories finds 0 occurrences, versus 21 for the 'absent from raw … and absent from the resolved index' half. Scratch probes (JCAL1, H5, E1, CB1) show the branch renders correctly, but the half of the wording that distinguishes raw presence from index resolution is corpus-uncovered.",
+      "evidence": "followup/JCAL1.md named debt (grep -R -F 'present in raw' -> 0); followup/JCAL3.md debt 3; followup/H5.md item 6; followup/H2.md F6; followup/CB1.md seat debt 2; followup/P3-log-r89.md named debt 7; Q1 own scan (0)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 2: add a holder-side and a source-side fixture pair (one extra schema-invalid row carrying the referenced id) and a README line naming the wording."
+    },
+    {
+      "id": "Q89-004",
+      "class": "calibration / verification visibility",
+      "description": "The FN-2 qualification produces zero line changes across the 149 baseline directories, so re-running the prior manifest cannot detect an FN-2 regression; only the two new r89 fixtures gate it.",
+      "evidence": "followup/JCAL1.md named debt (FN-2 invisible to the baseline manifest)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 2 or the exploratory harness: register the FN-2 fixtures and the qualification string as a named parity check so a regression is caught by a re-run rather than by reading."
+    },
+    {
+      "id": "Q89-005",
+      "class": "calibration / verbosity",
+      "description": "When the same unresolved id sits on both sides of a comparison the identity clause is emitted twice with different labels.",
+      "evidence": "followup/E1.md DR-6 (probe p3)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 2 (one-line dedup) or accepted bound recorded in the contract doc."
+    },
+    {
+      "id": "Q89-006",
+      "class": "calibration / code hygiene",
+      "description": "The `'; '.join(record_stop_causes) or 'malformed record'` fallback at check_bible.py:316 is unreachable on a static enumeration of every `valid = False` site, and its string is not in the contract doc's cause vocabulary.",
+      "evidence": "followup/E1.md DR-7 (static path enumeration)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 2 (delete, or justify in the doc)."
+    },
+    {
+      "id": "Q89-007",
+      "class": "documentation / expectation layer (calibration surface)",
+      "description": "Four fixture READMEs quote cause strings the delivered checker no longer prints (r89-f2-dangling-from/-to, r89-f2-invalid-source-id, r87-probe-record-and-chain); nine READMEs still describe expectations as pending integration ('integration verification pending' / 'Expected after the C1 fix'); the three F2 READMEs declare no exit code or finding count; and r89-f2-invalid-source-id is a content misnomer (it exercises unknown source, not malformed source_id).",
+      "evidence": "followup/H5.md items 1 and 7; followup/V2.md named debt 2 (8/11 READMEs match); followup/JCAL3.md debt 1; followup/CB1.md CB1-R17/R18; followup/E1.md DR-8; followup/H2.md F3; Q1 own greps (4 stale, 9 pending)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): reconcile the strings, add exit/count lines, replace the pending phrasing with the delivered-state sentence, and rename or re-scope the misnamed fixture."
+    },
+    {
+      "id": "Q89-008",
+      "class": "calibration / discriminating power (bound)",
+      "description": "Four of the eight delivered cause-branch fixtures (invalid tick/from_holder/to_holder/malformed source_id) produce byte-identical output on baseline and delivered checkers: they pin vocabulary and catch renames (mutation matrix M5-M8) but cannot detect a regression of the r89 change itself.",
+      "evidence": "followup/JCAL3.md debt 4",
+      "status_at_1b09f3f": "bound",
+      "disposition": "record as a bound; the delta-discriminating pair is r89-c1-multi-cause-valid + r89-fn2-unresolved-chain-break."
+    },
+    {
+      "id": "Q89-009",
+      "class": "calibration / record accuracy (bound)",
+      "description": "The wave statement paraphrases FN-1 as the 'absent from the raw table and resolved index' wording, which occurs nowhere in the tree; the delivered strings are 'absent from raw sources/entities and absent from the resolved index'. The delivered wording implements the intent.",
+      "evidence": "followup/JCAL1.md wording-mismatch finding; followup/H2.md F6",
+      "status_at_1b09f3f": "bound",
+      "disposition": "closure text must quote the delivered strings, not the statement's paraphrase."
+    },
+    {
+      "id": "Q89-010",
+      "class": "calibration / artifact provenance (bound)",
+      "description": "The malformed-source_id fixture (corpus/fixtures/r89-c1-malformed-source-id) has no patch artifact: it was authored directly by the L1 integrator to close X1's named debt, disclosed in its README and the commit message. No patch-docked trace exists in the wave's patch set.",
+      "evidence": "followup/JCAL1.md minor provenance asymmetry; followup/Q2.md section 5(b)",
+      "status_at_1b09f3f": "bound",
+      "disposition": "record; the general fix is Q89-040's amendment log."
+    },
+    {
+      "id": "Q89-011",
+      "class": "coverage / receipt integrity",
+      "description": "The round's headline '22/22' does not reproduce from the command stored in its own receipt file: replaying M4-verify.json's before.d1_support.command on the delivered tree prints 'facts=22 OK=8 not-OK=14', while the same file's after block claims facts_supported=22. The number is true only under the wave-spec's grep-anchor rule (14 anchors + 7 pointers + 1 hymn), a weaker rule than the script's literal 'statement in prose' test; the 22 was hand-composed as 8 + 14.",
+      "evidence": "followup/JCOV1.md debt D1; followup/H1.md F1; followup/JCOV5.md F2; followup/P3-log-r89.md named debt 4; Q1 own replay of the recorded command (OK=8)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: replace the receipt with one reproducible command that prints both numbers and names the rule; any closure text stating 22/22 must name the anchor rule."
+    },
+    {
+      "id": "Q89-012",
+      "class": "coverage / rule compliance",
+      "description": "The R5 support rule requires a claim to be mapped 'to the exact delivered excerpt path and line span', but no such map exists inside the corpus: the per-fact path/line evidence for the r87 cluster lives only in wave scratch (patches/S2-fact-map.json, M4-verify.json). An agent holding the tree alone cannot certify 22/22; it must reconstruct the map.",
+      "evidence": "followup/JCOV4.md D1; followup/JCOV2.md named debt 7; followup/JDEP4.md F5; followup/P4-shonen.md D1; followup/P3-log-r89.md named debt 6",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: land an in-corpus claim-to-excerpt map for r87 (and a r88 backfill) in the R9 demo's format."
+    },
+    {
+      "id": "Q89-013",
+      "class": "coverage / R9 conformance",
+      "description": "The four r89-delivered r87 excerpts (and the r88 cluster's excerpt) declare no R9 delivery mode; the only '**Delivery mode:**' line in the tree is the R9 demo's. R9's own integration note defers r87/r88 to 'their next content touch', and delivering four excerpts into r87 at r89 is such a touch, so the exemption does not cleanly cover this case.",
+      "evidence": "followup/JCOV4.md D2 (new finding); followup/JCOV1.md D4; followup/JCOV5.md F6; followup/H5.md item 5; followup/P3-log-r89.md named debt 5; Q1 own grep (1 occurrence)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: declare the mode on the four excerpts (they read as authored source text) or write the exemption into the closure record with its reason."
+    },
+    {
+      "id": "Q89-014",
+      "class": "coverage / R8 marker",
+      "description": "R8 requires the affected element be marked 'external-only / unverified inspiration' in the note/map; the delivered r87 inspiration-note.md and symbolism-clause-map.md contain zero 'external-only' strings, and the marker occurs only inside the R8 row itself. Three distinct 'external-only / …' variants coexist (element, passage, ledger) with no stated authority per surface.",
+      "evidence": "followup/JCOV2.md named debts 1 and 2; followup/JDEP2.md D-JDEP2-2 and D-JDEP2-3; followup/JDEP1.md D3; followup/JCOV4.md D4 (literal); Q1 own variant count (3)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: mark the landed r87 ETCSL motif element, or record why the r87 note is outside R8's retroactive scope, and state the authoritative string per surface."
+    },
+    {
+      "id": "Q89-015",
+      "class": "documentation / rule table",
+      "description": "The decision table's row-5 evidence cell still reads 'M4's repoint patch cites gate-witness metadata but delivers no witness excerpt' and leaves its own 'Recheck the selected cluster's claim-to-excerpt map at integration' instruction with no recorded outcome, although the delivered tree does deliver that witness excerpt.",
+      "evidence": "followup/JCOV1.md D3",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b)/claim 3: update the cell with the delivered outcome."
+    },
+    {
+      "id": "Q89-016",
+      "class": "documentation / fixture source",
+      "description": "corpus/fixtures/r87-myth-cluster/README.md is unchanged since r87 (mtime 01:37, commit e4708cb) and names only lowwater-hymn-excerpt.md and symbolism-clause-map.md: the four excerpts that make 22/22 true are undiscoverable from the README, as is the keeps_watch_with edge.",
+      "evidence": "followup/JCOV1.md D2; followup/H1.md F2; followup/JCOV4.md D3; followup/JCOV5.md F6; followup/P3-log-r89.md named debt 6",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): one sentence listing the four excerpts and the third relation edge."
+    },
+    {
+      "id": "Q89-017",
+      "class": "coverage / record gloss",
+      "description": "keeps_watch_with occurs once in the corpus (r87 relations.json:17) and the checker validates relation type only as a non-empty string; only allied_with has semantics. A reader of relations.json alone reads a watch state with no gloss; the pledge/performance boundary lives only in prose.",
+      "evidence": "followup/JCOV2.md named debt 3",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: gloss non-allied_with types in the fixtures README, or carry the pledge qualifier in the record."
+    },
+    {
+      "id": "Q89-018",
+      "class": "coverage / extraction completeness (bound)",
+      "description": "Three excerpt lines carry in-world detail that the JSON does not extract as a fact (shell-charter:5 'By the seal of both shores', tide-bell-tally:5 'Tally hand: Sen', lowwater-hymn:4-5 bounded by the clause map). None contradicts a fact; source text is now richer than the canon surface.",
+      "evidence": "followup/JCOV2.md finding (b)",
+      "status_at_1b09f3f": "bound",
+      "disposition": "record; a future extraction pass should re-scan the delivered excerpts rather than assume the JSON is complete."
+    },
+    {
+      "id": "Q89-019",
+      "class": "coverage / marker literal",
+      "description": "The ETCSL ledger row's 'Use here' cell reads 'external-only / text not delivered at lore' while the decision table's passage row prescribes the literal token 'external-only / unverified'. Meaning is correct and the locator claim is backed by in-tree receipts, but the prescribed literal is absent (the r88 soft debt F3 is only partly closed).",
+      "evidence": "followup/JCOV4.md D4; followup/JCOV2.md named debt 2; Q1 own variant count",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: align the literal or amend the row to name the ledger-side string as the authoritative one."
+    },
+    {
+      "id": "Q89-020",
+      "class": "record format",
+      "description": "The Spence ledger row sits at reference-ledger.md:13, after the table's closing paragraph (lines 10-12), so it renders as paragraph text rather than a table row; the numeric 4-column check passes and therefore masks it. Introduced at 51b286b; r89's one-line ETCSL edit neither caused nor repaired it.",
+      "evidence": "followup/JCOV2.md named debt 5; followup/JCOV5.md F5; followup/JDEP4.md out-of-scope observation; followup/JDEP3.md adjacent note; followup/P3-log-r89.md named debt 9; Q1 own grep (line 13)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: move the closing paragraph below the row at the next ledger touch."
+    },
+    {
+      "id": "Q89-021",
+      "class": "coverage / delivered (closed)",
+      "description": "The ETCSL ledger row carries the external-only delivery-status marker inside the four-column table with attribution / rights / AI-training still in separate cells; prior rows byte-identical.",
+      "evidence": "followup/JCOV1.md (marker replay); followup/JCOV2.md (c); followup/JCOV4.md (three-question rule intact); followup/CB1.md",
+      "status_at_1b09f3f": "closed",
+      "disposition": "verified done; literal-token residue tracked as Q89-019."
+    },
+    {
+      "id": "Q89-022",
+      "class": "unlanded alternatives",
+      "description": "Wave evidence present but absent from the tree: X2-c1-summary-only.patch, X3-c1-qualify-only.patch, M1-excerpts.patch, M2-excerpts.patch, M3-excerpts.patch (M3 was the selected basis, delivered via M4's synthesis), D1-rows.md (rejected in favour of D2's rows), S3-r8-r10-sketches.md, W2 log/scorecard proposals.",
+      "evidence": "followup/H1.md F3; followup/P3-log-r89.md named debt 8; .ufo/waves/round-89/wave-spec.md landing record; followup/Q2.md section 5(c) (D1 text absent from the delivered table)",
+      "status_at_1b09f3f": "unlanded",
+      "disposition": "record; do not re-open unless a later claim needs them."
+    },
+    {
+      "id": "Q89-023",
+      "class": "depth / governance (R8 uncovered)",
+      "description": "R8 decides only cases with recorded provenance material. For a plausible-but-unrecorded influence (a general motif, or a distinctive sequence parallel) the row's dispositions presuppose a note/map to carry the marker, and no procedure says who raises the question, on what evidence, or where the marker lives when no note/map exists. Two strict/loose readings of the same row yield opposite canon outcomes. The landed r87 ETCSL motif is an R8-shaped case with no element marker and no named disposition.",
+      "evidence": "followup/JDEP2.md Case 1 + D-JDEP2-1/D-JDEP2-3 (probe /tmp/jdep2/probes/r8-motif-unrecorded, CLEAN exit 0); r87 inspiration-note.md:5; r87 integration notes scope R8 prospectivity only against the Spence row",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a): add the trigger (who/evidence/destination) and the marker home, or record an explicit exemption for the landed r87 motif."
+    },
+    {
+      "id": "Q89-024",
+      "class": "depth / governance (R9 uncovered)",
+      "description": "For a translation whose translator is named but whose source version is not recorded, R9's declaration clause ('when known') and its eligibility clause ('an identified translation tied to a named source text/version') pull opposite ways, and the row prescribes a disposition only for the paraphrase/summary branch. Because the mode set is closed, the compliant-looking label conceals the eligibility defect; only 'paraphrase' is exercised anywhere in the tree.",
+      "evidence": "followup/JDEP2.md Case 2 + D-JDEP2-4; followup/JDEP4.md F6 (R9 positive path unexercised)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a): state the label and record for an unidentified-version translation, and reconcile the two clauses."
+    },
+    {
+      "id": "Q89-025",
+      "class": "depth / governance (R10 partially uncovered)",
+      "description": "R10 requires a durable register entry only for confirmed-incompatible pairs; a compared-and-dismissed overlap (two clusters sharing a referent name with different occasions) has no record, no destination and no identity test, because D1's drafted guard ('similar names or wording alone do not establish identity') was not carried into the delivered row. The register file, header, ordering and ID convention are undefined.",
+      "evidence": "followup/JDEP2.md Case 3 + D-JDEP2-5 (probes r10-cluster-a/b); followup/JDEP3.md F2/F3 (register format, scoping)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a): restore an identity test, name the near-miss destination, and define the register's construction rule."
+    },
+    {
+      "id": "Q89-026",
+      "class": "depth / rendering",
+      "description": "The R8-R10 rows are not in any rendered table: the block has no header or delimiter row, so a GFM renderer emits them as pipe text; the main header's sixth column still reads 'r87 / round-88 evidence and integration check'.",
+      "evidence": "followup/JDEP1.md D1 and D4; Q1 own sed of :19-25",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a): add a header + delimiter row (or fold the rows into the main table) and re-label the column."
+    },
+    {
+      "id": "Q89-027",
+      "class": "depth / evidence freshness",
+      "description": "R10's evidence cell quotes JDEP3's registry scan as if current ('no cross-cluster registry'); on the delivered tree the same command returns r89-cross-cluster-contradiction.md. The row text is not falsified (the register destination is still absent) but the quoted scan needs a revision marker.",
+      "evidence": "followup/JDEP1.md D2",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a): add the revision marker or re-run the scan."
+    },
+    {
+      "id": "Q89-028",
+      "class": "depth / capability registry",
+      "description": "The structured '## Capabilities' table still reads '— none yet —' (SCORECARD.md:76) although the r88 narrative records row 1 ('provenance stop-cause assessment'); JDEP4 verified a second capability (in-world excerpt support verification) running on the delivered tree (r87 22/22, Maya 10/10, R9 negative demo) and recommends entering row 2 only together with row 1.",
+      "evidence": "followup/JDEP4.md F3/F4/F7(c) + evidence commands; followup/P3-log-r89.md named debt 10; Q1 own grep (line 76)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): repair the table and enter rows 1 and 2 in one edit, with the evidence command in the round report."
+    },
+    {
+      "id": "Q89-029",
+      "class": "depth / instruction surface (recurrence of Q88-024)",
+      "description": "corpus/knowledge/holder-assessment-boundary.md - the file corpus/fixtures/README.md names as 'the current contract' - was not touched by r89 and is now stale on every surface the wording change touched: cause-table rows 9/10/13, the precedence paragraph asserting 'the only combined clause is the shape-invalid one' (falsified by r89-c1-multi-cause-valid), the 'names only the FIRST check' decision row, a replay block labelled 'delivered output' that no longer reproduces, all code anchors shifted (+27/+36/+40), and the stale census/inventory numbers (149 dirs/19 provenance dirs vs 160/29).",
+      "evidence": "followup/E1.md DR-1..DR-15 (machine-readable E1-drift.json); followup/CB1.md CB1-R1..R15; followup/H2.md F5; followup/H5.md item 2; followup/JCAL5-delta.json doc_parity_check; Q1 own greps (precedence string present once, 492 lines, r88 banner intact)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): rewrite against the delivered checker (E1's replacement text + CB1's refresh are the work order), re-anchor every code reference, and re-run every pasted receipt to byte-exactness."
+    },
+    {
+      "id": "Q89-030",
+      "class": "depth / fixture index (recurrence of Q88-027)",
+      "description": "corpus/fixtures/README.md (1011 lines) ends at '## Round 88' and contains zero occurrences of 'r89': the 11 new fixture directories, the four new r87 excerpts and the R9/R10 demo artifacts are unindexed, so a reader following the index cannot discover them; the Round 87 section still routes the reader to the stale boundary doc as 'the current contract'.",
+      "evidence": "followup/H2.md F4; followup/H5.md item 3; followup/JCOV3.md D2; followup/P4-shonen.md D3; followup/E1.md DR-13; followup/CB1.md CB1-R19; followup/JCAL5-delta.json; Q1 own greps (0 mentions; last section :1008)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): add the Round 89 section listing the 11 dirs + 4 excerpts and re-point the contract sentence."
+    },
+    {
+      "id": "Q89-031",
+      "class": "depth / rule traceability",
+      "description": "The R9 decision-table row ends with 'replay the durable R9 fixture' but never writes the fixture path (corpus/fixtures/r89-inspiration-paraphrase), unlike the R10 integration note which names its demo path; the demo file name (r89-cross-cluster-contradiction.md, singular) versus the durable register name (cross-cluster-contradictions.md, plural) is a collision trap.",
+      "evidence": "followup/JCOV3.md D1 and D3; followup/E1.md DR-15",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a)/claim 3: add the path; decide the register name before the first real entry."
+    },
+    {
+      "id": "Q89-032",
+      "class": "depth / doc anchors",
+      "description": "corpus/fixtures/r87-probe-source-prefix/README.md:1 cites 'the :310 first-record prefix', 'the :306 tick prefix and the :308 chain-break prefix'; those were exact at 51b286b and are now stale by +27/+36/+40 (delivered 333/344/350). The behavioural expectation (5 findings) still reproduces.",
+      "evidence": "followup/H5.md item 4; Q1 own grep of the README line",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): re-anchor or drop the line refs."
+    },
+    {
+      "id": "Q89-033",
+      "class": "depth / self-description",
+      "description": "The tracked boundary doc opens with '> **PROPOSAL — not applied.**' while being the applied file, and its comment header still claims anchors 're-verified against the r88 checker (dcacffd6)'.",
+      "evidence": "followup/E1.md DR-11; followup/CB1.md CB1-R15; followup/H2.md F5; Q1 own sed of lines 5 and 7",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): drop the stale banner and the snapshot hash claim on rewrite."
+    },
+    {
+      "id": "Q89-034",
+      "class": "depth / R10 scoping",
+      "description": "R10's comparison is unscoped: an unscoped corpus sweep finds 55 ids shared across fixture directories, all scaffolding vocabulary (harbor, mira, seal, tower, archive-ledger, courier-log, vela…). Applying R10 naively at corpus scale would manufacture spurious register candidates; the discriminating signature (inspiration-note + symbolism-clause-map + its own sources.json) is stated nowhere.",
+      "evidence": "followup/JDEP3.md F2",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a): add the cluster-signature scoping to the row or the register header."
+    },
+    {
+      "id": "Q89-035",
+      "class": "record debt",
+      "description": "The decision table's integration note refers to '(named debt, r89 ledger)' but no r89 ledger existed at 1b09f3f (grep 'Round 89' LOG.md -> 0).",
+      "evidence": "followup/JDEP1.md D5; Q1 own greps",
+      "status_at_1b09f3f": "closed",
+      "disposition": "closed by this file; it re-opens unless the closure commit lands this ledger in the round record."
+    },
+    {
+      "id": "Q89-036",
+      "class": "sibling-discrepancy resolved",
+      "description": "CB1-R16 asserts the r87 provenance decision table 'is still not marked historical'; the delivered file opens with a 'SUPERSEDED (round-88 closure)' banner naming the boundary doc as the current contract (also read by H5 and P4). The banner is present at 1b09f3f and was introduced at 51b286b, so the clause is refuted; what remains is that the pinned snapshot quotes superseded strings, which is by design when the banner is read.",
+      "evidence": "followup/CB1.md CB1-R16 vs followup/H5.md item 2c + followup/P4-shonen.md + Q1 own sed of corpus/knowledge/r87-provenance-chain-decision-table.md:1-4",
+      "status_at_1b09f3f": "resolved",
+      "disposition": "adopt the H5/P4 reading; do not spend r90 work on CB1-R16's last clause."
+    },
+    {
+      "id": "Q89-037",
+      "class": "depth / row provenance (bound)",
+      "description": "The delivered R8-R10 rows are D2's draft text plus an integrator-inserted Owner sentence; D1's independent draft was not used and its name-identity guard was dropped (row-level sequence ratios 0.9998/0.9998/0.9997 vs 0.14/0.11/0.08).",
+      "evidence": "followup/JDEP2.md D-JDEP2-6; followup/V2.md check 3; followup/Q2.md section 5(c)",
+      "status_at_1b09f3f": "bound",
+      "disposition": "record in the round record so the row-set provenance is auditable; the guard's absence is tracked as Q89-025."
+    },
+    {
+      "id": "Q89-038",
+      "class": "process / poll protocol",
+      "description": "The 25-minute poll protocol cannot run to completion (25 x 60 s = 1500 s against a 600 s shell cap): ten seats report the cap, R1 records an 82 s cadence gap, X1 a 2m54s dead window. The deadline bounded first contact, not completion: 21 of 31 non-clerk seats had an artifact at the 03:52:53 cutoff but 23 of 32 seats wrote after it, with the round's decisive artifacts among the late ones (C7 04:11, C6 04:02, C8 03:59, X1.md 03:57).",
+      "evidence": "followup/Q2.md sections 2 and 4; followup/P3-log-r89.md named debt 3; .ufo/waves/round-89/wave-spec.md landing record",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 wave spec: poll in capped batches (<=9 checks) or a background task, and require a POLLS n SPAN .. GAPS n closing line per dependent seat."
+    },
+    {
+      "id": "Q89-039",
+      "class": "process / freeze",
+      "description": "The landing record is an mtime inventory, not a hash-stamped freeze: two seats (E1, M3) overwrote pre-cutoff artifacts in place, so the cutoff state is not reconstructible from the tree (19 of 32 seats' current mtimes are pre-deadline versus the 21 the record observed). The record is the sole surviving evidence of the cutoff.",
+      "evidence": "followup/Q2.md section 4",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90: clerk writes landing-<ts>.json with path/sha256/mtime per artifact; the follow-up wave diffs delivered-vs-cutoff by hash."
+    },
+    {
+      "id": "Q89-040",
+      "class": "process / roster and amendments",
+      "description": "The roster reconciled (32 declared = 32 delivered) but is still Markdown with no target-hash column and misses one integrator-authored fixture; the three integrator edits of the round (r89-c1-malformed-source-id fixture, the composed ten-row decision table, the S2-fact-map R3 anchor rewrite) have no AMEND artifact, and the commit message is the only record for the last one. r86's wave-spec.json/wave-validation.json pair remains the only machine-readable spec in the repo.",
+      "evidence": "followup/Q2.md sections 3 and 5 (b)(c)(d)(e); followup/JDEP4.md F7(c); followup/P3-log-r89.md named debt 10",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90: publish wave-spec.json (seat/phase/claim/target_hash) + amendments[] with before/after sha256, and assert declared == delivered in wave-validation.json."
+    },
+    {
+      "id": "Q89-041",
+      "class": "process / artifact provenance",
+      "description": "patches/S2-fact-map.json's anchor_basis still names M3-excerpts.patch with status 'candidate excerpt text only; not applied to the cluster', while the delivered shell-charter excerpt bytes are M4's variant; the anchors resolve (14/14), so this is a provenance defect, not a support defect.",
+      "evidence": "followup/Q2.md section 5(d); followup/JCOV1.md D4 (related stale basis)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3 (record fix): correct or annotate the provenance field when the map is landed in-corpus."
+    },
+    {
+      "id": "Q89-042",
+      "class": "process / override disclosure",
+      "description": "C7 recommended preferring M3's shell-charter revision with M5 over the stale M4 final patch; the integrator chose M4 and re-anchored R3 instead. The reason is disclosed only in the commit message; no AMEND artifact exists, so the critic-to-amendment loop is not auditable from the wave directory.",
+      "evidence": "followup/Q2.md section 5(e)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90: fold into the Q89-040 amendment log."
+    },
+    {
+      "id": "Q89-043",
+      "class": "process / round record",
+      "description": "The r89 round record is unlanded: LOG.md has no '## Round 89' section and SCORECARD.md no r89 verdict section; the only r89 record text is the scribe's proposal (patches/W2-log-r89.proposal.md) and followup/P3-log-r89.md. No L1 verdict artifact existed at this seat's read time, and the capabilities table is empty (Q89-028).",
+      "evidence": "followup/P4-shonen.md; followup/P3-log-r89.md; followup/JDEP1.md D5; Q1 own greps (0/0)",
+      "status_at_1b09f3f": "open",
+      "disposition": "closure commit: land the round record; it must state the documentation harm explicitly rather than netting it (P3/H2)."
+    },
+    {
+      "id": "Q89-044",
+      "class": "process / hygiene",
+      "description": ".gitignore still has only '.ufo/interactive-sessions/' (no __pycache__ rule), so compiling the checker in place leaves an untracked build dir (observed by SE1, H1 and Q2 this round). /tmp inode exhaustion (100% of 1M) forced three seats to /dev/shm or single-file extraction, and 5 of 8 poll logs are ephemeral with zero timestamped lines.",
+      "evidence": "followup/H1.md F4/F5; followup/CB1.md seat debt 4; followup/JCOV3.md session note; followup/Q2.md section 6 (ephemeral logs)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90: one .gitignore line; require durable (repo-side or hash-pinned) poll logs."
+    },
+    {
+      "id": "Q89-045",
+      "class": "process / SHONEN",
+      "description": "SHONEN.md is byte-unchanged (4 boxes) and no [x] is claimed: box 3 can move [ ] -> [~] on the D1 rule's two demonstrated applications, but no named non-author verifier has executed the lane's instructions cold; box 2's evidence pointer is stale (LOG.md round-1 only).",
+      "evidence": "followup/P4-shonen.md (per-box verdicts and proposed block)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 record: adopt P4's block; the box-3 [x] path is the exploratory claim's reviewer path below."
+    },
+    {
+      "id": "Q89-046",
+      "class": "process / root cause of the parity recurrence",
+      "description": "Fixture README expectations and knowledge-doc replay blocks are prose, not machine-enforced (no harness compares output to READMEs; grep over corpus/fixtures and .ufo finds only prose and the checker source). That is why the Q89-007/Q89-029/Q89-030 class has now recurred for three rounds (r87, r88, r89) and survived integration each time.",
+      "evidence": "followup/JCAL3.md debt 6; followup/H2.md F3; followup/H5.md handoff; the r88 precedent LOG.md:2073",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 exploratory claim: a parity harness with a negative control, reviewed by a named non-author path."
+    },
+    {
+      "id": "Q89-047",
+      "class": "depth / sibling-craft cross-reference (JAXIS V-D7)",
+      "description": "The R8/R9 rows re-derive limits a sibling lane already owns and has hardened - chousa's claim-vs-source verification (external URL refusal, 'verifying a conversion is not verifying the original', substring-only anchors) and kotodama's inspiration-boundary stop/consult/unknown routes, transformation 'residue test', and translation-labelling requirement (published vs own vs machine-assisted draft) - without citing those records; the lane's own L0 chousa-adjacency question (l0-questions.md:3) stays unanswered.",
+      "evidence": "followup/JCOV5.md F3 and F4 (with chousa/kotodama path quotes); l0-questions.md:3",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(a)/claim 3: add cross-reference lines to R8/R9 rather than new rules, and answer the L0 chousa-adjacency line."
+    },
+    {
+      "id": "Q89-048",
+      "class": "depth / kotodama contract residue (JAXIS V-D7 second half)",
+      "description": "kotodama's worldbible-integration-contract.md is now tracked (206 lines, sha256 e834f503…, authored by kotodama), so the r88 L0 premise ('absent in both lanes') is false and was corrected by K1's one-line append; what remains is that the contract's §1 requires a per-lane acknowledgement record with a pinned digest, and lore holds none. No transfer occurred in r89, so the precondition is untriggered, not violated.",
+      "evidence": "followup/K1.md F1 and F3; followup/JCOV5.md refinement to JCOV4; followup/JCOV4.md kotodama-boundary seam; Q1 own check (l0-questions.md = 5 lines)",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b) or a lane-side record: write lore's §1 read/acknowledgement record (lane-side write, no operator gate)."
+    },
+    {
+      "id": "Q89-049",
+      "class": "coverage / demo completeness (JAXIS V-D8)",
+      "description": "The R9 demo's claim-to-excerpt map dispositions 1 of its fixture's 2 support-rule facts: entities.json#/0/first_appearance (west-stair -> ash-ledger) has no map row while the claim does, although the D1 scope covers 'entity claims and first-appearance pointers'.",
+      "evidence": "followup/JCOV2.md named debt 6",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 3: add the pointer row so the demo shows the rule's full surface."
+    },
+    {
+      "id": "Q89-050",
+      "class": "record retirement (JAXIS C-D6 + D-D5)",
+      "description": "Two delivered records are falsified by the r89 change and must be retired or updated at closure: the r88 SCORECARD bound 'combined same-record summary exists only on the shape-invalid branch' (discharged by C1) and the boundary doc's :365-367/:462-465 claims that dangling to_holder/from_holder, invalid tick and the precedence pairs 'have no durable fixture in the tree yet' (three of the named families now have durable fixtures; six genuinely remain fixture-less).",
+      "evidence": "followup/E1.md DR-14; followup/P4-shonen.md D3; SCORECARD.md:135 (delivered, still asserting the bound); corpus/knowledge/holder-assessment-boundary.md:365-367, :462-465",
+      "status_at_1b09f3f": "open",
+      "disposition": "r90 claim 1(b): retire the bound in the closure record and correct the doc's fixture-less list to the six remaining families."
+    },
+    {
+      "id": "Q89-051",
+      "class": "calibration / receipt stability (bound)",
+      "description": "stdout_sha256 receipts for the five missing-file-family directories depend on the path form passed to the checker (absolute path or alternate cwd changes the embedded path); exit codes and violation counts are stable.",
+      "evidence": "followup/JCAL5.md named debt (invocation-form sensitivity)",
+      "status_at_1b09f3f": "bound",
+      "disposition": "record; pin the invocation form in future censuses or compare (exit, violation_count) for those five directories."
+    },
+    {
+      "id": "Q89-052",
+      "class": "calibration / durable evidence for the claim text (bound)",
+      "description": "The multi-cause durable fixture demonstrates two simultaneous causes; the claim's 'names ALL simultaneous latching causes' property for three or more causes rests on JCAL1's scratch four-cause probe only, and the join order for three clauses is scratch-demonstrated (H3 probe).",
+      "evidence": "followup/JCAL5.md named debt; followup/JCAL1.md scratch four-cause control; followup/H3.md finding 3",
+      "status_at_1b09f3f": "bound",
+      "disposition": "r90 claim 2 may add a three-cause durable fixture if the claim text keeps the word 'ALL'; otherwise state the demonstrated arity in the record."
+    },
+    {
+      "id": "Q89-053",
+      "class": "carried verification debt (H4)",
+      "description": "The r85 probe receipts are pinned to 88c9b1d0… only: anyone diffing the tree against probe-r85-*.txt sees drift accumulated over three rounds (first divergence re-derived at 28706dc; r89 adds none). Separately, 'input-structural finding, not sourced-canon' remains the label on availability stops (r61-independent-unavailable unchanged).",
+      "evidence": "followup/H4.md carried debts 1 and 2",
+      "status_at_1b09f3f": "bound",
+      "disposition": "carry into the r90 record; do not re-chase unless a claim depends on the r85 receipts."
+    }
+  ],
+  "row_count": 53,
+  "counts_by_status": {
+    "open": 41,
+    "bound": 8,
+    "closed": 2,
+    "unlanded": 1,
+    "resolved": 1
+  },
+  "open_count": 42,
+  "open_count_definition": "open (41) + unlanded (1): every row a reader must not treat as settled. bound (8) = accepted limitations recorded, no repair owed; closed (2) = verified done at 1b09f3f; resolved (1) = sibling discrepancy settled by this seat's own check.",
+  "r90_proposal": {
+    "lowest_axis": "depth",
+    "lowest_axis_basis": "Depth is the axis whose declared obligation was least met, and it is the axis the round's own synthesizer rules harmed. JAXIS's per-axis table recommends depth 'harmed (bounded)' at 1b09f3f on the same evidence this ledger indexes (D-D1 blocking: the doc corpus/fixtures/README.md names as the current contract is falsified by the delivered checker on exactly what C1 changed; C-D3: three r89-delivered r89-f2-* READMEs state pre-FN-1 expectations), and its admission recommendation is 'do not admit as-is; repair, then admit' with R1-R4, after which depth becomes improved (bounded) — the r88 sequence verbatim. Two independent reasons point the same way. First, C3's declared purpose was to govern JDEP3's three uncovered inspired-content classes, and the only seat that tested whether the delivered rows decide their own cases found all three undecided or partial (JDEP2: R8 uncovered, R9 uncovered, R10 partial; the probes replay CLEAN, so the gap is in the governing text, not the fixtures). Second, the harm is a recurrence: the boundary doc and the fixture index were repaired at 51b286b (Q88-024..027) and are stale again at 1b09f3f because the r89 wording change moved the checker without moving the instruction surface (E1's 15 drift items, CB1's R1-R15, JCAL5's doc_parity_check, H2 F5, H5). Calibration and coverage each met their declared claims (fixtures + combined summary + FN-1/2 for C1; 14/14 delivered anchors + ETCSL marker for C2) and their residue is smaller and local: calibration's is two one-line qualification defects plus one unfixtured branch (Q89-001/002/003), coverage's is one missing in-corpus map plus receipt and mode-label repairs (Q89-011/012/013). No seat rules any axis harmed other than depth, and none rules an axis unchanged, so this ordering rests on the harmed depth axis plus unmet obligations, not on a scalar.",
+    "claims": [
+      {
+        "n": 1,
+        "axis": "depth (lowest-axis obligation)",
+        "claim": "Close the depth debt on the delivered revision: (a) governance - decide in-row the three sub-cases JDEP2 demonstrated (R8 trigger/evidence/marker-home for an unrecorded-but-plausible influence; R9 disposition and clause reconciliation for a translation whose source text/version is unidentified; R10 identity test restored, near-miss record destination named, register construction rule defined - file name, cluster-signature scoping, header, ordering, ID convention), make R8-R10 render as a real table (header + delimiter row, re-labelled sixth column), refresh R10's quoted registry scan, and name the R9 demo path; (b) instruction-surface parity - rewrite corpus/knowledge/holder-assessment-boundary.md against the delivered checker (E1's DR-1..DR-15 as the work order, E1's replacement text and CB1's refresh as drafts) with the stale PROPOSAL banner dropped and every pasted replay reproducing byte-exact; add the ## Round 89 section to corpus/fixtures/README.md (11 dirs + 4 excerpts + the two demos) and re-point the 'current contract' sentence; reconcile the 4 retired-string READMEs and the 9 'integration verification pending' READMEs and give the F2 READMEs exit/finding lines; re-anchor or drop r87-probe-source-prefix's line refs; add the r87 cluster README sentence listing the four excerpts and the keeps_watch_with edge; repair the structured capabilities table and enter rows 1 and 2 together (JDEP4's FOR recommendation, evidence command in the round report); retire the r88 SCORECARD shape-valid bound (E1 DR-14).",
+        "not_exploratory": true,
+        "evidence_pointer": "Q89-023..Q89-034, Q89-028/029/030/032/033; followup/JDEP2.md cases 1-3; followup/JDEP1.md D1/D2/D4; followup/E1.md + E1-drift.json; followup/CB1.md R1-R15; followup/JDEP4.md F3/F4/F7; followup/H2.md F4/F5; followup/H5.md items 2-4"
+      },
+      {
+        "n": 2,
+        "axis": "calibration (over-qualification repair + coverage of the new wording)",
+        "claim": "Stop the two over-qualifications and pin the unfixtured branch: restrict the FN-2 identity predicate to non-null ids and to identity-dependent findings (a null from_holder is a definite structural mismatch, not an unresolvable identity; a tick-order violation must not inherit the structural prefix or the identity note from an unrelated unresolved holder); deduplicate the identity clause when the same id is unresolved on both sides; delete or justify the unreachable 'or malformed record' fallback at check_bible.py:316; add durable fixtures for a null from_holder on a later record, for both FN-1 raw-present branches (holder-side and source-side, one extra schema-invalid row carrying the referenced id), and register the FN-2 fixture pair as a named regression check so a re-run of the prior manifest cannot silently lose the qualification. Measurable: baseline-vs-delivered census keeps 0 exit changes; the new fixtures add their tuples; `grep -cF 'present in raw'` over the delivered 160-dir output is >= 2 with each branch's README naming the delivered string; the null-from_holder fixture emits the definite form; the tick fixture's disclosure no longer carries the identity note.",
+        "not_exploratory": true,
+        "evidence_pointer": "Q89-001..Q89-006; followup/E1.md DR-5/DR-6/DR-7; followup/H3.md finding 6; followup/JCAL1.md named debts; followup/JCAL3.md debts 3 and 4; followup/H2.md F6; followup/P3-log-r89.md named debts 1 and 2"
+      },
+      {
+        "n": 3,
+        "axis": "coverage (support verdict reproducible from the corpus alone)",
+        "claim": "Make the support verdict a tree-resident, single-command claim: land an in-corpus claim-to-excerpt map for the r87 cluster (and backfill the r88 cluster) carrying source path + line span + delivery mode per fact, in the R9 demo's format; declare the R9 delivery mode on the four r89-delivered excerpts (or write the exemption with its reason into the round record); place R8's element marker on the landed r87 ETCSL motif or record the exemption; replace the M4-verify after-block with one command that prints both numbers and names the rule (anchor rule 22/22, statement rule 8/22); and repair the record surface the claim names - decision-table row-5 cell updated with the delivered outcome, Spence ledger row moved inside the table, ETCSL marker literal aligned or amended, keeps_watch_with glossed, S2-fact-map's anchor_basis corrected. Measurable: `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster` CLEAN exit 0 and the new in-corpus map replays 14/14 with the recorded line spans; the single support command reproduces both numbers; `grep -c 'external-only' corpus/fixtures/r87-myth-cluster/inspiration-note.md` -> 1; 'Delivery mode' appears on the four excerpts; `grep -c 'integration verification pending' corpus/fixtures/*/README.md` -> 0.",
+        "not_exploratory": true,
+        "evidence_pointer": "Q89-011..Q89-020; followup/JCOV1.md D1-D4; followup/JCOV2.md named debts 1-7; followup/JCOV4.md D1-D4; followup/JCOV3.md D1/D2; followup/JDEP4.md F5/F6; followup/P4-shonen.md D1/D2"
+      },
+      {
+        "n": 4,
+        "axis": "process / verification (exploratory, at most one)",
+        "claim": "EXPLORATORY: make the expectation layer machine-checkable. Build a minimal parity harness that (i) replays every fixture README's declared exit code and first-stop expectation against the delivered checker and (ii) replays every pasted command/output block in the lane's knowledge docs, then runs a negative control (mutate one expectation line in a scratch copy; the harness must fail). Feasibility is unproven and is the point of the probe: README formats vary (the three F2 READMEs declare no exit code, the docs mix prose and fenced blocks), so the honest outcome may be a named list of non-mechanical residues rather than a green gate. It is exploratory because the deliverable is the measured boundary of mechanization, not a pass/fail repair.",
+        "not_exploratory": false,
+        "reviewer_path": "Named non-author reviewer path required. Per r88 Q1's own exclusion, a dispatched agent seat does not qualify as the named non-author verifier, so the path is operator-executed acceptance on a fresh clone: `git clone` the repository at the new revision, run the harness, mutate one expectation line in a scratch copy, confirm the harness fails, and record the transcript; P4's box-3 [x] rests on the same path. If the operator path is unavailable, the claim must be recorded as exploratory-with-deferred-acceptance and must NOT be counted as closing Q89-046.",
+        "evidence_pointer": "Q89-046; followup/JCAL3.md debt 6; followup/Q2.md I1-I3; followup/P4-shonen.md box 3"
+      }
+    ],
+    "excluded": [
+      "Process rules (Q89-038..Q89-045) belong in the r90 wave spec and the round record, not in the three craft claims - except Q89-046, which is carried as the exploratory claim because its deliverable is an artifact, not a rule.",
+      "No new coverage surface (no third cluster, no new mythology family) while the parity and governance debts are open: adding content widens the surface a drifted index must describe, which is the trade H2 warns against.",
+      "No further checker-semantics expansion beyond claim 2: the round's own evidence (JCAL3 mutation matrix, H3 mutation replays, H2 line-level diff) shows the delivered delta is disclosure-only and harm-free, so the calibration move's next step is to remove the over-qualifications, not to add behavior.",
+      "Not carried: CB1-R16's 'r87 table not marked historical' clause (refuted, Q89-036) and the r88 unlanded alternatives (Q89-022) unless a later claim needs them."
+    ]
+  }
+}

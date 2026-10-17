@@ -2085,3 +2085,170 @@ paused by operator 2026-10-12, round 22 closed, no round 23.
   delivered checker carried an integrator amendment verified first by phase-2
   V2; the wave-spec roster prose drifted (35 declared / 31 enumerated /
   37 delivered — amended in the spec).
+
+FN-1/FN-2 wording; r87 support completion; R8–R10 governance; luna-max work wave; work
+commit `1b09f3f`)
+
+- Baseline before this round is `51b286b` (r88 closure; lane tree clean). Work wave
+  `.ufo/waves/round-89/` (32 declared / 32 enumerated / 32 delivered seats) landed
+  `1b09f3f` (136 files, +12330/−15); judging/integration wave
+  `.ufo/waves/round-89/followup/` (36 artifacts). No push and no merge this round.
+
+- **Motivating evidence — C1 (calibration).** r88 admitted (bounded): six first-cause
+  branches had no durable fixture; the combined same-record cause summary existed only on
+  the shape-invalid branch, so a valid-key multi-defect record named only the first defect
+  in field order; FN-1/FN-2 input shapes were corpus-uncovered. Measured at `51b286b`: the
+  valid-key multi-cause case disclosed only the invalid tick, and a chain break against a
+  non-uniquely resolvable holder was reported as a definite mismatch.
+
+- **C1 landed — `1b09f3f`.** `corpus/fixtures/check_bible.py` (+54/−14; 395 → 435 lines;
+  sha256 `e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556`): valid-key
+  records retain and join **every** latching first-stop cause with `'; '`; raw entity/source
+  ID counts are tracked alongside the resolved indexes (FN-1, `absent from the raw table and
+  resolved index` wording); a comparison whose expected holder is not uniquely resolvable is
+  qualified as an input-structural *possible* break (FN-2). Eight cause-branch fixtures
+  (5 `r89-c1-*` + 3 `r89-f2-*`), the FN-2 pair, and the R9 demo land with it — 11 new dirs.
+  Counting from the lane root (relative paths; the r88 method trap): **160 dirs**, exits
+  `0=32 / 1=128`, **399 VIOLATION lines** (baseline-149 subset 367), 0 stderr; delta
+  **4 changed tuples + 11 new, 0 exit changes, 0 shared-path violation-count changes**; the
+  4 changed paths are pure FN-1 disclosure-wording substitutions (`r87-probe-multi-invalid`,
+  `r87-probe-record-and-chain`, `r88-mixed-stop`, `r88-nonholder-stop`).
+  `r89-c1-multi-cause-valid` → 4 findings, exit 1, first stop `malformed record (invalid
+  tick); ambiguous holder identity …`; `r89-fn2-control` → 1 finding, unqualified.
+  Corroboration: `V2` (**delivered checker == `X1-c1.patch` on `51b286b` byte-for-byte — no
+  integrator amendment this round**), `JCAL1` (145 unchanged / 4 changed; every changed line
+  inside a `first stop:` disclosure), `JCAL3` (9-mutation discrimination matrix; **improved
+  (bounded)**), `H1` (`145 unchanged, 4 changed, 0 exit flips`), `H2`, `H3` (12 replayed + 4
+  new mutations: 0 lost findings, 0 silent passes), `P1`.
+  Bounds: (a) **tick-order qualification superset** — a definite `tick <= previous_tick`
+  finding carries the qualifier plus a holder-identity note whenever a transition holder is
+  unresolved, though holder resolution is not a cause of tick ordering; (b) **nullable
+  `from_holder` misclassification** — a schema-valid `None` observed holder is scored as a
+  0-raw/0-indexed unresolved identity, so a definite chain break is labelled possible; both
+  reproduced by probe on the delivered tree (`C6`; P3 re-run); (c) three F2 READMEs still
+  quote pre-FN-1 cause strings (`V2`); (d) `S2-fact-map.json`'s `anchor_basis` still names
+  `M3-excerpts.patch` while the delivered bytes are M4's (`Q2` — provenance defect, anchors
+  resolve).
+
+- **C2 landed — `1b09f3f` (coverage).** Four delivered in-world excerpts (`gate-witness`,
+  `dune-register`, `shell-charter`, `tide-bell-tally`) make the r87 cluster **14/14 anchored**
+  (`grep -cF` → 1 each; P3 replay), i.e. **8 → 22 of 22** source-attributed facts (7 entity
+  claims + 7 pointers + 4 relation edges + 4 timeline events; R3's anchor is the
+  pledge-framed delivered phrase, so the pledge-vs-performance boundary holds). The ETCSL
+  ledger row gains `external-only / text not delivered at lore`. Both landed clusters replay
+  `CLEAN: schema, citations, relations, timeline; 0 violations`, exit 0. Corroboration:
+  `JCOV1` (**improved (bounded)**: 0/14 → 14/14 anchors, 1/7 → 7/7 pointers, 0 exit changes
+  over the 149 baseline dirs), `JCOV2` (**improved (bounded)**: excerpt discipline + ledger,
+  contradiction preserved unresolved), `JCOV3`/`JCOV4` (**improved (bounded)**), `JCOV5`
+  (**improved (bounded)**; excerpt footers track `reliability_note` one-for-one), `JDEP4`
+  (32/32 across two clusters), `H1`.
+  Bounds: `M4-verify.json`'s stored probe command replayed on the delivered tree prints
+  `facts=22 OK=8` — its `after.facts_supported: 22` is a hand-composed `8 + 14` and must not
+  be cited as the receipt (`JCOV1`-D1, `JCOV5` F2); `r87-myth-cluster/README.md` is unchanged
+  and lists none of the four excerpts; the decision-table row-5 evidence cell is stale
+  (`JCOV1`-D3); `M2`'s combined replay claimed 22/22 but matches only 3/14 of the current S2
+  anchors (`C7`); the 22/22 is reproducible under the anchor rule from `.ufo` scratch, not
+  yet certifiable from the delivered corpus alone (no in-corpus claim-to-excerpt map, P1).
+
+- **C3 landed — `1b09f3f` (depth).** `corpus/knowledge/r88-sourced-inspiration-decision-table.md`
+  gains **R8** (rights-blocked element disposition), **R9** (excerpt delivery-mode;
+  paraphrase is retelling support only), **R10** (cross-cluster contradiction register with
+  claim pointers and `unresolved` status), each with an owner and prospective scoping;
+  `corpus/knowledge/r89-cross-cluster-contradiction.md` is the R10 worked example (second
+  cluster explicitly hypothetical); `corpus/fixtures/r89-inspiration-paraphrase/` is the
+  durable R9 **negative** demo (mode declared in excerpt and map; anchor hits; support
+  withheld). Corroboration: `JDEP1`/`JDEP2`/`JDEP3`/`JDEP4` — **improved (bounded)**;
+  `JCOV3` (demo sub-scope improved (bounded)); `P4` (box-3 evidence improved). Bounds:
+  **JDEP1-D1 (measured)** — the three appended rows have no header/delimiter row, so a GFM
+  renderer emits them as a paragraph of literal pipe text (the file parses as 1 table / 8
+  rows, identical to baseline); D2 (R10's evidence cell quotes a superseded registry scan);
+  D3 (R8's element marker occurs nowhere outside the row); D4 (sixth-column label still
+  `r87 / round-88`); D5 (`(named debt, r89 ledger)` points at the not-yet-appended entry);
+  `JDEP2` files six governance debts (R8 detection gap, marker-string proliferation, R8
+  unexercised, R9 single-mode/unknown-version gap, R10 record-and-identity test, row-set
+  provenance); `JDEP3` rules register operability **unprovable-but-better** (no shared
+  referent between the two landed clusters).
+
+- **Documentation harm recorded, not netted.** `H2`/`H5`/`E1`/`CB1` measured that the
+  expectation layer did not keep up: `corpus/knowledge/holder-assessment-boundary.md` — the
+  doc `corpus/fixtures/README.md` names as "the current contract" — is stale on every
+  surface the r89 wording touched (cause-table rows, the precedence paragraph falsified by
+  `r89-c1-multi-cause-valid`, the decision row, a replay block that no longer reproduces,
+  code line refs), and it is **unrepaired on the delivered tree**; CB1's full refresh and
+  E1's update exist as follow-up proposals only (E1's named
+  `E1-boundary-update-proposal.md` is absent from the tree). `corpus/fixtures/README.md` has
+  no Round 89 section; `r87-probe-source-prefix/README.md` cites stale line refs. Per the
+  round rule a trade is not an improvement, so depth is not a clean improvement.
+
+- **Per-axis verdicts (proposed; L1 adjudication pending — the round is NOT admitted here).**
+  calibration **improved (bounded)**; coverage **improved (bounded)**; depth **improved
+  (bounded) on the artifact surface, with a documentation harm recorded and unresolved**.
+  No axis `unchanged`; no `unprovable-but-better` at axis scope. Every axis seat recommends
+  bounded-improved and none unscoped. P1's round report (`.ufo/reports/round-89/lore.md`)
+  rules nothing; **no L1 verdict artifact existed at 04:29**.
+
+- **Carried debt.** (1) Tick-order qualification superset. (2) Nullable-`from_holder`
+  over-qualification. (3) Poll protocol (Q2): 19/32 seats' first artifact ≤ deadline but
+  23/32 wrote after it; clerk inventory 21/31 at the cutoff; 10 seats hit the 600 s
+  foreground cap; per-seat deadlines spread 03:52:19–03:53:09; fixes I1 (≤9-check loops or
+  background with 1800 s) / I2 (`landing-<ts>.json` hash-stamped freeze) / I3
+  (`wave-spec.json` + `wave-validation.json`, amendments[]). (4) `M2`'s stale-map 3/14 late
+  replay; `M4`'s pre-pledge R3 anchor. (5) r87/r88 R9 delivery-mode annotation deferred to
+  "next content touch" — r89 is that touch; re-state or discharge. (6) Expectation parity
+  (three F2 READMEs, r87 cluster README, row-5 cell, `corpus/fixtures/README.md`, source-prefix
+  README, FN-2 READMEs). (7) FN-1 raw-present branch has no durable fixture. (8) Unlanded
+  alternatives (`X2`/`X3`, `M1`/`M2`/`M3`, `D1-rows.md`, `S3`, `W2`). (9) Spence ledger row
+  renders outside its table (pre-existing). (10) `capabilities` table still `— none yet —`;
+  `__pycache__` unnamed in `.gitignore`; `SHONEN.md` unchanged with stale evidence lines.
+  (11) JDEP1-D1 rendering defect plus D2–D5. (12) Q2 process debts: three integrator edits
+  (new `r89-c1-malformed-source-id` fixture, composed table, `S2-fact-map.json` R3 anchor
+  rewrite) unverified before commit and disclosed only in-artifact/in the commit message;
+  `C7`'s M3 preference overridden with the reason only in the commit message; the landing
+  record is an mtime snapshot (19/32 seats' cutoff state survives). (13) E1's and P1's
+  named-but-absent artifacts (`E1-boundary-update-proposal.md`, `followup/P1.md`,
+  `followup/P1-measurements.json`). (14) K1's `l0-questions.md` line is uncommitted at
+  record time.
+
+- **Process.** The author→verifier barrier held: work-wave seats produced patches and
+  reports only; patch-level verification happened in the follow-up wave against the
+  delivered tree. **The delivered checker is exactly `X1-c1.patch` applied to `51b286b` —
+  no integrator amendment this round** (`V2`), closing r88's unlogged-amendment gap. Roster
+  reconciles 32/32/32 as a count but is still Markdown (Q2 §3); one integrator-authored
+  fixture has no seat or landing row. Census invocations must use the baseline's relative
+  fixture paths.
+
+- **Province.** `JCOV5`: no chousa or kotodama bleed in the four excerpts, the R9/R10
+  artifacts, or the ETCSL marker; coverage **improved (bounded)**. `K1`: the r89 delta
+  produces no unresolved rights-blocked dispute and no other escalation trigger; the one
+  authorized `l0-questions.md` append lands as line 5 (uncommitted at record time),
+  correcting the r88 kotodama line's obsolete premise (contract now tracked in
+  kotodama-shokunin, `49ac1a5`, sha256 `e834f503…`; lore holds no acknowledgement record).
+  `PROVINCE.md` bytes unchanged; every changed path is under `corpus/` (76) or `.ufo/` (60);
+  the r87 L0 line stands unamended.
+
+- **SHONEN.** No promotion, no push, no merge. `SHONEN.md` is unchanged this round
+  (`git diff --stat 51b286b 1b09f3f -- SHONEN.md` → empty); boxes stay `[~]`/`[ ]` with no
+  `[x]`. `P4` proposes `[ ]` → `[~]` for box 3 (the D1 rule now has two demonstrated
+  applications); box 1 unchanged (no `SKILL.md`); box 2's "logged in LOG.md" clause is
+  satisfied only once this entry is appended. Capabilities table still `— none yet —`; no
+  saturation or retirement is declared.
+
+- **Round record.** `LOG.md` and `SCORECARD.md` are unchanged at `1b09f3f`; this entry is
+  the round's LOG record and the target of JDEP1-D5's pointer. Scorecard draft:
+  `patches/W2-scorecard-r89.proposal.md`.
+
+- **Closure and L1 verdicts (this commit).** Follow-up (32 seats; hyper
+  flash for 12, opencode-go fallback for 20 after hyper credit exhaustion)
+  found the documentation-parity harm recurring (boundary doc falsified by
+  the r89 checker changes; three f2 READMEs stale; R8–R10 render defect) —
+  repaired before admission per the r88 precedent (CB1's verified refresh
+  with E1's corrections; measured README fixes; table header/delimiter;
+  capabilities table now carries both rows). L1 verdicts: calibration
+  **improved (bounded)** — with the two hedged wording shapes (null-holder,
+  unrelated-identity tick) recorded as a bounded definiteness regression and
+  queued as r90's first calibration fix, disclosed, not netted; coverage
+  **improved (bounded)** — 22/22 cites the anchor rule; depth **improved
+  (bounded)** with the doc harm recorded and closed inside the round. Every
+  claim verifies; no unresolved trade; the round is **admitted**. kotodama's
+  handoff contract is tracked at `49ac1a5`; lore-side acknowledgement
+  untriggered (K1).

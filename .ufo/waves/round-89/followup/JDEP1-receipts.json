@@ -1,0 +1,133 @@
+{
+  "seat": "JDEP1",
+  "wave": "round-89 follow-up (world-bible lane) — depth judge #1, R8-R10 verification",
+  "measured_revision": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+  "baseline": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94",
+  "r88_measured_revision_cited_by_rows": "2ea9ef13a928475b13fd578740ea521bed4bd649",
+  "tree_status_at_measure": {
+    "command": "git status --porcelain",
+    "observed": [" M l0-questions.md", "?? .ufo/waves/round-89/followup/"],
+    "target_files_vs_HEAD": "git diff HEAD --stat over table/demo/fixture/ledger/checker -> empty; target evidence read from 1b09f3f",
+    "l0_questions_note": "the uncommitted r89 line concerns the kotodama handoff contract, not R8-R10; no R8-R10 dispute line appended"
+  },
+  "predecessor_artifact": {
+    "path": ".ufo/waves/round-89/followup/JDEP1.md",
+    "note": "same-seat report written 04:21 before this dispatch; preserved to /tmp/jdep1/prior-JDEP1.md; all its receipts re-measured independently and reproduced; this run adds a missing-excerpt R9 control"
+  },
+  "scratch": "/tmp/jdep1/",
+  "hashes": {
+    "corpus/knowledge/r88-sourced-inspiration-decision-table.md@1b09f3f": "9afb6ce93d8472d1487caba6c00ad24f462a32476c35e955b46f7054b8a4b5f9",
+    "corpus/knowledge/r88-sourced-inspiration-decision-table.md@51b286b": "3a218d2a19cd51362fe4f52232e9b3d4da1a968ea747ec9aa3fbde04c0b777e0",
+    "corpus/knowledge/r88-sourced-inspiration-decision-table.md@2ea9ef1": "f85b63e46516f16f2f717574d08be46a9bcc96acee507492f5875fecd113b873",
+    "corpus/knowledge/r89-cross-cluster-contradiction.md@1b09f3f": "7f56bdd6c7ea78494fff46d5fb9a3800e4d3f3cda95899c3bc4e2223180cb580",
+    "corpus/fixtures/r89-inspiration-paraphrase/claim-to-excerpt-map.md": "a621a082752e930c732e9795590c332759435baaef1d5b09b3206de287bdd3f5"
+  },
+  "R8_replay": {
+    "row_claim": "Baseline probe: locator present, source-excerpt.md absent; the R8 terms scanned 0 times",
+    "term_scan_on_2ea9ef1": {
+      "command": "for t in 'may not land' 'must not ship' 'blocked' 'withhold' 'may remain' 'disposition' 'materiality' 'cross-cluster' 'landed canon' 'another fixture' 'aggregate' 'paraphrase' 'verbatim' 'derivative' 'delivery mode'; do git show 2ea9ef1:corpus/knowledge/r88-sourced-inspiration-decision-table.md | grep -ic -- \"$t\"; done",
+      "observed_all_zero": true
+    },
+    "term_scan_on_51b286b": {"observed_all_zero": true, "terms": 12},
+    "delivered_table_scan": {"materiality": 2, "disposition": 1, "re-derive": 1, "external-only / unverified inspiration": 1, "paraphrase": 1, "verbatim": 1, "delivery mode": 1, "cross-cluster": 3, "landed canon": 0},
+    "etcsL_probe": {"command": "python3 (locator in inspiration-note.md; source-excerpt.md exists; ledger ETCSL row + external-only marker)", "observed": {"etcsL_locator_present_122_163": true, "source_excerpt_md_exists": false, "ledger_ETCSL_row_present": true, "ledger_external_only_marker": true}},
+    "citation_resolution": {"JDEP3.md:21": "S1 heading", "JDEP3.md:38": "R4/R6 element-side discussion", "JDEP3-probes.json": "keys ['S1-rights-blocked-source','S2-paraphrased-in-world-excerpt','S3-parallel-conflicts-with-landed-canon']; measured_revision=2ea9ef1; baseline=dfd1fbc"},
+    "result": "row's baseline claim reproduces exactly"
+  },
+  "R9_replay": {
+    "row_claim": "Independent replay used identical valid JSON with paraphrase vs verbatim excerpt: both checker runs were CLEAN, exit 0, and both anchor checks matched; replay the durable R9 fixture",
+    "durable_fixture": "corpus/fixtures/r89-inspiration-paraphrase/",
+    "fixture_replay": {"command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r89-inspiration-paraphrase", "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0},
+    "anchor": {"command": "grep -nF -- 'moved to the west stair' corpus/fixtures/r89-inspiration-paraphrase/ash-ledger-excerpt.md", "observed": "9:A modern paraphrase says that the keeper later summarized the ledger for the court: the tide-mark had been moved to the west stair.", "exit": 0},
+    "mode_declared_in_excerpt": "ash-ledger-excerpt.md:3 '**Delivery mode:** paraphrase (modern wording; not the source's own text)'",
+    "mode_declared_in_map": "claim-to-excerpt-map.md:3 header 'Delivery mode / author'; :5 row '`paraphrase`; fixture writer (R9 demonstration)'",
+    "underlying_text_marker": "claim-to-excerpt-map.md:7 'not delivered / unverified'",
+    "map_shape": {"pipe_lines": 3, "widths": [6, 6, 6]},
+    "my_paraphrase_vs_verbatim_control": {
+      "command": "copy fixture to /tmp/jdep1/r9replay/{paraphrase,verbatim}; verbatim copy gets '**Delivery mode:** verbatim' + '> The tide-mark moved to the west stair.'; diff JSON; run checker + anchor on both",
+      "json_identical": true,
+      "observed": {"paraphrase": {"checker": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0, "anchor_match": true}, "verbatim": {"checker": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0, "anchor_match": true}}
+    },
+    "my_missing_excerpt_control": {"command": "copy fixture; rm ash-ledger-excerpt.md; run checker", "observed": {"checker": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0}, "meaning": "checker never reads excerpt files"},
+    "checker_root_cause": "corpus/fixtures/check_bible.py:44 'path = directory / (section + \".json\")'; file contains no excerpt/.md/glob/listdir token",
+    "citation_resolution": {"JDEP3.md:40": "S2 heading", "JDEP3.md:56": "blank after S2 block", "JDEP3-probes.json": "key present"},
+    "result": "row's claims reproduce exactly; deletion control strengthens the root cause"
+  },
+  "R10_replay": {
+    "row_claim": "Independent replay: both landed clusters return CLEAN alone; the checker rejects two directories (exit 2); manually verify both pointers and preserve unresolved status",
+    "per_cluster": [
+      {"command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster", "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0},
+      {"command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-m3-maya-cluster", "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0}
+    ],
+    "two_dir": {"command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster corpus/fixtures/r88-m3-maya-cluster", "observed": "usage: check_bible.py [-h] bible | check_bible.py: error: unrecognized arguments: corpus/fixtures/r88-m3-maya-cluster", "exit": 2},
+    "registry_scan": {"command": "ls corpus/knowledge/ | grep -i 'contradict\\|registry'", "observed": "r89-cross-cluster-contradiction.md", "jdep3_quoted_scan": "none (pre-r89, no revision marker -> finding D2)"},
+    "register_destination": {"path": "corpus/knowledge/cross-cluster-contradictions.md", "exists": false},
+    "pointer_verification": {
+      "contradictions_ids": ["moon-basin-vow-location"],
+      "moon-basin-vow-gate-account": {"place_id": "mother-tide-gate", "source_id": "gate-witness"},
+      "moon-basin-vow-dune-account": {"place_id": "ash-dune-sanctuary", "source_id": "dune-register"},
+      "hypothetical_path_exists": false,
+      "demo_status_unresolved": true,
+      "demo_has_both_cluster_paths": true,
+      "demo_refuses_register_role": true
+    },
+    "citation_resolution": {"JDEP3.md:57": "S3 heading", "JDEP3.md:75": "R7 limitation discussion", "JDEP3-probes.json": "key present"},
+    "result": "row's claims reproduce; quoted registry scan is a pre-r89 observation (D2)"
+  },
+  "owner_and_scope_verification": {
+    "owner_clause_count": 3,
+    "owner_clause_per_row": {"R8": true, "R9": true, "R10": true},
+    "owner_clause_text": "**Owner:** the lore lane applies this row at integration; unresolved disputes are appended to `l0-questions.md` for the operator — the row is an editorial screen, never a rights or canon determination.",
+    "prospective_phrases_whitespace_normalized": {
+      "R8-R10 are prospective": true,
+      "applies to clusters landed from r89 onward": true,
+      "R10's register is created on first real cross-cluster conflict": true,
+      "R8 does not retroactively affect the landed Spence row": true,
+      "(named debt, r89 ledger)": true
+    },
+    "named_debt_pointer": {"command": "grep -c 'Round 89' LOG.md", "observed": 0, "proposal_only": ".ufo/waves/round-89/patches/W2-log-r89.proposal.md", "finding": "D5"}
+  },
+  "row_shape": {
+    "command": "python3 (unescaped-pipe cell count per pipe line)",
+    "pipe_line_numbers": [10, 11, 12, 13, 14, 15, 16, 17, 18, 22, 23, 24],
+    "widths": [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+    "delimiter_rows": [11],
+    "main_table": {"lines": "10-18", "rows": 9, "header_delimiter": true},
+    "appended_block": {"lines": "22-24", "rows": 3, "header_delimiter": false},
+    "append_diff": "git diff 51b286b..1b09f3f -- <table> -> +17 insertion-only after line 18; no existing line changed"
+  },
+  "render_measurement": {
+    "parser": "marked 18.1.1 (gfm: true), installed at /tmp/jdep1/md",
+    "command": "node /tmp/jdep1/md/render.mjs",
+    "baseline_51b286b": {"tables": 1, "thead": 1, "tr": 8, "R8_in_table": false, "R8_in_paragraph": false, "header6_present": true},
+    "delivered_1b09f3f": {"tables": 1, "thead": 1, "tr": 8, "R8_in_table": false, "R8_in_paragraph": true, "header6_present": true},
+    "conclusion": "R8-R10 rows render as a paragraph of pipe text (D1); the pre-existing table renders identically before/after; sixth-column label unchanged (D4)"
+  },
+  "harm_and_attribution": {
+    "c3_numstat_51b286b_to_1b09f3f": ["table +17/0", "demo +32/0", "reference-ledger +1/-1", "r89-inspiration-paraphrase 8 new files"],
+    "checker_diff_excerpt_related_additions": 0,
+    "checker_change_attribution": "git diff --numstat 51b286b..1b09f3f -- corpus/fixtures/check_bible.py -> 54 14; the +54/-14 is the C1 cause-repair, not C3",
+    "r87_cluster_json_changed": 0,
+    "r88_m3_cluster_changed": false,
+    "new_fixture_exit": 0,
+    "baseline_renders_identically": true,
+    "conclusion": "no axis harmed; no exit movement attributable to C3"
+  },
+  "marker_vocabulary": {
+    "command": "grep -rn 'external-only / unverified inspiration' corpus/",
+    "observed": "single hit inside the R8 row itself (corpus/knowledge/r88-sourced-inspiration-decision-table.md:22)",
+    "corroboration": "JDEP2.md:98-99 (three external-only variants, one occurrence each)",
+    "finding": "D3"
+  },
+  "wait_checks": {
+    "protocol": "two timestamped 60-second polls of .ufo/waves/round-89/followup/",
+    "observed": {"poll_1": "04:28:51 listing md5 71abf123a67d4fe67bad6f5cdd84ee40", "poll_2": "after 60 s, identical md5"},
+    "dependency_note": "no sibling artifact was required; target fixed at 1b09f3f; 36 entries present"
+  },
+  "peer_corroboration": {
+    "JDEP2.md": "adversarial attack on the same rows; rates residual sub-cases uncovered; independently reports marker-string proliferation",
+    "JDEP3.md": "R10 row + worked example improved; register operability unprovable-but-better; no shared referent between landed clusters",
+    "H1/H2/H5/JCAL1/E1/CB1": "independently replay the R9 fixture CLEAN with the same anchor result"
+  },
+  "verdict": "depth — improved (bounded). Every evidence command cited in the R8/R9/R10 rows replays to the cited result (R8 baseline zeros + ETCSL probe; R9 durable fixture + independent paraphrase/verbatim + missing-excerpt controls; R10 per-cluster CLEAN + two-dir exit 2 + pointer resolution). Owner clauses present in all three rows; prospective-scoping notes present. Append is insertion-only and column-consistent (6 cells each) but renders as a paragraph, not table rows, under GFM. No axis harmed. Bounded by D1 (rendering), D2 (stale registry quote in R10 evidence cell), D3 (R8 element marker unexercised), D4 (stale sixth-column label), D5 (r89-ledger named-debt pointer unresolved at this revision)."
+}

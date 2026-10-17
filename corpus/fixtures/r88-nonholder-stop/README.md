@@ -2,7 +2,7 @@
 
 Purpose: prove that a non-holder stop produces disclosures even when there is no holder ambiguity. The unknown source at `[0]` latches an otherwise well-formed, otherwise continuous three-record chain.
 
-## Expected after the C1 fix (integration verification pending)
+## Expected after the C1 fix (verified at closure — follow-up seats V2/JCAL3 line-by-line)
 
 - Checker exit: `1` (intentional unknown source remains a finding).
 - Disclosures at `[0]`, `[1]`, and `[2]` name the unknown source `f1-nonholder-missing-source` first encountered at `entities[3].provenance[0]`.

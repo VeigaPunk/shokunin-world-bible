@@ -73,7 +73,8 @@ retired: none added; no saturation or arbitrary round-count stop.
 
 | Capability | What it can now do | Evidence pointer | First-working round |
 |---|---|---|---|
-| — none yet — | | | |
+| provenance stop-cause assessment | For any provenance-chain stop the checker latches (15+ cause classes), emit at the stop record and every later record a disclosure naming the cause that actually latched, never a later ambiguity | `for d in r88-shape-ambiguous-armed r88-mixed-stop r88-nonholder-stop; do python3 corpus/fixtures/check_bible.py corpus/fixtures/$d; done` → 5/6/4 findings, exit 1 | r88 |
+| in-world excerpt support verification | Verify every source-attributed in-world JSON fact against delivered excerpt prose by fixed-string anchor (D1 support rule) and delivery-mode declaration (R9) | `grep -nF -- '<anchor>' corpus/fixtures/r87-myth-cluster/<source>-excerpt.md` per .ufo/waves/round-89/patches/S2-fact-map.json → 14/14 hits; ledger + note carry the three-question discipline | r89 |
 
 Rows enter only through a round that demonstrates the capability running (`AXES.md` §Capabilities); none enter through this rollout.
 
@@ -169,3 +170,49 @@ end-to-end census + probes; LOG entry this commit); box 3 `[ ]` (D1 rule is
 executable but the lane's two older docs were only just re-synced; no external
 verifier); box 4 `[~]` (province-clean per K1/JCOV5; L0 carries the kotodama
 contract question). No `[x]` — no named non-author verifier.
+
+## Round 89 — luna round 3 of 12 (2026-10-17)
+
+Two-wave regimen round: work wave (32 seats, `openai-codex/gpt-6-luna-max`),
+follow-up wave (32 seats; `hyper/deepseek-v4.1-flash` for the first 12, then
+`opencode-go/deepseek-v4.1-flash` after hyper-lane credit exhaustion — the
+declared fallback chain). Spec `.ufo/waves/round-89/wave-spec.md` (+ landing
+record). Baseline `51b286b`; work commit `1b09f3f`; closure = this commit.
+Scores remain unmeasured (no rubric).
+
+| LIVE axis | r89 verdict | Evidence and limit |
+|---|---|---|
+| calibration | improved (bounded) | C1 `1b09f3f`: valid-key multi-defect records now name ALL simultaneous latching causes as a combined summary (`r89-c1-multi-cause-valid`: `malformed record (invalid tick); ambiguous holder identity to_holder '…'`); FN-2 qualifies comparison findings under unresolvable holder identity (the fn2 pair + 4 controls: no false qualification); FN-1 wording distinguishes raw-present/schema-invalid from truly-absent ("absent from the raw table and resolved index"). Eight durable fixtures pin every claimed cause branch. Counting: closure census 160 dirs (was 149), delta enumerable — 4 changed + 11 new, 0 exit changes, verified by five independent censuses (JCAL1/JCAL5/H2/H4/W1), a 22-probe adversarial audit (JCAL2), 16+4 mutation replays (H3), freeze-check delivered == X1's patch (V2/JCAL1). Bounds (named, not netted): the qualification also hedges two shapes where the identity question is vacuous — `from_holder: null` chains and tick findings under unrelated identity uncertainty (JCAL2 findings 1–3/JCAL4 F3a; one-line fix queued for r90, recorded Q89); FN-1's raw-present half has 0 durable fixtures (truly-absent half pinned); FN-2 is invisible to the 149-dir manifest. JCAL2's rider is accepted: the two hedged shapes are recorded as a bounded wording-definiteness regression, disclosed here and in the work commit. |
+| coverage | improved (bounded) | C2 `1b09f3f` + closure: four delivered in-world source excerpts (gate-witness, dune-register, shell-charter, tide-bell-tally) give the r87 cluster 14/14 grep-verifiable anchors — 22/22 facts under the D1 support rule (the count cites the anchor rule; M4-verify's own script prints OK=8 and is not the receipt — JAXIS correction). R3's whole-claim scope is the pledge boundary ("keeps watch" = pledged, not performed). ETCSL ledger row carries the external-only marker; prior rows byte-identical. Bounds: the four excerpts carry no R9 delivery-mode labels (R9 is prospective by design; annotation debt for their next touch); no in-corpus claim→excerpt map (S2's map is wave-side); `keeps_watch_with` remains a checker-semantics-free relation type (pre-existing). |
+| depth | improved (bounded) | C3 `1b09f3f` + closure: R8 (rights-blocked element disposition incl. materiality screen), R9 (excerpt delivery-mode; paraphrase supports only the retelling), R10 (cross-cluster contradiction register procedure) integrated with owner clauses and prospective scoping; R9 demo fixture + R10 worked example landed; JDEP2's attack found one undecided sub-case per row (r90 candidates); register readiness verified (no shared referent exists between the landed clusters — correctly empty). **Documentation parity (r88's harm class recurred):** the follow-up wave found the r88-closure boundary doc falsified by the r89 checker changes plus three f2 READMEs quoting pre-FN-1 strings, an R8–R10 pipe-paragraph render defect, and a self-referential PROPOSAL banner — all repaired in the closure commit (doc re-derived from CB1's verified refresh with E1's corrections; READMEs measured and fixed; table header/delimiter added; banner landed). Recorded transparently; the harm is closed inside the round. |
+
+Learning trends: expansion improved (160 dirs; the r87 cluster now has a
+fully supported in-world text layer); quality improved (first-stop cause
+vocabulary complete at 15+ classes with durable pins; inspiration governance
+governs disposition, delivery-mode, and cross-cluster conflict); discernment
+improved (claim-text corrections recorded: combined summary scoped to the
+valid-key branch; 22/22 cites the anchor rule; the M4-verify receipt
+disqualified — five seats caught it independently).
+
+Capabilities: the table gains its first two rows this round (see the
+repertoire table: provenance stop-cause assessment, r88; in-world excerpt
+support verification, r89).
+
+planned (r90, from Q1 with L1 adoption): (1) calibration — the null-holder
+predicate one-line fix (return None for `holder_id is None`), FN-1
+raw-present fixtures, FN-2 regression registration, multi-cause ≥3 durable
+fixture; (2) coverage — in-corpus claim→excerpt maps with delivery modes,
+one reproducible support command, R9 labels on the four excerpts; (3) depth —
+JDEP2's undecided sub-cases per R8/R9/R10, cross-cluster register first real
+entry. Process: poll loops within the tool cap with machine-checkable cadence
+(Q2-I1), hash-stamped freeze (Q2-I2), roster+lane-served+failover as data
+(Q2-I3 — this round exercised the failover for real).
+saturation: not declared (no rubric; nudge not triggered). retired: none.
+
+SHONEN: box 1 `[ ]`; box 2 `[~]` (evidence improved again — the r89 census
+and support sweep are the end-to-end task); box 3 `[~]` per P4's proposal
+(the instruction surfaces — checker contract doc, decision tables, fixture
+READMEs — are now all delivered-tree-true after two closure repair rounds;
+still no external verifier, so no `[x]`); box 4 `[~]` (province-clean;
+kotodama contract tracked at `49ac1a5`, lore-side acknowledgement untriggered
+per K1).

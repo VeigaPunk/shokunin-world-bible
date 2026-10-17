@@ -2,7 +2,7 @@
 
 Purpose: distinguish the actual first provenance stop from a later holder ambiguity. The three records are: unknown source at `[0]`, ambiguous `to_holder` at `[1]`, then at `[2]` a holder discontinuity and decreasing tick that the latched stop must leave unassessed.
 
-## Expected after the C1 fix (integration verification pending)
+## Expected after the C1 fix (verified at closure — follow-up seats V2/JCAL3 line-by-line)
 
 - Checker exit: `1` (intentional duplicate entity id, unknown source, and ambiguous holder remain findings).
 - The first stop is the unknown source `f1-mixed-missing-source` at `entities[5].provenance[0]`.

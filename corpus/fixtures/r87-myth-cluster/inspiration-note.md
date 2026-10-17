@@ -17,3 +17,7 @@ The rights status of the ETCSL site's modern presentation, editorial work, and t
 AI-training permission has not been assessed or established. Public accessibility, attribution, and any conclusion about copyright status do not imply permission for AI training; that permission question remains separate and unanswered.
 
 This note records sourced inspiration only. It is not an in-world source and supplies no fictional canon.
+
+Element marker (R8, r89): the ETCSL parallel is recorded as `external-only / unverified inspiration` —
+its locators are verified but its text is not delivered; every canon claim in this cluster is independently
+supported by the delivered in-world excerpts (see the four *-excerpt.md files).

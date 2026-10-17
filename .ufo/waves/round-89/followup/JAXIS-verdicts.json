@@ -1,0 +1,64 @@
+{
+  "seat": "JAXIS",
+  "wave": "round-89-followup",
+  "judged_tree": {
+    "head": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+    "baseline": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94"
+  },
+  "polls": {
+    "log": "/tmp/jaxis/polls.txt",
+    "checks": ["2026-10-17T04:27:38-03:00", "2026-10-17T04:28:38-03:00", "2026-10-17T04:29:38-03:00"],
+    "j_md_files": 11,
+    "late_arrivals": [],
+    "note": "JCAL5 delivered JCAL5-delta.json only; no JCAL5.md exists"
+  },
+  "verdicts": {
+    "calibration": {"verdict": "improved", "bounded": true},
+    "coverage": {"verdict": "improved", "bounded": true},
+    "depth": {"verdict": "harmed", "bounded": true, "transition": "improved (bounded) if repairs R1-R3 land at closure, per r88 sequence"}
+  },
+  "own_receipts": {
+    "census": "dirs 160 exits {1: 128, 0: 32} violations 399",
+    "anchors": "14/14 (S2-fact-map.json vs delivered excerpts)",
+    "r87_cluster": "CLEAN exit 0",
+    "r9_demo": "CLEAN exit 0; anchor at ash-ledger-excerpt.md:9",
+    "multi_cause_valid_key": "first stop: malformed record (invalid tick); ambiguous holder identity to_holder 'r89-c1-multi-cause-valid-ambiguous-holder' at entities[2].provenance[0]",
+    "stale_f2_readmes": ["r89-f2-dangling-to/README.md:9", "r89-f2-dangling-from/README.md:9", "r89-f2-invalid-source-id/README.md:9 — all quote pre-FN-1 cause strings; delivered emits FN-1 wording"],
+    "boundary_doc": {
+      "precedence_claim_169_falsified": true,
+      "cause_rows_152_156_stale": true,
+      "replay_block_338_348_non_reproducing": "baseline checker replays pasted text; delivered emits FN-1 wording (r88-mixed-stop, r88-nonholder-stop)"
+    },
+    "fixture_index": "grep -c r89 corpus/fixtures/README.md -> 0; sections end at Round 88"
+  },
+  "claim_notes": [
+    "C1: delta states both orientations — tree-level 4 changed + 11 new of 160 (0 exit flips); checker-to-checker stdout differs on 9 dirs (4 pre-existing + 5 new).",
+    "C1: combined cause summary scoped to the valid-key branch (shape-invalid branch combined at baseline).",
+    "C1: FN-2 qualification invisible to the 149-dir manifest; pinned by the two r89-fn2 fixtures only.",
+    "C2: 22/22 holds under the anchor form of the D1 rule; M4-verify.json's own script prints OK=8 on both trees; cite the rule.",
+    "C3: verifies; bounds = rendering defect (rows outside table), governance sub-case gaps, register readiness."
+  ],
+  "blocking_repairs": {
+    "R1": "Apply refreshed holder-assessment-boundary.md (CB1-boundary-refresh.md draft; re-verify anchors; drop leftover proposal banner).",
+    "R2": "Reconcile the three r89-f2-* README clauses with delivered FN-1 wording.",
+    "R3": "Closure-scope: Round 89 section in corpus/fixtures/README.md; retire SCORECARD shape-valid bound; update r87-cluster README."
+  },
+  "cheap_repairs": {
+    "R4": ["R8-R10 table header/delimiter + sixth-column label (JDEP1 D1/D4)", "r87-probe-source-prefix line refs (H5 #3)", "R8 element marker on r87 note (JCOV2 #1 / K1 F2)", "ETCSL marker literal alignment (JCOV4 D4)"]
+  },
+  "debt_ids": {
+    "calibration": ["C-D1 FN-1 raw-present branch unfixtured", "C-D2 FN-2 manifest-invisible", "C-D3 stale r89-f2 READMEs (blocking)", "C-D4 E1 DR-5/6/7 code polish", "C-D5 4/8 fixtures not delta-discriminating", "C-D6 retire SCORECARD bound DR-14"],
+    "coverage": ["V-D1 no in-corpus claim map", "V-D2 no R9 delivery modes on 4 excerpts", "V-D3 README updates", "V-D4 ETCSL literal", "V-D5 Spence row detached", "V-D6 row-5 cell stale / R9 fixture path / S2 anchor_basis", "V-D7 chousa/kotodama cross-refs; l0 re-state", "V-D8 R9 demo map 1/2 facts"],
+    "depth": ["D-D1 boundary doc refresh (blocking)", "D-D2 R8-R10 render defect", "D-D3 governance sub-cases R8/R9/R10", "D-D4 register scoping/format", "D-D5 boundary doc fixture-census prose stale", "D-D6 source-prefix line refs", "D-D7 capability table repair + row 2 preconditions"]
+  },
+  "admission": {
+    "recommended": "repair-then-admit",
+    "alternative": "admit with depth harmed (bounded) recorded + R1-R4 as first r90 items",
+    "then_record": "calibration improved (bounded); coverage improved (bounded); depth improved (bounded) with carried debts"
+  },
+  "side_recommendations": {
+    "capability_row": "FOR in-world excerpt support verification (JDEP4), conditional on D-D7; bounds F2/F5/F6",
+    "shonen": "box 3 [ ] -> [~] proposed (P4); no [x]",
+    "process_r90": "Q2 I1 (poll loop fits tool cap), I2 (hash-stamped landing record), I3 (roster/amendments as data)"
+  }
+}

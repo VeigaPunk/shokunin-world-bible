@@ -2,7 +2,7 @@
 
 Purpose: pair with `r89-fn2-unresolved-chain-break`. This chain has the same expected holder `f3-dup` and the same `from_holder` mismatch, but `f3-dup` occurs exactly once in the entity table and resolves uniquely.
 
-## Expected after the FN-2 fix (integration verification pending)
+## Expected after the FN-2 fix (verified at closure — follow-up seats V2/JCAL3 line-by-line)
 
 - Checker exit: `1` (one intentional provenance chain-break finding).
 - The finding at `entities[3].provenance[1]` remains unqualified: `provenance chain break; expected from_holder 'f3-dup', got 'mira'`.
