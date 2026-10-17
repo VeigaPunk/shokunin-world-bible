@@ -1,5 +1,7 @@
 # Authored in-world excerpts
 
+**Delivery mode (R9):** `verbatim` — newly authored fictional text.
+
 Newly authored fictional verse, attributed to in-world source ID `veil-verse`:
 
 > The chalk stair stays a crossing, never a map.

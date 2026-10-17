@@ -2,6 +2,8 @@
 
 Attributed source ID: `shell-charter` — Shellweaver–Reedwarden Shore Charter.
 
+**Delivery mode (R9):** `verbatim` — newly authored fictional text.
+
 By the seal of both shores, these terms stand:
 
 > Shellweavers signed this charter as a signatory faction.

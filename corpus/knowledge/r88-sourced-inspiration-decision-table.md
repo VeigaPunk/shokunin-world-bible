@@ -25,6 +25,43 @@ This table governs how real-world inspiration is cited and how sourced claims ar
 | R9 — An in-world claim is mapped to a delivered excerpt | Declare one delivery mode for each excerpt and repeat it in each claim-to-excerpt map entry: `verbatim`, `translation`, `paraphrase`, or `summary`. Identify the excerpt path and line span; identify the translator/version for a translation and the author/editor for a paraphrase or summary when known. Only delivered source words, or an identified translation tied to a named source text/version, may carry R5 source-claim support; a translation is the translator's rendering, not the source's exact wording. A paraphrase or summary is not the source's own text and cannot by itself establish source-text support; a fixed-string anchor found only there is not an R5 source anchor. Anchor a source-attributed claim in the eligible delivered source words or identified translation. If only a paraphrase/summary is available, label the underlying source text `not delivered / unverified`; the delivered representation supports only the existence of that retelling, not a claim about the source's own wording. Deliver the underlying text for a separate support review only when permitted; otherwise keep it as a research lead, or describe the claim as a secondary retelling and cite its actual intermediary. A fixed-string anchor proves only that the phrase occurs in the delivered representation; it does not establish delivery mode or fidelity. **Owner:** the lore lane applies this row at integration; unresolved disputes are appended to `l0-questions.md` for the operator — the row is an editorial screen, never a rights or canon determination.| Attribute the representation to the source only for a verbatim text or an identified translation; attribute editorial paraphrase/summary to its actual author or intermediary, without presenting it as a quotation. | Assess rights for the delivered expression and edition/translation separately; do not infer clearance from the mode label. | Assess permission separately for the delivered expression; no mode implies permission. | JDEP3 S2 shows a self-consistent paraphrase passing R5's anchor (`JDEP3.md:40-56`; `JDEP3-probes.json`, `S2-paraphrased-in-world-excerpt`). Independent replay used identical valid JSON with paraphrase vs verbatim excerpt: both checker runs were `CLEAN`, exit 0, and both anchor checks matched. At integration, require the mode in both excerpt and map, then replay the durable R9 fixture and inspect the underlying text/translation where applicable. |
 | R10 — An inspired account conflicts with an account in another landed cluster | Before integrating a new cluster, compare overlapping source-attributed claims with relevant landed-cluster claims and confirm a shared referent, field, and occasion. If identity or occasion is unestablished, record a candidate discrepancy and missing evidence, not a confirmed contradiction. For each supported incompatible pair, add a durable entry to `corpus/knowledge/cross-cluster-contradictions.md` containing a stable ID, both relative cluster paths, both claim pointers (file plus event/entity ID and field or claim index), the conflicting assertions, the cited in-world sources, why they cannot both be true as stated, and status `unresolved`. Preserve both clusters and their claims; do not silently select, reconcile, or rewrite either. A real-world parallel cannot adjudicate the in-world disagreement. Keep `contradictions.json` for references the local fixture checker can resolve; do not represent a foreign-cluster pointer as locally validated. Until a corpus-wide checker exists, cross-cluster comparison and register-reference checks are an explicit manual integration gate. Any later editorial resolution must be a separate, sourced decision that retains the original conflict record. **Owner:** the lore lane applies this row at integration; unresolved disputes are appended to `l0-questions.md` for the operator — the row is an editorial screen, never a rights or canon determination.| Cite the source for each in-world account; keep any real-world parallel in the reference ledger, not as an in-world witness or tie-breaker. | A rights conclusion cannot settle canon. | Training permission cannot settle canon. | JDEP3 S3 records the single-directory CLI limit and no cross-cluster registry (`JDEP3.md:57-75`; `JDEP3-probes.json`, `S3-parallel-conflicts-with-landed-canon`). Independent replay: both landed clusters return `CLEAN` alone; the checker rejects two directories (exit 2) [scan re-verified at r89 closure: the only match is the r89 worked example]. At integration, manually verify both pointers and preserve unresolved status; a per-cluster `CLEAN` is not cross-cluster evidence. |
 
+### R8 appendix — plausible but unrecorded influence (decided r90)
+
+When evidence beyond commonplace resemblance or an explicit source-use claim triggers review,
+record a dated, neutral `possible influence: unverified` note (in the inspiration note and
+element map, creating them if absent): it records uncertainty, not influence. R2 (no source
+used) requires BOTH the creator's no-source account AND the editor finding no contrary
+source-specific evidence AND only a commonplace motif. Reserve the
+`external-only / unverified inspiration` marker for established general-motif use with
+independent in-world support; never place it on a merely possible influence. Withhold only the
+affected detail pending re-derivation or permitted review; the element otherwise remains newly
+authored fiction. **Owner:** the lore lane; unresolved disputes go to `l0-questions.md`.
+
+### R9 appendix — translator known, source/version unknown (decided r90)
+
+Translator name alone, with the source/version link unverified, FAILS R5 support. Keep
+`Delivery mode: translation`, record `Source text/version: unidentified; unverified`, and do
+not label the delivered translation itself `not delivered`. Narrow exception: a reliable
+bibliographic record tying the delivered passage and translator to a named source work permits
+support ONLY for a claim about that identified translation — never original wording or an
+edition-specific variant. **Owner:** the lore lane; disputes to `l0-questions.md`.
+
+### R10 appendix — matching name/ID, different occasions (decided r90)
+
+Shared names/IDs trigger comparison but do not prove identity (events are not entities;
+occasion and field must match). Record compared-but-dismissed overlaps (paths, claim pointers,
+supported occasion/scope, rationale) in the incoming cluster README under
+`## R10 comparison outcomes`; unresolved identity/occasion candidates and missing evidence go
+to that section and `l0-questions.md`, NOT the live register. Only a source-backed shared
+referent, field, and occasion with incompatible assertions enters
+`corpus/knowledge/cross-cluster-contradictions.md` (status `unresolved`). Both clusters are
+preserved; a real-world parallel cannot adjudicate the in-world disagreement. **Owner:** the
+lore lane at integration; the register's first real entry awaits a genuine conflict.
+
+(Provenance: merged from seats D1/D2 per seat R1's recommendation; retroactivity checked —
+the r87 ETCSL marker, the r88-m3 delivered Spence passage, and r87's intra-cluster Hara/Sen
+record are unaffected.)
+
 ## Integration boundary
 
 These are governance rows, not checker or schema changes. R8's materiality screen is not rights advice; R9's anchor check is not fidelity evidence; R10's proposed corpus-level register is a manual procedure until a corpus-wide validator exists. Do not mark any of those surfaces mechanically verified solely from a clean fixture replay.

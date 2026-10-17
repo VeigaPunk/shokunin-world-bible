@@ -166,6 +166,8 @@ def check(directory):
         entity_id_counts[entity['id']] = entity_id_counts.get(entity['id'], 0) + 1
 
     def holder_identity_detail(holder_id, reference):
+        if holder_id is None:
+            return None
         raw_count = raw_entity_id_counts.get(holder_id, 0)
         indexed_count = entity_id_counts.get(holder_id, 0)
         if raw_count == 1 and indexed_count == 1:
@@ -319,18 +321,9 @@ def check(directory):
                 continue
             if first_stop is None:
                 if previous_tick is not None:
-                    transition_holder_details = [
-                        holder_identity_detail(previous_holder, 'expected from_holder'),
-                        holder_identity_detail(from_holder, 'from_holder'),
-                    ]
-                    transition_holder_details = [detail for detail in transition_holder_details if detail]
                     if tick <= previous_tick:
-                        prefix = 'input-structural finding, not sourced-canon; ' if chain_has_ambiguous_source or transition_holder_details else ''
-                        identity_note = (
-                            f'holder identity is not uniquely resolvable: {"; ".join(transition_holder_details)}; '
-                            if transition_holder_details else ''
-                        )
-                        errors.append(f'{record_label}.tick: {prefix}{identity_note}provenance tick {tick} must be greater than previous tick {previous_tick}')
+                        prefix = 'input-structural finding, not sourced-canon; ' if chain_has_ambiguous_source else ''
+                        errors.append(f'{record_label}.tick: {prefix}provenance tick {tick} must be greater than previous tick {previous_tick}')
                     if from_holder != previous_holder:
                         expected_detail = holder_identity_detail(previous_holder, 'expected from_holder')
                         from_detail = holder_identity_detail(from_holder, 'from_holder')

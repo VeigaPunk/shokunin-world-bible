@@ -2,6 +2,8 @@
 
 Attributed source ID: `tide-bell-tally` — First Low-Water Bell tally.
 
+**Delivery mode (R9):** `verbatim` — newly authored fictional text.
+
 Tally hand: Sen
 
 | Mark | Entry |

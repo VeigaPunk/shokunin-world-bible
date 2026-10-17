@@ -1,0 +1,20 @@
+--- a/corpus/fixtures/check_bible.py
++++ b/corpus/fixtures/check_bible.py
+@@ -166,6 +166,8 @@
+         entity_id_counts[entity['id']] = entity_id_counts.get(entity['id'], 0) + 1
+ 
+     def holder_identity_detail(holder_id, reference):
++        if holder_id is None:
++            return None
+         raw_count = raw_entity_id_counts.get(holder_id, 0)
+         indexed_count = entity_id_counts.get(holder_id, 0)
+         if raw_count == 1 and indexed_count == 1:
+@@ -325,7 +327,7 @@
+                     ]
+                     transition_holder_details = [detail for detail in transition_holder_details if detail]
+                     if tick <= previous_tick:
+-                        prefix = 'input-structural finding, not sourced-canon; ' if chain_has_ambiguous_source or transition_holder_details else ''
++                        prefix = 'input-structural finding, not sourced-canon; ' if transition_holder_details else ''
+                         identity_note = (
+                             f'holder identity is not uniquely resolvable: {"; ".join(transition_holder_details)}; '
+                             if transition_holder_details else ''
