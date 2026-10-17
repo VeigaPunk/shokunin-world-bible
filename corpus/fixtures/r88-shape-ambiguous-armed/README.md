@@ -10,3 +10,5 @@ Purpose: pin the r87 shape-ambiguous residual with a fixture-local duplicate hol
 - Record `[1]` remains unassessed: do not report its otherwise applicable first-record chain break.
 
 These are post-fix expectations, not measurements against the unpatched checker. The delivered baseline run is recorded in `.ufo/waves/round-88/F1.md`; recheck these expectations against the integrated revision.
+
+Verified on the delivered tree at r88 closure (follow-up seat V2, line-by-line): expectations hold, exit 1, 5 findings.

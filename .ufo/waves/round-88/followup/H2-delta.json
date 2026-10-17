@@ -1,0 +1,474 @@
+{
+ "baseline_commit": "dfd1fbc",
+ "baseline_rerun": {
+  "b1_mismatches": [],
+  "b1_paths": 145,
+  "dirs": 145,
+  "exit0": 30,
+  "nonzero": 115,
+  "stderr_nonempty": 0,
+  "violation_total": 331
+ },
+ "candidate": {
+  "dirs": 149,
+  "exit0": 31,
+  "exit_nonzero": 118,
+  "stderr_nonempty": 0,
+  "violation_total_all": 367,
+  "violation_total_b1_subset": 352
+ },
+ "candidate_commit": "2ea9ef1",
+ "changed_count": 9,
+ "changed_paths": [
+  "corpus/fixtures/r61-independent-empty",
+  "corpus/fixtures/r61-independent-unavailable",
+  "corpus/fixtures/r87-masked-break-from-ambiguous",
+  "corpus/fixtures/r87-masked-break-to-ambiguous",
+  "corpus/fixtures/r87-probe-entry-shape",
+  "corpus/fixtures/r87-probe-multi-invalid",
+  "corpus/fixtures/r87-probe-nonitem-kinds",
+  "corpus/fixtures/r87-probe-record-and-chain",
+  "corpus/fixtures/r87-probe-shape-ambiguous"
+ ],
+ "exit_changes": [],
+ "harm_tests": {
+  "declared_pre_existing_file_edits_not_pure_additions": [
+   {
+    "checker_tuple_effect": "none (r87-myth-cluster tuple unchanged)",
+    "declared_in": ".ufo/waves/round-88/M4.md line 5 (OBS-1 excerpt repair)",
+    "kind": "1 pre-existing claim statement line replaced",
+    "path": "corpus/fixtures/r87-myth-cluster/entities.json",
+    "text_consistency": "new statement matches repaired verse line"
+   },
+   {
+    "clause_map_matches": "8/8",
+    "declared_in": ".ufo/waves/round-88/M4.md line 5",
+    "kind": "1 pre-existing verse line replaced",
+    "path": "corpus/fixtures/r87-myth-cluster/lowwater-hymn-excerpt.md"
+   },
+   {
+    "clause_map_matches": "8/8",
+    "declared_in": ".ufo/waves/round-88/M4.md line 5",
+    "kind": "1 pre-existing row modified + 1 row added",
+    "path": "corpus/fixtures/r87-myth-cluster/symbolism-clause-map.md"
+   },
+   {
+    "content_removed": "none",
+    "declared_in": ".ufo/waves/round-88/D3.md line 8",
+    "kind": "2 pre-existing lines reworded (heading + closing sentence), 1 row added",
+    "path": "corpus/knowledge/reference-ledger.md"
+   }
+  ],
+  "determinism": {
+   "pythonhashseed_differing": 0,
+   "pythonhashseed_variants": [
+    "0",
+    "1",
+    "12345"
+   ],
+   "repeat_census_run_differing_dirs": 0,
+   "spot_fixtures": 9
+  },
+  "disclosure_structure_anomalies_over_149_dirs": 0,
+  "disclosure_structure_tests": [
+   "contiguous suffix from first disclosed record index",
+   "single cause string per provenance array",
+   "single origin per provenance array",
+   "origin is the entity label (entity-level cause) or the earliest disclosed record"
+  ],
+  "exit0_fixtures_with_identical_stdout": 30,
+  "exit_code_changes_on_145_baseline_paths": 0,
+  "legacy_disclosure_lines_replaced": {
+   "all_replaced_covered_by_new_grammar": true,
+   "count": 19,
+   "pre_existing_non_disclosure_lines_lost": 0
+  },
+  "non_disclosure_violation_lines_added": [
+   {
+    "line": "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+    "path": "corpus/fixtures/r87-probe-shape-ambiguous"
+   }
+  ],
+  "non_disclosure_violation_lines_removed": 0,
+  "r61_added_cause_factuality": {
+   "corpus/fixtures/r61-independent-empty": "entities[0] kind=character carrying provenance -> cause 'provenance attached to a non-item entity at entities[0].provenance' is true",
+   "corpus/fixtures/r61-independent-unavailable": "sources.json is invalid JSON -> cause 'source table unavailable at entities[0].provenance' is true"
+  },
+  "record_level_disclosure_coverage_gained": {
+   "corpus/fixtures/r61-independent-empty": 1,
+   "corpus/fixtures/r61-independent-unavailable": 1,
+   "corpus/fixtures/r87-probe-entry-shape": 6,
+   "corpus/fixtures/r87-probe-nonitem-kinds": 2,
+   "corpus/fixtures/r87-probe-record-and-chain": 14,
+   "corpus/fixtures/r87-probe-shape-ambiguous": 2
+  },
+  "record_level_disclosure_coverage_lost": [],
+  "record_level_disclosure_coverage_lost_count": 0,
+  "stale_counts_observed": [
+   {
+    "line": 106,
+    "note": "r87 record; candidate tree has 149 fixture dirs \u2014 r88 round record (LOG/SCORECARD/README) not yet updated at 2ea9ef1",
+    "path": "SCORECARD.md",
+    "text_fragment": "closure census 133 \u2192 145 fixture dirs"
+   }
+  ],
+  "stderr_changes": 0
+ },
+ "method": "independent git archive census; own script; python3 -I isolated; per fixture dir: exit, stdout sha256, stderr sha256, violation count, full stdout",
+ "new_count": 4,
+ "new_paths": {
+  "corpus/fixtures/r88-m3-maya-cluster": {
+   "exit": 0,
+   "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+   "violation_count": 0
+  },
+  "corpus/fixtures/r88-mixed-stop": {
+   "exit": 1,
+   "stdout_sha256": "403a1c1b8be2d7ff988713fdccf00234f5ee91e46ec95cf64a5bba936bb4148c",
+   "violation_count": 6
+  },
+  "corpus/fixtures/r88-nonholder-stop": {
+   "exit": 1,
+   "stdout_sha256": "8a0756c32f7b69968b6f2b12c7b743aec8abb7e2e14fdc1f779f4069ef96f76f",
+   "violation_count": 4
+  },
+  "corpus/fixtures/r88-shape-ambiguous-armed": {
+   "exit": 1,
+   "stdout_sha256": "b665ea9ef9fb593d9016e6c9bbcee40660e0d057013fd52a87415e1774c5411b",
+   "violation_count": 5
+  }
+ },
+ "per_changed": {
+  "corpus/fixtures/r61-independent-empty": {
+   "added_lines": [
+    "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+    "18 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance"
+   ],
+   "after_exit": 1,
+   "after_violations": 18,
+   "before_exit": 1,
+   "before_violations": 17,
+   "pre_existing_lines_preserved_verbatim": true,
+   "pre_existing_violation_lines_missing_from_after": [],
+   "removed_lines": [
+    "17 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": []
+  },
+  "corpus/fixtures/r61-independent-unavailable": {
+   "added_lines": [
+    "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source table unavailable at entities[0].provenance",
+    "7 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source table unavailable at entities[0].provenance"
+   ],
+   "after_exit": 1,
+   "after_violations": 7,
+   "before_exit": 1,
+   "before_violations": 6,
+   "pre_existing_lines_preserved_verbatim": true,
+   "pre_existing_violation_lines_missing_from_after": [],
+   "removed_lines": [
+    "6 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": []
+  },
+  "corpus/fixtures/r87-masked-break-from-ambiguous": {
+   "added_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+    "5 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]"
+   ],
+   "after_exit": 1,
+   "after_violations": 5,
+   "before_exit": 1,
+   "before_violations": 6,
+   "pre_existing_lines_preserved_verbatim": false,
+   "pre_existing_violation_lines_missing_from_after": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]"
+   ],
+   "removed_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "6 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]"
+   ]
+  },
+  "corpus/fixtures/r87-masked-break-to-ambiguous": {
+   "added_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+    "5 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]"
+   ],
+   "after_exit": 1,
+   "after_violations": 5,
+   "before_exit": 1,
+   "before_violations": 6,
+   "pre_existing_lines_preserved_verbatim": false,
+   "pre_existing_violation_lines_missing_from_after": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]"
+   ],
+   "removed_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "6 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]"
+   ]
+  },
+  "corpus/fixtures/r87-probe-entry-shape": {
+   "added_lines": [
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+    "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+    "VIOLATION: entities[6].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+    "8 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+    "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+    "VIOLATION: entities[6].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance"
+   ],
+   "after_exit": 1,
+   "after_violations": 8,
+   "before_exit": 1,
+   "before_violations": 2,
+   "pre_existing_lines_preserved_verbatim": true,
+   "pre_existing_violation_lines_missing_from_after": [],
+   "removed_lines": [
+    "2 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": []
+  },
+  "corpus/fixtures/r87-probe-multi-invalid": {
+   "added_lines": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+    "5 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]"
+   ],
+   "after_exit": 1,
+   "after_violations": 5,
+   "before_exit": 1,
+   "before_violations": 6,
+   "pre_existing_lines_preserved_verbatim": false,
+   "pre_existing_violation_lines_missing_from_after": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]"
+   ],
+   "removed_lines": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "6 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]"
+   ]
+  },
+  "corpus/fixtures/r87-probe-nonitem-kinds": {
+   "added_lines": [
+    "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+    "9 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance"
+   ],
+   "after_exit": 1,
+   "after_violations": 9,
+   "before_exit": 1,
+   "before_violations": 8,
+   "pre_existing_lines_preserved_verbatim": false,
+   "pre_existing_violation_lines_missing_from_after": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]"
+   ],
+   "removed_lines": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "8 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": [
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+    "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]"
+   ]
+  },
+  "corpus/fixtures/r87-probe-record-and-chain": {
+   "added_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[4]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[5]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[6]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[9]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[10]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+    "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+    "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+    "46 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [],
+   "added_violation_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[4]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[5]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[6]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[9]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[10]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+    "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+    "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+    "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]"
+   ],
+   "after_exit": 1,
+   "after_violations": 46,
+   "before_exit": 1,
+   "before_violations": 34,
+   "pre_existing_lines_preserved_verbatim": false,
+   "pre_existing_violation_lines_missing_from_after": [
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]"
+   ],
+   "removed_lines": [
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]",
+    "34 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": [
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]"
+   ]
+  },
+  "corpus/fixtures/r87-probe-shape-ambiguous": {
+   "added_lines": [
+    "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+    "5 violation(s); no canon changed"
+   ],
+   "added_non_disclosure_violation_lines": [
+    "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'"
+   ],
+   "added_violation_lines": [
+    "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+    "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+    "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]"
+   ],
+   "after_exit": 1,
+   "after_violations": 5,
+   "before_exit": 1,
+   "before_violations": 2,
+   "pre_existing_lines_preserved_verbatim": true,
+   "pre_existing_violation_lines_missing_from_after": [],
+   "removed_lines": [
+    "2 violation(s); no canon changed"
+   ],
+   "removed_non_disclosure_violation_lines": [],
+   "removed_violation_lines": []
+  }
+ },
+ "pre_r87_changed_count": 2,
+ "pre_r87_changed_paths": [
+  "corpus/fixtures/r61-independent-empty",
+  "corpus/fixtures/r61-independent-unavailable"
+ ],
+ "removed_count": 0,
+ "removed_paths": [],
+ "role": "harm sweep #2 (independent delta)",
+ "scope": "direct subdirectories of corpus/fixtures containing >=1 checker table JSON (sources/entities/relations/timeline/contradictions .json)",
+ "seat": "H2",
+ "stderr_changes": []
+}

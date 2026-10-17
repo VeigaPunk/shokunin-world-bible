@@ -9,3 +9,5 @@ Purpose: prove that a non-holder stop produces disclosures even when there is no
 - No holder ambiguity, chain break, or decreasing-tick finding is expected; the later records are intentionally continuous and increasing.
 
 These are post-fix expectations, not measurements against the unpatched checker. The delivered baseline run is recorded in `.ufo/waves/round-88/F1.md`; recheck these expectations against the integrated revision.
+
+Verified on the delivered tree at r88 closure (follow-up seat V2, line-by-line): expectations hold, exit 1, 4 findings.

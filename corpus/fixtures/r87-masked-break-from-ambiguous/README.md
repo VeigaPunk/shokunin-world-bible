@@ -1,1 +1,5 @@
 This authored fictional micro-bible is the `from_holder` direction of the provenance assessment probe: the first record names duplicated holder ID `dup` as its source, and two individually valid later records follow it. The duplicate rows are test scaffolding, not a choice between identities or evidence about custody; source IDs resolve only to supplied in-world records and do not establish source support or canon. Run `python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-from-ambiguous` from the lane root; the expected result is exit 1 with the duplicate-id finding, the ambiguous `from_holder` finding, the item-level stop notice, and a per-record disclosure at the stop record and every later record naming `from_holder 'dup'` and the origin record (C1 after-state, commit `03c6746`). Comparisons are disclosed-as-unassessed, never resumed, and no duplicate identity is chosen.
+
+---
+
+**r88 revision note** (commit at r88 closure; measured on the delivered tree: exit 1, 5 findings): delivered checker now reports 5 findings (same merge as the to-ambiguous twin).

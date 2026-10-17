@@ -10,3 +10,5 @@ Purpose: distinguish the actual first provenance stop from a later holder ambigu
 - Record `[2]`'s hidden chain break and decreasing tick remain unreported as comparisons.
 
 These are post-fix expectations, not measurements against the unpatched checker. The delivered baseline run is recorded in `.ufo/waves/round-88/F1.md`; recheck these expectations against the integrated revision.
+
+Verified on the delivered tree at r88 closure (follow-up seat V2, line-by-line): expectations hold, exit 1, 6 findings.

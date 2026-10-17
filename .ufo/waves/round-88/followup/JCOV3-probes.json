@@ -1,0 +1,146 @@
+{
+  "seat": "JCOV3",
+  "subject": "corpus/fixtures/r88-m3-maya-cluster",
+  "tree": "2ea9ef1 (baseline dfd1fbc), git status clean at probe time",
+  "checker": {
+    "path": "corpus/fixtures/check_bible.py",
+    "sha256": "dcacffd6981e1af5f60b31bed20c6eccce25970444088e4ee2e30e3249411911"
+  },
+  "cluster_sha256": {
+    "entities.json": "042b6cc0d70c4d747121d9b277ac031cf21e66822d3c9a3e5ffe0282bba2bddc",
+    "relations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "timeline.json": "f74c664b17fd8d575235ab59432a0ce6f938380e9b5a8d07640aae1d38773493",
+    "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sources.json": "aa252416abc2c863ec4ae86cf25bd4f6e6e841d89e8586255b53362897282d63"
+  },
+  "invocation": "python3 corpus/fixtures/check_bible.py <probe-copy-under-/tmp/jcov3-r88> (cwd = repo root)",
+  "probes": [
+    {
+      "probe": "base-unmutated",
+      "intent": "positive (delivered artifact)",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "probe": "p-f1a-ally-one-way",
+      "intent": "fire: reciprocal alliance",
+      "exit": 1,
+      "output": "VIOLATION: relations[0]: allied_with faction relation 'lantern-wardens' -> 'salt-wardens' lacks a sourced reciprocal relation\n1 violation(s); no canon changed"
+    },
+    {
+      "probe": "p-f1b-ally-reciprocal",
+      "intent": "pass: reciprocal alliance",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "probe": "p-f2a-collide-other-place",
+      "intent": "fire: occupied slot",
+      "exit": 1,
+      "output": "VIOLATION: timeline[1]: double-booked 'aru' at tick 9 in timeline[0] ('quiet-rise') and 'salt-court'\n1 violation(s); no canon changed"
+    },
+    {
+      "probe": "p-f2b-collide-same-place",
+      "intent": "pass: same slot, same place",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "probe": "p-f2c-same-place-distinct-actor",
+      "intent": "control: same place, distinct slot",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "probe": "p-f3a-dep-inversion",
+      "intent": "fire: depends_on inversion",
+      "exit": 1,
+      "output": "VIOLATION: timeline[0].depends_on: timeline inversion 'evin-ninth-bell' tick 9 not before 'aru-ninth-bell' tick 9\n1 violation(s); no canon changed"
+    },
+    {
+      "probe": "p-f3b-dep-forward",
+      "intent": "pass: forward dependency",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "probe": "p-f4a-contra-unresolved",
+      "intent": "fire: contradiction event resolution",
+      "exit": 1,
+      "output": "VIOLATION: contradictions[0].claim_b.event_id: expected exactly one timeline event 'no-such-event'\n1 violation(s); no canon changed"
+    },
+    {
+      "probe": "p-f4b-contra-resolvable",
+      "intent": "pass: contradiction event resolution",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "probe": "p-f5-unknown-source",
+      "intent": "fire: unknown in-world source",
+      "exit": 1,
+      "output": "VIOLATION: entities[0].claims[0].source_id: unknown in-world source 'no-such-source'\n1 violation(s); no canon changed"
+    },
+    {
+      "probe": "p-f6-place-kind",
+      "intent": "fire: place-kind comparability",
+      "exit": 1,
+      "output": "VIOLATION: timeline[0].place_id: not a place 'quiet-rise'\n1 violation(s); no canon changed"
+    },
+    {
+      "probe": "p-f7-dangling-place",
+      "intent": "fire: dangling place entity",
+      "exit": 1,
+      "output": "VIOLATION: timeline[0].place_id: dangling entity 'no-such-place'\n1 violation(s); no canon changed"
+    },
+    {
+      "probe": "p-f8-ambiguous-actor",
+      "intent": "fire: ambiguous actor entity",
+      "exit": 1,
+      "output": "VIOLATION: entities[4].id: duplicate entities id 'aru'\nVIOLATION: timeline[0].entity_id: ambiguous actor entity 'aru'\n2 violation(s); no canon changed"
+    }
+  ],
+  "delivered_structure": {
+    "relations": [],
+    "contradictions": [],
+    "faction_entities": [],
+    "timeline_slot_keys": [
+      [
+        "aru",
+        9
+      ],
+      [
+        "evin",
+        9
+      ]
+    ],
+    "depends_on_edges": [
+      [],
+      []
+    ],
+    "entity_count": 4,
+    "source_count": 2,
+    "timeline_count": 2,
+    "provenance_blocks": 0
+  },
+  "corpus_scan": {
+    "fixture_dirs": 149,
+    "same_slot_same_place_fixtures": [
+      "r21-same-place",
+      "r37-ledger-ambiguous",
+      "r59-duplicate-tower-harbor",
+      "r62-duplicate"
+    ],
+    "same_slot_diff_place_fixtures": 37,
+    "fixtures_with_zero_dep_edges": 50,
+    "allied_with_fixtures": [
+      "ally-one-way",
+      "ally-reciprocal",
+      "r61-allied-empty",
+      "r61-allied-unavailable",
+      "r7-ally-reverse-ambiguous",
+      "r87-myth-cluster"
+    ],
+    "fixtures_with_contradiction_rows": 27
+  }
+}

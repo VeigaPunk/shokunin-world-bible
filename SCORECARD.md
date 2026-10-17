@@ -120,3 +120,52 @@ triggered. retired: none.
 
 SHONEN unchanged: all four boxes `[~]`/`[ ]` with resolvable pointers (P4);
 no `[x]` — no named non-author verifier this round.
+
+## Round 88 — luna round 2 of 12 (2026-10-17)
+
+Two-wave regimen round: work wave (37 seats, `openai-codex/gpt-6-luna-max`,
+six-seat supplementary batch included), follow-up wave (34 seats,
+`hyper/deepseek-v4.1-flash`); spec `.ufo/waves/round-88/wave-spec.md`.
+Baseline `dfd1fbc`; work commit `2ea9ef1`; closure commit = this section's
+commit. Scores remain unmeasured (no rubric); rows below are claims with
+counting commands and measured commits.
+
+| LIVE axis | r88 verdict | Evidence and limit |
+|---|---|---|
+| calibration | improved (bounded) | C1 `2ea9ef1`: first-stop cause disclosure. Every record at/after ANY provenance-chain stop discloses the actual first cause (13+ cause classes: holder ambiguity either field, unknown source, dangling holder either field, malformed record (object/key-set/tick/holder-shape/source-id), non-item provenance, duplicate item id, unavailable source table); shape-invalid dict records carrying ambiguous holder ids arm the stop (non-dict cannot — stated bound); same-record simultaneous causes on the shape-invalid branch get a complete summary (`malformed record (unexpected field set); ambiguous holder identity …`); the `input-structural finding, not sourced-canon` qualifier rides every line; comparisons never resume; no identity is chosen. Counting: closure census 149 dirs (was 145), 31 clean / 118 violations, delta enumerable — 9 changed + 4 new, 0 exit changes; the only pre-r87 changes are `r61-independent-empty`/`r61-independent-unavailable` gaining one accurate disclosure each (compatibility exceptions, recorded). Verified by five independent censuses (V1/C6B/JCAL1/JCAL5/H2), a 42-probe cause audit with 0 mismatches (JCAL2), README expectation checks (V2, J1), and 12 delivered-tree mutation replays (H3). Bounds: combined same-record summary exists only on the shape-invalid branch — shape-valid multi-cause records name the first defect in field order (JCAL4 A3, E1); six first-cause branches lack durable fixtures (JCAL1 debt 2); FN-1/2/3 corpus-uncovered input shapes pre-exist (JCAL2); pre-loop stops name an entity-level origin (E1 debt 2). |
+| coverage | improved (bounded) | C2 `2ea9ef1` + closure: `r88-m3-maya-cluster` (Spence 1913 Maya parallel, delivered excerpt, clause→element symbolism index, shared-tick near-miss) — declared-claim bar met: distinct family, passage-level locators (mechanically verified against the delivered excerpt and the live Gutenberg text by JCOV2/JCOV3/JCOV4), zero unsupported attributions under the D1 support rule (10/10 anchors), OBS-1 repaired via excerpt amendment (Gate named in-verse; 8/8 clause matches). Counting: inspiration notes 1 → 2; census 145 → 149; both clusters exit 0. Bounds: the cluster intentionally carries no factions/relations/depends_on (seat-checklist items from the author blocks, not the declared claim — JCOV1); the "occupied-slot near-miss" is a shared-tick near-miss (slot key is `(entity_id, tick)`) — naming corrected at closure; clause-map quote glyph fixed at closure (2/2 byte-exact); Spence registered in the ledger at closure. |
+| depth | improved (bounded) | C3 `2ea9ef1` + closure: `r88-sourced-inspiration-decision-table.md` (7 rows × 6 columns; three distinct citation-question columns; mechanical grep-anchor support rule covering every source-attributed in-world JSON fact per the R1B scope note; ledger registration row format per `seed.md:26-29`) + ETCSL row and Spence row registered in `reference-ledger.md`. Counting: ledger 3 → 4 → 5 data rows; table rows verified against both landed clusters (JDEP1) and attacked for governance gaps — 3 uncovered inspired-content classes named as r89 candidates (JDEP3: rights-blocked element disposition, paraphrase delivery-mode, cross-cluster contradiction). **Documentation parity:** the follow-up wave found the r88 C1 checker replacement had drifted the lane's two contract docs and seven r87 fixture READMEs (`depth: harmed (bounded)`, JDEP4/JCAL5/H5) — repaired in the closure commit (boundary doc re-derived from CB1's verified refresh and now replays 4/3/6; r87 decision table bannered SUPERSEDED/pinned; READMEs carry revision notes), so the harm is recorded and closed inside the round. |
+
+Learning trends: expansion improved (149 dirs; second cluster family);
+quality improved (first-stop cause vocabulary pinned; doc parity restored);
+discernment improved (49-item debt ledger at `followup/Q1-r88-debt.json`;
+claim-text defects named: "complete summary" branch bound, "occupied-slot"
+misnomer, both corrected in the record).
+
+Capabilities (repertoire table gains its first row, per JDEP5 with L1
+adoption): **provenance stop-cause assessment** — for any provenance-chain
+stop the checker latches (15 cause classes observed), the lane can emit at the
+stop record and every later record a disclosure naming the cause that actually
+latched, never a later ambiguity. Evidence: `for d in r88-shape-ambiguous-armed
+r88-mixed-stop r88-nonholder-stop; do python3 corpus/fixtures/check_bible.py
+corpus/fixtures/$d; done` → 5/6/4 findings, exit 1. First-working round: r88.
+Bounds: non-stop classes (duplicate source id prefix, non-list provenance) are
+out of scope; "first" is per provenance array; same-record combined summary
+only on the shape-invalid branch.
+
+planned (r89, from Q1 with L1 adoption): (1) calibration — durable fixtures
+for the six unexercised first-cause branches + the multi-cause precedence
+question (extend the combined summary or narrow the claim) + FN-1/2/3 input
+shapes; (2) coverage — external-only marker on the ETCSL ledger row, support
+sweep of r87's remaining metadata-only facts under the R1B breadth; (3) depth —
+govern JDEP3's three uncovered inspired-content classes. Process: dependency
+barrier or calibrated wait deadlines (r88: 54% of seats missed a 60 s check;
+authors ran up to +24 min); roster-as-data with phase fields; freeze-then-verify
+the delivered revision after integrator amendments.
+saturation: not declared (no rubric; nudge not triggered). retired: none.
+
+SHONEN: box 1 `[ ]` (no SKILL.md); box 2 `[~]` evidence improved (r88's
+end-to-end census + probes; LOG entry this commit); box 3 `[ ]` (D1 rule is
+executable but the lane's two older docs were only just re-synced; no external
+verifier); box 4 `[~]` (province-clean per K1/JCOV5; L0 carries the kotodama
+contract question). No `[x]` — no named non-author verifier.

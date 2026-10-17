@@ -1,0 +1,263 @@
+{
+  "baseline_reproduction": {
+    "own_baseline_vs_B1_tuples": {
+      "B1_tuples_sha256": "76cf55c0cdce35c538bb869033e1c9642c92901f650304ce547328aec2efb106",
+      "differing_rows": 0,
+      "entries_B1": 145,
+      "entries_own": 145,
+      "key_set_equal": true,
+      "own_baseline_sha256": "76cf55c0cdce35c538bb869033e1c9642c92901f650304ce547328aec2efb106"
+    },
+    "verdict": "JCAL5 own dfd1fbc census is byte-identical to B1-tuples.json (sha256 76cf55c0...)"
+  },
+  "causal_wording_check": {
+    "disclosures_containing_causal_because": 0,
+    "note": "no delivered disclosure line asserts a causal \"because ... first occurred at\"; the r87 causal form appears only in stale knowledge docs"
+  },
+  "census": {
+    "baseline": {
+      "dirs": 145,
+      "exit_0": 30,
+      "exit_nonzero": 115,
+      "violations": 331
+    },
+    "delivered": {
+      "dirs": 149,
+      "exit_0": 31,
+      "exit_nonzero": 118,
+      "violations": 367
+    }
+  },
+  "delta": {
+    "baseline_count": 145,
+    "changed": [
+      {
+        "after": {
+          "stdout_sha256": "b3811fdc3589870f374ce1353f094a6390b723903df5026e44e85387290ff9c1",
+          "violation_count": 18
+        },
+        "before": {
+          "stdout_sha256": "ff1bdabab22f9c7de2c1b79c556e79b93ec30df7faf2f597a8e0a04602437427",
+          "violation_count": 17
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r61-independent-empty"
+      },
+      {
+        "after": {
+          "stdout_sha256": "02a2876c9ddde1352523a5935b86986b272976e154dee1da14d8adb995c9cfa7",
+          "violation_count": 7
+        },
+        "before": {
+          "stdout_sha256": "85e70ef66addaf7cdf24e26ee7452440b3aa1e3c6ce6abb497d79f1b1ed88c83",
+          "violation_count": 6
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r61-independent-unavailable"
+      },
+      {
+        "after": {
+          "stdout_sha256": "9e16c896c5607187d5c6efe210d6584f57be07795b8ee145674170fd98d89f78",
+          "violation_count": 5
+        },
+        "before": {
+          "stdout_sha256": "f6ec78fbeac0c25826048e1c36a1dafb0d40a667979f4333451e84d8174ccb4a",
+          "violation_count": 6
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r87-masked-break-from-ambiguous"
+      },
+      {
+        "after": {
+          "stdout_sha256": "56574cad390804e520f85792c712a1ad97fcc8e6b49a5609ed920f7fde361f67",
+          "violation_count": 5
+        },
+        "before": {
+          "stdout_sha256": "bded9b133e16d975903ddb5cc945643097a740cd3fae85f41f03410cc073d72b",
+          "violation_count": 6
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r87-masked-break-to-ambiguous"
+      },
+      {
+        "after": {
+          "stdout_sha256": "4bef15d82f23759d1958e9b5db47205fbbfde081df64ef870a1eb93ce08399e9",
+          "violation_count": 8
+        },
+        "before": {
+          "stdout_sha256": "feda8bf3c78e9bcc861dfe0554f7d592558470359c6dfd3d60ab852cb83a6b18",
+          "violation_count": 2
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r87-probe-entry-shape"
+      },
+      {
+        "after": {
+          "stdout_sha256": "e73bb6fe4e2390aa41922ea87ceca832b486b306619d8a5f1f8ec5d3838bc8e3",
+          "violation_count": 5
+        },
+        "before": {
+          "stdout_sha256": "143ae255bbe6cccb94e695ea5f4bd769ca38f0177bd05036bd4b75859affd551",
+          "violation_count": 6
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r87-probe-multi-invalid"
+      },
+      {
+        "after": {
+          "stdout_sha256": "723424c6d25621d5fc3fe6a31e13c99d65362ef3f99eeb08d65a9712dd5414f1",
+          "violation_count": 9
+        },
+        "before": {
+          "stdout_sha256": "b92e54ab9dee4ec1dc087386110d456d0cab11e805f9319311b8535f33f173a0",
+          "violation_count": 8
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r87-probe-nonitem-kinds"
+      },
+      {
+        "after": {
+          "stdout_sha256": "0394cd33aa81cec788582938bff8b95d30043a17813fa5e0870de8c3e56631e1",
+          "violation_count": 46
+        },
+        "before": {
+          "stdout_sha256": "8bd72d76ad40558e7869c6814780b55011e8910c975db058f82490cebea734d2",
+          "violation_count": 34
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r87-probe-record-and-chain"
+      },
+      {
+        "after": {
+          "stdout_sha256": "a73e70a141c85489d9e2d54c800acf25472ff65c51909c428f69c98938df545c",
+          "violation_count": 5
+        },
+        "before": {
+          "stdout_sha256": "979ff05fffd6f10f097163bcb3b9d6d2c5b0a2e6565ea687c66202cf6ee0c6c5",
+          "violation_count": 2
+        },
+        "fields": [
+          "stdout_sha256",
+          "violation_count"
+        ],
+        "path": "corpus/fixtures/r87-probe-shape-ambiguous"
+      }
+    ],
+    "changed_count": 9,
+    "delivered_count": 149,
+    "exit_change_count": 0,
+    "missing_count": 0,
+    "missing_paths": [],
+    "new_count": 4,
+    "new_paths": [
+      "corpus/fixtures/r88-m3-maya-cluster",
+      "corpus/fixtures/r88-mixed-stop",
+      "corpus/fixtures/r88-nonholder-stop",
+      "corpus/fixtures/r88-shape-ambiguous-armed"
+    ],
+    "violation_delta": 36
+  },
+  "determinism": {
+    "run1_sha256": "9a54d1e04e60b88f31019fb20ac3c9e424dbfd4cdbb30469fcf67eb2d101d7f0",
+    "run1_vs_run2_cmp": "byte-identical",
+    "run1_vs_run3_seed8803_tuple_map_equal": true,
+    "run2_sha256": "9a54d1e04e60b88f31019fb20ac3c9e424dbfd4cdbb30469fcf67eb2d101d7f0",
+    "run3_seed8803_sha256": "9a54d1e04e60b88f31019fb20ac3c9e424dbfd4cdbb30469fcf67eb2d101d7f0",
+    "verdict": "tuple map is traversal-order independent and byte-reproducible"
+  },
+  "disclosure_sweep": {
+    "coverage_gaps": 0,
+    "disclosure_lines_total": 47,
+    "fixtures_with_disclosures": 12,
+    "gaps": {},
+    "origin_latches": 17,
+    "qualifier_missing": 0,
+    "rule_checked": "for every entity with a latched first stop, each provenance record index >= origin carries a disclosure naming that origin; no record before the origin carries one; every disclosure line carries the input-structural qualifier",
+    "verdict": "PASS: 17 origin latches, 47 disclosure lines, 0 qualifier omissions, 0 coverage gaps"
+  },
+  "doc_parity_check": {
+    "note": "both stale docs pin their own snapshot commit (2b48ca7) but live in corpus/knowledge/ and paste verbatim outputs that no longer reproduce on the delivered tree; neither was updated at 2ea9ef1",
+    "r85_harbor_repro": {
+      "baseline_dfd1fbc_findings": 7,
+      "delivered_findings": 6
+    },
+    "r85_isolated_ambiguous": {
+      "baseline_dfd1fbc_findings": 4,
+      "delivered_findings": 3
+    },
+    "r85_masked_ambiguous": {
+      "baseline_dfd1fbc_findings": 5,
+      "delivered_findings": 4,
+      "doc_corpus_knowledge_holder-assessment-boundary.md_pasted_findings": 5,
+      "doc_matches": "baseline (2b48ca7), not delivered"
+    },
+    "stale_docs": [
+      "corpus/knowledge/holder-assessment-boundary.md",
+      "corpus/knowledge/r87-provenance-chain-decision-table.md"
+    ]
+  },
+  "judged_tree": {
+    "baseline_commit": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+    "delivered_checker_sha256": "dcacffd6981e1af5f60b31bed20c6eccce25970444088e4ee2e30e3249411911",
+    "delivered_commit": "2ea9ef13a928475b13fd578740ea521bed4bd649",
+    "tree_clean_at_judgement": true
+  },
+  "method": {
+    "baseline_archive": "git archive dfd1fbc | tar -x -C /tmp/lore-r88-JCAL5-base",
+    "census_command_template": "python3 -I corpus/fixtures/check_bible.py corpus/fixtures/<dir>   (cwd = archive root)",
+    "delivered_archive": "git archive 2ea9ef1 | tar -x -C /tmp/lore-r88-JCAL5",
+    "independent_baseline": "JCAL5 regenerated the dfd1fbc baseline itself rather than trusting B1-tuples.json",
+    "scratch_only": "/tmp/lore-r88-JCAL5*, /tmp/lore-r88-JCAL5-base*",
+    "traversal": "shuffled direct child dirs, random.Random(8802); third run used seed 8803",
+    "tuple_schema": "fixture path -> {exit, stdout_sha256, violation_count}"
+  },
+  "new_fixture_exits": {
+    "corpus/fixtures/r88-m3-maya-cluster": {
+      "exit": 0,
+      "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+      "violation_count": 0
+    },
+    "corpus/fixtures/r88-mixed-stop": {
+      "exit": 1,
+      "stdout_sha256": "403a1c1b8be2d7ff988713fdccf00234f5ee91e46ec95cf64a5bba936bb4148c",
+      "violation_count": 6
+    },
+    "corpus/fixtures/r88-nonholder-stop": {
+      "exit": 1,
+      "stdout_sha256": "8a0756c32f7b69968b6f2b12c7b743aec8abb7e2e14fdc1f779f4069ef96f76f",
+      "violation_count": 4
+    },
+    "corpus/fixtures/r88-shape-ambiguous-armed": {
+      "exit": 1,
+      "stdout_sha256": "b665ea9ef9fb593d9016e6c9bbcee40660e0d057013fd52a87415e1774c5411b",
+      "violation_count": 5
+    }
+  },
+  "role": "Calibration judge #5 (method-varied census: shuffled traversal seed 8802, python3 -I)",
+  "round": 88,
+  "seat": "JCAL5"
+}

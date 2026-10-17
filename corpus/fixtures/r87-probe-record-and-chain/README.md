@@ -17,3 +17,7 @@ python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-probe-record-and-chai
 ```
 
 Expected: 35 findings, exit 1; each class above is observable in the pasted output of `corpus/knowledge/r87-provenance-chain-decision-table.md`.
+
+---
+
+**r88 revision note** (commit at r88 closure; measured on the delivered tree: exit 1, 46 findings): delivered checker now reports 46 findings (per-record first-stop disclosures; row-26/28 claims still demonstrated).

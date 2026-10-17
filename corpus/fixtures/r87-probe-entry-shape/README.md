@@ -11,3 +11,7 @@ python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-probe-entry-shape
 ```
 
 Expected: two findings — `entities[6].id: duplicate entities id 'rope'` and `entities[4].provenance: expected array` — exit 1. The empty list on `seal` produces no finding, and the duplicated `rope` identity disables chain eligibility for both `rope` rows, so the would-be break at `rope` record 2 is not compared.
+
+---
+
+**r88 revision note** (commit at r88 closure; measured on the delivered tree: exit 1, 8 findings): delivered checker now reports 8 findings (non-holder stops now disclose their first cause).

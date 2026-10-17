@@ -58,3 +58,13 @@ Implementers/authors produce patches + reports only. Patch-level
 verification happens in phase 2 against the DELIVERED tree; phase-1
 same-wave verifiers were r87's collision source and are intentionally absent
 here except critics (design-level) and T1 (cross-draft).
+
+## Closure amendments (L1)
+
+- Roster correction: the spec declared "35 seats" and enumerated 31; the delivered
+  wave is 37 — the six-seat supplementary batch (C5B, C6B, C7B, J1, R1B, V1)
+  is part of this round's wave despite not appearing in the manifest above.
+- Integrator amendment: the delivered checker is `X1-c1.patch` plus a 4-line
+  same-record simultaneous-cause summary at `check_bible.py:227-230` (closing
+  seat C5B's over-attribution falsification). No phase-1 receipt covers the
+  amended revision; its first independent verification is follow-up seat V2.

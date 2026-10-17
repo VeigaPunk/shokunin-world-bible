@@ -1,3 +1,9 @@
+<!-- SUPERSEDED (round-88 closure): this table pins the r87 checker at `2b48ca7` and its
+     rows remain a historical record of that snapshot. The disclosure family it documents
+     was replaced at `2ea9ef1` by the first-stop cause template; the current contract is
+     `corpus/knowledge/holder-assessment-boundary.md` (refreshed at r88 closure). Do not
+     cite this table's notice/disclosure rows as delivered behavior. -->
+
 # Provenance-chain decision table (round 87, C2)
 
 Snapshot: `2b48ca72033dfd1060b6f81c4cf27ad83deae57f` (HEAD of the round-87

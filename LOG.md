@@ -1904,3 +1904,184 @@ paused by operator 2026-10-12, round 22 closed, no round 23.
   twice; their material was completed inline by the L1 (recorded in
   `followup/JCOV3.md`, `followup/SE2.md`) — resume-by-batch did not survive
   interruption, a named process debt for r88's wave design.
+
+## Round 88 — 2026-10-17 (stop-cause repair + second sourced cluster + sourced-inspiration table; luna-max work wave; work commit `2ea9ef1`)
+
+- Baseline before this round is `dfd1fbc3711f2b28597d74444819aca91fe6bc31`
+  (r87 closure; lane tree clean). The round ran as a world-bible work wave
+  recorded under `.ufo/waves/round-88/` — 37 seat reports plus prefixed patch
+  artifacts, landed as `2ea9ef1` (103 files, +9292/−25) — followed by a
+  judging/integration wave under `.ufo/waves/round-88/followup/`. The persisted
+  wave-spec manifest names 35 seats; six landed reports (`C5B`, `C6B`, `J1`,
+  `V1`, `R1B`, `C7B`) are supplementary to it. No push and no merge this round.
+
+- **Motivating evidence — C1 (calibration).** r87 admitted (bounded) that the
+  provenance-chain stop fires only for holder ambiguity and only from a valid
+  record shape, and that its disclosure named the *later* ambiguity even when
+  an earlier record had stopped assessment first. Measured at `dfd1fbc`:
+  `r87-probe-shape-ambiguous` → 2 findings, no disclosure at all;
+  the mixed-stop case → disclosures blaming the holder ambiguity at `[1]`
+  though the unknown source at `[0]` latched first; an unknown-source-only
+  stop → 1 finding and no disclosure (`patches/B3-before-state.json`,
+  `V1`, `JCAL1`).
+
+- **C1 landed — `2ea9ef1`.** `corpus/fixtures/check_bible.py` (+59/−20; 356 →
+  395 lines; SHA-256 `dcacffd6981e1af5f60b31bed20c6eccce25970444088e4ee2e30e3249411911`):
+  the holder-only latch is replaced by first-stop cause tracking over an
+  enumerated cause set (source table unavailable, provenance on a non-item
+  entity, duplicate item id, four malformed-record forms, malformed record
+  with an ambiguous holder id, dangling holder both fields, unknown source,
+  ambiguous holder identity); every record at or after the stop carries one
+  disclosure naming the *actual* first cause and its origin; a shape-invalid
+  dict record carrying an ambiguous holder id now arms the stop; simultaneous
+  same-record causes are named as a combined summary; the wording carries the
+  `(input-structural finding, not sourced-canon)` qualifier and makes no causal
+  overclaim (E1 candidate 3). Three durable fixtures land with it
+  (`r88-shape-ambiguous-armed`, `r88-mixed-stop`, `r88-nonholder-stop`).
+  Counting from the lane root:
+  `python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-mixed-stop` → 6
+  findings, exit 1, every disclosure naming `first stop: unknown source
+  'f1-mixed-missing-source' at entities[5].provenance[0]`. Closure census:
+  149 fixture dirs (was 145), exits `0=31 / 1=118`, 367 violation lines
+  (baseline-145 subset 352; baseline 331), 0 stderr cases; deltas enumerable —
+  **9 changed tuples + 4 new, 0 exit changes, no non-disclosure finding
+  removed** (the 19 replaced lines are the superseded r87 disclosure forms:
+  `JCAL1` classifies 26 added disclosures, 13 reworded disclosures, 1 field
+  finding, 9 count footers, 0 `OTHER`).
+  Corroboration: `V2` (all three fixture READMEs verified line-by-line; each
+  fixture discriminates against the baseline checker), `JCAL1` (47/47
+  disclosure lines on grammar, 0 legacy survivors, 17/17 stop groups
+  single-cause, 0 at/after-stop coverage violations), `SE2` (independent
+  B1-template recomputation: 136 unchanged / 9 changed, every changed fixture
+  re-run twice with no nondeterminism, write-scope sentinel clean),
+  `JCAL3`/`JCAL5`/`H2`.
+  Bounds: two pre-r87 fixtures are **not** preserved byte-for-byte —
+  `r61-independent-empty` 17 → 18 and `r61-independent-unavailable` 6 → 7,
+  each a single additive non-holder-stop disclosure (the other 131 pre-r87
+  dirs are unchanged); disclosure is per-item provenance chain, not global;
+  non-dict records cannot carry an ambiguous holder id (stated bound);
+  unavailable-source-table suppression semantics unchanged.
+
+- **C2 landed — `2ea9ef1` (coverage).** A second sourced-mythology family
+  distinct from r87's Sumerian/ETCSL cluster:
+  `corpus/fixtures/r88-m3-maya-cluster/` — K'iche/Maya via Lewis Spence's 1913
+  English synthesis, passage-located to printed p. 209 with the cited sentence
+  delivered in `source-excerpt.md`; a two-row clause→element symbolism index
+  with an explicit limit column; two in-world source records; a tick-9
+  occupied-slot near-miss (distinct actors and places) rather than a
+  double-booking. r87's OBS-1 is repaired by the **delivered-text** option:
+  the hymn excerpt now names the Mother-Tide Gate and the attributed claim at
+  `entities.json:33` follows it, with all eight clause anchors resolving
+  exactly once (`grep -cF` per anchor → 8 × 1). The `gate-witness` repoint
+  alternative was not landed. Counting: both clusters
+  `CLEAN: schema, citations, relations, timeline; 0 violations`, exit 0;
+  census 145 → 149 dirs; inspiration-note files 1 → 2. Corroboration: `JCOV5`
+  (verdict improved (bounded); both sibling provinces reject the artifacts as
+  theirs), `K1` (province-clean, no bleed), `M5`/`C7B`. Bounds: one distinct
+  printed-page locator, not three; `CLEAN` is structural and is not prose
+  support; the clause map quotes the first clause with inner single quotes
+  while the excerpt uses double quotes, so only the excerpt's own wording
+  matches a fixed-string search.
+
+- **C3 landed — `2ea9ef1` (depth).**
+  `corpus/knowledge/r88-sourced-inspiration-decision-table.md` — 7 decision
+  rows × 6 columns keeping attribution, rights status, and AI-training
+  permission as three distinct columns, with locator/delivered-text rules, an
+  in-world claim→excerpt support rule (`grep -nF` anchor preflight), ledger
+  registration shape, and intra-cluster conflict handling; the R1B scope note
+  is carried as a prepended comment. `corpus/knowledge/reference-ledger.md`
+  gains the r87 ETCSL row (pure append, `3 2` numstat; three prior rows
+  byte-identical; 4 data rows × 4 populated columns; locator `122–163`
+  verified against the live ETCSL page). Corroboration: `JDEP1` (7/7 rows,
+  "improved"), `JDEP3` ("improved (bounded)"), `JDEP2` ("IMPROVED").
+  Bounds: the Spence reference the new cluster actually cites is **not**
+  registered (only the external-only ETCSL citation is); the ETCSL row omits
+  the table's own requested delivery-status / `external-only / unverified`
+  marker; the table's OBS-1 row still speaks of the repaired defect in the
+  present tense; three inspired-content classes remain uncovered
+  (rights-blocked source, paraphrased-as-excerpted fictional source, parallel
+  conflicting with landed canon).
+
+- **Depth harm recorded, not netted.** The C1 commit replaced the checker's
+  entire disclosure family without updating the two tracked knowledge docs
+  that are the fleet's behavioral reference for the provenance branch:
+  `corpus/knowledge/holder-assessment-boundary.md` and
+  `corpus/knowledge/r87-provenance-chain-decision-table.md` still present the
+  removed r87 notice strings as current delivered output, carry dead code
+  anchors (`:242-250` of a 356-line file), and each carries a recheck trigger
+  that fired at `2ea9ef1` without being honoured. Delivered probe counts are
+  4 / 3 / 6 (masked / isolated / harbor) where the boundary doc asserts
+  5 / 4 / 7. Per the round rule that a trade is not an improvement, **depth is
+  not recorded as a clean improvement** this round; refreshing the two docs is
+  the gating step (`JDEP4` files the harm; `P4` flags the same file as box-3
+  instruction-surface drift).
+
+- **Per-axis verdicts.** calibration **improved** (bounded as above);
+  coverage **improved (bounded)**; depth **improved on the artifact surface,
+  harmed (bounded) on the checker-semantics doc surface**. No axis unchanged;
+  no `unprovable-but-better`; the round is **not admitted** here — L1
+  adjudication is the remaining step and no L1 verdict artifact existed at
+  record-drafting time.
+
+- **Carried debt.** (1) The two pre-r87 compatibility exceptions above.
+  (2) Unlanded alternatives kept as patches only: `X2`/`X3`/`X4` C1 variants,
+  `M1` (Kojiki) / `M2` (Völuspá) cluster candidates, `F2` fixture set
+  (`f2-r88-*` absent from the tree), `D2` workflow/ledger drafts. (3) One
+  locator, not three, in the landed cluster. (4) The kotodama↔lore handoff
+  contract named by `kotodama-shokunin/PROVINCE.md:19-21` is still unwritten;
+  escalated as this round's `l0-questions.md` append (file 3 → 4 lines).
+  (5) The two stale knowledge docs. (6) Spence unregistered; ETCSL row's
+  delivery-status marker omitted. (7) `corpus/fixtures/README.md` has no
+  Round 87/88 section; `corpus/README.md:6` still says "method citations".
+  (8) Three uncovered inspired-content classes in the new table.
+
+- **Process.** The author→verifier barrier held: work-wave seats produced
+  patches and reports only, and patch-level verification happened in the
+  follow-up wave against the delivered tree. Two regimen gaps are recorded.
+  First, the delivered checker is not `X1-c1.patch`: it is X1 plus a 4-line
+  integrator amendment composing the same-record cause summary (the amendment
+  closing `C5B`'s falsification of X1's attribution); that amendment is visible
+  only in the commit message, no phase-1 seat verified the amended revision,
+  and no amendment artifact exists. Second, the wave-spec declares 35 seats,
+  enumerates 31, and 37 landed — the six unnamed supplementaries carried the
+  round's decisive verification — and the spec is prose-only, so the roster
+  check is not mechanical (`Q2`). Census invocations must use the
+  baseline's relative fixture paths — absolute paths make the five
+  path-embedding "missing-file" fixtures report false deltas. `P2`'s scorecard
+  draft was written before any judge landed and is superseded by the judge
+  roster; re-cut it rather than append it. `K1`'s poll for `JCOV5` raced that
+  report's arrival, so its "JCOV5 never delivered" line is not a fact.
+  `__pycache__` writes were observed outside two seats' scopes; add a
+  `.gitignore` line or pin `PYTHONDONTWRITEBYTECODE=1`.
+
+- **Province.** `K1` verdict: r88 is province-clean — every changed path is
+  under `lore-shokunin/`, no rights determination, no silent contradiction
+  resolution, no chousa-method or kotodama-craft absorption. The r87 L0 line
+  stands unamended; the round-88 L0 line is a distinct question about who
+  authors the integration contract.
+
+- **SHONEN.** No promotion, no push, no merge. `SHONEN.md` is unchanged this
+  round (`git diff --stat dfd1fbc 2ea9ef1 -- SHONEN.md` → empty); all four
+  boxes stay `[~]`/`[ ]` with no `[x]` claimed. Box 2's "logged in LOG.md"
+  clause is satisfied only once this entry is appended. No saturation or
+  retirement is declared — the `capabilities` table is still empty and no
+  rubric exists, so the stagnation window N is not declarable.
+
+- **Closure and L1 verdicts (this commit).** The follow-up wave found the r88
+  C1 checker replacement had drifted the lane's contract surface (`depth:
+  harmed (bounded)` per JDEP4 — the boundary doc and the r87 decision table
+  quoted the retired disclosure grammar, and seven r87 fixture READMEs were
+  stale). Repaired before admission: boundary doc re-derived from CB1's
+  verified refresh (its Commands replay now reproduces 4/3/6 on the delivered
+  tree), the r87 decision table bannered SUPERSEDED-and-pinned at `2b48ca7`,
+  READMEs carry revision notes, the Maya clause-map quote glyph fixed (2/2
+  byte-exact anchors), the Spence row registered, and the D1 table's draft
+  residue removed. L1 verdicts: calibration **improved (bounded)**, coverage
+  **improved (bounded)**, depth **improved (bounded)** with the documentation
+  harm recorded and closed inside the round; every claim verifies; no axis
+  harmed at closure; the round is **admitted**. Capabilities table gains
+  "provenance stop-cause assessment" (first row). Process debts for r89:
+  60 s wait-checks missed by 54% of seats (authors ran up to +24 min); the
+  delivered checker carried an integrator amendment verified first by phase-2
+  V2; the wave-spec roster prose drifted (35 declared / 31 enumerated /
+  37 delivered — amended in the spec).

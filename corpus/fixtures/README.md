@@ -1000,3 +1000,12 @@ writer, chronology, canon, or depth.
 ## Round 83: Vela joint non-sighting scope
 
 `r83-vela-joint-nonsighting/` clones the r40 Vela fixture and changes only the excerpt clause “I did not see Sella or an envelope” to “I did not see Sella with an envelope.” The inherited claim and event retain their broader separate-target paraphrase to expose the scope mismatch; `scope-contrast-map.md` describes the distinction and its limits. The five JSON files and all other inherited files are unchanged. Both variants are fictional and unverified; checker CLEAN means structural validation and source-ID resolution only, not excerpt support, truth, canon, rights, or mechanics.
+
+## Round 87: provenance disclosure + myth cluster
+
+`r87-masked-break-to-ambiguous/`, `r87-masked-break-from-ambiguous/`, `r87-chain-unique-valid/`, `r87-chain-unique-broken/` pin the per-record unassessed-disclosure repair (C1, commit `03c6746`). `r87-myth-cluster/` is the first sourced-mythology cluster (ETCSL/Sumerian parallel; C3, commit `e4708cb`). `r87-probe-entry-shape/`, `r87-probe-record-and-chain/`, `r87-probe-source-prefix/`, `r87-probe-rowshape-rejected/`, `r87-probe-shape-ambiguous/`, `r87-probe-multi-invalid/`, `r87-probe-nonitem-kinds/` are the C2 decision table's durable probes (closure commit `dfd1fbc`). Both r87 disclosure strings were superseded at r88; see `corpus/knowledge/holder-assessment-boundary.md` for the current contract.
+
+## Round 88: stop-cause disclosure + second cluster
+
+`r88-shape-ambiguous-armed/`, `r88-mixed-stop/`, `r88-nonholder-stop/` pin the first-stop cause-disclosure repair (C1, commit `2ea9ef1`); `r88-m3-maya-cluster/` is the second sourced-mythology cluster (Spence 1913 Maya parallel, delivered excerpt + clause→element map; C2, same commit). The r88 checker names the first stop cause of every provenance chain; the r87 probe expectations above carry revision notes where the counts moved.
+

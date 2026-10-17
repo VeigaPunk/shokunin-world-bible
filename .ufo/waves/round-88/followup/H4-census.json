@@ -1,0 +1,2415 @@
+{
+ "census": {
+  "baseline_tuple_reproduction": {
+   "checked": 145,
+   "mismatch": []
+  },
+  "unchanged": [
+   {
+    "path": "corpus/fixtures/ally-one-way",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/ally-reciprocal",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/consistent",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/contradictions",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/contradictions-ledger-malformed",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 4,
+    "after_findings": 4,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/item-chain-broken",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/item-chain-valid",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r10-registry-witness",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r11-character-place",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r11-dangling-place",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r11-place-character",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r11-unique-nonplace",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r12-ambiguous-actor",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 4,
+    "after_findings": 4,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r12-unique-actor",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r13-missing-actor",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r13-unique-actor",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r15-carbon-followup",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r16-missing-first",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r16-missing-place",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r16-mixed-three",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r16-valid-places",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r17-valid-places",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r17-wrong-after",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r17-wrong-before",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r17-wrong-first",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r17-wrong-last",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r17-wrong-middle",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r18-duplicate-first-known",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r18-duplicate-pair",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r18-duplicate-reverse",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r18-known-through-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r18-mixed-kind",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r18-unique-pair",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r19-negative-first-valid",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r19-negative-tick",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r19-valid-around-negative",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r19-valid-tick",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r20-both-negative",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r20-mixed-edges",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r20-negative-dependent",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r20-negative-prereq",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r20-valid-equal",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r20-valid-inversion",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r20-valid-order",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-ambiguous-actor",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 5,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-clean",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-clean-reverse",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-invalid-tick",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-malformed",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-malformed-reverse",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-same-place",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r21-wrong-kind-place",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-clean-inversion",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-malformed-only",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-mixed-first",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-mixed-last",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-multiple-invalid",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-self-repeated",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 5,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-unknown-mixed",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r22-valid-order",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r23-note-class",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r25-to-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r25-to-unique",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r26-to-malformed",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r27-both-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 6,
+    "after_findings": 6,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r27-target-only",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r28-courier-excerpt",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r29-near-miss",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r30-explicit-negation",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r31-source-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 8,
+    "after_findings": 8,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r31-source-unique",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r32-source-malformed",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r33-tarin-envelope",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r34-tarin-hearsay",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r35-bell7-conflict",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r36-bell7-wrong-date",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r37-ledger-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r37-ledger-unique",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r39-ledger-source-missing",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r39-ledger-source-unique",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r40-vela-listener",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r41-vela-direct-bell",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r43-jorin-vela-sighting",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r5-invalid-citation",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r5-invalid-json",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r5-missing-file",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r5-row-shape",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r5-wrong-top-level",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r59-duplicate-harbor-tower",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r59-duplicate-tower-harbor",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r59-nested-duplicate",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r59-unique-control",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r60-empty",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 6,
+    "after_findings": 6,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r60-partial",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r60-unavailable",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r60-unavailable-independent",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 4,
+    "after_findings": 4,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-allied-empty",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 6,
+    "after_findings": 6,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-allied-unavailable",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-direct-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 5,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-direct-duplicate-member",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-direct-empty",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 11,
+    "after_findings": 11,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-direct-malformed",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-direct-nonarray",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-direct-partial",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 7,
+    "after_findings": 7,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-direct-unavailable",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r61-ledger-unavailable",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 5,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-duplicate",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 4,
+    "after_findings": 4,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-duplicate-member",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-empty",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-independent",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 4,
+    "after_findings": 4,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-loaded",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-malformed",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-malformed-side",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 4,
+    "after_findings": 4,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-missing",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-nonarray",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r62-partial",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r67-claim-source-loaded-control",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r67-claim-source-loaded-empty",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r67-claim-source-unavailable-control",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r67-claim-source-unavailable-empty",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r67-claim-source-unavailable-whitespace",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r7-ally-reverse-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r7-item-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 7,
+    "after_findings": 7,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r72-vela-slate-claim",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r73-jorin-slate-claim",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r8-deps-anomalous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 3,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r8-deps-distinct",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r83-vela-joint-nonsighting",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r87-chain-unique-broken",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r87-chain-unique-valid",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r87-myth-cluster",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r87-probe-rowshape-rejected",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r87-probe-source-prefix",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 5,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r9-dup-high-low",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r9-dup-low-high",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 2,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/fixtures/r9-unique-control",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/live/runs/round-85/probe-inputs/r85-control",
+    "before_exit": 0,
+    "after_exit": 0,
+    "before_findings": 0,
+    "after_findings": 0,
+    "stderr_before": "",
+    "stderr_after": ""
+   },
+   {
+    "path": "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 1,
+    "after_findings": 1,
+    "stderr_before": "",
+    "stderr_after": ""
+   }
+  ],
+  "changed": [
+   {
+    "path": "corpus/fixtures/r61-independent-empty",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 17,
+    "after_findings": 18,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [],
+    "added_findings": [
+     "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance"
+    ],
+    "removed_lines": [
+     "17 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+     "18 violation(s); no canon changed"
+    ],
+    "coverage_before": [],
+    "coverage_after": [
+     [
+      0,
+      0
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": [
+     [
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "path": "corpus/fixtures/r61-independent-unavailable",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 6,
+    "after_findings": 7,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [],
+    "added_findings": [
+     "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source table unavailable at entities[0].provenance"
+    ],
+    "removed_lines": [
+     "6 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source table unavailable at entities[0].provenance",
+     "7 violation(s); no canon changed"
+    ],
+    "coverage_before": [],
+    "coverage_after": [
+     [
+      0,
+      0
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": [
+     [
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "path": "corpus/fixtures/r87-masked-break-from-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 6,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "6 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "5 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_after": [
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": []
+   },
+   {
+    "path": "corpus/fixtures/r87-masked-break-to-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 6,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "6 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "5 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_after": [
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": []
+   },
+   {
+    "path": "corpus/fixtures/r87-probe-entry-shape",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 8,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [],
+    "added_findings": [
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "VIOLATION: entities[6].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance"
+    ],
+    "removed_lines": [
+     "2 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "VIOLATION: entities[6].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "8 violation(s); no canon changed"
+    ],
+    "coverage_before": [],
+    "coverage_after": [
+     [
+      5,
+      0
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      2
+     ],
+     [
+      6,
+      0
+     ],
+     [
+      6,
+      1
+     ],
+     [
+      6,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": [
+     [
+      5,
+      0
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      2
+     ],
+     [
+      6,
+      0
+     ],
+     [
+      6,
+      1
+     ],
+     [
+      6,
+      2
+     ]
+    ]
+   },
+   {
+    "path": "corpus/fixtures/r87-probe-multi-invalid",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 6,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "6 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+     "5 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      2
+     ]
+    ],
+    "coverage_after": [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": []
+   },
+   {
+    "path": "corpus/fixtures/r87-probe-nonitem-kinds",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 8,
+    "after_findings": 9,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "8 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "9 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      2
+     ]
+    ],
+    "coverage_after": [
+     [
+      0,
+      0
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": [
+     [
+      0,
+      0
+     ],
+     [
+      5,
+      0
+     ]
+    ]
+   },
+   {
+    "path": "corpus/fixtures/r87-probe-record-and-chain",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 34,
+    "after_findings": 46,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[4]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[5]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[6]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[9]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[10]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+     "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+     "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]",
+     "34 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[4]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[5]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[6]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[9]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[3].provenance[10]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+     "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+     "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+     "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+     "46 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      5,
+      0
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      6,
+      1
+     ]
+    ],
+    "coverage_after": [
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      3,
+      7
+     ],
+     [
+      3,
+      8
+     ],
+     [
+      3,
+      9
+     ],
+     [
+      3,
+      10
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      6,
+      0
+     ],
+     [
+      6,
+      1
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": [
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      3,
+      7
+     ],
+     [
+      3,
+      8
+     ],
+     [
+      3,
+      9
+     ],
+     [
+      3,
+      10
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      6,
+      0
+     ]
+    ]
+   },
+   {
+    "path": "corpus/fixtures/r87-probe-shape-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 2,
+    "after_findings": 5,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [],
+    "added_findings": [
+     "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]"
+    ],
+    "removed_lines": [
+     "2 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+     "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+     "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+     "5 violation(s); no canon changed"
+    ],
+    "coverage_before": [],
+    "coverage_after": [
+     [
+      5,
+      0
+     ],
+     [
+      5,
+      1
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": [
+     [
+      5,
+      0
+     ],
+     [
+      5,
+      1
+     ]
+    ]
+   },
+   {
+    "path": "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 7,
+    "after_findings": 6,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'harbor' at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'harbor' at entities[3].provenance[1]"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+     "7 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'harbor' at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'harbor' at entities[3].provenance[1]",
+     "6 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_after": [
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": []
+   },
+   {
+    "path": "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 4,
+    "after_findings": 3,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[2]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[2]"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[2]",
+     "4 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[2]",
+     "3 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_after": [
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": []
+   },
+   {
+    "path": "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+    "before_exit": 1,
+    "after_exit": 1,
+    "before_findings": 5,
+    "after_findings": 4,
+    "stderr_before": "",
+    "stderr_after": "",
+    "removed_findings": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]"
+    ],
+    "added_findings": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[1]"
+    ],
+    "removed_lines": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+     "5 violation(s); no canon changed"
+    ],
+    "added_lines": [
+     "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[1]",
+     "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[1]",
+     "4 violation(s); no canon changed"
+    ],
+    "coverage_before": [
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_after": [
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "coverage_lost": [],
+    "coverage_gained": []
+   }
+  ]
+ },
+ "non_disclosure_preservation": [
+  {
+   "path": "corpus/fixtures/r61-independent-empty",
+   "non_disclosure_before": 17,
+   "non_disclosure_after": 17,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r61-independent-unavailable",
+   "non_disclosure_before": 6,
+   "non_disclosure_after": 6,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r87-masked-break-from-ambiguous",
+   "non_disclosure_before": 2,
+   "non_disclosure_after": 2,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r87-masked-break-to-ambiguous",
+   "non_disclosure_before": 2,
+   "non_disclosure_after": 2,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r87-probe-entry-shape",
+   "non_disclosure_before": 2,
+   "non_disclosure_after": 2,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r87-probe-multi-invalid",
+   "non_disclosure_before": 3,
+   "non_disclosure_after": 3,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r87-probe-nonitem-kinds",
+   "non_disclosure_before": 5,
+   "non_disclosure_after": 5,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r87-probe-record-and-chain",
+   "non_disclosure_before": 29,
+   "non_disclosure_after": 29,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/fixtures/r87-probe-shape-ambiguous",
+   "non_disclosure_before": 2,
+   "non_disclosure_after": 3,
+   "non_disclosure_identical_in_order": false,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": [
+    "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'"
+   ]
+  },
+  {
+   "path": "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro",
+   "non_disclosure_before": 4,
+   "non_disclosure_after": 4,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+   "non_disclosure_before": 2,
+   "non_disclosure_after": 2,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  },
+  {
+   "path": "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+   "non_disclosure_before": 2,
+   "non_disclosure_after": 2,
+   "non_disclosure_identical_in_order": true,
+   "non_disclosure_lost": [],
+   "new_non_disclosure": []
+  }
+ ],
+ "duplicate_disclosure_lines": [],
+ "determinism": {
+  "0|r85-harbor-repro": {
+   "exit": 1,
+   "stdout_sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d"
+  },
+  "0|r85-masked-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1"
+  },
+  "0|r85-isolated-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad"
+  },
+  "1|r85-harbor-repro": {
+   "exit": 1,
+   "stdout_sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d"
+  },
+  "1|r85-masked-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1"
+  },
+  "1|r85-isolated-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad"
+  },
+  "random|r85-harbor-repro": {
+   "exit": 1,
+   "stdout_sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d"
+  },
+  "random|r85-masked-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1"
+  },
+  "random|r85-isolated-ambiguous": {
+   "exit": 1,
+   "stdout_sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad"
+  }
+ },
+ "control_sources_unavailable": {
+  "construction": "cp -r corpus/fixtures/item-chain-valid _ctrl-unavail-clean; rm _ctrl-unavail-clean/sources.json",
+  "runs": {
+   "dfd1fbc": {
+    "exit": 1,
+    "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/_ctrl-unavail-clean/sources.json'\n1 violation(s); no canon changed\n",
+    "stderr": ""
+   },
+   "2ea9ef1": {
+    "exit": 1,
+    "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/_ctrl-unavail-clean/sources.json'\nVIOLATION: entities.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/_ctrl-unavail-clean/entities.json'\nVIOLATION: relations.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/_ctrl-unavail-clean/relations.json'\nVIOLATION: timeline.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/_ctrl-unavail-clean/timeline.json'\nVIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/_ctrl-unavail-clean/contradictions.json'\n5 violation(s); no canon changed\n",
+    "stderr": ""
+   }
+  }
+ },
+ "checker_lineage": [
+  {
+   "commit": "cc39739",
+   "full": "cc397395587050716d7b23640eb93a8c6a6ebb02",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r68: reject blank dependency diagnostic relabel"
+  },
+  {
+   "commit": "33cc5dd",
+   "full": "33cc5dd66db3771eadd0baf06b01e52dab9d9926",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r69: reject broad ledger reference gate"
+  },
+  {
+   "commit": "4ff70a1",
+   "full": "4ff70a1600020ba3d815c4f94b7706f6fcc81eeb",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r70: reject and roll back event-ID pair gate"
+  },
+  {
+   "commit": "f7b7ae7",
+   "full": "f7b7ae79eaeeee392f561b8a132d2b78a0c0a14f",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r71: reject ungrounded sequence trade"
+  },
+  {
+   "commit": "4c027c6",
+   "full": "4c027c65ab8704fa68cedb3e40d865b5dc74de9f",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r72: add attributed Vela slate claim without timeline placement"
+  },
+  {
+   "commit": "4a9aa1a",
+   "full": "4a9aa1a9a8af132ba2ba5fedbe45ac06b25174a5",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r73: add bounded Jorin slate wording report"
+  },
+  {
+   "commit": "8540f0e",
+   "full": "8540f0ee4ef2d855edc0eca0851b32ad06cd0b31",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r74: add conditional slate evidence decision table"
+  },
+  {
+   "commit": "2acd405",
+   "full": "2acd40571915e171610dfc656d418a168a3b769b",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r75: reject undeclared relation-row uniqueness rule"
+  },
+  {
+   "commit": "a89f404",
+   "full": "a89f404cdf03efddae5f7fe555a5f6cd704cd7b2",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r76: reject redundant fictional registry request"
+  },
+  {
+   "commit": "53fce9b",
+   "full": "53fce9b30e700b251c36968f9ea4c520ec1e3137",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r77: reject and roll back Neri latch texture"
+  },
+  {
+   "commit": "7c99e17",
+   "full": "7c99e17ccb03eda75994c7edd581b5c3307747fc",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r78: reject unproved copied-citation diagnostic"
+  },
+  {
+   "commit": "5f477e2",
+   "full": "5f477e2dd7f1a7c69d0552afdf129f18c3bbdf13",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r79: reject and roll back self-justifying arrival-order note"
+  },
+  {
+   "commit": "9950228",
+   "full": "9950228bda6633ed2c75214a15220d8e51d42182",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r80: independently verify candidate preservation and replay"
+  },
+  {
+   "commit": "1316dfe",
+   "full": "1316dfe57f2403972237acebd29cb4234094b5b3",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r80: reject and roll back map response candidate"
+  },
+  {
+   "commit": "baa987b",
+   "full": "baa987bb177f4e614b972df8d5032b47642ac83f",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r81: reject operational identity table outside province"
+  },
+  {
+   "commit": "aed0cee",
+   "full": "aed0ceeead6ee12ce94561e681df5a8949c4a585",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r82: reject redundant Bell-7 evidence table"
+  },
+  {
+   "commit": "709f753",
+   "full": "709f753d31ee28d4abbc08c2ec8925611c3f150a",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r83: test Vela negation-scope calibration"
+  },
+  {
+   "commit": "0fc03a8",
+   "full": "0fc03a8c9c4929921be2ca8583d92644d1fa4b28",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r83: admit bounded calibration verdict"
+  },
+  {
+   "commit": "366daa4",
+   "full": "366daa4686394e1b13f130b47f33006cfae430fb",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r84: probe event-ID booking no-go"
+  },
+  {
+   "commit": "987a4ff",
+   "full": "987a4ff970d60540620ddd97ef48e97dff9191c8",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r84: reject event-ID booking gate"
+  },
+  {
+   "commit": "174c062",
+   "full": "174c06259c35f2ff06b492647f96f2260f928ef4",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r85: masked provenance diagnostic evidence (author+verifier+sealed)"
+  },
+  {
+   "commit": "fc2c3cc",
+   "full": "fc2c3cc3c00e76a6c70b7b788db2b816af821ea7",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r85: admit masked provenance-chain masking calibration"
+  },
+  {
+   "commit": "8ac2f41",
+   "full": "8ac2f41ca856300062a0c4788b6bdc15e6276d74",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "README: lane card \u2014 domain, layout, link to shokunin roster"
+  },
+  {
+   "commit": "b92ba2d",
+   "full": "b92ba2d25dfe13a6176eda41316b9716da6216f1",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "HOURS.md: craft-hours ledger opened (\u00a7Craft-hours canon)"
+  },
+  {
+   "commit": "5eb9451",
+   "full": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "Revert \"HOURS.md: craft-hours ledger opened (\u00a7Craft-hours canon)\""
+  },
+  {
+   "commit": "c9c38e2",
+   "full": "c9c38e20bea4fdfef8ed47a19ef42a2e6998f40f",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r86: record blocked routing and preserve interrupted evidence"
+  },
+  {
+   "commit": "85667cb",
+   "full": "85667cb644176835d713418d7a869905b9f619d7",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r86: land blocked report and fresh-session handoff"
+  },
+  {
+   "commit": "d44a4e3",
+   "full": "d44a4e378f38bea6fe90ba4b82e721767f4305c4",
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "protocol conformance: adopt SCORECARD.md contract fields (2026-10-16 operator amendment rollout) \u2014 additive scaffolds only, no axis claims"
+  },
+  {
+   "commit": "28706dc",
+   "full": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+   "checker_sha256": "e8f241623aa84eb1dce192a03c9e70b8f4ba386344f0b22a99ba1ac0d4942132",
+   "subject": "lore: sync LOG/PROVINCE/SCORECARD/SHONEN, harden check_bible, add holder-assessment-boundary knowledge and round-1 reports"
+  },
+  {
+   "commit": "03c6746",
+   "full": "03c6746e4f1c7fb3a68737670bf764a456bdf003",
+   "checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+   "subject": "lore r87 C1: per-record unassessed disclosure for ambiguous provenance holders (masked-break repair)"
+  },
+  {
+   "commit": "e4708cb",
+   "full": "e4708cbcd956998237c31acb77124d8dc5056538",
+   "checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+   "subject": "lore r87 C3: r87-myth-cluster world-bible fixture (breadth: 7 entities incl 2 factions, 4 relations incl reciprocal alliance, 4 timeline events with dependency edges, reported-not-resolved place contradiction; ETCSL/Sumerian sourced-inspiration with attribution/rights/AI-training as three distinct open questions; symbolism clause map)"
+  },
+  {
+   "commit": "2b48ca7",
+   "full": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+   "checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+   "subject": "lore r87: work-wave evidence \u2014 39 seat reports + patches (.ufo/waves/round-87), luna-max wave"
+  },
+  {
+   "commit": "dfd1fbc",
+   "full": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+   "checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+   "subject": "lore r87: C2 decision table + attack-closure probes, boundary/README reconciliation, round record \u2014 follow-up integration"
+  },
+  {
+   "commit": "22a95ff",
+   "full": null,
+   "checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+   "subject": "lore r67: validate nonempty claim citations under unavailable sources"
+  },
+  {
+   "commit": "2ea9ef1",
+   "full": null,
+   "checker_sha256": "dcacffd6981e1af5f60b31bed20c6eccce25970444088e4ee2e30e3249411911",
+   "subject": "lore r88: C1 stop-cause repair + C2 Maya cluster + C3 inspiration table \u2014 work wave (37 luna-max seats)"
+  }
+ ],
+ "first_checker_divergence_after_22a95ff": "28706dc"
+}
