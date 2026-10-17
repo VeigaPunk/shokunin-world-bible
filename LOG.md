@@ -1696,3 +1696,15 @@ paused by operator 2026-10-12, round 22 closed, no round 23.
 - Operator rollout per the 2026-10-16 fleet amendment (fleet-root `84bade0`): the missing `SCORECARD.md` contract fields were appended as additive scaffolds at the end of `SCORECARD.md`; every pre-existing byte is preserved unchanged.
 - Already present as a real recordable section: `axes` (the axis score table with evidence/counting commands and last-change rounds). Absent as sections: `capabilities`, `saturation`, `planned`, `retired` — the `planned:`/`retired:` lines at `SCORECARD.md:12,13,14,26,33,65,70` are unheaded round-scoped prose labels, and `saturation` appears only in negations, so all four scaffolds were appended.
 - No axis claim was made and no score moved by this change; no verdict changed, no capability row enters the repertoire table (a row requires a round demonstrating it running), and the saturation line + stagnation window N remain the lane's to declare on its next round.
+
+## 2026-10-17 — readable front door
+
+The root README was the 22-line shared template. The checker path that exists is `python3 corpus/fixtures/check_bible.py corpus/fixtures/consistent` (`corpus/fixtures/check_bible.py`). `corpus/fixtures/README.md` still shows `.shokunin/lore/corpus/fixtures/check_bible.py`; that file is line-cited, so it was not rewritten. SHONEN.md boxes are `[ ]` or `[~]` lane assertions.
+
+Corpus index: `corpus/README.md` (10 lines) was not edited. `corpus/fixtures/README.md` was not edited, because reports and `corpus/knowledge/holder-assessment-boundary.md` cite it by line. `corpus/knowledge/`, `corpus/lessons/`, evidence, fixtures, and earlier LOG entries were not rewrapped.
+
+Lint fixes: none. Human-legible Markdown in this repo had no unpinned same-line defect.
+
+Lint left in place: none in the human-legible set (README, PROVINCE, SKILL, SHONEN, MINT, AGENTS, corpus/README, corpus/QUALITY, plans/*.md).
+
+Devin: a search for `devin.ai` in this repo found no URL to edit. No wiki URL was added.
