@@ -1,0 +1,92 @@
+MEASURED_REVISION 8e5a68d2a75338c8931c35dadd86fa04fb7c4c41
+MEASURED_TREE 77bb73eea8faaa1f610de64b534348a41dc09747
+NOTE no HEAD assertion by design: assertions below are content/tool based.
+
+-- input hash pins --
+PASS file sha256 r93-m2-kojiki-cluster/archive-record-excerpt.md
+PASS file sha256 r93-m2-kojiki-cluster/claim-excerpt-map.md
+PASS file sha256 r93-m2-kojiki-cluster/contradictions.json
+PASS file sha256 r93-m2-kojiki-cluster/entities.json
+PASS file sha256 r93-m2-kojiki-cluster/inspiration-note.md
+PASS file sha256 r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md
+PASS file sha256 r93-m2-kojiki-cluster/README.md
+PASS file sha256 r93-m2-kojiki-cluster/relations.json
+PASS file sha256 r93-m2-kojiki-cluster/sources.json
+PASS file sha256 r93-m2-kojiki-cluster/symbolism-clause-map.md
+PASS file sha256 r93-m2-kojiki-cluster/timeline.json
+PASS tree sha256 r93-m2-kojiki-cluster :: full=854092b4e6145736 excl_readme=72e4b2b82840318e
+PASS file sha256 r87-myth-cluster/claim-excerpt-map.md
+PASS file sha256 r87-myth-cluster/contradictions.json
+PASS file sha256 r87-myth-cluster/dune-register-excerpt.md
+PASS file sha256 r87-myth-cluster/entities.json
+PASS file sha256 r87-myth-cluster/gate-witness-excerpt.md
+PASS file sha256 r87-myth-cluster/inspiration-note.md
+PASS file sha256 r87-myth-cluster/lowwater-hymn-excerpt.md
+PASS file sha256 r87-myth-cluster/README.md
+PASS file sha256 r87-myth-cluster/relations.json
+PASS file sha256 r87-myth-cluster/shell-charter-excerpt.md
+PASS file sha256 r87-myth-cluster/sources.json
+PASS file sha256 r87-myth-cluster/symbolism-clause-map.md
+PASS file sha256 r87-myth-cluster/tide-bell-tally-excerpt.md
+PASS file sha256 r87-myth-cluster/timeline.json
+PASS tree sha256 r87-myth-cluster :: full=c07d286df828d7c2 excl_readme=997472173c520108
+PASS file sha256 r88-m3-maya-cluster/claim-excerpt-map.md
+PASS file sha256 r88-m3-maya-cluster/contradictions.json
+PASS file sha256 r88-m3-maya-cluster/entities.json
+PASS file sha256 r88-m3-maya-cluster/fictional-excerpts.md
+PASS file sha256 r88-m3-maya-cluster/inspiration-note.md
+PASS file sha256 r88-m3-maya-cluster/README.md
+PASS file sha256 r88-m3-maya-cluster/relations.json
+PASS file sha256 r88-m3-maya-cluster/source-excerpt.md
+PASS file sha256 r88-m3-maya-cluster/sources.json
+PASS file sha256 r88-m3-maya-cluster/symbolism-clause-map.md
+PASS file sha256 r88-m3-maya-cluster/timeline.json
+PASS tree sha256 r88-m3-maya-cluster :: full=edc94bc5b7b3e311 excl_readme=0bb9084f5945951f
+
+-- declared finite cluster records --
+PASS declared referent set r93-m2-kojiki-cluster :: ids=['lorn-index', 'orni', 'slate-table', 'teva']
+PASS declared referent set r87-myth-cluster :: ids=['ash-dune-sanctuary', 'hara', 'mother-tide-gate', 'reed-bell', 'reedwardens', 'sen', 'shellweavers']
+PASS declared referent set r88-m3-maya-cluster :: ids=['aru', 'evin', 'quiet-rise', 'salt-court']
+PASS M2 JSON file set complete :: ['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json']
+PASS M2 contradictions.json empty
+
+-- independent namespace comparison (filed first-capture script) --
+PASS scan script exit 0 :: exit=0
+PASS normalized key intersections r93-m2-kojiki-cluster vs r87-myth-cluster :: nonempty={'entity_kind_kind': ['character', 'item', 'place']}
+PASS generic kind vocabulary only r87-myth-cluster
+PASS claim/event token n-gram overlap >=3 r87-myth-cluster
+PASS prior display names inside M2 only in README r87-myth-cluster :: files=['README.md']
+PASS Reed lookalike text only external excerpt + README r87-myth-cluster :: files=['README.md', 'kojiki-chamberlain-excerpt.md']
+PASS no M2 name inside prior cluster r87-myth-cluster
+PASS normalized key intersections r93-m2-kojiki-cluster vs r88-m3-maya-cluster :: nonempty={'entity_kind_kind': ['character', 'place']}
+PASS generic kind vocabulary only r88-m3-maya-cluster
+PASS claim/event token n-gram overlap >=3 r88-m3-maya-cluster
+PASS prior display names inside M2 only in README r88-m3-maya-cluster :: files=['README.md']
+PASS Reed lookalike text only external excerpt + README r88-m3-maya-cluster :: files=['README.md', 'kojiki-chamberlain-excerpt.md']
+PASS no M2 name inside prior cluster r88-m3-maya-cluster
+PASS no alias/epithet fields r93-m2-kojiki-cluster
+PASS no alias/epithet fields r87-myth-cluster
+PASS no alias/epithet fields r88-m3-maya-cluster
+PASS register file absent
+PASS M6 target path absent from repo
+PASS delivered cluster is not M6 target
+PASS superseded sentence verbatim + superseded
+PASS M2 files never reference the register path
+PASS r89 demo disclaims register status
+PASS README cites the current content-pinned replay + receipt
+PASS R10.md erratum supersedes the original active command
+PASS R10.md original command bytes retained (not rewritten)
+
+-- R10 receipt cross-check (r87/r88 unchanged; M2 post-dates the capture) --
+PASS R10 recorded input hash still live r87-myth-cluster
+PASS R10 recorded input hash still live r88-m3-maya-cluster
+INFO R10 recorded M2 input hash 599d2507c26c57b7 vs post-repair 72e4b2b82840318e (2026-10-17 corrections landed after the R10 capture; comparison re-run above)
+
+-- project tools --
+PASS check_bible M2 CLEAN exit 0 :: exit=0
+PASS support_check M2 12 facts + 3 editorial + PASS exit 0 :: exit=0
+PASS check_bible r87-myth-cluster CLEAN exit 0 :: exit=0
+PASS check_bible r88-m3-maya-cluster CLEAN exit 0 :: exit=0
+
+RESULT ALL CHECKS HELD
+checks_failed=0

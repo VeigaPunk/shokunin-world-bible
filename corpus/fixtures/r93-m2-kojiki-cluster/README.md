@@ -30,3 +30,13 @@ Against r88, the superficial resemblance is two entries in a fictional register.
 ## Correction (2026-10-17)
 
 This correction supersedes the line-3 phrase “Basil Hall Chamberlain's 1882 English translation” as a source-page attribution. The cited page labels the translator only “B.H. Chamberlain, translator 1882”; the expansion to the fuller name is not verified by that page, and no added full-name source claim is required or made. The three selected clauses are non-contiguous selections from the passage: one source sentence between the first and second clause is omitted, not reproduced. The edition/printed-copy, rights, and AI-training-permission questions recorded in the cluster files remain open.
+
+## R10 replay pointer (2026-10-17)
+
+The R10 comparison entry and the R10 seat's receipt (`recovery/R10.md`, `recovery/R10-key-scan.json`) are historical: their recorded input hashes and the documented consistency command were measured at `65838f8`/`4780cf0`, before the 2026-10-17 source-precision corrections changed this cluster's prose files. The current, content-pinned replay of the same R10 comparison is:
+
+```sh
+python3 .ufo/waves/round-93/deepseek/F14-postrepair-check.py
+```
+
+Receipt: `.ufo/waves/round-93/deepseek/F14-postrepair-checks.out` — `RESULT ALL CHECKS HELD`, `checks_failed=0`. The replay pins every fixture input file hash and the three tree hashes and asserts zero normalized key intersections except the generic `kind` vocabulary; it carries no expected-HEAD assertion, so it continues to run on later metadata-only descendant commits while the fixture inputs are unchanged. No JSON value, row, span, anchor, or meaning in this cluster changes with this pointer.
