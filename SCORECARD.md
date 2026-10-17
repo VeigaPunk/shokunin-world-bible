@@ -495,3 +495,36 @@ freeze receipts; BR-01 prose half; `dual_pointer` self-test pin; droppable-pin
 loader tightening; cosmetic r96 map fixes; BR-05 scratch relocation;
 poll-helper hardening (mutual-wait escape); process: host `/tmp` inode
 exhaustion workaround. saturation: not declared. retired: none.
+
+## Round 97 — closed, ADMITTED (2026-10-17)
+
+Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash` (6 producers
++ 58 verifiers; three late landings from the endgame mutual-poll class,
+characterized by V56; one embedded scratch clone dropped from the wave tree
+at closure). Baseline `f3e09f9`; closure `9d25df9` + `9a3d648`. V35
+all-axis adjudication: ADMIT with six conditions, all discharged. Scores
+remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: `dual_pointer` persisted as self-test case 25 (25/25 PASS); the contract loader now fails closed on ANY dropped pinned case — the r96 subset tolerance (23/24 passes) demonstrated on the old tool as the closed pre-state; the pin proven load-bearing by emission-neutralization (self-test FAIL / exit 2); full r87–r97 battery + frozen-r93 replay + r87/r89 fail-closed byte-stable vs r96. Bounds: self-test binds consistency, not truth; `dual_pointer` detection is legacy-dialect-scoped (canonical variants stay fail-closed exit 2). |
+| depth | improved (bounded) | C3: `corpus/fixtures/r97-crossing-acknowledgment/` — acknowledgment-without-reconciliation, the arc's third beat: Aru's tick-13 record of receipt; 5/1/5→5/1/6, sources 5→6, 17/17 obligations (16 inherited rows unchanged outside the namespace column), CLEAN, support 17/17 + TOTAL 19/19, census 170→171 (+1 clean, zero inherited changes). Two constructibility probes (V17/V43) failed to build any resolution/blame/reconciliation reading. The r96 map cosmetic repair is exactly two lines with data rows byte-unchanged and both r96 receipts identical pre/post. Bounds: structural/lexical evidence; editorial tick encodings; the r95 map's carried sentence remains (r98 candidate). |
+| coverage | improved (bounded) | C2: `dependency_freeze` hardened — `--freeze` scope-guarded to `corpus/fixtures/**` (SCOPE-REFUSED, no write), path binding (foreign-path byte-identical copy exits 2 PATH-MISMATCH), `DIGEST-MISMATCH` names the changed file, self-test 14→16 with both new classes pinned, r96 re-frozen through the guarded path (revision-only refresh, reproducible), chain 4/4 clean. **V12 and V46 FAILs stand recorded** (map digest unpinned; r97 edge unfrozen — both brief-stricter-than-declaration; discharged by erratum/bound at closure). |
+| operability | improved (bounded) | Both self-tests 25/25 + 16/16 replay; documented commands run as written; one terminal RESULT line. Bound: BR-05 now on both tools (repo-root scratch, gitignored at closure). |
+| freshness | unchanged (no improvement; no material harm) | Live pins fresh (checker pin, C9 pair, frozen r93, chain pins); one bounded README staleness landed at closure; two carried stale knowledge-note tool pins unrepaired (correctable next touch). |
+| adjacency | unchanged (not harmed) | PROVINCE byte-identical; change set exactly the declared ownership; zero parent-tree strays (the r94-F01 class did not recur); no commits by seats; kotodama-shokunin's concurrent activity attributed by path ownership. |
+
+Learning trends: expansion improved (171 dirs; acknowledgment class; both
+tools hardened); quality improved (strict loader; guarded re-freeze; repair
+byte-minimal with receipts unchanged); discernment improved (V35 reconciled
+sixteen conflicts; two seat FAILs recorded and discharged without re-roll;
+the endgame mutual-poll class characterized — all-reports polls must
+subtract SELF; an embedded scratch clone caught and dropped at closure).
+
+planned (r98): fourth and final 64-seat deepseek-flash round; then r99
+(128-seat grok-4.7-fast xhigh) and r100 (32-seat sol-max). Debt head items:
+pin r97-crossing-acknowledgment into the freeze chain; repair the r95 map
+carried sentence; stale knowledge-note tool pins; BR-01 prose half;
+`SELF-TEST-MISMATCH` exit-code alignment between tools; path-less legacy pin
+migration; the endgame poll-escape as a standing seat convention.
+saturation: not declared. retired: none.
