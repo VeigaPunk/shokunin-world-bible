@@ -1696,3 +1696,17 @@ paused by operator 2026-10-12, round 22 closed, no round 23.
 - Operator rollout per the 2026-10-16 fleet amendment (fleet-root `84bade0`): the missing `SCORECARD.md` contract fields were appended as additive scaffolds at the end of `SCORECARD.md`; every pre-existing byte is preserved unchanged.
 - Already present as a real recordable section: `axes` (the axis score table with evidence/counting commands and last-change rounds). Absent as sections: `capabilities`, `saturation`, `planned`, `retired` — the `planned:`/`retired:` lines at `SCORECARD.md:12,13,14,26,33,65,70` are unheaded round-scoped prose labels, and `saturation` appears only in negations, so all four scaffolds were appended.
 - No axis claim was made and no score moved by this change; no verdict changed, no capability row enters the repertoire table (a row requires a round demonstrating it running), and the saturation line + stagnation window N remain the lane's to declare on its next round.
+
+## 2026-10-17 — README: replace the shared shonen template
+
+Operator request: make the README a useful front door. Evidence:
+
+- The previous `README.md` was the shared 23-line shonen-lane template
+  (identical across the 2026-10 public remotes except for the Domain
+  line, plus this lane's extra command section when one existed).
+- Replacement text restates `PROVINCE.md`, existing command blocks, and
+  file-tree facts from `ls` of this checkout. No new craft claim.
+- Devin wiki URLs were not added or rewritten. The only verified fleet
+  wiki link remains the fleet-root line in `VeigaPunk/shokunin`.
+
+Not a craft round. No axis claim.
