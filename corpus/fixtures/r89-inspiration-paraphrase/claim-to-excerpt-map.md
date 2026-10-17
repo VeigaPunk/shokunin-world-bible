@@ -1,5 +1,9 @@
 # Claim-to-excerpt map
 
+**Expected inventory:** 1 JSON fact; 0 editorial rows; 1 total mapped row; 1 distinct excerpt anchor.
+
+## JSON facts (1 claim-pointer row)
+
 | Claim pointer | In-world source | Excerpt path and lines | Delivery mode / author | Anchor | R9 support result |
 |---|---|---|---|---|---|
 | `entities.json#/0/claims/0` | `ash-ledger` | `ash-ledger-excerpt.md:9` | `paraphrase`; fixture writer (R9 demonstration) | `moved to the west stair` | Fails: the anchor occurs in the paraphrase, but the underlying source text is not delivered, so the paraphrase cannot support a claim about the source's own record. |

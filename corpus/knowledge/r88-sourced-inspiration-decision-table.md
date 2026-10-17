@@ -37,6 +37,15 @@ independent in-world support; never place it on a merely possible influence. Wit
 affected detail pending re-derivation or permitted review; the element otherwise remains newly
 authored fiction. **Owner:** the lore lane; unresolved disputes go to `l0-questions.md`.
 
+**Failed-gate disposition (decided r91):** if the two-part R2 gate FAILS (creator denial
+rejected by contrary source-specific evidence, or more than a commonplace motif matches), the element is
+NOT proven influenced — the uncertainty note stays, the `R2` claim is not available, and the affected
+detail is withheld pending re-derivation or permitted review; the element otherwise remains newly
+authored fiction. Withhold-scope precedence (decided r91): detail-level withholding wins over
+element-level when they conflict — withhold only what carries the source dependency. The provisional
+`possible influence: unverified` note is removed only after the R2 gate passes or the influence is
+confirmed and recorded; a failed gate keeps the note.
+
 ### R9 appendix — translator known, source/version unknown (decided r90; reprint boundary clarified r91)
 
 **Owner:** The lore integration owner verifies bibliographic identity and R5 scope; the
@@ -92,6 +101,11 @@ referent, field, and occasion with incompatible assertions enters
 `corpus/knowledge/cross-cluster-contradictions.md` (status `unresolved`). Both clusters are
 preserved; a real-world parallel cannot adjudicate the in-world disagreement. **Owner:** the
 lore lane at integration; the register's first real entry awaits a genuine conflict.
+
+**Namespace scoping (decided r91):** `source_id` values are cluster-local identifiers.
+A `source_id` shared across clusters is a NAMESPACE COLLISION, not identity evidence — comparison keys are
+`(cluster-relative path, source_id)` pairs; a bare shared id triggers the namespace check (rename or
+qualify one side) before any referent comparison. A collision alone never enters the register.
 
 (Provenance: merged from seats D1/D2 per seat R1's recommendation; retroactivity checked —
 the r87 ETCSL marker, the r88-m3 delivered Spence passage, and r87's intra-cluster Hara/Sen
