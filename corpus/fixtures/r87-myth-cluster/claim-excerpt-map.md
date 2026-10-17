@@ -1,6 +1,10 @@
 # r87 mythology cluster: claim-to-excerpt map
 
-Scope: the 14 JSON facts in S2's r89 map (6 entity claims, 4 relations, 4 timeline events) plus the 8 Low-Water Hymn clauses (22 mapped rows). Each excerpt declaration and each row repeats its R9 delivery mode. Anchors are literal phrases in the cited line; they are preflight only, so the whole claim and its attribution must still be reviewed.
+Scope: 14 JSON facts from S2's r89 map (6 entity claims, 4 relations, 4 timeline events) plus 8 editorial Low-Water Hymn readings, for 22 mapped rows total. The hymn readings are not JSON facts. Each excerpt declaration and row repeats its R9 delivery mode; anchors are lexical preflight only, so the whole claim and attribution must still be reviewed.
+
+## Inventory
+
+**Expected inventory:** 14 JSON facts; 8 editorial rows; 22 total mapped rows; 22 distinct excerpt anchors.
 
 ## R9 excerpt declarations
 
@@ -14,7 +18,7 @@ Scope: the 14 JSON facts in S2's r89 map (6 entity claims, 4 relations, 4 timeli
 
 `verbatim` describes the delivered wording of these invented in-world texts; it is not a claim that they are historical documents, authenticated testimony, or external-source quotations. The named ETCSL parallel remains `external-only / unverified inspiration`: its cited passage is not delivered and supports none of these in-world claims.
 
-## 14 JSON facts from S2's r89 map
+## JSON facts (14; from S2's r89 map)
 
 | ID | JSON fact and fields | `source_id` | Excerpt path:line | R9 mode | Exact anchor |
 |---|---|---|---|---|---|
@@ -33,7 +37,7 @@ Scope: the 14 JSON facts in S2's r89 map (6 entity claims, 4 relations, 4 timeli
 | T3 | `timeline[2].description`, `timeline[2].source_id`: “Hara's slip places the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.” | `gate-witness` | `gate-witness-excerpt.md:9` | `verbatim` | `I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell` |
 | T4 | `timeline[3].description`, `timeline[3].source_id`: “Sen's register places that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.” | `dune-register` | `dune-register-excerpt.md:10` | `verbatim` | `I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell` |
 
-## Eight Low-Water Hymn clauses
+## Editorial rows (8 Low-Water Hymn clauses; not JSON facts)
 
 These rows map the interpretive readings in `symbolism-clause-map.md`; they are not extra JSON canon claims. The excerpt supplies the quoted words, while each reading remains editorial and bounded by that map's stated limit.
 

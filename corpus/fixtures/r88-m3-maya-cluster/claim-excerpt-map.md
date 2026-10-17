@@ -1,6 +1,10 @@
 # r88-m3 Maya cluster: claim-to-excerpt map
 
-Scope: ten source-attributed in-world JSON facts (four `first_appearance` pointers, four entity claims, and two timeline events), plus the two source-to-fictional comparisons in the symbolism map. Every JSON fact has an exact anchor and repeats the R9 mode.
+Scope: 10 source-attributed in-world JSON facts (4 `first_appearance` pointers, 4 entity claims, and 2 timeline events). The two source-to-fictional symbolism comparisons are separate editorial material, not mapped rows. Every JSON fact has an exact anchor and repeats the R9 mode.
+
+## Inventory
+
+**Expected inventory:** 10 JSON facts; 0 editorial rows; 10 total mapped rows; 6 distinct excerpt anchors.
 
 ## R9 excerpt declarations
 
@@ -10,7 +14,7 @@ Scope: ten source-attributed in-world JSON facts (four `first_appearance` pointe
 | `fictional-excerpts.md:12–13` | `paired-clock` | `verbatim` | Newly authored fictional register; all ten JSON facts below point to this source. |
 | `source-excerpt.md:5` | Lewis Spence, *The Myths of Mexico & Peru* (1913), English prose | `verbatim` | Delivered in-tree, verbatim from Spence's English prose; external comparison, not an in-world source. The underlying K'iche primary text is not reproduced (`external-only`). |
 
-## Ten source-attributed JSON facts
+## JSON facts (10 source-attributed rows)
 
 The `source_id` for each fact resolves to `paired-clock` in `sources.json`. Anchors are lexical preflight only; review the whole claim and its scope, not just a matching phrase.
 

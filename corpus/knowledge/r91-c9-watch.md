@@ -1,0 +1,43 @@
+# Round 91 C9 watch
+
+## Pinned checker and ruling
+
+- Delivered checker: `corpus/fixtures/check_bible.py` at r90 closure `a7c6a1773d5994246a76e4eff30d645f161920e0`.
+- SHA-256: `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`.
+- Ruling carried from r90 C9: after record-shape, source, and tick validation, an integer provenance tick inversion (`tick <= previous_tick`) is a definite input-structural finding. Holder identity is not an operand of this comparison. A holder that is not uniquely resolved can still make the separate chain-break identity comparison qualified; it does not by itself qualify the tick finding.
+- This is a statement about the checker's local integer ordering rule, not real-world chronology, source reliability, ownership, or canon.
+
+## Reproducible boundary probe
+
+The durable pair is `r91-c1-null-chain` and `r91-c1-tick-unresolved`. Run from `lore-shokunin/`:
+
+```sh
+sha256sum corpus/fixtures/check_bible.py
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-null-chain
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-tick-unresolved
+```
+
+The hash command must print the pinned SHA-256 above. The null-chain fixture must report `provenance chain break; expected from_holder 'mira', got None` (exit 1, one violation). The unresolved-tick fixture must emit the definite `provenance tick 1 must be greater than previous tick 3` line while retaining the separately qualified `possible provenance chain break` line (exit 1, three violations including its deliberate invalid-duplicate row diagnostic). The e97613c comparison is pinned in `.ufo/waves/round-91/patches/B3-before-state.json` and in the fixture READMEs; it hedges the tick line and the null-chain line.
+
+## Falsification trigger
+
+Reopen the ruling only when a demonstrated case shows that the integer tick finding itself needs holder-identity context. A qualifying counterexample must:
+
+1. Contain a uniquely identified, structurally valid item and valid nonnegative integer ticks in one provenance list, so neither the item identity nor tick parsing is the reason the check stops.
+2. Have a genuinely unresolved non-null compared holder, with the raw-row and resolved-index counts recorded; preserve a paired uniquely resolved control.
+3. Include independently reviewable, source-backed evidence establishing that the compared tick values are not on one shared item-local sequence (for example, they are holder-local ordinals whose comparison is meaningful only after holder identity is known).
+4. Show that the delivered checker reports a definite inversion that this evidence makes indeterminate. A holder mismatch or unresolved ID alone does not satisfy the trigger.
+
+Probe to run from `lore-shokunin/` after adding such a durable counterexample:
+
+```sh
+sha256sum corpus/fixtures/check_bible.py
+python3 corpus/fixtures/check_bible.py corpus/fixtures/<counterexample>
+python3 corpus/fixtures/check_bible.py corpus/fixtures/<uniquely-resolved-control>
+```
+
+Record complete stdout, stderr, exit status, the source excerpts and their exact tick/holder mappings, plus the two checker hashes. If the counterexample meets all four gates, file a C1 follow-up proposing a narrowly scoped tick-qualification change; keep the chain-break qualification as a separate decision. Otherwise retain this ruling.
+
+## Owner
+
+S1 owns this watch design for round 91 and hands it to the next C1 calibration owner at closure. That owner runs and reviews any qualifying probe; no automatic checker change follows from a trigger report alone.

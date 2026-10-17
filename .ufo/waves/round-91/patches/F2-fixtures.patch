@@ -1,0 +1,259 @@
+diff --git a/corpus/fixtures/r91-f2-null-follow-on/README.md b/corpus/fixtures/r91-f2-null-follow-on/README.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-null-follow-on/README.md
+@@ -0,0 +1,30 @@
++# r91-f2-null-follow-on
++
++Fixture scaffolding only; all entities and citations are invented, not sourced
++story evidence. The item begins with `f2-ada` at provenance record `[0]`; record
++`[1]` has `from_holder: null` and names `f2-ren` as its next holder. This pins
++the null-chain diagnostic at a later record (not at record `[0]`).
++
++From the repository root, run:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-f2-null-follow-on
++```
++
++Baseline checker `e97613c` (`e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556`):
++
++```text
++VIOLATION: entities[0].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f2-ada'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)
++1 violation(s); no canon changed
++```
++
++Delivered checker at `a7c6a1773d5994246a76e4eff30d645f161920e0`, SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`:
++
++```text
++VIOLATION: entities[0].provenance[1]: provenance chain break; expected from_holder 'f2-ada', got None
++1 violation(s); no canon changed
++```
++
++Both invocations exit 1 with empty stderr. The delivered output is definite; the
++baseline's vacuous `None`/zero-count identity clause is the discriminating delta.
++No canon is chosen or changed.
+diff --git a/corpus/fixtures/r91-f2-null-follow-on/contradictions.json b/corpus/fixtures/r91-f2-null-follow-on/contradictions.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-null-follow-on/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r91-f2-null-follow-on/entities.json b/corpus/fixtures/r91-f2-null-follow-on/entities.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-null-follow-on/entities.json
+@@ -0,0 +1,42 @@
++[
++  {
++    "id": "f2-lantern-token",
++    "kind": "item",
++    "name": "F2 lantern token",
++    "first_appearance": "f2-ink-register",
++    "claims": [
++      {
++        "statement": "The token is listed in this invented fixture.",
++        "source_id": "f2-ink-register"
++      }
++    ],
++    "provenance": [
++      {
++        "tick": 0,
++        "from_holder": null,
++        "to_holder": "f2-ada",
++        "source_id": "f2-ink-register"
++      },
++      {
++        "tick": 1,
++        "from_holder": null,
++        "to_holder": "f2-ren",
++        "source_id": "f2-ink-register"
++      }
++    ]
++  },
++  {
++    "id": "f2-ada",
++    "kind": "character",
++    "name": "Ada of the Glass Wharf",
++    "first_appearance": "f2-ink-register",
++    "claims": []
++  },
++  {
++    "id": "f2-ren",
++    "kind": "character",
++    "name": "Ren at the North Steps",
++    "first_appearance": "f2-ink-register",
++    "claims": []
++  }
++]
+diff --git a/corpus/fixtures/r91-f2-null-follow-on/relations.json b/corpus/fixtures/r91-f2-null-follow-on/relations.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-null-follow-on/relations.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r91-f2-null-follow-on/sources.json b/corpus/fixtures/r91-f2-null-follow-on/sources.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-null-follow-on/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "f2-ink-register",
++    "title": "F2 invented ledger leaf",
++    "kind": "constructed fixture record",
++    "reliability_note": "Invented only to exercise checker input paths."
++  }
++]
+diff --git a/corpus/fixtures/r91-f2-null-follow-on/timeline.json b/corpus/fixtures/r91-f2-null-follow-on/timeline.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-null-follow-on/timeline.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/README.md b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/README.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/README.md
+@@ -0,0 +1,36 @@
++# r91-f2-tick-at-2-unresolved-at-1
++
++Fixture scaffolding only; all entities and citations are invented, not sourced
++story evidence. Provenance record `[1]` points to `f2-boreal`, whose ID occurs
++in two raw entity rows but only one schema-valid row. Record `[2]` then compares
++the inverted integer tick `2` against prior tick `4` while `from_holder` changes
++from that unresolved ID to uniquely indexed `f2-cass`. Thus the tick diagnostic
++must be integer-only, while the distinct chain-break remains qualified.
++
++From the repository root, run:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1
++```
++
++Baseline checker `e97613c` (`e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556`):
++
++```text
++VIOLATION: entities[5].first_appearance: required nonempty str
++VIOLATION: entities[0].provenance[2].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f2-boreal' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 2 must be greater than previous tick 4
++VIOLATION: entities[0].provenance[2]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f2-boreal' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'f2-cass'
++3 violation(s); no canon changed
++```
++
++Delivered checker at `a7c6a1773d5994246a76e4eff30d645f161920e0`, SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`:
++
++```text
++VIOLATION: entities[5].first_appearance: required nonempty str
++VIOLATION: entities[0].provenance[2].tick: provenance tick 2 must be greater than previous tick 4
++VIOLATION: entities[0].provenance[2]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f2-boreal' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'f2-cass'
++3 violation(s); no canon changed
++```
++
++Both invocations exit 1 with empty stderr. The invalid duplicate entity row is
++retained as an explicit input error; it creates the raw-two/resolved-one
++condition, not evidence of two in-world holders. No canon is chosen or changed.
+diff --git a/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/contradictions.json b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/contradictions.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/entities.json b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/entities.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/entities.json
+@@ -0,0 +1,69 @@
++[
++  {
++    "id": "f2-copper-signet",
++    "kind": "item",
++    "name": "F2 copper signet",
++    "first_appearance": "f2-north-ledger",
++    "claims": [
++      {
++        "statement": "The signet appears in this invented fixture.",
++        "source_id": "f2-north-ledger"
++      }
++    ],
++    "provenance": [
++      {
++        "tick": 1,
++        "from_holder": null,
++        "to_holder": "f2-ada",
++        "source_id": "f2-north-ledger"
++      },
++      {
++        "tick": 4,
++        "from_holder": "f2-ada",
++        "to_holder": "f2-boreal",
++        "source_id": "f2-north-ledger"
++      },
++      {
++        "tick": 2,
++        "from_holder": "f2-cass",
++        "to_holder": "f2-quay",
++        "source_id": "f2-north-ledger"
++      }
++    ]
++  },
++  {
++    "id": "f2-ada",
++    "kind": "character",
++    "name": "Ada of the Reed Court",
++    "first_appearance": "f2-north-ledger",
++    "claims": []
++  },
++  {
++    "id": "f2-boreal",
++    "kind": "character",
++    "name": "Boreal, the ferryman",
++    "first_appearance": "f2-north-ledger",
++    "claims": []
++  },
++  {
++    "id": "f2-cass",
++    "kind": "character",
++    "name": "Cass of the Low Causeway",
++    "first_appearance": "f2-north-ledger",
++    "claims": []
++  },
++  {
++    "id": "f2-quay",
++    "kind": "place",
++    "name": "F2 Quiet Quay",
++    "first_appearance": "f2-north-ledger",
++    "claims": []
++  },
++  {
++    "id": "f2-boreal",
++    "kind": "character",
++    "name": "Rejected duplicate row for fixture input",
++    "first_appearance": "",
++    "claims": []
++  }
++]
+diff --git a/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/relations.json b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/relations.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/relations.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/sources.json b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/sources.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "f2-north-ledger",
++    "title": "F2 invented North Ledger page",
++    "kind": "constructed fixture record",
++    "reliability_note": "Invented only to exercise checker input paths."
++  }
++]
+diff --git a/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/timeline.json b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/timeline.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r91-f2-tick-at-2-unresolved-at-1/timeline.json
+@@ -0,0 +1 @@
++[]

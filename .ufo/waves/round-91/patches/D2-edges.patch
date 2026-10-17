@@ -1,0 +1,55 @@
+diff --git a/corpus/knowledge/r88-sourced-inspiration-decision-table.md b/corpus/knowledge/r88-sourced-inspiration-decision-table.md
+--- a/corpus/knowledge/r88-sourced-inspiration-decision-table.md
++++ b/corpus/knowledge/r88-sourced-inspiration-decision-table.md
+@@ -40,9 +40,44 @@
+-### R9 appendix — translator known, source/version unknown (decided r90)
++### R9 appendix — translator known, source/version unknown (decided r90; reprint boundary clarified r91)
+ 
+-Translator name alone, with the source/version link unverified, FAILS R5 support. Keep
+-`Delivery mode: translation`, record `Source text/version: unidentified; unverified`, and do
+-not label the delivered translation itself `not delivered`. Narrow exception: a reliable
+-bibliographic record tying the delivered passage and translator to a named source work permits
+-support ONLY for a claim about that identified translation — never original wording or an
+-edition-specific variant. **Owner:** the lore lane; disputes to `l0-questions.md`.
++**Owner:** The lore integration owner verifies bibliographic identity and R5 scope; the
++excerpt/map submitter supplies the exact delivered item, its citation, and the transcribed
++passage.
++
++**Trigger:** A delivered `translation` excerpt relies on a later reprint as the bibliographic tie
++to its translator/source work, or a claim about that translation relies on a reprint record while
++the delivered printing or source/version remains uncertain.
++
++**Decision:** Translator name alone, without a reliable link to a named source work, FAILS R5
++support. Keep `Delivery mode: translation`; record the translator and supported source-work/version
++evidence. When no source-work link is established, record
++`Source text/version: unidentified; unverified`; if the work is known but its exact source
++edition/version is not, name the work and record that limit separately. Do not label the delivered
++translation itself `not delivered`. A later reprint can qualify for the narrow R9 exception only
++when an auditable, item-specific record identifies the actual delivered reprint and its
++edition/year (and a stable identifier or copy locator), names the translator and source work,
++and ties the cited passage to that translation; verify the passage against that exact copy.
++Accept a title/imprint/copyright page or publisher/authoritative-library catalogue entry; a
++generic reprint notice, untraceable secondary entry, translator name, or anchor alone is
++insufficient. Record the precise reprint/printing and record citation in the excerpt/map. If the
++tie is verified, allow support only for a claim about wording in that identified reprint. The
++reprint tie does not prove that its text is unchanged from the earlier printing: do not extend
++support to the earlier translation's wording or an edition-specific variant unless that exact
++edition is independently identified and compared. If the item-specific tie or source work is
++unverified, retain `Source text/version: unidentified; unverified` and fail R5 source-claim
++support; describe only the checked copy's wording if the reprint itself is what is being reported.
++
++**Worked example:** A delivered line from a copy marked “2011 reprint of the 1901 translation”
++names M. A. Translator, but the only record is a generic re-issue note and no item-specific
++record ties the passage/translator to a named source work. Keep `Delivery mode: translation`,
++record `Source text/version: unidentified; unverified`, and fail R5 source support; do not call
++the delivered translation absent. If an authoritative record identifies the exact 2011 printing,
++translator, source work; record any unknown source edition separately and check the line
++against that copy, support only “the identified 2011 reprint's translation says ...”; not what
++the 1901 printing said or a variant unique to another edition.
++
++**Verification command (textual completeness only; it does not validate the source):**
++
++```sh
++python3 -c 'from pathlib import Path; s=Path(".ufo/waves/round-91/patches/D2-edges.patch").read_text(); keys=("**Owner:**","**Trigger:**","later reprint can qualify","item-specific record","source work","verify the passage against that exact copy","identified reprint","earlier printing","**Worked example:**","Source text/version: unidentified; unverified","**Verification command"); missing=[k for k in keys if k not in s]; print(f"R9 reprint decision completeness: {len(keys)-len(missing)}/{len(keys)}"); raise SystemExit(bool(missing))'
++```
+ 

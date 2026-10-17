@@ -1,0 +1,20 @@
+{
+ "round": 91,
+ "phase": 1,
+ "baseline": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+ "work_lane": "openai-codex/gpt-6-luna-max",
+ "followup_lane_requested": "hyper/deepseek-v4.1-flash",
+ "followup_lane_served": "alibaba-token-plan/deepseek-v4.1-flash",
+ "failover_reason": "hyper credit exhaustion (r89) + operator directive 2026-10-17 (alibaba for deepseek flash)",
+ "claims": {
+  "C1": "durable discriminating fixtures for the repaired shapes + C9 watch",
+  "C2": "support-command hardening (inventory assertion, distinct-anchor reporting, receipt split)",
+  "C3": "R8/R9/R10 prospective edge decisions (failed-gate disposition, reprint boundary, source_id namespace)"
+ },
+ "seats_delivered": 33,
+ "supplementary_batch": [
+  "M6",
+  "C10",
+  "SE4"
+ ]
+}

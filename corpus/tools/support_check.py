@@ -5,6 +5,7 @@ import argparse
 import re
 import subprocess
 import sys
+from collections import Counter
 from pathlib import Path
 
 MODES = {"verbatim", "translation", "paraphrase", "summary"}
@@ -16,6 +17,12 @@ MODE_DECLARATION = re.compile(
 )
 LOCATOR_SUFFIX = re.compile(
     r"^(.*?):\s*(?:lines?\s*)?(\d+)(?:\s*[-–]\s*(\d+))?$",
+    re.IGNORECASE,
+)
+EXPECTED_INVENTORY = re.compile(
+    r"^\*\*Expected inventory:\*\*\s*(\d+) JSON fact(?:s)?;\s*"
+    r"(\d+) editorial row(?:s)?;\s*(\d+) total mapped row(?:s)?;\s*"
+    r"(\d+) distinct excerpt anchor(?:s)?\.\s*$",
     re.IGNORECASE,
 )
 
@@ -61,9 +68,24 @@ def parse_map(path):
     lines = path.read_text(encoding="utf-8").splitlines()
     facts = []
     excerpt_modes = {}
+    expected_inventory = None
+    current_section = None
     index = 0
     while index < len(lines):
         line = lines[index]
+        if line.startswith("## "):
+            heading = normalized_header(line[3:])
+            if re.match(r"json facts(?:$| )", heading):
+                current_section = "json"
+            elif re.match(r"editorial rows(?:$| )", heading):
+                current_section = "editorial"
+            else:
+                current_section = None
+        inventory_match = EXPECTED_INVENTORY.fullmatch(line)
+        if inventory_match:
+            if expected_inventory is not None:
+                raise ValueError("map must contain exactly one expected inventory declaration")
+            expected_inventory = tuple(int(value) for value in inventory_match.groups())
         if not line.lstrip().startswith("|"):
             index += 1
             continue
@@ -84,10 +106,12 @@ def parse_map(path):
             mode = row[roles["mode"]].strip().strip("`")
             excerpt_path = locator_path(row[roles["path"]])
             declared = parse_mode(mode)
-            if declared is not None and not is_fact_table:
+            if not is_fact_table:
                 previous = excerpt_modes.get(excerpt_path, declared)
                 excerpt_modes[excerpt_path] = declared if previous == declared else None
             if is_fact_table:
+                if current_section is None:
+                    raise ValueError("fact table must be under a JSON facts or Editorial rows heading")
                 fact_id = row[roles["id"]].strip().strip("`")
                 anchor = row[roles["anchor"]].strip().strip("`")
                 locator = row[roles["path"]].strip().strip("`")
@@ -99,12 +123,14 @@ def parse_map(path):
                         span = first if last is None else f"{first}-{last}"
                 if not fact_id or not excerpt_path or not anchor:
                     raise ValueError("map rows require a fact id, excerpt path, and non-empty anchor")
-                facts.append({"id": fact_id, "mode": mode, "anchor": anchor, "path": excerpt_path, "span": span})
+                facts.append({"id": fact_id, "kind": current_section, "mode": mode, "anchor": anchor, "path": excerpt_path, "span": span})
             row_index += 1
         index = row_index
-    if not facts:
-        raise ValueError("no Markdown table found with fact, excerpt path, delivery mode, and anchor columns")
-    return facts, excerpt_modes
+    if expected_inventory is None:
+        raise ValueError("map must contain exactly one expected inventory declaration")
+    if expected_inventory[2] != expected_inventory[0] + expected_inventory[1]:
+        raise ValueError("expected JSON facts and editorial rows must sum to total mapped rows")
+    return facts, excerpt_modes, expected_inventory
 
 
 def find_repo_root(cluster):
@@ -181,13 +207,52 @@ def grep_anchor(anchor, excerpt):
 
 
 def run(cluster, map_path):
-    facts, map_excerpt_modes = parse_map(map_path)
+    facts, map_excerpt_modes, expected_inventory = parse_map(map_path)
+    expected_json, expected_editorial, expected_total, expected_distinct = expected_inventory
+    json_facts = [fact for fact in facts if fact["kind"] == "json"]
+    editorial_rows = [fact for fact in facts if fact["kind"] == "editorial"]
+    anchor_counts = Counter((fact["path"], fact["anchor"]) for fact in facts)
+    duplicate_rows = Counter(
+        (fact["kind"], fact["id"], fact["path"], fact["span"], fact["mode"], fact["anchor"])
+        for fact in facts
+    )
+    duplicate_row_count = sum(count - 1 for count in duplicate_rows.values())
+    repeated_anchor_refs = sum(count - 1 for count in anchor_counts.values())
     source_total = 0
     source_hits = 0
+    editorial_total = 0
+    editorial_hits = 0
     retelling_total = 0
     retelling_hits = 0
     declared_modes = 0
+    validated_rows = 0
     failures = []
+    warnings = []
+
+    observed_inventory = (
+        len(json_facts), len(editorial_rows), len(facts), len(anchor_counts)
+    )
+    labels = ("JSON facts", "editorial rows", "total mapped rows", "distinct excerpt anchors")
+    for label, observed, expected in zip(labels, observed_inventory, expected_inventory):
+        if observed != expected:
+            failures.append(f"inventory {label} mismatch: expected={expected} parsed={observed}")
+    print(
+        f"INVENTORY JSON-FACTS {len(json_facts)}/{expected_json}; "
+        f"EDITORIAL-ROWS {len(editorial_rows)}/{expected_editorial}; "
+        f"TOTAL-ROWS {len(facts)}/{expected_total}; "
+        f"DISTINCT-ANCHORS {len(anchor_counts)}/{expected_distinct}"
+    )
+    print(f"ANCHORS repeated-references={repeated_anchor_refs}; DUPLICATE-ROWS {duplicate_row_count}")
+    for row, count in duplicate_rows.items():
+        if count > 1:
+            failures.append(f"duplicate mapped row {row[1]} appears {count} times")
+
+    referenced_paths = {locator_path(fact["path"]) for fact in facts}
+    for path, mode in sorted(map_excerpt_modes.items()):
+        if path not in referenced_paths:
+            warnings.append(
+                f"unreferenced excerpt declaration: {path} (mode={mode or 'undeclared'})"
+            )
 
     for fact in facts:
         map_mode_value = parse_mode(fact["mode"])
@@ -221,12 +286,19 @@ def run(cluster, map_path):
             if line_span is None or not line_span[0] <= number <= line_span[1]
         ]
         span_ok = line_span is not None and not outside_hits
+        is_retelling = map_mode_value in RETELLING_MODES
+        row_valid = mode_ok and span_ok and anchor_found
+        if row_valid:
+            validated_rows += 1
 
-        if map_mode_value in RETELLING_MODES:
+        if is_retelling:
             retelling_total += 1
             if anchor_found:
                 retelling_hits += 1
-            status = "PASS" if mode_ok and span_ok else "FAIL"
+            else:
+                warnings.append(
+                    f"retelling anchor not found for {fact['id']}; excluded from source support"
+                )
             detail = "retelling-support-only"
             detail += "; anchor=" + ("found" if anchor_found else "not-found")
             detail += f"; mode={map_mode_value or 'undeclared'}"
@@ -237,12 +309,16 @@ def run(cluster, map_path):
             if anchor_output:
                 detail += f"; {anchor_output}"
         else:
-            source_total += 1
-            fact_ok = mode_ok and anchor_found and span_ok
-            if fact_ok:
-                source_hits += 1
-            status = "PASS" if fact_ok else "FAIL"
-            detail = f"source-support; mode={map_mode_value or 'undeclared'}"
+            if fact["kind"] == "json":
+                source_total += 1
+                if row_valid:
+                    source_hits += 1
+                detail = f"source-support; mode={map_mode_value or 'undeclared'}"
+            else:
+                editorial_total += 1
+                if row_valid:
+                    editorial_hits += 1
+                detail = f"editorial-row; mode={map_mode_value or 'undeclared'}"
             if actual_mode is None:
                 detail += "; excerpt-mode=undeclared"
             elif actual_mode != map_mode_value:
@@ -265,25 +341,32 @@ def run(cluster, map_path):
             )
         if not mode_ok:
             failures.append(fact["id"] + ": delivery mode missing or mismatched")
-        if map_mode_value not in RETELLING_MODES and not anchor_found:
+        if not is_retelling and not anchor_found:
             failures.append(fact["id"] + ": source-support anchor missing")
         if excerpt is None:
             failures.append(fact["id"] + ": excerpt path missing or outside cluster")
         if grep_error:
             failures.append(fact["id"] + ": " + grep_error)
-        print(f"{status} {fact['id']}: {detail}")
+        row_status = "WARN" if is_retelling and not anchor_found else "PASS" if row_valid else "FAIL"
+        print(f"{row_status} {fact['id']}: {detail}")
 
     print(
-        f"SOURCE-SUPPORT {source_hits}/{source_total}; "
-        f"RETELLING-SUPPORT-ONLY {retelling_total} entries "
-        f"({retelling_hits}/{retelling_total} anchors); "
-        f"MODES {declared_modes}/{len(facts)}"
+        f"RECEIPT JSON-FACTS {len(json_facts)}; EDITORIAL-ROWS {len(editorial_rows)}; "
+        f"TOTAL-ROWS {len(facts)}"
     )
+    print(
+        f"SOURCE-SUPPORT {source_hits}/{source_total}; EDITORIAL-ANCHORS {editorial_hits}/{editorial_total}; "
+        f"RETELLING-SUPPORT-ONLY {retelling_total} entries "
+        f"({retelling_hits}/{retelling_total} anchors); MODES {declared_modes}/{len(facts)}; "
+        f"VALIDATED-ROWS {validated_rows}/{len(facts)}"
+    )
+    for warning in warnings:
+        print(f"WARN: {warning}")
     if failures:
         for failure in failures:
             print(f"FAIL: {failure}")
         return 1
-    print("RESULT PASS")
+    print("RESULT PASS WITH WARNINGS" if warnings else "RESULT PASS")
     return 0
 
 
