@@ -1,0 +1,88 @@
+{
+  "seat": "JDEP2",
+  "wave": "round-90 follow-up (world-bible lane, depth judge #2)",
+  "baseline_commit": "e97613c",
+  "judged_commit": "ca7f9ef",
+  "scratch_root": "/tmp/lore-r90-JDEP2.j3q8l6",
+  "freeze_then_verify": {
+    "cake": "X2-c1-nullonly.patch + X3-c1-tickonly.patch composed on e97613c",
+    "baseline_checker_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "delivered_checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "composite_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "result": "HASH-MATCH OK; no blocking finding"
+  },
+  "cases": [
+    {
+      "id": "R8-creator-denial-vs-distinctive-sequence",
+      "probe_dir": "/tmp/lore-r90-JDEP2.j3q8l6/probes-r8-denial",
+      "case": "Creator dated denial of any source use; editor finding: seven threshold names and their order match the named Kesh Hymn lines 12-19 (distinctive sequence).",
+      "replay": "python3 corpus/fixtures/check_bible.py probes-r8-denial -> CLEAN: schema, citations, relations, timeline; 0 violations; exit 0",
+      "classification": "partially covered",
+      "covered": "R2 gate denies R2 on the editor's contrary source-specific evidence (appendix :32-34).",
+      "uncovered": [
+        "failed-gate disposition unspecified",
+        "withhold-scope conflict: row :24 element-level vs appendix :36-38 detail-level",
+        "dispute routing diluted vs D1-decisions.md:13 ('disputed' clause dropped)",
+        "note-removal step for R2 branch dropped at merge (grep remove|withdraw|clear exit 1)"
+      ]
+    },
+    {
+      "id": "R9-later-reprint-tie",
+      "probe_dir": "/tmp/lore-r90-JDEP2.j3q8l6/probes-r9-reprint",
+      "case": "Delivered translation (2011 reprint of the 1901 translation) with translator named and source/version unverified; the only bibliographic tie is the later reprint's own re-issue record.",
+      "replay": [
+        "check_bible.py -> CLEAN, exit 0",
+        "support_check.py -> PASS T1: source-support; mode=translation; SOURCE-SUPPORT 1/1; RESULT PASS; exit 0"
+      ],
+      "classification": "partially covered (boundary uncovered)",
+      "covered": "Translator-name-alone FAILS R5 (appendix :42-43); not my case.",
+      "uncovered": [
+        "'identified translation' vs 'edition-specific variant' undefined for a reprint",
+        "'reliable' has no criterion; printing-identity recording dropped from D1/D2",
+        "delivered support command counts translation-mode entries as source support regardless of source/version field"
+      ],
+      "exposure": "prospective; delivered maps have 0 translation rows (r87 22/22 and r88-m3 10/10 receipts are verbatim-only)"
+    },
+    {
+      "id": "R10-shared-source_id-across-clusters",
+      "probe_dirs": [
+        "/tmp/lore-r90-JDEP2.j3q8l6/probes-r10/srcid-a",
+        "/tmp/lore-r90-JDEP2.j3q8l6/probes-r10/srcid-b"
+      ],
+      "case": "Both clusters carry the same source_id 'salt-chronicle' with divergent record content (A: municipal registry copy; B: courier's route log).",
+      "replay": [
+        "check_bible.py srcid-a -> CLEAN, exit 0",
+        "check_bible.py srcid-b -> CLEAN, exit 0",
+        "check_bible.py srcid-a srcid-b -> usage error, exit 2 (no cross-cluster view)"
+      ],
+      "classification": "uncovered",
+      "uncovered": [
+        "source_id namespace not addressed (grep -i 'source_id|source id' over :28-63 exit 1)",
+        "no artifact for divergent source-record content under one id",
+        "trigger text over-applies (every shared citation) or under-applies (no dismissal criterion)"
+      ],
+      "exposure": "prospective; landed clusters share no source ids (shared_source_ids=[])"
+    }
+  ],
+  "other_receipts": {
+    "baseline_appendix_absence": "git show e97613c:corpus/knowledge/r88-sourced-inspiration-decision-table.md | grep -c appendix -> 0",
+    "delivered_appendix_diffstat": "37 insertions(+)",
+    "checker_prose_blind": "grep -n 'inspiration|excerpt|delivery|translation|knowledge' corpus/fixtures/check_bible.py -> exit 1",
+    "possible_influence_string_usage": "grep -rn 'possible influence' corpus/ -> 2 hits, both in the R8 appendix itself (:31, :36)",
+    "live_register": "REGISTER_ABSENT",
+    "r87_ETCSL_marker": "corpus/fixtures/r87-myth-cluster/inspiration-note.md:21 present",
+    "support_receipts": "r87 22/22 RESULT PASS; r88-m3 10/10 RESULT PASS",
+    "two_dir_limit": "check_bible.py <a> <b> -> exit 2"
+  },
+  "dependency_checks": [
+    "2026-10-17T06:55:05-03:00 check-1: Q1-r90-debt.json only",
+    "2026-10-17T06:56:05-03:00 check-2: Q1-r90-debt.json only"
+  ],
+  "verdicts": {
+    "decisional_coverage": "improved",
+    "traceability": "improved",
+    "bounded_verification": "unchanged (manual screen by design; R9 receipt parity gap noted)",
+    "retroactivity_non_regression": "unchanged",
+    "blocking_findings": "none"
+  }
+}

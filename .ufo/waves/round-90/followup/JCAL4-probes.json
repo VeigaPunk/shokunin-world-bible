@@ -1,0 +1,90 @@
+{
+  "seat": "JCAL4",
+  "role": "calibration judge #4 (wording audit)",
+  "wave": "round-90 follow-up (world-bible lane)",
+  "audited_commit": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+  "baseline_commit": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+  "checker_path": "corpus/fixtures/check_bible.py",
+  "checker_sha256_delivered": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "freeze_then_verify": {
+    "method": "git show e97613c:corpus/fixtures/check_bible.py | + X2-c1-nullonly.patch | + X3-c1-tickonly.patch",
+    "composed_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "match": true,
+    "x3_hunk_offset": 2,
+    "blocking_finding": false
+  },
+  "wait_checks": [
+    {"at": "2026-10-17T06:56:21-03:00", "head": "ca7f9ef", "untracked": ["corpus/tools/__pycache__/"]},
+    {"at": "2026-10-17T06:57:21-03:00", "head": "ca7f9ef", "untracked": [".ufo/waves/round-90/followup/H2-delta.json"]},
+    {"at": "2026-10-17T06:58:21-03:00", "head": "ca7f9ef", "untracked": [".ufo/waves/round-90/followup/H2-delta.json", "H4-census.json", "H4-lineage.json", "H4-probes.json", "JCAL5-delta.json", "corpus/tools/__pycache__/"]}
+  ],
+  "probes": [
+    {"id": "A", "base_fixture": "r89-fn2-control", "edit": "provenance[1]: tick=0, from_holder=null", "exit_before": 1, "exit_after": 1,
+     "before": ["entities[3].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index); provenance tick 0 must be greater than previous tick 0", "entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)"],
+     "after": ["entities[3].provenance[1].tick: provenance tick 0 must be greater than previous tick 0", "entities[3].provenance[1]: provenance chain break; expected from_holder 'f3-dup', got None"],
+     "verdict": "definite restored, E1-conformant"},
+    {"id": "B", "base_fixture": "r89-fn2-unresolved-chain-break", "edit": "provenance[1]: tick=0", "exit_before": 1, "exit_after": 1,
+     "before": ["entities[4].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 0 must be greater than previous tick 0"],
+     "after": ["entities[4].provenance[1].tick: provenance tick 0 must be greater than previous tick 0", "entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'"],
+     "verdict": "tick definite under unresolved compared holder (C9 ruling case); chain stays qualified"},
+    {"id": "C", "base_fixture": "r89-fn2-unresolved-chain-break", "edit": "provenance[0]: from_holder='f3-dup'", "exit_before": 1, "exit_after": 1,
+     "before": ["entities[4].provenance[0]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); first record must have from_holder null"],
+     "after": ["entities[4].provenance[0]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); first record must have from_holder null"],
+     "verdict": "unchanged; deviates from E1 guard template (JCAL4-F2); hedged frame + definite embedded requirement = voice inconsistency"},
+    {"id": "D", "base_fixture": "r89-fn2-control", "edit": "provenance[0]: from_holder='mira'", "exit_before": 1, "exit_after": 1,
+     "after": ["entities[3].provenance[0]: provenance chain break; first record must have from_holder null", "entities[3].provenance[1]: provenance chain break; expected from_holder 'f3-dup', got 'mira'"],
+     "verdict": "definite, E1-conformant"},
+    {"id": "E", "base_fixture": "r89-fn2-control", "edit": "provenance[1]: tick=0, from_holder=null; sources.json duplicate archive-ledger", "exit_before": 1, "exit_after": 1,
+     "after": ["entities[3].provenance[1].tick: input-structural finding, not sourced-canon; provenance tick 0 must be greater than previous tick 0", "entities[3].provenance[1]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'f3-dup', got None"],
+     "verdict": "source-ambiguity prefix preserved on definite lines, E1-conformant"},
+    {"id": "G", "base_fixture": "r89-fn2-unresolved-chain-break", "edit": "provenance[1]: from_holder=null", "exit_before": 1, "exit_after": 1,
+     "before": ["entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)"],
+     "after": ["entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got None"],
+     "verdict": "vacuous None detail removed, but qualifier retained; deviates from E1 null-chain rationale (JCAL4-F1)"}
+  ],
+  "durable_fixture_replays": {
+    "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/<dir>",
+    "r90-c1-rawpresent-from": {"exit": 1, "violations": 5, "matches_readme": true},
+    "r90-c1-rawpresent-source": {"exit": 1, "violations": 4, "matches_readme": true},
+    "r90-c1-rawpresent-to": {"exit": 1, "violations": 5, "matches_readme": true},
+    "r90-c1-three-causes": {"exit": 1, "violations": 4, "matches_readme": true},
+    "r89-fn2-unresolved-chain-break": {"exit": 1, "violations": 2, "shape": "qualified unresolved non-null chain"},
+    "r89-fn2-control": {"exit": 1, "violations": 1, "shape": "definite resolved chain"}
+  },
+  "corpus_scan": {
+    "fixtures_with_provenance_chain_or_tick_findings": ["item-chain-broken", "r87-chain-unique-broken", "r87-probe-record-and-chain", "r87-probe-source-prefix", "r89-fn2-control", "r89-fn2-unresolved-chain-break"],
+    "fixtures_emitting_got_None": [],
+    "fixtures_with_tick_inversion_plus_unresolved_compared_holder": [],
+    "finding": "restored null-chain definite string and tick-definite-under-unresolved-holder shape are not regression-visible in the delivered corpus (JCAL4-F3)"
+  },
+  "voice_history": {
+    "r88_definite_format_lines": {"2ea9ef1": [306, 308, 310], "51b286b": [306, 308, 310]},
+    "r89_hedged_lines": {"e97613c": [328, 330, 333, 342, 348]},
+    "delivered_restored_lines": {"ca7f9ef": [326, 337, 343]},
+    "line_337_equals_r88_line_308": true,
+    "line_343_equals_r88_line_310": true,
+    "holder_identity_note_present_in_delivered": false
+  },
+  "over_claim_sweep": {
+    "command": "grep -n 'canon|truth|real|story|proof|prove' corpus/fixtures/check_bible.py",
+    "matches": ["provenance identifiers", "line 426: '{n} violation(s); no canon changed'"],
+    "unhedged_beyond_input": [],
+    "verdict": "no over-claim found in delivered strings"
+  },
+  "verdicts": {
+    "over_claim_control": "improved",
+    "qualifier_presence_on_disclosure_lines": "improved (bounded: over-present on JCAL4-F1/F2 predicates)",
+    "voice_consistency": "improved (residual: line 341 internal frame inconsistency)",
+    "e1_conformance": "improved but incomplete (3 exact paths verified; F1/F2 deviate)",
+    "freeze_then_verify": "PASS"
+  },
+  "named_debt": [
+    {"id": "JCAL4-F1", "title": "null-from chain with unresolved previous holder stays qualified", "evidence": ["probe G", "check_bible.py:335", "E1-r90-wording.md:17"], "direction": "under-claim (safe), blocks E1 conformance"},
+    {"id": "JCAL4-F2", "title": "first-record guard with unresolved non-null id stays qualified + voice-inconsistent frame", "evidence": ["probe C", "check_bible.py:341", "E1-r90-wording.md:35-45"]},
+    {"id": "JCAL4-F3", "title": "restored definite strings not pinned by durable fixtures (r91 fixture candidate)", "evidence": ["corpus scan", "no fixture emits 'got None'"]},
+    {"id": "JCAL4-F4", "title": "claim-text precision: 'null chains definite' needs the resolved-previous qualifier", "evidence": ["probe G counterexample"]}
+  ],
+  "scratch": {"root": "/tmp/jcal4", "removed_after_report": true},
+  "writes": [".ufo/waves/round-90/followup/JCAL4.md", ".ufo/waves/round-90/followup/JCAL4-probes.json"],
+  "commit_or_push": false
+}

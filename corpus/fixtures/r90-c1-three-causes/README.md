@@ -18,4 +18,4 @@ VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order compa
 4 violation(s); no canon changed
 ```
 
-The provenance record has exactly the four required keys (`tick`, `from_holder`, `to_holder`, `source_id`) and three latching defects: negative tick, holder id `r90-c1-three-causes-absent-holder` absent from raw entities, and source id `r90-c1-three-causes-absent-source` absent from raw sources. The two absent ids occur nowhere in their corresponding raw tables.
+The provenance record has exactly the four required keys (`tick`, `from_holder`, `to_holder`, `source_id`) and three latching defects: negative tick, holder id `r90-c1-three-causes-absent-holder` absent from raw entities, and source id `r90-c1-three-causes-absent-source` absent from raw sources. The two absent ids occur in no valid entity row of the raw tables (they appear only as this provenance record's own references).

@@ -1,0 +1,119 @@
+{
+  "seat": "JDEP4",
+  "wave": "round-90 follow-up (world-bible lane)",
+  "delivered_head": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+  "baseline": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+  "tree_status": "clean at session start 06:50 -03:00 (git status --porcelain empty); by 07:02 only follow-up seats' own artifacts had landed (tracked: Q1-r90-debt.json modified by Q1; untracked: sibling followup/*.md|json). None written by this seat.",
+  "question": "recommend for/against a THIRD capabilities row (candidate: sourced-inspiration disposition decisions, the r90-decided R8/R9/R10 governance); evidence must be a runnable command",
+  "recommendation": "AGAINST a third row as phrased; the two rows suffice. The round's real capabilities change is row 2 becoming corpus-resident (update its evidence pointer at closure). The decided governance has no runnable demonstration: R8 and R10 have no command at all; the R9 translator/version sub-case is passed by the delivered tool where the decided verdict says fail.",
+  "freeze_check": {
+    "rule": "r88-I1: delivered checker must hash-match X2+X3 composed on e97613c",
+    "method": "in-memory python here-doc: git show e97613c:corpus/fixtures/check_bible.py; apply X2-c1-nullonly.patch then X3-c1-tickonly.patch hunks by unique exact-block replace; sha256sum composed vs delivered",
+    "baseline_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "composed_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "delivered_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "result": "FREEZE-MATCH = True; no blocking finding"
+  },
+  "probes": [
+    {
+      "id": "M1-r87",
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster",
+      "observed": "SOURCE-SUPPORT 22/22; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; RESULT PASS",
+      "exit": 0
+    },
+    {
+      "id": "M1-r88m3",
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster",
+      "observed": "SOURCE-SUPPORT 10/10; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 10/10; RESULT PASS",
+      "exit": 0
+    },
+    {
+      "id": "M1-paraphrase-negative-control",
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/r89-inspiration-paraphrase",
+      "observed": "PASS entities.json#/0/claims/0: retelling-support-only; anchor=found; mode=paraphrase; 9:A modern paraphrase says that the keeper later summarized the ledger for the court: the tide-mark had been moved to the west stair. / SOURCE-SUPPORT 0/0; RETELLING-SUPPORT-ONLY 1 entries (1/1 anchors); MODES 1/1; RESULT PASS",
+      "exit": 0
+    },
+    {
+      "id": "M2-translator-probe",
+      "command": "python3 corpus/tools/support_check.py /tmp/jdep4-r9/probe-cluster",
+      "probe_files": "claim-to-excerpt-map.md (mode cell: `translation`; translator named; source text/version: unidentified (unverified); anchor on excerpt.md:6) + excerpt.md (Delivery mode (R9): translation)",
+      "observed": "PASS entities.json#/0/claims/0: source-support; mode=translation; anchor=found; 6:The keeper moved the tide-mark to the west stair. / SOURCE-SUPPORT 1/1; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 1/1; RESULT PASS",
+      "exit": 0,
+      "contrast": "decided R9 appendix (corpus/knowledge/r88-sourced-inspiration-decision-table.md:40-47) says translator-known/source-version-unverified FAILS R5 support; tool has no translator/version logic (grep exit 1, no match) and its README:14 disclaims judging that a translation is identified to the required text/version",
+      "cleanup": "probe cluster removed (ls /tmp/jdep4-r9 -> removed=yes)"
+    },
+    {
+      "id": "M3-R8-no-command",
+      "command": "grep -rn \"possible influence\" corpus/",
+      "observed": "corpus/knowledge/r88-sourced-inspiration-decision-table.md:31 and :36 only (the appendix text itself; no fixture, no note instance)",
+      "exit": 0
+    },
+    {
+      "id": "M3-R10-no-register",
+      "command": "ls corpus/knowledge/cross-cluster-contradictions.md",
+      "observed": "No such file or directory (register absent by design; R10 is an explicit manual integration gate per table line 26; only worked example is the hypothetical r89 demo)",
+      "exit": 2
+    },
+    {
+      "id": "M4-row1-loop",
+      "command": "for d in r88-shape-ambiguous-armed r88-mixed-stop r88-nonholder-stop; do out=$(python3 corpus/fixtures/check_bible.py corpus/fixtures/$d); echo \"$d violations=$(printf '%s\\n' \"$out\" | grep -c '^VIOLATION:') exit=$?\"; done",
+      "observed": "r88-shape-ambiguous-armed violations=5 exit=1; r88-mixed-stop violations=6 exit=1; r88-nonholder-stop violations=4 exit=1 (matches SCORECARD row 1 pointer)",
+      "exit": 1
+    },
+    {
+      "id": "M4-new-r90-fixtures",
+      "command": "for d in r90-c1-three-causes r90-c1-rawpresent-from r90-c1-rawpresent-to r90-c1-rawpresent-source; do python3 corpus/fixtures/check_bible.py corpus/fixtures/$d; done",
+      "observed": "three-causes: 4 violations exit 1 (combined first-stop names invalid tick + absent holder + absent source); rawpresent-from: 5 exit 1; rawpresent-to: 5 exit 1; rawpresent-source: 4 exit 1; each with raw-present wording 'present in raw ... but absent from the resolved index'",
+      "exit": 1
+    },
+    {
+      "id": "M4-fn2-pair",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r89-fn2-control; python3 corpus/fixtures/check_bible.py corpus/fixtures/r89-fn2-unresolved-chain-break",
+      "observed": "control: 1 violation, definite chain break, exit 1; unresolved-chain-break: 2 violations, qualified 'possible provenance chain break, not a definite identity mismatch', exit 1",
+      "exit": 1
+    },
+    {
+      "id": "M5-census-164",
+      "command": "cd corpus/fixtures && for d in */; do python3 check_bible.py \"${d%/}\" >/dev/null 2>&1; echo $?; done | sort | uniq -c",
+      "observed": "32 x exit 0; 132 x exit 1 (164 dirs)",
+      "exit": 0
+    },
+    {
+      "id": "M5-baseline-tuple-replay",
+      "command": "python3 here-doc: re-run each of the 160 dirs in .ufo/waves/round-90/patches/B1-tuples.json at ca7f9ef; compare exit, sha256(stdout), stdout.count('VIOLATION:')",
+      "observed": "baseline_dirs=160 missing=0 exit_changes=0 stdout_sha_changes=0 violation_count_changes=0; new dirs exactly r90-c1-rawpresent-from/-source/-to, r90-c1-three-causes",
+      "exit": 0
+    },
+    {
+      "id": "M6-wait-checks",
+      "command": "for i in 1 2 3; do date -Is; ls -1 .ufo/waves/round-90/followup | sort | tr '\\n' ' '; echo; [ $i -lt 3 ] && sleep 60; done",
+      "observed": "2026-10-17T06:55:34-03:00 -> Q1-r90-debt.json; 06:56:34 -> Q1-r90-debt.json; 06:57:34 -> H2-delta.json Q1-r90-debt.json. No JDEP1-3/P1 artifact landed in the window."
+    }
+  ],
+  "hashes": {
+    "corpus/tools/support_check.py": "66a3c4bb2ae7fc2049227e480864661606b65a629c64cbc3ce05e14589add472",
+    "corpus/fixtures/r87-myth-cluster/claim-excerpt-map.md": "8c1b600d28c130f998a0765ae9c4ae30d828b11fe96e3cbd763cd0cf79089b9d",
+    "corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md": "d314d22ec2bbba149354ef30df96f39468f8f7a54e6c3a4cf824eb9d58dad290",
+    "corpus/knowledge/r88-sourced-inspiration-decision-table.md": "a5ee4dec31083f5cede3a19ec5b36f89d82942a85ea3e10e47cf28e1fc07a344"
+  },
+  "baseline_absence": {
+    "corpus/tools": "absent at e97613c (git ls-tree empty)",
+    "r87+r88 claim-excerpt maps": "absent at e97613c (git ls-tree empty)"
+  },
+  "post_window_cross_checks": {
+    "time": "2026-10-17T07:02-03:00, after the two 60s wait-checks",
+    "JDEP2": "independent freeze result agrees: X2+X3 composed == delivered ff9fd2aa..., 'no mismatch to report'; classifies R8/R9 attack cases partially covered and R10 uncovered (debts D-JDEP2r90-1..5) - consistent with this seat's no-runnable-demonstration finding",
+    "JDEP3": "independent confirmation: cross-cluster-contradictions.md absent at baseline and delivered; no r90 artifact manufactures a shared referent - consistent with F2(c)/F5(iii)",
+    "hygiene_note": "corpus/tools/__pycache__/ appeared transiently in git status during the follow-up window (not from this seat's script runs) and was gone by 07:02"
+  },
+  "axis_verdicts": {
+    "depth": "improved (bounded): R8/R9/R10 sub-cases decided in the delivered table lines 28-59; bounds: no fixtures/commands for the decisions; capability table correctly unchanged at two rows",
+    "coverage": "improved (bounded): maps + support command corpus-resident, 22/22 + 10/10 exit 0, 164 dirs / 0 changes among 160 baseline; bound: lexical preflight only; translator sub-case outside the tool",
+    "calibration": "unchanged on this seat's slice: freeze hash-match, 0 exit/stdout-byte/violation-count changes over the 160 baseline dirs; fn2 pair definite/qualified as intended"
+  },
+  "files_written": [
+    ".ufo/waves/round-90/followup/JDEP4.md",
+    ".ufo/waves/round-90/followup/JDEP4-evidence.json"
+  ],
+  "no_commit_no_push": true
+}

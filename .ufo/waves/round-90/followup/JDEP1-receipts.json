@@ -1,0 +1,104 @@
+{
+  "seat": "JDEP1",
+  "wave": "round-90 followup (world-bible lane)",
+  "role": "Depth judge #1 (appendix verification)",
+  "judged_tree": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+  "baseline": "e97613c",
+  "target": {
+    "file": "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+    "sha256_delivered": "a5ee4dec31083f5cede3a19ec5b36f89d82942a85ea3e10e47cf28e1fc07a344",
+    "appendix_lines": {"R8": "28-38", "R9": "40-47", "R10": "49-59", "provenance": "61-63"},
+    "append_only": {"numstat": "37\t0", "hunk": "@@ -25,6 +25,43 @@", "deletions": 0}
+  },
+  "cited_commands_in_appendices": {
+    "cmd": "python3 extraction over appendix sections; regex (^|\\s)(grep|python3|git|awk|curl|exit code)(\\s|$)",
+    "stdout": "R8: code_fences=0 command_lines=0\nR9: code_fences=0 command_lines=0\nR10: code_fences=0 command_lines=0",
+    "meaning": "the three delivered appendices cite zero example commands; D1's three **Verification command** blocks and worked examples did not survive the merge"
+  },
+  "owner_trigger_extraction": {
+    "cmd": "python3 whitespace-normalized extraction over delivered appendix sections",
+    "stdout": [
+      "R8: owner_count=1 trigger_label=False worked_example_label=False",
+      "R8_trigger=When evidence beyond commonplace resemblance or an explicit source-use claim triggers review, record a dated, neutral `possible influence: unverified` note (in the inspiration note and element map, creating them if absent): it records uncertainty, not influence.",
+      "R9: owner_count=1 trigger_label=False worked_example_label=False",
+      "R9_trigger=Translator name alone, with the source/version link unverified, FAILS R5 support.",
+      "R10: owner_count=1 trigger_label=False worked_example_label=False",
+      "R10_trigger=Shared names/IDs trigger comparison but do not prove identity (events are not entities; occasion and field must match)."
+    ],
+    "note": "owners are inline at paragraph ends and the file is line-wrapped; line-start matching under-reports (initial probe bug corrected)"
+  },
+  "d1_proposal_command_replays": [
+    {"id": "R8", "source": ".ufo/waves/round-90/patches/D1-decisions.md:39", "stdout": "R8 proposal completeness: 6/6", "exit": 0},
+    {"id": "R9", "source": ".ufo/waves/round-90/patches/D1-decisions.md:49", "stdout": "R9 proposal completeness: 7/7", "exit": 0},
+    {"id": "R10", "source": ".ufo/waves/round-90/patches/D1-decisions.md:59", "stdout": "R10 proposal completeness: 9/9", "exit": 0}
+  ],
+  "jdep2_probe_replays": {
+    "source_json": ".ufo/waves/round-89/followup/JDEP2-probes.json",
+    "scratch": "/tmp/jdep1/probes",
+    "rebuilt_files": 23,
+    "checker": "corpus/fixtures/check_bible.py (delivered, sha256 ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421)",
+    "replays": [
+      {"dir": "r8-motif-unrecorded", "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0},
+      {"dir": "r9-translation-unknown-version", "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0},
+      {"dir": "r10-cluster-a", "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0},
+      {"dir": "r10-cluster-b", "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0}
+    ],
+    "two_directory_rejection": {
+      "split_argv": {"cmd": "python3 corpus/fixtures/check_bible.py /tmp/jdep1/probes/r10-cluster-a /tmp/jdep1/probes/r10-cluster-b", "stderr": "usage: check_bible.py [-h] bible\ncheck_bible.py: error: unrecognized arguments: /tmp/jdep1/probes/r10-cluster-b", "exit": 2},
+      "single_space_joined_argv": {"cmd": "python3 corpus/fixtures/check_bible.py \"/tmp/jdep1/probes/r10-cluster-a /tmp/jdep1/probes/r10-cluster-b\"", "stdout_head": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: '/tmp/jdep1/probes/r10-cluster-a /tmp/jdep1/probes/r10-cluster-b/sources.json'", "violations": 5, "exit": 1, "note": "this is the form recorded in JDEP2-probes.json replay[2]; both forms reject the two-directory input"}
+    },
+    "anchors": [
+      {"cmd": "grep -nF -- 'the ring upon the fourth stair' /tmp/jdep1/probes/r9-translation-unknown-version/river-codex-excerpt.md", "stdout": "11:The keeper set the ring upon the fourth stair.", "exit": 0},
+      {"cmd": "test -f /tmp/jdep1/probes/r8-motif-unrecorded/source-excerpt.md", "stdout": "absent", "exit": 1},
+      {"cmd": "grep -nF -- 'moved to the west stair' corpus/fixtures/r89-inspiration-paraphrase/ash-ledger-excerpt.md", "stdout": "9:A modern paraphrase says that the keeper later summarized the ledger for the court: the tide-mark had been moved to the west stair.", "exit": 0}
+    ]
+  },
+  "retroactivity": {
+    "hashes_base_vs_delivered": {
+      "corpus/fixtures/r87-myth-cluster/inspiration-note.md": {"base": "91c0dba91c282bc3", "delivered": "91c0dba91c282bc3"},
+      "corpus/fixtures/r88-m3-maya-cluster/inspiration-note.md": {"base": "58f5390e5928ebad", "delivered": "58f5390e5928ebad"},
+      "corpus/fixtures/r88-m3-maya-cluster/source-excerpt.md": {"base": "b5edc2fd3c2e3d4f", "delivered": "b5edc2fd3c2e3d4f"},
+      "corpus/fixtures/r87-myth-cluster/timeline.json": {"base": "b4626c33a9f1d7fd", "delivered": "b4626c33a9f1d7fd"},
+      "corpus/fixtures/r87-myth-cluster/contradictions.json": {"base": "14bf96df22053ecb", "delivered": "14bf96df22053ecb"},
+      "corpus/knowledge/reference-ledger.md": {"base": "7ffab17dd9fee76a", "delivered": "7ffab17dd9fee76a"},
+      "corpus/fixtures/check_bible.py": {"base": "e2bb9639a3247284", "delivered": "ff9fd2aa6811a813", "note": "intended C1 delivery"}
+    },
+    "r87_etcsl_marker": {"note_line": "inspiration-note.md:21 Element marker (R8, r89): ... `external-only / unverified inspiration`", "map_line": "claim-excerpt-map.md:15 reaffirms the marker", "marker_count_in_note": 1, "unchanged": true},
+    "r88_m3_spence": {"inspiration_note": "58f5390e5928ebad unchanged", "source_excerpt": "b5edc2fd3c2e3d4f unchanged (Spence 1913, p. 209, English prose delivered)", "r9_branch_applies": false, "r8_undelivered_branch_applies": false},
+    "hara_sen": {"contradictions_json": "14bf96df22053ecb unchanged; 1 local entry (keys claim_a, claim_b, id, why; 'Hara's gate-witness and Sen's dune-register each describe the same single Moon-Basin Vow')", "readme_line": "r87 README.md:5 local place disagreement", "cross_cluster": false},
+    "register": {"live_register_exists": false, "shared_entity_ids": [], "shared_entity_names": [], "shared_event_ids": [], "shared_event_desc": [], "demo_hypothetical": true},
+    "mode_label_annotations_additive": {"files": 6, "insertions": 12, "deletions": 0, "added_line": "**Delivery mode (R9):** `verbatim` — newly authored fictional text."}
+  },
+  "prospective_marker_census": {
+    "possible influence: unverified": {"hits": 1, "location": "table:31 (R8 appendix only)"},
+    "external-only / unverified inspiration": {"hits": 4, "locations": ["table R8 row", "table R8 appendix", "r87 inspiration-note.md:21", "r87 claim-excerpt-map.md:15"]},
+    "Source text/version:": {"hits": 1, "location": "table:43 (R9 appendix only)"},
+    "## R10 comparison outcomes": {"hits": 1, "location": "table:54 (R10 appendix only)"},
+    "Delivery mode: translation": {"hits": 1, "location": "table:43 (R9 appendix text only; no in-corpus translation instance)"}
+  },
+  "structural_shape": {"data_rows": 10, "columns_per_row": {"6": 10}, "r8_r9_r10_rows_unique": true, "appendix_headings_unique": true, "provenance_line": 61},
+  "merge_fidelity_vs_r1": {"two_part_r2_gate": true, "marker_reservation": true, "r9_fails_r5": true, "r9_narrow_exception": true, "r9_never_original_wording": true, "r10_comparison_keys": true, "r10_readme_section": true, "r10_not_live_register": true},
+  "freeze_hash_check": {
+    "method": "git archive e97613c corpus/fixtures/check_bible.py | tar -x -C /tmp/jdep1-compose-Xyip6Y; git apply X2-c1-nullonly.patch; git apply X3-c1-tickonly.patch; sha256sum; diff vs delivered",
+    "composed_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "delivered_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "diff": "IDENTICAL",
+    "blocking_finding": false
+  },
+  "wait_checks": {
+    "samples": 2,
+    "elapsed_s": 60.012,
+    "head_both": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+    "sample1_untracked": ["H2-delta.json", "H4-census.json", "H4-lineage.json", "H4-probes.json", "JCAL5-delta.json", "corpus/tools/__pycache__/"],
+    "sample2_untracked_extra": ["H3-r90-mutations.json", "JCAL1.md", "JCAL2-receipts.json", "JCOV5.md", "JDEP3.md", "Q2.md"],
+    "timestamp_note": "loop printf format bug suppressed printed timestamps; sample-2 task-log mtime 2026-10-17 06:59:12.75 -0300, sample 1 derived ~06:58:12 -0300"
+  },
+  "verdict_recommendation": "IMPROVED (depth), bounded — three JDEP2 sub-cases decided with owner+trigger each; chain commands all green; retroactivity byte-proven; register correctly empty; freeze hash exact. Bounds: appendices cite zero commands / no in-tree completeness check of the delivered merge (F1); R10 row exit-code wording form-dependent (F3); R9/R10 branches have zero in-corpus instances.",
+  "named_debt": [
+    "F1: no executable completeness check reads the delivered appendices; only the D1 proposal and JDEP2 probes are replayable (r91 candidate)",
+    "F3: R10 row 'exit 2' reproduces only with split argv; space-joined form exits 1 with 5 violations (both reject)",
+    "F4: r87 note says 'four *-excerpt.md files' while 5 exist (pre-existing, note byte-unchanged, substantive claim holds)",
+    "F5: untracked corpus/tools/__pycache__/ (mtime 06:57:26, sibling lane side effect) should be removed before closure/freeze"
+  ],
+  "write_boundary": {"repo_writes": [".ufo/waves/round-90/followup/JDEP1.md", ".ufo/waves/round-90/followup/JDEP1-receipts.json"], "commit": false, "push": false}
+}

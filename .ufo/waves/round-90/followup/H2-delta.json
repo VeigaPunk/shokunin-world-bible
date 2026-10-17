@@ -1,0 +1,133 @@
+{
+  "baseline_commit": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+  "census": {
+    "b1_b2_receipt_sha256": "80bdc3b45ea785ea7e04dea776d95da0bd6dad088f60ae95100f21039cae42ad",
+    "b1_b2_receipts_byte_equal": true,
+    "baseline_manifest_dirs": 160,
+    "dirs_total": 164,
+    "missing_from_tree": [],
+    "new_dirs": 4,
+    "old160_base_vs_B1receipt_mismatches": 0,
+    "old160_base_vs_deliv_changed_tuples": 0,
+    "old160_deliv_vs_B1receipt_mismatches": 0,
+    "old160_exit_flips": 0,
+    "stderr_nonempty_dirs": 0,
+    "summary_all164": {
+      "base_exits": {
+        "0": 32,
+        "1": 132,
+        "other": 0
+      },
+      "base_violations": 417,
+      "deliv_exits": {
+        "0": 32,
+        "1": 132,
+        "other": 0
+      },
+      "deliv_violations": 417
+    }
+  },
+  "checker": {
+    "baseline_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "composed_x2_plus_x3_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "delivered_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "freeze_then_verify_match": true
+  },
+  "fn2_pair": {
+    "corpus/fixtures/r89-fn2-control": {
+      "base_exit": 1,
+      "deliv_exit": 1,
+      "in_baseline_manifest": true,
+      "stdout_identical": true,
+      "violations": "1->1"
+    },
+    "corpus/fixtures/r89-fn2-unresolved-chain-break": {
+      "base_exit": 1,
+      "deliv_exit": 1,
+      "in_baseline_manifest": true,
+      "stdout_identical": true,
+      "violations": "2->2"
+    }
+  },
+  "kind": "harm-sweep-2-independent-census-and-delta",
+  "new_fixtures": [
+    {
+      "base_exit": 1,
+      "base_v": 5,
+      "deliv_exit": 1,
+      "deliv_stdout_sha256": "9441ff58d63b35a82ffa9ce4693446775673759a2a9b6d045ccbd5a5575fa9c5",
+      "deliv_v": 5,
+      "dir": "corpus/fixtures/r90-c1-rawpresent-from",
+      "files": [
+        "README.md",
+        "contradictions.json",
+        "entities.json",
+        "relations.json",
+        "sources.json",
+        "timeline.json"
+      ],
+      "readme_declared_matches_baseline": true,
+      "readme_declared_matches_delivered": true,
+      "stdout_identical": true
+    },
+    {
+      "base_exit": 1,
+      "base_v": 4,
+      "deliv_exit": 1,
+      "deliv_stdout_sha256": "339592dabb98af2c8cae8ca44e7d57a030a3a72f41b03f6a431830684615cc28",
+      "deliv_v": 4,
+      "dir": "corpus/fixtures/r90-c1-rawpresent-source",
+      "files": [
+        "README.md",
+        "contradictions.json",
+        "entities.json",
+        "relations.json",
+        "sources.json",
+        "timeline.json"
+      ],
+      "readme_declared_matches_baseline": true,
+      "readme_declared_matches_delivered": true,
+      "stdout_identical": true
+    },
+    {
+      "base_exit": 1,
+      "base_v": 5,
+      "deliv_exit": 1,
+      "deliv_stdout_sha256": "01c7da74c8e0359b6ef1f8985a944fa027d73f989462e179c71827ca820ffcd2",
+      "deliv_v": 5,
+      "dir": "corpus/fixtures/r90-c1-rawpresent-to",
+      "files": [
+        "README.md",
+        "contradictions.json",
+        "entities.json",
+        "relations.json",
+        "sources.json",
+        "timeline.json"
+      ],
+      "readme_declared_matches_baseline": true,
+      "readme_declared_matches_delivered": true,
+      "stdout_identical": true
+    },
+    {
+      "base_exit": 1,
+      "base_v": 4,
+      "deliv_exit": 1,
+      "deliv_stdout_sha256": "97723e8fe516a9086834a678a394a7b454ddcb05f87a8a9025149b16bd892148",
+      "deliv_v": 4,
+      "dir": "corpus/fixtures/r90-c1-three-causes",
+      "files": [
+        "README.md",
+        "contradictions.json",
+        "entities.json",
+        "relations.json",
+        "sources.json",
+        "timeline.json"
+      ],
+      "readme_declared_matches_baseline": true,
+      "readme_declared_matches_delivered": true,
+      "stdout_identical": true
+    }
+  ],
+  "seat": "H2",
+  "work_commit": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13"
+}

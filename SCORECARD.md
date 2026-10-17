@@ -74,7 +74,7 @@ retired: none added; no saturation or arbitrary round-count stop.
 | Capability | What it can now do | Evidence pointer | First-working round |
 |---|---|---|---|
 | provenance stop-cause assessment | For any provenance-chain stop the checker latches (15+ cause classes), emit at the stop record and every later record a disclosure naming the cause that actually latched, never a later ambiguity | `for d in r88-shape-ambiguous-armed r88-mixed-stop r88-nonholder-stop; do python3 corpus/fixtures/check_bible.py corpus/fixtures/$d; done` → 5/6/4 findings, exit 1 | r88 |
-| in-world excerpt support verification | Verify every source-attributed in-world JSON fact against delivered excerpt prose by fixed-string anchor (D1 support rule) and delivery-mode declaration (R9) | `grep -nF -- '<anchor>' corpus/fixtures/r87-myth-cluster/<source>-excerpt.md` per .ufo/waves/round-89/patches/S2-fact-map.json → 14/14 hits; ledger + note carry the three-question discipline | r89 |
+| in-world excerpt support verification | Verify every source-attributed in-world JSON fact against delivered excerpt prose by fixed-string anchor (D1 support rule), delivery-mode declaration (R9), and declared line-span enforcement; exit code + N/N print is the receipt | `python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster` → 22/22 exit 0; `... r88-m3-maya-cluster` → 10/10 exit 0; paraphrase demo retelling-only | r89 |
 
 Rows enter only through a round that demonstrates the capability running (`AXES.md` §Capabilities); none enter through this rollout.
 
@@ -216,3 +216,42 @@ READMEs — are now all delivered-tree-true after two closure repair rounds;
 still no external verifier, so no `[x]`); box 4 `[~]` (province-clean;
 kotodama contract tracked at `49ac1a5`, lore-side acknowledgement untriggered
 per K1).
+
+## Round 90 — luna round 4 of 12 (2026-10-17)
+
+Two-wave regimen round: work wave (33 seats, `openai-codex/gpt-6-luna-max`,
+incl. the four-seat supplementary batch M5/C9/W3/SE3), follow-up wave (32
+seats, `opencode-go/deepseek-v4.1-flash` — hyper exhausted since r89). Spec
+`.ufo/waves/round-90/wave-spec.md` (+ amendments + landing record). Baseline
+`e97613c`; work commit `ca7f9ef`; closure = this commit.
+
+| LIVE axis | r90 verdict | Evidence and limit |
+|---|---|---|
+| calibration | improved (bounded) | C1 `ca7f9ef`: the r89 hedged shapes repaired per seat C9's ruling (recorded in the spec amendments): null `from_holder` chains return to definite wording (vacuous `0 raw / 0 indexed` clause unreachable); tick findings are integer-only — identity-qualified only never, unrelated-duplicate or genuinely-unresolved holders alike (the ambiguous-SOURCE prefix remains, pinned by `r87-probe-source-prefix`); genuinely unresolved non-null holder chain-breaks stay qualified, including the unresolved-expected-side sub-case (under-claim, safe direction — F5 qualifier recorded). Four durable fixtures land (raw-present to/from/source, >=3-cause joined summary). Counting: closure census 164 dirs (was 160), **0 changed tuples + 4 new, 0 exit changes** — verified by six independent censuses (JCAL1/JCAL5/H2/H4/W1/SE2), a corpus-wide vacuous-clause sweep (0 survivors), 16+4 mutation replays (H3), and freeze-then-verify (delivered checker == X2+X3 composed, hash `ff9fd2aa…`, reproduced by 14+ seats). Bounds: the repaired shapes have no discriminating durable fixture — a silent revert would evade every census (Q90-001, r91's first calibration item); C9's reading is a ruling with a named r91 falsification path. |
+| coverage | improved (bounded) | C2 `ca7f9ef`: in-corpus claim→excerpt maps for both clusters (r87: 14 JSON rows + 8 editorial hymn rows, 2 prose-crosswalk facts disclosed in-map; r88-m3: 10) with R9 delivery modes inline and in-map; ONE reproducible support command (`corpus/tools/support_check.py`, span-enforced per M5 after M4's attack) whose exit code + N/N print is the receipt: r87 22/22, r88-m3 10/10, paraphrase demo retelling-only, wrong-line fails closed — all reproduced by five judges on the delivered tree. Bounds recorded: `22/22` counts rows (14 JSON + 8 editorial; the 2 prose-only facts are disclosed, JCOV2-D1); two silent-failure vectors found by JCOV4 (header-rename drops rows while PASS; unreferenced-row mode flips invisible) — r91 hardening; mode truthfulness is self-declared (checker cannot read intent). |
+| depth | improved (bounded) | C3 `ca7f9ef` + closure: the three r89-undecided sub-cases DECIDED (merged per R1): unrecorded influence -> dated neutral `possible influence: unverified` note + two-part R2 gate (creator denial + no contrary source-specific evidence + commonplace motif), marker reserved for established motif use; translator-known-version-unknown -> fails R5 absent a verified work-level bibliographic tie (support limited to the identified translation when the tie verifies); matching names/IDs -> comparison keys not identity, register entry reserved for a demonstrated shared referent + field + occasion. Register correctly absent (JDEP3, JDEP2). **Documentation parity (third recurrence, repaired again at closure):** the boundary doc had drifted on the C9 tick ruling + ~30 anchors + falsified fixture claims; repaired from CB1's verified r90 refresh (14/14 pasted blocks replay; the F5 sub-case encoded). Chousa method cross-references landed in the canonical table (Q90-004 closed). Bounds: JDEP2's residual edges (R8 failed-gate disposition; R9 reprint boundary; R10 source-id namespace) — all prospective, named for r91. |
+
+Learning trends: expansion improved (164 dirs; support machinery is
+corpus-resident); quality improved (checker semantics per the C9 ruling,
+pinned by four durable fixtures; span-enforced receipts); discernment
+improved (a ruling with a falsification path beats an unexamined default;
+the `22/22`-rows-not-facts correction is recorded in the claim text itself).
+
+Capabilities: no third row (JDEP4's pre-claiming argument accepted); row 2's
+evidence pointer updated to the corpus-resident commands.
+
+planned (r91, from Q1 with L1 adoption): (1) calibration — durable
+discriminating fixtures for the repaired shapes (Q90-001) + the C9
+falsification watch; (2) coverage — support-script hardening (expected-inventory
+assertion, distinct-anchor reporting, retelling-anchor-miss warn) + the
+`22/22` receipt wording split; (3) depth — JDEP2's prospective edges (R8/R9/R10
+residuals) + register conventions on first real conflict. Process (Q2):
+committed poll helper (P1), machine-readable `wave-spec.json` + validator
+(P2), scratch budget + inode preflight (P3).
+saturation: not declared (no rubric). retired: none.
+
+SHONEN: box 1 `[ ]`; box 2 `[~]` (three LOG records now); box 3 `[~]`
+(committed reproducible commands + maps; two closure repair rounds keep the
+instruction surfaces true — still no external verifier); box 4 `[~]`
+(province-clean; chousa crossrefs now canonical; kotodama acknowledgement
+untriggered).

@@ -74,3 +74,9 @@ register is created on first real cross-cluster conflict; the worked example
 is `corpus/knowledge/r89-cross-cluster-contradiction.md`. R8 does not
 retroactively affect the landed Spence row (its text is delivered).
 
+Method cross-references (r90, seat K1): R8/R9's screens re-derive limits already
+documented by chousa-shokunin — claim-vs-source verification
+(`chousa-shokunin/corpus/knowledge/claim-verification-r2.md:45-58`), archives
+verified against live sources (`archives-verified-r9.md:177-185`), and
+fixed-string anchor boundaries (`anchor-boundaries-r4.md:31-37`). Chousa owns
+the research method; lore consumes it as record craft.

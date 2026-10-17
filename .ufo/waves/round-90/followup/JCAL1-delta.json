@@ -1,0 +1,204 @@
+{
+  "seat": "JCAL1",
+  "axis": "calibration",
+  "artifact": "census + delta classification + freeze-then-verify hash-match",
+  "baseline_commit": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+  "candidate_commit": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+  "tree_state_at_measurement": {
+    "tracked_diff_vs_HEAD_exit": 0,
+    "note": "git status --porcelain was empty at seat start; untracked artifacts appearing later (see other_observed_writes) belong to concurrent sibling seats."
+  },
+  "checker_command": ["python3", "corpus/fixtures/check_bible.py", "corpus/fixtures/<dir>"],
+  "scope": "Every direct child directory of corpus/fixtures (164 at candidate, 160 at baseline). corpus/fixtures holds exactly 164 dirs + README.md + check_bible.py, so the delivered-graph scope is complete.",
+  "freeze_then_verify_r88_i1": {
+    "delivered_checker_path": "corpus/fixtures/check_bible.py",
+    "delivered_checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "baseline_checker_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "composition": "X2-c1-nullonly.patch then X3-c1-tickonly.patch, applied to e97613c with default fuzz; X2 applied clean, X3 hunk #1 succeeded at 321 (offset 2 lines, expected, X2 shifts the file).",
+    "composed_checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "hash_match": true,
+    "verdict": "PASS - delivered checker is byte-identical to X2+X3 composed on the declared baseline; no integrator amendment.",
+    "patch_sha256": {
+      "X2-c1-nullonly.patch": "900514eee82c9a27a30fe409714986538b0ca5d3b02a3a7f8658d29bb22ccd49",
+      "X3-c1-tickonly.patch": "16e55359437aefe6eed05466ad39f1d35b5d0b91cd93f20c20e81528cc7ce86a"
+    },
+    "checker_diff_e97613c_to_ca7f9ef": "1 file changed, 4 insertions(+), 11 deletions(-)"
+  },
+  "baseline_artifact": ".ufo/waves/round-90/patches/B1-tuples.json",
+  "baseline_artifact_sha256": "80bdc3b45ea785ea7e04dea776d95da0bd6dad088f60ae95100f21039cae42ad",
+  "baseline_artifact_replay": {
+    "method": "Ran the e97613c checker (archived via git archive to scratch) against the 160 common fixture dirs of the candidate tree, comparing exit + stdout_sha256 + violation_count to the artifact rows.",
+    "keys": 160,
+    "tuple_mismatches": 0,
+    "exit_counts": {"0": 32, "1": 128},
+    "total_violations": 399,
+    "interpretation": "Independently reproduces B1's artifact AND proves the 160 common dirs' checker-relevant content is unchanged between e97613c and ca7f9ef (the only fixture-file edits are .md excerpts and two new claim-excerpt-map.md files, which check_bible.py never reads; it reads only <section>.json)."
+  },
+  "independent_baseline_agreement": {
+    "B2_tuples_sha256": "80bdc3b45ea785ea7e04dea776d95da0bd6dad088f60ae95100f21039cae42ad",
+    "B1_equals_B2": true,
+    "note": "B1 and B2 artifacts are byte-identical: two independent baseline censuses agree."
+  },
+  "census": {
+    "baseline": {
+      "dirs": 160,
+      "exit_counts": {"0": 32, "1": 128},
+      "violations": 399,
+      "stderr_nonempty": 0,
+      "source": ".ufo/waves/round-90/patches/B1-tuples.json"
+    },
+    "candidate": {
+      "dirs": 164,
+      "exit_counts": {"0": 32, "1": 132},
+      "violations": 417,
+      "stderr_nonempty": 0,
+      "source": "live run at ca7f9ef, full 164-dir sweep"
+    },
+    "determinism": {
+      "runs": 2,
+      "shared_field_diffs": 0,
+      "note": "Two full sweeps of all 164 dirs at ca7f9ef agree on exit, stdout_sha256 and violation_count for every directory (run 2 recorded the three shared fields only)."
+    },
+    "violation_growth": 18,
+    "new_dir_violations": 18,
+    "changed_dir_net_violation_delta": 0
+  },
+  "delta": {
+    "changed_tuples": 0,
+    "unchanged_tuples": 160,
+    "added_dirs": 4,
+    "removed_dirs": 0,
+    "exit_status_changes": [],
+    "claim_confirmed": "0 changed + 4 new of 164, 0 exit changes - CONFIRMED exactly as claimed.",
+    "stdraw_changed_dirs": []
+  },
+  "changed_dirs": [],
+  "added_dirs": [
+    {"path": "corpus/fixtures/r90-c1-rawpresent-from", "exit": 1, "violations": 5, "shape": "FN-1 raw-present half: from_holder present in raw entities but absent from the resolved index"},
+    {"path": "corpus/fixtures/r90-c1-rawpresent-source", "exit": 1, "violations": 4, "shape": "FN-1 raw-present half: source_id present in raw sources but absent from the resolved index"},
+    {"path": "corpus/fixtures/r90-c1-rawpresent-to", "exit": 1, "violations": 5, "shape": "FN-1 raw-present half: to_holder present in raw entities but absent from the resolved index"},
+    {"path": "corpus/fixtures/r90-c1-three-causes", "exit": 1, "violations": 4, "shape": ">=3-cause valid-key record: malformed record (invalid tick) + absent-and-absent holder reference + absent-and-absent source reference"}
+  ],
+  "exit_flip_investigation": {
+    "flips_found": 0,
+    "method": "Every one of the 160 common dirs matched its baseline exit code exactly; the 4 added dirs contribute new tuples at exit 1 and are not flips. No directory changed exit status in either direction."
+  },
+  "c1_semantics_probe_matrix": {
+    "harness": "Sparse probes built from corpus/fixtures/r89-fn2-unresolved-chain-break entities.json with symlinked ancillary JSON, run through BOTH the e97613c checker and the delivered checker from the same working directory. Scratch under /dev/shm (from /tmp inode exhaustion), removed after capture.",
+    "cases": [
+      {
+        "case": "chain-unresolved",
+        "meaning": "genuinely unresolved non-null holder identity, chain break",
+        "exit_before": 1,
+        "exit_after": 1,
+        "after_stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'",
+        "wording_change": "none - qualification retained",
+        "required_by_claim": "genuinely unresolved holder identities stay qualified",
+        "status": "PASS"
+      },
+      {
+        "case": "tick-relevant-unresolved",
+        "meaning": "tick out of order while the transition holder identity is unresolved",
+        "exit_before": 1,
+        "exit_after": 1,
+        "before_stdout": "VIOLATION: entities[4].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 1 must be greater than previous tick 3",
+        "after_stdout": "VIOLATION: entities[4].provenance[1].tick: provenance tick 1 must be greater than previous tick 3",
+        "wording_change": "identity qualifier removed; integer-only tick reading per C9 ruling",
+        "status": "PASS"
+      },
+      {
+        "case": "null-from-chain",
+        "meaning": "later record has from_holder null (valid record; chain break)",
+        "exit_before": 1,
+        "exit_after": 1,
+        "before_stdout": "VIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)",
+        "after_stdout": "VIOLATION: entities[4].provenance[1]: provenance chain break; expected from_holder 'mira', got None",
+        "wording_change": "vacuous 0-raw/0-indexed identity clause removed; definite chain-break wording restored",
+        "status": "PASS"
+      },
+      {
+        "case": "unrelated-duplicate-tick",
+        "meaning": "control: raw-only duplicate holder unrelated to the tick cause",
+        "exit_before": 1,
+        "exit_after": 1,
+        "after_stdout": "VIOLATION: entities[4].provenance[1].tick: provenance tick 1 must be greater than previous tick 3",
+        "wording_change": "none - already definite at baseline, no regression",
+        "status": "PASS"
+      },
+      {
+        "case": "null-to-then-nonnull-from",
+        "meaning": "scope control for the X2 null gate: is a null to_holder reachable at the guard?",
+        "exit_before": 1,
+        "exit_after": 1,
+        "after_stdout": "VIOLATION: entities[4].provenance[0].to_holder: required nonempty entity id\nVIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (invalid to_holder) at entities[4].provenance[0]",
+        "wording_change": "none - to_holder null is rejected upstream as a malformed record, so the guard is never reached with a null to_holder",
+        "status": "PASS - documents exact scope of the null gate"
+      }
+    ],
+    "scope_argument": {
+      "call_sites": [
+        "check_bible.py:328 holder_identity_detail(previous_holder, 'expected from_holder')",
+        "check_bible.py:329 holder_identity_detail(from_holder, 'from_holder')",
+        "check_bible.py:339 holder_identity_detail(from_holder, 'from_holder')"
+      ],
+      "reachable_null_inputs": "from_holder only. Line 339 sits inside 'elif from_holder is not None' so it never receives null; previous_holder at line 328 is assigned from to_holder, which is rejected when null (line 224-231, required nonempty entity id), so it is never null for a valid predecessor. from_holder null is explicitly legal (line 263-264: 'required null or nonempty entity id').",
+      "conclusion": "The X2 guard at check_bible.py:169-170 covers exactly and only the reachable null input; no reachable null path is left unguarded."
+    }
+  },
+  "other_verified_surfaces": {
+    "fn2_pair_in_census_manifest": {
+      "corpus/fixtures/r89-fn2-control": {"exit": 1, "violations": 1, "in_baseline_manifest": true},
+      "corpus/fixtures/r89-fn2-unresolved-chain-break": {"exit": 1, "violations": 2, "in_baseline_manifest": true},
+      "status": "C1(iii) satisfied - the r89 'FN-2 invisible to the manifest' bound is closed; the qualification is regression-visible."
+    },
+    "c2_support_command_receipts": {
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/<cluster>",
+      "r87_myth_cluster": "exit 0; 'SOURCE-SUPPORT 22/22; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22'; 'RESULT PASS'",
+      "r88_m3_maya_cluster": "exit 0; 'SOURCE-SUPPORT 10/10; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 10/10'; 'RESULT PASS'",
+      "note": "Reproduced by this seat; recorded as no-collateral-harm evidence, not as a C2 verdict."
+    },
+    "map_edited_clusters_checker_neutral": {
+      "corpus/fixtures/r87-myth-cluster": {"exit": 0, "violation_lines": 0, "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e", "changed_vs_baseline": false},
+      "corpus/fixtures/r88-m3-maya-cluster": {"exit": 0, "violation_lines": 0, "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e", "changed_vs_baseline": false},
+      "note": "Both clusters received .md map/excerpt edits in the work commit and both left the checker tuple byte-identical."
+    }
+  },
+  "other_observed_writes": [
+    {
+      "path": "corpus/tools/__pycache__/support_check.cpython-314.pyc",
+      "mtime": "2026-10-17 06:56:12 -0300",
+      "tracked": false,
+      "attribution": "concurrent sibling seat importing support_check as a module, not this seat's command and not the delivered receipt",
+      "control": "removed the directory, re-ran 'python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster' as __main__, observed NOT_REAPPEARED; the cache later reappeared alongside sibling follow-up artifacts",
+      "action_taken": "removed once as hygiene; second occurrence left in place rather than racing concurrently-running sibling seats over a regenerable bytecode cache",
+      "tracked_file_impact": "none - git diff --quiet HEAD -- and git diff --cached --quiet both exit 0 at seat end"
+    },
+    {
+      "sibling_artifacts_observed_in_same_window": [
+        ".ufo/waves/round-90/followup/H2-delta.json",
+        ".ufo/waves/round-90/followup/H3-r90-mutations.json",
+        ".ufo/waves/round-90/followup/H4-census.json",
+        ".ufo/waves/round-90/followup/H4-probes.json",
+        ".ufo/waves/round-90/followup/H4-lineage.json",
+        ".ufo/waves/round-90/followup/JCAL2-receipts.json",
+        ".ufo/waves/round-90/followup/JCAL5-delta.json"
+      ],
+      "note": "None touched by this seat; listed so the closure record does not attribute them to JCAL1."
+    }
+  ],
+  "verdict_recommendation": {
+    "axis": "calibration",
+    "verdict": "improved (bounded)",
+    "basis": [
+      "Both r89 named hedged shapes are repaired and verified on the delivered tree by before/after probes: the vacuous null-holder identity clause is gone and the tick finding is definite.",
+      "The genuine-uncertainty case is provably NOT over-corrected: the unresolved non-null holder chain break keeps its exact previous qualified wording, character for character.",
+      "Zero regressions: 0 of 160 baseline tuples changed at the stdout-hash level, 0 exit flips, 0 removed dirs, census deterministic across two full sweeps.",
+      "The repair is freeze-verified: the delivered checker hash-matches X2+X3 composed on the declared baseline, so the evidence applies to exactly the shipped artifact.",
+      "C1(iii) is satisfied: the FN-2 pair is in the census manifest, closing the r89 invisibility bound."
+    ],
+    "bounds": [
+      "The integer-only tick reading is a ruling (C9) rather than evidence from a case; the r91 falsification path stays open.",
+      "No documentation-parity row for round 90 in corpus/fixtures/README.md (see findings)."
+    ]
+  }
+}

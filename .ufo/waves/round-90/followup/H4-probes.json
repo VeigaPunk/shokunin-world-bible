@@ -1,0 +1,129 @@
+{
+ "_determinism": {
+  "0": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1",
+  "1": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1",
+  "random": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1"
+ },
+ "_probe_input_shapes": {
+  "r85-control": {
+   "null_holder_fields": 1,
+   "provenance_records": 3
+  },
+  "r85-harbor-repro": {
+   "null_holder_fields": 1,
+   "provenance_records": 3
+  },
+  "r85-isolated-ambiguous": {
+   "null_holder_fields": 1,
+   "provenance_records": 3
+  },
+  "r85-masked-ambiguous": {
+   "null_holder_fields": 1,
+   "provenance_records": 3
+  },
+  "r85-unique-break-control": {
+   "null_holder_fields": 1,
+   "provenance_records": 3
+  }
+ },
+ "r85-control": {
+  "byte_identical": true,
+  "ca7f9ef": {
+   "exit": 0,
+   "findings": 0,
+   "receipt_stdout_exact": true,
+   "sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+   "stderr_len": 0
+  },
+  "delivered_stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+  "e97613c": {
+   "exit": 0,
+   "findings": 0,
+   "receipt_stdout_exact": true,
+   "sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+   "stderr_len": 0
+  },
+  "receipt_body_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+  "receipt_exit": 0
+ },
+ "r85-harbor-repro": {
+  "byte_identical": true,
+  "ca7f9ef": {
+   "exit": 1,
+   "findings": 6,
+   "receipt_stdout_exact": false,
+   "sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d",
+   "stderr_len": 0
+  },
+  "delivered_stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'harbor'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'harbor' at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'harbor' at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2].from_holder: ambiguous entity 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n6 violation(s); no canon changed\n",
+  "e97613c": {
+   "exit": 1,
+   "findings": 6,
+   "receipt_stdout_exact": false,
+   "sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d",
+   "stderr_len": 0
+  },
+  "receipt_body_sha256": "76af56743cfa7c289d33e736a45df5ba35edf60f4b74bc44c7135cef6363e60f",
+  "receipt_exit": 1
+ },
+ "r85-isolated-ambiguous": {
+  "byte_identical": true,
+  "ca7f9ef": {
+   "exit": 1,
+   "findings": 3,
+   "receipt_stdout_exact": false,
+   "sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad",
+   "stderr_len": 0
+  },
+  "delivered_stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[2].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[2]\n3 violation(s); no canon changed\n",
+  "e97613c": {
+   "exit": 1,
+   "findings": 3,
+   "receipt_stdout_exact": false,
+   "sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad",
+   "stderr_len": 0
+  },
+  "receipt_body_sha256": "32ef80099411cca15732eec1e8c1643b2c07257123b65cb24a6efdd5600a6a6d",
+  "receipt_exit": 1
+ },
+ "r85-masked-ambiguous": {
+  "byte_identical": true,
+  "ca7f9ef": {
+   "exit": 1,
+   "findings": 4,
+   "receipt_stdout_exact": false,
+   "sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1",
+   "stderr_len": 0
+  },
+  "delivered_stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'vault' at entities[3].provenance[1]\n4 violation(s); no canon changed\n",
+  "e97613c": {
+   "exit": 1,
+   "findings": 4,
+   "receipt_stdout_exact": false,
+   "sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1",
+   "stderr_len": 0
+  },
+  "receipt_body_sha256": "32ef80099411cca15732eec1e8c1643b2c07257123b65cb24a6efdd5600a6a6d",
+  "receipt_exit": 1
+ },
+ "r85-unique-break-control": {
+  "byte_identical": true,
+  "ca7f9ef": {
+   "exit": 1,
+   "findings": 1,
+   "receipt_stdout_exact": true,
+   "sha256": "1a218a9a71a13d2772b7ef3d739f3949c10b12f126463af40e4656988c9c9094",
+   "stderr_len": 0
+  },
+  "delivered_stdout": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'\n1 violation(s); no canon changed\n",
+  "e97613c": {
+   "exit": 1,
+   "findings": 1,
+   "receipt_stdout_exact": true,
+   "sha256": "1a218a9a71a13d2772b7ef3d739f3949c10b12f126463af40e4656988c9c9094",
+   "stderr_len": 0
+  },
+  "receipt_body_sha256": "1a218a9a71a13d2772b7ef3d739f3949c10b12f126463af40e4656988c9c9094",
+  "receipt_exit": 1
+ }
+}

@@ -1,0 +1,128 @@
+{
+  "seat": "JDEP3",
+  "round": 90,
+  "wave": "followup",
+  "lane": "world-bible / depth judge #3 (register + referents)",
+  "tree": {
+    "delivered": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+    "baseline": "e97613c",
+    "dirty_at_measure": 0,
+    "scratch": "/dev/shm/jdep3r90/"
+  },
+  "wait_checks": [
+    {"id": "WAIT1", "start": "2026-10-17T06:55:07-03:00", "end": "2026-10-17T06:56:07-03:00", "HEAD": "ca7f9ef", "dirty": 0, "followup_files": ["Q1-r90-debt.json"]},
+    {"id": "WAIT2", "start": "2026-10-17T06:56:18-03:00", "end": "2026-10-17T06:57:18-03:00", "HEAD": "ca7f9ef", "dirty": 0, "followup_files": ["H2-delta.json", "Q1-r90-debt.json"]}
+  ],
+  "checks": [
+    {
+      "id": "1-referent-ids",
+      "command": "python3 inline: entity/source/timeline id set intersection between corpus/fixtures/r87-myth-cluster and corpus/fixtures/r88-m3-maya-cluster",
+      "observed": "entities INTERSECTION []; sources INTERSECTION []; timeline INTERSECTION []; entities.kind INTERSECTION ['character','place'] (schema vocabulary); timeline.place_id INTERSECTION []; relations INTERSECTION [] (r87 4 tuples, r88-m3 [])",
+      "verdict": "empty"
+    },
+    {
+      "id": "2-wholeword-greps",
+      "command": "grep -rniE '\\b(hara|sen|mother-tide-gate|ash-dune|shellweavers|reedwardens|reed-bell|dune-register|gate-witness|lowwater-hymn|shell-charter|tide-bell-tally)\\b' corpus/fixtures/r88-m3-maya-cluster/ ; grep -rniE '\\b(aru|evin|quiet-rise|salt-court|paired-clock|veil-verse|chalk-stair)\\b' corpus/fixtures/r87-myth-cluster/",
+      "observed": "rc=1 both directions (no matches); covers the new claim-excerpt-map.md files",
+      "verdict": "empty"
+    },
+    {
+      "id": "3-capitalized-tokens",
+      "command": "python3 inline: capitalized-token set intersection over all files of both cluster dirs",
+      "observed": "A 14 files / B 11 files; intersection = governance/table vocabulary only: Anchors, Attribution, Bell, Consult, Delivery, Each, Editorial, Exact, Excerpt, It, Limit, Newly, Parallel, Public, Replay, Rights, Round, Scope, Source, Sourced, Status, Symbolism, The, These, This, We",
+      "note": "Bell near-miss is the r89 field-vocabulary overlap (r87 reed-bell/tide-bell-tally vs r88-m3 paired-clock 'Ninth Bell Paired Clock Register'); ticks r87 [1,2,3] vs r88-m3 [9]"
+    },
+    {
+      "id": "4-corpus-sweep",
+      "command": "python3 inline: id -> dirs over entities/sources/timeline for every dir under corpus/fixtures",
+      "observed": "dirs scanned 164; unique ids 146; shared ids 55; shared ids involving a cluster dir: {}; r90 dirs: ['r90-c1-rawpresent-from','r90-c1-rawpresent-source','r90-c1-rawpresent-to','r90-c1-three-causes']; shared ids involving an r90 dir: {}",
+      "verdict": "no cluster- or r90-involved collision"
+    },
+    {
+      "id": "5a-r90-fixture-nouns",
+      "command": "grep -rniE '\\b(hara|sen|mother-tide-gate|ash-dune|shellweavers|reedwardens|reed-bell|aru|evin|quiet-rise|salt-court|paired-clock|veil-verse)\\b' corpus/fixtures/r90-c1-*",
+      "observed": "rc=1 (no matches)",
+      "verdict": "no borrow"
+    },
+    {
+      "id": "5b-cross-path-refs",
+      "command": "grep -rn 'r88-m3|r88/m3' corpus/fixtures/r87-myth-cluster/ ; grep -rn 'r87-myth|r87/' corpus/fixtures/r88-m3-maya-cluster/",
+      "observed": "rcA=1; rcB=1 (no cross-cluster path references)",
+      "verdict": "empty"
+    },
+    {
+      "id": "5c-map-anchors",
+      "command": "python3 inline: backticked anchor-like strings from both claim-excerpt-map.md, intersect",
+      "observed": "r87 23 anchor-like strings (incl. 'external-only / unverified inspiration'); r88-m3 8 strings (incl. Spence English prose anchors 'He called out \u201cEarth,\u201d', 'and the solid land appeared.'); intersection []",
+      "verdict": "disjoint; external references are different works, each marked external-only"
+    },
+    {
+      "id": "5d-cluster-signature",
+      "command": "for d in corpus/fixtures/*/; do [ -f $d/inspiration-note.md ] && [ -f $d/symbolism-clause-map.md ] && echo $d; done",
+      "observed": "corpus/fixtures/r87-myth-cluster/ and corpus/fixtures/r88-m3-maya-cluster/ only",
+      "verdict": "r90 fixtures did not enter cluster scope"
+    },
+    {
+      "id": "6-register-absence",
+      "command": "git cat-file -e e97613c:corpus/knowledge/cross-cluster-contradictions.md ; git cat-file -e ca7f9ef:corpus/knowledge/cross-cluster-contradictions.md ; find . -name 'cross-cluster-contradictions.md' -not -path './.git/*' | wc -l ; grep -rln 'cross-cluster-contradictions' . --exclude-dir=.git",
+      "observed": "fatal: path does not exist in 'e97613c' -> ABSENT-AT-BASELINE; fatal: path does not exist in 'ca7f9ef' -> ABSENT-AT-DELIVERED; find count 0; corpus references only in r88-sourced-inspiration-decision-table.md (row+appendix) and r89-cross-cluster-contradiction.md (demo); rest are .ufo wave artifacts",
+      "verdict": "absent at both ends"
+    },
+    {
+      "id": "7a-readme-inventory",
+      "command": "find corpus -name README.md | wc -l ; grep -rn 'R10 comparison outcomes' --include=README.md . ; grep -rni 'comparison outcomes' corpus/ ; grep -rln 'R10' corpus --include=README.md",
+      "observed": "34 READMEs; heading grep rc=1; corpus case-insensitive sweep = 1 hit: r88-sourced-inspiration-decision-table.md:54 (inline backticked destination); README R10 mentions rc=1",
+      "verdict": "no README carries the section"
+    },
+    {
+      "id": "7b-readme-delta",
+      "command": "git diff --stat e97613c..ca7f9ef -- '*README.md'",
+      "observed": "5 added files / 100 insertions: r90-c1-rawpresent-from/README.md (22), r90-c1-rawpresent-source/README.md (21), r90-c1-rawpresent-to/README.md (22), r90-c1-three-causes/README.md (21), corpus/tools/README.md (14); none mentions R10",
+      "verdict": "no false section among new READMEs"
+    },
+    {
+      "id": "8-freeze-hash",
+      "command": "git show e97613c:corpus/fixtures/check_bible.py > /dev/shm/jdep3r90/freeze/check_bible.py && sha256sum; patch -p3 X2-c1-nullonly.patch; patch -p3 X3-c1-tickonly.patch; sha256sum; diff vs delivered",
+      "observed": "baseline sha256 e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556; X2 clean; X3 clean (Hunk #1 succeeded at 321, offset 2 lines); composed sha256 ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421; delivered sha256 ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421; byte-identical",
+      "verdict": "HASH-MATCH; no blocking finding"
+    },
+    {
+      "id": "9-cluster-replays",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster ; python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-m3-maya-cluster",
+      "observed": "both 'CLEAN: schema, citations, relations, timeline; 0 violations', exit=0"
+    },
+    {
+      "id": "10-support-check",
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster ; python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster",
+      "observed": "r87 'SOURCE-SUPPORT 22/22; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22' + 'RESULT PASS' exit=0; r88-m3 'SOURCE-SUPPORT 10/10; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 10/10' + 'RESULT PASS' exit=0",
+      "note": "independent confirmation that both maps are entirely in-cluster; matches declared C2 receipt"
+    },
+    {
+      "id": "11-decision-table-delta",
+      "command": "git diff e97613c..ca7f9ef -- corpus/knowledge/r88-sourced-inspiration-decision-table.md | grep -c '^-[^-]' ; sed -n '28,60p' ... | grep -niwE 'ema|reed-arch|moon-basin|hypothetical' ; git diff --name-only e97613c..ca7f9ef -- corpus/knowledge/r89-cross-cluster-contradiction.md",
+      "observed": "0 deletions (+37 insertions); appendix example-name grep rc=1 (D1/D2 hypothetical names not carried into knowledge file); r89 demo unchanged",
+      "verdict": "additive; no referent-like tokens inserted"
+    }
+  ],
+  "file_hashes_after": {
+    "corpus/knowledge/r88-sourced-inspiration-decision-table.md": "a5ee4dec31083f5cede3... (prefix)",
+    "corpus/knowledge/r89-cross-cluster-contradiction.md": "7f56bdd6c7ea78494fff... (prefix)",
+    "corpus/fixtures/r87-myth-cluster/claim-excerpt-map.md": "8c1b600d28c130f998a0... (prefix)",
+    "corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md": "d314d22ec2bbba149354... (prefix)",
+    "corpus/tools/support_check.py": "66a3c4bb2ae7fc204922... (prefix)"
+  },
+  "verdicts": {
+    "r10_appendix_and_register_no_false_entry_boundary": "improved",
+    "cross_cluster_referent_state": "unchanged - correctly empty",
+    "referent_hygiene_of_r90_new_artifacts": "unchanged - no harm",
+    "register_operability": "unprovable-but-better"
+  },
+  "named_debt": [
+    "scoping rule (r89 F2) still unstated in knowledge file: comparison scoped to landed clusters, not fixture dirs; 55 shared scaffolding ids remain",
+    "register file/header/ordering/ID conventions undefined until first real entry",
+    "'## R10 comparison outcomes' section has no schema and no checker; unexercised until an incoming cluster lands",
+    "reference-ledger.md Spence-row placement oddity unchanged (r89 debt, outside this seat)"
+  ],
+  "writes": ["lore-shokunin/.ufo/waves/round-90/followup/JDEP3.md", "lore-shokunin/.ufo/waves/round-90/followup/JDEP3-probes.json"],
+  "no_commit_no_push": true
+}

@@ -1,0 +1,43 @@
+{
+  "seat": "JCOV5",
+  "wave": "round-90 follow-up (coverage judge #5, sibling adjacency)",
+  "judged_head": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+  "baseline": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+  "wait_checks": [
+    {"check": 1, "timestamp": "2026-10-17T06:54:59-03:00", "head": "ca7f9ef", "status_porcelain": "", "sha256": {"support_check.py": "66a3c4bb2ae7fc2049227e480864661606b65a629c64cbc3ce05e14589add472", "r87_map": "8c1b600d28c130f998a0765ae9c4ae30d828b11fe96e3cbd763cd0cf79089b9d", "r88_map": "d314d22ec2bbba149354ef30df96f39468f8f7a54e6c3a4cf824eb9d58dad290"}},
+    {"check": 2, "timestamp": "2026-10-17T06:55:59-03:00", "head": "ca7f9ef", "status_porcelain": "", "sha256_same_as_check1": true}
+  ],
+  "support_receipts": {
+    "cmd": "python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster | tail -2; exit=${PIPESTATUS[0]}",
+    "r87": {"summary": "SOURCE-SUPPORT 22/22; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22", "result": "RESULT PASS", "exit": 0},
+    "r88_m3": {"summary": "SOURCE-SUPPORT 10/10; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 10/10", "result": "RESULT PASS", "exit": 0}
+  },
+  "controls_tmp": {
+    "paraphrase_retelling_only": {"summary": "SOURCE-SUPPORT 0/0; RETELLING-SUPPORT-ONLY 1 entries (1/1 anchors); MODES 1/1", "exit": 0},
+    "verbatim_twin_same_anchor": {"summary": "SOURCE-SUPPORT 1/1; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 1/1", "exit": 0},
+    "mode_mismatch_row_verbatim_decl_paraphrase": {"line": "FAIL X1: source-support; mode=verbatim; excerpt-mode=paraphrase; anchor=found", "summary": "SOURCE-SUPPORT 0/1; MODES 0/1", "exit": 1},
+    "out_of_span_r87_E1_locator_7_to_1": {"line": "FAIL E1: source-support; mode=verbatim; anchor=found; 7:> I am Hara, keeper of the Mother-Tide Gate.; span=1; outside-span=7", "summary": "SOURCE-SUPPORT 21/22; MODES 22/22", "exit": 1},
+    "substring_edge_mid_word_anchors": {"anchors": ["The springfl", "flood came early"], "excerpt_line": "> The springflood came early.", "summary": "SOURCE-SUPPORT 2/2; MODES 2/2; RESULT PASS", "exit": 0, "note": "chousa anchor-boundaries-r4.md:31-37 documents this class; script does not enforce token-boundary edges"}
+  },
+  "freeze_then_verify": {
+    "cmd": "git archive e97613c corpus/fixtures/check_bible.py | tar -x -C $scratch; patch -p1 < X2-c1-nullonly.patch; patch -p1 < X3-c1-tickonly.patch; sha256sum",
+    "baseline_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "composed_X2X3_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "delivered_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "verdict": "PASS"
+  },
+  "k1_crossref_landing": {
+    "wave_artifact": {"path": ".ufo/waves/round-90/patches/D1-decisions.md", "lines": [60, 61], "content": "two Adjacent-reference lines verbatim from K1 patch", "git_apply_check_of_K1_patch_on_delivered_file": "PASS", "file_self_description": "proposed governance clarifications; no corpus artifact changed by the patch"},
+    "governing_table": {"path": "corpus/knowledge/r88-sourced-inspiration-decision-table.md", "grep_chousa_or_adjacent": "none", "appendices": "R8 line 28, R9 line 40, R10 line 49 marked (decided r90)"},
+    "cited_targets_verified": ["chousa-shokunin/corpus/knowledge/claim-verification-r2.md:45-58", "chousa-shokunin/corpus/knowledge/archives-verified-r9.md:177-185", "chousa-shokunin/corpus/knowledge/anchor-boundaries-r4.md:31-37"]
+  },
+  "maps_inventory": {"r87": {"excerpt_declarations": 5, "rows": 22, "modes": "all verbatim", "receipt": "22/22"}, "r88_m3": {"excerpt_declarations": 3, "rows": 10, "modes": "all verbatim; external-only confined to Status cell", "receipt": "10/10"}},
+  "sibling_state": {
+    "kotodama_contract": {"path": "kotodama-shokunin/corpus/knowledge/synthesis/worldbible-integration-contract.md", "repo_commit": "49ac1a5", "mtime": "2026-10-17T04:00:57-03:00", "sha256": "e834f50309bd93b11894e7f96d03f7000fc224a3a3ea4d654fd4d1aaaa0831f7", "contract_id": "kotodama-lore-adjacency", "revision": "1.0.0", "lore_ack_record": "absent (grep kotodama-lore-adjacency in lore -> no acknowledgement record; l0-questions.md:4-5 track it)"},
+    "chousa_head": "38f217e",
+    "lore_corpus_sibling_mentions": {"chousa": 0, "kotodama": 0},
+    "fixtures_readme_rounds": ["Round 87", "Round 88", "Round 89"]
+  },
+  "observed_untracked_not_mine": ["corpus/tools/__pycache__/"],
+  "notes": ["r88 D-JCOV5-2 premise obsolete (README sections exist).", "Q89-047 governance half stays open per ND-1.", "No commits or pushes by this seat."]
+}
