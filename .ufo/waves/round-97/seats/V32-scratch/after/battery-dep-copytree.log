@@ -1,0 +1,20 @@
+### copy tree: --freeze out-of-scope
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V32-scratch/after/probes/dep-tree/outside/probe-fixture (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V32-scratch/after/probes/dep-tree/outside/probe-fixture); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+exit=2
+
+### copy tree: --freeze in-scope
+FROZEN v32-in-scope: events 4; dependency-edges 3; relations 1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+FREEZE v32-in-scope: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+exit=0
+copy pins now:
+['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'v32-in-scope']
+
+### copy tree: DIGEST-MISMATCH names the changed file (in-scope pinned copy)
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+FINDING DIGEST-MISMATCH: content digest c7c29b5e650f5aa85a81b8b72b020dfbf39765356ed9712d673335c1fc435755 != pin d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9; changed: timeline.json (sha256 3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177 -> bd64e666f77d6981d2871fdab750d5622942c7c18ceca8cfdd8bc82fa6aa6ff2); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+exit=2

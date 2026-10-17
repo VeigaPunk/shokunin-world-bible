@@ -1,0 +1,14 @@
+== boundary default ==
+instruction_markers=0
+CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)
+rc=0
+== boundary selftest ==
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/tmp/boundary-doc-self-test-qze1u6jb/committed'
+== discriminate ==
+  pinned_semantic_gate=PASS
+RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+rc=0
+== discriminate hist ==
+  pinned_semantic_gate=FAIL
+REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved — pinned delivered semantics not present

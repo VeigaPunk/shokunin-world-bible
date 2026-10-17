@@ -1,0 +1,18 @@
+=== D-fix. pure-insertion proof before the closing bracket ===
+sources.json: r96 == X + b'  }\n]\n'; X len=1735
+  r97 startswith X: True  | r96 startswith X: True
+  inserted bytes (500): b'  },\n  {\n    "id": "aru-acknowledgment-note",\n    "title": "Aru\'s Chalk Stair Ac' ... b' or an external historical fact."\n  }\n]\n'
+  r97 ends with b'  }\n]\n': True
+timeline.json: r96 == X + b'  }\n]\n'; X len=1671
+  r97 startswith X: True  | r96 startswith X: True
+  inserted bytes (502): b'  },\n  {\n    "id": "acknowledgment-aru-records",\n    "tick": 13,\n    "entity_id"' ... b'ce_id": "aru-acknowledgment-note"\n  }\n]\n'
+  r97 ends with b'  }\n]\n': True
+
+=== F. r96 map repair scope: which lines changed vs f3e09f9 ===
+changed lines: 4
+   -|---|---|---|---|---|---:|---|---|
+   +|---|---|---|---|---:|---|---|
+   -The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` a
+   +The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` a
+head lines: 56 live lines: 56
+data rows (J*/S*): head 18 live 18 byte-identical: True

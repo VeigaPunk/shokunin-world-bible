@@ -1217,3 +1217,26 @@ Round 96 also hardened `map_obligations` (gating `inventory_mismatch`; 24-case s
 A full repo-relative corpus run at the r96 closure observed **170 fixture directories: 36 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-95 census (169/35/134/421). One directory added (`r96-crossing-response`); zero inherited tuples changed.
 
 Dated pin note: this Round-96 append changes this file's bytes; the W05 pin for this file no longer matches (third consecutive round; census re-declarations above are the measured state at each closure).
+
+## Round 97 — `r97-crossing-acknowledgment` (2026-10-17)
+
+Added at round 97: a preserving continuation of `r96-crossing-response` (post-repair). Aru's authored acknowledgment note (`aru-acknowledgment-note`) supports one tick-13 event (`acknowledgment-aru-records`, actor `aru`, place `chalk-stair`, `depends_on: ["response-evin-salt-court"]`) recording receipt of Evin's response with both accounts left standing. No resolution, no accusation, no reconciliation, no new duty is asserted — the third beat of the crossing arc, dispute preserved. Inherited r96 records are parsed-value identical; the r96 fixture's JSON tables are byte-untouched (its map received a two-line cosmetic repair this round: 7-cell delimiter row and event-vs-relation wording; data rows byte-unchanged, r96 receipts unchanged). Map: 17 obligations (16 inherited rows unchanged + the new event row).
+
+Replay commands and receipts (measured at the r97 closure, HEAD cited in LOG.md):
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r97-crossing-acknowledgment
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r97-crossing-acknowledgment
+# OBLIGATIONS raw=17 mapped=17; INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19 / RESULT PASS   exit 0
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
+# FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1   RESULT PASS   exit 0
+```
+
+Round 97 also hardened both corpus tools: `map_obligations` (persisted `dual_pointer` case; strict loader — any dropped pinned case fails the self-test; 25 cases) and `dependency_freeze` (`--freeze` scope-guarded to `corpus/fixtures/**`; path binding — foreign-path copies exit 2 `PATH-MISMATCH`; `DIGEST-MISMATCH` names the changed file; 16 cases). See the tools README Round-97 addendum. Bounds: the freeze pin payload covers the JSON tables only (fixture Markdown is not pinned); the frozen chain is the declared four fixtures — `r97-crossing-acknowledgment` is not yet pinned (r98 candidate); BR-01's prose half remains open.
+
+### 2026-10-17 census re-declaration
+
+A full repo-relative corpus run at the r97 closure observed **171 fixture directories: 37 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-96 census (170/36/134/421). One directory added (`r97-crossing-acknowledgment`); zero inherited tuple changes.
+
+Dated pin note: this Round-97 append changes this file's bytes; the W05 pin for this file no longer matches (fourth consecutive round; census re-declarations above are the measured state at each closure).

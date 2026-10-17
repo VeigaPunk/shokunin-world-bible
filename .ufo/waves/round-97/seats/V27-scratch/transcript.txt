@@ -1,0 +1,103 @@
+##### 2026-10-17T18:46:00-03:00 CMD: python3 --version
+Python 3.14.7
+EXIT=0
+##### 2026-10-17T18:48:13-03:00 CMD: python3 corpus/tools/map_obligations.py --self-test
+SELF-TEST CASES 25/25 pinned
+SELF-TEST PASS complete exit=0 findings=none
+SELF-TEST PASS missing exit=1 findings=['missing_obligation']
+SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']
+SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']
+SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']
+SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']
+SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']
+SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_complete exit=0 findings=none
+SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']
+SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']
+SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']
+RESULT PASS
+EXIT=0
+##### 2026-10-17T18:48:20-03:00 CMD: python3 corpus/tools/map_obligations.py --frozen .ufo/waves/round-94/frozen/map-obligations-r93
+SNAPSHOT inputs=4 digests=verified
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+FROZEN expected=PASS/0 findings=none matched
+RESULT PASS
+EXIT=0
+##### 2026-10-17T18:48:35-03:00 CMD: python3 .ufo/waves/round-97/seats/V27-scratch/probe-loader/map_obligations.py --self-test
+FINDING self_test_contract: contract drops implemented self-test cases: schema_drift
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T18:48:35-03:00 CMD: python3 .ufo/waves/round-97/seats/V27-scratch/probe-loader-core/map_obligations.py --self-test
+FINDING self_test_contract: contract drops implemented self-test cases: complete
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T18:48:59-03:00 CMD: python3 .ufo/waves/round-97/seats/V27-scratch/probe-neutral/map_obligations.py --self-test
+SELF-TEST CASES 25/25 pinned
+SELF-TEST PASS complete exit=0 findings=none
+SELF-TEST PASS missing exit=1 findings=['missing_obligation']
+SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']
+SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']
+SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']
+SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']
+SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']
+SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_complete exit=0 findings=none
+SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']
+SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']
+SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+SELF-TEST FAIL dual_pointer exit=0 findings=none
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+FINDING self_test_mismatch: isolated CLI outcomes differ from persisted expectations
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T18:53:42-03:00 CMD: python3 corpus/tools/dependency_freeze.py --self-test
+CASE clean: exit=0 expected=0 findings=[] ok
+CASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+CASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok
+CASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+SELF-TEST 16/16
+RESULT PASS
+EXIT=0
+##### 2026-10-17T18:58:36-03:00 CMD: python3 .ufo/waves/round-97/seats/V27-scratch/probe-loader-extra/map_obligations.py --self-test
+FINDING self_test_contract: contract pins unimplemented self-test cases: no_such_case
+RESULT ERROR
+EXIT=2

@@ -1,0 +1,5 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/map_obligations_r97.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/base
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+RESULT PASS
+EXIT=0

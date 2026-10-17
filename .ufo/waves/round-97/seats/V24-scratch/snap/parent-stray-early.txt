@@ -1,0 +1,6 @@
+== signature files outside lore-shokunin ==
+
+== parent root new files (18:41+) ==
+
+== parent .ufo/waves round-97 check ==
+no round-97 at parent

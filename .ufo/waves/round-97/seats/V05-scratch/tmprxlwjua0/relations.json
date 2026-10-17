@@ -1,0 +1,8 @@
+[
+  {
+    "from": "test-entity",
+    "to": "other",
+    "type": "linked",
+    "source_id": "fixture-source"
+  }
+]

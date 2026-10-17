@@ -1,0 +1,17 @@
+poll 1 18:43:57 tool_changed=0 contract25=0 r1rep=0 r2rep=0
+poll 2 18:44:17 tool_changed=0 contract25=0 r1rep=0 r2rep=0
+poll 3 18:44:37 tool_changed=0 contract25=0 r1rep=0 r2rep=0
+poll 4 18:44:57 tool_changed=0 contract25=0 r1rep=0 r2rep=0
+poll 5 18:45:17 tool_changed=1 contract25=0 r1rep=0 r2rep=0
+poll 6 18:45:37 tool_changed=1 contract25=0 r1rep=0 r2rep=0
+poll 7 18:45:57 tool_changed=1 contract25=0 r1rep=0 r2rep=0
+poll 8 18:46:17 tool_changed=1 contract25=1 r1rep=0 r2rep=0
+poll 9 18:46:37 tool_changed=1 contract25=1 r1rep=0 r2rep=0
+poll 10 18:46:57 tool_changed=1 contract25=1 r1rep=0 r2rep=0
+poll 11 18:47:17 tool_changed=1 contract25=1 r1rep=0 r2rep=0
+poll 12 18:47:37 tool_changed=1 contract25=1 r1rep=0 r2rep=0
+poll 13 18:47:57 tool_changed=1 contract25=1 r1rep=0 r2rep=0
+poll 14 18:48:17 tool_changed=1 contract25=1 r1rep=0 r2rep=1
+poll 15 18:48:37 tool_changed=1 contract25=1 r1rep=0 r2rep=1
+poll 16 18:48:57 tool_changed=1 contract25=1 r1rep=1 r2rep=1
+READY after 16 polls

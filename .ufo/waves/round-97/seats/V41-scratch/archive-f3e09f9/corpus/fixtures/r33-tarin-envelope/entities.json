@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mira",
+    "kind": "character",
+    "name": "Mira",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Mira carried the blue seal.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "harbor",
+    "kind": "place",
+    "name": "Lantern Harbor",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "Lantern Harbor has a registry.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "tower",
+    "kind": "place",
+    "name": "North Tower",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "North Tower has a watch bell.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "seal",
+    "kind": "item",
+    "name": "Blue Seal",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "The seal accompanied Mira.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "tarin",
+    "kind": "character",
+    "name": "Tarin",
+    "first_appearance": "tarin-note",
+    "claims": [
+      {
+        "statement": "Tarin reports seeing Sella place an unlabeled paper envelope on the Lantern Harbor registry desk.",
+        "source_id": "tarin-note"
+      }
+    ]
+  },
+  {
+    "id": "sella",
+    "kind": "character",
+    "name": "Sella",
+    "first_appearance": "tarin-note",
+    "claims": [
+      {
+        "statement": "Tarin reports that Sella placed an unlabeled paper envelope on the Lantern Harbor registry desk.",
+        "source_id": "tarin-note"
+      }
+    ]
+  }
+]

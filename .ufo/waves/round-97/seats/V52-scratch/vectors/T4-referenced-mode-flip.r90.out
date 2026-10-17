@@ -1,0 +1,31 @@
+PASS E1: source-support; mode=verbatim; anchor=found; 7:> I am Hara, keeper of the Mother-Tide Gate.
+PASS E2: source-support; mode=verbatim; anchor=found; 7:> I, Sen, serve as recorder at Ash-Dune Sanctuary.
+PASS E3: source-support; mode=verbatim; anchor=found; 8:> Place of keeping: Ash-Dune Sanctuary is a record-keeping place.
+PASS E4: source-support; mode=verbatim; anchor=found; 9:> Shellweavers signed this charter as a signatory faction.
+PASS E5: source-support; mode=verbatim; anchor=found; 10:> Reedwardens signed this charter as a signatory faction.
+PASS E6: source-support; mode=verbatim; anchor=found; 11:| 1 | We carried the Reed Bell for the low-water signal. |
+PASS R1: source-support; mode=verbatim; anchor=found; 11:> By this charter, Shellweavers stand allied with Reedwardens.
+PASS R2: source-support; mode=verbatim; anchor=found; 12:> By this charter, Reedwardens stand allied with Shellweavers.
+PASS R3: source-support; mode=verbatim; anchor=found; 13:> Watch clause: Under this charter's pledge, Shellweavers keep watch with the Reed Bell.
+PASS R4: source-support; mode=verbatim; anchor=found; 9:> At Ash-Dune Sanctuary, Sen kept the register.
+PASS T1: source-support; mode=verbatim; anchor=found; 8:> I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow, at the first low-water bell.
+PASS T2: source-support; mode=verbatim; anchor=found; 12:| 2 | At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow. |
+PASS T3: source-support; mode=verbatim; anchor=found; 9:> I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.
+PASS T4: source-support; mode=verbatim; anchor=found; 10:> I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.
+FAIL H1: source-support; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+FAIL H2: source-support; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+FAIL H3: source-support; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+FAIL H4: source-support; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+FAIL H5: source-support; mode=verbatim; anchor=found; 6:> The bowl keeps no name, and no voice owns the tide.
+FAIL H6: source-support; mode=verbatim; anchor=found; 6:> The bowl keeps no name, and no voice owns the tide.
+FAIL H7: source-support; mode=verbatim; anchor=found; 7:> We pass the reed-bell hand to hand and let the water return it.
+FAIL H8: source-support; mode=verbatim; anchor=found; 7:> We pass the reed-bell hand to hand and let the water return it.
+SOURCE-SUPPORT 14/22; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 14/22
+FAIL: H1: delivery mode missing or mismatched
+FAIL: H2: delivery mode missing or mismatched
+FAIL: H3: delivery mode missing or mismatched
+FAIL: H4: delivery mode missing or mismatched
+FAIL: H5: delivery mode missing or mismatched
+FAIL: H6: delivery mode missing or mismatched
+FAIL: H7: delivery mode missing or mismatched
+FAIL: H8: delivery mode missing or mismatched

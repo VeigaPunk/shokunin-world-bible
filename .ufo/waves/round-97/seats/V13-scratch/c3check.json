@@ -1,0 +1,67 @@
+{
+  "ack_event": [
+    {
+      "depends_on": [
+        "response-evin-salt-court"
+      ],
+      "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.",
+      "entity_id": "aru",
+      "id": "acknowledgment-aru-records",
+      "place_id": "chalk-stair",
+      "source_id": "aru-acknowledgment-note",
+      "tick": 13
+    }
+  ],
+  "byte_identity_r97_vs_r96": {
+    "contradictions.json": {
+      "identical": true,
+      "r96": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "r97": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "entities.json": {
+      "identical": true,
+      "r96": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+      "r97": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b"
+    },
+    "inspiration-note.md": {
+      "identical": true,
+      "r96": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "r97": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37"
+    },
+    "relations.json": {
+      "identical": true,
+      "r96": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "r97": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9"
+    },
+    "source-excerpt.md": {
+      "identical": true,
+      "r96": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "r97": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd"
+    }
+  },
+  "dangling": [],
+  "duplicates": {
+    "entities": [],
+    "events": [],
+    "sources": []
+  },
+  "r96_check_bible": {
+    "argv": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r96-crossing-response",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations"
+  },
+  "r97_check_bible": {
+    "argv": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r97-crossing-acknowledgment",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations"
+  },
+  "r97_counts": {
+    "contradictions": 0,
+    "entities": 5,
+    "events": 6,
+    "relations": 1,
+    "sources": 6
+  }
+}

@@ -1,0 +1,100 @@
+== 0. existence ==
+r97 dir: True r96 dir: True baseline r96 dir: True
+r97 files: ['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+
+== 1. preservation: expected byte-identical copies of POST-REPAIR r96 ==
+  entities.json: byte-identical=True r96=026af0bc2cda r97=026af0bc2cda
+  relations.json: byte-identical=True r96=c279254bc7de r97=c279254bc7de
+  contradictions.json: byte-identical=True r96=37517e5f3dc6 r97=37517e5f3dc6
+  inspiration-note.md: byte-identical=True r96=58f5390e5928 r97=58f5390e5928
+  source-excerpt.md: byte-identical=True r96=b5edc2fd3c2e r97=b5edc2fd3c2e
+
+== 2. timeline: inherited 5 parsed-identical + 1 new ==
+  len r96=5 len r97=6
+  first 5 parsed-equal: True
+  new event: {"id": "acknowledgment-aru-records", "tick": 13, "entity_id": "aru", "place_id": "chalk-stair", "depends_on": ["response-evin-salt-court"], "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.", "source_id": "aru-acknowledgment-note"}
+
+== 3. sources: inherited 5 parsed-identical + 1 new ==
+  len r96=5 len r97=6
+  first 5 parsed-equal: True
+  new source: {"id": "aru-acknowledgment-note", "title": "Aru's Chalk Stair Acknowledgment Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of a resolution, a reconciliation, an accusation, a winner between the accounts, a continuing duty, or an external historical fact."}
+
+== 4. entities/relations/contradictions counts ==
+  entities.json: r96 len=5 r97 len=5 parsed-equal=True
+  relations.json: r96 len=1 r97 len=1 parsed-equal=True
+  contradictions.json: r96 len=0 r97 len=0 parsed-equal=True
+
+== 5. fictional-excerpts.md: r96 byte-prefix + appended section ==
+  r96 is byte-prefix of r97: True
+  appended bytes:
+
+## Round 97 acknowledgment note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `aru-acknowledgment-note`, folio 7, lines 1–4. This section is appended after the preserved r96 text above; the inherited wording is unchanged.
+
+> Tick 13: I received Evin's response at the Chalk Stair.
+> I hold to my own account; both accounts stand unresolved.
+> I make no accusation against Evin, and I select no winner between us.
+> I assert no reconciliation, no new duty, and no obligation beyond this crossing.
+
+Scope: this appended section is Aru's first-person acknowledgment that he received Evin's response. It records receipt only; it asserts no accusation, no reconciliation, no winner between the two accounts, and no new duty, and the crossing-scoped agreement above is unchanged.
+
+
+== 6. tool runs on r97 ==
+  --- check_bible exit=0 ---
+  CLEAN: schema, citations, relations, timeline; 0 violations
+  --- support_check exit=0 ---
+  INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18; DISTINCT-ANCHORS 14/14
+  ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+  PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+  PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+  PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+  PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+  PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+  PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+  PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+  PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+  PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+  PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+  PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+  PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+  PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+  PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+  PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+  PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+  PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+  PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+  RECEIPT JSON-FACTS 16; EDITORIAL-ROWS 2; TOTAL-ROWS 18
+  SOURCE-SUPPORT 16/16; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 18/18; VALIDATED-ROWS 18/18
+  RESULT PASS
+  --- map_obligations exit=1 ---
+  OBLIGATIONS raw=17 mapped=16
+  INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18
+  FINDING missing_obligation: timeline.json#/5 has no map row
+  RESULT FAIL
+
+== 7. repair half: r96 map post-repair ==
+  delim line 10: 4 cells :: |---|---|---|---|
+  delim line 21: 8 cells :: |---|---|---|---|---|---:|---|---|
+  delim line 44: 7 cells :: |---|---|---|---|---:|---|---|
+  lines containing "new relation": []
+  lines containing "new event": []
+  --- diff baseline -> post-repair (n=0) ---
+  --- baseline
+  +++ post-repair
+  @@ -44 +44 @@
+  -|---|---|---|---|---|---:|---|---|
+  +|---|---|---|---|---:|---|---|
+  @@ -50 +50 @@
+  -The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` and `evin-ninth-bell`); the inherited tick-11 aftermath event is ordered after and depends on the tick-10 decision (`paired-crossing-decision`); the new tick-12 response event is ordered after and depends on the tick-11 report (`aftermath-missing-evin`). The tick integers and `depends_on` event IDs are editorial encodings of the excerpts' explicit tick/order/dependence wording, not literal JSON syntax in the sources. Each inherited empty dependency list means no earlier dependency is represented in this mapped sequence, not that no earlier event exists anywhere. The new relation encodes only the agreement for this crossing, not perpetual performance or alliance.
+  +The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` and `evin-ninth-bell`); the inherited tick-11 aftermath event is ordered after and depends on the tick-10 decision (`paired-crossing-decision`); the new tick-12 response event is ordered after and depends on the tick-11 report (`aftermath-missing-evin`). The tick integers and `depends_on` event IDs are editorial encodings of the excerpts' explicit tick/order/dependence wording, not literal JSON syntax in the sources. Each inherited empty dependency list means no earlier dependency is represented in this mapped sequence, not that no earlier event exists anywhere. The new tick-12 event encodes only Evin's second account of the same crossing occasion; it asserts no reconciliation, selects no winner between the accounts, and adds no duty beyond this crossing, not perpetual performance or alliance.
+  table non-delimiter rows: baseline=23 post=23
+  identical row bytes (zip): 23/23
+
+== 8. r96 receipts: baseline copy vs post-repair dir ==
+  support_check: baseline exit=0 now exit=0 stdout-identical=True
+  map_obligations: baseline exit=0 now exit=0 stdout-identical=True
+
+== 9. census ==
+  fixture dirs: baseline f3e09f9=170 filesystem now=171
+  fixture files: baseline=1010 fs-now=1020

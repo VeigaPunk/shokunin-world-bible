@@ -1,0 +1,53 @@
+base                   pass1 MATCH    exit=0 required=none  # unmodified r93 copy stays PASS
+base                   pass2 MATCH    exit=0 required=none  # unmodified r93 copy stays PASS
+a                      pass1 MATCH    exit=1 required=missing_obligation  # unmapped raw claim
+a                      pass2 MATCH    exit=1 required=missing_obligation  # unmapped raw claim
+b                      pass1 MATCH    exit=1 required=duplicate_mapping extras=[inventory_mismatch]  # duplicate map row
+b                      pass2 MATCH    exit=1 required=duplicate_mapping extras=[inventory_mismatch]  # duplicate map row
+c                      pass1 MATCH    exit=1 required=phantom_obligation extras=[inventory_mismatch]  # phantom pointer
+c                      pass2 MATCH    exit=1 required=phantom_obligation extras=[inventory_mismatch]  # phantom pointer
+d                      pass1 MATCH    exit=1 required=source_id_mismatch  # source-ID mismatch
+d                      pass2 MATCH    exit=1 required=source_id_mismatch  # source-ID mismatch
+e                      pass1 MATCH    exit=2 required=malformed_json  # truncated entities.json
+e                      pass2 MATCH    exit=2 required=malformed_json  # truncated entities.json
+f1                     pass1 MATCH    exit=2 required=map_missing  # --map missing-map.md
+f1                     pass2 MATCH    exit=2 required=map_missing  # --map missing-map.md
+f2                     pass1 MATCH    exit=2 required=foreign_path  # --map outside cluster
+f2                     pass2 MATCH    exit=2 required=foreign_path  # --map outside cluster
+f3                     pass1 MATCH    exit=2 required=unsafe_path  # --map ../outside-map/...
+f3                     pass2 MATCH    exit=2 required=unsafe_path  # --map ../outside-map/...
+f4                     pass1 MATCH    exit=2 required=map_missing  # --map . (directory)
+f4                     pass2 MATCH    exit=2 required=map_missing  # --map . (directory)
+g1                     pass1 MATCH    exit=1 required=schema_drift extras=[inventory_mismatch]  # renamed claims key, row removed
+g1                     pass2 MATCH    exit=1 required=schema_drift extras=[inventory_mismatch]  # renamed claims key, row removed
+g2                     pass1 MATCH    exit=1 required=schema_drift extras=[phantom_obligation]  # renamed claims key, row kept
+g2                     pass2 MATCH    exit=1 required=schema_drift extras=[phantom_obligation]  # renamed claims key, row kept
+h1                     pass1 MATCH    exit=1 required=inventory_mismatch  # deleted entities[0].claims + its row
+h1                     pass2 MATCH    exit=1 required=inventory_mismatch  # deleted entities[0].claims + its row
+h2                     pass1 MATCH    exit=1 required=inventory_mismatch  # deleted one claim + its row
+h2                     pass2 MATCH    exit=1 required=inventory_mismatch  # deleted one claim + its row
+i1                     pass1 MATCH    exit=1 required=dual_pointer  # legacy parenthetical, canonical 2nd pointer
+i1                     pass2 MATCH    exit=1 required=dual_pointer  # legacy parenthetical, canonical 2nd pointer
+i2                     pass1 MATCH    exit=1 required=dual_pointer  # legacy parenthetical, legacy 2nd pointer
+i2                     pass2 MATCH    exit=1 required=dual_pointer  # legacy parenthetical, legacy 2nd pointer
+i3                     pass1 MATCH    exit=1 required=dual_pointer  # legacy colon prose, legacy 2nd pointer
+i3                     pass2 MATCH    exit=1 required=dual_pointer  # legacy colon prose, legacy 2nd pointer
+i4                     pass1 MATCH    exit=1 required=dual_pointer extras=[missing_obligation]  # legacy colon prose, mapped 2nd pointer
+i4                     pass2 MATCH    exit=1 required=dual_pointer extras=[missing_obligation]  # legacy colon prose, mapped 2nd pointer
+i5                     pass1 MATCH    exit=1 required=dual_pointer  # boundary: bare second token, no backticks
+i5                     pass2 MATCH    exit=1 required=dual_pointer  # boundary: bare second token, no backticks
+i6                     pass1 MATCH    exit=1 required=dual_pointer  # boundary: parenthetical repeats same pointer
+i6                     pass2 MATCH    exit=1 required=dual_pointer  # boundary: parenthetical repeats same pointer
+i7                     pass1 MATCH    exit=1 required=dual_pointer  # boundary: malformed second token
+i7                     pass2 MATCH    exit=1 required=dual_pointer  # boundary: malformed second token
+ctrl-legacy-note       pass1 MATCH    exit=0 required=none  # legacy cell, non-pointer note
+ctrl-legacy-note       pass2 MATCH    exit=0 required=none  # legacy cell, non-pointer note
+ctrl-legacy-prose      pass1 MATCH    exit=0 required=none  # legacy cell, non-pointer prose
+ctrl-legacy-prose      pass2 MATCH    exit=0 required=none  # legacy cell, non-pointer prose
+ctrl-canonical-note    pass1 MATCH    exit=2 required=unsupported_map  # canonical cell, pointer in note
+ctrl-canonical-note    pass2 MATCH    exit=2 required=unsupported_map  # canonical cell, pointer in note
+ctrl-inv-declared-wrong pass1 MATCH    exit=1 required=inventory_mismatch  # declared 99 vs observed 12
+ctrl-inv-declared-wrong pass2 MATCH    exit=1 required=inventory_mismatch  # declared 99 vs observed 12
+ctrl-inv-malformed     pass1 MATCH    exit=1 required=none extras=[inventory_mismatch]  # malformed declaration: record observed
+ctrl-inv-malformed     pass2 MATCH    exit=1 required=none extras=[inventory_mismatch]  # malformed declaration: record observed
+VERDICT: ALL-MATCH

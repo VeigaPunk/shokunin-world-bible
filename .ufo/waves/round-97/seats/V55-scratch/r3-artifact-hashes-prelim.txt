@@ -1,0 +1,2 @@
+b06275f3bbdeabaab615138b3004703fce701a786af882d3b732828b37722130  corpus/tools/dependency_freeze.py
+8015e1f9dd84ccfa28518771439eb3cd43f1255bd0d36cb27461a02ff53226c2  corpus/tools/dependency-freeze-contract.json

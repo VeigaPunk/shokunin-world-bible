@@ -5,6 +5,11 @@ Exit contract: 0 PASS (no findings), 1 FAIL (findings, including the gating
 ``inventory_mismatch`` and ``dual_pointer`` findings), 2 ERROR (usage, unsafe
 paths, unparsable inputs, self-test or frozen mismatches).
 
+``--self-test`` replays the cases this tool implements against the persisted
+contract in ``map-obligations-contract.json``; the contract must pin every
+implemented case, so a contract that drops any pinned case fails the self-test
+with exit 2 rather than passing on a subset.
+
 The map's declared ``**Expected inventory:**`` line is gating for the three
 counts this tool observes (JSON facts, editorial rows, total rows): a declared
 count that disagrees with the parsed rows, or a declaration whose counts cannot
@@ -68,7 +73,7 @@ CORE_SELF_TEST_CASES = (
     "frozen_expected_failure",
     "frozen_verdict_mismatch",
 )
-ADDED_SELF_TEST_CASES = ("schema_drift", "inventory_mismatch")
+ADDED_SELF_TEST_CASES = ("schema_drift", "inventory_mismatch", "dual_pointer")
 SELF_TEST_CASES = (*CORE_SELF_TEST_CASES, *ADDED_SELF_TEST_CASES)
 RESULTS = {0: "PASS", 1: "FAIL", 2: "ERROR"}
 ROOT = Path(__file__).resolve().parents[2]
@@ -631,7 +636,20 @@ def test_rows():
     ]
 
 
-def write_test_fixture(cluster, rows, pointer_overrides=None, declared=None):
+def legacy_test_rows():
+    """The same four obligations written in the r88 legacy field-path dialect."""
+    return [
+        ("E1", "entities[0].first_appearance", "fixture-source"),
+        ("E2", "entities[0].claims[0]", "fixture-source"),
+        ("R1", "relations[0]", "fixture-source"),
+        ("T1", "timeline[0]", "fixture-source"),
+    ]
+
+
+DUAL_POINTER_CELL = "`entities[0].first_appearance` (also named `entities[1].first_appearance`)"
+
+
+def write_test_fixture(cluster, rows, pointer_overrides=None, declared=None, legacy=False):
     cluster.mkdir(parents=True, exist_ok=True)
     files = {
         "entities.json": [{
@@ -661,7 +679,8 @@ def write_test_fixture(cluster, rows, pointer_overrides=None, declared=None):
             "",
         ])
     map_lines.extend([
-        "| ID | JSON fact pointer and fields | In-world source ID |",
+        "| ID | " + ("JSON fact and fields" if legacy else "JSON fact pointer and fields")
+        + " | In-world source ID |",
         "|---|---|---|",
     ])
     for row_index, (row_id, pointer, source_id) in enumerate(rows):
@@ -709,6 +728,9 @@ def prepare_test_case(case_name, cluster):
     pointer_overrides = {}
     write_test_fixture(cluster, rows)
     if case_name in {"complete", "invalid_arguments"}:
+        return
+    if case_name == "dual_pointer":
+        write_test_fixture(cluster, legacy_test_rows(), {0: DUAL_POINTER_CELL}, legacy=True)
         return
     if case_name == "schema_drift":
         rows = [row for row in rows if not row[1].endswith("/claims/0")]
@@ -795,7 +817,7 @@ def load_test_expectations():
     if unknown:
         fail("self_test_contract",
              "contract pins unimplemented self-test cases: " + ", ".join(unknown))
-    missing = sorted(set(CORE_SELF_TEST_CASES) - set(expected))
+    missing = sorted(set(SELF_TEST_CASES) - set(expected))
     if missing:
         fail("self_test_contract",
              "contract drops implemented self-test cases: " + ", ".join(missing))

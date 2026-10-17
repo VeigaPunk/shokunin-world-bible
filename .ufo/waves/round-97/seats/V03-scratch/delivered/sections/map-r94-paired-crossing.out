@@ -1,0 +1,7 @@
+=== map-r94-paired-crossing ===
+$ python3 corpus/tools/map_obligations.py corpus/fixtures/r94-paired-crossing
+OBLIGATIONS raw=14 mapped=14
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
+RESULT PASS
+EXIT=0
+

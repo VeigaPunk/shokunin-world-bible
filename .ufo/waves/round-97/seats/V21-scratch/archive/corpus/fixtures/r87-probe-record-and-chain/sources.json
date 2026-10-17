@@ -1,0 +1,26 @@
+[
+  {
+    "id": "archive-ledger",
+    "title": "Lantern Harbor Registry, year 12",
+    "kind": "fictional municipal record",
+    "reliability_note": "in-world fiction; records movements, not omniscient truth"
+  },
+  {
+    "id": "courier-log",
+    "title": "Courier Mira’s Route Log, year 12",
+    "kind": "fictional personal log",
+    "reliability_note": "in-world fiction; first-person account"
+  },
+  {
+    "id": "ambig-source",
+    "title": "Unresolved record identity A",
+    "kind": "fictional fragment",
+    "reliability_note": "in-world fiction; duplicate identifier"
+  },
+  {
+    "id": "ambig-source",
+    "title": "Unresolved record identity B",
+    "kind": "fictional fragment",
+    "reliability_note": "in-world fiction; duplicate identifier"
+  }
+]

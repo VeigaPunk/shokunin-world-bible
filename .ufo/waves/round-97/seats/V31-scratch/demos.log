@@ -1,0 +1,44 @@
+DELIVERED map_obligations.py sha256=86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9
+DELIVERED contract sha256=2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41
+CONTRACT cases n=25 ids=['complete', 'missing', 'duplicate', 'phantom', 'source_id_mismatch', 'schema_drift', 'inventory_mismatch', 'malformed_json', 'co_mapped_grammar', 'legacy_grammar', 'invalid_pointer', 'empty_segment', 'noncanonical_index', 'noncanonical_claim_index', 'foreign_path', 'traversal_path', 'symlink_path', 'frozen_complete', 'frozen_tampered', 'frozen_missing_digests', 'frozen_expected_failure', 'frozen_verdict_mismatch', 'map_missing', 'invalid_arguments', 'dual_pointer']
+dual_pointer pinned: True
+A pristine: 0 ['SELF-TEST CASES 25/25 pinned', 'RESULT PASS'] stderr: 
+A dual_pointer line: ["SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']"]
+B drop-complete: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: complete' names_dropped_case=True
+B drop-missing: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: missing' names_dropped_case=True
+B drop-duplicate: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: duplicate' names_dropped_case=True
+B drop-phantom: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: phantom' names_dropped_case=True
+B drop-source_id_mismatch: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: source_id_mismatch' names_dropped_case=True
+B drop-schema_drift: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: schema_drift' names_dropped_case=True
+B drop-inventory_mismatch: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: inventory_mismatch' names_dropped_case=True
+B drop-malformed_json: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: malformed_json' names_dropped_case=True
+B drop-co_mapped_grammar: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: co_mapped_grammar' names_dropped_case=True
+B drop-legacy_grammar: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: legacy_grammar' names_dropped_case=True
+B drop-invalid_pointer: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: invalid_pointer' names_dropped_case=True
+B drop-empty_segment: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: empty_segment' names_dropped_case=True
+B drop-noncanonical_index: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: noncanonical_index' names_dropped_case=True
+B drop-noncanonical_claim_index: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: noncanonical_claim_index' names_dropped_case=True
+B drop-foreign_path: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: foreign_path' names_dropped_case=True
+B drop-traversal_path: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: traversal_path' names_dropped_case=True
+B drop-symlink_path: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: symlink_path' names_dropped_case=True
+B drop-frozen_complete: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: frozen_complete' names_dropped_case=True
+B drop-frozen_tampered: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: frozen_tampered' names_dropped_case=True
+B drop-frozen_missing_digests: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: frozen_missing_digests' names_dropped_case=True
+B drop-frozen_expected_failure: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: frozen_expected_failure' names_dropped_case=True
+B drop-frozen_verdict_mismatch: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: frozen_verdict_mismatch' names_dropped_case=True
+B drop-map_missing: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: map_missing' names_dropped_case=True
+B drop-invalid_arguments: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: invalid_arguments' names_dropped_case=True
+B drop-dual_pointer: exit=2 first='FINDING self_test_contract: contract drops implemented self-test cases: dual_pointer' names_dropped_case=True
+B sweep: 25 drops, still-green=0 -> []
+C neutralized (function-body replace): exit=2
+   SELF-TEST FAIL dual_pointer exit=0 findings=none
+   RESULT PASS
+   FINDING self_test_mismatch: isolated CLI outcomes differ from persisted expectations
+   RESULT ERROR
+C neutralized sha256=21ab92beb9d6b125da2291eded5778263146453d91678c3c4afcd991936d3ebb
+D flip-dual-pointer: exit=2
+   SELF-TEST FAIL dual_pointer exit=1 findings=['dual_pointer']
+   FINDING dual_pointer: row E1 (line 7) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/first_appearanc
+   RESULT FAIL
+   FINDING self_test_mismatch: isolated CLI outcomes differ from persisted expectations
+   RESULT ERROR

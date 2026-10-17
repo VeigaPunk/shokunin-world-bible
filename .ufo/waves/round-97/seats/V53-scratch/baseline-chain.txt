@@ -1,0 +1,23 @@
+### baseline dependency_freeze chain
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST 15ef230ef806ea7e7431f5afc7d999aee978b024cf47f2a20cbba726fc3fc279
+RESULT PASS
+exit=0
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+exit=0
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+exit=0
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+RESULT PASS
+exit=0
+### baseline sha256 contract+tools
+2b0ba815326b1cb3f65f7eab1842b85abedb9823228a37adc6a9335edc4a3ba8  corpus/tools/map_obligations.py
+97b76bb8b1fea97f166ef7586eba69c427ec15bbe7b34eb5345ec65c936493b6  corpus/tools/map-obligations-contract.json
+a3b57978f0cbf314389ee3f9862920a46cf109fca6d1eec488c39be0457f0980  corpus/tools/dependency_freeze.py
+c65ac3bd4fc090d8696b5739a6e5971cc06aba4700ad7458b9f9b04a8e99a4d2  corpus/tools/dependency-freeze-contract.json
+ba7d2ff12851dff1175dc09a0dcb9679875a19a45840431d5e720d462cfe6945  corpus/tools/README.md

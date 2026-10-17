@@ -1,0 +1,804 @@
+{
+ "record_type": "round-97-receipt",
+ "record_owner": "V58-presence-final",
+ "round": 97,
+ "phase": "single-wave-64-seat",
+ "requested_model": "opencode-go/deepseek-v4.1-flash",
+ "requested_seats": 64,
+ "dispatch_tool_call_id": null,
+ "returned_summary": null,
+ "served_backend_echo": null,
+ "baseline_commit": "f3e09f93ce9f2b047eb2b2089bf7b1c03d74a40f",
+ "baseline_is_ancestor_of_head": true,
+ "head_at_snapshot": "2393934237ea076366f3db6dceeff033edb52ab1",
+ "receipt_snapshot_utc": "2026-10-17T19:18:12-0300",
+ "candidate_revision_pinned": {
+  "corpus/tools/map_obligations.py": "86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9",
+  "corpus/tools/map-obligations-contract.json": "2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41",
+  "corpus/tools/README.md": "6278e59b8df01c1cb63ca6080cb959999f400d95128b96e84e5476f4c4ebb992",
+  "corpus/tools/dependency_freeze.py": "b06275f3bbdeabaab615138b3004703fce701a786af882d3b732828b37722130",
+  "corpus/tools/dependency-freeze-contract.json": "27273be27d33ad864f06d656f28dca8eabc9d76f6ebe62583372a88c9e64e781",
+  "corpus/fixtures/r96-crossing-response/claim-excerpt-map.md": "e851f068cfd7ed02c97054df18729c4c5a9b8bf60d99d7c9116f427d765440de",
+  "corpus/fixtures/r97-crossing-acknowledgment/entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+  "corpus/fixtures/r97-crossing-acknowledgment/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+  "corpus/fixtures/r97-crossing-acknowledgment/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "corpus/fixtures/r97-crossing-acknowledgment/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+  "corpus/fixtures/r97-crossing-acknowledgment/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+  "corpus/fixtures/r97-crossing-acknowledgment/sources.json": "438fb513a62496c41179ead3ea2a55a69ff4ce1fd191c3a7ebccb10651a8dc73",
+  "corpus/fixtures/r97-crossing-acknowledgment/timeline.json": "73063a863a68fc4feae073ce74cfa9e5fddb4f9cc4060d12b333d495a255895b",
+  "corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md": "8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c",
+  "corpus/fixtures/r97-crossing-acknowledgment/README.md": "d9387b7d73264dfc6c01d27cc6bf24c58ef6bdb4461d2ae8fbfdb6376d9e019f",
+  "corpus/fixtures/r97-crossing-acknowledgment/claim-excerpt-map.md": "49d4834e124fa6cfaa1a73cd5d1a7bc2cb59711c6233b418fe7485a17eedc94f",
+  "corpus/knowledge/r97-acknowledgment-scope-note.md": "5e3b4225c30de8a2a75b675b59acb5c597b290e5a45f2caa01663da586e042b5"
+ },
+ "collection": {
+  "reports_present": 60,
+  "reports_present_incl_self": 61,
+  "reports_expected": 64,
+  "reports_absent": [
+   "V24",
+   "V35",
+   "V40"
+  ],
+  "unexpected_report_prefixes": [],
+  "unexpected_md_in_seats_dir": [],
+  "duplicate_report_prefixes": {},
+  "header_seat_mismatches_line1": [],
+  "header_seat_mismatches_first5": [],
+  "snapshot_note": "Counts and hashes taken by V58-presence-final at the final snapshot; V58's own report row is included (hash of the file as written at snapshot time). agent_id/outcome left null for L1 to fill from the real AgentSwarm dispatch result."
+ },
+ "collection_snapshot": {
+  "reports_present": 60,
+  "reports_present_incl_self": 61,
+  "reports_expected": 64,
+  "reports_absent": [
+   "V24",
+   "V35",
+   "V40"
+  ],
+  "unexpected_report_prefixes": [],
+  "unexpected_md_in_seats_dir": [],
+  "duplicate_report_prefixes": {},
+  "header_seat_mismatches_line1": [],
+  "header_seat_mismatches_first5": [],
+  "snapshot_note": "Counts and hashes taken by V58-presence-final at the final snapshot; V58's own report row is included (hash of the file as written at snapshot time). agent_id/outcome left null for L1 to fill from the real AgentSwarm dispatch result."
+ },
+ "producer_artifacts": {
+  "R1": {
+   "corpus/tools/map_obligations.py": {
+    "exists": true,
+    "bytes": 38693,
+    "sha256": "86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9"
+   }
+  },
+  "R2": {
+   "corpus/tools/map-obligations-contract.json": {
+    "exists": true,
+    "bytes": 3189,
+    "sha256": "2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41"
+   },
+   "corpus/tools/README.md": {
+    "exists": true,
+    "bytes": 24293,
+    "sha256": "6278e59b8df01c1cb63ca6080cb959999f400d95128b96e84e5476f4c4ebb992"
+   }
+  },
+  "R3": {
+   "corpus/tools/dependency_freeze.py": {
+    "exists": true,
+    "bytes": 25044,
+    "sha256": "b06275f3bbdeabaab615138b3004703fce701a786af882d3b732828b37722130"
+   },
+   "corpus/tools/dependency-freeze-contract.json": {
+    "exists": true,
+    "bytes": 12025,
+    "sha256": "27273be27d33ad864f06d656f28dca8eabc9d76f6ebe62583372a88c9e64e781"
+   }
+  },
+  "R4": {
+   "corpus/fixtures/r96-crossing-response/claim-excerpt-map.md": {
+    "exists": true,
+    "bytes": 10302,
+    "sha256": "e851f068cfd7ed02c97054df18729c4c5a9b8bf60d99d7c9116f427d765440de"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/entities.json": {
+    "exists": true,
+    "bytes": 1449,
+    "sha256": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/relations.json": {
+    "exists": true,
+    "bytes": 139,
+    "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/contradictions.json": {
+    "exists": true,
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/inspiration-note.md": {
+    "exists": true,
+    "bytes": 1956,
+    "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/source-excerpt.md": {
+    "exists": true,
+    "bytes": 640,
+    "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/sources.json": {
+    "exists": true,
+    "bytes": 2235,
+    "sha256": "438fb513a62496c41179ead3ea2a55a69ff4ce1fd191c3a7ebccb10651a8dc73"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/timeline.json": {
+    "exists": true,
+    "bytes": 2173,
+    "sha256": "73063a863a68fc4feae073ce74cfa9e5fddb4f9cc4060d12b333d495a255895b"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md": {
+    "exists": true,
+    "bytes": 3410,
+    "sha256": "8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c"
+   }
+  },
+  "R5": {
+   "corpus/fixtures/r97-crossing-acknowledgment/README.md": {
+    "exists": true,
+    "bytes": 5304,
+    "sha256": "d9387b7d73264dfc6c01d27cc6bf24c58ef6bdb4461d2ae8fbfdb6376d9e019f"
+   },
+   "corpus/fixtures/r97-crossing-acknowledgment/claim-excerpt-map.md": {
+    "exists": true,
+    "bytes": 12117,
+    "sha256": "49d4834e124fa6cfaa1a73cd5d1a7bc2cb59711c6233b418fe7485a17eedc94f"
+   }
+  },
+  "R6": {
+   "corpus/knowledge/r97-acknowledgment-scope-note.md": {
+    "exists": true,
+    "bytes": 15033,
+    "sha256": "5e3b4225c30de8a2a75b675b59acb5c597b290e5a45f2caa01663da586e042b5"
+   }
+  }
+ },
+ "agent_id_note": "agent_id/outcome are null on every seat row; the integrator (L1) fills them from the real AgentSwarm dispatch result. dispatch_tool_call_id/returned_summary/served_backend_echo likewise left null; none invented. collection and collection_snapshot are identical alias objects (r94/r95 named it collection_snapshot; r96 receipt named it collection).",
+ "known_seat_output_defects": [],
+ "collection_curve": [
+  "18:43:47=0",
+  "18:44:07=0",
+  "18:44:27=0",
+  "18:44:47=0",
+  "18:45:07=0",
+  "18:45:27=0",
+  "18:45:47=0",
+  "18:46:07=0",
+  "18:46:27=0",
+  "18:46:47=0",
+  "18:47:07=0",
+  "18:47:27=0",
+  "18:47:47=1",
+  "18:48:07=3",
+  "18:48:27=5",
+  "18:48:47=8",
+  "18:49:07=9",
+  "18:49:27=9",
+  "18:49:47=10",
+  "18:50:07=10",
+  "18:50:27=11",
+  "18:50:47=11",
+  "18:51:07=14",
+  "18:51:27=19",
+  "18:51:47=22",
+  "18:52:07=23",
+  "18:52:27=24",
+  "18:52:47=25",
+  "18:53:07=26",
+  "18:53:27=30",
+  "18:57:49=restart",
+  "18:57:49=37",
+  "18:58:09=38",
+  "18:58:29=39",
+  "18:58:49=44",
+  "18:59:09=46",
+  "18:59:29=48",
+  "18:59:49=51",
+  "19:00:09=52",
+  "19:00:29=54",
+  "19:00:49=54",
+  "19:01:09=54",
+  "19:01:29=55",
+  "19:01:49=55",
+  "19:02:09=56",
+  "19:02:29=57",
+  "19:02:49=58",
+  "19:03:09=58",
+  "19:03:29=58",
+  "19:03:49=58",
+  "19:04:09=59",
+  "19:04:29=59",
+  "19:04:49=59",
+  "19:05:09=59",
+  "19:05:29=59",
+  "19:05:49=59",
+  "19:06:09=59",
+  "19:06:29=59",
+  "19:06:49=59",
+  "19:07:09=59",
+  "19:07:29=59",
+  "19:07:49=59",
+  "19:08:09=59",
+  "19:08:29=59",
+  "19:08:49=59",
+  "19:09:09=59",
+  "19:09:29=59",
+  "19:09:49=59",
+  "19:10:09=59",
+  "19:10:29=59",
+  "19:10:49=59",
+  "19:11:09=59",
+  "19:11:29=59",
+  "19:11:49=59",
+  "19:12:09=59",
+  "19:12:29=59",
+  "19:12:49=59",
+  "19:13:09=60",
+  "19:13:29=60",
+  "19:13:49=60",
+  "19:14:09=60",
+  "19:14:29=60",
+  "19:14:49=60",
+  "19:15:09=60",
+  "19:15:29=60",
+  "19:15:49=60",
+  "19:16:09=60",
+  "19:16:29=60",
+  "19:16:49=60",
+  "19:17:09=60",
+  "19:17:29=60",
+  "19:17:49=60",
+  "19:18:09=60"
+ ],
+ "lane_status_porcelain_at_snapshot": [
+  " M LOG.md",
+  " M corpus/fixtures/r96-crossing-response/claim-excerpt-map.md",
+  " M corpus/tools/README.md",
+  " M corpus/tools/dependency-freeze-contract.json",
+  " M corpus/tools/dependency_freeze.py",
+  " M corpus/tools/map-obligations-contract.json",
+  " M corpus/tools/map_obligations.py",
+  "?? .ufo/waves/round-97/",
+  "?? corpus/fixtures/r97-crossing-acknowledgment/",
+  "?? corpus/knowledge/r97-acknowledgment-scope-note.md"
+ ],
+ "seats": [
+  {
+   "seat": "R1",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "R1-map-pinning.md": "bc27c6a9dd413823313d3729bbbcd796530c1793caaccece33ccb79e707d9c13"
+   }
+  },
+  {
+   "seat": "R2",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "R2-contract-docs.md": "53ee1ef0236fd7e1883b9c7900fccd2d12461dc193d4582dbb2c47108beaeae1"
+   }
+  },
+  {
+   "seat": "R3",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "R3-freeze-hardening.md": "6383997d822f3be5f985cbb33a7af12ae7e1b0922e96bb6e6e81cc5d65b01764"
+   }
+  },
+  {
+   "seat": "R4",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "R4-fixture-author.md": "bbea1e9b66d7bcfd7cf720ee87a995d12fac7177dbdec9dd1fe4a10ab25bae79"
+   }
+  },
+  {
+   "seat": "R5",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "R5-fixture-docs.md": "cba2699827defe9ef2d09e8219105620e675fa9caef6134faabe151e09f0befa"
+   }
+  },
+  {
+   "seat": "R6",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "R6-knowledge-note.md": "cbebae0038d87c2acaa2dd915ee6a7bfaa6587f48d987dd02f7ca004e76cbb93"
+   }
+  },
+  {
+   "seat": "V01",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V01-c1-dual-pin.md": "53d1dd5a8429e3349fc8ba198097b2f68933f0edc9dd17b7fc666f3629a23eef"
+   }
+  },
+  {
+   "seat": "V02",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V02-c1-loader-tight.md": "ef7df10645558874ac55bf145c39b3ef8f6b348a8849a5c3caee06b6a855b202"
+   }
+  },
+  {
+   "seat": "V03",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V03-c1-regression-battery.md": "3c51d13d5257923059b1a3246f29d313132542ffc8bbe9d2e13357f05e8069fd"
+   }
+  },
+  {
+   "seat": "V04",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V04-c1-negative-rerun.md": "c35e3254aeda63fdf1d8568399d4f8678594c6652e659e2f53e94c852babbf85"
+   }
+  },
+  {
+   "seat": "V05",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V05-c1-code-review.md": "7c26bc1b7a0385a88127cd051224d67c577a65edc9f8165b5982528b924db31f"
+   }
+  },
+  {
+   "seat": "V06",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V06-c2-guard-demo.md": "db62d153452d55c75b9fefc341c1dce3d7bb1ceaec49cc0d0ccb001569d89856"
+   }
+  },
+  {
+   "seat": "V07",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V07-c2-path-binding.md": "61d963349f4882d0fdc39500833eb5cc19ca02aecadfddca4ddf73252d8929eb"
+   }
+  },
+  {
+   "seat": "V08",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V08-c2-digest-naming.md": "ac70ae2ff172ffbc73565ebc830c080d8e3d3c80054b05f29181f9f590cf7bc4"
+   }
+  },
+  {
+   "seat": "V09",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V09-c2-selftest.md": "051643f6790d782a8c3d00d2f8088dac04930813314733a9267207eda5c9413e"
+   }
+  },
+  {
+   "seat": "V10",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V10-c2-chain.md": "994e3dc778e15aa3384f8c1b101af19bc3d406e19e8ff885de6e2b3305597bb2"
+   }
+  },
+  {
+   "seat": "V11",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V11-c2-code-review.md": "f310b9aad956fede394fe56194e60313580d70c63d05ca6a7df7adb1f897f4bf"
+   }
+  },
+  {
+   "seat": "V12",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V12-c2-refreeze-integrity.md": "08e82e4f6dd5e93a95dbd107f46cf3a8e8b1924ab9b7010b270c8c3edc9803f9"
+   }
+  },
+  {
+   "seat": "V13",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V13-c3-checker.md": "26347030d67ef8322ffa0e986d9f17831bfd84392eb61291e0bb6ded232b8206"
+   }
+  },
+  {
+   "seat": "V14",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V14-c3-inherited-equality.md": "7d4274aec738abb578a41faeda189e6fa9ed0b2ca88a6c08e72b1df5158e3ba7"
+   }
+  },
+  {
+   "seat": "V15",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V15-c3-support-map.md": "9528323ff60b7bcf55164236309c2a43357d22b17966acdb60bd4b5c65bd9210"
+   }
+  },
+  {
+   "seat": "V16",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V16-c3-anchors.md": "9078d38fba74ddcbd96f02780c35a80b44067cd3ecd002e74ffdd925c5aa8dc6"
+   }
+  },
+  {
+   "seat": "V17",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V17-c3-whole-claim.md": "19cdf26f788b04f50a2dae9ca04b5ecf33599a07c6404a482e23f1615ac74e1d"
+   }
+  },
+  {
+   "seat": "V18",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V18-c3-anti-overclaim.md": "aa9643074e3259b12c0827cd3d5e98219a49bf3fa374a23b525629bde6fa2f07"
+   }
+  },
+  {
+   "seat": "V19",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V19-c3-r96-repair-scope.md": "87dedc19cc3aa0836d47f539e6adf11d96c4c6b03ecf8e2ed727f4e20c7129e9"
+   }
+  },
+  {
+   "seat": "V20",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V20-c3-dependency-probe.md": "acb476486e30db10d28c92de9bf85588ac9b12bf64cdfff77ace01e610cffdc4"
+   }
+  },
+  {
+   "seat": "V21",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V21-preservation-census.md": "1d2017f193d9b35fbbb18fe5e7fe01f380141476d8e44619e2e19cfea8e29847"
+   }
+  },
+  {
+   "seat": "V22",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V22-preservation-mutations.md": "baf0e3ea8466684ff142b9788c6669fc7147913f4669d3c2a8c656b2547fd987"
+   }
+  },
+  {
+   "seat": "V23",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V23-gates-boundary.md": "e5540a2b0f9965c843924ad707f08fe053dbca86135896f3cd66f78b2adfd6a7"
+   }
+  },
+  {
+   "seat": "V24",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {}
+  },
+  {
+   "seat": "V25",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V25-freshness.md": "400be8f52db45ea016a614815db20ab6ee0e92c9c12223b535806b7fb2e9b28f"
+   }
+  },
+  {
+   "seat": "V26",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V26-doc-parity.md": "fc2902a86143ecc933c649ee0b5be6402fd0ae5b35408f40342ea4dddcd1d52a"
+   }
+  },
+  {
+   "seat": "V27",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V27-operability.md": "4d99a69137cbd77375deca62f01d9806b2e664fb3d6091a3a948279e74bd6955"
+   }
+  },
+  {
+   "seat": "V28",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V28-adjacency.md": "7a1e5c82375467edd759ef9e806c15c70ea82c7d65bfab9bf0db2d7c685bf432"
+   }
+  },
+  {
+   "seat": "V29",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V29-verdict-depth.md": "77e9de0dbd1c7cfd65b4d206d5e34ea35780a18a3387c9da2562f0e72c47eee9"
+   }
+  },
+  {
+   "seat": "V30",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V30-verdict-coverage.md": "dcd08016ec427c135f258def167f315adcaac0c4c23e1d64df46ff13d9bef0e3"
+   }
+  },
+  {
+   "seat": "V31",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V31-verdict-calibration.md": "6a0fd8fa40120aa9c673cce00c4b6c52ad132ccdba68f36dde8e8f4e2430f4c4"
+   }
+  },
+  {
+   "seat": "V32",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V32-verdict-operability.md": "690d36c412973e02717d04878db10baa77c87fec12bf34ad3b90e3218bfb3402"
+   }
+  },
+  {
+   "seat": "V33",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V33-verdict-freshness.md": "9f999ecf5b061d86e2833815455e484c02752e566d7caa114671dfe454653619"
+   }
+  },
+  {
+   "seat": "V34",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V34-verdict-adjacency.md": "828d8c0147b360c3a5a23745d88781cf6c28b1d7484e47dee69a370a61eb33b7"
+   }
+  },
+  {
+   "seat": "V35",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {}
+  },
+  {
+   "seat": "V36",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V36-shonen-format.md": "6be73eca2f3af20fb512eedf9d60297d9a5d1db0a5f41bc5b28a997fe4291ae0"
+   }
+  },
+  {
+   "seat": "V37",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V37-debt.md": "4e25246563b6f47ee6e7ad47801130636a19e8b3ac5fa9f0f6eb4e80717a6850"
+   }
+  },
+  {
+   "seat": "V38",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V38-spec-conformance.md": "a5f4c28da6acbd96813127285f1ab76d61c5060390ac7d9878a1acf00ef7b24f"
+   }
+  },
+  {
+   "seat": "V39",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V39-integration-checklist.md": "450ec4073fd881b5ae6f270fe2405a412fe39e6a077de2efce0c4eb0aad0a9d1"
+   }
+  },
+  {
+   "seat": "V40",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {}
+  },
+  {
+   "seat": "V41",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V41-census-replica-2.md": "a6acbc47786525fd785c4e5e7b79dc6b5b97a8c0633210f93e2e26c691b9bcbe"
+   }
+  },
+  {
+   "seat": "V42",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V42-anchor-replica-2.md": "88b5db37666728dc2a8f682f2af1dbc31f66dc2b0a7fd6e0d442d5183d67a77d"
+   }
+  },
+  {
+   "seat": "V43",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V43-whole-claim-replica-2.md": "f8c7e217bd75b5f138f161d16d3943a8d95edf16688bd6ed857c54278a210f66"
+   }
+  },
+  {
+   "seat": "V44",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V44-c1-negative-2.md": "2712fd7d687aa2b18a3cf4b54da08dedad1eeccbd3cf96046edfa112af394f7a"
+   }
+  },
+  {
+   "seat": "V45",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V45-c2-guard-2.md": "4f46b83c6fd31736c21f12e255a95f688a61cbbca6778900a465bb8e297c8756"
+   }
+  },
+  {
+   "seat": "V46",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V46-cross-gates.md": "6bec5920653102565cbdab95baea3ec7602e58d603c35eebbf0144ee534e1d5f"
+   }
+  },
+  {
+   "seat": "V47",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V47-receipt-wording.md": "1419e0950fd1c2594800caaf8f303f25032386d74e07af3649bcf3384f1da7b5"
+   }
+  },
+  {
+   "seat": "V48",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V48-pins-c9.md": "dd8d656c69fe84046e439a11633c0172e391dcc86ce06b482f74073b451dfd7e"
+   }
+  },
+  {
+   "seat": "V49",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V49-inherited-tools.md": "58257e63c57ad95add1a314361889c79ad096f504a8ce6dc91bb069eaf47386e"
+   }
+  },
+  {
+   "seat": "V50",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V50-byte-prefix-2.md": "2e1094877207ceedbd42f7c2a5a68eb0c32662a0f9e19672256e34214bede21e"
+   }
+  },
+  {
+   "seat": "V51",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V51-relation-scope-2.md": "83a8fcd2f510eaa6032f3acc02c8aba6cbc86e67b6e055a1cecb916f62d21c63"
+   }
+  },
+  {
+   "seat": "V52",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V52-support-regression.md": "57d3e83c9f443e4cb3bd02e37db42644c240b21a7793f2780c34e6443404ad76"
+   }
+  },
+  {
+   "seat": "V53",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V53-cross-seat-audit.md": "1b72e3da8c428d0651dd8142b5807efc62a510223f87b7e5baaff7b31a3eee89"
+   }
+  },
+  {
+   "seat": "V54",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V54-crosscheck-depth.md": "dba6ad3ed6b3ba6f684933876dda016d2ba795ecc1b0dc170fe064cdf4b5b42f"
+   }
+  },
+  {
+   "seat": "V55",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V55-crosscheck-coverage.md": "78307a849843bd5c0f826200eac0b6665e7e844b924a15c02986b3ac20e8ec08"
+   }
+  },
+  {
+   "seat": "V56",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V56-mutual-wait-guard.md": "417473b4e8c73a3e9f9986a37997a362acfb7d04638bf9ce278c84fdda802605"
+   }
+  },
+  {
+   "seat": "V57",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V57-claim-text-audit.md": "ad3f8d19c952934e8e65b5c17f487fae87a1cf785f7b7e49e11f65f32be6a9e3"
+   }
+  },
+  {
+   "seat": "V58",
+   "agent_id": null,
+   "outcome": null,
+   "reports": {
+    "V58-presence-final.md": "759cd9d308bbe31fce2193d8d7df3104b41f32c6e541cc11605032624a61d626"
+   }
+  }
+ ],
+ "prior_receipt_preserved": {
+  "preserved_from": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/receipt.json",
+  "preserved_by": "V58-presence-final",
+  "sha256_of_preserved_bytes": "238df7fe40ac0d6119dcb01fe41a8e2fcec10a7789f0f8ce7ce13dabe239e62e",
+  "record_owner": "V58-presence-final",
+  "collection": {
+   "reports_present": 60,
+   "reports_present_incl_self": 61,
+   "reports_expected": 64,
+   "reports_absent": [
+    "V24",
+    "V35",
+    "V40"
+   ],
+   "unexpected_report_prefixes": [],
+   "unexpected_md_in_seats_dir": [],
+   "duplicate_report_prefixes": {},
+   "header_seat_mismatches_line1": [],
+   "header_seat_mismatches_first5": [],
+   "snapshot_note": "Counts and hashes taken by V58-presence-final at the final snapshot; V58's own report row is included (hash of the file as written at snapshot time). agent_id/outcome left null for L1 to fill from the real AgentSwarm dispatch result."
+  }
+ }
+}

@@ -173,3 +173,56 @@ All prior behavior holds on the delivered corpus: r88/r93/r94/r95/r96 exit 0 (`O
 `map_obligations` (round 96): three hardening closes, all demonstrated before/against the r95 tool (`git show dcb2d92:…`): (1) a declared-vs-observed inventory mismatch is now **gating** — the r95 deletion class (a claims key and its map row both removed) exits 1 with stable FINDING `inventory_mismatch` (previously exit 0 with the shortfall only in the non-gating INVENTORY receipt); bound: a *consistently regenerated* declaration still exits 0 — the gate compares declared vs observed, and a coherent regeneration is indistinguishable. (2) The persisted self-test carries 24 cases (added `schema_drift`, `inventory_mismatch`), both proven load-bearing by neutralization and expectation-flip perturbations. (3) The V37-D1 gap is closed: legacy-dialect cells naming a second pointer in parenthetical or colon-prose exit 1 with stable FINDING `dual_pointer` (r88's real single-pointer cells still PASS). Residuals (r97 debt): the two added pins are droppable under the subset-tolerant loader (23/24 still passes); `dual_pointer` has no persisted self-test case.
 
 `dependency_freeze.py` (round 96, new gate): frozen dependency-edge regression check closing BR-01's JSON-edge half. Verifies each pinned fixture's event→depends_on edge set, relation endpoints, and content digest against `corpus/tools/dependency-freeze-contract.json`. Entry: `python3 corpus/tools/dependency_freeze.py <fixture-dir>` (`0` clean / `1` `REDUCTION-DETECTED` / `ADDITION-DETECTED` / `ENDPOINT-CHANGE` / `2` could-not-evaluate); self-test: `python3 corpus/tools/dependency_freeze.py --self-test` (14/14, persisted in the contract). The chain `r88-m3-maya-cluster`, `r94-paired-crossing`, `r95-crossing-aftermath`, `r96-crossing-response` freezes 4/4 clean. The carried BR-01 mutation (dropping `evin-ninth-bell` from the r94 tick-10 `depends_on` — invisible to every prior gate) exits 1 `REDUCTION-DETECTED`. Hazards (r97 debt): `--freeze <dir>` rewrites the delivered contract and has no `corpus/fixtures/` scope guard — integration-time only; receipts are not path-bound (a same-named copy at a foreign path verifies identically); BR-01's markdown/prose half remains open; `DIGEST-MISMATCH` does not name the changed file.
+
+### Round-97 addendum: `dual_pointer` pinned, subset-tolerant loader closed, 25-case self-test (2026-10-17)
+
+This addendum extends the r96 instructions above; every earlier sentence remains as delivered history, including the open r94 residual BR-05 (the self-test scratch still lives under the repository root and is not gitignored — unchanged in r97).
+
+#### `dual_pointer` persisted self-test case (closes the r96 residual)
+
+The r96 `dual_pointer` finding had no persisted self-test case — its behavior was demonstrated by mutation demos only. `corpus/tools/map-obligations-contract.json` now pins it as the 25th case: `{"id": "dual_pointer", "exit": 1, "finding_ids": ["dual_pointer"]}`. The case's isolated fixture is a legacy-dialect map (pointer-column header `JSON fact and fields`) whose first row cell is
+
+```
+`entities[0].first_appearance` (also named `entities[1].first_appearance`)
+```
+
+Hand-derived expectation, reproduced on a scratch cluster of the same shape before the pin was added: the row is still read by its first token, so the run prints `OBLIGATIONS raw=4 mapped=4` and exactly one `FINDING dual_pointer: row E1 (line 7) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/first_appearance`, `RESULT FAIL`, exit 1 — no cascading `missing_obligation` or `phantom_obligation`. The same fixture with the parenthetical removed prints `OBLIGATIONS raw=4 mapped=4` / `RESULT PASS`, exit 0, so the case isolates the `dual_pointer` emission and no other finding.
+
+#### Subset tolerance closed (loader tightened)
+
+Before (r96 revision, tool sha256 `2b0ba815…`): a contract that dropped either r96-added pin still ran green — dropping `schema_drift` printed `SELF-TEST CASES 23/24 pinned` … `RESULT PASS`, exit 0. After (delivered revision): the loader requires the contract to pin every implemented case, and a dropped case fails closed before any case is exercised:
+
+```
+FINDING self_test_contract: contract drops implemented self-test cases: schema_drift
+RESULT ERROR
+```
+
+exit 2 — and likewise for a dropped core case (`complete`). Both probes ran with a byte-identical copy of the delivered tool next to a scratch contract copy; the delivered contract was not modified (the loader reads the contract from the tool's own directory, so the probe moved both).
+
+#### The `dual_pointer` pin is load-bearing
+
+Neutralizing the emission in a scratch tool copy (`second_pointer_mention()` short-circuited to `return None`) turns the pinned case red:
+
+```
+SELF-TEST FAIL dual_pointer exit=0 findings=none
+FINDING self_test_mismatch: isolated CLI outcomes differ from persisted expectations
+RESULT ERROR
+```
+
+exit 2. The pin therefore fails when the behavior it records is removed.
+
+#### Persisted self-test: 25 cases
+
+```sh
+python3 corpus/tools/map_obligations.py --self-test   # SELF-TEST CASES 25/25 pinned / 25 SELF-TEST PASS lines / RESULT PASS, exit 0
+```
+
+The tool requires the contract to pin every implemented case and to pin no unimplemented case, and it exercises exactly the pinned cases.
+
+#### Unchanged
+
+Re-run on the delivered revision: r88 (10/10), r93 (12/12), r94 (14/14), r95 (15/15), r96 (16/16) all exit 0 with their receipts, the frozen r93 replay exits 0 (`SNAPSHOT inputs=4 digests=verified` / `FROZEN expected=PASS/0 findings=none matched`), r87/r89 stay fail-closed exit 2 `unsupported_map`, and the 0/1/2 exit contract, the `INVENTORY` receipt surface, and the `support_check` receipts are unchanged. The two r96-carried residuals for this tool (droppable added pins, unpinned `dual_pointer`) are closed here; the r94 BR-05 scratch-placement residual remains open.
+
+### Round-97 supersession: dependency_freeze hazards closed
+
+The "Hazards (r97 debt)" paragraph of the Round-96 addendum above is superseded as of 2026-10-17 (round 97): `--freeze` is now scope-guarded to `corpus/fixtures/**` (foreign targets exit 2 `SCOPE-REFUSED` with no write); pins are path-bound (a byte-identical same-named copy at a foreign path exits 2 `PATH-MISMATCH`); `DIGEST-MISMATCH` names the changed file; the self-test carries 16 persisted cases. Remaining bounds (r98 candidates): the pin payload covers the five JSON tables only — fixture Markdown is not pinned (the r96 re-freeze was a revision-only refresh; the map digest `e851f068…` is deliberately not in the pin set); BR-01's markdown/prose half remains open; the frozen chain is the declared four fixtures (`r97-crossing-acknowledgment` unpinned). Both tools' self-test scratch directories are created at the repository root and covered by `.gitignore` (`*-self-test-*/`).

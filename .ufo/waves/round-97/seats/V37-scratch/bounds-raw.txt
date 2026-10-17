@@ -1,0 +1,447 @@
+== R1-map-pinning.md | # R1 — map-pinning (round 97)
+   BOTTOM: ## Bottom line / **PASS** — on the delivered revision (`map_obligations.py` `86b52949…`) `dual_pointer` is a persisted, executed self-test case (live 25-case contract `2142b991…`: `SELF-TEST CASES 25/25 pinned` … `SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']` → `RESULT PASS` exit 0), the loader now fails closed with exit 2 on any contract that drops a pinned case (the r96 tool stil
+   L6: - **Task:** C1/calibration — (a) expose `dual_pointer` so R2 can pin it as a persisted self-test case (contract 24→25); (b) tighten the contract loader so **any** missing pinned case fails the self-test (r96 tolerance: a
+   L14: `try=3 contract=24 [] sha=97b76bb8… r2_report=absent 21:45:59Z` → `try=4 contract=25 ['dual_pointer'] sha=2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41 r2_report=absent 21:46:19Z` → **POLL_HIT try=4**.
+   L16: First observation (21:47:54Z, try=1): `map_rows=23 newrow=0 mapsha=e851f068cfd7ed02 inv=[**Expected inventory:** 16 JSON facts; 2 editorial rows; 18 total mapped rows] r5_report=absent` — i.e. R5's map was still the 16-r
+   L20: 1. **`dual_pointer` implemented as a self-test case** — `ADDED_SELF_TEST_CASES = ("schema_drift", "inventory_mismatch", "dual_pointer")` (line 76), so `SELF_TEST_CASES` (line 77) now holds 25 implemented cases and the co
+   L24: 5. **Loader tightening** (line 820): `missing = sorted(set(SELF_TEST_CASES) - set(expected))` (was `set(CORE_SELF_TEST_CASES)`, a 22-case subset that tolerated a contract dropping any r96-added pin). A contract missing *
+   L34: SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+   L51: | delivered-drop-schema | 24 (−`schema_drift`) | delivered | `… drops implemented self-test cases: schema_drift`, exit 2 |
+   L53: | delivered-23case | 23 (−`schema_drift`, −`dual_pointer`) | delivered | `… drops implemented self-test cases: dual_pointer, schema_drift`, exit 2 |
+   L54: | **baseline-23case** | 23 (−`schema_drift`, −`dual_pointer`) | r96 `2b0ba815…` | `SELF-TEST CASES 23/24 pinned` … `RESULT PASS`, **exit 0** ← the r96 tolerance the claim closes |
+   L56: | **neutralized-live25** | 25 (live) | delivered, `if mention is not None:` → `if False:` in `parse_map_text` | `SELF-TEST PASS` ×24, then `SELF-TEST FAIL dual_pointer exit=1 findings=[]` / `FINDING self_test_mismatch: i
+   L82: That is the tightened loader working as specified — a contract missing a pinned case now fails closed — not a case failure: all 24 inherited cases pass unchanged inside the 25-case run (§2), and the same 24-case contract
+   L113: missing cluster              FINDING cluster_missing: cannot resolve cluster: [Errno 2] …does-not-exist-r97 | EXIT=2
+   L115: --self-test + cluster        FINDING invalid_arguments: --self-test cannot be combined with cluster, --map, or --frozen | EXIT=2
+   L129: RESULT FAIL | EXIT=1
+== R2-contract-docs.md | # R2 — contract-docs (round 97, single-wave swarm)
+   BOTTOM: Bottom line: **PASS** — contract pins `dual_pointer` as case 25, `--self-test` / is 25/25 green on the delivered revision, a dropped pinned case now fails / closed (exit 2, quoted), the pin is load-bearing under neutralization, and the / r88–r96 corpus battery plus frozen replay are unchanged.
+   L92: Before (r96 revision `2b0ba815…` + contract copy dropping `schema_drift`):
+   L104: $ (scratch contract: dropped 'schema_drift', cases 25 -> 24)
+   L105: FINDING self_test_contract: contract drops implemented self-test cases: schema_drift
+   L107: probe_drop_schema_drift_exit=2
+   L115: Both fail closed before any case is exercised — the subset tolerance is gone
+   L127: SELF-TEST FAIL dual_pointer exit=0 findings=none
+   L153: | `… corpus/fixtures/r87-myth-cluster` | exit 2 `unsupported_map` (fail-closed, unchanged) |
+   L158: 1. `SKILL.md:87` still says "24 cases" and records both r96 residuals
+   L171: 3. r96 README addendum line 173's "Residuals (r97 debt)" sentence is left as
+   L176: is 25/25 green on the delivered revision, a dropped pinned case now fails
+== R3-freeze-hardening.md | # R3 freeze-hardening — round 97 seat report
+   BOTTOM: ## Bottom line / **PASS** — C2 delivered and verified on the delivered revision: scope-guarded `--freeze` (`SCOPE-REFUSED`, no write on refusal, symlink and same-named-shadow refusals included), pin path binding that turns the original r96 shadow-copy trick into exit 2 `PATH-MISMATCH`, `DIGEST-MISMATCH` naming the changed file, self-test 14→16 pinned in the contract with 16/16 green, r96 re-frozen
+   L17: Two further fail-closed additions inside the same guard family (not separate self-test cases — the claim fixes the count at 16):
+   L83: Prose drift invisible to the edge inventory, in a mirror:
+   L138: $ python3 corpus/tools/boundary_doc_check.py  -> CERTIFIED exit 0
+   L145: ## Residuals and notes for adjudication
+   L147: 1. **README is stale and is not mine to write.** `corpus/tools/README.md:175` (R2-owned) still says self-test "14/14" and lists the three r96 hazards as open (`--freeze` has no scope guard; receipts not path-bound; `DIGE
+   L149: 3. **Mirror-root caveat (semantics, not a hole):** a copied tool + contract rooted elsewhere still verifies copies, because binding is to the running tool's own `ROOT`. That is the intended meaning of "the pinned path"; 
+   L150: 4. **Environment:** `/tmp` inode exhaustion this round is why the self-test scratch moved to `dir=ROOT`; the delivered self-test therefore no longer depends on the system temp dir. `TMPDIR` does not affect it (`dir=` win
+== R4-fixture-author.md | # R4 fixture-author — round 97 seat report
+   BOTTOM: ## Bottom line / **PASS** — r96 cosmetic repair delivered and proven byte-minimal (2 lines changed; `support_check` and `map_obligations` receipts byte-identical before/after under both frozen and current tool revisions), and `r97-crossing-acknowledgment` delivered as a verified pure-append continuation (10 byte-verified base files, `aru-acknowledgment-note` + tick-13 `acknowledgment-aru-records` 
+   L13: | ID | Bounded editorial comparison | Source citation | Excerpt path | Line span | R9 delivery mode | Exact anchor |$
+   L22: Two edits applied (`Edit` tool, surgical): the editorial delimiter row now carries 7 cells matching its header/rows; the line-50 stale sentence "The new relation encodes only the agreement for this crossing, not perpetua
+   L85: Also re-run under an interim R1 revision of `map_obligations.py` (`c1881149…`): `diff r96-map-ob-before.txt r96-mapob-r1tool.txt` → identical. The frozen and revised tools agree that the cosmetic repair does not move the
+   L164: R5's map inherits my repaired base (its editorial delimiter is 7 cells; `grep -c "new relation"` = 0) and adds `J17` with anchor line 48, declared span 44-53, which is exactly the section I authored. Its inherited J01–J1
+   L166: ## Bounds and notes for adjudication
+== R5-fixture-docs.md | # R5 — fixture-docs (round 97)
+   BOTTOM: ## Bottom line / **PASS** — both owned docs delivered; 16 inherited rows carried byte-exact (namespace column only, / anchors at identical line numbers, parsed values identical, verified with the tools' own parsers),
+   L23: acknowledgment bound (receipt recorded; dispute unresolved; no reconciliation claimed).
+   L126: ## Caveats for verifiers
+   L130: bound; that reading is for adversarial verifier seats.
+   L142: **PASS** — both owned docs delivered; 16 inherited rows carried byte-exact (namespace column only,
+== R6-knowledge-note.md | # R6 — knowledge-note (round 97)
+   BOTTOM: Bottom line: **PASS** — `corpus/knowledge/r97-acknowledgment-scope-note.md` delivered (70 lines) / with every cited path/line and JSON pointer verified (52 resolved, 0 BAD; 19 content probes 0 BAD), / three receipts PASS (exit 0) on the frozen delivered fixture, inheritance and the r96 cosmetic / repair independently confirmed, and no writes outside the seat's exclusive scope.
+   L8: Baseline: r96 closure `f3e09f9` (HEAD at seat time `2393934`, working tree carried the
+   L28: `corpus/knowledge/r97-acknowledgment-scope-note.md` opens with `source:` / `verified-at:` /
+   L41: `claim-excerpt-map.md:38` (span 44-53) with bounded reading at `:57`, plus the inherited
+   L44: `:50` stale "new relation" sentence rewritten to the tick-12 event wording, data rows
+   L47: 4. **Bounds** — Aru's report only; no resolution truth; no winner/accusation/reconciliation/new
+   L112: bounds are my reading of the delivered records, and the note says so.
+== V01-c1-dual-pin.md | # V01 — c1-dual-pin (round 97, single-wave swarm)
+   BOTTOM: ## Bottom line / **PASS** — delivered `map_obligations.py` `86b52949…` + contract `2142b991…`: 25 cases with the `dual_pointer` pin, `--self-test` 25/25 `RESULT PASS` exit 0, and the pin proven load-bearing three ways (emission neutralization → case FAIL / exit 2; contract drop → `self_test_contract` / exit 2; expectation flip → case FAIL / exit 2), with the r96 23/24-exit-0 hole independently rep
+   L33: d=json.load(open('corpus/tools/map-obligations-contract.json'))
+   L38: ids: complete,missing,duplicate,phantom,source_id_mismatch,schema_drift,inventory_mismatch,malformed_json,co_mapped_grammar,legacy_grammar,invalid_pointer,empty_segment,noncanonical_index,noncanonical_claim_index,foreign
+   L52: Tool side: `ADDED_SELF_TEST_CASES = ("schema_drift", "inventory_mismatch", "dual_pointer")`
+   L125: SELF-TEST FAIL dual_pointer exit=0 findings=none
+   L135: `RESULT PASS`, exit 0. So the failure in A is attributable to the perturbation,
+   L151: SELF-TEST FAIL dual_pointer exit=1 findings=['dual_pointer']
+   L162: ### 3e. Loader tightening — ANY missing pinned case now fails
+   L168: `schema_drift`, unmodified bytes from `f3e09f9`):
+   L175: fails on any dropped pinned case; the r96 revision passed a 23-case contract.
+   L180: `SELF-TEST FAIL dual_pointer exit=1 findings=[]`. My independent reproduction
+   L181: of the same patch is `SELF-TEST FAIL dual_pointer exit=0 findings=none`
+   L183: exit-1 result cannot carry zero findings, so `exit=1 findings=[]` is not a
+   L184: producible output. R1's headline claim (case fails → `RESULT ERROR`, exit 2)
+   L187: exact observed child exit cannot be re-read from their artifacts; my value is
+== V02-c1-loader-tight.md | # V02 — c1-loader-tight (round 97)
+   BOTTOM: Bottom line: **PASS** — on the delivered revision (tool `86b52949…`, contract `2142b991…`, both matching producer receipts) `--self-test` is `25/25 pinned` / 25 PASS / `RESULT PASS` exit 0 with clean independent cross-check and byte-identical repeat; scratch contracts dropping each of `complete`, `dual_pointer`, `inventory_mismatch`, `map_missing` (plus `schema_drift`, `phantom`, and a 23-case dou
+   L5: - **Scope (per seat brief):** C1 loader tightening. Subset-tolerance closure — scratch contract copies missing each of 4 cases (one core, `dual_pointer`, `inventory_mismatch`, `map_missing`) must make `--self-test` FAIL 
+   L8: ## 0. Poll-wait record — READY at try 15, no ABSENT
+   L28: Both producer reports declare the same hashes (R1 §Delivered revision line; R2 §Delivered revision lines 16–18), so there is no revision drift between producer receipts and my runs. The r96-baseline tool copy frozen befo
+   L57: SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+   L59: SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+   L66: Counts and guards: `pass_lines=25 fail_lines=0 result_lines=1 total_lines=27`, `stderr_bytes=0`; second run byte-identical (`STDOUT_IDENTICAL` / `STDERR_IDENTICAL`). Independent parser (`.ufo/waves/round-97/seats/V02-scr
+   L93: The 25th case is appended at the tail; every r96 entry is byte-equal in value. The delivered tool implements it: `ADDED_SELF_TEST_CASES = ("schema_drift", "inventory_mismatch", "dual_pointer")` (`map_obligations.py:76`).
+   L97: Frozen r96 tool `2b0ba815…` + r96 contract `97b76bb8…` copied to scratch; one case dropped per variant (same mechanics as §4). Reproduced the carried fail-open class:
+   L108: --- r96 variant drop_schema_drift (added) ---   exit=0   <- fail open
+   L113: --- r96 variant drop_inventory_mismatch ---     exit=0   <- fail open
+   L115: ... SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+   L119: (`dual_pointer` was unpinned at r96, so it cannot be dropped from the r96 contract.) This is the exact r96 tolerance the round closes: core drops failed closed, added-pin drops stayed green.
+   L121: ## 4. Subset-tolerance closure — AFTER (delivered revision): every variant fails closed
+   L138: === VARIANT drop_schema_drift ===        exit=2
+== V03-c1-regression-battery.md | # V03 — c1-regression-battery (round 97)
+   BOTTOM: ## Bottom line / **PASS** — on the frozen delivered revision (`map_obligations.py` `86b52949…`, contract `2142b991…`) the full r87–r97 battery is green: r88 10/10 + TOTAL 12/12, r93 12/12, r94 14/14, r95 15/15, r96 16/16 all `RESULT PASS` exit 0 and byte-identical to the pre-R1 baseline; r97 lands at `raw=17 mapped=17` / `TOTAL-ROWS 19/19` / PASS exit 0 with the map's pointer set exactly equal to 
+   L5: - Task: full r87–r97 `map_obligations` battery — exits unchanged vs the r96 pins plus r97 17/17, `--frozen` r93 replay, usage probes exit 2, r87/r89 fail-closed. Quote actual commands and observed outputs.
+   L14: POLL_CHECK try=1  tool_sha=2b0ba815… q1_report=absent  r97_map=absent  t=2026-10-17T18:42:51-03:00
+   L15: POLL_CHECK try=6  tool_sha=2b0ba815… q1_report=absent  r97_map=present t=2026-10-17T18:44:31-03:00
+   L16: POLL_CHECK try=8  tool_sha=7079515093daf598584d188f1fb27244b6b2c17ca2c51604913dadd122c7af2d  q1_report=absent t=2026-10-17T18:45:11-03:00
+   L17: POLL_CHECK try=9  tool_sha=61685f3ffa66ba620ae61c48ba231d183b31934932535756664a68ee14e4401a  q1_report=absent t=2026-10-17T18:45:31-03:00
+   L18: POLL_CHECK try=10 tool_sha=86b52949… q1_report=absent  t=2026-10-17T18:45:51-03:00
+   L25: Note on the r97 surface: the r97 fixture directory appeared at try 6, but its map was still a byte copy of the r96 map (title `# r96 crossing-response…`, `**Expected inventory:** 16 JSON facts`) until ~18:48. My delivere
+   L39: map-r97:   FINDING cluster_missing: cannot resolve cluster … r97-crossing-acknowledgment | RESULT ERROR | EXIT=2   (fixture not yet landed)
+   L110: DIFF  map-r97-crossing-acknowledgment.out exit 2->0  sha 89eae1a47748 -> 8b387d9a2ffd   (absent -> landed)
+   L134: | r87-myth-cluster | exit 2 | `unsupported_map: pointer cells must contain one canonical inline-code pointer` | 2 | fail-closed, unchanged |
+   L135: | r89-inspiration-paraphrase | exit 2 | `unsupported_map: table needs one JSON fact pointer and one source-ID column` | 2 | fail-closed, unchanged |
+   L171: FINDING cluster_missing: cannot resolve cluster: [Errno 2] No such file or directory: '…/corpus/fixtures/does-not-exist-r97'
+   L181: ## 5. r87 / r89 fail-closed (unchanged, and shown to be refusals, not path failures)
+   L196: `map_obligations` nevertheless refuses both with `unsupported_map` (exit 2) and emits **no** `OBLIGATIONS`/`INVENTORY`/`RESULT PASS` line — i.e. it fails closed on map grammars it cannot validate, rather than resolving t
+== V04-c1-negative-rerun.md | # V04 — c1-negative-rerun (round-97)
+   BOTTOM: **Bottom line: PASS** — all nine accumulated negative-control classes (unmapped claim, / duplicate, phantom, source-ID mismatch, malformed JSON, invalid path, `schema_drift`, / `inventory_mismatch`, `dual_pointer`) re-run twice each on the delivered r97 revision / (`86b52949…`) exit exactly as the C1 claim requires (1 for finding classes, 2 for
+   L5: path, `schema_drift`, `inventory_mismatch`, `dual_pointer`) on scratch copies under the
+   L55: verbatim copy **plus** three added boundary expectations (`i5`–`i7`, all exit 1
+   L71: `schema_drift`; `h1`/`h2` `inventory_mismatch` deletion class; `i1`–`i4` `dual_pointer`
+   L72: forms; `i5`–`i7` dual-pointer boundary probes; five controls.
+   L106: g1                     exit=1 findings=[inventory_mismatch,schema_drift]
+   L107: g2                     exit=1 findings=[phantom_obligation,schema_drift]
+   L114: i5                     exit=1 findings=[dual_pointer]     # boundary: bare second token, no backticks
+   L115: i6                     exit=1 findings=[dual_pointer]     # boundary: parenthetical repeats same pointer
+   L116: i7                     exit=1 findings=[dual_pointer]     # boundary: malformed second token
+   L148: FINDING malformed_json: cannot parse entities.json: Unterminated string starting at: line 27 column 11 (char 558)
+   L157: recorded as extras, not failures.
+   L163: **(b) No behavioural drift vs the r96 tool.** Stripping only the recorded tool-path header
+   L167: `--self-test` behaviour and does not perturb any map-verification path.
+   L199: duplicate, phantom, source-ID mismatch, malformed JSON, invalid path, `schema_drift`,
+== V05-c1-code-review.md | # V05 — c1-code-review (round 97)
+   BOTTOM: ## Bottom line / **PASS** — the R1 diff (26+/4−, `86b52949…`) tightens the loader to fail closed on any dropped / pin (all five drop/unknown variants exit 2; r96 tool still passed the same 23/24-case contract at
+   L7: matching r96 behavior exactly (no semantic drift), stdlib-only, no live-tree writes; defects by
+   L43: 1. **Docstring (lines 8–11):** documents the fail-closed rule — the contract must pin every
+   L45: 2. **Line 76:** `ADDED_SELF_TEST_CASES = ("schema_drift", "inventory_mismatch", "dual_pointer")` →
+   L70: (`set(SELF_TEST_CASES) - set(expected)`, line 820) all `fail("self_test_contract", …)` →
+   L80: [minus-schema-drift]        exit=2  FINDING self_test_contract: contract drops implemented self-test cases: schema_drift        RESULT ERROR
+   L86: Baseline contrast (pre-change gap reproduced on r96 tool + r96 contract copies):
+   L89: $ python3 loader-baseline/one-drop/map_obligations.py --self-test     # contract minus schema_drift
+   L91: $ python3 loader-baseline/tool/map_obligations.py --self-test         # minus schema_drift+inventory_mismatch
+   L95: ### B. `dual_pointer` exposure matches r96 behavior exactly — no semantic drift
+   L98: both; `V05-scratch/drift_compare.sh`, `DRIFT_EXIT=0`):
+   L114: RESULT FAIL    EXIT=1
+   L142: $ strace -f -e trace=openat,open,unlink,unlinkat,rename,renameat,mkdir,mkdirat \
+   L146: (no output — 169/169 write-mode opens are under the TemporaryDirectory)
+   L158: `SELF-TEST FAIL dual_pointer exit=0 findings=none` … `FINDING self_test_mismatch` / `RESULT ERROR`, exit 2.
+== V09-c2-selftest.md | # V09 — c2-selftest (round 97, single-wave)
+   BOTTOM: ## Bottom line / INCONCLUSIVE — R3's delivery was absent at seat start; baseline and harness are / verified, deliverable checks pending.
+   L4: expectations; perturb one scratch expectation → fails closed.
+   L22: ## Environment hazard (affects this seat and possibly R3)
+   L35: Any new file under `/tmp` fails with `ENOSPC`, which breaks the tool's self-test
+   L55: Both hazards were reproduced independently, before R3 landed, on the untouched
+   L59: Hazard 1 — path binding absent. Byte-identical copy of a pinned fixture at a foreign path:
+   L72: Hazard 2 — no scope guard on `--freeze` (run in sandbox only):
+   L99: FINDING SELF-TEST-MISMATCH: cases failed: ['clean']
+   L103: So a single perturbed expectation fails the suite closed. The same perturbation will
+   L112: | 3 | Perturb one scratch expectation → fails closed | PENDING |
+   L116: INCONCLUSIVE — R3's delivery was absent at seat start; baseline and harness are
+== V13-c3-checker.md | # V13 c3-checker — round 97 seat report
+   BOTTOM: **Bottom line: PASS — r97 `check_bible` CLEAN exit 0, counts exactly 5/1/6/6, tick-13 `acknowledgment-aru-records` depends only on `response-evin-salt-court`, zero dangling/duplicate ids, r96 CLEAN post-repair with a 2-line repair diff that leaves every data row byte-unchanged.**
+   L26: $ python3 -c "import json;[print(t, len(json.load(open('corpus/fixtures/r97-crossing-acknowledgment/%s.json'%t)))) for t in ('entities','relations','timeline','sources','contradictions')]"
+   L78: Exactly two lines changed, neither a data row: the editorial delimiter 8→7 cells (now matching its 7-column header), and the stale "new relation" sentence replaced. `grep -c 'new relation'` → 0. All 16 J rows and both S 
+== V14-c3-inherited-equality.md | # V14 — c3-inherited-equality (round 97)
+   BOTTOM: ## Bottom line / **PASS** — every inherited row of `r97-crossing-acknowledgment` is parsed-value identical / (key-order sensitive) to POST-REPAIR `r96-crossing-response` (entities 5/5, relations 1/1,
+   L16: - Dry-run on a synthetic r96+appended-row fixture: `FAILURES: 0` — harness mechanics validated.
+   L21: - Total: `FAILURES: 6`, `NC_EXIT=1` — every check fires when it should.
+   L114: - No blockers, no contradictions found; no ABSENT condition.
+== V15-c3-support-map.md | # V15 — c3-support-map (round 97)
+   BOTTOM: ## Bottom line / **PASS** — `corpus/fixtures/r97-crossing-acknowledgment` verifies as claimed: `support_check` / `INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19; DISTINCT-ANCHORS 15/15` +
+   L24: | 18:42:40 (try 1) | r97 dir absent (`files=0/2`, `report=none`) |
+   L31: `16 JSON facts; 18 total mapped rows` with rows J01–J16 and no `J17`, and R5's report was absent;
+   L32: verifying it would have produced a false FAIL against an unfinished artifact. Nothing was verified
+   L72: PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+   L74: PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+   L77: PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+   L79: PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+   L83: PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+   L117: (no `inventory_mismatch`, no `dual_pointer`, no `schema_drift` false positive on the canonical r97
+   L196: 2. line 50, the stale sentence `The new relation encodes only the agreement for this crossing, not
+   L212: ## 5. Limitations / not verified here
+   L215: modes, pointer↔row binding). Whole-claim entailment, the acknowledgment bound ("dispute
+== V16-c3-anchors.md | # V16 — c3-anchors (round 97)
+   BOTTOM: ## Bottom line / PASS — all 17 JSON anchors (J01–J17) + 2 editorial anchors resolve in-span / via my own grep -nF + pure-Python implementation; all 18 inherited anchors
+   L7: appended section; report any drift with path:line.
+   L83: FAILURES: none
+   L117: $ grep -nF -e 'Aru carried the north lantern at Quiet Rise' -- corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+   L118: 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+   L163: header/rows) and line 50's stale "The new relation encodes only the
+   L186: ## 7. Drift findings
+   L188: None. No anchor drift, no line-number drift, no span drift, no path drift, no
+   L192: Observation (not drift): the inherited rows' path-qualification column was
+   L199: ## 8. Boundaries (not verified by this seat)
+   L218: the appended Round 97 section (span 44-53); zero drift.
+== V17-c3-whole-claim.md | # V17 — c3-whole-claim (round 97)
+   BOTTOM: ## Bottom line / **PASS** — on the frozen r97 revision (hashes above; check_bible CLEAN, support_check 17/17 / 19/19 PASS, map_obligations raw=17 mapped=17 PASS), the acknowledgment note's four clauses trace to their excerpt lines (48-51) and to `timeline.json#/5` + `sources.json#/5` with J17 anchored in-section; no resolution, accusation, reconciliation, or new-duty reading is constructible from 
+   L61: | 4 (51) | `I assert no reconciliation, no new duty, and no obligation beyond this crossing.` | `timeline.json#/5` "no reconciliation … no new duty beyond this crossing"; `sources.json#/5` "not evidence of a resolution, 
+   L63: Whole-proposition readings (bounded, matching the record's own scoping):
+   L72: Attempted to construct each forbidden reading from every r97 record (excerpt, both JSON rows, README, map, scope lines); each attempt fails on explicit record wording:
+   L75: 2. **Accusation** — `:50` "I make no accusation against Evin"; `timeline#/5` and `sources#/5` repeat it; the tick-13 description does not restate the inherited non-arrival or attach fault. NOT CONSTRUCTIBLE.
+   L77: 4. **New duty** — `:51` "no new duty, and no obligation beyond this crossing"; README retains the crossing-only bound; `relations.json` is byte-identical to r96 with exactly one relation (`agreed_co_stewardship_for_this_
+   L79: 6. (Extra) **Verdict/truth of either account** — no record declares either true/false; README line 9 "does not … convert either account into a verdict". NOT CONSTRUCTIBLE.
+   L81: Term sweep across all r97 `.md`/`.json` files for `resolv|accus|reconcil|winner|new duty|breach|blame|fault|settle|adjudicat|verdict|alliance|continuing`: every hit is either an explicit negation, a scoping caveat, or in
+   L87: - Map J17 scope (line 57): span "exactly the appended acknowledgment section"; negations repeated; `entity_id` single-actor-slot caveat ("does not exclude the other participant").
+   L89: - README lines 9/11/21: "adds one receipt record"; "does not change earlier locations, resolve or create a contradiction, or convert either account into a verdict"; 17 obligations; `support_check` "lexical preflight only
+   L100: - The three receipts are structural/lexical only; the whole-claim reading above is my manual review and does not authenticate the fictional sources, adjudicate the fiction, or assess rights/permission.
+   L102: - Everything outside the cited paths was read-only for me; this report does not extend to any other fixture or seat.
+== V18-c3-anti-overclaim.md | # V18 — c3-anti-overclaim (round 97)
+   BOTTOM: ## Bottom line / **PASS** — r96 cosmetic repair proven byte-minimal (2 of 56 lines; data rows byte-identical `1f58fdb9…`; receipts diff-identical before/after at a single tool revision) and r97 verified end-to-end (`relations.json` byte-identical across r94–r97; inherited JSON/excerpts preserved as bytes; J01–J16 identical modulo the namespace column; `check_bible` CLEAN, `map_obligations` 17/17, 
+   L5: - Poll-wait: R4–R6. Reports actually landed under different names than the brief predicted (`R4-fixture-author.md`, `R5-fixture-docs.md`); a glob-based poll caught them. R6's note landed at 18:50; R6's seat report was st
+   L36: - r96 map re-hashed at the end of my run: still `e851f068cfd7ed02c97054df18729c4c5a9b8bf60d99d7c9116f427d765440de` (no post-report drift); `git status` for the r96 directory shows only that one `M` file.
+   L37: - **Wording-precision note (bounded, not a claim failure):** line 50 was not a two-word substitution — it is a full sentence replacement that adds three negative bounds ("asserts no reconciliation", "selects no winner", 
+   L38: - **Cosmetic residual (pre-existing, bounded):** in the repaired delimiter the right-align colon sits on the "R9 delivery mode" cell (position 6) rather than "Line span" (position 5) for the 7-column editorial table. Thi
+   L95: RESULT FAIL   exit=1
+   L98: FAIL: J17: anchor hit outside declared line span 44-46 (hit lines: 48)
+   L99: SOURCE-SUPPORT 16/17 ... RESULT FAIL   exit=1
+   L102: So the 17th row is not decorative: removing it fails the completeness gate, and corrupting its span fails the anchor gate.
+   L111: - **"linear tick chain implies the arc closes":** bounded by the editorial-encoding sentence, which now covers the new row (`claim-excerpt-map.md:51`, README `:13`). Not constructible.
+   L112: - **"a claim/entity/relation was smuggled in":** entities and relations byte-identical; contradictions still `[]`; raw obligations rose by exactly one (the event), so no new obligation class exists. The first-person note
+   L117: - **R4 (`R4-fixture-author.md`)** — every hash/number I re-derived matches: pre-repair `5093d72e…`, post-repair `e851f068…`, `2 2` numstat, excerpt append `42a43,53`, new section 44–53, census 171, and its pre-R5 `missin
+   L118: - **R5 (`R5-fixture-docs.md`)** — claimed shas all match the actual bytes: README `d9387b7d…` (5304 B), map `49d4834e…` (12117 B), sources `438fb513…`, timeline `73063a86…`, excerpts `8ba491cb…`. Its caveat that `corpus/
+   L119: - **R6 (`corpus/knowledge/r97-acknowledgment-scope-note.md`, final revision sha256 `5e3b4225c30de8a2…`, 70 lines, mtime 18:52)** — every cited line verified to exist and to say what is claimed: `sources.json:33`/`:36`, `
+   L126: ## 6. Bounded observations (do not block C3, but should reach the closure record)
+== V19-c3-r96-repair-scope.md | # V19 — c3-r96-repair-scope (round 97)
+   BOTTOM: ## Bottom line / **PASS** — the r96 map repair is byte-minimal (exactly the two declared cosmetic lines; all 18 data rows, anchors, spans and modes byte-identical; nothing else in the r96 fixture changed) and both r96 receipts (`support_check` 18/18 PASS, `map_obligations` raw=16 mapped=16 PASS) are byte-identical before vs after, under both the frozen and the current tool revisions.
+   L42: Change (a), delimiter: pre line 44 carried **8 cells** (`|---|---|---|---|---|---:|---|---|`) under a
+   L47: Change (b), wording: the line-50 stale closing sentence "The new relation encodes only the
+   L71: content (spot-checked: post line 37 = J16 row, line 54 = J16 bounded-reading paragraph).
+   L112: ## Observations / residuals (outside this seat's verdict, reported as evidence)
+   L114: - The same stale "new relation" sentence still exists in the r94 and r95 maps
+   L117: new row is relation J11) but the same staleness class in r95 (its new row is event J15). Round-97
+   L118: byte scope covers only r96's map, so this is a residual, not a defect of this repair.
+   L120: (the r96 pin's `files` map lists only the five JSON tables), so this cosmetic repair cannot move
+   L126: bounded-reading paragraph (map line 54). Wording quality is other seats' call; observed
+== V20-c3-dependency-probe.md | # V20 c3-dependency-probe — round 97 seat report
+   BOTTOM: ## Bottom line / **PASS** — on the delivered r97 revision (`timeline.json` `73063a86…`, checker `ff9fd2aa…`), baseline `check_bible` is CLEAN exit 0, and all four mandated dependency probes report exactly as expected: dropped `depends_on` → `required nonempty list` exit 1; unknown id → `unknown event` exit 1; tick 11 → `timeline inversion … tick 12 not before … tick 11` exit 1; removed response ev
+   L4: - Producer polled: **R4** (`R4-fixture-author.md` + `corpus/fixtures/r97-crossing-acknowledgment/**`). Poll protocol: 20 s cadence. First fixture file set present at try 4 (18:44:20); R4's report present at **try 22, 18:
+   L18: `timeline.json` was byte-stable from 18:44:30 through the final probe run after R4's report landed (`diff` of pre-report vs post-report `sha256sum` sets → no change). The checker hash `ff9fd2aa…` matches the lane's pinne
+   L50: Extra probes run in the same battery (discrimination boundary, not defects):
+   L62: **Boundaries worth recording for adjudication.** `check_bible` enforces dependency key presence/type, id resolvability/uniqueness, self/repeat exclusion, and strict tick ordering (`dep >= row` fails, so equal ticks fail)
+   L85: **PASS** — on the delivered r97 revision (`timeline.json` `73063a86…`, checker `ff9fd2aa…`), baseline `check_bible` is CLEAN exit 0, and all four mandated dependency probes report exactly as expected: dropped `depends_on
+== V23-gates-boundary.md | # V23 — gates-boundary (round 97)
+   BOTTOM: ## Bottom line / PASS (baseline + mid-flight): boundary gate default rc=0 CERTIFIED / (receipts 3/3, cases 14/14, anchors 2/2), self-test 8/8 rc=0, discriminator
+   L1: # V23 — gates-boundary (round 97)
+   L3: Seat: V23 gates-boundary. Lane: lore-shokunin. All commands run from
+   L7: Seat scope: (a) `boundary_doc_check.py` default + `--self-test`;
+   L10: (boundary contract pins).
+   L12: ## 1. Boundary gate — default run
+   L15: $ python3 corpus/tools/boundary_doc_check.py
+   L20: scope=frozen-document drift + receipts + explicit-anchor range + structure; not semantic or AST validation
+   L27: CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)
+   L32: 3 receipts / 14 cases / 0 replay failures. Cases are exactly
+   L38: ## 2. Boundary gate — self-test
+   L41: $ python3 corpus/tools/boundary_doc_check.py --self-test
+   L44: SELF-TEST PASS comment_parked_c9 exit=1 findings=['document_drift']
+   L45: SELF-TEST PASS wrong_bare_anchor exit=1 findings=['document_drift']
+   L46: SELF-TEST PASS checker_drift exit=1 findings=['checker_drift']
+== V26-doc-parity.md | # V26 — doc-parity: pre-integration inventory (round 97)
+   BOTTOM: ## 6. Bottom line / PENDING — inventory complete for the landed surfaces; C2/R3 and R5/R6 measurements and the final PASS/FAIL/ABSENT call follow below when producers land.
+   L6: This report is the pre-integration inventory: what must change in the four doc surfaces, with measured evidence and the exact stale-wording list. It does not itself edit those docs (none are producer-owned this round; th
+   L32: - Contract case ids (25): complete, missing, duplicate, phantom, source_id_mismatch, schema_drift, inventory_mismatch, malformed_json, co_mapped_grammar, legacy_grammar, invalid_pointer, empty_segment, noncanonical_index
+   L83: # OBLIGATIONS raw=17 mapped=16 ... FINDING missing_obligation: timeline.json#/5 has no map row / RESULT FAIL exit 1
+   L85: The `raw=17 mapped=16` failure was the R5-pending state (map was still the r96 16-row copy). Re-run after R5's map landed:
+   L116: `check_bible` does not read the R5-pending markdown, so this census is stable for the delivered revision.
+   L147: rounds 94–97, **25 persisted cases**, and may note the loader is now strict (any pinned case missing fails closed)
+   L162: - line 87: "24 cases (r96 added …)" → **25 cases**; the two "r97 debt" notes (unpinned `dual_pointer`; droppable
+   L163: pins under a subset-tolerant loader) must be replaced by the closed state (loader fails closed on any missing
+   L165: - line 89: coverage "(r93–r96 clusters)" → include r97; "Bounded residuals: … round-95/96 r97-debt items" → update
+   L166: (only round-94 BR-16 / BR-05 scratch residual remains per the tools README addendum).
+   L171: - line 100 scope: must drop "Not path-bound (a same-named copy verifies identically)", "(no scope guard — r97 debt)",
+   L172: and "`DIGEST-MISMATCH` does not name the changed file"; replace with the guarded/path-bound/naming facts.
+   L185: The C2 half (dependency_freeze guard/path-binding/16 cases) must be added when R3 lands; the r96 residual sentences
+   L188: ## 4. Stale-wording list (exact file:line → required change)
+== V29-verdict-depth.md | # V29 — verdict-depth (round 97)
+   BOTTOM: ## Bottom line / **PASS — DEPTH verdict: improved (bounded)** — the delivered r97 fixture verifies as / the crossing arc's third beat, an acknowledgment of receipt that leaves both accounts
+   L5: ("acknowledgment-without-reconciliation class", 5/1/5→5/1/6) with named bounds.
+   L30: `RESULT FAIL` exit 1 — recorded as mid-flight (R4's own report shows the same
+   L175: ## 6. "Acknowledgment without reconciliation" — independent bounding
+   L183: README `:9`/`:11`, map `:51`/`:57`, and the R6 scope note carry the same bound.
+   L194: - **Novelty bound (my own scan).** `grep -rni "acknowledg" corpus/` outside the r97
+   L213: tick inversion, removed predecessor) each exit 1 on the delivered bytes; **bounds**:
+   L219: - **V51 relation-scope-2 — PASS (with one bounded prose observation)**: relations.json
+   L222: removed the r96 map's standalone relation-bound sentence from the normalization prose;
+   L223: the bound survives in the J11 anchor, README `:11`, `sources.json` reliability note,
+   L237: only at `fictional-excerpts.md:48` inside span 44-53; zero drift.
+   L245: FAIL exit 1; J17 span corrupted 44-53→44-46 → anchor-outside-span FAIL exit 1); census
+   L246: 171/37/134/421/0 independently reproduced. Bounded notes: the line-50 edit is a full
+   L255: all REPRODUCED; its C2 items held open at its last poll (R3 mid-flight, not my axis).
+   L257: its pre-R5 `raw=17 mapped=16 … FAIL` capture matches my mid-write observation);
+== V30-verdict-coverage.md | # V30 — verdict-coverage (round 97, single-wave)
+   BOTTOM: ## 7. Bottom line / PENDING — R3 delivery absent at poll try 25; baseline evidence and demo / harness verified.
+   L5: guard/path demos; one COVERAGE verdict with bounds.*
+   L34: (`grep -c PATH-MISMATCH` = 0). Environment hazard (§6): `/tmp` inode-exhausted
+   L38: ## 1. Pre-change hazard reproduction (my own mirror, baseline tool)
+   L59: fixture path — hazard confirmed.
+   L72: **B3 — `DIGEST-MISMATCH` does not name the changed file.** One trailing
+   L89: validated pre-change (`clean.exit` 0→1 ⇒ `SELF-TEST 13/14`, FAIL, exit 1),
+   L90: `/tmp` inode hazard documented, 16/16 check pending R3.
+   L109: names `timeline.json`; D7 symlink at foreign path (bound probe); D8 `--freeze`
+   L127: | 6 | Bounds: symlink/nested-path probes; what the pin does NOT cover (markdown) | PENDING |
+   L129: ## 5. Coverage verdict and bounds
+   L141: PENDING — R3 delivery absent at poll try 25; baseline evidence and demo
+== V31-verdict-calibration.md | # V31 — verdict-calibration (round 97, single-wave swarm)
+   BOTTOM: **Bottom line: PASS — C1's three sub-claims verify independently on the frozen delivered revision (`map_obligations.py` `86b52949…` + contract `2142b991…`): `dual_pointer` pinned as case 25, all-25-case drop sweep fails closed where the r96 tool passed 23/24, and the pin is load-bearing under two independent falsifications; bounds recorded (self-test binds consistency not truth; legacy-dialect sco
+   L4: one CALIBRATION verdict with bounds. C1 subject: `corpus/tools/map_obligations.py` (R1)
+   L62: ## 3. C1(b) — loader tightening: ANY missing pinned case now fails
+   L64: **Baseline (r96 tool `2b0ba815…`, scratch contract copies — reproduces the r96 bound):**
+   L72: $ (same with schema_drift dropped)                     → "SELF-TEST CASES 23/24 pinned", exit=0
+   L86: Every drop fails closed with exit 2 **before any case is exercised**, and the finding names the
+   L88: copy): a contract pinning an unimplemented case also fails closed —
+   L106: SELF-TEST FAIL dual_pointer exit=0 findings=none
+   L115: SELF-TEST FAIL dual_pointer exit=1 findings=['dual_pointer']
+   L136: fixture neither producer built, and legitimate prose does not false-fire.
+   L154: `unsafe_path: frozen snapshot must be inside the owning repository` — correct fail-closed behavior
+   L170: ## 8. Calibration verdict (with bounds)
+   L172: **C1 verdict: calibration improved (bounded).** All three sub-claims verify on the delivered
+   L175: 25 single-case drops fail closed exit 2 naming the case, where the r96 tool still passed 22–23/24
+   L179: Bounds (named, not netted):
+== V36-shonen-format.md | # V36 — shonen-format (round-97 verification seat, lore-shokunin)
+   BOTTOM: ## Bottom line / BOTTOM_LINE_PLACEHOLDER
+   L14: `f3e09f9`). Working tree at open: `git status --short` →
+   L24: seat open — **exit 0, 10/10 PASS**:
+   L57: by the r94 F28, r95 V30 and r96 V39 seats — no drift across four closures.
+   L94: NEGCTL-1 first box [~]→[x]        → EXIT=1, FAIL no [x] promotion claim present
+   L95: NEGCTL-2 box2 evidence line removed → EXIT=1, FAIL both [~] boxes carry their required pointer
+   L96: NEGCTL-3 fifth box appended        → EXIT=1, FAIL four boxes, seed order and text
+   L99: (Each sandbox run also reports `FAIL title matches seed modulo <name>` — an artifact of the
+   L104: round-97 seats cannot convert any box to `[x]`. `PROTOCOL.md:417` fixes the canonical form
+   L108: **Digest-drift note (not a defect):** `SKILL.md` hashes `a2f1e4c6…` where the r96 V39 seat
+   L109: recorded `749b04d1…` at `60dba0c`; carried by the r96 closure commit `f3e09f9`
+   L123: (minimum content), `:154-169` (stale-lane actuator), `:175-183` (content check),
+   L133: | Name | `<id>` = roster id `lore` (`MANIFEST.json` roster row `{"id": "lore", "name": "lore-shokunin", "rank": "shonen", …}`); any other name does not satisfy the contract (`PROTOCOL.md:138-139`) |
+   L134: | State at seat open | ABSENT — `ls /home/vgpnk/Projects/shokunin/.ufo/reports/round-97/` → `No such file or directory` (the dir is created only when L1 files the report; lands last) |
+   L139: 1. **Work performed** — opens by naming the round's declared claims (r97: C1/calibration,
+== V42-anchor-replica-2.md | # V42 anchor-replica-2 — round 97 seat report
+   BOTTOM: ## Bottom line / **PASS** — all 17 r97 map obligations in-span with anchors resolving to the declared line numbers, / 16/16 inherited rows preserved byte-exact except the namespace column with identical excerpt line
+   L17: reading; all-outside-occurrences are failures);
+   L35: VERDICT PASS failures=0        (exit 0)   [full output: V42-scratch/verify-r97-postrepair.txt]
+   L41: VERDICT PASS failures=0        (exit 0)   [full output: V42-scratch/verify-r97-committed.txt]
+   L50: - R6's report was absent at write time (its note `corpus/knowledge/r97-acknowledgment-scope-note.md`
+== V44-c1-negative-2.md | # V44 — c1-negative-2 (round-97)
+   BOTTOM: **Bottom line: PASS — on the delivered r97 revision (`86b52949…`) my fresh nine-class matrix / (17 probes + base, twice each, all byte-stable) reproduces the r96-lineage exits and FINDING IDs / with zero drift, and its class-level IDs match V04's independent 26-case matrix on a different / base — the only differences are mutation-shape extras (inventory/schema co-fires), explained by
+   L59: f3 traversal / f4 directory), N7 schema_drift, N8 deletion class (claims key + its map rows,
+   L83: N7_schema_drift          exit=1 findings=['schema_drift'] inv=['INVENTORY JSON-FACTS 8/8; EDITORIAL-ROWS 0/0; TOTAL-ROWS 8/8'] stable=True
+   L111: N7_schema_drift          exit=1 findings=['schema_drift'] stable=True
+   L136: EXIT=1   (r96 control on the same input: RESULT FAIL exit 1, identical IDs)
+   L159: | schema_drift (g1/g2 → N7) | 1 `[inventory_mismatch, schema_drift]` / 1 `[phantom_obligation, schema_drift]` | 1 `[schema_drift]` | class ID in all three; extras differ by shape |
+   L175: → `schema_drift` alone). Same class ID in all three probes.
+   L178: same as a documented interaction, not a failure.
+   L194: C_load_bearing   exit=2  SELF-TEST FAIL dual_pointer exit=0 findings=none
+   L201: - **B** — dropping the `dual_pointer` case from a contract copy fails closed
+   L217: with zero drift, and its class-level IDs match V04's independent 26-case matrix on a different
+   L220: `dual_pointer` pin, the fail-closed loader, and the pin's load-bearingness.**
+== V45-c2-guard-2.md | # V45 — c2-guard-2: PATH-MISMATCH / shadow-copy demos (round 97)
+   BOTTOM: ## Bottom line / PENDING.
+   L11: - Baseline on disk at poll start = committed pre-r97 tool (sha256 `a3b57978…` = `git show f3e09f9:corpus/tools/dependency_freeze.py`), self-test 14/14, no `PATH-MISMATCH` logic; producers' reports absent.
+   L20: ### B-A. Shadow copy at foreign path verifies identically (C2(b) hazard)
+   L33: ### B-B. DIGEST-MISMATCH does not name the changed file (C2(c) hazard)
+   L48: ### B-C. `--freeze` accepts an out-of-scope path (C2(a) hazard)
+== V48-pins-c9.md | # V48 — pins-c9 (round 97)
+   BOTTOM: **Bottom line: PASS** — checker pin `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421` reproduced (hash + blob identity at `f3e09f9`/`2393934`/worktree + historical `e97613c` blob `e2bb9639…`), stable across the §5 post-producer re-run with the pinned set diff-clean; C9 watch state is re-check 6 due at r97 with gate 3 still not met and the ruling retained; V23's discriminator (`DIS
+   L5: i.e. due now, re-check 6), confirm that V23 `gates-boundary`'s discriminator
+   L9: seat does not write it).
+   L85: RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+   L90: pinned_semantic_gate=FAIL
+   L92: pinned_semantic_gate=FAIL
+   L118: V23 `gates-boundary`'s report landed at
+   L119: `.ufo/waves/round-97/seats/V23-gates-boundary.md` (9,232 bytes; found by this
+   L124: $ sed -n '62,67p' .ufo/waves/round-97/seats/V23-gates-boundary.md | diff .ufo/waves/round-97/seats/V48-scratch/delivered.out -
+   L126: $ sed -n '71,76p' .ufo/waves/round-97/seats/V23-gates-boundary.md | diff .ufo/waves/round-97/seats/V48-scratch/control.out -
+   L140: `pinned_semantic_gate=FAIL` under it — reproduced (§1, §2);
+   L144: are complete. Bounded as such.
+   L155: delivered revision; the discriminator pair was run by seat V23 `gates-boundary`
+== V49-inherited-tools.md | # V49 — inherited-tools (round 97, single-wave)
+   L3: **Seat scope (verbatim):** *V49 inherited-tools — git diff f3e09f9: check_bible/support_check/boundary/discriminate/contract + r87–r96 JSON tables untouched (r96 map repair excepted — verify its scope via V19).*
+   L31: | `corpus/tools/boundary_doc_check.py` | `ebb6a0843e67bfaa` |
+   L32: | `corpus/tools/boundary-doc-contract.json` | `e89d2a76d3c8c5c4` |
+== V50-byte-prefix-2.md | # V50 byte-prefix-2 — round 97 seat report
+   BOTTOM: ## Bottom line / **PASS** — r97 copies of the five r96 files are byte-identical (`cmp` rc=0) to the post-repair r96 tree; `sources.json` 5→6 and `timeline.json` 5→6 are strict EOF appends (1 hunk, 0 deletions, inherited prefix deep-equal, appended event matches the declared tick-13 `acknowledgment-aru-records`); `fictional-excerpts.md` is a strict byte-prefix of r96 (2588 B prefix, 822 B appended 
+   L21: r96-side provenance: all five r96 working-tree files are byte-equal to the committed `f3e09f9` blobs (`git show f3e09f9:<path>` byte-compare → MATCH-HEAD), so the copies are identical to both the pre-repair and post-repa
+   L70: - r96 map repair scope independently measured: `git diff -U0` vs `f3e09f9` changes exactly 2 lines — editorial delimiter `|---|---|---|---|---|---:|---|---|` → `|---|---|---|---|---:|---|---|` (8 → 7 cells, matching the 
+   L78: - Harness self-validated: synthetic positive fixture (r96 + 1 source + 1 event + appended section) → all checks PASS; negative control (mutated inherited `tick`) → `FAILURES: ['sources-delta-not-1', 'timeline-inherited-c
+== V51-relation-scope-2.md | # V51 — relation-scope-2 (round 97)
+   BOTTOM: ## Bottom line / **PASS** — `relations.json` is byte-identical r96→r97 (sha256 `c279254b…`, `cmp` IDENTICAL, 139 B, identical across r94–r97 and unchanged vs baseline), the map's J11 relation row is unchanged in all cells except the declared path-qualified namespace column (same transformation as r95→r96), and no new relation semantics exist (single relation row; J17 is the only added row and is a
+   L7: - **Poll-wait:** r97 directory absent at 18:42–18:44; first appearance 18:44:16 (`stat`), R4's authored files 18:44:30, R5's map 18:48:56 / README 18:49:14, R4 report 18:50:28, R5 report ~18:51. Verified only against on-
+   L14: | Map relation row unchanged | **CONFIRMED (bounded)** | J11 row parsed-equal to r96 in all 7 cells except the path-qualified namespace cell (`r96-crossing-response:` → `r97-crossing-acknowledgment:`), the same transform
+   L15: | No new relation semantics | **CONFIRMED (bounded)** | exactly 1 relation row in the r97 map; J17 is the only added row (a timeline event); type census 10 types unchanged; no relation-type string beyond the inherited on
+   L107: - **Tooling side (adjacent, bounded):** the contract `scope` string is unchanged (still the generic "…first_appearance values, entity claims, relations, and timeline records…"), the only contract diff is the added `{"id"
+   L128: ## 4. Bounded observations (reported, not failures)
+   L130: 1. **The repaired r96 map's prose no longer names the relation bound in its normalization section.** Baseline `claim-excerpt-map.md:50` ended "…The new relation encodes only the agreement for this crossing, not perpetual
+   L132: 3. **Census text drift (read-only for me):** `corpus/fixtures/README.md` still states the r96 census while `ls -d corpus/fixtures/*/ | wc -l` = 171. Already flagged by R5; closure doc item.
+   L154: **PASS** — `relations.json` is byte-identical r96→r97 (sha256 `c279254b…`, `cmp` IDENTICAL, 139 B, identical across r94–r97 and unchanged vs baseline), the map's J11 relation row is unchanged in all cells except the decl
+== V52-support-regression.md | # V52 — support-hardening-regression (round 97)
+   BOTTOM: **Bottom line: PASS — every `support_check` receipt r87→r97 replays unchanged/exactly as declared (r87 14+8, r88 10+2, r89 1 paraphrase, r93 12+3, r94 14+2, r95 15+2, r96 16+2, r97 17+2, all `RESULT PASS`, exit 0; r87/r88/r93/r94 outputs byte-identical to the r95 manifest), the r96 cosmetic repair is proven receipt-neutral by diffing the frozen f3e09f9 map against the repaired map (identical outpu
+   L3: **Seat role (as declared):** support_check receipts r87–r97 all replay unchanged (quote); r94-round silent-failure vectors still fail/warn on scratch. Leaf seat; report-only on the live tree; all writes under `.ufo/waves
+   L7: **Producer-report state at my final check (18:54):** reports present — R1 `R1-map-pinning.md`, R2 `R2-contract-docs.md`, R4 `R4-fixture-author.md`, R5 `R5-fixture-docs.md`, R6 `R6-knowledge-note.md`; report **absent** — 
+   L86: ## 4. Silent-failure vectors on scratch — delivered tool vs r90/r91 historical controls
+   L92: | T1 | r87 fact-table `ID` header → `Ref` | `INVENTORY JSON-FACTS 0/14; EDITORIAL-ROWS 8/8; TOTAL-ROWS 8/22` + 4 `WARN: unreferenced excerpt declaration` + `FAIL: inventory JSON facts mismatch: expected=14 parsed=0`, **e
+   L93: | T2 | r87 `## Editorial rows` section dropped | `EDITORIAL-ROWS 0/8; TOTAL-ROWS 14/22` + `WARN … lowwater-hymn-excerpt.md` + 3 `FAIL: inventory …` / `RESULT FAIL`, **exit 1** | `SOURCE-SUPPORT 14/14; … MODES 14/14` / `R
+   L94: | T3 | r87 `E1` row duplicated | `JSON-FACTS 15/14; TOTAL-ROWS 23/22` + `FAIL: duplicate mapped row E1 appears 2 times` / `RESULT FAIL`, **exit 1** | `SOURCE-SUPPORT 23/23` / `RESULT PASS`, **exit 0 (inflated, silent)** 
+   L95: | T4 | r87 hymn declaration `verbatim`→`summary` (referenced) | 8× `FAIL H*: editorial-row; mode=verbatim; …`, `EDITORIAL-ANCHORS 0/8; MODES 14/22` / `RESULT FAIL`, **exit 1** | `FAIL H1…` / exit 1 (already failing) |
+   L96: | T5a | r88 Spence declaration flip on the **current** map (S1/S2 reference it) | `FAIL S1/S2: editorial-row; mode=verbatim; excerpt-mode=summary`, `EDITORIAL-ANCHORS 0/2; MODES 10/12` / `RESULT FAIL`, **exit 1** | `FAIL
+   L98: | T6 | r89 paraphrase anchor made absent | `WARN entities.json#/0/claims/0: retelling-support-only; anchor=not-found`, `RETELLING-SUPPORT-ONLY 1 entries (0/1 anchors)`, `VALIDATED-ROWS 0/1`, `WARN: retelling anchor not f
+   L99: | T7 | r87 inventory declaration line removed | stderr `FAIL: map must contain exactly one expected inventory declaration`, stdout `RESULT FAIL`, **exit 1** | `SOURCE-SUPPORT 22/22` / `RESULT PASS`, **exit 0 (silent)** |
+   L100: | T8 | r87 distinct-anchor declaration 22→21 | `DISTINCT-ANCHORS 22/21` + `FAIL: inventory distinct excerpt anchors mismatch: expected=21 parsed=22` / `RESULT FAIL`, **exit 1** | `SOURCE-SUPPORT 22/22` / `RESULT PASS`, *
+   L102: All eight vectors fail or warn on the delivered tool; six of them (T1, T2, T3, T5b, T7, T8) were silent passes under the r90 tool. Two honest deltas against the r91 JCOV4 table, both in the non-silent direction and attri
+   L110: | F15-b2 — fact row `J05` dropped **and** inventory restated to match | `INVENTORY JSON-FACTS 13/13; … TOTAL-ROWS 15/15` / `RESULT PASS`, exit 0 (still silent by design; map-only lexical check) | `map_obligations …` → `O
+   L111: | F15-b3 — row dropped, stale inventory kept | `INVENTORY JSON-FACTS 13/14; … DISTINCT-ANCHORS 11/12` + 3 `FAIL: inventory …` / `RESULT FAIL`, exit 1 | — (support_check's own drift catch) |
+== V53-cross-seat-audit.md | # V53 — cross-seat-audit (round 97)
+   BOTTOM: ## Bottom line / **PASS so far — 5/5 quoted outputs re-run REPRODUCED, 0 MISMATCHED; the two C2 items are held OPEN pending R3's / contract (mid-flight at last poll, tool landed before contract), and no C2 output is claimed until it lands.**
+   L13: report was still absent at the last poll, so the C2 item is quoted from V26 (whose report was on disk) and from
+   L49: `R5-fixture-docs.md` (R3 and R6 still absent at the last check). Every audit item below re-runs an output
+   L93: ### A2 — C1: a contract that drops a pinned case now fails closed — **REPRODUCED**
+   L98: $ (scratch contract: dropped 'schema_drift', cases 25 -> 24)
+   L99: FINDING self_test_contract: contract drops implemented self-test cases: schema_drift
+   L101: probe_drop_schema_drift_exit=2
+   L105: contract with the single `schema_drift` case removed (25 → 24), so the delivered contract was never mutated:
+   L109: FINDING self_test_contract: contract drops implemented self-test cases: schema_drift
+   L132: SELF-TEST FAIL dual_pointer exit=0 findings=none
+   L144: SELF-TEST FAIL dual_pointer exit=0 findings=none
+   L154: r96 had no persisted `dual_pointer` case — i.e. the pin, not the emission, is what makes this red.
+   L274: contract could not be rewritten even had the guard failed. The chain half was re-run on the real tree with
+   L284: is not a pinned data file, so the digest cannot move); it reports the refresh as a guard/format/revision refresh
+   L286: observed first (tool landed 18:51:24, contract still `c65ac3bd…`), where the tool failed closed:
+== V54-crosscheck-depth.md | # V54 — crosscheck-depth (round 97)
+   BOTTOM: verdict: **DEPTH — IMPROVED (bounded)**, bottom line PASS. Comparison of the / substance: / | Check | V29 | V54 (me) | Agreement |
+   L115: `FINDING missing_obligation: timeline.json#/5 has no map row` / `RESULT FAIL` exit 1.
+   L118: **F7 — adversarial scope review, my own (PASS, bounded).** I attempted to construct
+   L134: **DEPTH — IMPROVED (bounded).** On the delivered revision the crossing arc gains its
+   L138: rows carried unchanged modulo the declared namespace re-qualification + new tick-13
+   L147: Named bounds: (1) structural/lexical evidence + hand scope review only — no testimony
+   L152: own assertions, bounded by the reliability note; the tick integer/event ID/
+   L153: `depends_on` edge are editorial encodings; (4) `check_bible` cannot see an emptied
+   L154: `depends_on`, a wrong-but-earlier edge, or a deleted terminal row (carried V20
+   L162: modified) — I did not verify C2 and my depth verdict does not depend on it; R4 notes
+   L164: does not move the pinned digest; (8) `corpus/fixtures/README.md:1217` still states the
+   L171: verdict: **DEPTH — IMPROVED (bounded)**, bottom line PASS. Comparison of the
+   L183: | pre-R5 mid-flight | `raw=17 mapped=16 … missing_obligation` FAIL (recorded as mid-flight) | same observation at 18:44:36 | yes |
+   L186: | README census staleness | flagged (bound 8) | independently confirmed at `README.md:1217` | yes |
+   L187: | R6 report status | ABSENT at V29's final check | landed 18:53:53; I read it (PASS, artifact + receipts) | timing difference only; no substantive divergence |
+== V56-mutual-wait-guard.md | # V56 — mutual-wait-guard (round 97)
+   BOTTOM: ## 6. Bottom line (this version) / IN PROGRESS — one concurrent mutual-polling window found (R4↔R5, ~3 min, 18:46:48–18:49:50) with no / deadlock (non-cyclic blocking relation); R1↔R2 resolved in ~60 s; no *trapped* pair observed
+   L6: class for the process debt.
+   L19: pairs (A→B ∧ B→A), all-reports waiters, absent reports, and terminal markers
+   L20: (`POLL_HIT|READY|TIMEOUT|ABSENT|STALL|DEADLINE|CAP`).
+   L33: | R1 | R5 (r97 map 17th row + R5 report) | `scratch-R1/poll-r5.sh`; `poll-r5.log`: `try=7 map_rows=24 newrow=1 mapsha=49d4834e… inv=[17 JSON facts; 2 editorial rows; 19 total mapped rows] r5_report=absent` (18:49:54) |
+   L48: mtime, sha `2142b991…`), R1's poll hit at try=4 (18:46:19). Wait ≤ ~60 s; both bounded by 40-try poll
+   L70: V45 log `path_mismatch_in_tool=2` at 18:53:22) and contract 18:53:21; R3's report was still absent at
+   L89: (30 reports absent at 18:54; V35/V40/V24 all still absent, as expected this early).
+   L92: - V48→V23: resolved — V23 report landed 18:48 (`V23-gates-boundary.md`); V48's poll log shows
+   L93: `absent` through try=13 (18:48:13), report present after.
+   L96: - V45→R3: pending — R3 delivered tool+contract 18:53:00/18:53:21 but R3's report was absent at
+   L99: ## 4. Escape conditions (bounded-wait inventory)
+   L109: | V44/V45/V48 | peer report(s) | 40 tries × 20 s → ABSENT/timeout |
+   L111: ## 5. Class for process debt
+   L114: (V24 counts `V[0-9]{2}`; V40 counts all `*.md`), so their polls cannot hit before their own report

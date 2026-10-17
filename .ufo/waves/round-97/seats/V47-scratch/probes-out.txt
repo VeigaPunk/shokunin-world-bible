@@ -1,0 +1,32 @@
+== A: foreign-path same-named copy ==
+exit= 2
+FINDING PATH-MISMATCH: pin r94-paired-crossing names corpus/fixtures/r94-paired-crossing (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r94-paired-crossing); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V47-scratch/probeA/foreign/r94-paired-crossing
+RESULT ERROR
+
+== B: --freeze outside corpus/fixtures (scope guard) ==
+exit= 2
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V47-scratch/probeB/target (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V47-scratch/probeB/target); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+contract unchanged: True
+
+== C: mirror-root DIGEST-MISMATCH naming ==
+exit= 2
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 9711a1c1d9f970f0e0373c288a5046e58cf941c73122abe5c9e40d7d5e9668b7 != pin 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75; changed: timeline.json (sha256 f0209f90a6ce795211369bd900ac1d333d16eb0af123f1b170831e192660533c -> 20bb964ef585386e753e43bfb5d09ddae86b9a3914b079f08c88d8d0fe5b67ad); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+
+== D: C1 loader before/after (23-case contract) ==
+kept cases: 23
+r96 tool + 23-case contract: exit= 0
+SELF-TEST CASES 23/24 pinned
+RESULT PASS
+delivered tool + 23-case contract: exit= 2
+FINDING self_test_contract: contract drops implemented self-test cases: dual_pointer, schema_drift
+RESULT ERROR
+
+== E: self-test case counts ==
+map: exit=0 case-lines=25 result=['SELF-TEST CASES 25/25 pinned', 'SELF-TEST PASS complete exit=0 findings=none', "SELF-TEST PASS missing exit=1 findings=['missing_obligation']", "SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']", "SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']", "SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']", "SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']", "SELF-TEST PASS map_missing exit=2 findings=['map_missing']", "SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']", "SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']", "SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']", "SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']", "SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']", "SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']", "SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']", "SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']", "SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']", "SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']", 'SELF-TEST PASS frozen_complete exit=0 findings=none', "SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']", "SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']", "SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']", "SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']", "SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']", "SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']", "SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']", 'RESULT PASS']
+freeze: exit=0 case-lines=16 result=['SELF-TEST 16/16', 'RESULT PASS']
+
+== strays check ==
+stray self-test dirs: 0

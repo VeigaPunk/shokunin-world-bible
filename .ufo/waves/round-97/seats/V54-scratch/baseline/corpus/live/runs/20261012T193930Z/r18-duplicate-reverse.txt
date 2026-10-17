@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r18-duplicate-reverse
+exit_code=1
+VIOLATION: entities[4].id: duplicate entities id 'harbor'
+VIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'
+2 violation(s); no canon changed

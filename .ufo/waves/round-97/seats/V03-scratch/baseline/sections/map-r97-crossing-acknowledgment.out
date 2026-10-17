@@ -1,0 +1,6 @@
+=== map-r97-crossing-acknowledgment ===
+$ python3 corpus/tools/map_obligations.py corpus/fixtures/r97-crossing-acknowledgment
+FINDING cluster_missing: cannot resolve cluster: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r97-crossing-acknowledgment'
+RESULT ERROR
+EXIT=2
+

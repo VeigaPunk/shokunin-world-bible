@@ -1,0 +1,338 @@
+##### 2026-10-17T19:01:37-03:00 CMD: python3 corpus/fixtures/check_bible.py corpus/fixtures/r97-crossing-acknowledgment
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+##### 2026-10-17T19:01:37-03:00 CMD: python3 corpus/tools/support_check.py corpus/fixtures/r97-crossing-acknowledgment
+INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19; DISTINCT-ANCHORS 15/15
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 17; EDITORIAL-ROWS 2; TOTAL-ROWS 19
+SOURCE-SUPPORT 17/17; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 19/19; VALIDATED-ROWS 19/19
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:38-03:00 CMD: python3 corpus/tools/map_obligations.py corpus/fixtures/r97-crossing-acknowledgment
+OBLIGATIONS raw=17 mapped=17
+INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:41-03:00 CMD: python3 corpus/fixtures/check_bible.py corpus/fixtures/r96-crossing-response
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+##### 2026-10-17T19:01:41-03:00 CMD: python3 corpus/tools/support_check.py corpus/fixtures/r96-crossing-response
+INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18; DISTINCT-ANCHORS 14/14
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 16; EDITORIAL-ROWS 2; TOTAL-ROWS 18
+SOURCE-SUPPORT 16/16; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 18/18; VALIDATED-ROWS 18/18
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:41-03:00 CMD: python3 corpus/tools/map_obligations.py corpus/fixtures/r96-crossing-response
+OBLIGATIONS raw=16 mapped=16
+INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:41-03:00 CMD: python3 corpus/tools/map_obligations.py --self-test
+SELF-TEST CASES 25/25 pinned
+SELF-TEST PASS complete exit=0 findings=none
+SELF-TEST PASS missing exit=1 findings=['missing_obligation']
+SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']
+SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']
+SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']
+SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']
+SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']
+SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_complete exit=0 findings=none
+SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']
+SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']
+SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']
+RESULT PASS
+EXIT=0
+OBLIGATIONS raw=10 mapped=10
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+RESULT PASS
+EXIT=0
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+RESULT PASS
+EXIT=0
+OBLIGATIONS raw=14 mapped=14
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
+RESULT PASS
+EXIT=0
+OBLIGATIONS raw=15 mapped=15
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:51-03:00 CMD: python3 corpus/tools/map_obligations.py --frozen .ufo/waves/round-94/frozen/map-obligations-r93
+SNAPSHOT inputs=4 digests=verified
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+FROZEN expected=PASS/0 findings=none matched
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:55-03:00 CMD: python3 corpus/tools/dependency_freeze.py --self-test
+CASE clean: exit=0 expected=0 findings=[] ok
+CASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+CASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok
+CASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+SELF-TEST 16/16
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:56-03:00 CMD: python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST 15ef230ef806ea7e7431f5afc7d999aee978b024cf47f2a20cbba726fc3fc279
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:56-03:00 CMD: python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:56-03:00 CMD: python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:56-03:00 CMD: python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:01:56-03:00 CMD: python3 corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/foreign/r96-crossing-response
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/foreign/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/foreign/r96-crossing-response); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:01:56-03:00 CMD: python3 corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/foreign/r96-crossing-response
+FINDING PATH-MISMATCH: pin r96-crossing-response names corpus/fixtures/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r96-crossing-response); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/foreign/r96-crossing-response
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:02-03:00 CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/mirror2/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/mirror2/corpus/fixtures/r96-crossing-response
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+FINDING DIGEST-MISMATCH: content digest daeb21fd9ebe4638208b58bc1442cb3c061655ef0b097a6fd60eb14e83a3ab1b != pin d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6; changed: timeline.json (sha256 ea0225f9270db79685ea6f55828c2031d7ac67cd413b04f28b25770b208815b9 -> be77a509a99d60949a8054e2b539b693eb086339e161e433174b3c74445c96bb); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:03-03:00 CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/probe-loader/map_obligations.py --self-test
+FINDING self_test_contract: contract drops implemented self-test cases: schema_drift
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:03-03:00 CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/probe-loader-core/map_obligations.py --self-test
+FINDING self_test_contract: contract drops implemented self-test cases: complete
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:03-03:00 CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/probe-loader-extra/map_obligations.py --self-test
+FINDING self_test_contract: contract pins unimplemented self-test cases: no_such_case
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:03-03:00 CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/probe-neutral/map_obligations.py --self-test
+SELF-TEST CASES 25/25 pinned
+SELF-TEST PASS complete exit=0 findings=none
+SELF-TEST PASS missing exit=1 findings=['missing_obligation']
+SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']
+SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']
+SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']
+SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']
+SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']
+SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_complete exit=0 findings=none
+SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']
+SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']
+SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+SELF-TEST FAIL dual_pointer exit=0 findings=none
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+FINDING self_test_mismatch: isolated CLI outcomes differ from persisted expectations
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:11-03:00 CMD: python3 corpus/tools/map_obligations.py
+FINDING invalid_arguments: cluster directory is required
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:11-03:00 CMD: python3 corpus/tools/map_obligations.py --self-test corpus/fixtures/r94-paired-crossing
+FINDING invalid_arguments: --self-test cannot be combined with cluster, --map, or --frozen
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:11-03:00 CMD: python3 corpus/tools/map_obligations.py --bogus
+FINDING invalid_arguments: unrecognized arguments: --bogus
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:11-03:00 CMD: python3 corpus/tools/dependency_freeze.py
+FINDING INVALID-ARGUMENTS: expected a fixture directory, --freeze DIR, or --self-test
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:11-03:00 CMD: python3 corpus/tools/dependency_freeze.py --self-test corpus/fixtures/r94-paired-crossing
+FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze
+RESULT ERROR
+EXIT=2
+##### 2026-10-17T19:02:11-03:00 CMD: python3 corpus/tools/boundary_doc_check.py
+CHECK pinned inputs: PASS
+CHECK receipt replay: PASS
+CHECK explicit anchor ranges: PASS
+CHECK document structure: PASS
+scope=frozen-document drift + receipts + explicit-anchor range + structure; not semantic or AST validation
+replay_receipts=3/3
+replay_cases=14/14
+anchors=2/2
+h1_count=1
+duplicate_headings=0
+instruction_markers=0
+CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)
+EXIT=0
+##### 2026-10-17T19:02:11-03:00 CMD: python3 corpus/tools/boundary_doc_check.py --self-test
+SELF-TEST PASS anchor_range_control exit=1 findings=['anchor_range'] anchors=1/2 legacy_anchor=check_bible.py:212-224@5eb9451baff217c19d5786405f9b2aa500b7c1b7 baseline_lines=330
+SELF-TEST PASS committed_default exit=0 findings=none
+SELF-TEST PASS comment_parked_c9 exit=1 findings=['document_drift']
+SELF-TEST PASS wrong_bare_anchor exit=1 findings=['document_drift']
+SELF-TEST PASS checker_drift exit=1 findings=['checker_drift']
+SELF-TEST PASS missing_document exit=1 findings=['document_missing']
+SELF-TEST PASS missing_checker exit=1 findings=['checker_missing']
+SELF-TEST PASS receipt_drift exit=1 findings=['receipt_drift']
+SELF-TEST PASS
+EXIT=0
+##### 2026-10-17T19:02:12-03:00 CMD: python3 corpus/tools/discriminate_check.py
+mode=delivered checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+EXIT=0
+##### 2026-10-17T19:02:13-03:00 CMD: python3 corpus/tools/discriminate_check.py --checker e97613c
+mode=e97613c checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved — pinned delivered semantics not present
+EXIT=2
+##### 2026-10-17T19:02:17-03:00 CMD: python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 8/8; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 22/22
+ANCHORS repeated-references=0; DUPLICATE-ROWS 0
+PASS E1: source-support; mode=verbatim; anchor=found; 7:> I am Hara, keeper of the Mother-Tide Gate.
+PASS E2: source-support; mode=verbatim; anchor=found; 7:> I, Sen, serve as recorder at Ash-Dune Sanctuary.
+PASS E3: source-support; mode=verbatim; anchor=found; 8:> Place of keeping: Ash-Dune Sanctuary is a record-keeping place.
+PASS E4: source-support; mode=verbatim; anchor=found; 9:> Shellweavers signed this charter as a signatory faction.
+PASS E5: source-support; mode=verbatim; anchor=found; 10:> Reedwardens signed this charter as a signatory faction.
+PASS E6: source-support; mode=verbatim; anchor=found; 11:| 1 | We carried the Reed Bell for the low-water signal. |
+PASS R1: source-support; mode=verbatim; anchor=found; 11:> By this charter, Shellweavers stand allied with Reedwardens.
+PASS R2: source-support; mode=verbatim; anchor=found; 12:> By this charter, Reedwardens stand allied with Shellweavers.
+PASS R3: source-support; mode=verbatim; anchor=found; 13:> Watch clause: Under this charter's pledge, Shellweavers keep watch with the Reed Bell.
+PASS R4: source-support; mode=verbatim; anchor=found; 9:> At Ash-Dune Sanctuary, Sen kept the register.
+PASS T1: source-support; mode=verbatim; anchor=found; 8:> I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow, at the first low-water bell.
+PASS T2: source-support; mode=verbatim; anchor=found; 12:| 2 | At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow. |
+PASS T3: source-support; mode=verbatim; anchor=found; 9:> I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.
+PASS T4: source-support; mode=verbatim; anchor=found; 10:> I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.
+PASS H1: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H2: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H3: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H4: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H5: editorial-row; mode=verbatim; anchor=found; 6:> The bowl keeps no name, and no voice owns the tide.
+PASS H6: editorial-row; mode=verbatim; anchor=found; 6:> The bowl keeps no name, and no voice owns the tide.
+PASS H7: editorial-row; mode=verbatim; anchor=found; 7:> We pass the reed-bell hand to hand and let the water return it.
+PASS H8: editorial-row; mode=verbatim; anchor=found; 7:> We pass the reed-bell hand to hand and let the water return it.
+RECEIPT JSON-FACTS 14; EDITORIAL-ROWS 8; TOTAL-ROWS 22
+SOURCE-SUPPORT 14/14; EDITORIAL-ANCHORS 8/8; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 22/22
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:02:17-03:00 CMD: python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12; DISTINCT-ANCHORS 8/8
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS P1: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS P2: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS P3: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS P4: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS E1: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS E2: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS E3: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS E4: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS T1: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS T2: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS S1: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S2: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 10; EDITORIAL-ROWS 2; TOTAL-ROWS 12
+SOURCE-SUPPORT 10/10; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 12/12; VALIDATED-ROWS 12/12
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:02:51-03:00 CMD: python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/handderive-dual
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E1 (line 7) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/first_appearance
+RESULT FAIL
+EXIT=1
+##### 2026-10-17T19:02:51-03:00 CMD: python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V27-scratch/handderive-clean
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+EXIT=0
+##### 2026-10-17T19:03:24-03:00 CMD: python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment
+FINDING UNPINNED-FIXTURE: no pin for 'r97-crossing-acknowledgment' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response'])
+RESULT ERROR
+EXIT=2

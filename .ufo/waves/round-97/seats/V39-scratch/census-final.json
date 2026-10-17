@@ -1,0 +1,9 @@
+{
+ "dirs": 171,
+ "clean": 37,
+ "negative": 134,
+ "other": 0,
+ "violation_lines": 421,
+ "stderr_nonempty": 0,
+ "other_dirs": []
+}

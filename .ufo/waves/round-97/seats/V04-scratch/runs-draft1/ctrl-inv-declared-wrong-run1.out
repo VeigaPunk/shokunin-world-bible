@@ -1,0 +1,6 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/draft-tool-86b52949.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/ctrl-inv-declared-wrong
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/99; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/102 MISMATCH
+FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 99/3/102; observed 12/3/15
+RESULT FAIL
+EXIT=1

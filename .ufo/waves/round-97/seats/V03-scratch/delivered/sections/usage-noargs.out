@@ -1,0 +1,6 @@
+=== usage-noargs ===
+$ python3 corpus/tools/map_obligations.py
+FINDING invalid_arguments: cluster directory is required
+RESULT ERROR
+EXIT=2
+

@@ -1,0 +1,44 @@
+poll 1 18:43:23
+poll 2 18:43:43
+poll 3 18:44:03
+poll 4 18:44:23
+poll 5 18:44:43
+poll 6 18:45:03
+poll 7 18:45:23
+poll 8 18:45:43
+poll 9 18:46:03
+poll 10 18:46:23
+poll 11 18:46:43
+poll 12 18:47:03
+poll 13 18:47:23
+poll 14 18:47:43
+poll 15 18:48:03
+poll 16 18:48:23
+poll 17 18:48:43
+poll 18 18:49:03
+poll 19 18:49:23
+poll 20 18:49:43
+poll 21 18:50:03
+poll 22 18:50:23
+poll 23 18:50:43
+poll 24 18:51:03
+poll 25 18:51:23
+poll 26 18:51:43
+poll 27 18:52:03
+poll 28 18:52:23
+poll 29 18:52:43
+poll 30 18:53:03
+poll 31 18:53:23
+poll 32 18:53:43
+poll 33 18:54:03
+poll 34 18:54:23
+poll 35 18:54:43
+poll 36 18:55:03
+poll 37 18:55:23
+poll 38 18:55:43
+poll 39 18:56:03
+poll 40 18:56:23
+REPORT_FOUND=.ufo/waves/round-97/seats/R3-freeze-hardening.md
+POLL_STABLE
+b06275f3bbdeabaab615138b3004703fce701a786af882d3b732828b37722130  corpus/tools/dependency_freeze.py
+27273be27d33ad864f06d656f28dca8eabc9d76f6ebe62583372a88c9e64e781  corpus/tools/dependency-freeze-contract.json

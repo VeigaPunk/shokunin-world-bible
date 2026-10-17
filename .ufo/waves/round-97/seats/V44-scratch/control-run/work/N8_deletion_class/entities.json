@@ -1,0 +1,16 @@
+[
+  {
+    "id": "arden",
+    "first_appearance": "marginalia"
+  },
+  {
+    "id": "borin",
+    "first_appearance": "marginalia",
+    "claims": [
+      {
+        "statement": "Borin countersigns the tally.",
+        "source_id": "marginalia"
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "aru-ninth-bell",
+    "tick": 9,
+    "entity_id": "aru",
+    "place_id": "quiet-rise",
+    "depends_on": [],
+    "description": "Aru carried the north lantern at Quiet Rise.",
+    "source_id": "paired-clock"
+  },
+  {
+    "id": "evin-ninth-bell",
+    "tick": 9,
+    "entity_id": "evin",
+    "place_id": "salt-court",
+    "depends_on": [],
+    "description": "Evin holds the south bell at Salt Court.",
+    "source_id": "paired-clock"
+  },
+  {
+    "id": "paired-crossing-decision",
+    "tick": 10,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "aru-ninth-bell",
+      "evin-ninth-bell"
+    ],
+    "description": "At the Chalk Stair, Aru and Evin agree to share stewardship for this crossing only, then chalk one temporary route mark.",
+    "source_id": "crossing-minute"
+  },
+  {
+    "id": "aftermath-missing-evin",
+    "tick": 11,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "paired-crossing-decision"
+    ],
+    "description": "At the Chalk Stair at tick 11, Aru reports waiting through the agreed bell and that Evin did not come; the note scopes the agreement to this crossing only and asserts no other duty or breach.",
+    "source_id": "aru-aftermath-note"
+  },
+  {
+    "id": "response-evin-salt-court",
+    "tick": 12,
+    "entity_id": "evin",
+    "place_id": "salt-court",
+    "depends_on": [
+      "aftermath-missing-evin"
+    ],
+    "description": "Evin reports being at Salt Court through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved.",
+    "source_id": "evin-response-note"
+  }
+]

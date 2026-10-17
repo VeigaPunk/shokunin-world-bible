@@ -9,6 +9,12 @@ triples (from, to, type), and the fixture's JSON content digests. Verification
 compares the current fixture against the pin; the semantic inventory decides
 first, and a content change the inventory does not model is reported as
 could-not-evaluate.
+
+Round-97 hardening: `--freeze` is scope-guarded to `corpus/fixtures/**`
+(`SCOPE-REFUSED`), each pin names the fixture's repo-relative path and
+verification refuses every other path (`PATH-MISMATCH`) so a same-named copy at
+a foreign path can no longer produce a green receipt, and `DIGEST-MISMATCH`
+names the changed file.
 """
 
 import argparse
@@ -25,6 +31,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 CONTRACT_PATH = ROOT / "corpus/tools/dependency-freeze-contract.json"
 CONTRACT_RELPATH = "corpus/tools/dependency-freeze-contract.json"
+FIXTURE_SCOPE = ROOT / "corpus/fixtures"
+FIXTURE_SCOPE_RELPATH = "corpus/fixtures"
 DATA_FILES = ("entities.json", "relations.json", "timeline.json", "sources.json", "contradictions.json")
 REQUIRED_FILES = ("relations.json", "timeline.json")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
@@ -44,6 +52,8 @@ FROZEN_CASES = (
     "unpinned_fixture",
     "missing_fixture",
     "invalid_arguments",
+    "scope_refused",
+    "path_mismatch",
 )
 SELF_TEST_BASE = "r95-crossing-aftermath"
 
@@ -223,9 +233,38 @@ def read_contract():
     return contract
 
 
+def repo_relpath(path):
+    try:
+        return path.resolve().relative_to(ROOT.resolve())
+    except ValueError:
+        return None
+
+
+def scope_guard(target):
+    scope = FIXTURE_SCOPE.resolve()
+    try:
+        relative = target.resolve().relative_to(scope)
+    except ValueError:
+        fail("SCOPE-REFUSED",
+             f"--freeze refuses {target} (resolves to {target.resolve()}); "
+             f"the frozen scope is {FIXTURE_SCOPE_RELPATH}/** (integration-time operation only)")
+    if not relative.parts:
+        fail("SCOPE-REFUSED",
+             f"--freeze refuses {FIXTURE_SCOPE_RELPATH} itself; the frozen scope is {FIXTURE_SCOPE_RELPATH}/**")
+
+
 def validate_pin(name, pin):
     if not isinstance(pin, dict):
         fail("CONTRACT-INVALID", f"pin {name} must be an object")
+    relpath = pin.get("fixture")
+    if not isinstance(relpath, str) or not relpath or Path(relpath).is_absolute():
+        fail("CONTRACT-INVALID", f"pin {name} needs a repo-relative fixture path")
+    try:
+        inside = (ROOT / relpath).resolve().relative_to(FIXTURE_SCOPE.resolve())
+    except ValueError:
+        inside = None
+    if inside is None or not inside.parts:
+        fail("CONTRACT-INVALID", f"pin {name} names {relpath}, outside {FIXTURE_SCOPE_RELPATH}/**")
     if not isinstance(pin.get("content_sha256"), str) or SHA256.fullmatch(pin["content_sha256"]) is None:
         fail("CONTRACT-INVALID", f"pin {name} needs a sha256 content digest")
     files = pin.get("files")
@@ -248,6 +287,15 @@ def validate_pin(name, pin):
         fail("CONTRACT-INVALID", f"pin {name} needs relation endpoint triples")
 
 
+def bind_path(fixture, name, pin):
+    expected = (ROOT / pin["fixture"]).resolve()
+    observed = fixture.resolve()
+    if observed != expected:
+        fail("PATH-MISMATCH",
+             f"pin {name} names {pin['fixture']} (resolves to {expected}); "
+             f"invoked fixture resolves to {observed}")
+
+
 def pin_for(fixture, contract):
     name = fixture.resolve().name
     pins = contract["pins"]
@@ -257,8 +305,23 @@ def pin_for(fixture, contract):
     return name, pins[name]
 
 
+def changed_files(pin, observed):
+    changes = []
+    for name in sorted(set(pin["files"]) | set(observed["files"])):
+        before = pin["files"].get(name)
+        after = observed["files"].get(name)
+        if before != after:
+            changes.append(f"{name} (sha256 {before} -> {after})")
+    if not changes:
+        changes.append("(no per-file digest difference; the pin's file digests disagree with its content digest)")
+    return ", ".join(changes)
+
+
 def verify(fixture, contract):
     name, pin = pin_for(fixture, contract)
+    if not fixture.is_dir():
+        fail("FIXTURE-MISSING", f"fixture directory not found: {fixture}")
+    bind_path(fixture, name, pin)
     observed = build_model(fixture)
     findings = compare(pin, observed)
     counts = pin.get("counts") if isinstance(pin.get("counts"), dict) else {}
@@ -276,6 +339,7 @@ def verify(fixture, contract):
         print(receipt)
         emit(2, [("DIGEST-MISMATCH",
                   f"content digest {observed['content_sha256']} != pin {pin['content_sha256']}; "
+                  f"changed: {changed_files(pin, observed)}; "
                   "fixture bytes changed outside the frozen inventory")])
         return 2
     print(receipt)
@@ -284,9 +348,18 @@ def verify(fixture, contract):
     return 0
 
 
-def freeze(fixture, contract):
-    observed = build_model(fixture)
-    name = fixture.resolve().name
+def freeze(target, contract):
+    scope_guard(target)
+    observed = build_model(target)
+    resolved = target.resolve()
+    label = repo_relpath(resolved)
+    fixture_label = str(label) if label is not None else str(resolved)
+    name = resolved.name
+    existing = contract["pins"].get(name)
+    if isinstance(existing, dict) and existing.get("fixture") != fixture_label:
+        fail("SCOPE-REFUSED",
+             f"--freeze refuses {fixture_label}: pin {name} already names {existing.get('fixture')!r}; "
+             "freezing a same-named path elsewhere would rewrite the delivered pin")
     revision = "unversioned"
     try:
         result = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True)
@@ -294,10 +367,6 @@ def freeze(fixture, contract):
             revision = result.stdout.strip()
     except OSError:
         pass
-    try:
-        fixture_label = str(fixture.resolve().relative_to(ROOT))
-    except ValueError:
-        fixture_label = str(fixture.resolve())
     pin = {
         "fixture": fixture_label,
         "revision": revision,
@@ -307,6 +376,7 @@ def freeze(fixture, contract):
         "relations": observed["relations"],
         "counts": observed["counts"],
     }
+    validate_pin(name, pin)
     contract["pins"][name] = pin
     contract["revision"] = revision
     CONTRACT_PATH.write_text(json.dumps(contract, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -314,84 +384,120 @@ def freeze(fixture, contract):
           f"dependency-edges {observed['counts']['dependency_edges']}; "
           f"relations {observed['counts']['relations']}")
     print(f"DIGEST {observed['content_sha256']}")
-    verify(fixture, read_contract())
-    return 0
+    return verify(target, read_contract())
 
 
 def self_test_cases(workdir, base):
     cases = {}
+    tool = Path(__file__).resolve()
 
-    def copy_case(name):
-        target = workdir / name / base.name
-        shutil.copytree(base, target)
-        return target
+    def mirror_root(case):
+        root = workdir / case
+        (root / "corpus/tools").mkdir(parents=True)
+        (root / "corpus/fixtures").mkdir(parents=True)
+        shutil.copy2(tool, root / "corpus/tools/dependency_freeze.py")
+        shutil.copy2(CONTRACT_PATH, root / "corpus/tools/dependency-freeze-contract.json")
+        return root
 
-    cases["clean"] = (lambda p=base: [p], 0)
-    scratch = copy_case("reduction_edge_drop")
+    def mirror_fixture(root, name=None):
+        fixture = root / "corpus/fixtures" / (name or base.name)
+        shutil.copytree(base, fixture)
+        return fixture
+
+    def mirror_tool(root):
+        return root / "corpus/tools/dependency_freeze.py"
+
+    def verify_argv(mirror, fixture):
+        return lambda t=mirror, f=fixture: [str(t), str(f)]
+
+    cases["clean"] = (lambda t=tool, f=base: [str(t), str(f)], 0)
+
+    root = mirror_root("reduction_edge_drop")
+    scratch = mirror_fixture(root)
     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
     for record in timeline:
         if record["id"] == "paired-crossing-decision":
             record["depends_on"] = [dep for dep in record["depends_on"] if dep != "evin-ninth-bell"]
     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
-    cases["reduction_edge_drop"] = (lambda p=scratch: [p], 1)
+    cases["reduction_edge_drop"] = (verify_argv(mirror_tool(root), scratch), 1)
 
-    scratch = copy_case("addition_edge_phantom")
+    root = mirror_root("addition_edge_phantom")
+    scratch = mirror_fixture(root)
     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
     for record in timeline:
         if record["id"] == "aftermath-missing-evin":
             record["depends_on"] = record["depends_on"] + ["phantom-ninth-bell"]
     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
-    cases["addition_edge_phantom"] = (lambda p=scratch: [p], 1)
+    cases["addition_edge_phantom"] = (verify_argv(mirror_tool(root), scratch), 1)
 
-    scratch = copy_case("event_removed")
+    root = mirror_root("event_removed")
+    scratch = mirror_fixture(root)
     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
     timeline = [record for record in timeline if record["id"] != "aftermath-missing-evin"]
     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
-    cases["event_removed"] = (lambda p=scratch: [p], 1)
+    cases["event_removed"] = (verify_argv(mirror_tool(root), scratch), 1)
 
-    scratch = copy_case("event_endpoint_change")
+    root = mirror_root("event_endpoint_change")
+    scratch = mirror_fixture(root)
     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
     for record in timeline:
         if record["id"] == "paired-crossing-decision":
             record["place_id"] = "salt-court"
     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
-    cases["event_endpoint_change"] = (lambda p=scratch: [p], 1)
+    cases["event_endpoint_change"] = (verify_argv(mirror_tool(root), scratch), 1)
 
-    scratch = copy_case("relation_endpoint_flip")
+    root = mirror_root("relation_endpoint_flip")
+    scratch = mirror_fixture(root)
     relations = json.loads((scratch / "relations.json").read_text(encoding="utf-8"))
     relations[0]["from"], relations[0]["to"] = relations[0]["to"], relations[0]["from"]
     (scratch / "relations.json").write_text(json.dumps(relations, indent=2) + "\n", encoding="utf-8")
-    cases["relation_endpoint_flip"] = (lambda p=scratch: [p], 1)
+    cases["relation_endpoint_flip"] = (verify_argv(mirror_tool(root), scratch), 1)
 
-    scratch = copy_case("relation_removed")
+    root = mirror_root("relation_removed")
+    scratch = mirror_fixture(root)
     (scratch / "relations.json").write_text("[]\n", encoding="utf-8")
-    cases["relation_removed"] = (lambda p=scratch: [p], 1)
+    cases["relation_removed"] = (verify_argv(mirror_tool(root), scratch), 1)
 
-    scratch = copy_case("relation_added")
+    root = mirror_root("relation_added")
+    scratch = mirror_fixture(root)
     relations = json.loads((scratch / "relations.json").read_text(encoding="utf-8"))
     relations.append({"from": "aru", "to": "jorin", "type": "unpinned_relation"})
     (scratch / "relations.json").write_text(json.dumps(relations, indent=2) + "\n", encoding="utf-8")
-    cases["relation_added"] = (lambda p=scratch: [p], 1)
+    cases["relation_added"] = (verify_argv(mirror_tool(root), scratch), 1)
 
-    scratch = copy_case("digest_tamper")
+    root = mirror_root("digest_tamper")
+    scratch = mirror_fixture(root)
     timeline_text = (scratch / "timeline.json").read_text(encoding="utf-8")
     (scratch / "timeline.json").write_text(
         timeline_text.replace("south bell at Salt Court", "South bell at Salt Court", 1), encoding="utf-8")
-    cases["digest_tamper"] = (lambda p=scratch: [p], 2)
+    cases["digest_tamper"] = (verify_argv(mirror_tool(root), scratch), 2)
 
-    scratch = copy_case("malformed_json")
+    root = mirror_root("malformed_json")
+    scratch = mirror_fixture(root)
     (scratch / "timeline.json").write_text("[{\n", encoding="utf-8")
-    cases["malformed_json"] = (lambda p=scratch: [p], 2)
+    cases["malformed_json"] = (verify_argv(mirror_tool(root), scratch), 2)
 
-    scratch = copy_case("missing_timeline")
+    root = mirror_root("missing_timeline")
+    scratch = mirror_fixture(root)
     (scratch / "timeline.json").unlink()
-    cases["missing_timeline"] = (lambda p=scratch: [p], 2)
+    cases["missing_timeline"] = (verify_argv(mirror_tool(root), scratch), 2)
 
-    unpinned = workdir / "unpinned_fixture"
-    shutil.copytree(base, unpinned)
-    cases["unpinned_fixture"] = (lambda p=unpinned: [p], 2)
-    cases["missing_fixture"] = (lambda p=workdir / "missing_case" / base.name: [p], 2)
-    cases["invalid_arguments"] = (lambda p=base: [p, "--freeze", str(p)], 2)
+    root = mirror_root("unpinned_fixture")
+    unpinned = mirror_fixture(root, "unpinned_fixture")
+    cases["unpinned_fixture"] = (verify_argv(mirror_tool(root), unpinned), 2)
+
+    root = mirror_root("missing_fixture")
+    cases["missing_fixture"] = (verify_argv(mirror_tool(root), root / "corpus/fixtures/missing_case" / base.name), 2)
+
+    cases["invalid_arguments"] = (lambda t=tool, f=base: [str(t), str(f), "--freeze", str(f)], 2)
+
+    foreign = workdir / "path_mismatch" / "foreign" / base.name
+    shutil.copytree(base, foreign)
+    cases["path_mismatch"] = (lambda t=tool, f=foreign: [str(t), str(f)], 2)
+
+    target = workdir / "scope_refused" / "target"
+    target.mkdir(parents=True)
+    cases["scope_refused"] = (lambda t=tool, d=target: [str(t), "--freeze", str(d)], 2)
     return cases
 
 
@@ -408,12 +514,11 @@ def run_self_test():
     if not base.is_dir():
         fail("FIXTURE-MISSING", f"self-test base fixture not found: {base}")
     failures = []
-    with tempfile.TemporaryDirectory(prefix="dependency-freeze-self-test-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="dependency-freeze-self-test-", dir=ROOT) as tmp:
         cases = self_test_cases(Path(tmp), base)
         for case in FROZEN_CASES:
             argv, expected_exit = cases[case]
-            paths = [str(item) for item in argv()]
-            command = [sys.executable, str(Path(__file__).resolve()), *paths]
+            command = [sys.executable, *argv()]
             result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
             output = result.stdout + result.stderr
             observed_findings = sorted(

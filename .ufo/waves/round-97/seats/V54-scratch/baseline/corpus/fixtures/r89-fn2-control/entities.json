@@ -1,0 +1,64 @@
+[
+  {
+    "id": "mira",
+    "kind": "character",
+    "name": "Mira",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Mira carried the seal.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "f3-dup",
+    "kind": "character",
+    "name": "Duplicate holder valid row",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Fixture duplicate",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "harbor",
+    "kind": "place",
+    "name": "Lantern Harbor",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "Harbor has a registry.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "f3-seal",
+    "kind": "item",
+    "name": "F3 Seal",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "The seal accompanied Mira.",
+        "source_id": "courier-log"
+      }
+    ],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "f3-dup",
+        "source_id": "courier-log"
+      },
+      {
+        "tick": 3,
+        "from_holder": "mira",
+        "to_holder": "harbor",
+        "source_id": "archive-ledger"
+      }
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+FINDING DIGEST-MISMATCH: content digest e6e647799204e6b5b189b676fa9af62132e20b467e6c26d8056e6140b992b747 != pin d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6; changed: sources.json (sha256 9f973f634cf325a33047020407ffb67b0a0f0a1643e507ebd3771abf9fabf32d -> 9b4b9140f88ddbaa4b2408de9c17231c14b8174d4503ec24eb3e752d03763f2c); fixture bytes changed outside the frozen inventory
+RESULT ERROR

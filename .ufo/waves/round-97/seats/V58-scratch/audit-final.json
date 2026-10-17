@@ -1,0 +1,27 @@
+{
+ "reports_present_excl_self": 60,
+ "reports_present_incl_self": 60,
+ "missing": [
+  "V24",
+  "V35",
+  "V40",
+  "V58"
+ ],
+ "unexpected_prefixes": [],
+ "unexpected_md": [],
+ "dupes": {},
+ "mismatches1": [],
+ "mismatches5": [],
+ "artifacts_missing": {
+  "R1": [],
+  "R2": [],
+  "R3": [],
+  "R4": [],
+  "R5": [],
+  "R6": []
+ },
+ "head": "2393934237ea076366f3db6dceeff033edb52ab1",
+ "baseline_ancestor": true,
+ "prior_receipt": false,
+ "receipt_written": false
+}

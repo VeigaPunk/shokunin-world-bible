@@ -2978,3 +2978,107 @@ Host note: `/tmp` hit inode exhaustion mid-wave (V27/V40) — seats re-ran
 under repo scratch; recorded as a host condition, not a repo finding.
 SHONEN unchanged (four `[~]`, no `[x]`). No promotion, no push. r97 (third
 64-seat deepseek flash round) may start.
+
+## Round 97 — declaration before dispatch (2026-10-17)
+
+Operator 100-round regimen round 3 of 6. Baseline = r96 closure `f3e09f9`.
+One batched AgentSwarm, 64 seats on `opencode-go/deepseek-v4.1-flash`: 6
+producer seats (exclusive byte-ownership) + 58 verifier/judge seats on the
+poll-wait protocol (20 s cadence, 40 tries; ABSENT, never verify a plan).
+Seat reports exclusive under `.ufo/waves/round-97/seats/` (absolute paths —
+the session cwd is the parent repo; the r94-F01 stray-write class). Scores
+remain unmeasured. Owned axis set: depth, coverage, calibration;
+operability/freshness/adjacency judged as witnessed.
+
+**C1 — calibration:** pin the r96-carried calibration residuals in
+`map_obligations`. (a) Add a persisted self-test case pinning `dual_pointer`
+(contract 24→25); (b) tighten the contract loader — any pinned case missing
+from the contract must FAIL the self-test (today 23/24 still passes:
+dropping either r96-added pin stays green); (c) demonstrate the pin is
+load-bearing: neutralizing the dual_pointer emission fails the self-test.
+Non-regression: the full r87–r97 battery, frozen-r93 replay, r87/r89
+fail-closed, 0/1/2 contract unchanged.
+
+**C2 — coverage (tool hardening):** close the r96-carried `dependency_freeze`
+hazards. (a) Scope guard: `--freeze` accepts only `corpus/fixtures/**`
+targets (integration-time operation, now enforced); (b) path binding: pins
+record the fixture's repo-relative path and verify compares the invoked
+path — a byte-identical same-named copy at a foreign path exits 2
+`PATH-MISMATCH` (today it verifies identically); (c) `DIGEST-MISMATCH` names
+the changed file; (d) self-test grows 14→16 cases pinning the new classes.
+After R4's cosmetic repair, the r96 fixture is re-frozen THROUGH the guarded
+`--freeze` path (pin refresh), demonstrating the guard end-to-end; chain
+verifies 4/4 clean at closure.
+
+**C3 — depth:** third beat of the crossing arc, unresolved preserved. New
+fixture `corpus/fixtures/r97-crossing-acknowledgment/` — a preserving copy of
+`r96-crossing-response` plus one authored acknowledgment note
+(`aru-acknowledgment-note`) and one tick-13 event
+(`acknowledgment-aru-records`, actor `aru`, place `chalk-stair`,
+`depends_on: ["response-evin-salt-court"]`) recording that Aru received
+Evin's response and that both accounts stand; no resolution, no accusation,
+no reconciliation claim. Before: 5/1/5, 5 sources at r96. After: 5/1/6,
+6 sources, 17 map obligations (16 inherited rows unchanged + 1 new event
+row; no new claims/entities/relations), `check_bible` CLEAN, inherited rows
+parsed-value identical, census 170→171. Also (same claim, repair half): fix
+the two r96-carried cosmetic map blemishes (8-cell delimiter row; the stale
+"new relation" sentence) in `r96-crossing-response/claim-excerpt-map.md` —
+pointers/anchors/spans/modes untouched — then re-freeze r96 under C2; r96's
+`support_check` and `map_obligations` receipts must be unchanged by the
+repair.
+
+**Admission rule:** admit iff C1, C2, C3 each verify on the delivered
+revision and no axis is harmed; per-axis verdicts, no scalars; harmed or
+unprovable claims reported as such. Same-lane rule. r98 does not start on an
+unclosed r97. Producer byte-ownership: R1 `corpus/tools/map_obligations.py`;
+R2 `corpus/tools/map-obligations-contract.json` + `corpus/tools/README.md`;
+R3 `corpus/tools/dependency_freeze.py` +
+`corpus/tools/dependency-freeze-contract.json`; R4
+`corpus/fixtures/r96-crossing-response/claim-excerpt-map.md` (cosmetic repair
+only) + `corpus/fixtures/r97-crossing-acknowledgment/` JSON tables +
+`fictional-excerpts.md`; R5 `corpus/fixtures/r97-crossing-acknowledgment/README.md`
++ `claim-excerpt-map.md`; R6 `corpus/knowledge/r97-acknowledgment-scope-note.md`.
+Everything else is read-only except seat reports.
+
+## Round 97 — errata, conditions, and closure (ADMITTED; 2026-10-17)
+
+**Append-only errata** (adjudication C-1, V50/V12): (1) the C2 text's "re-frozen THROUGH the guarded --freeze path (pin refresh)" holds, but the r96-closure errata's "digest change" implication is inaccurate — the freeze pin payload covers the five JSON tables only; the post-repair r96 map digest (`e851f068…`) is not (and cannot be) pinned; the refresh changed the pin's `revision` only (`60dba0c2…→2393934…`) and is reproducible through the guarded path (V12's harness). V12's FAIL stands recorded and is discharged by this erratum, not re-rolled. (2) V46's FAIL stands recorded: the r97 tick-13 edge is not frozen because `r97-crossing-acknowledgment` is outside the declared four-fixture pin set (its completeness is covered lexically by `map_obligations` 17/17 and structurally by `check_bible`); pinning r97 is an r98 candidate.
+
+**Closure.** Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash`
+(dispatch `tool_X1OZlGbgZtVEcklt3o9IBuUR`, returned `completed: 64`; 64/64
+reports — three late landings V58/V40/V24, the endgame quad {V24,V35,V40,V58}
+characterized by V56: all-reports polls must subtract SELF, r96 class
+recurred; V24 capped at 4500 s with the change set stable and zero strays).
+V35 all-axis adjudication: **ADMIT with six conditions**, all discharged
+here: (C-1) the re-freeze erratum above; (C-2) the r97-unpinned bound
+recorded; (C-3) the closure doc pass (tools README Round-97 supersession,
+SKILL.md rows for both tools, corpus README bullets, fixtures README
+Round-97 + census 171/37/134/421, C9 row 6 above); (C-4) the BR-05 bound
+recorded — self-test scratch for BOTH tools now lands at the repo root and
+is gitignored (`*-self-test-*/`); (C-5) carried conditions recorded: the two
+stale knowledge-note tool pins (r95 `9224a684…`, r96 `6634e176…`/
+`8173bb97…`, correctable next touch), the path-less-legacy-pin migration gap,
+the canonical-dialect `dual_pointer` bound, checker/support blind spots,
+BR-01 prose half; (C-6) process/host records: `/tmp` inode exhaustion
+recurred and cleared, seats re-ran under repo scratch; `kotodama-shokunin`
+concurrent activity attributed by path ownership (commit `b0bb880`, parent
+MANIFEST row — NOT this lane's ledger and untouched by the lane); one
+gitignored `.pyc` removed by an unidentified seat (hygiene, untracked).
+
+Per-axis verdicts: calibration improved (bounded — `dual_pointer` persisted
+as case 25; strict loader fails closed on ANY dropped pinned case with the
+r96 23/24 tolerance demonstrated as the closed pre-state; pin load-bearing
+under neutralization; full battery byte-stable); depth improved (bounded —
+acknowledgment-without-reconciliation class, 5/1/5→5/1/6, 17/17
+obligations, no constructible resolution/blame reading, byte-minimal r96
+repair with receipts unchanged); coverage improved (bounded — guard +
+path binding + named DIGEST-MISMATCH + 16-case self-test + revision-only
+re-freeze + chain 4/4, with V12/V46 FAILs recorded); operability improved
+(bounded — BR-05 bound); freshness unchanged (one bounded README staleness
+landed at closure; carried note pins); adjacency not harmed (charter
+byte-identical; zero parent-tree strays — the r94-F01 class did not recur;
+no commits by seats). Measurements re-run at closure on the committed
+revision: self-tests 25/25 + 16/16; chain 4/4; r97 CLEAN + 17/17; C9 pair
+green; census 171/37/134/421. SHONEN unchanged (four `[~]`, no `[x]`). No
+promotion, no push. r98 (fourth and final 64-seat deepseek-flash round) may
+start.

@@ -1,0 +1,83 @@
+#!/bin/bash
+# V30 coverage demos — dependency_freeze hardening (C2).
+# Runs ONLY against mirror tree + read-only probes on the real tree.
+set -u
+R=/home/vgpnk/Projects/shokunin/lore-shokunin
+S=$R/.ufo/waves/round-97/seats/V30-scratch
+M=$S/mirror
+TOOL=$R/corpus/tools/dependency_freeze.py
+CONTRACT=$R/corpus/tools/dependency-freeze-contract.json
+
+echo "##### 0. rebuild mirror #####"
+rm -rf "$M" "$S/foreign" "$S/outside"
+mkdir -p "$M/corpus/tools" "$M/corpus/fixtures" "$M/corpus/knowledge" "$S/foreign" "$S/outside"
+cp "$TOOL" "$M/corpus/tools/dependency_freeze.py"
+cp "$CONTRACT" "$M/corpus/tools/dependency-freeze-contract.json"
+cp -r "$R/corpus/fixtures/r95-crossing-aftermath" "$M/corpus/fixtures/"
+cp -r "$R/corpus/fixtures/r96-crossing-response" "$M/corpus/fixtures/"
+echo "note" > "$M/corpus/knowledge/note.md"
+cp -r "$R/corpus/fixtures/r96-crossing-response" "$S/foreign/r96-crossing-response"
+cp -r "$R/corpus/fixtures/r96-crossing-response" "$S/outside/r96-crossing-response"
+MTOOL=$M/corpus/tools/dependency_freeze.py
+MCON=$M/corpus/tools/dependency-freeze-contract.json
+hash_before=$(sha256sum "$MCON" | cut -d' ' -f1)
+
+echo; echo "##### D1 mirror: --freeze DENY corpus/knowledge (scope guard) #####"
+python3 "$MTOOL" --freeze "$M/corpus/knowledge"; echo "exit=$?"
+echo "mirror contract unchanged: $([ "$hash_before" = "$(sha256sum "$MCON" | cut -d' ' -f1)" ] && echo YES || echo NO)"
+
+echo; echo "##### D2 mirror: --freeze DENY outside-repo absolute path #####"
+python3 "$MTOOL" --freeze "$S/outside/r96-crossing-response"; echo "exit=$?"
+echo "mirror contract unchanged: $([ "$hash_before" = "$(sha256sum "$MCON" | cut -d' ' -f1)" ] && echo YES || echo NO)"
+
+echo; echo "##### D3 mirror: --freeze ALLOW corpus/fixtures/r96-crossing-response #####"
+python3 "$MTOOL" --freeze "$M/corpus/fixtures/r96-crossing-response"; echo "exit=$?"
+
+echo; echo "##### D4 mirror: verify byte-identical FOREIGN copy -> expect PATH-MISMATCH #####"
+sha256sum "$M/corpus/fixtures/r96-crossing-response/timeline.json" "$S/foreign/r96-crossing-response/timeline.json"
+python3 "$MTOOL" "$S/foreign/r96-crossing-response"; echo "exit=$?"
+
+echo; echo "##### D5 mirror: verify legit path -> expect PASS #####"
+python3 "$MTOOL" "$M/corpus/fixtures/r96-crossing-response"; echo "exit=$?"
+
+echo; echo "##### D6 mirror: whitespace-only tamper -> DIGEST-MISMATCH names file #####"
+printf ' ' >> "$M/corpus/fixtures/r96-crossing-response/timeline.json"
+python3 "$MTOOL" "$M/corpus/fixtures/r96-crossing-response"; echo "exit=$?"
+
+echo; echo "##### D7 mirror: symlink at foreign path -> legit target (bound probe) #####"
+ln -s "$M/corpus/fixtures/r96-crossing-response" "$S/outside/r96-crossing-response-link"
+python3 "$MTOOL" "$S/outside/r96-crossing-response-link"; echo "exit=$?"
+
+echo; echo "##### D8 mirror: --freeze on symlink INSIDE fixtures -> knowledge (escape probe) #####"
+ln -s "$M/corpus/knowledge" "$M/corpus/fixtures/evil-escape"
+python3 "$MTOOL" --freeze "$M/corpus/fixtures/evil-escape"; echo "exit=$?"
+
+echo; echo "##### D9 mirror: --freeze nested dir inside a fixture (subtree scope probe) #####"
+mkdir -p "$M/corpus/fixtures/r96-crossing-response/nested"
+cp "$M/corpus/fixtures/r96-crossing-response/timeline.json" "$M/corpus/fixtures/r96-crossing-response/nested/"
+cp "$M/corpus/fixtures/r96-crossing-response/relations.json" "$M/corpus/fixtures/r96-crossing-response/nested/"
+python3 "$MTOOL" --freeze "$M/corpus/fixtures/r96-crossing-response/nested"; echo "exit=$?"
+
+echo; echo "##### D10 mirror: --self-test #####"
+python3 "$MTOOL" --self-test 2>&1 | tail -6; echo "exit=${PIPESTATUS[0]}"
+
+echo; echo "##### D11 REAL TREE read-only: chain verify 4/4 #####"
+for f in r88-m3-maya-cluster r94-paired-crossing r95-crossing-aftermath r96-crossing-response; do
+  echo "-- $f"
+  python3 "$TOOL" "$R/corpus/fixtures/$f"; echo "exit=$?"
+done
+
+echo; echo "##### D12 REAL TREE: foreign copy of r96 -> expect PATH-MISMATCH #####"
+python3 "$TOOL" "$S/foreign/r96-crossing-response"; echo "exit=$?"
+
+echo; echo "##### D13 REAL TREE: --self-test #####"
+python3 "$TOOL" --self-test 2>&1 | tail -4; echo "exit=${PIPESTATUS[0]}"
+
+echo; echo "##### D14 REAL TREE: --freeze DENY probe (guard must reject before write) #####"
+REAL_BEFORE=$(sha256sum "$CONTRACT" | cut -d' ' -f1)
+python3 "$TOOL" --freeze "$R/corpus/knowledge"; echo "exit=$?"
+REAL_AFTER=$(sha256sum "$CONTRACT" | cut -d' ' -f1)
+echo "real contract before=$REAL_BEFORE after=$REAL_AFTER unchanged=$([ "$REAL_BEFORE" = "$REAL_AFTER" ] && echo YES || echo NO)"
+
+echo; echo "##### D15 REAL TREE: contract hash after all probes #####"
+sha256sum "$CONTRACT"

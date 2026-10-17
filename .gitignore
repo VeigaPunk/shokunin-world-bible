@@ -1,2 +1,4 @@
 .ufo/interactive-sessions/
 __pycache__/
+# self-test scratch for corpus tools (transient, repo root)
+*-self-test-*/
