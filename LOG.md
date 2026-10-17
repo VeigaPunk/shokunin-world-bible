@@ -2699,3 +2699,51 @@ C1/C2 claim verifies on the delivered revision and no axis is harmed;
 per-axis verdicts, no scalars; harmed/unprovable reported as such. Evidence
 and actual agent IDs recorded only after the dispatch returns. No r95 start
 before this closure; no capability row before a demonstrated final result.
+
+## Round 94 — closure (ADMITTED; 2026-10-17)
+
+- WORK checkpoint `abbc3e0` (32 Luna-max seats, 31/32 usable; W20 failed-output
+  gap recorded) stood pending since the checkpoint. Declared at `65a9329` and
+  dispatched the required FOLLOW-UP as one 40-seat AgentSwarm on
+  `opencode-go/deepseek-v4.1-flash` (within the 32–64 authorization); all 40
+  seats returned `completed` and 40 reports landed
+  (`.ufo/waves/round-94/followup/`); receipt filled from the real dispatch
+  result (`.ufo/waves/round-94/followup-receipt.json`).
+- F27 all-axis adjudicator: ADMIT recommended — C1 and C2 verify on the
+  delivered revision, no axis harmed. Per-axis verdicts: depth improved;
+  coverage/calibration/operability improved (bounded); freshness unchanged
+  (no improvement, no harm; doc findings carried as conditions, not netted);
+  adjacency unchanged. Conditions C-1…C-6 all landed in `ac69044`:
+  SKILL.md gate-registry row for `map_obligations`; corpus/README +
+  fixtures/README (Round-94 section, census re-declared 168/34/134/421) +
+  tools/README addenda; C9 watch r94 re-check row 3 (DISCRIMINATION HELD exit 0;
+  `e97613c` control REGRESSION-DETECTED exit 2; checker pin `ff9fd2aa…`
+  reproduced) plus the dated line-54 HEAD erratum; wave-spec.json followup
+  reconciliation; W25 proposals implemented post-product per the spec's
+  deferral rule.
+- Append-only corrections recorded at this closure: (1) LOG.md:2312-2314
+  (r89-era) cite r87 SOURCE-SUPPORT 22/22 and r88 MODES 10/10; the delivered
+  checker prints r87 14/14 + 8/8 editorial and r88 MODES 12/12 — the r87/r88
+  figures were denominator shorthand, superseded by the r93/r94 README
+  receipts (F25 finding CC-07). (2) W30's full-gate negative result
+  (`node corpus-gate.mjs` exit 1, findings=6, rules r4/r10) was disclosed only
+  in its seat report; recorded here so closure claims cite exit-0 runs only
+  for the gates actually run (CC-12). (3) F40's bookkeeping report is
+  defective (placeholders unfilled; claimed receipt absent at adjudication);
+  not credited — the real receipt was produced from the dispatch result
+  (CC-15). (4) The fleet watchdog's `report_of()` is existence-only and its
+  LANES list omits lore — the r94 content bar was applied by integrator
+  review, not the driver; protocol-lane observation, not a lore defect.
+- Measurements at closure (HEAD `ac69044`): `check_bible` on
+  `corpus/fixtures/r94-paired-crossing` → CLEAN exit 0; `support_check` →
+  14/14 + 2/2 PASS; `map_obligations` r94 14/14 PASS, r93 12/12 PASS,
+  `--self-test` 20/20, `--frozen` digests verified; `boundary_doc_check`
+  default + `--self-test` PASS; `discriminate_check` HELD / control
+  REGRESSION-DETECTED; census 168 dirs, 0 inherited changes vs `9c2eea3`.
+- Debt ledger: 14 closure-critical (all resolved at closure or carried with
+  named owners), 28 bounded residuals (BR-01 dependency-reduction detection
+  and BR-02 schema-drift class are the r95 head items), 8 carried r93 items —
+  `.ufo/waves/round-94/followup/F29-debt.{md,json}`.
+- SHONEN unchanged: four `[~]`, no `[x]` (same-lane seats are the lane per
+  PROTOCOL.md; no outside non-author verifier). No promotion, no push, no
+  saturation claim. r95 (64-seat deepseek-v4.1-flash regimen) may start.
