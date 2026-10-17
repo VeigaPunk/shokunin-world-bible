@@ -2747,3 +2747,115 @@ before this closure; no capability row before a demonstrated final result.
 - SHONEN unchanged: four `[~]`, no `[x]` (same-lane seats are the lane per
   PROTOCOL.md; no outside non-author verifier). No promotion, no push, no
   saturation claim. r95 (64-seat deepseek-v4.1-flash regimen) may start.
+
+## Round 95 — declaration before dispatch (2026-10-17)
+
+Operator 100-round regimen round 1 of 6 (r95–r98: 64-seat
+`opencode-go/deepseek-v4.1-flash` swarms; r99: 128-seat grok-4.7-fast;
+r100: 32-seat sol-max). Baseline = r94 closure `fb118c4`. One batched
+AgentSwarm, 64 seats: 5 producer seats (exclusive file ownership) + 59
+verifier/judge seats that poll-wait for the declared artifact paths (20 s
+cadence, 40 tries) and report ABSENT rather than verify a plan. Seat reports
+exclusive under `.ufo/waves/round-95/seats/`. Scores remain unmeasured; the
+claims below are the round's falsifiable before→after obligations. Owned axis
+set: depth, coverage, calibration; operability/freshness/adjacency judged as
+witnessed (r93/r94 precedent).
+
+**C1 — calibration:** close the r94 bounded residuals BR-02 (schema-drift
+class) and BR-03 (self-test coverage gaps) in `map_obligations`. Before: a
+record whose `claims` key is renamed (claim content preserved) plus removal of
+that claim's map row yields silent `RESULT PASS` exit 0; the self-test covers
+20 cases. After: that exact mutation class yields exit 1 with a stable
+`schema_drift` FINDING ID; the persisted contract carries 22 self-test cases
+including `map_missing` and `invalid_arguments`. r93 12/12, r94 14/14,
+frozen-r93 digest replay, and r87/r89 fail-closed behavior must be unchanged.
+Counting: mutation demo on scratch copies (old tool from git vs delivered);
+`python3 corpus/tools/map_obligations.py --self-test` exit 0.
+
+**C2 — depth:** first reported non-performance against a crossing-scoped
+agreement. New fixture `corpus/fixtures/r95-crossing-aftermath/` — a
+preserving copy of `r94-paired-crossing` plus one authored aftermath note
+(`aru-aftermath-note`) and one tick-11 event (`aftermath-missing-evin`,
+actor `aru`, place `chalk-stair`, `depends_on: ["paired-crossing-decision"]`)
+recording that Aru waited through the agreed bell and Evin did not come,
+explicitly scoped: the agreement covered this crossing only and the record
+asserts no other duty or breach. Before: 5 entities / 1 relation / 3 events /
+3 sources, 14 map obligations at r94. After: 5/1/4, 4 sources, 15 map
+obligations (14 inherited rows carried unchanged + the new event row; no new
+claims, no new entities/relations), `check_bible` CLEAN exit 0, inherited r94
+rows parsed-value identical, census 168→169. No perpetual-breach,
+canon-truth, or identity inference.
+
+**C3 — coverage:** `map_obligations` dialect coverage of the r88 map form —
+tool surface only, zero corpus modifications. Before:
+`python3 corpus/tools/map_obligations.py corpus/fixtures/r88-m3-maya-cluster`
+exits 2 `unsupported_map`. After: 12/12 PASS over the r88 map's obligations
+with the same anchors/spans/modes; r87/r89 legacy forms remain exit 2
+fail-closed; `support_check` receipts on r88 (10 JSON + 2 editorial) and on
+r93/r94 unchanged.
+
+**Admission rule:** admit iff C1, C2, and C3 each verify on the delivered
+revision and no axis is harmed; per-axis verdicts, no scalars, harmed or
+unprovable claims reported as such and not forced. Same-lane seats are the
+lane (no `[x]`, no promotion, no capability row before demonstrated final
+result). r96 does not start on an unclosed r95. Producer byte-ownership:
+P1 `corpus/tools/map_obligations.py`; P2 `corpus/tools/map-obligations-contract.json`
++ `corpus/tools/README.md` addendum; P3 `corpus/fixtures/r95-crossing-aftermath/`
+JSON tables + `fictional-excerpts.md`; P4 `corpus/fixtures/r95-crossing-aftermath/README.md`
++ `claim-excerpt-map.md`; P5 `corpus/knowledge/r95-aftermath-scope-note.md`.
+Everything else in the round is read-only except seat reports.
+
+## Round 95 — declaration corrections and closure (ADMITTED; 2026-10-17)
+
+**Append-only declaration corrections** (adjudication condition 2; audit seats
+V46 WC-1…WC-7, V58): (1) the C3 result is "r88 `OBLIGATIONS raw=10
+mapped=10` with `INVENTORY … TOTAL-ROWS 12/12`" — not "12/12 obligations";
+the 12/12 names the map's total rows (10 JSON facts + 2 editorial). (2) The
+phrase "with the same anchors/spans/modes" misattributes coverage:
+`map_obligations` reads pointer and source-ID columns only; r88's
+anchors/spans/modes are covered by the unchanged `support_check` receipt
+(`MODES 12/12`). (3) The 14 inherited r94→r95 rows are parsed-value (not
+byte-) identical; five files are byte-identical copies. (4) Every bare ratio
+denominator: 12/12, 14/14, 15/15 = raw source-attributed obligations = mapped
+JSON-fact rows; the 17/17 companion is the map's total rows. (5) r87's
+exit-2 finding detail string changed check stage under the unchanged ID and
+exit (fail-closed preserved). (6) The `schema_drift` FINDING detail embeds the
+renamed key; the ID itself is stable. (7) The tool now prints a non-gating
+`INVENTORY` receipt surface alongside OBLIGATIONS.
+
+**Closure.** Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash`
+(dispatch `tool_8xm2IckmDuqcTQITaqoEGpGe`, returned `completed: 64`; receipt
+`.ufo/waves/round-95/receipt.json`, agent IDs from the dispatch result).
+V29 all-axis adjudication: **ADMIT** — C1/C2/C3 verify on the pinned
+delivered revision (tool `d1c239cc…`, contract `8173bb97…`) and no axis
+harmed. Per-axis: calibration improved (bounded; schema_drift class closed
+with stable FINDING, 22-case persisted self-test, zero fixture regressions,
+fail-closed preserved); depth improved (bounded; first reported
+non-performance against a crossing-scoped agreement, 5/1/3→5/1/4, 15/15
+obligations, r94 byte-untouched); coverage improved (bounded; r88 dialect
+under the gate with zero corpus modification); operability improved
+(bounded; 22-case self-test, documented commands replay); freshness
+unchanged (no improvement, no material harm; P5 note's stale tool-revision
+pin self-caveated, correctable next touch); adjacency unchanged (PASS).
+Admission conditions 1–7 all landed at this closure: delivered bytes frozen
+and committed pathspec-limited; the corrections above; fixtures README
+Round-95 section (census 169 dirs / 35 clean / 134 negative / 421 violation
+lines, re-run at closure), corpus README bullets, SKILL.md registry row
+update, C9 watch r95 re-check row 4 (DISCRIMINATION HELD / expected
+REGRESSION-DETECTED control, pin `ff9fd2aa…` reproduced); r96 debt items
+recorded in SCORECARD; receipt rebuilt (64/64 reports; V33/V59/V57 late
+landings, not failures; V09/V18 parent-tree strays collected — the r94-F01
+cwd defect class recurs and is now recorded as a harness property, not a
+seat defect); closure battery re-run green (self-test 22/22, r93/r94/r95/r88
+PASS, frozen PASS, r87/r89 exit 2, five support receipts PASS, r95 CLEAN).
+
+**Carried to r96 unsmoothed** (adjudication conditions 4): deletion class
+(deleting `claims` + row exits 0 with only the non-gating INVENTORY MISMATCH
+visible); `schema_drift` not pinned by a persisted self-test case; drift
+scope limited to claim-shaped records under unexpected entity keys;
+V37-D1 legacy-dialect hidden-second-pointer soundness gap (MEDIUM);
+BR-05 self-test scratch location; P4's empty post-P1 addendum receipt;
+P5 note tool-revision pin. Roster discrepancy recorded: V56's brief named
+V57 as adjudicator; V29 adjudicated per its own brief (V57 filed no
+adjudication). SHONEN unchanged (four `[~]`, no `[x]`, same-lane rule).
+No promotion, no push. r96 (second 64-seat deepseek flash round) may start.

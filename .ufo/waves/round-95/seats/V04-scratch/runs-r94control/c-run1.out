@@ -1,0 +1,5 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/map_obligations_r94.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/case-c
+OBLIGATIONS raw=12 mapped=13
+FINDING phantom_obligation: entities.json#/99/first_appearance is not a raw source-attributed obligation
+RESULT FAIL
+EXIT=1

@@ -1,0 +1,4 @@
+952354ac759646a2ee4b0f6c14c8ddf8202bb311d12aff11db8309a23e991b95  receipts/r87-myth-cluster.out
+b5c4075d65284f3d73cde11bc09b6f3678010474a291705ed3fd7be6830e2e3b  receipts/r88-m3-maya-cluster.out
+63f90ea53c14708882932dba8eb3c2ced411ea96008d127a86300abc90e7e6da  receipts/r93-m2-kojiki-cluster.out
+d0ff69820d619bc5a5350efa96522effcb991f6243588ff3db16a4383ba17e15  receipts/r94-paired-crossing.out

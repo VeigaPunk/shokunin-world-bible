@@ -1,0 +1,282 @@
+diff --git c/corpus/tools/map_obligations.py w/corpus/tools/map_obligations.py
+index 5801192..2077a14 100644
+--- c/corpus/tools/map_obligations.py
++++ w/corpus/tools/map_obligations.py
+@@ -16,6 +16,18 @@ RAW_FILES = ("entities.json", "relations.json", "timeline.json")
+ MAP_CANDIDATES = ("claim-to-excerpt-map.md", "claim-excerpt-map.md")
+ FROZEN_MAP = "claim-excerpt-map.md"
+ FROZEN_INPUTS = (*RAW_FILES, FROZEN_MAP)
++POINTER_COLUMN_ROLES = ("json fact pointer", "json fact pointer and fields", "json fact and fields")
++LEGACY_POINTER_COLUMN = "json fact and fields"
++LEGACY_POINTER = re.compile(
++    r"^(entities|relations|timeline)\[([0-9]+)\]"
++    r"(?:\.first_appearance|\.claims\[([0-9]+)\])?$"
++)
++LEGACY_CELL = re.compile(r"\s*`([^`]+)`(?:\s*\([^()]*\))?(?:\s*:\s*.*)?\s*")
++EXPECTED_INVENTORY = re.compile(
++    r"^\*\*Expected inventory:\*\*\s*([0-9]+)\s+JSON facts?;\s*([0-9]+)\s+editorial rows?;\s*"
++    r"([0-9]+)\s+total mapped rows?;\s*([0-9]+)\s+distinct excerpt anchors?\.\s*$",
++    re.IGNORECASE,
++)
+ SELF_TEST_CASES = (
+     "complete",
+     "missing",
+@@ -23,6 +35,7 @@ SELF_TEST_CASES = (
+     "phantom",
+     "source_id_mismatch",
+     "malformed_json",
++    "map_missing",
+     "co_mapped_grammar",
+     "legacy_grammar",
+     "invalid_pointer",
+@@ -32,6 +45,7 @@ SELF_TEST_CASES = (
+     "foreign_path",
+     "traversal_path",
+     "symlink_path",
++    "invalid_arguments",
+     "frozen_complete",
+     "frozen_tampered",
+     "frozen_missing_digests",
+@@ -137,7 +151,32 @@ def is_separator(row):
+     )
+ 
+ 
+-def parse_pointer_cell(cell):
++def legacy_pointer(token):
++    """Translate one legacy field-path token (entities[0].first_appearance) into a canonical pointer."""
++    match = LEGACY_POINTER.fullmatch(token)
++    if match is None:
++        return None
++    filename, record_index, claim_index = match.groups()
++    if not ARRAY_INDEX.fullmatch(record_index):
++        return None
++    if token != f"{filename}[{record_index}]":
++        if filename != "entities":
++            return None
++        if token.endswith(".first_appearance"):
++            return f"entities.json#/{record_index}/first_appearance"
++        if claim_index is None or not ARRAY_INDEX.fullmatch(claim_index):
++            return None
++        return f"entities.json#/{record_index}/claims/{claim_index}"
++    return None if filename == "entities" else f"{filename}.json#/{record_index}"
++
++
++def parse_pointer_cell(cell, legacy=False):
++    if legacy:
++        legacy_match = LEGACY_CELL.fullmatch(cell)
++        if legacy_match is not None:
++            translated = legacy_pointer(legacy_match.group(1))
++            if translated is not None:
++                return translated
+     match = re.fullmatch(r"\s*`([^`]+)`(?:\s+\((.*)\))?\s*", cell)
+     if match is None:
+         fail("unsupported_map", "pointer cells must contain one canonical inline-code pointer")
+@@ -181,6 +220,56 @@ def parse_source_id(value):
+     return value
+ 
+ 
++def declared_inventory(lines):
++    """Return the map's declared (facts, editorial, total, anchors) inventory and a malformed flag."""
++    declared = None
++    malformed = False
++    for line in lines:
++        if not line.lstrip().startswith("**Expected inventory:**"):
++            continue
++        match = EXPECTED_INVENTORY.fullmatch(line.strip())
++        if match is None:
++            malformed = True
++        elif declared is None:
++            declared = tuple(int(value) for value in match.groups())
++    return declared, malformed
++
++
++def editorial_row_count(lines):
++    heading = next((index for index, line in enumerate(lines)
++                    if re.match(r"^##\s+Editorial rows(?:\s|$|\()", line, re.IGNORECASE)), None)
++    if heading is None:
++        return 0
++    end = next((index for index in range(heading + 1, len(lines))
++                if re.match(r"^#{1,6}\s+", lines[index])), len(lines))
++    table_start = next((index for index in range(heading + 1, end)
++                        if lines[index].lstrip().startswith("|")), None)
++    if table_start is None:
++        return 0
++    count = 0
++    index = table_start + 1
++    while index < end and lines[index].lstrip().startswith("|"):
++        if not is_separator(markdown_cells(lines[index])):
++            count += 1
++        index += 1
++    return count
++
++
++def print_inventory_receipt(declared, malformed, parsed_facts, parsed_editorial):
++    if declared is None and not malformed:
++        return
++    if declared is None:
++        print("INVENTORY declaration-malformed")
++        return
++    facts, editorial, total, _anchors = declared
++    observed = (parsed_facts, parsed_editorial, parsed_facts + parsed_editorial)
++    status = "" if observed == (facts, editorial, total) else " MISMATCH"
++    print(
++        f"INVENTORY JSON-FACTS {parsed_facts}/{facts}; EDITORIAL-ROWS {parsed_editorial}/{editorial}; "
++        f"TOTAL-ROWS {parsed_facts + parsed_editorial}/{total}{status}"
++    )
++
++
+ def parse_map_text(text):
+     lines = text.splitlines()
+     headings = [
+@@ -198,15 +287,18 @@ def parse_map_text(text):
+         fail("unsupported_map", "JSON facts section has no supported table")
+     headers = markdown_cells(lines[table_start])
+     pointer_columns = []
++    pointer_roles = []
+     source_columns = []
+     for index, header in enumerate(headers):
+         role = normalized_header(header)
+-        if role in {"json fact pointer", "json fact pointer and fields"}:
++        if role in POINTER_COLUMN_ROLES:
+             pointer_columns.append(index)
++            pointer_roles.append(role)
+         if role in {"in world source id", "source id"}:
+             source_columns.append(index)
+     if len(pointer_columns) != 1 or len(source_columns) != 1:
+         fail("unsupported_map", "table needs one JSON fact pointer and one source-ID column")
++    legacy = pointer_roles[0] == LEGACY_POINTER_COLUMN
+     rows = []
+     index = table_start + 1
+     while index < end and lines[index].lstrip().startswith("|"):
+@@ -215,7 +307,7 @@ def parse_map_text(text):
+             if len(row) != len(headers):
+                 fail("unsupported_map", "map row cell count differs from its header")
+             rows.append((
+-                parse_pointer_cell(row[pointer_columns[0]]),
++                parse_pointer_cell(row[pointer_columns[0]], legacy),
+                 parse_source_id(row[source_columns[0]]),
+             ))
+         index += 1
+@@ -223,7 +315,8 @@ def parse_map_text(text):
+         fail("unsupported_map", "JSON facts section has multiple or non-contiguous tables")
+     if not rows:
+         fail("unsupported_map", "JSON facts table has no obligation rows")
+-    return rows
++    declared, malformed = declared_inventory(lines)
++    return rows, declared, malformed, editorial_row_count(lines)
+ 
+ 
+ def parse_map(path):
+@@ -261,10 +354,19 @@ def source_value(value, context):
+     return value
+ 
+ 
++def claim_shaped(record):
++    return (
++        isinstance(record, dict)
++        and isinstance(record.get("statement"), str) and record["statement"] != ""
++        and isinstance(record.get("source_id"), str) and record["source_id"] != ""
++    )
++
++
+ def raw_obligations_values(entities, relations, timeline):
+     if not isinstance(entities, list) or not isinstance(relations, list) or not isinstance(timeline, list):
+         fail("invalid_raw_data", "entities, relations, and timeline roots must be arrays")
+     obligations = {}
++    findings = []
+ 
+     def add(pointer, source_id):
+         if pointer in obligations:
+@@ -275,6 +377,15 @@ def raw_obligations_values(entities, relations, timeline):
+         if not isinstance(entity, dict):
+             fail("invalid_raw_data", f"entities/{entity_index} must be an object")
+         prefix = f"entities.json#/{entity_index}"
++        for key, value in entity.items():
++            if key == "claims" or not isinstance(value, list) or not value:
++                continue
++            shaped = sum(1 for record in value if claim_shaped(record))
++            if shaped:
++                findings.append((
++                    "schema_drift",
++                    f"{prefix}: {shaped} sourced-claim-shaped record(s) under unexpected key {key!r}",
++                ))
+         add(prefix + "/first_appearance",
+             source_value(entity.get("first_appearance"), prefix + "/first_appearance"))
+         claims = entity.get("claims", [])
+@@ -291,7 +402,7 @@ def raw_obligations_values(entities, relations, timeline):
+                 fail("invalid_raw_data", f"{filename}/{record_index} must be an object")
+             pointer = f"{filename}#/{record_index}"
+             add(pointer, source_value(record.get("source_id"), pointer + "/source_id"))
+-    return obligations
++    return obligations, findings
+ 
+ 
+ def raw_obligations(cluster):
+@@ -324,10 +435,11 @@ def compare(obligations, rows):
+ def run_cluster(cluster_value, map_value=None):
+     cluster = resolve_cluster(cluster_value)
+     map_path = resolve_map(cluster, map_value)
+-    rows = parse_map(map_path)
+-    obligations = raw_obligations(cluster)
+-    findings = compare(obligations, rows)
++    rows, declared, malformed, editorial_rows = parse_map(map_path)
++    obligations, drift_findings = raw_obligations(cluster)
++    findings = [*drift_findings, *compare(obligations, rows)]
+     print(f"OBLIGATIONS raw={len(obligations)} mapped={len(rows)}")
++    print_inventory_receipt(declared, malformed, len(rows), editorial_rows)
+     return emit(1 if findings else 0, findings)
+ 
+ 
+@@ -417,13 +529,13 @@ def run_frozen(value):
+     print(f"SNAPSHOT inputs={len(FROZEN_INPUTS)} digests=verified")
+     try:
+         map_text = contents[FROZEN_MAP].decode("utf-8")
+-        rows = parse_map_text(map_text)
+-        obligations = raw_obligations_values(
++        rows, declared, malformed, editorial_rows = parse_map_text(map_text)
++        obligations, drift_findings = raw_obligations_values(
+             parse_frozen_json(contents, "entities.json"),
+             parse_frozen_json(contents, "relations.json"),
+             parse_frozen_json(contents, "timeline.json"),
+         )
+-        findings = compare(obligations, rows)
++        findings = [*drift_findings, *compare(obligations, rows)]
+         code = 1 if findings else 0
+     except UnicodeError as error:
+         findings = [("map_unreadable", f"frozen map is not UTF-8: {error}")]
+@@ -441,6 +553,7 @@ def run_frozen(value):
+         return emit(2, [mismatch])
+     if code != 2:
+         print(f"OBLIGATIONS raw={len(obligations)} mapped={len(rows)}")
++        print_inventory_receipt(declared, malformed, len(rows), editorial_rows)
+     print(f"FROZEN expected={RESULTS[expected_code]}/{expected_code} findings={expected_ids or 'none'} matched")
+     return emit(code, findings)
+ 
+@@ -522,7 +635,7 @@ def prepare_test_case(case_name, cluster):
+     rows = test_rows()
+     pointer_overrides = {}
+     write_test_fixture(cluster, rows)
+-    if case_name == "complete":
++    if case_name in {"complete", "invalid_arguments"}:
+         return
+     if case_name == "missing":
+         rows = rows[:-1]
+@@ -535,6 +648,9 @@ def prepare_test_case(case_name, cluster):
+     elif case_name == "malformed_json":
+         (cluster / "entities.json").write_text("{", encoding="utf-8")
+         return
++    elif case_name == "map_missing":
++        (cluster / "claim-excerpt-map.md").unlink()
++        return
+     elif case_name == "co_mapped_grammar":
+         pointer_overrides[0] = "`entities.json#/0/first_appearance; relations.json#/0`"
+     elif case_name == "legacy_grammar":
+@@ -609,6 +725,8 @@ def run_self_test():
+                 command = [sys.executable, str(Path(__file__).resolve())]
+                 if case_name.startswith("frozen_"):
+                     command.extend(["--frozen", str(cluster)])
++                elif case_name == "invalid_arguments":
++                    pass
+                 else:
+                     command.append(str(cluster))
+                 try:

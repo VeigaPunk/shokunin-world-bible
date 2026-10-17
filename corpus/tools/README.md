@@ -97,3 +97,23 @@ python3 corpus/tools/map_obligations.py --frozen .ufo/waves/round-94/frozen/map-
 ```
 
 The tool enumerates raw source-attributed obligations (entity `first_appearance` and each claim, relations, timeline events) and compares them one-to-one with canonical `file.json#/pointer` rows in the cluster's Markdown map. Exit contract: `0` clean; `1` failed comparison; `2` could-not-evaluate (unsupported map grammar, malformed raw JSON, invalid paths, usage errors). One terminal RESULT line on operational paths; note `--help` exits 0 with zero RESULT lines, so exit 0 alone is not a PASS. It closes the lexical blind spot where `support_check` PASSes although a raw JSON claim has no map row (demonstrated at round 94 on scratch copies); it does not judge textual entailment, delivery mode, source authentication, chronology, rights, permission, or canon. Self-test scratch is created under the repository root and is not gitignored (bounded residual BR-05, relocation candidate for r95). Expected exits and finding IDs are persisted in `corpus/tools/map-obligations-contract.json`; the frozen r93 snapshot pins four input digests under `.ufo/waves/round-94/frozen/map-obligations-r93/expected.json`.
+
+### Round-95 addendum: `schema_drift`, 22-case self-test, r88 map dialect (2026-10-17)
+
+This addendum extends the r94 instructions above; every earlier sentence remains as delivered history, including the open r94 residual BR-05 (the self-test scratch still lives under the repository root and is not gitignored — unchanged in r95).
+
+#### Schema-drift class (closes r94 bounded residual BR-02)
+
+Before: renaming an entity's `claims` container (claim content preserved) and removing that claim's map row produced `OBLIGATIONS raw=13 mapped=13` / `RESULT PASS`, exit 0 — a silent pass. The delivered revision treats a non-empty list of sourced-claim-shaped records (objects carrying non-empty `statement` and `source_id`) under an unexpected key on an entity object as schema drift. The same mutation on a scratch copy of `corpus/fixtures/r94-paired-crossing` now prints `FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'` and exits 1; `schema_drift` is the stable FINDING ID. Keeping the map row while renaming the key reports `phantom_obligation` and `schema_drift` together, still exit 1. The check is bounded to entity claim containers: it is not general JSON-schema or unknown-key validation.
+
+#### Persisted self-test: 22 cases
+
+`corpus/tools/map-obligations-contract.json` now persists 22 expectations: the 20 r94 cases plus `map_missing` (raw tables present, no conventional map file → exit 2, `FINDING map_missing`) and `invalid_arguments` (usage error, exercised with no cluster argument → exit 2, `FINDING invalid_arguments`). The tool compares the persisted case set with the implemented cases, not their order.
+
+```sh
+python3 corpus/tools/map_obligations.py --self-test   # 22 SELF-TEST PASS lines / RESULT PASS, exit 0
+```
+
+#### r88 map dialect (coverage; corpus unmodified)
+
+`python3 corpus/tools/map_obligations.py corpus/fixtures/r88-m3-maya-cluster` now exits 0 with `OBLIGATIONS raw=10 mapped=10`, `INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12`, `RESULT PASS`. The dialect is enabled only by a JSON-facts pointer column whose normalized header is `JSON fact and fields` (the r88 map form); each row then carries one inline-code field-path token — `entities[i].first_appearance`, `entities[i].claims[j]`, `relations[i]`, or `timeline[i]` — which is translated to the canonical pointer before comparison. Canonical `file.json#/pointer` cells remain accepted in that table; field-path tokens are not accepted under a canonical header (the `legacy_grammar` self-test case stays exit 2 `unsupported_map`). Other legacy forms stay fail-closed: `corpus/fixtures/r87-myth-cluster` (co-mapped pointer cells) and `corpus/fixtures/r89-inspiration-paraphrase` both exit 2 `unsupported_map`. The r93 example (12/12) and r94 example (14/14) above, and the frozen r93 replay, remain `RESULT PASS` exit 0; those runs now print one additional `INVENTORY JSON-FACTS a/b; EDITORIAL-ROWS c/d; TOTAL-ROWS e/f` line when the map declares an `**Expected inventory:**`, so the r94 receipts above gain that line but keep their `OBLIGATIONS` and `RESULT` lines and exit codes. The inventory line is a receipt, not a gate: a declared count that disagrees with the parsed rows appends ` MISMATCH` to that line but does not by itself change the exit code, which only findings drive.

@@ -1,0 +1,5 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/tool-snap-9224a684.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/base
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+RESULT PASS
+EXIT=0

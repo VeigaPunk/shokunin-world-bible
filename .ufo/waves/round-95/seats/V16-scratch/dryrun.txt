@@ -1,0 +1,276 @@
+# V16 scratch root: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch
+# before: live fixture SHA-256
+  9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b  README.md
+  30281ff1a497bbe66f23cbd8a49befb3319595f20990718a0ffe8050741a874a  claim-excerpt-map.md
+  37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570  contradictions.json
+  026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b  entities.json
+  0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282  fictional-excerpts.md
+  58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37  inspiration-note.md
+  c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9  relations.json
+  b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd  source-excerpt.md
+  fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a  sources.json
+  3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177  timeline.json
+# extracted git-baseline tool -> /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/map_obligations_OLD.py
+# delivered tool sha256 cc1df4dc406870b6fc4ddbc3291e3690cf87dfb061f76ec3b4fec5cfcfbab790
+# git-baseline tool sha256 cc1df4dc406870b6fc4ddbc3291e3690cf87dfb061f76ec3b4fec5cfcfbab790
+
+### baseline check_bible (live)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath
+CLEAN: schema, citations, relations, timeline; 0 violations
+[exit=0]
+
+### baseline support_check (live)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17; DISTINCT-ANCHORS 13/13
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 15; EDITORIAL-ROWS 2; TOTAL-ROWS 17
+SOURCE-SUPPORT 15/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 17/17
+RESULT PASS
+[exit=0]
+
+### baseline map_obligations delivered (live)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath
+OBLIGATIONS raw=15 mapped=15
+RESULT PASS
+[exit=0]
+
+### baseline map_obligations git-baseline fb118c4 (live)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/map_obligations_OLD.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath
+OBLIGATIONS raw=15 mapped=15
+RESULT PASS
+[exit=0]
+# broke span for timeline.json#/3: 22-31 -> 32 (anchor hit at line 26)
+
+### mut-c-break-span support_check (expect FAIL)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-c-break-span
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17; DISTINCT-ANCHORS 13/13
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+FAIL J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.; span=32; outside-span=26
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 15; EDITORIAL-ROWS 2; TOTAL-ROWS 17
+SOURCE-SUPPORT 14/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 16/17
+FAIL: J15: anchor hit outside declared line span 32 (hit lines: 26)
+RESULT FAIL
+[exit=1]
+
+### mut-c-break-span map_obligations
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-c-break-span
+OBLIGATIONS raw=15 mapped=15
+RESULT PASS
+[exit=0]
+
+### mut-c-break-span check_bible
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-c-break-span
+CLEAN: schema, citations, relations, timeline; 0 violations
+[exit=0]
+# removing map row containing 'timeline.json#/3': | J15 | `timeline.json#/3` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `aru-aftermath-note` | `r95-crossing-aftermath:aru-aftermath-note` | `fictional-excerpts.md` | 22-31 | `verbatim` | `Tick 11: I waited at the Chalk Stair through the agreed bell.` |
+# restated inventory -> 14 JSON facts; 2 editorial rows; 16 total; 12 anchors
+
+### mut-b-drop-new-row support_check (expect PASS: blind spot)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-b-drop-new-row
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16; DISTINCT-ANCHORS 12/12
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 14; EDITORIAL-ROWS 2; TOTAL-ROWS 16
+SOURCE-SUPPORT 14/14; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 16/16; VALIDATED-ROWS 16/16
+RESULT PASS
+[exit=0]
+
+### mut-b-drop-new-row map_obligations (expect FAIL missing_obligation)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-b-drop-new-row
+OBLIGATIONS raw=15 mapped=14
+FINDING missing_obligation: timeline.json#/3 has no map row
+RESULT FAIL
+[exit=1]
+
+### mut-b-drop-new-row check_bible
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-b-drop-new-row
+CLEAN: schema, citations, relations, timeline; 0 violations
+[exit=0]
+# removing map row containing 'entities.json#/0/claims/0': | J06 | `entities.json#/0/claims/0` (`statement`, `source_id`) | `paired-clock` | `r95-crossing-aftermath:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Tick 9: Aru carried the north lantern at Quiet Rise.` |
+# restated inventory -> 14 JSON facts; 2 editorial rows; 16 total; 12 anchors
+
+### mut-b2-drop-inherited-row support_check (expect PASS: blind spot)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-b2-drop-inherited-row
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16; DISTINCT-ANCHORS 12/12
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 14; EDITORIAL-ROWS 2; TOTAL-ROWS 16
+SOURCE-SUPPORT 14/14; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 16/16; VALIDATED-ROWS 16/16
+RESULT PASS
+[exit=0]
+
+### mut-b2-drop-inherited-row map_obligations (expect FAIL missing_obligation)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-b2-drop-inherited-row
+OBLIGATIONS raw=15 mapped=14
+FINDING missing_obligation: entities.json#/0/claims/0 has no map row
+RESULT FAIL
+[exit=1]
+# timeline.json aftermath-missing-evin source_id 'aru-aftermath-note' -> 'crossing-minute'
+
+### mut-d-source-id map_obligations (expect FAIL source_id_mismatch)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-d-source-id
+OBLIGATIONS raw=15 mapped=15
+FINDING source_id_mismatch: timeline.json#/3 does not bind to 'crossing-minute'
+RESULT FAIL
+[exit=1]
+
+### mut-d-source-id support_check
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-d-source-id
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17; DISTINCT-ANCHORS 13/13
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 15; EDITORIAL-ROWS 2; TOTAL-ROWS 17
+SOURCE-SUPPORT 15/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 17/17
+RESULT PASS
+[exit=0]
+
+### mut-d-source-id check_bible
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-d-source-id
+CLEAN: schema, citations, relations, timeline; 0 violations
+[exit=0]
+# entities.json: 5th "claims" key renamed to "assertions" (content preserved)
+# removing map row containing 'entities.json#/4/claims/0': | J10 | `entities.json#/4/claims/0` (`statement`, `source_id`) | `crossing-minute` | `r95-crossing-aftermath:crossing-minute` | `fictional-excerpts.md` | 18 | `verbatim` | `After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.` |
+# restated inventory -> 14 JSON facts; 2 editorial rows; 16 total; 12 anchors
+
+### mut-e-schema-drift map_obligations delivered (expect FAIL schema_drift)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-e-schema-drift
+OBLIGATIONS raw=14 mapped=14
+RESULT PASS
+[exit=0]
+
+### mut-e-schema-drift map_obligations git-baseline (expect silent PASS)
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/map_obligations_OLD.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-e-schema-drift
+OBLIGATIONS raw=14 mapped=14
+RESULT PASS
+[exit=0]
+
+### mut-e-schema-drift support_check
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-e-schema-drift
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16; DISTINCT-ANCHORS 12/12
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 14; EDITORIAL-ROWS 2; TOTAL-ROWS 16
+SOURCE-SUPPORT 14/14; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 16/16; VALIDATED-ROWS 16/16
+RESULT PASS
+[exit=0]
+
+### mut-e-schema-drift check_bible
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V16-scratch/mut-e-schema-drift
+VIOLATION: entities[4].claims: required nonempty list
+VIOLATION: timeline[2].place_id: dangling entity 'chalk-stair'
+VIOLATION: timeline[3].place_id: dangling entity 'chalk-stair'
+3 violation(s); no canon changed
+[exit=1]
+# after: live fixture SHA-256
+  9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b  README.md
+  30281ff1a497bbe66f23cbd8a49befb3319595f20990718a0ffe8050741a874a  claim-excerpt-map.md
+  37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570  contradictions.json
+  026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b  entities.json
+  0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282  fictional-excerpts.md
+  58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37  inspiration-note.md
+  c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9  relations.json
+  b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd  source-excerpt.md
+  fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a  sources.json
+  3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177  timeline.json
+# live fixture byte-identical before==after: True
+
+### git status after all runs
+$ git status --short
+ M LOG.md
+?? .ufo/waves/round-95/
+?? corpus/fixtures/r95-crossing-aftermath/
+[exit=0]

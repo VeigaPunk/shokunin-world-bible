@@ -1,0 +1,111 @@
+== identity ==
+d31b8182953e9088a155f4ed2978af5b  corpus/tools/map_obligations.py
+882eeebdeb2ac6ea05a8cdb1afff7ba3  .ufo/waves/round-95/seats/V37-scratch/map_obligations_baseline.py
+ corpus/tools/map-obligations-contract.json |   9 +-
+ corpus/tools/map_obligations.py            | 142 ++++++++++++++++++++++++++---
+ 2 files changed, 138 insertions(+), 13 deletions(-)
+== full battery (new) ==
+      4 rc=0
+    165 rc=2
+-- battery diff vs baseline --
+133c133
+< corpus/fixtures/r87-myth-cluster	rc=2	FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column~RESULT ERROR~
+---
+> corpus/fixtures/r87-myth-cluster	rc=2	FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer~RESULT ERROR~
+141c141
+< corpus/fixtures/r88-m3-maya-cluster	rc=2	FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column~RESULT ERROR~
+---
+> corpus/fixtures/r88-m3-maya-cluster	rc=0	OBLIGATIONS raw=10 mapped=10~INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12~RESULT PASS~
+164,166c164,166
+< corpus/fixtures/r93-m2-kojiki-cluster	rc=0	OBLIGATIONS raw=12 mapped=12~RESULT PASS~
+< corpus/fixtures/r94-paired-crossing	rc=0	OBLIGATIONS raw=14 mapped=14~RESULT PASS~
+< corpus/fixtures/r95-crossing-aftermath	rc=2	FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+---
+> corpus/fixtures/r93-m2-kojiki-cluster	rc=0	OBLIGATIONS raw=12 mapped=12~INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15~RESULT PASS~
+> corpus/fixtures/r94-paired-crossing	rc=0	OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+> corpus/fixtures/r95-crossing-aftermath	rc=0	OBLIGATIONS raw=15 mapped=15~INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17~RESULT PASS~
+== scratch fixtures (new) ==
+ctrl-row-removed-only              rc=1 | OBLIGATIONS raw=14 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING missing_obligation: entities.json#/0/claims/0 has no map row~RESULT FAIL~
+legit-claims-absent                rc=0 | OBLIGATIONS raw=1 mapped=1~RESULT PASS~
+legit-empty-claims                 rc=0 | OBLIGATIONS raw=1 mapped=1~RESULT PASS~
+legit-extra-dict-key               rc=0 | OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+legit-extra-scalar-key             rc=0 | OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+legit-notes-r93                    rc=0 | OBLIGATIONS raw=12 mapped=12~INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15~RESULT PASS~
+legit-provenance                   rc=0 | OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+legit-provenance-r93               rc=0 | OBLIGATIONS raw=12 mapped=12~INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15~RESULT PASS~
+legit-relation-extra-key           rc=0 | OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+legit-timeline-extra-key           rc=0 | OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+legit-unknown-list-nosource        rc=0 | OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+mut-claims-renamed                 rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_records'~RESULT FAIL~
+mut-first-appearance-renamed       rc=2 | FINDING invalid_raw_data: entities.json#/0/first_appearance must contain a non-empty source ID~RESULT ERROR~
+mut-relation-src-renamed           rc=2 | FINDING invalid_raw_data: relations.json#/0/source_id must contain a non-empty source ID~RESULT ERROR~
+mut-rename-assertions              rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'~RESULT FAIL~
+mut-rename-claim-list              rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim-list'~RESULT FAIL~
+mut-rename-claim_records           rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_records'~RESULT FAIL~
+mut-rename-entries                 rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'entries'~RESULT FAIL~
+mut-rename-records                 rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'records'~RESULT FAIL~
+mut-rename-row-kept                rc=1 | OBLIGATIONS raw=13 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~FINDING phantom_obligation: entities.json#/0/claims/0 is not a raw source-attributed obligation~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'~RESULT FAIL~
+mut-timeline-src-renamed           rc=2 | FINDING invalid_raw_data: timeline.json#/0/source_id must contain a non-empty source ID~RESULT ERROR~
+== dialect probes (new) ==
+bare-index               rc=2 | FINDING unsupported_map: co-mapped or unsupported pointer grammar~RESULT ERROR~
+canonical                rc=0 | OBLIGATIONS raw=3 mapped=3~RESULT PASS~
+claim                    rc=1 | OBLIGATIONS raw=3 mapped=3~FINDING duplicate_mapping: entities.json#/0/claims/0 appears 2 times~FINDING missing_obligation: entities.json#/0/first_appearance has no map row~RESULT FAIL~
+claim-noncanonical       rc=2 | FINDING unsupported_map: co-mapped or unsupported pointer grammar~RESULT ERROR~
+dotpath-nofile           rc=2 | FINDING unsupported_map: co-mapped or unsupported pointer grammar~RESULT ERROR~
+field-suffix             rc=2 | FINDING unsupported_map: co-mapped or unsupported pointer grammar~RESULT ERROR~
+noncanonical-index       rc=2 | FINDING unsupported_map: co-mapped or unsupported pointer grammar~RESULT ERROR~
+out-of-range             rc=1 | OBLIGATIONS raw=3 mapped=3~FINDING missing_obligation: entities.json#/0/first_appearance has no map row~FINDING phantom_obligation: entities.json#/9/first_appearance is not a raw source-attributed obligation~RESULT FAIL~
+timeline-bracket         rc=1 | OBLIGATIONS raw=3 mapped=3~FINDING duplicate_mapping: timeline.json#/0 appears 2 times~FINDING missing_obligation: entities.json#/0/first_appearance has no map row~RESULT FAIL~
+trailing-prose           rc=0 | OBLIGATIONS raw=3 mapped=3~RESULT PASS~
+two-tokens               rc=2 | FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer~RESULT ERROR~
+unknown-field            rc=2 | FINDING unsupported_map: co-mapped or unsupported pointer grammar~RESULT ERROR~
+== self-test ==
+SELF-TEST PASS complete exit=0 findings=none
+SELF-TEST PASS missing exit=1 findings=['missing_obligation']
+SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']
+SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']
+SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']
+SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']
+SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']
+SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_complete exit=0 findings=none
+SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']
+SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']
+SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+RESULT PASS
+self-test rc=0
+== frozen r93 replay ==
+SNAPSHOT inputs=4 digests=verified
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+FROZEN expected=PASS/0 findings=none matched
+RESULT PASS
+frozen rc=0
+== arg probes ==
+nomap rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+self-test+cluster rc=2 | FINDING invalid_arguments: --self-test cannot be combined with cluster, --map, or --frozen~RESULT ERROR~
+unknown-flag rc=2 | FINDING invalid_arguments: unrecognized arguments: --bogus~RESULT ERROR~
+no-args rc=2 | FINDING invalid_arguments: cluster directory is required~RESULT ERROR~
+help rc=0 resultlines=0
+frozen+cluster rc=2 | FINDING invalid_arguments: --frozen cannot be combined with cluster or --map~RESULT ERROR~
+== mutation demo (old vs new, twice for stability) ==
+old run1 rc=0 | OBLIGATIONS raw=13 mapped=13~RESULT PASS~
+new run1 rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_records'~RESULT FAIL~
+old run2 rc=0 | OBLIGATIONS raw=13 mapped=13~RESULT PASS~
+new run2 rc=1 | OBLIGATIONS raw=13 mapped=13~INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH~FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_records'~RESULT FAIL~
+== contract json ==
+cases: 22
+ids: ['complete', 'missing', 'duplicate', 'phantom', 'source_id_mismatch', 'malformed_json', 'co_mapped_grammar', 'legacy_grammar', 'invalid_pointer', 'empty_segment', 'noncanonical_index', 'noncanonical_claim_index', 'foreign_path', 'traversal_path', 'symlink_path', 'frozen_complete', 'frozen_tampered', 'frozen_missing_digests', 'frozen_expected_failure', 'frozen_verdict_mismatch', 'map_missing', 'invalid_arguments']
+== stdlib-only ==
+imports: ['argparse', 'collections', 'hashlib', 'json', 'os', 'pathlib', 're', 'subprocess', 'sys', 'tempfile']
+non-stdlib: []

@@ -1,0 +1,41 @@
+# V44 canonical r13/r16/r17/r19/r20 reference runs (current checker, HEAD fb118c4, checker sha 20c56dbb90d9f59ca4fb85971154c0774f5ce0d0)
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r13-missing-actor
+VIOLATION: timeline[0].entity_id: dangling entity 'unlisted'
+VIOLATION: timeline[1].entity_id: dangling entity 'unlisted'
+2 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r16-missing-first
+VIOLATION: timeline[0].place_id: dangling entity 'unlisted'
+1 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r17-wrong-first
+VIOLATION: timeline[0].place_id: not a place 'mira'
+VIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[1] ('harbor') and 'tower'
+2 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r18-mixed-kind
+VIOLATION: entities[4].id: duplicate entities id 'harbor'
+VIOLATION: timeline[1].place_id: ambiguous place entity 'harbor'
+2 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r19-negative-tick
+VIOLATION: timeline[0].tick: must be nonnegative
+VIOLATION: timeline[1].tick: must be nonnegative
+2 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r20-both-negative
+VIOLATION: timeline[0].tick: must be nonnegative
+VIOLATION: timeline[1].tick: must be nonnegative
+2 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r20-negative-dependent
+VIOLATION: timeline[1].tick: must be nonnegative
+1 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r20-negative-prereq
+VIOLATION: timeline[0].tick: must be nonnegative
+1 violation(s); no canon changed
+exit=1
+=== python3 corpus/fixtures/check_bible.py corpus/fixtures/r20-valid-order
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit=0

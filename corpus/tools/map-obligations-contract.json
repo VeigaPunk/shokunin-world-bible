@@ -16,6 +16,11 @@
       "timeline.json"
     ]
   },
+  "legacy_pointer_dialect": {
+    "enabled_by": "pointer column whose normalized header is 'JSON fact and fields' (the r88 map form)",
+    "pointer": "one inline-code field-path token per row: entities[i].first_appearance, entities[i].claims[j], relations[i], or timeline[i]; translated to the canonical pointer before comparison",
+    "fallback": "canonical file.json#/pointer cells remain accepted in a legacy-header table; field-path tokens are not accepted under a canonical header"
+  },
   "exit_codes": {
     "0": "PASS",
     "1": "FAIL",
@@ -42,7 +47,9 @@
       {"id": "frozen_tampered", "exit": 2, "finding_ids": ["snapshot_tampered"]},
       {"id": "frozen_missing_digests", "exit": 2, "finding_ids": ["unpinned"]},
       {"id": "frozen_expected_failure", "exit": 1, "finding_ids": ["missing_obligation"]},
-      {"id": "frozen_verdict_mismatch", "exit": 2, "finding_ids": ["frozen_verdict_mismatch"]}
+      {"id": "frozen_verdict_mismatch", "exit": 2, "finding_ids": ["frozen_verdict_mismatch"]},
+      {"id": "map_missing", "exit": 2, "finding_ids": ["map_missing"]},
+      {"id": "invalid_arguments", "exit": 2, "finding_ids": ["invalid_arguments"]}
     ]
   }
 }

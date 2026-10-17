@@ -1,0 +1,3 @@
+3ad4e810c56e737d505a1963dfb1ffe23498045f5d81d8810e2ce6b779876f1a  corpus/fixtures/r87-myth-cluster/claim-excerpt-map.md
+b3b79fe5b5b9272b898b5714291739503c4250c415b3959032fcdba84a73fd43  corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md
+55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c  corpus/tools/support_check.py

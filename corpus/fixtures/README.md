@@ -1173,3 +1173,24 @@ Structural CLEAN is structural only; the support receipt is lexical/map-declared
 A full repo-relative corpus run at the r94 delivered revision observed **168 fixture directories: 34 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero stderr**. This supersedes the r93 snapshot counts in this file's Round-93 section (167/33/134/421) as a measured statement at this revision, not a pinned invariant.
 
 Dated pin note: this Round-94 append changed this file's bytes. The W05 preservation pin for this file recorded at `.ufo/waves/round-94/work/W05-baseline-corpus.sha256` (`a13d1af3…`) no longer matches; the other 983 pins of that baseline are unaffected. The census above is measured at the delivered candidate revision; see the round-94 LOG closure entry.
+
+## Round 95 — `r95-crossing-aftermath` (2026-10-17)
+
+Added at round 95: a preserving continuation of `r94-paired-crossing`. Aru's authored aftermath note (`aru-aftermath-note`) supports one tick-11 event (`aftermath-missing-evin`, actor `aru`, place `chalk-stair`, `depends_on: ["paired-crossing-decision"]`) reporting that Evin did not come through the agreed bell. The record is scoped to the crossing-only agreement and asserts no other duty or breach. Inherited r94 records are parsed-value identical; the r94 fixture itself is untouched. Map: 15 obligations (14 inherited rows unchanged + the new event row); support receipt 15 JSON facts + 2 editorial rows.
+
+Replay commands and receipts (measured at the r95 closure, HEAD cited in LOG.md):
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r95-crossing-aftermath
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r95-crossing-aftermath
+# OBLIGATIONS raw=15 mapped=15; INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17 / RESULT PASS   exit 0
+```
+
+Round 95 also extended `map_obligations` (see the tools README Round-95 addendum): the `schema_drift` class (renamed claims key + removed map row → exit 1, stable FINDING), two new persisted self-test cases (`map_missing`, `invalid_arguments`; 22 total), and the r88-m3 legacy map dialect (`raw=10 mapped=10`, `TOTAL-ROWS 12/12`) with r87/r89 forms still fail-closed at exit 2.
+
+### 2026-10-17 census re-declaration
+
+A full repo-relative corpus run at the r95 closure observed **169 fixture directories: 35 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. This supersedes the Round-94 census (168/34/134/421) as a measured statement at this revision, not a pinned invariant. One directory was added (`r95-crossing-aftermath`); zero inherited tuples changed.
+
+Dated pin note: this Round-95 append changes this file's bytes; the W05 preservation pin recorded at `.ufo/waves/round-94/work/W05-baseline-corpus.sha256` for this file no longer matches (second consecutive round; the census re-declaration above is the measured state at closure).

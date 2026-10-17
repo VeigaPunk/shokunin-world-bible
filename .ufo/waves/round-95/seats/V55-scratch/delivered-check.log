@@ -1,0 +1,105 @@
+### 0. artifact identity
+d1c239ccb21404490bfe120a8c8de45af89265437d5be53fb712ff27e4212108  corpus/tools/map_obligations.py
+8173bb97592a377716866737e8fcb4043014c9814e77a6248500d301a39170db  corpus/tools/map-obligations-contract.json
+ corpus/tools/map-obligations-contract.json |   9 +-
+ corpus/tools/map_obligations.py            | 142 ++++++++++++++++++++++++++---
+ 2 files changed, 138 insertions(+), 13 deletions(-)
+
+### 1. delivered on scratch clusters
+--- delivered on control-pristine ---
+OBLIGATIONS raw=14 mapped=14
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
+RESULT PASS
+exit=0
+--- delivered on mut1-rename0-removerow ---
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_list'
+RESULT FAIL
+exit=1
+--- delivered on mut2-rename2-removerow ---
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+FINDING schema_drift: entities.json#/2: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
+RESULT FAIL
+exit=1
+--- delivered on mut3-rename0-keeprow ---
+OBLIGATIONS raw=13 mapped=14
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
+FINDING phantom_obligation: entities.json#/0/claims/0 is not a raw source-attributed obligation
+FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_list'
+RESULT FAIL
+exit=1
+--- delivered on mut4-benign-extrakey ---
+OBLIGATIONS raw=14 mapped=14
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
+RESULT PASS
+exit=0
+--- delivered on mut5-rename-firstappearance ---
+FINDING invalid_raw_data: entities.json#/0/first_appearance must contain a non-empty source ID
+RESULT ERROR
+exit=2
+
+### 1b. mut1 repeated (stability)
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_list'
+RESULT FAIL
+exit=1
+mut1_run_a=17a8bf6e68f7e010c5b8b9a38f282dd3f6a0c06adf3476aba872606c9b9ec7a1 mut1_run_b=17a8bf6e68f7e010c5b8b9a38f282dd3f6a0c06adf3476aba872606c9b9ec7a1 identical=yes
+
+### 2. delivered unchanged-behavior fixtures
+--- delivered on r93-m2-kojiki-cluster ---
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+RESULT PASS
+exit=0
+--- delivered on r94-paired-crossing ---
+OBLIGATIONS raw=14 mapped=14
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
+RESULT PASS
+exit=0
+--- delivered on r87-myth-cluster ---
+FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer
+RESULT ERROR
+exit=2
+--- delivered on r89-inspiration-paraphrase ---
+FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column
+RESULT ERROR
+exit=2
+--- delivered on r88-m3-maya-cluster ---
+OBLIGATIONS raw=10 mapped=10
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+RESULT PASS
+exit=0
+
+### 3. frozen r93 replay
+SNAPSHOT inputs=4 digests=verified
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+FROZEN expected=PASS/0 findings=none matched
+RESULT PASS
+exit=0
+
+### 4. self-test
+self_test_exit=0
+selftest_lines=22
+selftest_pass=22
+stderr_bytes=0
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+RESULT PASS
+
+### 5. contract JSON
+case_count: 22
+ids: ['complete', 'missing', 'duplicate', 'phantom', 'source_id_mismatch', 'malformed_json', 'co_mapped_grammar', 'legacy_grammar', 'invalid_pointer', 'empty_segment', 'noncanonical_index', 'noncanonical_claim_index', 'foreign_path', 'traversal_path', 'symlink_path', 'frozen_complete', 'frozen_tampered', 'frozen_missing_digests', 'frozen_expected_failure', 'frozen_verdict_mismatch', 'map_missing', 'invalid_arguments']
+map_missing -> [{'id': 'map_missing', 'exit': 2, 'finding_ids': ['map_missing']}]
+invalid_arguments -> [{'id': 'invalid_arguments', 'exit': 2, 'finding_ids': ['invalid_arguments']}]
+
+### 6. tool self-test case tuple count
+24
+SELF_TEST_CASES: 22 ['complete', 'missing', 'duplicate', 'phantom', 'source_id_mismatch', 'malformed_json', 'map_missing', 'co_mapped_grammar', 'legacy_grammar', 'invalid_pointer', 'empty_segment', 'noncanonical_index', 'noncanonical_claim_index', 'foreign_path', 'traversal_path', 'symlink_path', 'invalid_arguments', 'frozen_complete', 'frozen_tampered', 'frozen_missing_digests', 'frozen_expected_failure', 'frozen_verdict_mismatch']
+
+### 7. leftover scratch check under repo root
+map-obligations-self-test-s_dovblw
