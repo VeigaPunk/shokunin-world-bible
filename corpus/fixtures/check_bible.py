@@ -183,8 +183,16 @@ def check(directory):
         can_check_chain = sources_available and item['kind'] == 'item' and entity_id_counts[item['id']] == 1
         chain_has_ambiguous_source = False
         holder_ambiguity_notice_emitted = False
+        holder_ambiguity_stop = None
         for i, record in enumerate(records):
             record_label = f'{label}[{i}]'
+            if holder_ambiguity_stop is not None:
+                origin_label, ambiguous_holder_references = holder_ambiguity_stop
+                cause = ', '.join(
+                    f'{field} {holder_id!r}'
+                    for field, holder_id in ambiguous_holder_references
+                )
+                errors.append(f'{record_label}: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity {cause} first occurred at {origin_label}')
             if not isinstance(record, dict):
                 errors.append(f'{record_label}: expected object')
                 previous_holder = previous_tick = None
@@ -202,6 +210,7 @@ def check(directory):
             source_id = record['source_id']
             valid = True
             record_holder_ambiguous = False
+            ambiguous_holder_references = []
             if type(tick) is not int or tick < 0:
                 errors.append(f'{record_label}.tick: required nonnegative integer')
                 valid = False
@@ -217,6 +226,7 @@ def check(directory):
             elif entity_id_counts[to_holder] != 1:
                 errors.append(f'{record_label}.to_holder: ambiguous entity {to_holder!r}')
                 record_holder_ambiguous = True
+                ambiguous_holder_references.append(('to_holder', to_holder))
                 valid = False
             if from_holder is not None:
                 if not isinstance(from_holder, str) or not from_holder.strip():
@@ -227,10 +237,17 @@ def check(directory):
                 elif entity_id_counts[from_holder] != 1:
                     errors.append(f'{record_label}.from_holder: ambiguous entity {from_holder!r}')
                     record_holder_ambiguous = True
+                    ambiguous_holder_references.append(('from_holder', from_holder))
                     valid = False
             if record_holder_ambiguous and not holder_ambiguity_notice_emitted:
                 errors.append(f'{record_label}: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous')
                 holder_ambiguity_notice_emitted = True
+                holder_ambiguity_stop = (record_label, tuple(ambiguous_holder_references))
+                cause = ', '.join(
+                    f'{field} {holder_id!r}'
+                    for field, holder_id in ambiguous_holder_references
+                )
+                errors.append(f'{record_label}: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity {cause} first occurred at {record_label}')
             if not isinstance(source_id, str) or not source_id.strip():
                 errors.append(f'{record_label}.source_id: required nonempty source id')
                 valid = False
