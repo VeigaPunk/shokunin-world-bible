@@ -1,0 +1,72 @@
+{
+  "seat": "P2",
+  "wave": "lore round-92 follow-up",
+  "deliverable": ".ufo/waves/round-92/followup/P2.md",
+  "baseline_commit": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+  "delivered_commit": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "work_commits": ["c4d4823b9a8165a88e8199af136e62d6e961b6b9"],
+  "checker_sha256_delivered": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "checker_sha256_396c568": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "checker_changed_this_round": false,
+  "verdicts_proposed": {
+    "depth": {
+      "verdict": "improved (bounded)",
+      "boundary_doc": {
+        "delivered_sha256": "8e1fe8774a70f06c31efd783b4313a1639c1da4bcfd830be92134e8964536728",
+        "delivered_lines": 671,
+        "diff_numstat_396c568_to_c4d4823": "282 insertions / 160 deletions",
+        "patch_applied": "patches/D2-boundary-doc.md applied exactly (git apply --check --reverse clean; reverse-apply reproduces c0c59daf 549-line reconstruction)",
+        "gate_a_checker_pin": "PASS",
+        "gate_b_replay": {"receipts": "3/3", "cases": "14/14"},
+        "gate_c_anchors": {"resolved": "2/2", "relation_citation": "184-184 resolves (was stale 182 at 396c568)"},
+        "gate_d_structure": {"h1_count": 1, "duplicate_headings": 0, "instruction_markers": 0, "headings_total": 10, "fence_markers": 14},
+        "gate_e": {"c9_positive_clauses": "5/5", "legacy_tick_conflict": false, "ast": "PASS", "tick_span": [324, 326], "null_guard_span": [169, 170]}
+      },
+      "residual_edges": {
+        "R8_whole_element_hold": "corpus/knowledge/r88-sourced-inspiration-decision-table.md:40",
+        "R9_manual_gate_required_record_receipt_boundary": ":42-48",
+        "t1_scan_keys_rerun": "2/4 (content-aware reading: content present; scan keys land in r8 slice because the R9 block sits before ### R9 appendix :50)"
+      },
+      "bounds": [
+        "committed patches/T1-certification.json is pre-integration FAIL (candidate unavailable); its 3/3 + 14/14 are baseline-control numbers, not a candidate certification",
+        "r91 round records claim the doc was restored to e97613c with a SUPERSEDED-PENDING banner (SCORECARD.md:273, LOG.md:2610); committed bytes do not show it (doc unchanged 6332115 -> c4d4823; SUPERSEDED-PENDING count 0); the r92 patch is what delivers the certifiable state",
+        "doc header still claims 'Landed at round-90 closure' with no r92 provenance line (E2's proposed accurate r92 header unapplied)",
+        "R8 label duplicated at :40 ('Failed-gate disposition (clarified r92):' twice); E1's R8 worked example absent; R9 evidence-cell append ('is not that receipt') absent",
+        "R9 manual-gate block placed before ### R9 appendix instead of inside it; the R9 appendix's old worked example (:79) not replaced"
+      ]
+    },
+    "coverage": {
+      "verdict": "improved (bounded)",
+      "receipts": {
+        "r87-myth-cluster": {"exit": 0, "inventory": "JSON-FACTS 14/14; EDITORIAL-ROWS 8/8; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 22/22", "result": "PASS"},
+        "r88-m3-maya-cluster": {"exit": 0, "inventory": "JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12; DISTINCT-ANCHORS 8/8", "warn": "closed (baseline had unreferenced excerpt declaration: source-excerpt.md)", "result": "PASS"},
+        "r89-inspiration-paraphrase": {"exit": 0, "source_support": "0/0", "retelling": "1 entries (1/1 anchors)", "result": "PASS"}
+      },
+      "contract_probes": [
+        {"case": "missing inventory", "stderr": "FAIL: map must contain exactly one expected inventory declaration", "stdout_terminal": "RESULT FAIL", "exit": 1},
+        {"case": "structural map error (row cells != header)", "stderr": "FAIL: map table row has a different number of cells than its header", "stdout_terminal": "RESULT ERROR", "exit": 2},
+        {"case": "missing map path", "stdout_terminal": "RESULT ERROR", "exit": 2},
+        {"case": "missing cluster", "stdout_terminal": "RESULT ERROR", "exit": 2},
+        {"case": "collected failure (corrupted anchor, scratch copy)", "detail": "SOURCE-SUPPORT 13/14; VALIDATED-ROWS 21/22; FAIL: E1: source-support anchor missing", "stdout_terminal": "RESULT FAIL", "exit": 1}
+      ],
+      "patches_applied": {"M1-spence-rows": true, "M2-contract": true, "R2-readme": true, "K1-tools-readme": false},
+      "bounds": ["corpus/tools/README.md:16-21 still documents the two deviations as live ('Named debt — S2 terminal-status contract'); K1's replacement patch is committed in the wave dir, git apply --check clean, unapplied at c4d4823 — one-file doc-parity drift"]
+    },
+    "calibration": {
+      "verdict": "improved (bounded)",
+      "watch": {"path": "corpus/knowledge/r91-c9-watch.md", "sha256": "a6b2b9db92d494f390a414d1d84bfc4f074865f93e4ad4874cbfa7b9c95d9c77", "lines": 206, "check_log_rows": 1, "row1_result": "DISCRIMINATION HELD — all four C5 scenarios retained their r91 distinctions; no drift alarm", "gates": {"1": "met", "2": "met", "3": "not met", "4": "not satisfied (no indeterminate inversion established)"}, "ruling": "retained", "alarm": "none"},
+      "durable_pair": {"r91-c1-null-chain": {"exit": 1, "violations": 1}, "r91-c1-tick-unresolved": {"exit": 1, "violations": 3}},
+      "jdep4_check": {"result": "DISCRIMINATION HELD", "exit": 0, "source": ".ufo/waves/round-91/followup/JDEP4-check.md (committed verbatim runnable)"},
+      "census": {"dirs": 166, "exits": {"0": 32, "1": 134}, "b1_mismatches": 0, "b1_eq_b2": true, "b1_b2_sha256": "185ce02d2e2bf80e2846dada9e864fc533d58cfd229be9e2596d4b1f2a21baaf", "delta_vs_396c568": {"changed": 0, "added": 0, "removed": 0, "exit_changes": 0}, "delta_evidence": "SF1's committed freeze verified the same manifest against the pre-work tree; this seat re-verified against the delivered tree — both 0 mismatches"},
+      "path_convention": {"fixtures_readme": "### Repo-relative census invocation (five argv-embedding fixtures named)", "watch_note": ":205-206", "probe": "r5-missing-file stdout embeds the argv path; repo-relative vs absolute differ"},
+      "bounds": ["one check-log row — cadence begins now", "the four C5 probes were scratch reconstructions (removed)", "no ruling change; the four-gate falsification trigger stays prospective"]
+    }
+  },
+  "shonen_proposed": {"box1": "[ ]", "box2": "[~]", "box3": "[~]", "box4": "[~]"},
+  "scores": "unmeasured — no rubric",
+  "writes": [".ufo/waves/round-92/followup/P2.md", ".ufo/waves/round-92/followup/P2-verdicts.json"],
+  "commits_made": false,
+  "pushes_made": false,
+  "scratch": "/tmp only (two throwaway map files + one scratch cluster copy for the anchor-corruption probe); all removed; nothing under /tmp is needed to re-verify",
+  "waits": "none run — the r92 integration was already committed (c4d4823) when this seat started; noted as a gap in P2.md"
+}

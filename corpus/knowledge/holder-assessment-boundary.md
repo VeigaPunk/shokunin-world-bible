@@ -80,7 +80,7 @@ item (`reports/round-1/current-baseline.json` cases
 `:246-247` later valid records do not re-enable it; baseline line refs,
 re-checked against `git show 5eb9451:corpus/fixtures/check_bible.py`).
 
-The delivered checker (`1b09f3f`) replaces the holder-only latch with a
+The delivered checker (`ff9fd2aa`, integrated at `ca7f9ef`) replaces the holder-only latch with a
 permanent first-stop cause record:
 
 1. **One disclosure form, one line per affected record.** A single template,
@@ -327,7 +327,7 @@ which it always is, since a key-set failure ends the record.
 - Chain eligibility is no longer orthogonal to the disclosure: the three
   conditions that used to disable the chain silently (no sources,
   non-item entity, duplicated item id) are now named first stops
-  (`:198-203`). Comparisons require sources loaded, `kind == "item"`, and a
+  (`:200-205`). Comparisons require sources loaded, `kind == "item"`, and a
   unique item id — unchanged (`:183` baseline; delivered `:200-205`) — but a
   chain that was never eligible now says so per record instead of staying
   silent.
@@ -542,19 +542,7 @@ until then the delivered replays above are the behavioral evidence.
   branch with the shape-invalid holder scan `:224-250`; field validation and cause collection
   `:251-314`; latch `:315-321`; comparison gate and FN-2 qualification `:322-345`; CLI/exit
   behavior `:418-428`. The checker stayed byte-identical through r91 closure `396c568`.
-  lines, sha256 `e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556`):
-  raw entity/source counters declared `:38-39`, accumulated `:72-76`;
-  schema-valid rows collected `:82-83`; `index()` `:85-91`; sources index
-  `:93`; entities index `:97`; holder count collection `:164-166`;
-  `holder_identity_detail` `:168-173`; relation-endpoint ambiguity
-  precedent `:182`; provenance loop `:185-352`; `only valid on item
-  entities` `:191`; `expected array` + `continue` `:192-194`; item-level
-  first-stop tests `:198-203`; disclosure template `:206-208`; top-of-loop
-  emission `:212-214`; non-dict branch `:215-221`; key-set branch with the
-  shape-invalid holder scan and combined cause `:222-248`; field validation
-  and cause collection `:249-312`; latch `:313-319`; comparison gate and
-  FN-2 qualification `:320-352`; CLI/exit behavior `:425-435`.
-- Round-89 evidence: `.ufo/waves/round-89/followup/CB1.md` (drift inventory
+  - Round-89 evidence: `.ufo/waves/round-89/followup/CB1.md` (drift inventory
   CB1-R1 … CB1-R19, two-revision census, fixture replays, scratch probes for
   the raw-presence wordings, the three-cause record, and the four FN-2
   sub-branches) and the work-wave artifacts it audits — `.ufo/waves/round-89/`
@@ -588,13 +576,7 @@ until then the delivered replays above are the behavioral evidence.
   `.ufo/waves/round-90/followup/CB1.md` (r90) and §M7 of the r89 CB1 report. At r91 closure the
   two additional durable calibration fixtures are `r91-c1-null-chain` and
   `r91-c1-tick-unresolved`; this is fixture coverage, not a checker change.
-  `r87-probe-shape-ambiguous`, `r88-mixed-stop`,
-  `r88-shape-ambiguous-armed`, `r89-c1-multi-cause-valid`,
-  `r89-fn2-unresolved-chain-break` (plus the r85 live probes outside
-  `corpus/fixtures`). `r7-item-ambiguous` is ambiguous SOURCE only;
-  `r61-*` are dangling holders on a non-item entity. Measured by
-  `.ufo/waves/round-89/followup/CB1.md` §M7.
-- Round-85 reports: `reports/round-85/r85-author.md` (probe design,
+  - Round-85 reports: `reports/round-85/r85-author.md` (probe design,
   `:38-75`), `r85-verifier.md`, `r85-sealed-reviewer.md` (operative danger:
   correct first action, false sense of finality),
   `r85-axis-adjudicator.md` (verdict ADMIT, bounded; repair reserved as a
@@ -612,12 +594,7 @@ until then the delivered replays above are the behavioral evidence.
   closure at `a7c6a17` and documents the r90 fixtures. The r87 decision table
   (`corpus/knowledge/r87-provenance-chain-decision-table.md`) is superseded and still quotes
   removed strings; treat it as history.
-  `## Round 89` section at `1b09f3f`, so the r89 amendments (multi-cause
-  summary, raw-vs-resolved wording, FN-2 qualification) are stated only
-  here. The r87 decision table
-  (`corpus/knowledge/r87-provenance-chain-decision-table.md`) is superseded
-  and still quotes removed strings; treat it as history.
-- Lane declaration: `SCORECARD.md` fleet-round-1 calibration declaration
+  - Lane declaration: `SCORECARD.md` fleet-round-1 calibration declaration
   (unmeasured tie, falsifiability tie-break).
 
 ## Status split

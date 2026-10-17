@@ -298,3 +298,39 @@ SHONEN: box 1 `[ ]`; box 2 `[~]` (four LOG records); box 3 `[~]` (the discrimina
 check is a committed runnable command; the boundary doc is deliberately in a declared
 SUPERSEDED-PENDING state — executability preserved, completeness deferred); box 4 `[~]`
 (province-clean; chousa crossrefs canonical; kotodama acknowledgement untriggered).
+
+## Round 92 — luna round 6 of 12 (2026-10-17)
+
+Two-wave regimen round: work wave (31+2 seats, `openai-codex/gpt-6-luna-max`),
+follow-up wave (32 seats; `alibaba-token-plan/deepseek-v4.1-flash` first, then
+`opencode-go/deepseek-v4.1-flash` after the token-plan monthly quota exhausted
+mid-wave — reset 2026-10-23; the alibaba resume fell to its content filter).
+Baseline `396c568`; work commit `c4d4823`; closure = this commit.
+
+| LIVE axis | r92 verdict | Evidence and limit |
+|---|---|---|
+| depth | improved (bounded) | C1 (the r91 deferral): the boundary doc re-derived ANCHOR-BASED (seat D2's candidate) — and the follow-up's certification FAILED it on gate (b): an orphaned r89 citation tail (14/21 sites), a stale live pin, duplicated splice tails — the r92 integration had faithfully carried e97613c's own staleness forward. Repaired in this closure per JAXIS's repair list (tail deleted, dups removed, range fixed, live pin corrected to `ff9fd2aa`, doubled table label dropped, K1's tools-README patch applied); re-certified post-repair by the parent (all pasted blocks replay; structure clean; no instruction markers; history pins legitimate). "Certified" is recorded ONLY with this post-repair re-run on record. JDEP2's residual edges decided (E1): R8 whole-element hold for inseparable dependencies (owner/reviewer/evidence); R9's mandatory manual gate (lexical PASS necessary-not-sufficient; per-claim review record). Bounds: the R9 block sits outside its appendix (named debt); the R8 worked example needs a replay fixture (r93); JDEP5: no fourth capabilities row. |
+| coverage | improved (bounded) | C2: the two Spence comparison rows land in the r88-m3 map — the unreferenced-declaration WARN closes (10 JSON + 2 editorial, PASS); the support command's contract deviations close (RESULT FAIL/ERROR summaries; missing inventory → exit 1 RESULT FAIL; map/cluster → exit 2 RESULT ERROR; verified by JCOV1/M4/V1). K1's README patch (the false S2-contract section) applied at closure. Bounds: inventory counts self-attested (unchanged bound); the R8/R9 venue deviations named. |
+| calibration | improved (bounded) | C3: the C9 watch's FIRST re-check lands — DISCRIMINATION HELD (gates 1–2 met, 3 not, trigger unsatisfied, ruling retained); check-log row 1 dated; the census path-convention note lands in the watch + fixtures README (5 argv-embedding fixtures named, verified by JCAL3). Bounds: the next-recheck pointer incomplete (Q92-010); the watch overbreadth wording noted. |
+
+Learning trends: expansion unchanged (166 dirs, 0 changed — the round was
+docs+tooling); quality improved (receipts fail closed with terminal summaries;
+the doc's certification is now a first-class gate with a named contract);
+discernment improved (JAXIS's reconciliation ruled that V2's 'inherited'
+framing was true of the text but false of the failure state — r92 created the
+gate-C failure while repairing structure; the repair list landed in-closure).
+
+planned (r93, from Q1 with L1 adoption): (1) depth — the R9 appendix venue
+repair + the R8 worked-example replay fixture + a post-landing certifier seat
+as standard practice; (2) coverage — none outstanding beyond named debt;
+(3) calibration — the C9 watch's second re-check. Substrate note: alibaba
+token-plan is quota-frozen until 2026-10-23 — r93's follow-up plans
+opencode-go unless the operator tops up. Process (Q2): freeze gate landed
+(SF1 caught the unstaged commit); roster arithmetic still prose (33 declared
+vs 31+2 delivered); scratch budgets still unnumbered.
+saturation: not declared. retired: none.
+
+SHONEN: box 1 `[ ]`; box 2 `[~]` (five LOG records); box 3 `[~]` (the
+certification gate is now committed practice; the doc is delivered-true
+post-repair); box 4 `[~]` (province-clean; chousa crossrefs byte-identical;
+kotodama acknowledgement still pending, digest caveat recorded by JCOV5).

@@ -1,0 +1,89 @@
+{
+  "seat": "JCAL4",
+  "role": "wording judge — over-claim sweep on new r92 governance text (R8 whole-element hold, R9 manual gate, check-log entry)",
+  "date": "2026-10-17",
+  "head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "baseline": "396c568",
+  "surfaces": [
+    "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+    "corpus/knowledge/r91-c9-watch.md",
+    "corpus/tools/support_check.py",
+    ".ufo/waves/round-90/patches/C9-rerun-probes.sh"
+  ],
+  "receipts": [
+    {
+      "id": "B1",
+      "kind": "defect",
+      "claim": "doubled R8 label at decision-table line 40",
+      "command": "grep -o 'Failed-gate disposition (clarified r92)' corpus/knowledge/r88-sourced-inspiration-decision-table.md | wc -l; git show 396c568:corpus/knowledge/r88-sourced-inspiration-decision-table.md | grep -o 'Failed-gate disposition' | wc -l",
+      "observed": ["2", "1"],
+      "note": "line 40 head: '**Failed-gate disposition (clarified r92):** **Failed-gate disposition (clarified r92):** **Owner:** the lore '"
+    },
+    {
+      "id": "B2",
+      "kind": "defect",
+      "claim": "R9 gate block (lines 42-48) inside R8 appendix section; R9 heading at line 50; old worked example kept at line 79; E1/E2 pieces absent",
+      "command": "grep -n '^### |^**Manual R9 gate|^**Required record|^**Receipt boundary|^**Worked example' <file>; grep -c 'Kesh Hymn' <file>; grep -c 'separate per-claim R9 manual-review record' <file>",
+      "observed": ["headings: 28,42,44,46,48,50,79,94", "0", "0"]
+    },
+    {
+      "id": "B3",
+      "kind": "defect",
+      "claim": "watch line 140 'paired resolved-holder control'; P2/P4 differ in more than holder resolution; E3 near-control correction absent",
+      "command": "grep -n 'paired resolved-holder control' corpus/knowledge/r91-c9-watch.md; grep -c 'near-control' corpus/knowledge/r91-c9-watch.md; python3 tuple diff from C9-rerun-probes.sh cases against r89-fn2-unresolved-chain-break",
+      "observed": ["140:**P4 — ... (paired resolved-holder control)**", "0", "record0 differing keys: ['to_holder']; record1 differing keys: ['from_holder','to_holder']"]
+    },
+    {
+      "id": "B4",
+      "kind": "reproduction",
+      "claim": "checker pin + durable pair reproduce the check-log output verbatim at c4d4823",
+      "command": "sha256sum corpus/fixtures/check_bible.py; python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-null-chain; python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-tick-unresolved",
+      "observed": [
+        "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+        "null-chain: 1 violation, exit=1",
+        "tick-unresolved: 3 violations (first_appearance, integer-only tick, qualified f3-dup chain break), exit=1"
+      ]
+    },
+    {
+      "id": "B5",
+      "kind": "reproduction",
+      "claim": "receipt-boundary strings/exit codes match delivered support_check.py",
+      "command": "grep -n 'RESULT PASS|RESULT ERROR|SOURCE-SUPPORT' corpus/tools/support_check.py; python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster; python3 corpus/tools/support_check.py corpus/fixtures/does-not-exist",
+      "observed": [
+        "RESULT PASS/PASS WITH WARNINGS at :376; SOURCE-SUPPORT at :364; RESULT FAIL ret1 :374-375; RESULT ERROR ret2 :396-397,406-407,415-416",
+        "r88-m3: RESULT PASS, inventory 10/2/12/8, SOURCE-SUPPORT 10/10, rc=0, no WARN lines",
+        "missing cluster: RESULT ERROR rc=2"
+      ]
+    },
+    {
+      "id": "B6",
+      "kind": "reproduction",
+      "claim": "B1 census stdout hash reproduces repo-relative and changes with absolute argv",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r5-missing-file | sha256sum; python3 corpus/fixtures/check_bible.py \"$PWD/corpus/fixtures/r5-missing-file\" | sha256sum",
+      "observed": [
+        "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755 (== B1 recorded stdout_sha256)",
+        "7a81d5020245c2e6c95b53b8ef6a1ed41e96ea9da638cd57d3226c673a18026b"
+      ]
+    },
+    {
+      "id": "B7",
+      "kind": "dependency",
+      "claim": "default two wait-checks: freeze artifacts present",
+      "command": "bash .ufo/waves/poll_wait.sh .ufo/waves/round-92/followup/SF1-freeze.json 120; bash .ufo/waves/poll_wait.sh .ufo/waves/round-92/followup/SF1.md 120",
+      "observed": ["POLL_HIT ... elapsed=0s checks=0", "POLL_HIT ... elapsed=0s checks=0"]
+    }
+  ],
+  "findings": [
+    {"id": "F1", "severity": "cosmetic", "where": "decision-table:40", "issue": "doubled label", "repair": "delete one instance"},
+    {"id": "F2", "severity": "scope", "where": "decision-table:42-48 vs :50/:79", "issue": "R9 block under R8 heading; old worked example unreplaced; R8 worked example + R9 evidence-cell append absent", "repair": "move block after R9 Decision; merge examples; land or record the two missing pieces"},
+    {"id": "F3", "severity": "precision", "where": "watch:140", "issue": "'paired resolved-holder control' overstates isolation; E3 near-control correction absent", "repair": "adopt E3 caption + caveat"},
+    {"id": "F4", "severity": "low", "where": "watch:49", "issue": "E3 probe-scope sentence absent", "repair": "adopt E3 scope sentence"},
+    {"id": "F5", "severity": "low-medium", "where": "decision-table:46 last sentence", "issue": "referential ambiguity 'The existing verification command'; safe error direction", "repair": "name the R9 appendix textual-completeness command or relocate sentence"},
+    {"id": "F6", "severity": "nit", "where": "decision-table:46", "issue": "span checks not enumerated (under-claim)", "repair": "optional"}
+  ],
+  "verdicts": {
+    "over_claim_containment": "improved, bounded; not clean (F3 residual, F6 nit)",
+    "misread_resistance": "improved, bounded; not clean (F5); receipt-boundary operative sentences cannot be read as checker capability",
+    "text_integrity_landing_fidelity": "harmed (F1, F2, F4b)"
+  }
+}

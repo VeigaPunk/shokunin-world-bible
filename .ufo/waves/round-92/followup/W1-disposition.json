@@ -1,0 +1,251 @@
+{
+  "seat": "W1",
+  "wave": "round-92 follow-up (world-bible lane)",
+  "mission": "Debt-disposition verifier: r91's ledger rows vs the delivered tree",
+  "row_source": ".ufo/waves/round-91/followup/Q1-r91-debt.json#new_debts",
+  "row_count": 9,
+  "r91_follow_up_observed_head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+  "r92_baseline_commit": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+  "delivered_commit": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "observed_head_at_measurement": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "measurement_time_local": "2026-10-17T10:32:13-03:00",
+  "delivered_tree_state": "tracked clean at c4d4823 (git diff --quiet HEAD -- -> exit 0); every measured file byte-equal to HEAD; untracked additions are sibling follow-up seat artifacts under .ufo/waves/round-92/followup/ (39 porcelain lines at measurement; 29 -> 35 across the wait window) plus ignored corpus/tools/__pycache__/",
+  "verdict_scope": "Every verdict below is derived from the committed tree at c4d4823 (files, git objects, checker/support runs). Sibling follow-up artifacts (JDEP1 etc.) are named as corroboration only and were not used as evidence. The r92 checker is unchanged: ff9fd2aa at 396c568 and c4d4823.",
+  "disposition_summary": {
+    "closed": ["Q91-001", "Q91-006"],
+    "partial": ["Q91-002", "Q91-004", "Q91-005"],
+    "open": ["Q91-003", "Q91-007", "Q91-009"],
+    "open_record_only": ["Q91-008"]
+  },
+  "wait_checks": {
+    "command": "(for i in 1 2; do sleep 60; h=$(git rev-parse HEAD); st=$(git status --porcelain | wc -l); echo \"POLL_CHECK t=$((i*60))s head=$h stable=...\"; done)",
+    "observed": [
+      "POLL_CHECK t=60s head=c4d4823b9a8165a88e8199af136e62d6e961b6b9 expected=c4d4823 stable=yes porcelain_lines=29",
+      "POLL_CHECK t=120s head=c4d4823b9a8165a88e8199af136e62d6e961b6b9 expected=c4d4823 stable=yes porcelain_lines=35",
+      "POLL_TERMINAL status=0 reason=deadline elapsed=120s checks=2"
+    ]
+  },
+  "common_measurements": {
+    "M-TREE": {
+      "command": "git rev-parse HEAD; git status --short; git diff --quiet HEAD --; echo tracked_diff_exit=$?; git diff --stat 396c568..c4d4823 | tail -1",
+      "observed": "HEAD=c4d4823b9a8165a88e8199af136e62d6e961b6b9; no tracked modifications; tracked_diff_exit=0; r92 integration stat: 67 files changed, 12046 insertions(+), 191 deletions(-)"
+    },
+    "M-CHECKER": {
+      "command": "sha256sum corpus/fixtures/check_bible.py; git log --oneline 396c568..c4d4823 -- corpus/fixtures/check_bible.py | wc -l",
+      "observed": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py; 0 commits in range"
+    },
+    "M-DOC": {
+      "command": "sha256sum corpus/knowledge/holder-assessment-boundary.md; wc -l corpus/knowledge/holder-assessment-boundary.md",
+      "observed": "8e1fe8774a70f06c31efd783b4313a1639c1da4bcfd830be92134e8964536728; 671 lines"
+    },
+    "M-REPLAY": {
+      "command": "T1 gate-B replay driver (inline python: pair each receipt fence to its preceding sh fence, expand fixture loops, run the delivered checker, compare stdout bytes, rc, empty stderr)",
+      "observed": "replay_receipts=3/3; replay_cases=14/14"
+    },
+    "M-STRUCTURE": {
+      "command": "T1 gate-D structure scan (inline python)",
+      "observed": "h1_count=1; duplicate_headings=[]; instruction_markers=[]"
+    },
+    "M-C9PROSE": {
+      "command": "T1 gate-E prose scan (inline python)",
+      "observed": "c9_positive_clauses=5/5; c9_legacy_tick_conflict=False; gate_E_pass=True"
+    },
+    "M-ANCHORS": {
+      "command": "inline python content-span check of the doc's critical code anchors against corpus/fixtures/check_bible.py",
+      "observed": "null_guard 169-170 PASS; identity_detail 171-175 PASS; relation_ambiguity 184 PASS; to_holder 277 PASS; from_holder 290 PASS; tick 323-326 PASS; qualified chain 330-335 PASS; first-record 339-341 PASS; critical_content_anchors=8/8"
+    },
+    "M-SUPPORT": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 corpus/tools/support_check.py corpus/fixtures/{r87-myth-cluster,r88-m3-maya-cluster,r89-inspiration-paraphrase}",
+      "observed": "r87 exit=0: INVENTORY 14/14; EDITORIAL-ROWS 8/8; RECEIPT 22/22; SOURCE-SUPPORT 14/14; RESULT PASS. r88 exit=0: INVENTORY 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12; DISTINCT-ANCHORS 8/8; SOURCE-SUPPORT 10/10; RESULT PASS (no WARN). r89 exit=0: RETELLING-SUPPORT-ONLY 1 entries (1/1 anchors); RESULT PASS. support_check.py sha256=55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c"
+    },
+    "M-CONTRACT": {
+      "command": "three probes: missing-inventory map (/tmp/w1-r92/missing_inventory.md), absent map, absent cluster",
+      "observed": "missing inventory: exit=1; stdout=RESULT FAIL; stderr=FAIL: map must contain exactly one expected inventory declaration. missing map: exit=2; stdout=RESULT ERROR; stderr=FAIL: claim-to-excerpt map not found. missing cluster: exit=2; stdout=RESULT ERROR; stderr=FAIL: cluster directory not found: corpus/fixtures/__w1_missing_cluster__"
+    },
+    "M-R8R9": {
+      "command": "inline scan of corpus/knowledge/r88-sourced-inspiration-decision-table.md (R8 appendix, R9 appendix) + grep 'patches/' + grep 'Failed-gate disposition'",
+      "observed": "r8_inseparable_whole_element_branch=True; r8_failed_gate_not_proof=True; 'Receipt boundary ... necessary but not sufficient' present at line 46; manual R9 gate block present at lines 42-48 (between the R8 and R9 appendix headings); only remaining wave-patch reference is line 91 (R9 appendix), reading .ufo/waves/round-91/patches/D2-edges.patch; duplicated label '**Failed-gate disposition (clarified r92):** **Failed-gate disposition (clarified r92):**' at line 40"
+    }
+  },
+  "rows": [
+    {
+      "id": "Q91-001",
+      "axis": "documentation-parity / calibration instruction surface",
+      "r91_status": "open",
+      "disposition": "closed",
+      "closed_at": "c4d4823",
+      "evidence": [
+        "Stale decision-table row removed: count of \"holder identity is not uniquely resolvable: {details}; provenance tick\" in the delivered doc = 0; corrected row 'Tick findings are NOT qualified' present once (doc:201).",
+        "Decision-table row 2 (doc:200) cites delivered :337, :326, :343; doc:201 cites :330-335, :339-341, :323-326; M-ANCHORS 8/8.",
+        "M-C9PROSE: legacy holder-qualified tick conflict gone (False); 5/5 positive C9 clauses present.",
+        "M-REPLAY: the doc's pasted r85/FN-2 receipts replay byte-identically."
+      ],
+      "residual": "None for the row's subject. The r92 re-derivation's own residual defects are tracked under Q91-002."
+    },
+    {
+      "id": "Q91-002",
+      "axis": "documentation-parity / instruction surface",
+      "r91_status": "open",
+      "disposition": "partial (improved, not closed)",
+      "closed_at": null,
+      "evidence_fixed": [
+        "duplicated H1 gone: h1_count=1 (line 1); 'Reconstructed at round-91' banner count=0; instruction cruft markers=0.",
+        "CB1-D6 join refs remapped: grep ':272|:285|:306' absent; '(:274, :287)' and '(:308)' present (doc:167).",
+        "Status split and Measured-results slot now written as-of ca7f9ef (doc:625, 664-671); the old '435 lines/e2bb9639' headline replaced by the correct 428-lines/ff9fd2aa bullet (doc:534-544).",
+        "README-history sentence corrected (doc:610-612: Round 90 landed at a7c6a17)."
+      ],
+      "evidence_residual": [
+        "Orphaned r89-era tail doc:545-556: fragment 'lines, sha256 `e2bb9639...`):' plus a stale checker line-number list (e.g. ':182' is the delivered dangling-entity line, ambiguity is :184; ':425-435' is past the delivered 428-line file).",
+        "Orphaned r89-era tail doc:591-596 (duplicated fixture list + 'Measured by ... round-89 ... §M7').",
+        "Duplicated paragraph doc:610-619 (r89-era README/r87-history sentences spliced after the r90 sentence); garbled trailing sentence doc:656.",
+        "Stale unlabelled range doc:330 ':198-203' (delivered span is :200-205 — the same bullet at doc:331 already gives the correct range).",
+        "Stale revision designations: doc:83 'The delivered checker (`1b09f3f`)' and doc:258 'no separate item-level notice at `1b09f3f`' (delivered checker is ca7f9ef/ff9fd2aa).",
+        "Census sentence scope drift: doc:579-590 claims '13 provenance records across ten of them' at ca7f9ef; W1 re-measure of the ten named fixtures at ca7f9ef = 12 records (any-kind scope; 11 with item-kind filter); HEAD adds 1 (r91-c1-tick-unresolved) -> 13 belongs to an eleven-fixture scope."
+      ],
+      "commands": [
+        {"command": "inline python structure probe over corpus/knowledge/holder-assessment-boundary.md", "observed": "lines=671; h1_count=1; reconstruction_banner=0; cruft_markers=0; fenced_blocks=8 (7 unindented); received all six r85/FN-2/r90 receipts"},
+        {"command": "sed -n '327,332p;653,658p' corpus/knowledge/holder-assessment-boundary.md", "observed": "doc:330 carries '(`:198-203`)' followed at doc:331 by 'delivered `:200-205`'; doc:656 garbled '...SUPERSEDED-and-pinned at its header (r88 closure) anywhere in the tree.'"},
+        {"command": "inline python census: for the ten named fixtures, git show ca7f9ef:<fixture>/entities.json; count provenance records referencing a raw-duplicated id", "observed": "any-kind scope=12; item-kind scope=11"}
+      ],
+      "residual": "Three orphaned tails, one stale range, two stale 1b09f3f designations, one duplicated/cut sentence region, one census-wording scope drift remain in the delivered doc. Corroborated by the untracked sibling follow-up certifier JDEP1 (FAIL, gate b) — used as corroboration only."
+    },
+    {
+      "id": "Q91-003",
+      "axis": "coverage / index parity",
+      "r91_status": "open",
+      "disposition": "partial",
+      "closed_at": null,
+      "evidence": [
+        "corpus/fixtures/README.md headings jump '## Round 90' (:1016) -> '## Round 92' (:1020); no '## Round 91' heading.",
+        "grep 'r91' corpus/fixtures/README.md -> only :1041-1042 (r91-c9-watch mention inside the Round 92 section); grep 'r91-c1' -> 0; the two r91-c1 fixture dirs remain unindexed.",
+        "The doc's stale README sentence is fixed (doc:610-612)."
+      ],
+      "commands": [
+        {"command": "grep -n '## Round 9\\|## Round 1[0-9]' corpus/fixtures/README.md | tail -5; grep -c 'r91-c1' corpus/fixtures/README.md", "observed": "1016 ## Round 90; 1020 ## Round 92; r91-c1 count=0"}
+      ],
+      "residual": "Round 91 index row absent; the two r91-c1 fixtures undiscoverable from the index (the watch is cross-referenced from the Round 92 section)."
+    },
+    {
+      "id": "Q91-004",
+      "axis": "instruction-surface integrity",
+      "r91_status": "open",
+      "disposition": "partial",
+      "closed_at": null,
+      "evidence": [
+        "The R8 row's D1-edges.patch reference is gone; the only remaining wave-patch reference is the R9 appendix verification command at decision-table line 91, which still reads .ufo/waves/round-91/patches/D2-edges.patch and checks patch text completeness (11/11), not the delivered appendix text."
+      ],
+      "commands": [
+        {"command": "grep -n 'patches/' corpus/knowledge/r88-sourced-inspiration-decision-table.md; grep -n 'python3 -c\\|python3 -' corpus/knowledge/r88-sourced-inspiration-decision-table.md", "observed": "single hit: line 91 (D2-edges.patch; embedded python3 -c)"}
+      ],
+      "residual": "R9's verification command still inspects a wave patch instead of the delivered section text."
+    },
+    {
+      "id": "Q91-005",
+      "axis": "coverage contract debt",
+      "r91_status": "open",
+      "disposition": "partial (behavior closed; documentation surface stale)",
+      "closed_at": null,
+      "evidence_closed": [
+        "M-CONTRACT: missing inventory -> exit 1 + RESULT FAIL; missing map/cluster -> exit 2 + RESULT ERROR (S2 terminal-status contract satisfied by the delivered code).",
+        "M-SUPPORT: r87/r88/r89 receipts return the split counts and plain RESULT PASS; support_check.py = 55a5eb27 (the r92-composed stack)."
+      ],
+      "evidence_open": [
+        "corpus/tools/README.md:16-21 still carries the 'Named debt — S2 terminal-status contract' section in present tense ('Missing inventory exits 2', 'No terminal failure summaries', 'until the checker is updated'); the checker has been updated, so the section now contradicts delivered behavior.",
+        "git log --oneline 396c568..c4d4823 -- corpus/tools/README.md -> empty (untouched by the r92 integration); .ufo/waves/round-92/patches/K1-tools-readme.patch is tracked but unapplied."
+      ],
+      "commands": [
+        {"command": "three exact CLI probes on the delivered checker (see M-CONTRACT)", "observed": "exit=1 RESULT FAIL / exit=2 RESULT ERROR / exit=2 RESULT ERROR"},
+        {"command": "grep -n 'RESULT FAIL\\|RESULT ERROR\\|missing inventory' corpus/tools/README.md", "observed": "lines 18-19 still describe exit-2/no-summary deviations as current"}
+      ],
+      "residual": "The README contract section (the row's own evidence surface) is stale; select the tracked K1-tools-readme.patch or rewrite the section."
+    },
+    {
+      "id": "Q91-006",
+      "axis": "process debt",
+      "r91_status": "open",
+      "disposition": "closed",
+      "closed_at": "c4d4823",
+      "evidence": [
+        "git ls-files .ufo/waves/poll_wait.sh -> tracked; the helper implements the 60s poll loop with POLL_CHECK/POLL_HIT/POLL_TERMINAL and a TERM/INT trap.",
+        "The delivered r91-c9-watch.md first re-check invokes it (watch:55-63: 'bash .ufo/waves/poll_wait.sh corpus/fixtures/check_bible.py 1200' -> POLL_HIT)."
+      ],
+      "commands": [
+        {"command": "git ls-files .ufo/waves/poll_wait.sh; cat .ufo/waves/poll_wait.sh", "observed": "tracked; 13-line helper present"}
+      ],
+      "residual": "None."
+    },
+    {
+      "id": "Q91-007",
+      "axis": "process/record debt",
+      "r91_status": "open",
+      "disposition": "open (carried)",
+      "closed_at": null,
+      "evidence": [
+        "r91 wave-spec.md still declares 'Phase 1: WORK wave, 32 seats' with 0 occurrences of M6/C10/SE4; .ufo/waves/round-91/wave-spec.json records seats_delivered=33 + supplementary_batch; no r91 follow-up spec exists. The r91 record was not reconciled; the r92 round repeats the pattern at its own level (r92 wave-spec.md is MD-only; no .ufo/waves/round-92/wave-spec.json)."
+      ],
+      "commands": [
+        {"command": "grep -c 'M6\\|C10\\|SE4' .ufo/waves/round-91/wave-spec.md; git ls-files .ufo/waves/round-92/wave-spec.json .ufo/waves/round-92/wave-spec.md", "observed": "0; only .ufo/waves/round-92/wave-spec.md tracked"}
+      ],
+      "residual": "Historical r91 roster/landing mismatch stands; r92 inherits the class (MD-only spec)."
+    },
+    {
+      "id": "Q91-008",
+      "axis": "provenance debt (record-only)",
+      "r91_status": "open",
+      "disposition": "open (as designed; unchanged)",
+      "closed_at": null,
+      "evidence": [
+        "git ls-files 'corpus/fixtures/r91-f2*' -> 0 (F2 alternatives unlanded).",
+        "The delivered watch still uses the generic placeholders '<counterexample>' / '<uniquely-resolved-control>' (watch:35-36); E1's explicit names remain unlanded.",
+        "The delivered support_check.py is the r92-composed stack (55a5eb27); the r91 M1-hardening.patch remains an unlanded alternative."
+      ],
+      "commands": [
+        {"command": "git ls-files 'corpus/fixtures/r91-f2*' | wc -l; grep -n 'counterexample\\|uniquely-resolved-control' corpus/knowledge/r91-c9-watch.md", "observed": "0; placeholders at watch:35-36"}
+      ],
+      "residual": "None required; keep recorded so patch-space receipts are not mistaken for delivered evidence."
+    },
+    {
+      "id": "Q91-009",
+      "axis": "carried residue",
+      "r91_status": "open",
+      "disposition": "open (carried; 7/7 sub-rows still open)",
+      "closed_at": null,
+      "evidence": [
+        "Q89-007: corpus/fixtures/r87-probe-record-and-chain/README.md:19 still 'Expected: 35 findings'; delivered checker prints '46 violation(s); no canon changed'.",
+        "Q89-015: decision-table cell 'delivers no witness excerpt' still present (count 1, row OBS-1 at line 16).",
+        "Q89-016: r87-myth-cluster/README.md names one excerpt file (lowwater-hymn-excerpt.md); the directory holds five excerpt files (dune-register, gate-witness, lowwater-hymn, shell-charter, tide-bell-tally).",
+        "Q89-019: reference-ledger.md:8 ETCSL row still 'external-only / text not delivered at lore'.",
+        "Q89-020: reference-ledger.md Spence row still at line 13, after the closing paragraph (lines 10-12), outside the table (rows end at line 8).",
+        "Q89-031: no durable fixture path in the decision table (grep 'r89-inspiration-paraphrase|r91-c1|r89-fn2' -> 0).",
+        "Q89-041: 'anchor_basis' absent from both claim maps (0/0)."
+      ],
+      "commands": [
+        {"command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-probe-record-and-chain | tail -2; grep -n 'Expected' corpus/fixtures/r87-probe-record-and-chain/README.md", "observed": "46 violation(s); README:19 'Expected: 35 findings'"},
+        {"command": "grep -n -i 'spence' corpus/knowledge/reference-ledger.md; grep -c 'anchor_basis' corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md corpus/fixtures/r87-myth-cluster/claim-excerpt-map.md", "observed": "Spence row at line 13 after the closing paragraph; 0 and 0"}
+      ],
+      "residual": "All seven carried rows remain for the next depth/coverage seat; the r92 Spence work closed a different surface (the r88-m3 map rows), not these."
+    }
+  ],
+  "adjacent_dispositions": [
+    {"id": "RDS-1 (r91 W1 new observation)", "subject": "corpus/fixtures/README.md Round 91 index", "disposition": "open (partially superseded)", "note": "No Round 91 heading; r91-c1 fixtures unindexed; r91-c9-watch cross-referenced from the Round 92 section (:1041-1042)."},
+    {"id": "RDS-2 (r91 W1 new observation)", "subject": "boundary doc duplicate H1", "disposition": "closed", "note": "h1_count=1; duplicate headings=[]."},
+    {"id": "COV-D3 (r92 row)", "subject": "Spence S1/S2 editorial rows", "disposition": "closed", "note": "Map diff adds S1/S2; inventory 10/2/12/8; receipt RESULT PASS, no unreferenced-declaration WARN."},
+    {"id": "Q92-C3-WATCH (r92 row)", "subject": "first C9 check-log row", "disposition": "closed", "note": "watch:45-49 carries the dated row (DISCRIMINATION HELD; no drift alarm); gates 1-2 met / 3 not, ruling retained (watch:200-203)."},
+    {"id": "Q92-C3-PATCH-CONFLICT (r92 row)", "subject": "X1/X2 stacking conflict", "disposition": "resolved by composed integration", "note": "The delivered watch contains both the check-log and the census path-convention notes (watch:205-206); the patch-stacking conflict is moot at c4d4823."},
+    {"id": "CAL-D4 (r92 row)", "subject": "census path-convention note", "disposition": "closed", "note": "README:1046-1062 names all five argv-embedding fixtures and the repo-relative rule; watch:205-206 repeats it."},
+    {"id": "CAL-D5 (r92 row)", "subject": "Round 91 fixtures README index row", "disposition": "open", "note": "Same surface as Q91-003/RDS-1."},
+    {"id": "DEP-H1 (r92 row)", "subject": "boundary doc independent certification", "disposition": "open / no passing receipt in the committed tree", "note": "Committed T1-certification.json is the pre-integration FAIL (ran at 396c568); on-tree spot checks pass (M-REPLAY, M-STRUCTURE, M-C9PROSE, M-ANCHORS) but a full anchor-catalog pass is contradicted by the doc:330 stale range and the orphan-tail sites; the untracked sibling follow-up certifier JDEP1 independently reports FAIL on its anchor gate (corroboration only, not evidence)."}
+  ],
+  "new_observations": [
+    {"id": "W1-R92-1", "severity": "coverage/documentation parity", "observation": "corpus/tools/README.md:16-21 named-debt section now contradicts the delivered checker (K1-tools-readme.patch tracked, unapplied). Same class as the closed code deviation of Q91-005.", "target": "closure or next coverage seat"},
+    {"id": "W1-R92-2", "severity": "instruction surface", "observation": "Decision table line 40 duplicates the label '**Failed-gate disposition (clarified r92):**' twice (cosmetic merge artifact) and the R9 manual-gate block sits between the R8 and R9 appendix headings.", "target": "next depth seat"},
+    {"id": "W1-R92-3", "severity": "record parity", "observation": "r92 wave-spec is MD-only (no wave-spec.json) and its prose declares 32 seats while the commit message reports 31+2; same class as Q91-007.", "target": "r93 process seat"}
+  ],
+  "self_check": {
+    "writes": [".ufo/waves/round-92/followup/W1-disposition.json", ".ufo/waves/round-92/followup/W1.md"],
+    "no_commit_no_push": true,
+    "scratch": "/tmp/w1-r92 (one probe map + redirections) — removed; directory swept",
+    "sibling_repos": "read-only; untouched",
+    "untracked_sibling_artifacts": "observed for corroboration only (JDEP1 etc.); not modified and not used as evidence"
+  }
+}

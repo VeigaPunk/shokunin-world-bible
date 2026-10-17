@@ -2617,3 +2617,22 @@ commit `1b09f3f`)
   **admitted**. Capabilities gains a third row (checker-regression discrimination) per
   JDEP4's runnable evidence. Two follow-up seats (JCAL4/JCOV5) were interrupted without
   output; their material was covered by sibling seats and the gap is recorded.
+
+## Round 92 — 2026-10-17 (anchor-based boundary-doc re-derivation + residual edges; Spence rows + contract cleanup; C9 watch first re-check; work commit `c4d4823`)
+
+- See the fleet report and SCORECARD for the full record; the follow-up wave (32 seats, alibaba then opencode-go) verified every claim and the closure repaired the certification findings in-commit.
+
+- **Closure and L1 verdicts (this commit).** JAXIS ruled C1's certification
+  sub-claim had FAILed gate (b) — the r92 integration faithfully carried the
+  e97613c contract's own stale citation tail forward; V2's "inherited" framing
+  was true of the text but false of the failure state. The repair list landed
+  in this closure (tail/dups/range/pin/label + K1's README patch) and the
+  parent re-certified post-repair: every pasted block replays, structure
+  clean, no instruction markers, history pins legitimate. Verdicts: depth
+  **improved (bounded)** (re-derived + edges decided + certification gate now
+  committed practice); coverage **improved (bounded)** (WARN closed; contract
+  deviations closed); calibration **improved (bounded)** (watch re-check 1
+  DISCRIMINATION HELD; path-convention notes). Every claim verifies; the round
+  is **admitted**. Substrate: the alibaba token-plan lane exhausted its monthly
+  quota mid-wave (reset 2026-10-23); opencode-go served the remainder — the
+  stop rule was not triggered.

@@ -13,11 +13,13 @@ Each fact row declares a fact ID or claim pointer, excerpt path and line span, d
 
 Receipts report `JSON-FACTS`, `EDITORIAL-ROWS`, and `TOTAL-ROWS` separately. `SOURCE-SUPPORT N/N` counts only JSON facts in `verbatim` or `translation` mode with matching declarations and in-span anchors; editorial rows have their own `EDITORIAL-ANCHORS` count. `paraphrase` and `summary` rows are reported as `retelling-support-only` and never increase source support. A missing retelling anchor and an excerpt declaration unused by fact rows produce `WARN` without changing exit status; invalid modes, duplicate rows, inventory mismatches, map/cluster/read errors, and missing or out-of-span source anchors exit non-zero.
 
-### Named debt — S2 terminal-status contract
+### Terminal statuses
 
-- **Missing inventory exits 2:** M2 reports `FAIL: map must contain exactly one expected inventory declaration` on stderr and returns 2, while S2 requires an inventory failure to return 1 with `RESULT FAIL`.
-- **No terminal failure summaries:** M2 prints `FAIL:` diagnostics and returns 1 for collected failures, but does not print `RESULT FAIL`; map/cluster errors return 2 without `RESULT ERROR`, contrary to S2's required terminal summaries.
+For validation runs, the final result line and exit status are:
 
-These are known contract deviations, not accepted equivalents; callers must use the diagnostic text and process exit code until the checker is updated.
+- `RESULT PASS` — no warnings or failures; exit 0.
+- `RESULT PASS WITH WARNINGS` — warnings only; exit 0.
+- `RESULT FAIL` — inventory or collected validation failures; exit 1.
+- `RESULT ERROR` — invalid usage, cluster, or map errors; exit 2.
 
 This is a reproducible lexical preflight, not a judgment that the whole claim is supported, that a translation is identified to the required text/version, or that a representation is faithful, permitted, or canonical. Review those matters under the corpus decision table.
