@@ -1696,3 +1696,10 @@ paused by operator 2026-10-12, round 22 closed, no round 23.
 - Operator rollout per the 2026-10-16 fleet amendment (fleet-root `84bade0`): the missing `SCORECARD.md` contract fields were appended as additive scaffolds at the end of `SCORECARD.md`; every pre-existing byte is preserved unchanged.
 - Already present as a real recordable section: `axes` (the axis score table with evidence/counting commands and last-change rounds). Absent as sections: `capabilities`, `saturation`, `planned`, `retired` — the `planned:`/`retired:` lines at `SCORECARD.md:12,13,14,26,33,65,70` are unheaded round-scoped prose labels, and `saturation` appears only in negations, so all four scaffolds were appended.
 - No axis claim was made and no score moved by this change; no verdict changed, no capability row enters the repertoire table (a row requires a round demonstrating it running), and the saturation line + stagnation window N remain the lane's to declare on its next round.
+
+## 2026-10-17 — repository README
+
+- **Trigger.** Root `README.md` was the shared lane stub and named `SKILL.md` as possibly absent. `ls` shows no root `SKILL.md`.
+- **Evidence.** Domain and refusals are `PROVINCE.md`. Checker contract is the docstring and `__main__` of `corpus/fixtures/check_bible.py` (`CLEAN: schema, citations, relations, timeline; 0 violations`). Fixture index is `corpus/README.md` and `corpus/fixtures/README.md`. Ran `python3 corpus/fixtures/check_bible.py corpus/fixtures/consistent` on 2026-10-17: that CLEAN line, exit 0.
+- **Action.** Replaced `README.md`. Corpus indexes were not edited. No Devin wiki URL was present.
+- **Outcome.** No axis claim; no score moved.
