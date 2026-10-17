@@ -47,6 +47,7 @@ S1 owns this watch design for round 91 and hands it to the next C1 calibration o
 | Date | Checker SHA-256 | Four-probe re-check |
 |---|---|---|
 | 2026-10-17 | `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421` | **DISCRIMINATION HELD** — all four C5 scenarios retained their r91 distinctions; no drift alarm. |
+| 2026-10-17 (r93) | `ff9fd2aa…d1421` | **DISCRIMINATION HELD** — re-check 2 (seat X1, r93): all four gates reproduce; gate 3 not met; trigger unsatisfied; ruling retained. Next re-check: r94. |
 
 ### 2026-10-17 — first periodic re-check
 

@@ -23,3 +23,14 @@ For validation runs, the final result line and exit status are:
 - `RESULT ERROR` — invalid usage, cluster, or map errors; exit 2.
 
 This is a reproducible lexical preflight, not a judgment that the whole claim is supported, that a translation is identified to the required text/version, or that a representation is faithful, permitted, or canonical. Review those matters under the corpus decision table.
+
+### Checker regression discrimination
+
+Run from the repository root to verify the delivered checker against the durable r91 differential fixtures:
+
+```sh
+python3 corpus/tools/discriminate_check.py
+python3 corpus/tools/discriminate_check.py --checker e97613c
+```
+
+The default run prints `RESULT: DISCRIMINATION HELD` and exits 0 only when both fixtures match their delivered README outputs, each differs from the pinned `e97613c` output by one line pair, and the checker hash matches the pin. The second command feeds the `e97613c` checker source from Git to the same pair and prints `REGRESSION-DETECTED` with exit 2. The check uses only Python's standard library; `git show` reads the historical checker without creating a file.

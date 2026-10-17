@@ -1,0 +1,211 @@
+{
+  "artifact": "Q1-r93-debt",
+  "seat": "Q1",
+  "wave": "round-93",
+  "baseline_head": "87779a00f25bd1855ede479e490123843e5f056e",
+  "historical_r92_ledger_head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "judged_tree": {
+    "head": "87779a00f25bd1855ede479e490123843e5f056e",
+    "tracked_worktree_diff": "clean",
+    "staged_diff": "clean",
+    "preexisting_untracked_scope": [".ufo/waves/round-93/"]
+  },
+  "scope": "Refresh the r92 Q1 debt against current closure HEAD; audit C1/C2/C3 evidence and actual integration state. Candidate patch checks and scratch replays do not close delivered-tree rows.",
+  "dependency_poll": {
+    "interval_seconds": 60,
+    "deadline_seconds": 1200,
+    "last_poll_elapsed_seconds": 1200,
+    "runner_status": "completed at deadline",
+    "runner_exit_code": 0,
+    "terminal_receipt_emitted": true,
+    "last_poll_present": ["M2.md", "M4.md", "M6.md"],
+    "last_poll_absent": ["patches/M2-cluster3.patch"],
+    "alternate_candidate_paths_present": ["patches/M2-kojiki-cluster.patch", "patches/M4-cluster-final.patch"],
+    "duplicate_poll_started": false,
+    "observed_progress": ["M6 present by t=420s", "M2 present by t=600s", "M4 present by t=960s", "only patches/M2-cluster3.patch absent through t=1200s"],
+    "terminal_receipt": "POLL_TERMINAL status=0 reason=deadline elapsed=1200s checks=20 present= M2.md M4.md M6.md missing= patches/M2-cluster3.patch"
+  },
+  "current_measurements": {
+    "boundary_doc": {
+      "command": "inline Python read of corpus/knowledge/holder-assessment-boundary.md; strip fenced code and count relevant signatures",
+      "observed": "648 lines; H1=1; stale :198-203=0; current :200-205=4; orphan-tail signature=0; stranded r89 signature=0; stale 1b09f3f checker label=0; stale round-90 header=1"
+    },
+    "decision_table": {
+      "command": "inline Python split R8/R9 appendix sections in corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+      "observed": "R8 duplicated label=2; Kesh example=0; R9 manual gate/required record/receipt boundary=0/0/0; old example=1; Q92-004 round-91 patch reference=1"
+    },
+    "support_readme": {
+      "command": "inline Python count old named-debt phrases and terminal labels in corpus/tools/README.md",
+      "observed": "old missing-inventory claim=0; old no-terminal-summary claim=0; RESULT FAIL/RESULT ERROR labels=2"
+    },
+    "fixtures_readme": {
+      "command": "inline Python count Round-91/Round-92 headings and r91-c1 names in corpus/fixtures/README.md",
+      "observed": "Round 91=0; Round 92=1; r91-c1=0"
+    },
+    "c9_watch": {
+      "command": "inline Python count check-log heading/e97613c references and test for full pin / next-check cadence",
+      "observed": "check-log heading=1; e97613c mentions=1; full hash pin=false; next-check cadence=false"
+    }
+  },
+  "candidate_artifacts": [
+    {
+      "path": ".ufo/waves/round-93/patches/D1-venue.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "T1 in-memory reconstruction: R8 duplicate label 1, Kesh example 1; R9 manual gate/required record/receipt each 1, replacement example and evidence-cell receipt present; structure checks 8/8; table 14/14 six-cell rows",
+      "disposition": "unapplied; Q92-002 stays open"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/D2-dossier.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "T1 replay: dossier fields 8/8; policy checks 12/12; embedded five-field replay 5/5",
+      "disposition": "illustrative scenario, no live source-use finding; unapplied"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/CERT-tool.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "patch runner prints 3/3 receipts, 14/14 cases, anchors 2/2, CERTIFIED; CB-audit wrong-citation, contradictory-tick, and modified-checker probes still accept with exit 0",
+      "disposition": "limited false-positive-prone candidate, not B3 certification; hash pin, content/AST anchors and C9 contradiction gate absent; installed tracked tool absent"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/M1-cluster3.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "CLEAN; JSON-FACTS 10/10; EDITORIAL-ROWS 3/3; TOTAL-ROWS 13/13; DISTINCT-ANCHORS 13/13; SOURCE-SUPPORT 10/10; RESULT PASS; M6 independently confirms empty measured intersections and semantic-review PASS for this candidate",
+      "disposition": "Kojiki candidate, unapplied; M5 convergence missing; M6 result does not transfer to other Kojiki candidates"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/M2-kojiki-cluster.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "M2 scratch replay: CLEAN; JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15; DISTINCT-ANCHORS 15/15; SOURCE-SUPPORT 12/12; RESULT PASS; author-side normalized key scan only",
+      "disposition": "M-17/Kojiki candidate, unapplied; M6 review covers M1, not this candidate; expected M2-cluster3.patch filename remains absent"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/M4-cluster-final.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "M4.md archive replay confirms byte identity with M2-kojiki-cluster.patch (fb088ee1e589d157d88c4cef6768debeffd31461f8579753c5419943c432fd33); standard check/apply PASS; CLEAN; JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS and DISTINCT-ANCHORS 15/15; SOURCE-SUPPORT 12/12; measured key intersections empty against r87/r88",
+      "disposition": "M4 selects the M-17 candidate, but this is not M5 convergence or M6 semantic review; M6 covers M1 only; unapplied; do not apply duplicate patch bytes twice"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/M3-ovid-cluster.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "JSON-FACTS 13/13; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/15; 10 distinct anchors; RESULT PASS; two summary-only retelling rows",
+      "disposition": "Ovid alternative, unapplied; do not stack competing cluster families"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/M6-namespace.json",
+      "git_apply_check": "not applicable (receipt)",
+      "candidate_receipt": "independent M1-vs-r87/r88 semantic review PASS; measured intersections empty; M5 convergence missing",
+      "disposition": "candidate-specific evidence, not integrated C2 receipt"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/X1-recheck2.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "scratch watch replay changes row count 1 to 2; pinned ff9fd2aa row says DISCRIMINATION HELD; source-backed gate 3 unmet",
+      "disposition": "unapplied; Q92-010 and r93 C3 integration remain open"
+    },
+    {
+      "path": ".ufo/waves/round-93/patches/X2-discriminate-tool.patch",
+      "git_apply_check": "pass",
+      "candidate_receipt": "scratch mode returns DISCRIMINATION HELD for delivered checker and REGRESSION-DETECTED/exit 2 for historical simulation; bounded to two fixtures and single-snapshot hash-then-execute",
+      "disposition": "unapplied; integrated-file behavior unverified"
+    }
+  ],
+  "ledger": [
+    {
+      "id": "Q92-001",
+      "title": "Boundary document residue and certification blockers",
+      "status_at_c4d4823": "open",
+      "current_status": "named document defects repaired in current closure; independent certification remains unverified",
+      "evidence": ["Current BDoc has no orphan-tail signature, stale :198-203 range, stranded r89 fragment, or stale checker label; the round-90 provenance header is separate carried Q91-002 residue.", "DEP-H1 remains open: no tracked B3-conforming certifier/receipt exists, and CERT candidate probes accept a contradictory tick assertion and a changed checker."]
+    },
+    {
+      "id": "Q92-002",
+      "title": "Decision-table R8/R9 integration defects",
+      "status_at_c4d4823": "open",
+      "current_status": "open; D1/D2 candidate-only",
+      "evidence": ["Delivered table remains at R8 duplicated label=2, Kesh example=0, R9 gate/record/receipt=0/0/0, legacy R9 example=1.", "D1/D2 apply checks pass and scratch candidate tests pass; patches are not integrated."]
+    },
+    {
+      "id": "Q92-003",
+      "title": "support_check README named-debt drift",
+      "status_at_c4d4823": "open",
+      "current_status": "closed on current HEAD",
+      "evidence": ["Old claims Missing inventory exits 2 and No terminal failure summaries count 0 in corpus/tools/README.md; current RESULT FAIL and RESULT ERROR labels count 2."]
+    },
+    {
+      "id": "Q92-004",
+      "title": "R9 verification command inspects round-91 patch, not delivered section",
+      "status_at_c4d4823": "open",
+      "current_status": "open",
+      "evidence": ["corpus/knowledge/r88-sourced-inspiration-decision-table.md contains .ufo/waves/round-91/patches/D2-edges.patch once; D1 leaves it unchanged."]
+    },
+    {
+      "id": "Q92-005 / Q91-003",
+      "title": "Round-91 fixtures README index missing",
+      "status_at_c4d4823": "open",
+      "current_status": "open",
+      "evidence": ["corpus/fixtures/README.md has zero ## Round 91 headings and zero r91-c1 mentions."]
+    },
+    {
+      "id": "Q92-006",
+      "title": "Poll-helper residual hardening",
+      "status_at_c4d4823": "open",
+      "current_status": "carried open; not independently remeasured",
+      "evidence": ["r92 Q2 F5 records path validation, hit-terminal shape, and runner margin as remaining helper debt."]
+    },
+    {
+      "id": "Q92-007",
+      "title": "Roster and landing accounting",
+      "status_at_c4d4823": "open",
+      "current_status": "open; class recurs in r93",
+      "evidence": ["SE1 reports 32 declared seats vs 30 unique IDs; CERT author lacks an ID; C2 names nine IDs against ten seats; wave-spec.json absent."]
+    },
+    {
+      "id": "Q92-008",
+      "title": "Record attributes baseline control replay as certification",
+      "status_at_c4d4823": "open",
+      "current_status": "partially clarified; no supported closure receipt",
+      "evidence": ["Current LOG records that the earlier gate (b) failed, but the r92 closure's post-repair re-certification statement lacks a tracked B3 tool/receipt; CERT candidate fails independent contradiction/drift probes."]
+    },
+    {
+      "id": "Q92-009",
+      "title": "Scratch/inode budget debt",
+      "status_at_c4d4823": "open, sibling-measured",
+      "current_status": "carried; not freshly remeasured",
+      "evidence": ["Retain r92 Q2 F4 measurement; this audit makes no new inode census claim."]
+    },
+    {
+      "id": "Q92-010",
+      "title": "C9 watch forward-pointer incomplete",
+      "status_at_c4d4823": "open",
+      "current_status": "open",
+      "evidence": ["Watch has one e97613c path mention without full hash and no next-check due date/cadence; X1 row-2 patch remains unapplied and trigger gate 3 is unmet."]
+    },
+    {
+      "id": "Q92-C3-WATCH / Q92-C3-PATCH-CONFLICT",
+      "title": "First watch re-check and r92 X1/X2 patch conflict",
+      "status_at_c4d4823": "resolved by r92 closure",
+      "current_status": "closed for their original subjects; not equivalent to r93 second re-check/tool landing",
+      "evidence": ["W1-disposition.json records the first row and manually composed note as integrated; r93 C3 remains candidate-only."]
+    },
+    {
+      "id": "DEP-H1",
+      "title": "Independent certification of boundary document",
+      "status_at_c4d4823": "open",
+      "current_status": "open; CERT candidate does not meet B3",
+      "evidence": ["B3 requires checker hash pin, content/AST anchors, and C9 contradiction gate; current candidate has none of these complete and fails concrete false-positive probes."]
+    }
+  ],
+  "round93_claims": {
+    "C1_depth": "not complete: D1/D2 are unapplied and the CERT candidate is not B3-conforming",
+    "C2_coverage": "not complete: M4 now has a passing M-17 map/support replay and chooses it, but this is not M5 convergence; M6 semantic review is M1-specific, not M-17; M1 and M3 are other passing scratch candidates; none is integrated",
+    "C3_calibration": "not complete: X1/X2/E3 unapplied; source-backed C9 trigger gate 3 unmet; watch still lacks hash-pinned next-check pointer"
+  },
+  "r94_proposal": {
+    "status": "conditional; unselected; no axis verdict or score assigned",
+    "selection_gate": "Wait for L1's actual round-93 per-axis verdict words on the frozen integrated tree. Apply harmed < unchanged < unprovable-but-better < improved; on a tie, compare number of open ledger rows. Do not infer from candidate counts or this audit.",
+    "candidate_axes": ["depth: deliver and independently certify the boundary doc, integrate D1/D2, resolve Q92-004", "coverage: select one C2 candidate after convergence, integrate it and pass M4 map/receipt and discipline checks", "calibration: integrate X1/X2/E3, set a hash-pinned next-check owner/due, and retain source-backed trigger gate"],
+    "decision": "No claim selected until L1's round-93 verdicts are available."
+  },
+  "write_boundary": [".ufo/waves/round-93/Q1.md", ".ufo/waves/round-93/patches/Q1-r93-debt.json", ".ufo/waves/round-93/patches/Q1-r94-proposal.md"],
+  "no_commit_or_push": true
+}

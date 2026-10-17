@@ -1,0 +1,132 @@
+{
+  "seat": "M6",
+  "round": 93,
+  "claim": "C2",
+  "baseline_head": "87779a00f25bd1855ede479e490123843e5f056e",
+  "candidate": {
+    "selection_basis": "S2.md recommends M1's Kojiki family candidate; M5 convergence report remained absent after the bounded poll.",
+    "family": "Japanese Kojiki, Chamberlain 1882 translation",
+    "cluster_path": "corpus/fixtures/r93-myth-cluster3",
+    "patch_path": ".ufo/waves/round-93/patches/M1-cluster3.patch",
+    "patch_sha256": "fd0a57ec448a07c65e64a4c85a5bbc728ab7c70933dbb6ba5a012698c0e4325d",
+    "application": "standard git apply --check and apply in disposable /tmp scratch; not applied to the repository worktree"
+  },
+  "baseline": {
+    "r87-myth-cluster": {
+      "counts": {
+        "entity_ids": 7,
+        "entity_names_casefold": 7,
+        "place_ids": 2,
+        "source_ids_bare": 5,
+        "timeline_event_ids": 4,
+        "timeline_place_ids": 2,
+        "relation_tuples": 4,
+        "timeline_entity_place_tick": 4
+      }
+    },
+    "r88-m3-maya-cluster": {
+      "counts": {
+        "entity_ids": 4,
+        "entity_names_casefold": 4,
+        "place_ids": 2,
+        "source_ids_bare": 2,
+        "timeline_event_ids": 2,
+        "timeline_place_ids": 2,
+        "relation_tuples": 0,
+        "timeline_entity_place_tick": 2
+      }
+    },
+    "shared_intersections": {
+      "entity_ids": [],
+      "entity_names_casefold": [],
+      "place_ids": [],
+      "source_ids_bare": [],
+      "timeline_event_ids": [],
+      "timeline_place_ids": [],
+      "relation_tuples": [],
+      "timeline_entity_place_tick": []
+    }
+  },
+  "candidate_counts": {
+    "entity_ids": 7,
+    "entity_names": 7,
+    "entity_aliases": 0,
+    "place_ids": 1,
+    "source_ids_bare": 1,
+    "timeline_event_ids": 2,
+    "timeline_place_ids": 1,
+    "relation_ids": 1,
+    "relation_tuples_from_to_type_source": 1,
+    "timeline_entity_place_tick": 2
+  },
+  "comparisons": {
+    "r87-myth-cluster": {
+      "entity_id_id": [],
+      "entity_name_or_alias": [],
+      "entity_id_to_name": [],
+      "entity_name_to_id": [],
+      "all_entity_keys": [],
+      "place_ids": [],
+      "source_ids_bare_namespace_only": [],
+      "timeline_event_ids": [],
+      "timeline_place_ids": [],
+      "relation_ids": [],
+      "relation_tuples_from_to_type_source": [],
+      "timeline_entity_place_tick": []
+    },
+    "r88-m3-maya-cluster": {
+      "entity_id_id": [],
+      "entity_name_or_alias": [],
+      "entity_id_to_name": [],
+      "entity_name_to_id": [],
+      "all_entity_keys": [],
+      "place_ids": [],
+      "source_ids_bare_namespace_only": [],
+      "timeline_event_ids": [],
+      "timeline_place_ids": [],
+      "relation_ids": [],
+      "relation_tuples_from_to_type_source": [],
+      "timeline_entity_place_tick": []
+    }
+  },
+  "normalization": "Unicode NFKD, casefold, remove combining marks and non-alphanumeric characters; source_id equality is a namespace diagnostic only.",
+  "semantic_review": {
+    "result": "PASS for this S2-recommended candidate; no shared fictional person, place, item, faction, relation, event, field, or occasion found, and no unresolved alias.",
+    "candidate_entities": ["Urell", "Dovren", "Veshra", "Pollen Table", "Charred Folio", "Etched Leaf", "Mica Panel"],
+    "r87_entities": ["Hara", "Sen", "Mother-Tide Gate", "Ash-Dune Sanctuary", "Shellweavers", "Reedwardens", "Reed Bell"],
+    "r88_entities": ["Aru", "Evin", "Quiet Rise", "Salt Court"],
+    "dismissed_lexical_overlap": "External translation phrase 'Reed-Plains' versus r87's in-world 'Reed Bell'/'Reedwardens'; external text is not an entity or alias in the candidate."
+  },
+  "r10_namespace_negative_case": {
+    "evidence_path": ".ufo/waves/round-91/followup/JDEP3-namespace.json",
+    "bare_source_id_collision": "shared-marker",
+    "cluster_relative_source_keys": [["cluster-a", "shared-marker"], ["cluster-b", "shared-marker"]],
+    "namespace_scoped_pair_intersection": [],
+    "shared_entity_ids": [],
+    "shared_names": [],
+    "shared_entity_place_tick": [],
+    "distinct_content": "warden/marker at dawn, court/warden tick 4 versus chanter/marker at dusk, dune/singer tick 9",
+    "individual_checker_exits": [0, 0],
+    "two_directory_checker_exit": 2,
+    "shared_field_or_occasion": false,
+    "register_entry_created": false,
+    "disposition": "A repeated bare source_id triggers a namespace check, not identity or contradiction; rename the local ID and retain no register entry."
+  },
+  "poll": {
+    "target": ".ufo/waves/round-93/M5.md",
+    "first_command": "bash .ufo/waves/poll_wait.sh .ufo/waves/round-93/M5.md 1200",
+    "first_attempt": {
+      "runner_cap_seconds": 600,
+      "observed_checks": [60, 120, 180, 240, 300, 360, 420, 480, 540],
+      "helper_terminal": "POLL_TERMINAL status=1 reason=trap elapsed=540s checks=9",
+      "runner_result": "timed out at 600s while helper slept; this was a runner cap, not the helper deadline"
+    },
+    "remaining_window_command": "bash .ufo/waves/poll_wait.sh .ufo/waves/round-93/M5.md 600",
+    "remaining_window_observed_checks": [60, 120, 180, 240, 300, 360, 420, 480, 540, 600],
+    "remaining_window_terminal": "POLL_TERMINAL status=0 reason=deadline elapsed=600s checks=10",
+    "combined_wait_seconds": 1200,
+    "m5_report_present": false
+  },
+  "verdict": "All required machine-key intersections and the independent semantic screen are empty for S2's Kojiki recommendation. M5 convergence confirmation is named debt; this receipt is not evidence that M5 selected or integrated the candidate.",
+  "scope": "No tracked files changed; candidate patch was applied only under /tmp. No commit or push."
+}
