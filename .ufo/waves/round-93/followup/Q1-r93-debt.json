@@ -1,0 +1,111 @@
+{
+  "artifact": "Q1-r93-debt",
+  "seat": "Q1 (follow-up)",
+  "wave": "round-93/followup",
+  "judged_tree": {
+    "head": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+    "head_subject": "lore r93: C1 venue repair + dossier + cert tool, C2 third cluster (Kojiki family), C3 watch re-check 2 + discriminate tool — work wave (31 seats + parent strengthening)",
+    "tracked_worktree_diff": "clean",
+    "staged_diff": "clean",
+    "untracked_scope": [".ufo/waves/round-93/followup/"]
+  },
+  "prior_censuses": {
+    "r92_ledger_head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+    "workwave_q1_census": ".ufo/waves/round-93/patches/Q1-r93-debt.json (judged pre-integration tree 87779a00f25bd1855ede479e490123843e5f056e; all C1/C2/C3 rows candidate-only there)",
+    "this_census_upgrade": "Every work-wave ledger row re-measured against the COMMITTED integration tree 65838f8; new named-debt rows added from work-wave findings and the landed files themselves."
+  },
+  "dependency_polls": {
+    "protocol": "two 60s wait-checks per seat block",
+    "receipts": [
+      "waitcheck 1 at 12:16:52 | followup=[JCAL1-delta.json JCAL1.md JCAL1-tuples.json JCAL3.md] | head=65838f8",
+      "waitcheck 2 at 12:17:52 | followup=[JCAL1-delta.json JCAL1.md JCAL1-tuples.json JCAL3.md] | head=65838f8"
+    ],
+    "outcome": "HEAD unchanged at 65838f8 (no closure commit yet); sibling follow-up seats JCAL1 (census delta) and JCAL3 (discriminate tool both-mode verification) present; their receipts are cited, not re-run."
+  },
+  "measurements": [
+    {
+      "name": "tree_identity",
+      "command": "git rev-parse HEAD; git diff --quiet HEAD --; echo worktree=$?; git diff --cached --quiet; echo index=$?",
+      "observed": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e; worktree_diff_exit=0; index_diff_exit=0"
+    },
+    {
+      "name": "structural_remeasure (boundary doc, decision table, READMEs, C9 watch)",
+      "command": "python3 inline: read corpus/knowledge/holder-assessment-boundary.md, r88-sourced-inspiration-decision-table.md (R8/R9 split), corpus/fixtures/README.md, corpus/tools/README.md, corpus/knowledge/r91-c9-watch.md; count signatures",
+      "observed": "BOUNDARY lines=648 h1=1 stale_round90_header=1 current_range_200_205=4 stale_198_203=0 | DTABLE R8_dup_label=1 Kesh=1 | R9 gate=1 record=1 receipt=1 old_example=1 | Q92-004_ref=1 dossier_ref=0 | FIXREADME round91=0 round92=1 r91c1=0 r93m2=0 | TOOLSREADME boundary_doc_check=0 discriminate_check=2 support_check=2 | WATCH checklog_headings=1 e97613c=1 full_hash_pin=False ff9fd2aa=4 row2_discrimination=True nextcheck_cadence=True discrim_tool_ref=0"
+    },
+    {
+      "name": "committed_tools_run",
+      "command": "python3 corpus/tools/discriminate_check.py; echo exit=$?; python3 corpus/tools/boundary_doc_check.py; echo exit=$?",
+      "observed": "discriminate: mode=delivered checker_sha256=ff9fd2aa…1421 matches_pin=True; both fixtures README_exact, changed_line_pairs=1/1, pinned_semantic_gate=PASS; RESULT: DISCRIMINATION HELD; discriminate_exit=0. boundary: replay_receipts=3/3 replay_cases=14/14 anchors=2/2 h1_count=1 duplicate_headings=0 instruction_markers=0 CERTIFIED; boundary_exit=0"
+    },
+    {
+      "name": "kojiki_cluster_receipt",
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster; python3 corpus/fixtures/check_bible.py corpus/fixtures/r93-m2-kojiki-cluster",
+      "observed": "RECEIPT JSON-FACTS 12; EDITORIAL-ROWS 3; TOTAL-ROWS 15 | SOURCE-SUPPORT 12/12; EDITORIAL-ANCHORS 3/3; MODES 15/15; VALIDATED-ROWS 15/15 | RESULT PASS exit=0 | CLEAN: schema, citations, relations, timeline; 0 violations exit=0"
+    },
+    {
+      "name": "cert_tool_gates_source_grep",
+      "command": "grep -n 'sha256|hashlib|import ast|contradic|EXPECTED|pin' corpus/tools/boundary_doc_check.py",
+      "observed": "line 389 EXPECTED_CHECKER_SHA256=\"ff9fd2aa…1421\" (hardcoded constant, not a CLI expected-hash argument); line 390 REQUIRED_C9_MARKERS=[\"Tick findings are NOT qualified\", \"integer comparison\"]; checker_pin_check via hashlib; NO `import ast` anywhere — AST/content-signature anchor validation absent (named r94 debt)"
+    },
+    {
+      "name": "dossier_discoverability",
+      "command": "grep -rn 'r93-r8-worked-example' corpus/ --include=*.md -l",
+      "observed": "only corpus/knowledge/r93-r8-worked-example.md itself; zero references from the decision table, fixtures README, or any other corpus file"
+    },
+    {
+      "name": "watch_second_recheck_section",
+      "command": "grep -n 'second periodic re-check|first periodic re-check' corpus/knowledge/r91-c9-watch.md; git show 65838f8 -- corpus/knowledge/r91-c9-watch.md",
+      "observed": "only '### 2026-10-17 — first periodic re-check' exists; landed diff is exactly one added check-log row: '| 2026-10-17 (r93) | ff9fd2aa…d1421 | DISCRIMINATION HELD — re-check 2 (seat X1, r93): all four gates reproduce; gate 3 not met; trigger unsatisfied; ruling retained. Next re-check: r94.' — row-2 hash is abbreviated (row 1 carries the full 64-hex); no 'second periodic re-check' section; no reference to corpus/tools/discriminate_check.py"
+    },
+    {
+      "name": "e3_readme_wording_residue",
+      "command": "grep -c 'stable checkout|printed label' corpus/tools/README.md",
+      "observed": "0 — E3's README confinement (stable-checkout bound, interpret-printed-label-with-exit-code) did NOT land; only X2's section landed (the C6-predicted README hunk conflict resolved by dropping the CERT section entirely and part of E3's)"
+    },
+    {
+      "name": "r8_materiality_counterfactual",
+      "command": "grep -n 'removed' corpus/fixtures/r93-m2-kojiki-cluster/inspiration-note.md",
+      "observed": "line 11: 'If this parallel is removed, the fictional Teva/Orni register, the unmeasured field, all JSON claims, and the two-event sequence remain a self-contained invented archive record supported solely by the M-17 excerpt.' — the R8 materiality/counterfactual debt named by S2/C7b/M5 for M1 is present for the LANDED M-17 cluster; exact printing/edition and rights/training questions remain explicitly open (line 15 + reference-ledger row)"
+    },
+    {
+      "name": "decision_table_shape",
+      "command": "python3 inline count pipe rows with 6 cells in r88-sourced-inspiration-decision-table.md",
+      "observed": "table_pipe_rows=14 six_cell_rows=14 (matches T1's candidate-time 14/14 check)"
+    },
+    {
+      "name": "sibling_crosschecks_cited",
+      "observed": "JCAL1 (followup/JCAL1.md + JCAL1-tuples.json): 167 corpus fixture dirs, 166 baseline rows tuple-identical, only delta is r93-m2-kojiki-cluster exit 0 clean; checker sha still ff9fd2aa (same-instrument); bound: behavior-identical, not proven byte-identical; names JCAL2 as the reproducibility-loop closer. JCAL3 (followup/JCAL3.md): both documented discriminator modes verified on the installed tool (exit 0 HELD / exit 2 REGRESSION-DETECTED with --checker e97613c); names the same-date/abbreviated-hash watch nuance and the e97613c-reachability dependency"
+    }
+  ],
+  "ledger": [
+    {"id": "Q92-001", "title": "Boundary document residue and certification blockers", "status_at_87779a0": "document defects repaired; certification unverified", "status_at_65838f8": "partially closed: tracked certifier corpus/tools/boundary_doc_check.py landed and certifies baseline (exit 0 CERTIFIED, measured); B3-incomplete (see DEP-H1); tools/README documents discriminate_check but NOT boundary_doc_check (new sub-gap N4)"},
+    {"id": "Q92-002", "title": "Decision-table R8/R9 integration defects", "status_at_87779a0": "open (candidate only)", "status_at_65838f8": "CLOSED. Measured: R8 duplicated label 2→1 (one legitimate per-section label), Kesh example 0→1, R9 manual gate/required record/receipt boundary 0/0/0→1/1/1, table shape 14/14 six-cell rows. Residual in R9 appendix is Q92-004 (separate row), not a venue defect"},
+    {"id": "Q92-003", "title": "support_check README named-debt drift", "status_at_87779a0": "closed", "status_at_65838f8": "closed (carried; README old-claim signatures still 0, file grew only by the discriminate_check section)"},
+    {"id": "Q92-004", "title": "R9 verification command inspects round-91 patch, not delivered section", "status_at_87779a0": "open", "status_at_65838f8": "OPEN — measured Q92-004_ref=1; the R9 textual-completeness command still reads .ufo/waves/round-91/patches/D2-edges.patch. D1 explicitly scoped this out; nobody re-anchored it at integration"},
+    {"id": "Q92-005_Q91-003", "title": "Fixtures README index missing (Round 91)", "status_at_87779a0": "open", "status_at_65838f8": "OPEN and EXTENDED — round91 headings=0, r91-c1 names=0, and the NEW r93-m2-kojiki-cluster entry is also absent (r93m2=0) in corpus/fixtures/README.md"},
+    {"id": "Q92-006", "title": "Poll-helper residual hardening", "status_at_87779a0": "carried open", "status_at_65838f8": "OPEN — Q2 (D-r93-operational-budget): helper hit path lacks terminal receipt shape; wave spec has no numeric scratch cap, inode threshold, fallback, or closure sweep"},
+    {"id": "Q92-007", "title": "Roster and landing accounting", "status_at_87779a0": "open; recurs in r93", "status_at_65838f8": "OPEN — 32 declared vs 30 coded IDs vs 31 landed reports; CERT is role-only; one C2 slot never identified; wave-spec.json + executable validator absent (Q2 D-r93-manifest-validator, D-r93-validator-coverage); W1-landing-record.patch unapplied; commit message says '31 seats + parent strengthening'"},
+    {"id": "Q92-008", "title": "Record attributes baseline control replay as certification", "status_at_87779a0": "partially clarified; no receipt", "status_at_65838f8": "partially remediated — a tracked certifier now exists and certifies the baseline; the r92 closure's historical re-certification claim still has no retroactive B3-conforming receipt, and the tool's own B3 gap (AST anchors) keeps full conformance open"},
+    {"id": "Q92-009", "title": "Scratch/inode budget debt", "status_at_87779a0": "carried", "status_at_65838f8": "OPEN carried — B2 preflight: /tmp 98% inode use, 29,177 free inodes; Q2: no numeric scratch policy in wave spec; no fresh census claimed this seat"},
+    {"id": "Q92-010", "title": "C9 watch forward-pointer incomplete", "status_at_87779a0": "open (no row 2, no hash pin, no cadence)", "status_at_65838f8": "MOSTLY CLOSED — check-log row 2 landed (dated, ruled, 'Next re-check: r94'); DISCRIMINATION HELD independently re-verified on installed tool (this seat exit 0; JCAL3 exit 0 and exit 2 both modes). Residuals: (a) row-2 checker hash abbreviated vs row-1 full 64-hex; (b) both rows share calendar date 2026-10-17, distinguished only by '(r93)' suffix; (c) the older e97613c mention remains unpinned (full_hash_pin=False); (d) watch never references the promoted corpus/tools/discriminate_check.py; (e) E3's README stable-checkout/exit-code-interpretation wording did not land"},
+    {"id": "DEP-H1", "title": "Independent B3-conformant certification of boundary document", "status_at_87779a0": "open (candidate non-conforming)", "status_at_65838f8": "PARTIALLY CLOSED — landed tool has: checker hash pin ✓ (but hardcoded constant, not B3 Gate A's command-line expected-hash argument), pasted-block replay ✓, structure greps ✓, C9 semantics gate ✓ (required markers + legacy-claim rejection, lines 389-399), no-write baseline run ✓, exit 0/1 observed. Missing: Gate C AST/content-signature anchor validation — explicitly named r94 debt in the integration commit message. Integration claims CB-audit's wrong-citation and changed-checker probes now exit 1 with named failures; this seat verified the baseline run only and did NOT independently re-run the adversarial probes — treat probe re-verification as open phase-2/CERT work"},
+    {"id": "R93-N2", "title": "M2-specific independent referent/semantic review (zero-shared-referents claim is author-side only)", "status_at_65838f8": "OPEN — the landed fixture README itself states: 'M6's current report reviews M1's distinct r93-myth-cluster3 candidate, not this M-17 cluster; an independent M2-specific scan and semantic review remain pending before any integrated zero-referent conclusion.' M6's receipt covers the UNINTEGRATED M1 candidate; the landed cluster's zero-referent evidence is the author-side normalized-key preflight plus M4's author-side replay. Highest-value C2 item for r94"},
+    {"id": "R93-N3", "title": "R8 dossier replay coverage + discoverability", "status_at_65838f8": "OPEN — (a) D2's embedded replay asserts 5 of 8 record fields; element/scope pointer, creator account, reviewer/date lack missing-field mutation tests (R1: removing all three still reports 5/5 exit 0); (b) grep shows ZERO corpus references to corpus/knowledge/r93-r8-worked-example.md — the decision table's R8 appendix does not link the dossier it lands"},
+    {"id": "R93-N4", "title": "tools/README missing boundary_doc_check.py documentation", "status_at_65838f8": "OPEN — boundary_doc_check mentions=0 in corpus/tools/README.md; CERT's patch included a README section but the C6-predicted README hunk conflict with X2 was resolved at integration by landing only the discriminate_check section"},
+    {"id": "R93-N5", "title": "Commit-message receipt discrepancy (10 vs 12 JSON facts)", "status_at_65838f8": "OPEN record-integrity item — 65838f8 commit message says 'support receipt 10 JSON + 3 editorial PASS'; measured receipt and fixture README say JSON-FACTS 12 / EDITORIAL-ROWS 3 (10 was M1's unintegrated candidate's count). r93 closure log should record 12, citing this measurement"},
+    {"id": "R93-N6", "title": "Historical checker reachability dependency", "status_at_65838f8": "NOTE — discriminate_check.py --checker e97613c depends on commit e97613c staying reachable (JCAL3); belongs in any future prune/rewrite policy line"},
+    {"id": "R93-N7", "title": "Census byte-vs-behavior bound + JCAL2", "status_at_65838f8": "NOTE — JCAL1's 167-dir receipt proves behavior-identity under the pinned checker, not byte-identity of preexisting fixtures; JCAL1 names a second independent census (JCAL2) as the reproducibility-loop closer"},
+    {"id": "R93-N8", "title": "C9 source-backed falsification trigger gate 3", "status_at_65838f8": "OPEN carried — row 2 re-records 'gate 3 not met; trigger unsatisfied; ruling retained'; independently reviewable source-backed evidence still absent (B1 bound stands)"},
+    {"id": "R93-N9", "title": "Rights / attribution / training-permission open questions", "status_at_65838f8": "OPEN by design — reference-ledger Chamberlain/Kojiki row records 'Open question — not assessed' for rights and AI-training permission; exact printed edition behind the Terebess transcription unidentified. Deliberate open questions, not closable engineering debt"},
+    {"id": "R93-N10", "title": "r93 closure record pending", "status_at_65838f8": "OPEN process — LOG.md's last entry is Round 92; no r93 entry, no SCORECARD r93 verdicts yet. All verdict-dependent selections (r94 axis choice) remain gated on L1's closure verdicts"}
+  ],
+  "round93_claims_vs_delivered_tree": {
+    "C1_depth": "substantially landed: R9 venue repair in tree (Q92-002 closes), dossier file landed (replay-coverage + discoverability gaps N3), cert tool landed with pin+C9 gate (AST anchors named r94; probe re-verification open; README doc gap N4; Q92-004 open)",
+    "C2_coverage": "landed: r93-m2-kojiki-cluster 12 JSON + 3 editorial, support RESULT PASS, check_bible CLEAN (measured); zero-shared-referents evidenced at author-side key level only — independent M2-specific review pending (N2); fixtures README not updated (Q92-005 ext)",
+    "C3_calibration": "landed and verified: watch row 2 + installed discriminate_check.py (exit 0 HELD this seat; exit 0/2 both modes per JCAL3); residuals = Q92-010 (a)-(e); C5-001 single-snapshot bound unreproduced; gate-3 source-backed evidence still unmet"
+  },
+  "r94_proposal": "see followup/Q1-r94-proposal.md — conditional/unselected; gate = L1's actual round-93 verdict words on the frozen tree; tie-break input = open ledger row counts (depth lane 5: Q92-004, DEP-H1/AST, N3, N4, Q92-008-residual; coverage lane 3: N2, Q92-005-ext, N9-adjacent; calibration lane 2: Q92-010 residuals + C5-001; process cross-cutting 4: Q92-006/007/009 + N10)",
+  "write_boundary": [".ufo/waves/round-93/followup/Q1.md", ".ufo/waves/round-93/followup/Q1-r93-debt.json", ".ufo/waves/round-93/followup/Q1-r94-proposal.md"],
+  "no_commit_or_push": true
+}

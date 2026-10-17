@@ -1,0 +1,102 @@
+{
+  "seat": "H3",
+  "round": 93,
+  "head": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "baseline": "87779a0",
+  "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "checker_unchanged_since_baseline": true,
+  "probes": [
+    {
+      "id": "20case-byte-identical",
+      "command": "scratch env /tmp/h3/env (.shokunin/lore -> repo symlink); replay corpus/live/runs/20261012T173416Z/*.txt with historical argv shape, full stored bytes vs header+exit_code+stdout",
+      "observed": "TOTAL 20-case set byte-identical: 20/20 (8 exit 0, 12 exit 1)",
+      "note": "r5-missing-file byte-identical only under the historical path shape; its violation text embeds argv[2] verbatim"
+    },
+    {
+      "id": "cert-pass",
+      "command": "python3 corpus/tools/boundary_doc_check.py",
+      "rc": 0,
+      "observed": "replay_receipts=3/3 replay_cases=14/14 anchors=2/2 h1_count=1 duplicate_headings=0 instruction_markers=0 CERTIFIED"
+    },
+    {
+      "id": "cert-pin-fire",
+      "command": "python3 corpus/tools/boundary_doc_check.py --checker /tmp/h3/cert/checker-flipped.py",
+      "rc": 1,
+      "observed": "FAIL: checker hash pin: 3d9a5f0863f02af9... != pinned ff9fd2aa6811a813... ; FAIL: stdout mismatch for r85-control (receipt line 355); CERTIFICATION FAIL"
+    },
+    {
+      "id": "cert-c9-fire",
+      "command": "python3 corpus/tools/boundary_doc_check.py --doc /tmp/h3/cert/doc-c9.md",
+      "rc": 1,
+      "observed": "FAIL: C9 semantics: required markers missing or a legacy tick-qualification claim present; CERTIFICATION FAIL"
+    },
+    {
+      "id": "cert-receipt-tamper-fire",
+      "command": "python3 corpus/tools/boundary_doc_check.py --doc /tmp/h3/cert/doc-rc.md",
+      "rc": 1,
+      "observed": "FAIL: return-code mismatch for r85-unique-break-control: receipt=7 observed=1; CERTIFICATION FAIL"
+    },
+    {
+      "id": "discriminate-pass",
+      "command": "python3 corpus/tools/discriminate_check.py",
+      "rc": 0,
+      "observed": "both fixtures README_exact=True changed_line_pairs=1/1 gate=PASS; RESULT: DISCRIMINATION HELD"
+    },
+    {
+      "id": "discriminate-revert-sim",
+      "command": "python3 corpus/tools/discriminate_check.py --checker e97613c",
+      "rc": 2,
+      "observed": "REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved — pinned delivered semantics not present"
+    },
+    {
+      "id": "discriminate-checker-flip-fire",
+      "command": "python3 corpus/tools/discriminate_check.py --repo-root /tmp/h3/dmut-flip (checker copy CLEAN:->XLEAN:, sha 3d9a5f0863f02af9...)",
+      "rc": 2,
+      "observed": "matches_pin=False; fixture receipts still byte-identical; REGRESSION-DETECTED on checker-hash"
+    },
+    {
+      "id": "discriminate-fixture-mutation-fire",
+      "command": "python3 corpus/tools/discriminate_check.py --repo-root /tmp/h3/dmut-fix (entities[0].claims[0].source_id -> courier-logx)",
+      "rc": 2,
+      "observed": "r91-c1-null-chain README_exact=False; REGRESSION-DETECTED on r91-c1-null-chain"
+    },
+    {
+      "id": "discriminate-invisible-mutation-control",
+      "command": "python3 corpus/tools/discriminate_check.py --repo-root /tmp/h3/dmut-fix (display-name suffix only)",
+      "rc": 0,
+      "observed": "DISCRIMINATION HELD — output-invisible fixture mutations are out of the harness's scope; checker-hash pin is the only guard"
+    },
+    {
+      "id": "cluster-pass-checker",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r93-m2-kojiki-cluster",
+      "rc": 0,
+      "observed": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "id": "cluster-pass-support",
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster",
+      "rc": 0,
+      "observed": "INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15; DISTINCT-ANCHORS 15/15 ... RESULT PASS"
+    },
+    {
+      "id": "cluster-fire-tick",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/h3/kmut-tick (orni-marks-index tick 2->1)",
+      "rc": 1,
+      "observed": "VIOLATION: timeline[1].depends_on: timeline inversion 'teva-files-index' tick 1 not before 'orni-marks-index' tick 1"
+    },
+    {
+      "id": "cluster-fire-citation",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/h3/kmut-cite (relations[0].source_id -> m2-record-archives)",
+      "rc": 1,
+      "observed": "VIOLATION: relations[0].source_id: unknown in-world source 'm2-record-archives'"
+    },
+    {
+      "id": "cluster-fire-anchor",
+      "command": "python3 corpus/tools/support_check.py /tmp/h3/kmut-anchor (excerpt line 7 unmeasured -> un-measured)",
+      "rc": 1,
+      "observed": "FAIL: E3: source-support anchor missing; SOURCE-SUPPORT 11/12; RESULT FAIL"
+    }
+  ],
+  "first_attempt_invalid_runs": "two fire probes discarded (probe-script bugs: bytes-assignment TypeError, list-vs-dict JSON, cp typo, one pipe ate an rc); all receipts above are from verified-landed reruns",
+  "repo_writes": [".ufo/waves/round-93/followup/H3.md", ".ufo/waves/round-93/followup/H3-probes.json"]
+}

@@ -205,3 +205,15 @@ readme_line3=Fixture scaffolding only; not sourced story evidence.
 
 **Census path convention:** Run from the repository root and pass each fixture as the repository-relative `corpus/fixtures/<name>` argument; the five missing-file fixtures echo that argv path in stdout.
 **B1 tuple assumption:** Replay B1 tuples with the same repository-relative fixture paths and argv spelling; absolute or differently prefixed paths alter the five captured stdout hashes.
+
+## 2026-10-17 — r93 clarification / replacement
+
+This append-only clarification replaces the imprecise wording in check-log row 2 (`2026-10-17 (r93)`); it does **not** add a third check-log row. The first dated row is the first periodic re-check in r92; row 2 is the distinct second re-check in r93, executed by seat X1. The r92 and r93 check identities are distinct even though both use the calendar date 2026-10-17.
+
+The row-2 checker abbreviation `ff9fd2aa…d1421` is replaced here by the full checker SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`. The historical comparison baseline is commit `e97613cc276f5fa9cac49ff1900798cf6863c020`.
+
+The phrase `all four gates reproduce` in row 2 is superseded as ambiguous: the r93 discriminator commands below verify the two stable fixtures, not the four falsification-trigger gates. From `lore-shokunin/`, `python3 corpus/tools/discriminate_check.py` exited 0 with `DISCRIMINATION HELD`; `python3 corpus/tools/discriminate_check.py --checker e97613c` exited 2 with `REGRESSION-DETECTED`. These modes compare the delivered checker with the historical baseline on `corpus/fixtures/r91-c1-null-chain` and `corpus/fixtures/r91-c1-tick-unresolved`.
+
+Gate 3 remains **not met**: the `sequence-scope evidence check` recorded above was rerun from the repository root and produced `excerpt_files=` and `readme_line3=Fixture scaffolding only; not sourced story evidence.` Thus the unresolved-tick fixture has no `*excerpt*` files and supplies no independently reviewable, source-backed evidence that the compared ticks belong to different sequences. Gate 4's claim that this evidence makes the definite inversion indeterminate is therefore also not established; the four-gate falsification trigger has **not** passed, and the ruling remains unchanged.
+
+**Ongoing calibration owner:** the lore-shokunin calibration lane owns this C9 watch and its follow-up; X1 was the r93 re-check executor. The next re-check is due in r94. This replaces the prior §Owner handoff wording, “the next C1 calibration owner at closure,” with an explicit lane owner and due round.

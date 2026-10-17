@@ -1,0 +1,75 @@
+{
+  "reviewer": "R17",
+  "method": "Parsed only the three allow-listed checker-loop forms in the document's Commands section; did not evaluate document shell text. Invoked the checker directly once per fixture via subprocess argv and compared raw stdout bytes and exit codes to the pasted receipt wrappers.",
+  "boundary_doc_check_invoked": false,
+  "baseline_revision": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "observed_head": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "input_closure": {
+    "scope": "boundary document, checker, and all regular files beneath the 14 replay fixture directories",
+    "file_count": 81,
+    "all_files_byte_match_baseline_via_git_show": true,
+    "manifest_sha256": "6661adc0cab5714bb69c4409f0ef9b0c135c10f70e4d066d4460e48f3cbd76d8",
+    "manifest_algorithm": "For sorted repo-relative paths: SHA256-update 8-byte big-endian UTF-8 path length, path bytes, 8-byte big-endian file size, and raw 32-byte SHA256(file bytes).",
+    "document_sha256": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e",
+    "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+  },
+  "summary": {
+    "receipt_groups": 3,
+    "cases": 14,
+    "stdout_byte_matches": 14,
+    "exit_code_matches": 14,
+    "stderr_empty": 14,
+    "mismatches": []
+  },
+  "groups": [
+    {
+      "group": 1,
+      "pasted_document_lines": "355-385",
+      "fixture_paths": [
+        "corpus/live/runs/round-85/probe-inputs/r85-control",
+        "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control",
+        "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+        "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+        "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro"
+      ]
+    },
+    {
+      "group": 2,
+      "pasted_document_lines": "406-452",
+      "fixture_paths": [
+        "corpus/fixtures/r88-mixed-stop",
+        "corpus/fixtures/r88-nonholder-stop",
+        "corpus/fixtures/r88-shape-ambiguous-armed",
+        "corpus/fixtures/r89-f2-dangling-to",
+        "corpus/fixtures/r89-f2-dangling-from",
+        "corpus/fixtures/r89-f2-invalid-source-id"
+      ]
+    },
+    {
+      "group": 3,
+      "pasted_document_lines": "462-479",
+      "fixture_paths": [
+        "corpus/fixtures/r89-c1-multi-cause-valid",
+        "corpus/fixtures/r89-fn2-unresolved-chain-break",
+        "corpus/fixtures/r89-fn2-control"
+      ]
+    }
+  ],
+  "stderr_sha256_for_every_case": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cases": [
+    {"fixture": "corpus/live/runs/round-85/probe-inputs/r85-control", "stdout_bytes": 60, "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e", "expected_rc": 0, "observed_rc": 0, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control", "stdout_bytes": 138, "stdout_sha256": "1a218a9a71a13d2772b7ef3d739f3949c10b12f126463af40e4656988c9c9094", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous", "stdout_bytes": 637, "stdout_sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous", "stdout_bytes": 400, "stdout_sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro", "stdout_bytes": 782, "stdout_sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r88-mixed-stop", "stdout_bytes": 1160, "stdout_sha256": "7179e0ccef3e3aa07a9782d9c60ebfbe6a9d004202ed24f28079dd7a11f702b5", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r88-nonholder-stop", "stdout_bytes": 1032, "stdout_sha256": "b5ff4b29194ca64b98282bd08450785b2b46901a3b3da2f042ad35a2a6565529", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r88-shape-ambiguous-armed", "stdout_bytes": 842, "stdout_sha256": "b665ea9ef9fb593d9016e6c9bbcee40660e0d057013fd52a87415e1774c5411b", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r89-f2-dangling-to", "stdout_bytes": 1017, "stdout_sha256": "e0002f47309838a7632370de77d650329404f3cbe8f8feb960406828a8b0262c", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r89-f2-dangling-from", "stdout_bytes": 1033, "stdout_sha256": "3c58ea3c26ff025e9ae1fbce13f77504902c9a1fc0b7448494740b7145804838", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r89-f2-invalid-source-id", "stdout_bytes": 1008, "stdout_sha256": "68f8b0e8e72f89f359d9e86bc1ad956e2d586e89ce4c2a4013af02275230a6b3", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r89-c1-multi-cause-valid", "stdout_bytes": 613, "stdout_sha256": "35db96cd3891b33bf51573eed4dc8bf2f5414bd97b56b6a11bd08292cc14e66d", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r89-fn2-unresolved-chain-break", "stdout_bytes": 386, "stdout_sha256": "66ed1438c6d1af003492d29569492ec0990e5b01b041fba1b4e21147eab4327a", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0},
+    {"fixture": "corpus/fixtures/r89-fn2-control", "stdout_bytes": 137, "stdout_sha256": "4283f6955f40d49f6036ad61f55ab94e682cdb3c475af73c3d8350920cf06951", "expected_rc": 1, "observed_rc": 1, "stdout_and_rc_match": true, "stderr_bytes": 0}
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "seat": "W1",
+  "wave": "round-93 FOLLOW-UP (world-bible lane)",
+  "mission": "Debt-disposition verifier: r92's ledger rows vs the delivered tree",
+  "row_source": ".ufo/waves/round-92/followup/Q1-r92-debt.json#new_debts",
+  "row_count": 10,
+  "adjacent_row_sources": [
+    ".ufo/waves/round-92/followup/E1-debt.json#debt (R92-E1-01..08)",
+    ".ufo/waves/round-92/followup/E1-debt.json#carried (5 items)"
+  ],
+  "r92_work_commit": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "r92_closure_commit": "87779a00f25bd1855ede479e490123843e5f056e",
+  "delivered_commit": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "observed_head_at_measurement": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "measurement_time_local": "2026-10-17T12:42:25-03:00",
+  "delivered_tree_state": "tracked clean at 65838f8 (git diff --quiet HEAD -- -> exit 0 across both wait checks); the only porcelain line is the untracked .ufo/waves/round-93/followup/ directory of sibling follow-up seats",
+  "verdict_scope": "Every verdict below is derived from the committed tree at 65838f8 (files, git objects, delivered tools run from the tree). Sibling follow-up artifacts are named as corroboration only and were not used as evidence. The r92 checker is unchanged since r91: ff9fd2aa at 396c568, c4d4823, 87779a0, and 65838f8 (0 commits in 87779a0..65838f8 for corpus/fixtures/check_bible.py).",
+  "disposition_summary": {
+    "closed": ["Q92-001 (at 87779a0, holds at 65838f8)", "Q92-002 (at 65838f8)", "Q92-003 (at 87779a0, holds at 65838f8)", "Q92-008 (by the 87779a0 closure record)"],
+    "partial": ["Q92-010"],
+    "open": ["Q92-004", "Q92-005 (expanded)", "Q92-006", "Q92-007 (recurred in r93)", "Q92-009 (worse)"]
+  },
+  "wait_checks": {
+    "command": "(for i in 1 2; do sleep 60; h=$(git rev-parse HEAD); st=$(git status --porcelain | wc -l); git diff --quiet HEAD --; td=$?; fe=$(ls .ufo/waves/round-93/followup | wc -l); echo \"POLL_CHECK t=$((i*60))s head=$h porcelain=$st tracked_diff_exit=$td followup_entries=$fe\"; done; echo POLL_TERMINAL status=0 checks=2)",
+    "observed": [
+      "POLL_CHECK t=60s head=65838f867d6ece8e7b8bdcc4ffc667a08a1b785e porcelain=1 tracked_diff_exit=0 followup_entries=20",
+      "POLL_CHECK t=120s head=65838f867d6ece8e7b8bdcc4ffc667a08a1b785e porcelain=1 tracked_diff_exit=0 followup_entries=23",
+      "POLL_TERMINAL status=0 checks=2"
+    ],
+    "conclusion": "tracked judgment surface byte-frozen at 65838f8 for the whole measurement window; growth is untracked sibling follow-up artifacts only"
+  },
+  "common_measurements": {
+    "M-TREE": {
+      "command": "git rev-parse HEAD; git status --porcelain; git diff --quiet HEAD --; echo tracked_diff_exit=$?; git diff 87779a0..65838f8 --stat -- corpus/ | tail -1",
+      "observed": "HEAD=65838f867d6ece8e7b8bdcc4ffc667a08a1b785e; porcelain = '?? .ufo/waves/round-93/followup/' only; tracked_diff_exit=0; corpus-side r93 diff: 18 files changed, 869 insertions(+), 17 deletions(-)"
+    },
+    "M-CHECKER": {
+      "command": "sha256sum corpus/fixtures/check_bible.py; git log --oneline 87779a0..65838f8 -- corpus/fixtures/check_bible.py | wc -l",
+      "observed": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py; 0 commits in range"
+    },
+    "M-DOC": {
+      "command": "wc -l corpus/knowledge/holder-assessment-boundary.md; sha256sum corpus/knowledge/holder-assessment-boundary.md; git log --oneline 87779a0..65838f8 -- corpus/knowledge/holder-assessment-boundary.md | wc -l",
+      "observed": "648 lines (was 671 at c4d4823); 7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e; 0 commits in 87779a0..65838f8 — the repair landed at r92 closure 87779a0 and is unchanged since"
+    },
+    "M-CERTTOOL": {
+      "command": "sha256sum corpus/tools/boundary_doc_check.py; PYTHONDONTWRITEBYTECODE=1 python3 corpus/tools/boundary_doc_check.py; echo rc=$?",
+      "observed": "8e439b5129d0e2d26e6fac725f0231f07059e8dedf462c5219115240d371af3c; stdout: 'CHECK receipt replay: PASS / CHECK code anchors: PASS / CHECK document structure: PASS / replay_receipts=3/3 / replay_cases=14/14 / anchors=2/2 / h1_count=1 / duplicate_headings=0 / instruction_markers=0 / CERTIFIED'; rc=0"
+    },
+    "M-CERTTOOL-PIN": {
+      "command": "grep -n 'EXPECTED_CHECKER_SHA256\\|REQUIRED_C9_MARKERS\\|c9_semantics_check' corpus/tools/boundary_doc_check.py",
+      "observed": ":389 EXPECTED_CHECKER_SHA256 = \"ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421\"; :390 REQUIRED_C9_MARKERS = [\"Tick findings are NOT qualified\", \"integer comparison\"]; :398 def c9_semantics_check(doc_text); :348-350 hash-pin and C9-semantics failures appended to failures"
+    },
+    "M-TABLE": {
+      "command": "grep -o 'Failed-gate disposition (clarified r92)' corpus/knowledge/r88-sourced-inspiration-decision-table.md | wc -l; grep -n '### R8 appendix\\|### R9 appendix\\|### R10 appendix\\|Manual R9 gate\\|Required record:\\|Receipt boundary:\\|\\*\\*Worked example' corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+      "observed": "label occurrence count = 1; :28 R8 appendix; :42 R8 worked example (Kesh Hymn); :44 R9 appendix; :73 Manual R9 gate; :75 Required record; :77 Receipt boundary; :79 R9 worked example (single); :86 R10 appendix — the whole manual-gate block sits inside the R9 appendix"
+    },
+    "M-R9CMD": {
+      "command": "grep -n 'patches/' corpus/knowledge/r88-sourced-inspiration-decision-table.md; python3 -c '<the delivered :84 command verbatim>'; echo rc=$?; git ls-files .ufo/waves/round-91/patches/D2-edges.patch",
+      "observed": "single hit :84 reading .ufo/waves/round-91/patches/D2-edges.patch; command prints 'R9 reprint decision completeness: 11/11' rc=0 — against the patch text, not the delivered appendix; patch file is tracked"
+    },
+    "M-WATCH": {
+      "command": "sed -n '41,52p' corpus/knowledge/r91-c9-watch.md; grep -c '^| 2026-10-17' corpus/knowledge/r91-c9-watch.md; grep -c 'e97613cc276f5fa9cac49ff1900798cf6863c020' corpus/knowledge/r91-c9-watch.md; git ls-files .ufo/waves/round-91/patches/B3-before-state.json",
+      "observed": "'## Owner' :41 (role handoff only, no due date); '## Check log' :45 with two dated rows — row 1 '2026-10-17 | ff9fd2aa…d1421 (full 64-hex) | DISCRIMINATION HELD', row 2 '2026-10-17 (r93) | `ff9fd2aa…d1421` (abbreviated) | DISCRIMINATION HELD — re-check 2 (seat X1, r93) … Next re-check: r94.'; dated-row count 2; full e97613c commit hash in watch = 0; :20 names B3-before-state.json + fixture READMEs as the pin; B3-before-state.json is tracked"
+    },
+    "M-READMES": {
+      "command": "grep -n '^## Round' corpus/fixtures/README.md | tail -4; grep -c 'r91-c1' corpus/fixtures/README.md; grep -c 'r93-m2\\|Round 93' corpus/fixtures/README.md; grep -n 'Named debt\\|Missing inventory exits 2\\|No terminal failure summaries\\|until the checker is updated' corpus/tools/README.md; echo grep_exit=$?; sed -n '22,29p' corpus/tools/README.md",
+      "observed": "fixtures README: 1008 Round 88 / 1012 Round 89 / 1016 Round 90 / 1020 Round 92 — no Round 91, no Round 93; r91-c1 count 0; r93-m2/Round 93 count 0. tools README: stale named-debt strings 0 hits; '### Terminal statuses' section lists RESULT PASS exit 0 / RESULT PASS WITH WARNINGS exit 0 / RESULT FAIL exit 1 / RESULT ERROR exit 2; a '### Checker regression discrimination' section was added at r93"
+    },
+    "M-HELPER": {
+      "command": "git log --oneline c4d4823..65838f8 -- .ufo/waves/poll_wait.sh | wc -l; cat .ufo/waves/poll_wait.sh",
+      "observed": "0 commits; the 13-line helper is byte-unchanged: no repo-root/path validation ($p used raw in [ -e \"$p\" ]), POLL_HIT exits 0 with no POLL_TERMINAL-on-hit line"
+    },
+    "M-INODES": {
+      "command": "df -i /tmp | tail -1; ls -d /tmp/lore* 2>/dev/null | wc -l",
+      "observed": "tmpfs 1048576 inodes, 1034776 used, 13800 free, 99% use (1.32% free); 291 lore-* /tmp trees"
+    },
+    "M-L0": {
+      "command": "sed -n '1,8p' l0-questions.md",
+      "observed": "5 lines total; line 3 = round-87 chousa boundary question; line 5 = round-89 kotodama contract ratification question; no r92/r93 append"
+    }
+  },
+  "rows": [
+    {
+      "id": "Q92-001",
+      "axis": "documentation-parity / certification blockers (orphan tail, stale anchor, duplicated fragments)",
+      "r92_status": "open (blocking for a clean depth verdict)",
+      "disposition": "closed",
+      "closed_at": "87779a0 (r92 closure); verified at 65838f8",
+      "evidence": [
+        "M-DOC: doc now 648 lines (was 671); sha 7f815a93; untouched since 87779a0.",
+        "Named defects at HEAD: 'lines, sha256 `e2bb9639' (orphan tail head) -> 0 hits; '198-203' (stale range) -> 0 hits; '## Round 89` section at `1b09f3f' (stranded fragment) -> 0 hits; '§M7' count 1 (duplicated census tail gone; the surviving :576 mention is the legitimate provenance citation).",
+        "M-CERTTOOL: the delivered certifier replays 3/3 receipt blocks, 14/14 cases, anchors 2/2, h1_count=1, duplicate_headings=0, instruction_markers=0, CERTIFIED rc=0."
+      ],
+      "residual": "The certification is tool-scoped: the anchor gate resolves 2/2 catalog citations, not the r92 follow-up's 21-site scan (AST/content-signature validation is the commit's named r94 debt). Doc-header provenance (R92-E1-06) is a separate open row, not part of this one."
+    },
+    {
+      "id": "Q92-002",
+      "axis": "instruction-surface integrity (decision-table R8/R9 integration defects)",
+      "r92_status": "open",
+      "disposition": "closed",
+      "closed_at": "65838f8",
+      "evidence": [
+        "M-TABLE: doubled label gone — 'Failed-gate disposition (clarified r92)' occurs exactly once (:40).",
+        "R8 worked example present: :42 'Kesh Hymn' seven-threshold-names example inside the R8 appendix (:28).",
+        "Venue repaired: Manual R9 gate (:73), Required record (:75), Receipt boundary (:77) all sit INSIDE the R9 appendix (:44) after its Decision paragraph, before the R10 appendix (:86); the r91-era duplicate R9 worked example was replaced — exactly one R9 worked example remains (:79, the reprint/manual-review case).",
+        "E1's instructed R9 evidence-cell append landed: decision-table :25 now ends 'For every translation-backed R5 claim, require the separate per-claim R9 manual-review record; the support command's RESULT PASS/SOURCE-SUPPORT is lexical preflight only and is not that receipt.'"
+      ],
+      "residual": "None for this row. The row's fourth defect (verification command re-point) was E1-04/Q92-004's subject and remains open there."
+    },
+    {
+      "id": "Q92-003",
+      "axis": "documentation-parity (tools README named-debt section vs delivered checker)",
+      "r92_status": "open",
+      "disposition": "closed",
+      "closed_at": "87779a0 (r92 closure, K1 patch applied); verified at 65838f8",
+      "evidence": [
+        "M-READMES: stale strings 'Named debt', 'Missing inventory exits 2', 'No terminal failure summaries', 'until the checker is updated' -> 0 hits at 65838f8.",
+        "The README now documents the live contract under '### Terminal statuses' (PASS/WARN exit 0, FAIL exit 1, ERROR exit 2), matching the r92-verified probe behavior.",
+        "git log: corpus/tools/README.md touched at 87779a0 (repair) and 65838f8 (+11 lines: the '### Checker regression discrimination' section for the promoted discriminate_check.py)."
+      ],
+      "residual": "None."
+    },
+    {
+      "id": "Q92-004",
+      "axis": "instruction-surface integrity (R9 verification command reads a wave patch)",
+      "r92_status": "open",
+      "disposition": "open (unchanged; now acknowledged in the delivered text)",
+      "closed_at": null,
+      "evidence": [
+        "M-R9CMD: the only 'patches/' reference in the decision table is :84, still reading .ufo/waves/round-91/patches/D2-edges.patch; running it prints 'R9 reprint decision completeness: 11/11' rc=0 — it verifies patch-text completeness, never the delivered appendix it annotates.",
+        "The delivered Receipt boundary paragraph (:77) now concedes: 'The existing verification command checks wording completeness only and cannot perform this review.'"
+      ],
+      "residual": "Re-point the command at the delivered R9 appendix text (or delete it in favor of boundary_doc_check.py-style tooling); any wave-artifact prune silently breaks it."
+    },
+    {
+      "id": "Q92-005",
+      "axis": "coverage / index parity (fixtures README round index)",
+      "r92_status": "open",
+      "disposition": "open (expanded: two rounds now unindexed)",
+      "closed_at": null,
+      "evidence": [
+        "M-READMES: headings still jump '## Round 90' (:1016) -> '## Round 92' (:1020); no '## Round 91'; 'r91-c1' count 0.",
+        "Expansion: the r93 cluster is also unindexed — 'r93-m2' / 'Round 93' count 0 in corpus/fixtures/README.md; corpus/fixtures/README.md has 0 commits in 87779a0..65838f8."
+      ],
+      "residual": "Round 91 and Round 93 index rows both missing; the new r93-m2-kojiki-cluster is undiscoverable from the index."
+    },
+    {
+      "id": "Q92-006",
+      "axis": "process debt (poll-helper residuals)",
+      "r92_status": "open",
+      "disposition": "open (unchanged)",
+      "closed_at": null,
+      "evidence": [
+        "M-HELPER: 0 commits touching .ufo/waves/poll_wait.sh in c4d4823..65838f8; the helper still performs no path validation and still emits no POLL_TERMINAL line on a hit (POLL_HIT exits 0 directly)."
+      ],
+      "residual": "Named by r92 Q2 F5: repo-root path validation, POLL_TERMINAL-on-hit shape, runner margin. Unchanged through r93."
+    },
+    {
+      "id": "Q92-007",
+      "axis": "process/record debt (roster/landing accounting)",
+      "r92_status": "open",
+      "disposition": "open (unchanged at the r92 record; the class recurred in r93)",
+      "closed_at": null,
+      "evidence": [
+        ".ufo/waves/round-92/wave-spec.md still declares 'Phase 1: WORK wave, 32 seats' with '## Roster (32)'; round-92 holds 31 seat .md reports + wave-spec.md; git ls-files .ufo/waves/round-92/wave-spec.json -> 0; the r92 closure LOG section records the round but does not reconcile the counts.",
+        "Recurrence: r93 wave-spec.md promises 'wave-spec.json + a tiny validator land with the clerk this round (r92-Q2 debt)' and declares Roster (32), but at 65838f8 no .ufo/waves/round-93/wave-spec.json is tracked (git ls-files -> 0) and round-93 holds 31 seat .md reports + wave-spec.md; the r93 work-commit message says '31 seats + parent strengthening'."
+      ],
+      "residual": "The declared r93 clerk deliverable (wave-spec.json + validator) is not in the delivered tree; the accounting gap is now two rounds deep."
+    },
+    {
+      "id": "Q92-008",
+      "axis": "record integrity (work-commit message cites T1's baseline control as certification)",
+      "r92_status": "open",
+      "disposition": "closed (by the r92 closure record)",
+      "closed_at": "87779a0",
+      "evidence": [
+        "LOG.md '## Round 92' section explicitly rules: 'JAXIS ruled C1's certification sub-claim had FAILed gate (b) … V2's \"inherited\" framing was true of the text but false of the failure state', lists the repair set, and dates the parent re-certification to post-repair ('every pasted block replays, structure clean, no instruction markers, history pins legitimate').",
+        "The 87779a0 commit message carries the same ruling and never repeats the unqualified 'certified by T1: 3/3 receipts, 14/14 replay cases' phrasing.",
+        "Bound: the defective wording in the c4d4823 commit message itself is immutable history; the debt was about the standing record, and the standing record is now correct. The current 65838f8 certification claim is backed by the committed tool (M-CERTTOOL: CERTIFIED rc=0)."
+      ],
+      "residual": "None required; keep recorded so the r92 work-commit message is not quoted as a certification receipt."
+    },
+    {
+      "id": "Q92-009",
+      "axis": "process debt (scratch/inode budget)",
+      "r92_status": "open (carried with number)",
+      "disposition": "open (worse)",
+      "closed_at": null,
+      "evidence": [
+        "M-INODES: df -i /tmp -> 1048576 total, 1034776 used, 13800 free = 1.32% free (99% use), below the 5% gate and below r92's recorded 1.477% free; /tmp lore-* trees now 291 (r92 recorded 283).",
+        "File-count inside the trees not re-measured this seat (frugality): r92's number was 530,932 files; the inode-pressure number is the gate and it moved the wrong way."
+      ],
+      "residual": "No numeric budget exists in the tree; the trend across rounds is monotonic. Closure sweep / dispatch gate remain the named owners."
+    },
+    {
+      "id": "Q92-010",
+      "axis": "calibration residue (C9 watch forward-pointer + e97613c pin)",
+      "r92_status": "open",
+      "disposition": "partial (improved, not closed)",
+      "closed_at": null,
+      "evidence_fixed": [
+        "A next-re-check pointer now exists: check-log row 2 (2026-10-17 (r93)) ends 'Next re-check: r94.' — round-scoped cadence, replacing the absent forward pointer.",
+        "The second dated re-check row landed (two distinct dated rows, count 2), satisfying the r93 C3 claim's deliverable.",
+        "e97613c resolution-by-pointer: watch :20 now states the comparison 'is pinned in `.ufo/waves/round-91/patches/B3-before-state.json` and in the fixture READMEs'; B3-before-state.json is tracked and does carry the full commit hash e97613cc276f5fa9cac49ff1900798cf6863c020 plus the period checker sha256 e2bb9639… — the pointer resolves inside the committed tree."
+      ],
+      "evidence_open": [
+        "The watch still never prints the e97613c full hash itself (grep of the 40-hex commit hash in the watch -> 0) and row 2's checker hash is abbreviated (`ff9fd2aa…d1421`), so row 2 cannot be byte-verified from the watch alone.",
+        "The '## Owner' section (:41) still names a role handoff but no due date/cadence; the only cadence marker is inside the log row."
+      ],
+      "residual": "Pin the full hashes in the watch (row 2 hash abbreviated), or accept pointer-resolution as the convention and record it; add an explicit owner due date."
+    }
+  ],
+  "adjacent_dispositions": [
+    {"id": "R92-E1-01", "subject": "decision-table doubled failed-gate label", "disposition": "closed at 65838f8", "note": "grep -o occurrence count = 1 (was 2 on one line at c4d4823)."},
+    {"id": "R92-E1-02", "subject": "R8 worked example absent", "disposition": "closed at 65838f8", "note": "Kesh Hymn example at :42; the replayable dossier corpus/knowledge/r93-r8-worked-example.md (73 lines) also delivered in the work commit."},
+    {"id": "R92-E1-03", "subject": "manual-gate block in the R8 appendix + two coexisting R9 examples", "disposition": "closed at 65838f8", "note": "Block now :73-79 inside the R9 appendix (:44); single R9 worked example (:79); = the r93 C1 'Q92-002 closes' claim, verified."},
+    {"id": "R92-E1-04", "subject": "R9 evidence-cell append + verification-command re-point", "disposition": "partial", "note": "The sentence landed (table :25); the command re-point did not (still reads the r91 patch, :84) — tracked as Q92-004."},
+    {"id": "R92-E1-05", "subject": "tools README stale named-debt section", "disposition": "closed at 87779a0", "note": "= Q92-003; verified 0 stale strings at 65838f8."},
+    {"id": "R92-E1-06", "subject": "boundary-doc header has no r92 re-derivation provenance", "disposition": "open (unchanged)", "note": "grep -c 'round-92\\|r92' in holder-assessment-boundary.md -> 0; header still 'Refreshed at round-90 closure' (comment :2-5) and 'Landed at round-90 closure' (:7); E2's proposed round-92 header block (round-92 patches/E2-wording.md:37-43) remains unapplied."},
+    {"id": "R92-E1-07", "subject": "boundary-doc anchor/tail defects (JDEP1 F1-F3)", "disposition": "closed at 87779a0", "note": "= Q92-001's surface; the delivered cert tool's replay/anchor/structure checks all PASS at 65838f8."},
+    {"id": "R92-E1-08", "subject": "T1 baseline-control attribution", "disposition": "closed at 87779a0", "note": "= Q92-008; closure record rules the FAIL and re-certifies post-repair."}
+  ],
+  "carried_dispositions": [
+    {"id": "E1-carried-1", "subject": "fixtures README Round 91 gap (Q1 CAL-D5)", "disposition": "open (expanded to 91 + 93)", "note": "See Q92-005."},
+    {"id": "E1-carried-2", "subject": "L0 lines 3 and 5 open, no r92 append", "disposition": "open (lines 3 and 5 unchanged and unanswered)", "note": "l0-questions.md line 3 (round-87 chousa boundary) and line 5 (round-89 kotodama ratification) verified present at 65838f8. Post-measurement amendment: after this seat's t=120s freeze check, an authorized sibling (K1 may append one L0 line) appended a round-93 kotodama update as line 6 (git diff shows one added line; uncommitted at measurement close) — lines 3/5 content unchanged; the no-r93-append statement in the freeze window stands, the file is 6 lines at seat end."},
+    {"id": "E1-carried-3", "subject": "Q1's r92 ledger rows not re-scored against the delivered tree", "disposition": "discharged by this seat", "note": "This file is that re-scoring, at 65838f8."},
+    {"id": "E1-carried-4", "subject": "checker-level rows (V1's D-V1-1 ID-renamed duplicate row; H3's mutation-set bound)", "disposition": "open (unchanged)", "note": "Checker byte-identical ff9fd2aa with 0 commits in 87779a0..65838f8, so both checker-level rows carry unchanged."},
+    {"id": "E1-carried-5", "subject": "tools/certify_boundary_doc.py absent; B3-certify-spec.md spec-only", "disposition": "closed-by-delivery under a different name, with named bounds", "note": "corpus/tools/boundary_doc_check.py (sha 8e439b51…) committed at 65838f8 implements the B3 checklist (receipt replay, anchor resolution, structure greps) plus the two adversarial strengthenings (checker-hash pin :389, C9 semantics gate :390/:398); run -> CERTIFIED rc=0. Bounds: its anchor gate resolves 2/2 catalog citations — narrower than the r92 21-site scan; AST/content-signature anchor validation is the commit's named r94 debt. B3-certify-spec.md remains tracked at .ufo/waves/round-92/patches/ as the specification of record."}
+  ],
+  "new_observations": [
+    {"id": "W1-R93-1", "severity": "record integrity (certification scope)", "observation": "The new certifier's CERTIFIED line is tool-scoped: anchors=2/2 catalog citations vs the r92 follow-up's 21-site anchor scan; AST/content-signature validation is named r94 debt. A future reader citing 'CERTIFIED' must not read it as the full anchor-catalog pass.", "target": "r94 depth/CERT seat; the tool's --help or README line should state the scope"},
+    {"id": "W1-R93-2", "severity": "process/record", "observation": "r93 declared 'wave-spec.json + a tiny validator land with the clerk this round (r92-Q2 debt)' but none is tracked at the work commit; roster (32) vs 31 seat reports. Q92-007's class is now two rounds deep.", "target": "r93 closure clerk / L1"},
+    {"id": "W1-R93-3", "severity": "coverage/index parity", "observation": "The r93 cluster r93-m2-kojiki-cluster is unindexed in corpus/fixtures/README.md (no Round 93 section; 'r93-m2' count 0) — same surface as Q92-005, now missing rounds 91 and 93.", "target": "next record/coverage seat; one README section covers both"},
+    {"id": "W1-R93-4", "severity": "calibration residue (minor)", "observation": "Watch check-log row 2 records an abbreviated checker hash (`ff9fd2aa…d1421`); both rows share the same date (2026-10-17). Byte-verification of row 2 requires leaving the watch.", "target": "r94 re-check seat (row 3 should carry the full hash)"}
+  ],
+  "r93_claim_crosscheck": {
+    "C1_Q92-002_closes": "verified closed at 65838f8 (M-TABLE)",
+    "C1_cert_tool": "delivered and runs CERTIFIED rc=0 with checker-hash pin + C9 gate (M-CERTTOOL, M-CERTTOOL-PIN); AST anchor validation named r94 debt in the commit message and confirmed absent from the tool's checks",
+    "C3_second_recheck": "two distinct dated rows present (M-WATCH); this seat did not re-run the four-probe discrimination (not this seat's mission); discriminate_check.py promoted at corpus/tools/discriminate_check.py per the commit"
+  },
+  "self_check": {
+    "writes": [".ufo/waves/round-93/followup/W1-disposition.json", ".ufo/waves/round-93/followup/W1.md"],
+    "no_commit_no_push": true,
+    "scratch": "none created (all measurements were read-only greps/seds/git reads plus one delivered-tool run with PYTHONDONTWRITEBYTECODE=1); /tmp untouched by this seat",
+    "sibling_repos": "read-only; untouched",
+    "untracked_sibling_artifacts": "observed only via followup_entries counts in the wait checks; not read as evidence",
+    "post_freeze_tracked_change": "git status at seat end shows ' M l0-questions.md' — a one-line append (round-93 kotodama update) by an authorized sibling K1 seat after this seat's t=120s check; this seat only read the file (sed) and wrote nothing to it. Every other tracked path is clean: git diff --quiet HEAD -- ':!l0-questions.md' -> exit 0."
+  }
+}

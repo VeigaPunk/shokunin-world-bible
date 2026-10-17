@@ -1,0 +1,91 @@
+{
+  "seat": "H2",
+  "round": 93,
+  "lane": "world-bible",
+  "mission": "independent census + delta",
+  "date": "2026-10-17",
+  "range": {
+    "baseline": "87779a0",
+    "work": "65838f8",
+    "work_full": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+    "single_commit_range": true
+  },
+  "method": {
+    "independence": "all numbers derived from git (ls-tree/diff/hash) BEFORE reading any sibling followup artifact; H4.md read afterwards for cross-check only (agreement recorded under cross_checks)",
+    "census_definition_dirs": "git ls-tree -r -d --name-only <rev> (tracked directories, recursive, root excluded)",
+    "fixture_convention": "tracked dirs under corpus/fixtures/ — the scope the round's '167 dirs' claim uses",
+    "changed_dir": "a tracked dir containing at least one file changed by git diff 87779a0 65838f8"
+  },
+  "commands_and_outputs": [
+    {"cmd": "git rev-parse HEAD", "out": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e"},
+    {"cmd": "git ls-tree -r -d --name-only HEAD | wc -l", "out": "238"},
+    {"cmd": "git ls-tree -r -d --name-only 87779a0 | wc -l", "out": "235"},
+    {"cmd": "comm -13 base-dirs head-dirs (repo-wide new dirs)", "out": "corpus/fixtures/r93-m2-kojiki-cluster | .ufo/waves/round-93 | .ufo/waves/round-93/patches"},
+    {"cmd": "comm -23 base-dirs head-dirs (removed dirs)", "out": "(empty)"},
+    {"cmd": "grep -c '^corpus/fixtures/' head-dirs", "out": "167"},
+    {"cmd": "grep -c '^corpus/fixtures/' base-dirs", "out": "166"},
+    {"cmd": "comm on fixture dirs (new)", "out": "corpus/fixtures/r93-m2-kojiki-cluster (exactly one)"},
+    {"cmd": "fixture dirs with changed files, excluding the new one", "out": "(empty) — 0 changed pre-existing fixture dirs"},
+    {"cmd": "git diff --name-status 87779a0 65838f8 | cut -f1 | sort | uniq -c", "out": "68 A, 4 M (72 paths, 0 D)"},
+    {"cmd": "git log --oneline 87779a0..65838f8 -- corpus/fixtures/check_bible.py", "out": "(empty — no checker-touching commit in range)"},
+    {"cmd": "sha256sum corpus/fixtures/check_bible.py; git show 87779a0:corpus/fixtures/check_bible.py | sha256sum; git rev-parse HEAD:… 87779a0:…", "out": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 on-disk AND baseline blob; blob id 20c56dbb90d9f59ca4fb85971154c0774f5ce0d0 at both revs"},
+    {"cmd": "sha256sum corpus/tools/boundary_doc_check.py (= git show HEAD blob)", "out": "8e439b5129d0e2d26e6fac725f0231f07059e8dedf462c5219115240d371af3c"},
+    {"cmd": "grep -n EXPECTED_CHECKER_SHA256 corpus/tools/boundary_doc_check.py", "out": "line 389 = ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 (matches live checker pin)"},
+    {"cmd": "python3 corpus/tools/boundary_doc_check.py", "out": "CHECK receipt replay PASS / code anchors PASS / document structure PASS; replay_receipts=3/3 replay_cases=14/14 anchors=2/2 h1_count=1 duplicate_headings=0 instruction_markers=0; CERTIFIED; exit 0"},
+    {"cmd": "python3 corpus/tools/discriminate_check.py", "out": "mode=delivered matches_pin=True; two r91-c1 scenarios pinned_semantic_gate=PASS; RESULT: DISCRIMINATION HELD; exit 0"},
+    {"cmd": "grep -n 'Manual R9 gate|Required record:|Receipt boundary:|### R8 appendix|### R9 appendix' corpus/knowledge/r88-sourced-inspiration-decision-table.md", "out": "R8 appendix heading line 28, R9 appendix heading line 44 (only two '### R' appendix headings in file, 125 lines); Manual R9 gate line 73, Required record line 75, Receipt boundary line 77 — all INSIDE the R9 appendix"}
+  ],
+  "census": {
+    "repo_wide_dirs": {"base_87779a0": 235, "head_65838f8": 238, "new": ["corpus/fixtures/r93-m2-kojiki-cluster", ".ufo/waves/round-93", ".ufo/waves/round-93/patches"], "removed": []},
+    "fixture_dirs_round_convention": {"base": 166, "head": 167, "new": ["corpus/fixtures/r93-m2-kojiki-cluster"], "changed_preexisting": 0, "nested_subdirs": 0},
+    "scope_note": "the claim's '167 dirs' is the fixture-dir scope, NOT repo-wide (repo-wide = 238); both recorded so future seats don't misread the convention"
+  },
+  "file_delta": {
+    "total_paths": 72, "added": 68, "modified": 4, "deleted": 0,
+    "per_dir": {
+      ".ufo/waves/round-93": {"A": 32},
+      ".ufo/waves/round-93/patches": {"A": 22},
+      "corpus/fixtures/r93-m2-kojiki-cluster": {"A": 11},
+      "corpus/knowledge": {"A": 1, "M": 3},
+      "corpus/tools": {"A": 2, "M": 1}
+    },
+    "modified_numstat": {
+      "corpus/knowledge/r88-sourced-inspiration-decision-table.md": "+10/-17",
+      "corpus/knowledge/r91-c9-watch.md": "+1/-0 (dated re-check-2 row, next re-check r94)",
+      "corpus/knowledge/reference-ledger.md": "+1/-0 (Chamberlain Kojiki 1882 row -> r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md:8-10)",
+      "corpus/tools/README.md": "+11/-0"
+    },
+    "added_corpus": [
+      "corpus/fixtures/r93-m2-kojiki-cluster/{README,archive-record-excerpt,claim-excerpt-map,inspiration-note,kojiki-chamberlain-excerpt,symbolism-clause-map}.md",
+      "corpus/fixtures/r93-m2-kojiki-cluster/{contradictions,entities,relations,sources,timeline}.json",
+      "corpus/knowledge/r93-r8-worked-example.md (73-line R8 dossier, seven-threshold-names record)",
+      "corpus/tools/boundary_doc_check.py (405 lines)",
+      "corpus/tools/discriminate_check.py (160 lines, PIN line 12 = ff9fd2aa…)"
+    ]
+  },
+  "checker_identity": {
+    "delivered_discrimination_checker": "corpus/fixtures/check_bible.py",
+    "pin": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "unchanged_claim_verdict": "CONFIRMED — byte-identical blob at both revs (20c56dbb…), zero commits touching it in range; note the pin's referent is check_bible.py, NOT the new r93 tools (boundary_doc_check.py sha 8e439b51…, discriminate_check.py) which are additive",
+    "new_r93_tool_hashes": {"corpus/tools/boundary_doc_check.py": "8e439b5129d0e2d26e6fac725f0231f07059e8dedf462c5219115240d371af3c", "corpus/tools/discriminate_check.py": "not independently hashed by this seat (H4 records 6c7b7cd8…; consistent with both tools' pins resolving PASS at runtime)"}
+  },
+  "claims_reconciliation": {
+    "census_167_0changed_1new": "CONFIRMED under the fixture-dir convention (166→167, only new dir r93-m2-kojiki-cluster, no pre-existing fixture dir touched)",
+    "checker_unchanged_ff9fd2aa": "CONFIRMED (referent = corpus/fixtures/check_bible.py; blob-identical across the range)",
+    "r92_scorecard_164_dirs": "NOT a discrepancy — SCORECARD.md:231 is the r90-era row (ca7f9ef); lineage reads 164 (r90) → 166 (r92 closure baseline 87779a0, measured here) → 167 (r93)"
+  },
+  "wait_checks": [
+    {"check": 1, "ended": "2026-10-17T12:40:00-0300", "head": "65838f8…", "porcelain": "?? .ufo/waves/round-93/followup/ only"},
+    {"check": 2, "ended": "2026-10-17T12:42:36-0300", "head": "65838f8…", "porcelain": "?? .ufo/waves/round-93/followup/ only"},
+    {"check": "final (12:45:43)", "head": "65838f8…", "porcelain": " M l0-questions.md + ?? followup/"}
+  ],
+  "in_wave_observation": {
+    "what": "l0-questions.md (tracked) gained one appended line between wait-check 2 and 12:45:43 — the round-93 update to the round-89 kotodama contract line (digest drift 50c4c2f2… vs pinned e834f503…, ratification request)",
+    "status": "UNCOMMITTED at observation time; this is K1's authorized surface (one l0 line); integration must carry it — it is not part of the judged committed range 87779a0..65838f8"
+  },
+  "cross_checks": {
+    "H4 (read after derivation)": "AGREES — H4-census: delivered_dirs=167, B1_rows=166, missing=0, extra=1 [r93-m2-kojiki-cluster], tuple_mismatches=0; H4-lineage: checker ff9fd2aa… at both endpoints, boundary_doc_check.py 8e439b51…, discriminate_check.py 6c7b7cd8…; methods differ (git tree-delta here vs checker-tuple replay there), same conclusions",
+    "sibling B1/B2 receipts": "not re-derived by this seat (H4's lane); consistency noted only"
+  },
+  "gaps": "none for this seat: both wait-checks found the dependency (committed work tree at 65838f8) present; scratch /tmp/h2-*.txt swept; repo writes limited to followup/H2.md + followup/H2-delta.json"
+}

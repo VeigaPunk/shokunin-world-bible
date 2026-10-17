@@ -1060,3 +1060,93 @@ when exit codes and findings are unchanged. B1's 166-tuple census and B2's
 independent receipt use `corpus/fixtures/<name>` paths; keep that spelling when
 replaying the manifests. The same repo-relative rule is recorded in the C9
 watch note.
+
+## Round 91: C9 boundary pair and discriminator
+
+`r91-c1-null-chain/` and `r91-c1-tick-unresolved/` are the durable C9 pair.
+The first distinguishes a definite null `from_holder` chain break from the
+older qualified wording. The second distinguishes a definite integer tick
+inversion from the separately qualified chain break when the expected holder
+is unresolved. Both are fixture-structure probes, not sourced story evidence
+or canon judgments. The watch, including its r93 re-check row and the
+four-gate falsification trigger, is `../knowledge/r91-c9-watch.md`.
+
+`../tools/discriminate_check.py` is the durable two-fixture regression
+discriminator. It verifies the pinned checker digest, delivered fixture
+outputs against their recorded expectations, the baseline comparison, and
+both semantic gates. A clean result is bounded to this pair; it neither
+replaces the C9 watch's source-backed falsification trigger nor proves all
+checker branches.
+
+Run from the `lore-shokunin/` root:
+
+```sh
+sha256sum corpus/fixtures/check_bible.py
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-null-chain
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-tick-unresolved
+python3 -I corpus/tools/discriminate_check.py
+```
+
+Observed exits: the hash command **0**, with SHA-256
+`ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`; the
+null-chain and unresolved-tick commands each **1**, expected negative-fixture
+results with empty stderr (one and three violations respectively); the
+discriminator **0**, `DISCRIMINATION HELD` with both pinned semantic gates
+passing. The watch's r93 row records re-check 2 as held and the source-backed
+falsification trigger as unsatisfied; see the watch for its limits and next
+re-check.
+
+## Round 93: third sourced-mythology cluster and census
+
+`r93-m2-kojiki-cluster/` is the third sourced-mythology family, distinct from
+the r87 Sumerian/ETCSL and r88 Maya/Spence clusters. Its `archive-record-excerpt.md`
+is a newly authored fictional record; `claim-excerpt-map.md` maps 12
+source-attributed JSON facts and 3 separate editorial comparisons to the
+external Chamberlain translation, for **12 JSON facts + 3 editorial rows =
+15 mapped rows**. The editorial comparisons are not in-world JSON facts. The
+translation is not an in-world source or canon, and the support receipt below
+is lexical preflight, not whole-claim semantic review or a rights finding.
+
+Run from the repository root:
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r93-m2-kojiki-cluster
+python3 corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster
+```
+
+Observed exits: the structural checker **0** (`CLEAN`, zero violations); the
+support checker **0**, with `SOURCE-SUPPORT 12/12`, `EDITORIAL-ANCHORS 3/3`,
+`TOTAL-ROWS 15`, `MODES 15/15`, and `VALIDATED-ROWS 15/15`. These counts are
+map-row anchor/mode/span checks. They do not establish semantic support,
+source reliability, historical meaning, canon, or rights; the cluster README
+records the remaining review boundaries.
+
+B1's 166 direct fixture directories were the **pre-work baseline** at
+`87779a0`; the r93 delivered snapshot has 167, with `r93-m2-kojiki-cluster`
+as the single added direct fixture directory. A fresh checker sweep of the
+delivered set observed 167 directories, 33 exit-0 cases, 134 expected
+exit-1 cases, 421 violation lines, no stderr, and no unexpected exit (overall
+census exit 0). These are snapshot counts, not a pinned invariant for future
+fixture additions. The exact sweep command and measured revision are recorded
+in `.ufo/waves/round-93/recovery/R04.md`.
+
+### 2026-10-17 correction: Round 90 support-receipt shorthand
+
+The earlier Round 90 wording — “`support_check.py` is the support receipt
+(r87 22/22, r88-m3 10/10, span-enforced)” — is retained above as filed, but
+this dated correction supersedes any reading of those shorthand figures as
+raw JSON coverage or semantic support. The current row-level receipts are:
+
+```sh
+python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster
+python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster
+```
+
+Both commands exited **0**. For r87 the receipt is 14/14 JSON source rows and
+8/8 editorial rows (22 mapped rows total); for r88-m3 it is 10/10 JSON source
+rows and 2/2 editorial rows (12 mapped rows total). Thus r87's old `22/22`
+was the total mapped-row count, while r88-m3's old `10/10` named only its JSON
+source-row denominator and omitted the editorial rows. The checker verifies
+mapped-row inventory, fixed-string anchors, spans, and declared delivery
+modes; it does not compare the map against every raw JSON fact or decide
+whole-claim meaning, truth, or semantic source support.

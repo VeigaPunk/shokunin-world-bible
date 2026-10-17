@@ -123,3 +123,148 @@ documented by chousa-shokunin — claim-vs-source verification
 verified against live sources (`archives-verified-r9.md:177-185`), and
 fixed-string anchor boundaries (`anchor-boundaries-r4.md:31-37`). Chousa owns
 the research method; lore consumes it as record craft.
+
+### r93 correction — historical evidence cells (2026-10-17)
+
+This dated correction supersedes the current-status reading of the evidence cells in rows 12 and 17 above; it does not rewrite their filed bytes. Those cells describe round-88 candidates, not the r93 landed state. The round and path disambiguation is:
+
+- The unselected r88 M1 Kojiki proposal was `.ufo/waves/round-88/patches/M1-cluster2.patch`, proposing `corpus/fixtures/r88-myth-cluster2/`. The r88 M1 report describes it as a candidate patch (`.ufo/waves/round-88/M1.md`); the r88 M5 convergence review recommends r88 M3 instead and marks r88 M1 not recommended (`.ufo/waves/round-88/M5.md`, candidate table). It was not the landed r93 cluster.
+- The r88 M2 Völuspá candidate is `.ufo/waves/round-88/patches/M2-cluster2.patch`, proposing `corpus/fixtures/r88-norse-cluster/` (`.ufo/waves/round-88/M2.md`). That round-88 M2 is distinct from r93 M2.
+- The landed r93 M2 Kojiki cluster is `corpus/fixtures/r93-m2-kojiki-cluster/`; its README identifies it as the R93 M2 cluster. Its Chamberlain/Kojiki reference is registered in `corpus/knowledge/reference-ledger.md` (the row pointing to `corpus/fixtures/r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md`). This correction records landing and registration only; it makes no rights, training-permission, source-support, or manual-review finding.
+
+The R8 worked record is `corpus/knowledge/r93-r8-worked-example.md`. It is a hypothetical seven-threshold-names case with a record-to-decision crosswalk, not a live source-use decision: its scope statement explicitly disclaims an observed submission, source-use/copying finding, rights assessment, and canon assertion.
+
+### r93 replacement R9 completeness check (2026-10-17)
+
+The original R9 **Verification command** above is superseded and historical: it reads `.ufo/waves/round-91/patches/D2-edges.patch`, not the delivered R9 appendix. Use this replacement from the repository root. It reads this delivered decision-table file, slices the R9 appendix at its heading and stops before that appendix's Verification command, then checks the prose categories below; it does not establish source identity, fidelity, rights, permission, or a manual review outcome.
+
+```sh
+python3 - <<'PY'
+from pathlib import Path
+import sys
+
+text = Path("corpus/knowledge/r88-sourced-inspiration-decision-table.md").read_text(encoding="utf-8")
+_, tail = text.split("### R9 appendix — translator known, source/version unknown", 1)
+r9, _ = tail.split("**Verification command (textual completeness only; it does not validate the source):**", 1)
+clauses = {
+    "manual gate": (
+        "**Manual R9 gate (required for translation-backed R5 claims):**",
+        "Only a recorded manual `PASS` can clear this gate.",
+    ),
+    "per-claim record": (
+        "**Required record:** add an `R9 manual review` entry adjacent to each translation-backed claim",
+        "claim pointer; excerpt path and span",
+        "delivered printing/edition and year plus a stable identifier or copy locator",
+        "reviewer name/role and review date",
+        "disposition `PASS`, `FAIL`, or `OPEN`",
+        "exact claim scope permitted",
+    ),
+    "receipt boundary": (
+        "**Receipt boundary:** `corpus/tools/support_check.py` is a lexical preflight.",
+        "necessary but not sufficient for a translation-backed R5 claim",
+        "Never present that command's output as the R9 review receipt",
+    ),
+    "exact-copy safeguards": (
+        "inspect the exact delivered translation item",
+        "actual printing/edition and year, with a stable identifier or copy locator",
+        "reviewer can inspect the exact copy or a complete, legible scan with its copy locator",
+    ),
+    "FAIL/OPEN safeguards": (
+        "record `FAIL` (or `OPEN` before review)",
+        "do not grant R5 support",
+    ),
+}
+
+def check(body):
+    return {name: all(clause in body for clause in required) for name, required in clauses.items()}
+
+actual = check(r9)
+mutated = check(r9.replace(clauses["manual gate"][1], "", 1))
+mutation_control = not mutated["manual gate"] and all(
+    passed for name, passed in mutated.items() if name != "manual gate"
+)
+for name, passed in actual.items():
+    print(f"{name}: {'PASS' if passed else 'FAIL'}")
+print(f"R9 delivered-appendix categories: {sum(actual.values())}/{len(actual)}")
+print(f"required prose-clause removal: {'FAIL as expected' if mutation_control else 'did not fail'}")
+if not all(actual.values()) or not mutation_control:
+    raise SystemExit(1)
+PY
+```
+
+### r93 R9 completeness-verifier correction (2026-10-17)
+
+**Correction to the prior r93 replacement check above:** its selected clauses let the verifier pass after removal of R9's `Owner`, `Trigger`, or `Decision` fieldheads and the source-work/version record requirement. Preserve that command as history, but do not use it as the completeness check. This replacement inspects only the delivered R9 appendix text between its appendix heading and the original Verification command. Every required literal is checked inside that slice, never against this correction, its command source, or another file. Its mutation controls remove each individual required field/clause in memory and require the matching named textual finding; this is still textual completeness only, not translation/source/permission semantic verification or a manual review.
+
+Run from the repository root:
+
+```sh
+python3 - <<'PY'
+from pathlib import Path
+import sys
+
+path = Path("corpus/knowledge/r88-sourced-inspiration-decision-table.md")
+text = path.read_text(encoding="utf-8")
+heading = "### R9 appendix — translator known, source/version unknown"
+verification = "**Verification command (textual completeness only; it does not validate the source):**"
+_, tail = text.split(heading, 1)
+r9, _ = tail.split(verification, 1)
+required = (
+    ("R9-OWNER", "**Owner:** The lore integration owner verifies bibliographic identity and R5 scope;"),
+    ("R9-TRIGGER", "**Trigger:** A delivered `translation` excerpt relies on a later reprint as the bibliographic tie"),
+    ("R9-DECISION", "**Decision:** Translator name alone, without a reliable link to a named source work, FAILS R5\nsupport."),
+    ("R9-SOURCE-VERSION-UNKNOWN", "When no source-work link is established, record\n`Source text/version: unidentified; unverified`;"),
+    ("R9-KNOWN-WORK-UNKNOWN-EDITION", "if the work is known but its exact source\nedition/version is not, name the work and record that limit separately."),
+    ("R9-REPRINT-EDITION-IDENTITY", "A later reprint can qualify for the narrow R9 exception only\nwhen an auditable, item-specific record identifies the actual delivered reprint and its\nedition/year (and a stable identifier or copy locator),"),
+    ("R9-TRANSLATOR-SOURCE-PASSAGE-TIE", "names the translator and source work,\nand ties the cited passage to that translation; verify the passage against that exact copy."),
+    ("R9-ACCEPTABLE-EDITION-EVIDENCE", "Accept a title/imprint/copyright page or publisher/authoritative-library catalogue entry;"),
+    ("R9-INSUFFICIENT-REPRINT-EVIDENCE", "generic reprint notice, untraceable secondary entry, translator name, or anchor alone is\ninsufficient."),
+    ("R9-RECORD-EXACT-PRINTING", "Record the precise reprint/printing and record citation in the excerpt/map."),
+    ("R9-EARLIER-EDITION-BOUNDARY", "The\nreprint tie does not prove that its text is unchanged from the earlier printing:"),
+    ("R9-UNVERIFIED-SOURCE-FAILS", "If the item-specific tie or source work is\nunverified, retain `Source text/version: unidentified; unverified` and fail R5 source-claim\nsupport;"),
+    ("R9-DO-NOT-MISLABEL-DELIVERY", "Do not label the delivered\ntranslation itself `not delivered`."),
+    ("R9-MANUAL-GATE", "**Manual R9 gate (required for translation-backed R5 claims):**"),
+    ("R9-MANUAL-OWNER", "the excerpt/map submitter supplies the delivered item and bibliographic evidence; a named lore integration reviewer who is not the submitter verifies them and records the outcome."),
+    ("R9-SECOND-REVIEWER", "If the integration owner is also the submitter, a second reviewer must be named."),
+    ("R9-MANUAL-TRIGGER", "**Trigger:** before any claim mapped to `Delivery mode: translation` is accepted as R5 source-claim support or integrated as supported canon."),
+    ("R9-EXACT-ITEM-REVIEW", "inspect the exact delivered translation item (or an item-specific record that identifies it), verify the actual printing/edition and year, with a stable identifier or copy locator, translator, named source work, and that the cited passage is present in that exact copy and supports the whole claim."),
+    ("R9-UNKNOWN-VERSION-LIMIT", "Record any unknown source-version limitation; support is bounded to wording in the identified delivered translation, not the original source wording, an earlier printing, or an edition-specific variant."),
+    ("R9-PRIVATE-COPY-ACCESS", "a privately held item qualifies only if the reviewer can inspect the exact copy or a complete, legible scan with its copy locator; a submitter-only assertion is insufficient."),
+    ("R9-MANUAL-FAIL-OPEN", "If identity, passage, or reviewer access is not established, record `FAIL` (or `OPEN` before review) and do not grant R5 support."),
+    ("R9-REQUIRED-RECORD", "**Required record:** add an `R9 manual review` entry adjacent to each translation-backed claim in its claim-to-excerpt map."),
+    ("R9-RECORD-CLAIM-POINTER", "claim pointer; excerpt path and span;"),
+    ("R9-RECORD-EDITION-IDENTIFIER", "delivered printing/edition and year plus a stable identifier or copy locator;"),
+    ("R9-RECORD-TRANSLATOR", "translator;"),
+    ("R9-RECORD-SOURCE-VERSION", "source work and source-text/version field (including explicit unknown status);"),
+    ("R9-RECORD-EVIDENCE-METHOD", "evidence citation and inspection method;"),
+    ("R9-RECORD-REVIEWER-DATE", "reviewer name/role and review date;"),
+    ("R9-RECORD-DISPOSITION", "disposition `PASS`, `FAIL`, or `OPEN`;"),
+    ("R9-RECORD-CLAIM-SCOPE", "exact claim scope permitted."),
+    ("R9-MANUAL-PASS-ONLY", "Only a recorded manual `PASS` can clear this gate."),
+    ("R9-RECEIPT-BOUNDARY", "**Receipt boundary:** `corpus/tools/support_check.py` is a lexical preflight."),
+    ("R9-RECEIPT-NOT-IDENTITY-OR-FIDELITY", "they do not establish translation-version identity, the delivered printing, bibliographic linkage, translation fidelity, or the R9 manual outcome."),
+    ("R9-RECEIPT-NOT-RECEIPT", "Never present that command's output as the R9 review receipt;"),
+    ("R9-RECEIPT-PER-CLAIM-ENTRY", "cite the separate per-claim manual-review entry."),
+    ("R9-LEXICAL-PREFLIGHT-BOUNDARY", "A successful lexical preflight is necessary but not sufficient for a translation-backed R5 claim."),
+)
+
+def findings(body):
+    return [name for name, clause in required if body.count(clause) != 1]
+
+baseline_missing = findings(r9)
+print(f"R9 appendix-only baseline: {'PASS' if not baseline_missing else 'FAIL'} ({len(required) - len(baseline_missing)}/{len(required)} requirements)")
+if baseline_missing:
+    print("baseline findings: " + ", ".join(baseline_missing))
+
+controls_passed = 0
+for name, clause in required:
+    mutated = r9.replace(clause, "", 1)
+    observed = findings(mutated)
+    passed = observed == [name]
+    controls_passed += passed
+    print(f"remove {name}: {'FAIL as expected' if passed else 'NOT DETECTED'}; findings={','.join(observed) or 'none'}")
+print(f"R9 clause-removal controls: {controls_passed}/{len(required)}")
+if baseline_missing or controls_passed != len(required):
+    raise SystemExit(1)
+PY
+```

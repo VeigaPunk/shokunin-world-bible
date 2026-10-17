@@ -1,0 +1,38 @@
+{
+  "baseline_commit": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "baseline_tree": "70d1fbc536e94a9bbe42fa2c14eb1b29a01cf237",
+  "baseline_input_sha256": {
+    "corpus/tools/boundary_doc_check.py": "8e439b5129d0e2d26e6fac725f0231f07059e8dedf462c5219115240d371af3c",
+    "corpus/knowledge/holder-assessment-boundary.md": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e",
+    "corpus/fixtures/check_bible.py": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+  },
+  "replay_fixture_tree_manifest_sha256": "71f4223ce12e0738c2ed19701f84048f3268c8ec952d36ebd83cfa3df167a280",
+  "expected_new_frozen_document_failure_id": "snapshot_tampered",
+  "new_design_expectations_are_not_executed_here": true,
+  "cases": [
+    {
+      "id": "R18-C9-HTML-COMMENT-CONTRADICTION",
+      "file": "R18-c9-html-comment.md",
+      "sha256": "fcee4853340b1f16e3eac5f58dee5bcfceb3270de82ef26bc073f104f220466b",
+      "old_certifier_expected_exit": 0,
+      "new_frozen_document_expected_exit": 1,
+      "new_frozen_document_expected_failure_id": "snapshot_tampered",
+      "purpose": "Contradict the tick ruling while preserving both raw required markers only in an HTML comment."
+    },
+    {
+      "id": "R18-BARE-ANCHOR-IN-RANGE-DRIFT",
+      "file": "R18-bare-anchor-drift.md",
+      "sha256": "0b4775520a76aaf80db7e2e1f2b01841fe3c6ad915d77276de51205bb3c6fe56",
+      "old_certifier_expected_exit": 0,
+      "new_frozen_document_expected_exit": 1,
+      "new_frozen_document_expected_failure_id": "snapshot_tampered",
+      "purpose": "Change bare checker ref :322 to wrong but in-range :325."
+    },
+    {
+      "id": "R18-CHECKER-PIN-VALID-CONTROL",
+      "expected_exit": 0,
+      "expected_verdict": "CERTIFIED",
+      "expected_checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "baseline_head": "87779a00f25bd1855ede479e490123843e5f056e",
+  "census": {
+    "after_direct_fixture_dirs": 167,
+    "after_exit_counts": {
+      "0": 33,
+      "1": 134
+    },
+    "after_order_first": "r27-target-only",
+    "after_order_last": "r43-jorin-vela-sighting",
+    "after_violation_lines": 421,
+    "base_direct_fixture_dirs": 166,
+    "base_exit_counts": {
+      "0": 32,
+      "1": 134
+    },
+    "base_order_first": "r27-both-ambiguous",
+    "base_order_last": "r43-jorin-vela-sighting",
+    "base_violation_lines": 421,
+    "order_is_not_sorted_nor_reverse": true,
+    "receipt": ".ufo/waves/round-93/followup/JCAL5-tuples.json",
+    "receipt_sha256": "ad6b6e6b2978dd3cbe9f4330507c343648043682348fb760c642826782a8abca",
+    "stderr_nonempty_count": 0,
+    "unexpected_exit_count": 0
+  },
+  "checker_pin_match": true,
+  "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "crosschecks": {
+    "after_vs_JCAL1_receipt": {
+      "rows": 167,
+      "tuple_mismatches": 0
+    },
+    "regenerated_base_vs_B1_receipt": {
+      "rows": 166,
+      "tuple_mismatches": 0
+    }
+  },
+  "delta": {
+    "baseline_rows": 166,
+    "census_rows": 167,
+    "changed_tuples": [],
+    "common_rows": 166,
+    "exit_flips": [],
+    "new_in_census": [
+      "corpus/fixtures/r93-m2-kojiki-cluster"
+    ],
+    "new_tuple": {
+      "corpus/fixtures/r93-m2-kojiki-cluster": {
+        "exit": 0,
+        "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "violation_count": 0
+      }
+    },
+    "removed_from_baseline": []
+  },
+  "head": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "method": {
+    "baseline_regenerated": true,
+    "checker_invocation": "python3 -I corpus/fixtures/check_bible.py corpus/fixtures/<name>",
+    "extraction": "git archive --format=tar <commit> corpus/fixtures | tar -x into /tmp scratch; checker run from archive root, never the live tree",
+    "kind": "method-varied census (seed 9301, regenerated baseline)",
+    "traversal": "random.Random(9301).shuffle over sorted direct fixture dir names, per census"
+  },
+  "role": "census judge #2 (method-varied: seed 9301 shuffled traversal, both baselines regenerated from git archive)",
+  "seat": "JCAL5",
+  "tree_clean": true,
+  "verdict_recommendation": {
+    "census_completeness": "improved (166 -> 167; third cluster fixture inventoried)",
+    "checker_pin_integrity": "unchanged",
+    "method_robustness": "improved (claim now proven under shuffled traversal and from regenerated archives; independent of stored receipts)",
+    "overall_r93_census_axis": "improved",
+    "preexisting_fixture_behavior": "unchanged (0 changed tuples, 0 exit flips, 421 = 421 violation lines; desired no-regression)"
+  }
+}
