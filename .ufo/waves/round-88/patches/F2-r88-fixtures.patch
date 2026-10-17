@@ -1,0 +1,473 @@
+diff --git c/corpus/fixtures/f2-r88-dangling-first/README.md i/corpus/fixtures/f2-r88-dangling-first/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..b04009b51832165e890819c4a5a7b6f8c3635370
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-dangling-first/README.md
+@@ -0,0 +1,9 @@
++# F2 r88: dangling holder is the first stop cause
++
++Run from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/f2-r88-dangling-first
++```
++
++This invented checker fixture duplicates entity id `vault`. Provenance record [1] first fails because `from_holder: "ghost-holder"` dangles; record [2] later carries the ambiguous `from_holder: "vault"`, and [3] is another tail record. The C1 target is a per-record unassessed disclosure at [1], [2], and [3], each naming the dangling holder at [1] as the actual first cause. The later ambiguity remains a local finding but must not replace the first cause. No custody or canon is asserted.
+\ No newline at end of file
+diff --git c/corpus/fixtures/f2-r88-dangling-first/contradictions.json i/corpus/fixtures/f2-r88-dangling-first/contradictions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-dangling-first/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-dangling-first/entities.json i/corpus/fixtures/f2-r88-dangling-first/entities.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..652fea5054f7e68aba185d26e4a6d12dd4fb339f
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-dangling-first/entities.json
+@@ -0,0 +1,100 @@
++[
++ {
++  "id": "vault",
++  "kind": "character",
++  "name": "Vault A",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Vault A record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "vault",
++  "kind": "character",
++  "name": "Vault B",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Vault B record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "mira",
++  "kind": "character",
++  "name": "Mira",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Mira record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "harbor",
++  "kind": "character",
++  "name": "Harbor",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Harbor record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "tower",
++  "kind": "character",
++  "name": "Tower",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Tower record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "seal",
++  "kind": "item",
++  "name": "Seal",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Seal record",
++    "source_id": "courier-log"
++   }
++  ],
++  "provenance": [
++   {
++    "tick": 0,
++    "from_holder": null,
++    "to_holder": "mira",
++    "source_id": "courier-log"
++   },
++   {
++    "tick": 1,
++    "from_holder": "ghost-holder",
++    "to_holder": "harbor",
++    "source_id": "courier-log"
++   },
++   {
++    "tick": 2,
++    "from_holder": "vault",
++    "to_holder": "tower",
++    "source_id": "courier-log"
++   },
++   {
++    "tick": 3,
++    "from_holder": "mira",
++    "to_holder": "harbor",
++    "source_id": "courier-log"
++   }
++  ]
++ }
++]
+diff --git c/corpus/fixtures/f2-r88-dangling-first/relations.json i/corpus/fixtures/f2-r88-dangling-first/relations.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-dangling-first/relations.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-dangling-first/sources.json i/corpus/fixtures/f2-r88-dangling-first/sources.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..6208ea4de5d1fe169e909e35ba6310667e221f18
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-dangling-first/sources.json
+@@ -0,0 +1,8 @@
++[
++ {
++  "id": "courier-log",
++  "title": "courier-log in-world record",
++  "kind": "text",
++  "reliability_note": "probe scaffolding"
++ }
++]
+diff --git c/corpus/fixtures/f2-r88-dangling-first/timeline.json i/corpus/fixtures/f2-r88-dangling-first/timeline.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-dangling-first/timeline.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-malformed-first/README.md i/corpus/fixtures/f2-r88-malformed-first/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0231501316b3427ea99fd0d9abb93e633ec4abf7
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-malformed-first/README.md
+@@ -0,0 +1,9 @@
++# F2 r88: malformed record precedes later ambiguity
++
++Run from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/f2-r88-malformed-first
++```
++
++This invented checker fixture duplicates entity id `vault`. Provenance record [1] has an extra key but no ambiguous holder; it is the first stop cause. Record [2] later carries the ambiguous `from_holder: "vault"`, followed by tail record [3]. The C1 target is a per-record unassessed disclosure at [1], [2], and [3], each naming the malformed record at [1] as the actual first cause. The later ambiguity remains a local finding but must not replace that cause. No custody or canon is asserted.
+\ No newline at end of file
+diff --git c/corpus/fixtures/f2-r88-malformed-first/contradictions.json i/corpus/fixtures/f2-r88-malformed-first/contradictions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-malformed-first/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-malformed-first/entities.json i/corpus/fixtures/f2-r88-malformed-first/entities.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..0d5d43b89d46a64567ff5205b7762b1383176e5a
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-malformed-first/entities.json
+@@ -0,0 +1,101 @@
++[
++ {
++  "id": "vault",
++  "kind": "character",
++  "name": "Vault A",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Vault A record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "vault",
++  "kind": "character",
++  "name": "Vault B",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Vault B record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "mira",
++  "kind": "character",
++  "name": "Mira",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Mira record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "harbor",
++  "kind": "character",
++  "name": "Harbor",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Harbor record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "tower",
++  "kind": "character",
++  "name": "Tower",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Tower record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "seal",
++  "kind": "item",
++  "name": "Seal",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Seal record",
++    "source_id": "courier-log"
++   }
++  ],
++  "provenance": [
++   {
++    "tick": 0,
++    "from_holder": null,
++    "to_holder": "mira",
++    "source_id": "courier-log"
++   },
++   {
++    "tick": 1,
++    "from_holder": "mira",
++    "to_holder": "harbor",
++    "source_id": "courier-log",
++    "extra": 1
++   },
++   {
++    "tick": 2,
++    "from_holder": "vault",
++    "to_holder": "tower",
++    "source_id": "courier-log"
++   },
++   {
++    "tick": 3,
++    "from_holder": "mira",
++    "to_holder": "harbor",
++    "source_id": "courier-log"
++   }
++  ]
++ }
++]
+diff --git c/corpus/fixtures/f2-r88-malformed-first/relations.json i/corpus/fixtures/f2-r88-malformed-first/relations.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-malformed-first/relations.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-malformed-first/sources.json i/corpus/fixtures/f2-r88-malformed-first/sources.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..6208ea4de5d1fe169e909e35ba6310667e221f18
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-malformed-first/sources.json
+@@ -0,0 +1,8 @@
++[
++ {
++  "id": "courier-log",
++  "title": "courier-log in-world record",
++  "kind": "text",
++  "reliability_note": "probe scaffolding"
++ }
++]
+diff --git c/corpus/fixtures/f2-r88-malformed-first/timeline.json i/corpus/fixtures/f2-r88-malformed-first/timeline.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-malformed-first/timeline.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-shape-stop/README.md i/corpus/fixtures/f2-r88-shape-stop/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..b65af3ad4f92fc05e4366e345470aefdb1516139
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-shape-stop/README.md
+@@ -0,0 +1,9 @@
++# F2 r88: shape-invalid record with ambiguous holder
++
++Run from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/f2-r88-shape-stop
++```
++
++This invented checker fixture duplicates entity id `vault`. Provenance record [1] has an extra key and `to_holder: "vault"`; records [2] and [3] deliberately have divergent holder links. The C1 target is to retain the shape and ambiguous-holder findings, arm the stop despite the shape violation, and disclose that the tail is unassessed at [1], [2], and [3], anchored to the ambiguity first present at [1]. The downstream rows test per-record coverage, not custody or canon.
+\ No newline at end of file
+diff --git c/corpus/fixtures/f2-r88-shape-stop/contradictions.json i/corpus/fixtures/f2-r88-shape-stop/contradictions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-shape-stop/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-shape-stop/entities.json i/corpus/fixtures/f2-r88-shape-stop/entities.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..7c6d9eac68e51d651f0080855f7ae46bc3ab98c3
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-shape-stop/entities.json
+@@ -0,0 +1,101 @@
++[
++ {
++  "id": "vault",
++  "kind": "character",
++  "name": "Vault A",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Vault A record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "vault",
++  "kind": "character",
++  "name": "Vault B",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Vault B record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "mira",
++  "kind": "character",
++  "name": "Mira",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Mira record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "harbor",
++  "kind": "character",
++  "name": "Harbor",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Harbor record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "tower",
++  "kind": "character",
++  "name": "Tower",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Tower record",
++    "source_id": "courier-log"
++   }
++  ]
++ },
++ {
++  "id": "seal",
++  "kind": "item",
++  "name": "Seal",
++  "first_appearance": "courier-log",
++  "claims": [
++   {
++    "statement": "Seal record",
++    "source_id": "courier-log"
++   }
++  ],
++  "provenance": [
++   {
++    "tick": 0,
++    "from_holder": null,
++    "to_holder": "mira",
++    "source_id": "courier-log"
++   },
++   {
++    "tick": 1,
++    "from_holder": "mira",
++    "to_holder": "vault",
++    "source_id": "courier-log",
++    "extra": 1
++   },
++   {
++    "tick": 2,
++    "from_holder": "harbor",
++    "to_holder": "tower",
++    "source_id": "courier-log"
++   },
++   {
++    "tick": 3,
++    "from_holder": "mira",
++    "to_holder": "harbor",
++    "source_id": "courier-log"
++   }
++  ]
++ }
++]
+diff --git c/corpus/fixtures/f2-r88-shape-stop/relations.json i/corpus/fixtures/f2-r88-shape-stop/relations.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-shape-stop/relations.json
+@@ -0,0 +1 @@
++[]
+diff --git c/corpus/fixtures/f2-r88-shape-stop/sources.json i/corpus/fixtures/f2-r88-shape-stop/sources.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..6208ea4de5d1fe169e909e35ba6310667e221f18
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-shape-stop/sources.json
+@@ -0,0 +1,8 @@
++[
++ {
++  "id": "courier-log",
++  "title": "courier-log in-world record",
++  "kind": "text",
++  "reliability_note": "probe scaffolding"
++ }
++]
+diff --git c/corpus/fixtures/f2-r88-shape-stop/timeline.json i/corpus/fixtures/f2-r88-shape-stop/timeline.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe51488c7066f6687ef680d6bfaa4f7768ef205c
+--- /dev/null
++++ i/corpus/fixtures/f2-r88-shape-stop/timeline.json
+@@ -0,0 +1 @@
++[]

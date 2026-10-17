@@ -1,0 +1,293 @@
+diff --git a/corpus/fixtures/r88-myth-cluster2/contradictions.json b/corpus/fixtures/r88-myth-cluster2/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r88-myth-cluster2/entities.json b/corpus/fixtures/r88-myth-cluster2/entities.json
+new file mode 100644
+index 0000000..0c8e3b3
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/entities.json
+@@ -0,0 +1,86 @@
++[
++  {
++    "id": "neri",
++    "kind": "character",
++    "name": "Neri",
++    "first_appearance": "watch-register",
++    "claims": [
++      {
++        "statement": "The Rainmonth Watch Register identifies Neri as the caller who covers the Beacon at the first Night Mark.",
++        "source_id": "watch-register"
++      }
++    ]
++  },
++  {
++    "id": "tavi",
++    "kind": "character",
++    "name": "Tavi",
++    "first_appearance": "assembly-minutes",
++    "claims": [
++      {
++        "statement": "The Wind Court Assembly Minutes identify Tavi as the meeting's recorder.",
++        "source_id": "assembly-minutes"
++      }
++    ]
++  },
++  {
++    "id": "silt-steps",
++    "kind": "place",
++    "name": "Silt Steps",
++    "first_appearance": "watch-register",
++    "claims": [
++      {
++        "statement": "The Rainmonth Watch Register locates the first Night Mark at Silt Steps.",
++        "source_id": "watch-register"
++      }
++    ]
++  },
++  {
++    "id": "wind-court",
++    "kind": "place",
++    "name": "Wind Court",
++    "first_appearance": "assembly-minutes",
++    "claims": [
++      {
++        "statement": "The Wind Court Assembly Minutes name Wind Court as the meeting place.",
++        "source_id": "assembly-minutes"
++      }
++    ]
++  },
++  {
++    "id": "reedbound",
++    "kind": "faction",
++    "name": "Reedbound",
++    "first_appearance": "shore-pact",
++    "claims": [
++      {
++        "statement": "The Night-Watch Pact names the Reedbound as a signatory faction.",
++        "source_id": "shore-pact"
++      }
++    ]
++  },
++  {
++    "id": "flint-choir",
++    "kind": "faction",
++    "name": "Flint Choir",
++    "first_appearance": "shore-pact",
++    "claims": [
++      {
++        "statement": "The Night-Watch Pact names the Flint Choir as a signatory faction.",
++        "source_id": "shore-pact"
++      }
++    ]
++  },
++  {
++    "id": "beacon",
++    "kind": "item",
++    "name": "Beacon",
++    "first_appearance": "harbor-log",
++    "claims": [
++      {
++        "statement": "The Harbor Log describes the Beacon as a shuttered three-panel light kept at Silt Steps.",
++        "source_id": "harbor-log"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r88-myth-cluster2/inspiration-note.md b/corpus/fixtures/r88-myth-cluster2/inspiration-note.md
+new file mode 100644
+index 0000000..2745895
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/inspiration-note.md
+@@ -0,0 +1,23 @@
++# Sourced inspiration note
++
++## Family and source
++
++The selected family is the Japanese Kojiki tradition, situated within living Japanese religious and cultural contexts. This note makes a narrow literary comparison with one English translation; it does not characterize contemporary Shinto practice or speak for practitioners.
++
++The source is *The Kojiki*, translated by Basil Hall Chamberlain (1882), Part III, “The Door of the Heavenly Rock-Dwelling,” as transcribed by Terebess Asia Online: <https://terebess.hu/english/kojiki.html>. The delivered `kojiki-excerpt.md` contains four short excerpt lines from that passage.
++
++## Motif-level comparison
++
++The passage describes the land darkening and eternal night (excerpt lines 1-2), a divine assembly gathering (excerpt lines 3-3), and the land becoming light again after the deity comes forth (excerpt lines 4-4). I use only that high-level sequence as a prompt for the independently invented first Night Mark, Wind Court assembly, and raised Beacon in this fixture. This is an editorial analogy, not a claim that the fixture's factions, light, or night-mark are traditional symbols or meanings. No named deity, place, ritual, or plot is imported as fixture canon.
++
++## Attribution — open question
++
++The text-level reference is attributed to *The Kojiki*, translated by Basil Hall Chamberlain, 1882, Part III, “The Door of the Heavenly Rock-Dwelling,” at the linked transcription above. This attribution identifies the selected work, translator, section, and online transcription; it does not establish a single ancient author or settle rights.
++
++## Rights — open question
++
++The rights status of the Terebess transcription, its presentation, and any editorial work has not been determined. The age of Chamberlain's translation does not by itself settle the status of this online transcription in every jurisdiction. Check applicable site terms and rights information before reuse beyond this short research excerpt.
++
++## AI-training permission — open question
++
++AI-training permission has not been assessed or established. Public accessibility, attribution, or any eventual copyright conclusion does not answer whether training use is permitted; that question remains separate and open.
+diff --git a/corpus/fixtures/r88-myth-cluster2/kojiki-excerpt.md b/corpus/fixtures/r88-myth-cluster2/kojiki-excerpt.md
+new file mode 100644
+index 0000000..8fbc7dd
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/kojiki-excerpt.md
+@@ -0,0 +1,4 @@
++"Then the whole Plain of High Heaven was obscured and all the Central Land of Reed-Plains darkened."
++"Owing to this, eternal night prevailed."
++"Therefore did the eight hundred myriad deities assemble in a divine assembly in the bed of the Tranquil River of Heaven,"
++"So when the Heaven-Shining-Great-August deity had come forth, both the Plain of High Heaven and the Central-Land-of-Reed-Plains of course again became light."
+diff --git a/corpus/fixtures/r88-myth-cluster2/README.md b/corpus/fixtures/r88-myth-cluster2/README.md
+new file mode 100644
+index 0000000..d0db63f
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/README.md
+@@ -0,0 +1,27 @@
++# Round 88 mythology cluster 2
++
++A newly authored fictional world-bible cluster around Neri's first Night Mark, an assembly at Wind Court, and a Beacon raised at Silt Steps. The selected sourced-inspiration family is Japanese Kojiki tradition; the exact excerpt and separate note are delivered as `kojiki-excerpt.md` and `inspiration-note.md`. This fixture does not present its invented events as Kojiki content or as contemporary religious practice.
++
++`entities.json`, `relations.json`, `sources.json`, `timeline.json`, and `contradictions.json` use the local corpus checker. The relation `id` fields are stable fixture-local labels added so the symbolism index can address directed edges. The two `allied_with` edges form a sourced reciprocal faction alliance; timeline events include explicit `depends_on` links. No contradiction is asserted in this fixture; any later conflicting account must be surfaced in `contradictions.json`, not silently selected as canon.
++
++`symbolism-index.md` maps each excerpt symbol clause to the fixture entity, directed-relation, and timeline IDs it touches. Locators use physical line numbers in the four-line `kojiki-excerpt.md` file. To verify every locator in the note and index resolves inside that delivered file, run from the repository root:
++
++```sh
++python3 - <<'PY'
++from pathlib import Path
++import re
++root = Path("corpus/fixtures/r88-myth-cluster2")
++excerpt_lines = (root / "kojiki-excerpt.md").read_text(encoding="utf-8").splitlines()
++locators = []
++for name in ("inspiration-note.md", "symbolism-index.md"):
++    text = (root / name).read_text(encoding="utf-8")
++    for match in re.finditer(r"(?:\[|\()excerpt lines (\d+)(?:-(\d+))?(?:\]|\))", text):
++        first = int(match.group(1))
++        last = int(match.group(2) or first)
++        assert 1 <= first <= last <= len(excerpt_lines), (name, match.group(0))
++        locators.append((name, first, last))
++assert locators, "no excerpt locators found"
++print(f"PASS: {len(locators)} passage locators resolve to {len(excerpt_lines)} delivered excerpt lines")
++PY
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-myth-cluster2
++```
+diff --git a/corpus/fixtures/r88-myth-cluster2/relations.json b/corpus/fixtures/r88-myth-cluster2/relations.json
+new file mode 100644
+index 0000000..bde2b64
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/relations.json
+@@ -0,0 +1,30 @@
++[
++  {
++    "id": "rel-reedbound-allied-with-flint-choir",
++    "from": "reedbound",
++    "to": "flint-choir",
++    "type": "allied_with",
++    "source_id": "shore-pact"
++  },
++  {
++    "id": "rel-flint-choir-allied-with-reedbound",
++    "from": "flint-choir",
++    "to": "reedbound",
++    "type": "allied_with",
++    "source_id": "shore-pact"
++  },
++  {
++    "id": "rel-neri-covers-beacon",
++    "from": "neri",
++    "to": "beacon",
++    "type": "covers_at_night-mark",
++    "source_id": "watch-register"
++  },
++  {
++    "id": "rel-tavi-raises-beacon",
++    "from": "tavi",
++    "to": "beacon",
++    "type": "raises_after_assembly",
++    "source_id": "harbor-log"
++  }
++]
+diff --git a/corpus/fixtures/r88-myth-cluster2/sources.json b/corpus/fixtures/r88-myth-cluster2/sources.json
+new file mode 100644
+index 0000000..5494218
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/sources.json
+@@ -0,0 +1,26 @@
++[
++  {
++    "id": "watch-register",
++    "title": "Rainmonth Watch Register",
++    "kind": "fictional watch record",
++    "reliability_note": "Newly authored fixture text; it records what its compiler wrote about one watch, not authenticated history."
++  },
++  {
++    "id": "assembly-minutes",
++    "title": "Wind Court Assembly Minutes",
++    "kind": "fictional meeting record",
++    "reliability_note": "Newly authored fixture text; it records the meeting account, not independently verified events."
++  },
++  {
++    "id": "shore-pact",
++    "title": "Reedbound–Flint Choir Night-Watch Pact",
++    "kind": "fictional agreement",
++    "reliability_note": "Newly authored fixture text; it records a reciprocal pledge, not whether either faction kept it."
++  },
++  {
++    "id": "harbor-log",
++    "title": "Silt Steps Harbor Log",
++    "kind": "fictional harbor log",
++    "reliability_note": "Newly authored fixture text; its event ordering is fixture-local and not independently authenticated chronology."
++  }
++]
+diff --git a/corpus/fixtures/r88-myth-cluster2/symbolism-index.md b/corpus/fixtures/r88-myth-cluster2/symbolism-index.md
+new file mode 100644
+index 0000000..4b7d669
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/symbolism-index.md
+@@ -0,0 +1,9 @@
++# Clause-to-element symbolism index
++
++This index records my editorial analogy only. It does not claim that these interpretations are traditional Kojiki or Shinto symbol meanings. A “touched” ID is a fixture element participating in the corresponding invented sequence, not a one-to-one equation with a source deity or event.
++
++| Source symbol clause | Fixture elements touched |
++| --- | --- |
++| The land darkens and night prevails (excerpt lines 1-2): read here as temporary obscuration. | Entities: `neri`, `silt-steps`, `beacon`; relation: `rel-neri-covers-beacon`; timeline: `first-night-mark`. |
++| The deities gather in assembly (excerpt lines 3-3): read here as a community convening after a warning. | Entities: `tavi`, `wind-court`, `reedbound`, `flint-choir`; relations: `rel-reedbound-allied-with-flint-choir`, `rel-flint-choir-allied-with-reedbound`; timeline: `wind-court-assembly`. |
++| Light returns after the deity comes forth (excerpt lines 4-4): read here as a shared signal restored after the assembly. The fixture does not assign a source-deity counterpart. | Entities: `tavi`, `silt-steps`, `beacon`, `reedbound`, `flint-choir`; relations: `rel-tavi-raises-beacon`, `rel-reedbound-allied-with-flint-choir`, `rel-flint-choir-allied-with-reedbound`; timeline: `beacon-raised`. |
+diff --git a/corpus/fixtures/r88-myth-cluster2/timeline.json b/corpus/fixtures/r88-myth-cluster2/timeline.json
+new file mode 100644
+index 0000000..8f12f13
+--- /dev/null
++++ b/corpus/fixtures/r88-myth-cluster2/timeline.json
+@@ -0,0 +1,33 @@
++[
++  {
++    "id": "first-night-mark",
++    "tick": 1,
++    "entity_id": "neri",
++    "place_id": "silt-steps",
++    "depends_on": [],
++    "description": "The Rainmonth Watch Register states that Neri covers the Beacon at Silt Steps at the first Night Mark of Rainmonth 3.",
++    "source_id": "watch-register"
++  },
++  {
++    "id": "wind-court-assembly",
++    "tick": 2,
++    "entity_id": "tavi",
++    "place_id": "wind-court",
++    "depends_on": [
++      "first-night-mark"
++    ],
++    "description": "The Assembly Minutes record Tavi convening the Reedbound and Flint Choir at Wind Court after the Night Mark reaches the court.",
++    "source_id": "assembly-minutes"
++  },
++  {
++    "id": "beacon-raised",
++    "tick": 3,
++    "entity_id": "tavi",
++    "place_id": "silt-steps",
++    "depends_on": [
++      "wind-court-assembly"
++    ],
++    "description": "The Harbor Log records Tavi raising the Beacon's shutters at Silt Steps with help from both factions after the assembly closes.",
++    "source_id": "harbor-log"
++  }
++]

@@ -1,11 +1,12 @@
-# Real-world method references (not in-world canon)
+# Real-world references (not in-world canon)
 
 | Work / attribution | Rights question | AI-training permission question | Use here |
 |---|---|---|---|
 | W3C, *PROV-O: The PROV Ontology*, https://www.w3.org/TR/prov-o/ §2 | Consult publisher's terms for reuse of expressive material; no rights grant asserted here | Not assessed; no permission inferred from public access | Conceptual provenance model only; local `source_id` rule is our choice. |
 | JSON Schema authors, *JSON Schema Validation, Draft 2020-12*, https://json-schema.org/draft/2020-12/json-schema-validation §6.5 | Consult applicable specification terms; no rights grant asserted here | Not assessed; no permission inferred from public access | Object validation vocabulary; cross-record lore rules are ours. |
 | Python Software Foundation, *graphlib — Functionality to operate with graph-like structures*, https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter | Consult applicable documentation license; no rights grant asserted here | Not assessed; no permission inferred from public access | Prerequisite-ordering comparison; this checker uses strict tick comparisons, not graphlib. |
+| University of Oxford, Electronic Text Corpus of Sumerian Literature (ETCSL), “Inana's descent to the nether world,” composition 1.4.1 (composite text), https://etcsl.orinst.ox.ac.uk/section1/tr141.htm, lines 122–163 | The rights status of ETCSL's modern presentation, editorial work, and translation has not been determined here; consult the corpus's credits/copyright information and applicable terms before reproducing protected expression. | AI-training permission has not been assessed or established; public accessibility and attribution do not imply permission. | Motif-level comparison only: lines 122–163 describe entry through seven gates and removal of dress and regalia; the fixture uses original shore-threshold imagery. Not an in-world source or canon. |
 
-These citations attribute method inspiration, not specific story facts. Each
+These citations record real-world references, not fictional canon. Each
 fictional story fact is separately cited to `sources.json` within the bible.
 No reference work is ingested as fictional canon.

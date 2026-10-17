@@ -1,0 +1,25 @@
+diff --git a/corpus/fixtures/check_bible.py b/corpus/fixtures/check_bible.py
+--- a/corpus/fixtures/check_bible.py
++++ b/corpus/fixtures/check_bible.py
+@@ -201,6 +201,21 @@
+             expected_keys = {'tick', 'from_holder', 'to_holder', 'source_id'}
+             if set(record) != expected_keys:
+                 errors.append(f'{record_label}: expected exactly tick, from_holder, to_holder, source_id')
++                ambiguous_holder_references = []
++                for field in ('to_holder', 'from_holder'):
++                    holder_id = record.get(field)
++                    if isinstance(holder_id, str) and holder_id.strip() and entity_id_counts.get(holder_id, 0) > 1:
++                        errors.append(f'{record_label}.{field}: ambiguous entity {holder_id!r}')
++                        ambiguous_holder_references.append((field, holder_id))
++                if ambiguous_holder_references and not holder_ambiguity_notice_emitted:
++                    errors.append(f'{record_label}: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous')
++                    holder_ambiguity_notice_emitted = True
++                    holder_ambiguity_stop = (record_label, tuple(ambiguous_holder_references))
++                    cause = ', '.join(
++                        f'{field} {holder_id!r}'
++                        for field, holder_id in ambiguous_holder_references
++                    )
++                    errors.append(f'{record_label}: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity {cause} first occurred at {record_label}')
+                 previous_holder = previous_tick = None
+                 can_check_chain = False
+                 continue

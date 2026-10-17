@@ -1,0 +1,158 @@
+{
+  "seat": "C6",
+  "mission": "Causal-separability and regression audit of X1's C1 patch",
+  "axes": [
+    "causal-separability",
+    "regression-safety",
+    "reproducibility"
+  ],
+  "baseline": {
+    "revision": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+    "scratch_archive": "/tmp/lore-shokunin-C6-HywKN4",
+    "checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+    "direct_fixture_inputs": {
+      "count": 145,
+      "exit_counts": {"0": 30, "1": 115},
+      "violation_lines": 331,
+      "stderr_nonempty": 0,
+      "independent_B1_tuple_matches": "145/145"
+    },
+    "all_corpus_input_dirs": {
+      "count": 154,
+      "exit_counts": {"0": 34, "1": 120},
+      "stderr_nonempty": 0
+    },
+    "commands_and_observed_outputs": [
+      {
+        "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+        "command": "scratch=$(mktemp -d /tmp/lore-shokunin-C6-XXXXXX) && git archive dfd1fbc | tar -x -C \"$scratch\"",
+        "observed": "SCRATCH=/tmp/lore-shokunin-C6-HywKN4; tracked files: 2782"
+      },
+      {
+        "command": "python3 census.py /tmp/lore-shokunin-C6-HywKN4 /tmp/lore-shokunin-C6-HywKN4/corpus/fixtures/check_bible.py /tmp/lore-shokunin-C6-HywKN4/before.json",
+        "observed": "captured 154 tuples; exits={0:34,1:120}; stderr_nonempty=0"
+      },
+      {
+        "command": "python3 verify_baseline.py",
+        "observed": "direct_fixture_inputs=145 exits={0:30,1:115} violation_lines=331; B1_exact_tuple_matches=145/145; all_corpus_input_dirs=154 exits={0:34,1:120} stderr_nonempty=0"
+      }
+    ]
+  },
+  "x1_patch_availability": {
+    "wait": "sleep 60 completed before the single availability check",
+    "check": "Glob .ufo/waves/round-88/patches/X1* returned no matches; X1.md was absent",
+    "application": "NOT RUN: no X1 patch existed to apply",
+    "candidate_status": "BLOCKED"
+  },
+  "candidate_after_state": {
+    "full_145_fixture_comparison": "NOT MEASURED",
+    "all_corpus_comparison": "NOT MEASURED",
+    "changed_tuple_count": null,
+    "non_disclosure_or_note_only_deltas": null,
+    "exit_code_flips": null,
+    "reason": "The requested X1 patch was unavailable at the one 60-second wait-check. Do not interpret null as zero or as a pass."
+  },
+  "probe_campaign": {
+    "scratch_root": "/tmp/lore-shokunin-C6-HywKN4/c6-probes",
+    "captured_baseline_transcripts": "/tmp/lore-shokunin-C6-HywKN4/probes-before.json",
+    "baseline_transcript_sha256": "ec174f640e8d1c9d238382c5c2ce1a9f66b2a971d8b8668de5f8aa8466967b17",
+    "replay_command": "python3 make_probes.py && python3 replay_probes.py",
+    "observed": "constructed 8 probe inputs; all 8 CLI replays completed with empty stderr",
+    "cases": [
+      {
+        "case": "shape-invalid-plus-ambiguous",
+        "role": "probe",
+        "control_for": "shape-invalid-only-control; shape-valid-ambiguous-control",
+        "entities_sha256": "53a2a61cf3db2c3c3bef9dab2163175282ee2b422648924d83d8059995fc663e",
+        "exit": 1,
+        "stdout_sha256": "979ff05fffd6f10f097163bcb3b9d6d2c5b0a2e6565ea687c66202cf6ee0c6c5",
+        "stderr": "",
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\n2 violation(s); no canon changed\n",
+        "purpose": "Reproduces a dict record whose to_holder is duplicated and whose key set is invalid; baseline emits no stop notice or tail disclosure."
+      },
+      {
+        "case": "shape-invalid-only-control",
+        "role": "control",
+        "control_for": "shape-invalid-plus-ambiguous",
+        "entities_sha256": "37f53bc85f7c8df214278eb95b79f20aa076686893733be866558fc40bf9760a",
+        "exit": 1,
+        "stdout_sha256": "979ff05fffd6f10f097163bcb3b9d6d2c5b0a2e6565ea687c66202cf6ee0c6c5",
+        "stderr": "",
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\n2 violation(s); no canon changed\n",
+        "purpose": "Same invalid key set with a unique referenced holder; baseline output is byte-identical to the ambiguous case."
+      },
+      {
+        "case": "shape-valid-ambiguous-control",
+        "role": "control",
+        "control_for": "shape-invalid-plus-ambiguous",
+        "entities_sha256": "c54a00638b33e87728969c939aff6eebac5e99a9ea8bc2d0a1c32d2d7eec2d71",
+        "exit": 1,
+        "stdout_sha256": "e3d15c1702b25980bd0dd6a028e0b57b5a735d711f8e14217c74ccdf24d7c59d",
+        "stderr": "",
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\n5 violation(s); no canon changed\n",
+        "purpose": "Removes the shape defect but preserves the holder ambiguity; baseline disclosure path is active."
+      },
+      {
+        "case": "mixed-unknown-then-ambiguous",
+        "role": "probe",
+        "control_for": "mixed-holder-only-control; mixed-unknown-only-control",
+        "entities_sha256": "a87a51ab17330128e2222274358688f9d7c16a89bc5b4bfd09a675a5e5ae18ad",
+        "exit": 1,
+        "stdout_sha256": "9f6f9b2668d70fcc8d6432cab3b461e565bed09771aeb5cc541b48afa157d726",
+        "stderr": "",
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]\n6 violation(s); no canon changed\n",
+        "purpose": "Unknown source at provenance[0] latches first; ambiguity arrives at provenance[1], but baseline tail disclosures name only the later ambiguity."
+      },
+      {
+        "case": "mixed-holder-only-control",
+        "role": "control",
+        "control_for": "mixed-unknown-then-ambiguous",
+        "entities_sha256": "69dc7fd10052b6b6f5e57208cd29879cfa012b4d1983549a7a852fbb3f76ab0f",
+        "exit": 1,
+        "stdout_sha256": "4e9bcd6a139e53d8badb45177206379ddde757179dc75dc7b6d197da83a963dd",
+        "stderr": "",
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]\n5 violation(s); no canon changed\n",
+        "purpose": "Fixes the earlier source while preserving ambiguity; compares the ambiguity-only output to the mixed case."
+      },
+      {
+        "case": "mixed-unknown-only-control",
+        "role": "control",
+        "control_for": "mixed-unknown-then-ambiguous",
+        "entities_sha256": "ae698d90e1dfac497c9a89c9f85de1d91c0fbed50dabc08d07fee45dbf2f3dcf",
+        "exit": 1,
+        "stdout_sha256": "f1a844d8e4229f971d23697574d2b0dadefd65a89cf431f88725b16f3169ebea",
+        "stderr": "",
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\n2 violation(s); no canon changed\n",
+        "purpose": "Removes holder ambiguity while preserving the earlier unknown source; baseline gives no tail disclosure for this stop."
+      },
+      {
+        "case": "dangling-holder-stop",
+        "role": "probe",
+        "control_for": "dangling-holder-control",
+        "entities_sha256": "a6cd7e5e997ce56a188e95e052f52efd2901f394c1e9c1aba9b60f262bc72fd0",
+        "exit": 1,
+        "stdout_sha256": "c2c8b8cb85d15046caa40c44b3f426f9931e1f381c4953d0cb910610b4f8cde4",
+        "stderr": "",
+        "stdout": "VIOLATION: entities[3].provenance[0].to_holder: dangling entity 'missing-holder'\n1 violation(s); no canon changed\n",
+        "purpose": "A dangling holder is the only provenance stop cause; baseline emits no tail disclosure."
+      },
+      {
+        "case": "dangling-holder-control",
+        "role": "control",
+        "control_for": "dangling-holder-stop",
+        "entities_sha256": "fc1d000f9a17ead19e0f541fffd9752710dcfc7a12d73ec9cbc2a78db5ced637",
+        "exit": 0,
+        "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "stderr": "",
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "purpose": "The unmodified unique-holder chain is CLEAN and demonstrates that the dangling case alone introduces the baseline violation."
+      }
+    ]
+  },
+  "verification": {
+    "command": "python3 -m py_compile corpus/fixtures/check_bible.py",
+    "revision_measured": "baseline archive only",
+    "result": "PASS",
+    "candidate_tests": "NOT RUN: X1 patch unavailable"
+  }
+}
