@@ -1696,3 +1696,14 @@ paused by operator 2026-10-12, round 22 closed, no round 23.
 - Operator rollout per the 2026-10-16 fleet amendment (fleet-root `84bade0`): the missing `SCORECARD.md` contract fields were appended as additive scaffolds at the end of `SCORECARD.md`; every pre-existing byte is preserved unchanged.
 - Already present as a real recordable section: `axes` (the axis score table with evidence/counting commands and last-change rounds). Absent as sections: `capabilities`, `saturation`, `planned`, `retired` — the `planned:`/`retired:` lines at `SCORECARD.md:12,13,14,26,33,65,70` are unheaded round-scoped prose labels, and `saturation` appears only in negations, so all four scaffolds were appended.
 - No axis claim was made and no score moved by this change; no verdict changed, no capability row enters the repertoire table (a row requires a round demonstrating it running), and the saturation line + stagnation window N remain the lane's to declare on its next round.
+
+## 2026-10-17 — root README
+
+Motivating evidence: the previous root README was the shared lane template
+and named a root `SKILL.md` this repo does not have. The replacement cites
+`PROVINCE.md`, `corpus/fixtures/check_bible.py` (one directory argument),
+and `corpus/fixtures/README.md`, whose examples still use the historical
+`.shokunin/lore/corpus/fixtures/` prefix. The two commands printed here use
+the paths that exist in this checkout (`corpus/fixtures/consistent` and
+`corpus/fixtures/contradictions`). `SHONEN.md` `[~]` marks stay author
+assertions. No Devin wiki URL was present; none was added.
