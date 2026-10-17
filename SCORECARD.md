@@ -13,6 +13,26 @@ planned: r85 (devin, ADMIT) — masked-defect calibration: holder dup silently l
 planned: another independently falsifiable move only; source-text truth remains unverified, and the r15 blue mark must not be called a Blue Seal trace. Round-4 duplicate-name detector remains rejected; no active name check or alias coverage.
 retired: hard-failing exact duplicate names without sourced uniqueness; round 4 showed calibration harm. Scores unchanged because the round was rejected.
 
+## Fleet round 1 — calibration declaration
+
+The driver has restarted the per-lane counter at round 1; earlier r1–r85
+records remain historical evidence, not the current round number.
+All inherited axis scores above are unmeasured, so none is numerically
+ordered. Treat that as an unresolved tie, not three zero-quality ratings.
+Calibration wins the falsifiability tie-break: the r85 masked-break input
+currently reports only the global duplicate ID, not the holder reference or
+the permanently stopped chain assessment.
+
+planned: one calibration move — report ambiguous provenance holders locally
+and explicitly disclose the existing chain-assessment stop without resuming
+comparisons, choosing duplicate identities, or changing fictional records.
+Measure both holder directions, the masked-break pair, clean/broken unique
+controls, and all inherited fixture CLI triples. Establish a bounded,
+reproducible 0–10 rubric before recording new numeric scores; a sample's
+ceiling must not be called whole-domain saturation.
+retired: no new retirement or split; the historical duplicate-name rejection
+above remains in force.
+
 ## Round 86 — blocked interactive attempt; prior counter declaration corrected
 
 This section supersedes the preceding “Fleet round 1” counter interpretation,

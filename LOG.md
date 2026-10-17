@@ -1571,6 +1571,63 @@ paused by operator 2026-10-12, round 22 closed, no round 23.
 - Sealed reviewer `r85-sealed-reviewer.md` (no claim knowledge): blinded run produced only the duplicate-id violation on masked; honest divergence — first repair (dedup) mechanically right but diagnostically wrong target; under single-pass trust the injected break SURVIVES. Mask changed stopping point, not first action. Operative danger CONFIRMED.
 - Sol `r85-axis-adjudicator.md` independently re-ran matched pair and mechanism lines, replayed all 133 fixtures (28/105, stderr empty), confirmed checker sha at pin vs worktree and r56 old-case replay. **ADMIT — calibration improved (bounded)**; depth/coverage unchanged; none harmed. The defect moves calibration (what a short violation list guarantees), not coverage/depth. No checker fix required now (r83 precedent); repair candidate (voiced `ambiguous entity` at L215/L223 + latch-marker redesign) is the natural r86 needing its own 133-tuple replay. Limits: seal self-attested; danger conditional on single-pass trust; `from_holder` symmetry unexercised; probes are constructed telemetry outside admitted corpus.
 
+## Fleet round 1 — calibration declaration before batched dispatch
+
+- Steered round is `round-1`; inherited rounds through r85 are retained, not
+  renumbered. Baseline lane HEAD is
+  `5eb9451baff217c19d5786405f9b2aa500b7c1b7`, initially clean.
+- Motivating evidence: `reports/round-85/r85-author.md:38-75`,
+  `reports/round-85/r85-verifier.md:7-48`, and current
+  `corpus/fixtures/check_bible.py:181-247`. Parent ran the actual CLI on
+  `corpus/live/runs/round-85/probe-inputs/r85-{control,unique-break-control,masked-ambiguous,isolated-ambiguous,harbor-repro}`.
+  Clean control exits 0; the unique break exits 1 with the record-2 chain
+  break; the masked case exits 1 with only the global duplicate-vault finding.
+  All five runs have empty stderr. Reproduce from this standalone lane root:
+  `python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous`.
+- Selected axis: calibration, the most falsifiable tie among three inherited
+  unmeasured scores. One improvement: voice both ambiguous holder-reference
+  fields and explicitly mark the existing per-item chain-assessment stop.
+  Preserve the latch, all source/canon boundaries, and unrelated diagnostics.
+  Falsified if the marker implies a proved break, comparisons restart after
+  ambiguity, clean controls change, or unrelated inherited CLI tuples differ.
+- Host route authority read at `~/.omp/agent/config.yml:318-332`; dispatch
+  uses taxonomy roles only, never a lane-pinned model or routing mutation.
+  The required mixed planner/executor/review batch uses native OMP `task`
+  delegation, not a same-shape UFO wave: the swarm skill excludes planner
+  from its wave taxonomy and permits ordinary delegation for shared-writer
+  work. This is one nine-member batch under the mission's round contract,
+  with one integration owner and disjoint artifact ownership.
+
+## Fleet round 1 — current-session continuation and observed dispatch
+
+- Inherited-state clarification: this session opened at lane commit
+  `5eb9451baff217c19d5786405f9b2aa500b7c1b7` with uncommitted changes to
+  `LOG.md`, `PROVINCE.md`, `SCORECARD.md`, `SHONEN.md` and
+  `reports/round-1/`. The prior declaration's “initially clean” describes
+  its predecessor, not this session's observation. Preserve those bytes;
+  `reports/round-1/dispatch.json` is inherited intent/evidence, not a
+  dispatch independently observed here.
+- The actual pre-change CLI was rerun on the five named r85 probes;
+  `reports/round-1/current-baseline.json` preserves all raw channels.
+  Across those five runs, holder-local ambiguity findings = 0 and explicit
+  holder-assessment scope notices = 0. Counting operation: sum matching
+  `.to_holder: ambiguous entity` / `.from_holder: ambiguous entity` lines,
+  and outputs containing `provenance continuity and tick-order comparisons
+  unassessed`, respectively. The unique break remains reported and the
+  masked break remains unassessed; these are fictional input probes.
+- One fresh native OMP `task` call spawned nine roles together: planner,
+  connector, three executors, scribe, scout, reviewer and critic.
+  `reports/round-1/current-dispatch.json` records returned worker names,
+  roles and disjoint ownership. Models are selected only by the unchanged
+  operator role table; this is heterogeneous craft delegation, not a
+  claimed validated generic UFO same-shape wave.
+- Calibration remains the most falsifiable tie among inherited unmeasured
+  axes; there is no defensible numerical minimum to fabricate. The fixed
+  measurement will report a five-gate holder-disclosure sample separately
+  from whole-domain expertise. No new retirement or saturation is claimed.
+  Parent owns integration, runtime proof and publication; dispatched
+  reviewers do not qualify as outside promotion/discernment verifiers.
+
 ## Round 86 — interactive reconciliation; BLOCKED before required native batch
 
 - Correction superseding the two preceding “Fleet round 1” sections: launch

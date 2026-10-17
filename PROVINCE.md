@@ -8,4 +8,4 @@ Sources (read-only):
 
 Refuses: claiming canon without an in-world citation; silently resolving contradictions; real-world rights claims (art-east-asian-design); game mechanics verification (game-dev-2d).
 
-Only writes `.shokunin/lore/**` and its own reports.
+Only writes this standalone lane repository (`lore-shokunin/`), its own fleet round report, and allowed append-only L0 questions. Sibling repositories and domain source trees remain read-only.
