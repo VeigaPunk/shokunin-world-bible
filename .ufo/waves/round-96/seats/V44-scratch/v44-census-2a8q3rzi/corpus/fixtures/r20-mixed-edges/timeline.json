@@ -1,0 +1,32 @@
+[
+  {
+    "id": "r20-valid-a",
+    "tick": 2,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [],
+    "description": "Fixture input: valid A tick; no source-text chronology asserted.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "r20-negative-b",
+    "tick": -1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Fixture input: negative B tick; no source-text chronology asserted.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "r20-valid-c",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [
+      "r20-negative-b",
+      "r20-valid-a"
+    ],
+    "description": "Fixture input: C depends on B and A; no source-text chronology asserted.",
+    "source_id": "courier-log"
+  }
+]

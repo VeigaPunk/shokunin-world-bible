@@ -1,0 +1,3 @@
+FAIL: claim-to-excerpt map not found
+RESULT ERROR
+EXIT=2

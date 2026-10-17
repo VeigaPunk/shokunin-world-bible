@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-valid-equal
+exit_code=1
+VIOLATION: timeline[1]: double-booked 'mira' at tick 1 in timeline[0] ('tower') and 'harbor'
+VIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 1 not before 'r20-dependent' tick 1
+2 violation(s); no canon changed

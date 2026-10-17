@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r26-to-malformed
+exit_code=1
+VIOLATION: entities[4].name: required nonempty str
+1 violation(s); no canon changed

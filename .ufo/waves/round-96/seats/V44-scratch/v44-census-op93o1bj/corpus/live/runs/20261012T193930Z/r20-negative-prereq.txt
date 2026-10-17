@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-negative-prereq
+exit_code=1
+VIOLATION: timeline[0].tick: must be nonnegative
+1 violation(s); no canon changed

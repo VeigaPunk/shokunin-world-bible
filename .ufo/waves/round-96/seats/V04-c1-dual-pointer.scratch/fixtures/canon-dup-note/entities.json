@@ -1,0 +1,12 @@
+[
+  {
+    "id": "test-entity",
+    "first_appearance": "fixture-source",
+    "claims": [
+      {
+        "statement": "test claim",
+        "source_id": "fixture-source"
+      }
+    ]
+  }
+]

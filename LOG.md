@@ -2859,3 +2859,122 @@ P5 note tool-revision pin. Roster discrepancy recorded: V56's brief named
 V57 as adjudicator; V29 adjudicated per its own brief (V57 filed no
 adjudication). SHONEN unchanged (four `[~]`, no `[x]`, same-lane rule).
 No promotion, no push. r96 (second 64-seat deepseek flash round) may start.
+
+## Round 96 — declaration before dispatch (2026-10-17)
+
+Operator 100-round regimen round 2 of 6. Baseline = r95 closure `dcb2d92`.
+One batched AgentSwarm, 64 seats on `opencode-go/deepseek-v4.1-flash`: 6
+producer seats (exclusive byte-ownership) + 58 verifier/judge seats on the
+r95 poll-wait protocol (20 s cadence, 40 tries; report ABSENT, never verify
+a plan). Seat reports exclusive under `.ufo/waves/round-96/seats/`. Scores
+remain unmeasured. Owned axis set: depth, coverage, calibration;
+operability/freshness/adjacency judged as witnessed.
+
+**C1 — calibration:** harden `map_obligations` against the r95-carried
+residuals, one tool bundle with three falsifiable parts. (a) The deletion
+class: deleting a claims key AND its map row currently exits 0 with the
+shortfall visible only in the non-gating `INVENTORY … MISMATCH` receipt —
+after, a declared-vs-observed inventory mismatch is GATING: exit 1 with a
+stable `inventory_mismatch` FINDING. (b) Pinning: `schema_drift` and
+`inventory_mismatch` behaviors gain persisted self-test cases (contract
+22→24 cases; `--self-test` 24/24). (c) V37-D1: a legacy-dialect map cell
+naming a second pointer in prose is currently silently ignored — after, such
+cells produce a stable `dual_pointer` FINDING and exit 1. Non-regression:
+r87–r96 fixtures, frozen-r93 replay, r87/r89 fail-closed, and the 0/1/2
+contract all unchanged.
+
+**C2 — depth:** second account, same occasion, unresolved. New fixture
+`corpus/fixtures/r96-crossing-response/` — a preserving copy of
+`r95-crossing-aftermath` plus one authored response note
+(`evin-response-note`) and one tick-12 event (`response-evin-salt-court`,
+actor `evin`, place `salt-court`, `depends_on: ["aftermath-missing-evin"]`)
+recording that Evin was at Salt Court through the same agreed bell; the note
+asserts no accusation and selects no winner — both first-person accounts
+stand unresolved. Before: 5 entities / 1 relation / 4 events / 5 sources at
+r95. After: 5/1/5, 5 sources wait — r95 has 4 sources; after: 5 sources,
+16 map obligations (15 inherited rows unchanged + 1 new event row; no new
+claims/entities/relations), `check_bible` CLEAN exit 0, inherited r95 rows
+parsed-value identical, census 169→170. No contradiction is asserted (the
+two accounts name different actors at different places); no canon-truth,
+rights, or identity inference.
+
+**C3 — coverage (capability acquisition):** new gate
+`corpus/tools/dependency_freeze.py` + persisted
+`corpus/tools/dependency-freeze-contract.json` closing carried debt BR-01
+(dependency reduction is undetectable: dropping `evin-ninth-bell` from the
+r94 tick-10 `depends_on` leaves every current gate green). The gate freezes
+each continuation-chain fixture's dependency-edge inventory (event_id →
+sorted depends_on set) and relation endpoints, pinned with fixture content
+digests; `python3 corpus/tools/dependency_freeze.py <dir>` verifies against
+the pin. Exit contract 0 clean / 1 `REDUCTION-DETECTED` (or addition/endpoint
+change) with stable FINDING IDs / 2 could-not-evaluate; `--self-test`
+isolated with persisted expectations; `--freeze <dir>` (rebuild pin) exists
+but is not used in the admitted path. Demonstrated on the delivered chain
+(r88-m3, r94-paired-crossing, r95-crossing-aftermath, r96-crossing-response:
+expect 4/4 clean); the BR-01 mutation on a scratch copy must exit 1
+REDUCTION-DETECTED; an added-edge mutation must also exit 1. Zero corpus
+modifications beyond the two new tool files.
+
+**Admission rule:** admit iff C1, C2, C3 each verify on the delivered
+revision and no axis is harmed; per-axis verdicts, no scalars; harmed or
+unprovable claims reported as such. Same-lane rule (no `[x]`, no promotion).
+r97 does not start on an unclosed r96. Producer byte-ownership: Q1
+`corpus/tools/map_obligations.py`; Q2 `corpus/tools/map-obligations-contract.json`
++ `corpus/tools/README.md`; Q3 `corpus/tools/dependency_freeze.py` +
+`corpus/tools/dependency-freeze-contract.json`; Q4
+`corpus/fixtures/r96-crossing-response/` JSON tables + `fictional-excerpts.md`;
+Q5 `corpus/fixtures/r96-crossing-response/README.md` +
+`claim-excerpt-map.md`; Q6 `corpus/knowledge/r96-response-scope-note.md`.
+Everything else is read-only except seat reports.
+
+## Round 96 — declaration errata, conditions, and closure (ADMITTED; 2026-10-17)
+
+**Append-only declaration errata** (adjudication §5 recommended items; V50, V54):
+(1) the C2 before-clause above says "5 sources at r95" — r95 has **4**
+sources (`sources.json` length 4); the after-state of 5 sources is correct.
+(2) The r96 fixture's editorial-table delimiter row carries one extra cell
+and one inherited sentence says "new relation" where the round added an
+event — cosmetic, no gate reads them; the fixture bytes stay frozen as
+adjudicated and the fixes are r97 candidates (changing them would break the
+adjudicated digests and require re-freezing).
+
+**Closure.** Single-wave 64-seat swarm on
+`opencode-go/deepseek-v4.1-flash` (dispatch `tool_u9BH6dLzBlljBGPW0Eh74iZl`,
+returned `completed: 64`; 64/64 reports after two late landings — V43/V58
+were trapped in a mutual poll-wait on 63 reports including the adjudicator's,
+self-recorded in V43's poll log; receipt rebuilt from the dispatch result).
+V38 all-axis adjudication: **ADMIT with eight conditions**, all discharged
+here: (C-1) the foreign `pins.c3red` scratch pin (written into the
+producer-owned freeze contract by verifier V41's `--freeze` probe — a
+byte-ownership breach, self-disclosed in V41 F1) was removed; freeze
+self-test 14/14 and chain 4/4 re-run green on the corrected contract
+(`c65ac3bd…`); V23's FAIL stands recorded and is discharged by this removal,
+not re-rolled. (C-2) the breach recorded here. (C-3…C-6) r97 debt recorded
+in SCORECARD: `--freeze` scope guard (integration-time only), no path
+binding, BR-01 prose half open, calibration bounds (consistent regeneration
+exits 0; droppable added pins; `dual_pointer` unpinned). (C-7) V37's
+adjacency verdict battery was left unfinished (placeholder §2) — the
+adjacency verdict rests on V31 plus the L1's own checks
+(`PROVINCE.md` diff empty; no parent-tree strays this round); V37 is not
+read as a verdict. (C-8) documentation landed: tools README Round-96
+addendum (both tools), corpus README bullets, SKILL.md registry rows
+(updated `map_obligations`; new `dependency_freeze`), fixtures README
+Round-96 + census, C9 row 5 (DISCRIMINATION HELD / expected control).
+
+Per-axis verdicts: calibration improved (bounded — deletion class gating
+`inventory_mismatch` demonstrated old-exit-0 vs new-exit-1; `dual_pointer`
+closes V37-D1 with false-positive controls; 24/24 pins load-bearing three
+ways); depth improved (bounded — second-account-unresolved class, 5/1/4→5/1/5,
+16/16 obligations, 15 inherited rows diff-free outside the namespace column,
+no contradiction asserted); coverage improved (bounded — `dependency_freeze`
+closes BR-01's JSON-edge half with 4/4 clean and REDUCTION/ADDITION/
+ENDPOINT exit 1, zero corpus modification); operability improved (bounded);
+freshness unchanged (closure-side doc gaps landed); adjacency not harmed.
+Measurements re-run at closure on the committed revision: census 170 dirs /
+36 clean / 134 negative / 421 lines; `map_obligations --self-test` 24/24;
+`dependency_freeze --self-test` 14/14 + chain 4/4; `boundary_doc_check`
+default + self-test PASS; C9 pair green; checker pin `ff9fd2aa…` reproduced.
+Host note: `/tmp` hit inode exhaustion mid-wave (V27/V40) — seats re-ran
+under repo scratch; recorded as a host condition, not a repo finding.
+SHONEN unchanged (four `[~]`, no `[x]`). No promotion, no push. r97 (third
+64-seat deepseek flash round) may start.

@@ -1,0 +1,19 @@
+try=1 20:40:01 map=n fx=y src=y q4rep=none q5rep=none
+try=2 20:40:21 map=n fx=y src=y q4rep=none q5rep=none
+try=3 20:40:41 map=n fx=y src=y q4rep=none q5rep=none
+try=4 20:41:01 map=n fx=y src=y q4rep=none q5rep=none
+try=5 20:41:21 map=n fx=y src=y q4rep=none q5rep=none
+try=6 20:41:41 map=n fx=y src=y q4rep=none q5rep=none
+try=7 20:42:01 map=n fx=y src=y q4rep=none q5rep=none
+try=8 20:42:21 map=n fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=9 20:42:41 map=n fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=10 20:43:01 map=n fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=11 20:43:21 map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=12 20:43:41 map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=13 20:44:01 map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=14 20:44:21 map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=15 20:44:41 map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=16 20:45:01 map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=17 20:45:21 map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=none
+try=18 20:45:41 stability-wait md5set=cde9ec564697a6dc8ad77a54f95422fe map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=.ufo/waves/round-96/seats/Q5-fixture-docs.md
+try=19 20:46:01 READY-STABLE md5set=cde9ec564697a6dc8ad77a54f95422fe map=y fx=y src=y q4rep=.ufo/waves/round-96/seats/Q4-fixture-json.md q5rep=.ufo/waves/round-96/seats/Q5-fixture-docs.md

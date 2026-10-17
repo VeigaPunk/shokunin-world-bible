@@ -1,0 +1,5 @@
+# Strength contrast map
+
+The r40 Vela excerpt says she “heard two strokes I took to be the registry bell”: she reports the sound and tentatively identifies it. This r41 excerpt says she “heard the registry bell strike twice,” directly identifying what she heard as the registry bell. That is a stronger Vela-attributed identification, not independent proof that the objective registry bell rang.
+
+The five JSON tables are unchanged from r40. In particular, the fixed Vela claim/event wording (“she took to be”) remains logically compatible as a weaker summary of the report, but it no longer preserves the excerpt’s epistemic precision: it makes the direct identification sound tentative. This is under-specific, not false, unsupported, or a canon contradiction. Do not infer objective bell fact from the excerpt, citation, or structurally clean checker. The unchanged date and “did not see Sella or an envelope” remain Vela’s source claims; they establish neither a shared occasion nor objective absence.

@@ -33,6 +33,8 @@
       {"id": "duplicate", "exit": 1, "finding_ids": ["duplicate_mapping"]},
       {"id": "phantom", "exit": 1, "finding_ids": ["phantom_obligation"]},
       {"id": "source_id_mismatch", "exit": 1, "finding_ids": ["source_id_mismatch"]},
+      {"id": "schema_drift", "exit": 1, "finding_ids": ["schema_drift"]},
+      {"id": "inventory_mismatch", "exit": 1, "finding_ids": ["inventory_mismatch"]},
       {"id": "malformed_json", "exit": 2, "finding_ids": ["malformed_json"]},
       {"id": "co_mapped_grammar", "exit": 2, "finding_ids": ["unsupported_map"]},
       {"id": "legacy_grammar", "exit": 2, "finding_ids": ["unsupported_map"]},

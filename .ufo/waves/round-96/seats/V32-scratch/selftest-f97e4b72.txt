@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py", line 898, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py", line 881, in main
+    return run_self_test()
+  File "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py", line 805, in run_self_test
+    expected = load_test_expectations()
+  File "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py", line 792, in load_test_expectations
+    unknown = sorted(set(expected) - set(SELF_TEST_CASES))
+                                         ^^^^^^^^^^^^^^^
+NameError: name 'SELF_TEST_CASES' is not defined. Did you mean: 'CORE_SELF_TEST_CASES'?

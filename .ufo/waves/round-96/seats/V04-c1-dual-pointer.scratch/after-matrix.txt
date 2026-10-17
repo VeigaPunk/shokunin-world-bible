@@ -1,0 +1,107 @@
+=== canon-base run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== canon-base run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== canon-dup-note run 1: exit=2
+FINDING unsupported_map: co-mapped or unsupported pointer grammar
+RESULT ERROR
+=== canon-dup-note run 2: exit=2
+FINDING unsupported_map: co-mapped or unsupported pointer grammar
+RESULT ERROR
+=== canon-dup-token run 1: exit=2
+FINDING unsupported_map: co-mapped or unsupported pointer grammar
+RESULT ERROR
+=== canon-dup-token run 2: exit=2
+FINDING unsupported_map: co-mapped or unsupported pointer grammar
+RESULT ERROR
+=== canon-note-plain run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== canon-note-plain run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== canon-single-note run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== canon-single-note run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== canon-two-tokens run 1: exit=2
+FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer
+RESULT ERROR
+=== canon-two-tokens run 2: exit=2
+FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer
+RESULT ERROR
+=== legacy-base run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-base run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-canon-single run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-canon-single run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-dup-colon run 1: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E2 (line 8) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/claims/0
+RESULT FAIL
+=== legacy-dup-colon run 2: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E2 (line 8) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/claims/0
+RESULT FAIL
+=== legacy-dup-colon-bare run 1: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E2 (line 8) names a second pointer token 'entities[1]' alongside entities.json#/0/claims/0
+RESULT FAIL
+=== legacy-dup-colon-bare run 2: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E2 (line 8) names a second pointer token 'entities[1]' alongside entities.json#/0/claims/0
+RESULT FAIL
+=== legacy-dup-paren run 1: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E1 (line 7) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/first_appearance
+RESULT FAIL
+=== legacy-dup-paren run 2: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E1 (line 7) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/first_appearance
+RESULT FAIL
+=== legacy-dup-paren-canon run 1: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E1 (line 7) names a second pointer token 'timeline.json#/0' alongside entities.json#/0/first_appearance
+RESULT FAIL
+=== legacy-dup-paren-canon run 2: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E1 (line 7) names a second pointer token 'timeline.json#/0' alongside entities.json#/0/first_appearance
+RESULT FAIL
+=== legacy-dup-paren-mapped run 1: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E2 (line 8) names a second pointer token 'timeline[0]' alongside entities.json#/0/claims/0
+RESULT FAIL
+=== legacy-dup-paren-mapped run 2: exit=1
+OBLIGATIONS raw=4 mapped=4
+FINDING dual_pointer: row E2 (line 8) names a second pointer token 'timeline[0]' alongside entities.json#/0/claims/0
+RESULT FAIL
+=== legacy-single-both run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-single-both run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-single-colon run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-single-colon run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-single-paren run 1: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+=== legacy-single-paren run 2: exit=0
+OBLIGATIONS raw=4 mapped=4
+RESULT PASS
+--- wrote /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V04-c1-dual-pointer.scratch/matrix-after-r96.json

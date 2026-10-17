@@ -1,0 +1,26 @@
+[
+  {
+    "id": "archive-ledger",
+    "title": "Lantern Harbor Registry, year 12",
+    "kind": "fictional municipal record",
+    "reliability_note": "in-world fiction; records movements, not omniscient truth"
+  },
+  {
+    "id": "courier-log",
+    "title": "Courier Mira’s Route Log, year 12",
+    "kind": "fictional personal log",
+    "reliability_note": "in-world fiction; first-person account"
+  },
+  {
+    "id": "registrar-copy",
+    "title": "Sella’s Harbor Register carbon, year 12",
+    "kind": "fictional handwritten register excerpt",
+    "reliability_note": "Invented in-world text for this fixture; Sella reports her own observation and entry, not omniscient truth or Mira’s actual destination."
+  },
+  {
+    "id": "sella-carbon-followup",
+    "title": "Sella’s later carbon note, year 12",
+    "kind": "fictional private note",
+    "reliability_note": "Newly authored fictional text for this fixture, not recovered; Sella reports her own later observation and uncertainty, not omniscient truth."
+  }
+]

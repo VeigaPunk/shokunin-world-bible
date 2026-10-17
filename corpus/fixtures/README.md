@@ -1194,3 +1194,26 @@ Round 95 also extended `map_obligations` (see the tools README Round-95 addendum
 A full repo-relative corpus run at the r95 closure observed **169 fixture directories: 35 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. This supersedes the Round-94 census (168/34/134/421) as a measured statement at this revision, not a pinned invariant. One directory was added (`r95-crossing-aftermath`); zero inherited tuples changed.
 
 Dated pin note: this Round-95 append changes this file's bytes; the W05 preservation pin recorded at `.ufo/waves/round-94/work/W05-baseline-corpus.sha256` for this file no longer matches (second consecutive round; the census re-declaration above is the measured state at closure).
+
+## Round 96 — `r96-crossing-response` (2026-10-17)
+
+Added at round 96: a preserving continuation of `r95-crossing-aftermath`. Evin's authored response note (`evin-response-note`) supports one tick-12 event (`response-evin-salt-court`, actor `evin`, place `salt-court`, `depends_on: ["aftermath-missing-evin"]`) recording that he was at Salt Court through the same agreed bell. The note asserts no accusation and selects no winner — both first-person accounts stand unresolved, and no contradiction is asserted (the two accounts name different actors at different places; the r35 two-sided counterpart carries one, this carries none). Inherited r95 records are parsed-value identical; the r95 fixture is untouched. Map: 16 obligations (15 inherited rows unchanged + the new event row).
+
+Replay commands and receipts (measured at the r96 closure, HEAD cited in LOG.md):
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r96-crossing-response
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r96-crossing-response
+# OBLIGATIONS raw=16 mapped=16; INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18 / RESULT PASS   exit 0
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
+# FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1   RESULT PASS   exit 0
+```
+
+Round 96 also hardened `map_obligations` (gating `inventory_mismatch`; 24-case self-test; `dual_pointer` class) and added the `dependency_freeze` gate — see the tools README Round-96 addendum. Known cosmetic debts (no gate reads them; r97 candidates): the r96 map's editorial-table delimiter row has one extra cell, and one carried sentence says "new relation" where the round added an event.
+
+### 2026-10-17 census re-declaration
+
+A full repo-relative corpus run at the r96 closure observed **170 fixture directories: 36 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-95 census (169/35/134/421). One directory added (`r96-crossing-response`); zero inherited tuples changed.
+
+Dated pin note: this Round-96 append changes this file's bytes; the W05 pin for this file no longer matches (third consecutive round; census re-declarations above are the measured state at each closure).

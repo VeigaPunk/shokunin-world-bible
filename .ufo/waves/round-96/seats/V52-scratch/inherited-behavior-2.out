@@ -1,0 +1,33 @@
+== boundary default ==
+CHECK pinned inputs: PASS
+CHECK receipt replay: PASS
+CHECK explicit anchor ranges: PASS
+CHECK document structure: PASS
+scope=frozen-document drift + receipts + explicit-anchor range + structure; not semantic or AST validation
+replay_receipts=3/3
+replay_cases=14/14
+anchors=2/2
+h1_count=1
+duplicate_headings=0
+instruction_markers=0
+CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)
+EXIT=0
+== boundary self-test ==
+SELF-TEST PASS anchor_range_control exit=1 findings=['anchor_range'] anchors=1/2 legacy_anchor=check_bible.py:212-224@5eb9451baff217c19d5786405f9b2aa500b7c1b7 baseline_lines=330
+SELF-TEST PASS committed_default exit=0 findings=none
+SELF-TEST PASS comment_parked_c9 exit=1 findings=['document_drift']
+SELF-TEST PASS wrong_bare_anchor exit=1 findings=['document_drift']
+SELF-TEST PASS checker_drift exit=1 findings=['checker_drift']
+SELF-TEST PASS missing_document exit=1 findings=['document_missing']
+SELF-TEST PASS missing_checker exit=1 findings=['checker_missing']
+SELF-TEST PASS receipt_drift exit=1 findings=['receipt_drift']
+SELF-TEST PASS
+EXIT=0
+== discriminate delivered ==
+mode=delivered checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+EXIT=0

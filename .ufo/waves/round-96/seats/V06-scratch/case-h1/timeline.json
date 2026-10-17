@@ -1,0 +1,20 @@
+[
+  {
+    "id": "teva-files-index",
+    "tick": 1,
+    "entity_id": "teva",
+    "place_id": "slate-table",
+    "depends_on": [],
+    "description": "Teva files the Lorn Index on the Slate Table.",
+    "source_id": "m2-record-archive"
+  },
+  {
+    "id": "orni-marks-index",
+    "tick": 2,
+    "entity_id": "orni",
+    "place_id": "slate-table",
+    "depends_on": ["teva-files-index"],
+    "description": "After Entry A, Orni adds 'not weighed; mark unmeasured' to the Lorn Index at the Slate Table.",
+    "source_id": "m2-record-archive"
+  }
+]

@@ -117,3 +117,59 @@ python3 corpus/tools/map_obligations.py --self-test   # 22 SELF-TEST PASS lines 
 #### r88 map dialect (coverage; corpus unmodified)
 
 `python3 corpus/tools/map_obligations.py corpus/fixtures/r88-m3-maya-cluster` now exits 0 with `OBLIGATIONS raw=10 mapped=10`, `INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12`, `RESULT PASS`. The dialect is enabled only by a JSON-facts pointer column whose normalized header is `JSON fact and fields` (the r88 map form); each row then carries one inline-code field-path token — `entities[i].first_appearance`, `entities[i].claims[j]`, `relations[i]`, or `timeline[i]` — which is translated to the canonical pointer before comparison. Canonical `file.json#/pointer` cells remain accepted in that table; field-path tokens are not accepted under a canonical header (the `legacy_grammar` self-test case stays exit 2 `unsupported_map`). Other legacy forms stay fail-closed: `corpus/fixtures/r87-myth-cluster` (co-mapped pointer cells) and `corpus/fixtures/r89-inspiration-paraphrase` both exit 2 `unsupported_map`. The r93 example (12/12) and r94 example (14/14) above, and the frozen r93 replay, remain `RESULT PASS` exit 0; those runs now print one additional `INVENTORY JSON-FACTS a/b; EDITORIAL-ROWS c/d; TOTAL-ROWS e/f` line when the map declares an `**Expected inventory:**`, so the r94 receipts above gain that line but keep their `OBLIGATIONS` and `RESULT` lines and exit codes. The inventory line is a receipt, not a gate: a declared count that disagrees with the parsed rows appends ` MISMATCH` to that line but does not by itself change the exit code, which only findings drive.
+
+### Round-96 addendum: gating inventory mismatch, `dual_pointer`, 24-case self-test (2026-10-17)
+
+This addendum extends the r95 instructions above; every earlier sentence remains as delivered history, including the open r94 residual BR-05 (the self-test scratch still lives under the repository root and is not gitignored — unchanged in r96).
+
+#### Gating inventory mismatch (closes the r95 deletion class)
+
+Before: on a scratch copy of `corpus/fixtures/r94-paired-crossing` with entity 0's `claims` key deleted and its `entities.json#/0/claims/0` map row removed, the r95 revision printed
+
+```
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+RESULT PASS
+```
+
+exit 0 — a silent pass. After: the same scratch copy prints
+
+```
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 14/2/16; observed 13/2/15
+RESULT FAIL
+```
+
+exit 1. `inventory_mismatch` is the stable FINDING ID; the detail embeds declared and observed counts. The declaration is gating for the three counts this tool observes (JSON facts, editorial rows, total rows); an `**Expected inventory:**` line whose counts cannot be parsed at all also gates, with the same ID (fail-closed: corrupting the declaration cannot disable the gate). The declared anchor count remains a receipt field only — anchor counting belongs to `support_check.py`. A map with no declaration is unchanged: no inventory finding and no receipt line. The `INVENTORY` receipt line is still printed and still appends ` MISMATCH`; it is now backed by a gate, so this addendum supersedes the r95 sentence "The inventory line is a receipt, not a gate".
+
+#### `dual_pointer` in legacy-dialect cells (closes r95 V37-D1)
+
+Before: a legacy-dialect cell naming a second pointer token in its parenthetical or colon prose was silently ignored — the r95 revision exited 0. After: it is a finding. On a scratch copy of `corpus/fixtures/r88-m3-maya-cluster` with row P1's cell changed to `` `entities[0].first_appearance` (Aru; also `entities[0].claims[0]`) ``:
+
+```
+OBLIGATIONS raw=10 mapped=10
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+FINDING dual_pointer: row P1 (line 23) names a second pointer token 'entities[0].claims[0]' alongside entities.json#/0/first_appearance
+RESULT FAIL
+```
+
+exit 1. The scan covers a second backticked or bare legacy token — field path or bare entity/relation/timeline index, e.g. `entities[9].claims[0]` or `entities[0]` — and a backticked or bare canonical `file.json#/…` pointer, in the parenthetical or in colon prose; the row is still read by its first token, so no cascading `missing_obligation` noise is produced. The scan is lexical and fail-closed in the over-detecting direction: prose that happens to name such a token also trips it, and no delivered corpus map does. Canonical-header cells with an embedded pointer in their note remain `unsupported_map` exit 2 (unchanged), and no legacy-grammar relaxation was introduced.
+
+#### Persisted self-test: 24 cases
+
+`corpus/tools/map-obligations-contract.json` now persists 24 expectations: the 22 r95 cases plus `schema_drift` (the isolated fixture drops the claim's map row and renames entity 0's `claims` container to `assertions` with content preserved → exit 1, exactly `FINDING schema_drift`) and `inventory_mismatch` (the intact fixture's map declares 5 JSON facts / 0 editorial rows / 5 total mapped rows while 4 rows exist → exit 1, exactly `FINDING inventory_mismatch`). The tool requires the contract to pin every core case and to pin no unimplemented case, then exercises exactly the pinned cases:
+
+```sh
+python3 corpus/tools/map_obligations.py --self-test   # SELF-TEST CASES 24/24 pinned / 24 SELF-TEST PASS lines / RESULT PASS, exit 0
+```
+
+#### Unchanged
+
+All prior behavior holds on the delivered corpus: r88/r93/r94/r95/r96 exit 0 (`OBLIGATIONS` 10/10, 12/12, 14/14, 15/15, 16/16), the frozen r93 replay exits 0, r87/r89 stay fail-closed exit 2 `unsupported_map`, the 0/1/2 exit contract and usage errors are unchanged, the `INVENTORY` receipt surface is unchanged, and the `support_check` receipts are unchanged.
+
+### Round-96 addendum: `map_obligations` hardening + new gate `dependency_freeze.py`
+
+`map_obligations` (round 96): three hardening closes, all demonstrated before/against the r95 tool (`git show dcb2d92:…`): (1) a declared-vs-observed inventory mismatch is now **gating** — the r95 deletion class (a claims key and its map row both removed) exits 1 with stable FINDING `inventory_mismatch` (previously exit 0 with the shortfall only in the non-gating INVENTORY receipt); bound: a *consistently regenerated* declaration still exits 0 — the gate compares declared vs observed, and a coherent regeneration is indistinguishable. (2) The persisted self-test carries 24 cases (added `schema_drift`, `inventory_mismatch`), both proven load-bearing by neutralization and expectation-flip perturbations. (3) The V37-D1 gap is closed: legacy-dialect cells naming a second pointer in parenthetical or colon-prose exit 1 with stable FINDING `dual_pointer` (r88's real single-pointer cells still PASS). Residuals (r97 debt): the two added pins are droppable under the subset-tolerant loader (23/24 still passes); `dual_pointer` has no persisted self-test case.
+
+`dependency_freeze.py` (round 96, new gate): frozen dependency-edge regression check closing BR-01's JSON-edge half. Verifies each pinned fixture's event→depends_on edge set, relation endpoints, and content digest against `corpus/tools/dependency-freeze-contract.json`. Entry: `python3 corpus/tools/dependency_freeze.py <fixture-dir>` (`0` clean / `1` `REDUCTION-DETECTED` / `ADDITION-DETECTED` / `ENDPOINT-CHANGE` / `2` could-not-evaluate); self-test: `python3 corpus/tools/dependency_freeze.py --self-test` (14/14, persisted in the contract). The chain `r88-m3-maya-cluster`, `r94-paired-crossing`, `r95-crossing-aftermath`, `r96-crossing-response` freezes 4/4 clean. The carried BR-01 mutation (dropping `evin-ninth-bell` from the r94 tick-10 `depends_on` — invisible to every prior gate) exits 1 `REDUCTION-DETECTED`. Hazards (r97 debt): `--freeze <dir>` rewrites the delivered contract and has no `corpus/fixtures/` scope guard — integration-time only; receipts are not path-bound (a same-named copy at a foreign path verifies identically); BR-01's markdown/prose half remains open; `DIGEST-MISMATCH` does not name the changed file.

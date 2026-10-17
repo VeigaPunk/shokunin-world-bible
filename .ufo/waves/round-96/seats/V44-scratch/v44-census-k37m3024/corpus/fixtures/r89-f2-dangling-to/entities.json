@@ -1,0 +1,76 @@
+[
+  {
+    "id": "r89-f2-holder-a",
+    "kind": "character",
+    "name": "Fixture Holder A",
+    "first_appearance": "r89-f2-source",
+    "claims": [
+      {
+        "statement": "Fixture holder A",
+        "source_id": "r89-f2-source"
+      }
+    ]
+  },
+  {
+    "id": "r89-f2-holder-b",
+    "kind": "character",
+    "name": "Fixture Holder B",
+    "first_appearance": "r89-f2-source",
+    "claims": [
+      {
+        "statement": "Fixture holder B",
+        "source_id": "r89-f2-source"
+      }
+    ]
+  },
+  {
+    "id": "r89-f2-holder-c",
+    "kind": "character",
+    "name": "Fixture Holder C",
+    "first_appearance": "r89-f2-source",
+    "claims": [
+      {
+        "statement": "Fixture holder C",
+        "source_id": "r89-f2-source"
+      }
+    ]
+  },
+  {
+    "id": "r89-f2-item",
+    "kind": "item",
+    "name": "Fixture Item",
+    "first_appearance": "r89-f2-source",
+    "claims": [
+      {
+        "statement": "Fixture item",
+        "source_id": "r89-f2-source"
+      }
+    ],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "r89-f2-holder-a",
+        "source_id": "r89-f2-source"
+      },
+      {
+        "tick": 1,
+        "from_holder": "r89-f2-holder-a",
+        "to_holder": "r89-f2-missing-to",
+        "source_id": "r89-f2-source"
+      },
+      {
+        "tick": 2,
+        "from_holder": "r89-f2-holder-b",
+        "to_holder": "r89-f2-holder-c",
+        "source_id": "r89-f2-source"
+      },
+      {
+        "tick": 3,
+        "from_holder": "r89-f2-holder-c",
+        "to_holder": "r89-f2-holder-a",
+        "source_id": "r89-f2-source"
+      }
+    ]
+  }
+]

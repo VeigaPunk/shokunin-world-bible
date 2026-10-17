@@ -1,0 +1,14 @@
+[
+  {
+    "id": "crossing-account-place-reports",
+    "claim_a": {
+      "event_id": "aftermath-missing-evin",
+      "field": "place_id"
+    },
+    "claim_b": {
+      "event_id": "response-evin-salt-court",
+      "field": "place_id"
+    },
+    "why": "PROBE (V46 scratch, not delivered): two first-person reports place different actors at different places on the same agreed-bell occasion."
+  }
+]

@@ -1,0 +1,17 @@
+  J01 entities.json#/0/first_appearance: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J02 entities.json#/1/first_appearance: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J03 entities.json#/2/first_appearance: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J04 entities.json#/3/first_appearance: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J05 entities.json#/4/first_appearance: exists, source_id='crossing-minute' row='crossing-minute' match=True ns=r96-crossing-response:crossing-minute ns-ok=True
+  J06 entities.json#/0/claims/0: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J07 entities.json#/1/claims/0: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J08 entities.json#/2/claims/0: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J09 entities.json#/3/claims/0: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J10 entities.json#/4/claims/0: exists, source_id='crossing-minute' row='crossing-minute' match=True ns=r96-crossing-response:crossing-minute ns-ok=True
+  J11 relations.json#/0: exists, source_id='crossing-minute' row='crossing-minute' match=True ns=r96-crossing-response:crossing-minute ns-ok=True
+  J12 timeline.json#/0: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J13 timeline.json#/1: exists, source_id='paired-clock' row='paired-clock' match=True ns=r96-crossing-response:paired-clock ns-ok=True
+  J14 timeline.json#/2: exists, source_id='crossing-minute' row='crossing-minute' match=True ns=r96-crossing-response:crossing-minute ns-ok=True
+  J15 timeline.json#/3: exists, source_id='aru-aftermath-note' row='aru-aftermath-note' match=True ns=r96-crossing-response:aru-aftermath-note ns-ok=True
+  J16 timeline.json#/4: exists, source_id='evin-response-note' row='evin-response-note' match=True ns=r96-crossing-response:evin-response-note ns-ok=True
+POINTER CHECK: 16/16 rows resolve and bind; bad=[]

@@ -1,0 +1,15 @@
+== run3 17:51:37 check_bible r95 ==
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+== support_check r95 ==
+RECEIPT JSON-FACTS 15; EDITORIAL-ROWS 2; TOTAL-ROWS 17
+SOURCE-SUPPORT 15/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 17/17
+RESULT PASS
+EXIT=0
+== boundary self-test ==
+SELF-TEST PASS receipt_drift exit=1 findings=['receipt_drift']
+SELF-TEST PASS
+EXIT=0
+== discriminate ==
+RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+EXIT=0

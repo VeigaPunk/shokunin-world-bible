@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r62-partial
+exit_code=1
+VIOLATION: contradictions[0].claim_b.event_id: expected exactly one timeline event 'sella-bell7-presence'
+1 violation(s); no canon changed

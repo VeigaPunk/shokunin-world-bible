@@ -1,0 +1,14 @@
+[
+  {
+    "from": "mira",
+    "to": "seal",
+    "type": "carries",
+    "source_id": "courier-log"
+  },
+  {
+    "from": "sella",
+    "to": "mira",
+    "type": "records_departure",
+    "source_id": "registrar-copy"
+  }
+]

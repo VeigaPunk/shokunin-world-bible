@@ -1,0 +1,9 @@
+ M LOG.md
+ M corpus/tools/README.md
+ M corpus/tools/map-obligations-contract.json
+ M corpus/tools/map_obligations.py
+?? .ufo/waves/round-96/
+?? corpus/fixtures/r96-crossing-response/
+?? corpus/knowledge/r96-response-scope-note.md
+?? corpus/tools/dependency-freeze-contract.json
+?? corpus/tools/dependency_freeze.py

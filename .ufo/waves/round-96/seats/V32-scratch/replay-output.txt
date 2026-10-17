@@ -1,0 +1,70 @@
+=== date ===
+17:44:00
+=== sha256 of tools (revisions sampled) ===
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+d1c239ccb21404490bfe120a8c8de45af89265437d5be53fb712ff27e4212108  corpus/tools/map_obligations.py
+55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c  corpus/tools/support_check.py
+=== spot replay 1: check_bible r96 ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit=0
+=== spot replay 2: map_obligations r96 ===
+OBLIGATIONS raw=16 mapped=16
+INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18
+RESULT PASS
+exit=0
+=== companions: support_check r96 ===
+INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18; DISTINCT-ANCHORS 14/14
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 16; EDITORIAL-ROWS 2; TOTAL-ROWS 18
+SOURCE-SUPPORT 16/16; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 18/18; VALIDATED-ROWS 18/18
+RESULT PASS
+exit=0
+=== r95 still CLEAN (untouched?) ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit=0
+OBLIGATIONS raw=15 mapped=15
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17
+RESULT PASS
+exit=0
+=== counts r96 ===
+counts: entities 5 relations 1 events 5 sources 5 contradictions 0
+timeline ids ['aru-ninth-bell', 'evin-ninth-bell', 'paired-crossing-decision', 'aftermath-missing-evin', 'response-evin-salt-court']
+source ids ['veil-verse', 'paired-clock', 'crossing-minute', 'aru-aftermath-note', 'evin-response-note']
+=== preservation vs r95 ===
+IDENTICAL: entities.json
+IDENTICAL: relations.json
+IDENTICAL: contradictions.json
+IDENTICAL: inspiration-note.md
+IDENTICAL: source-excerpt.md
+timeline r95 prefix == r96 prefix: True
+sources  r95 prefix == r96 prefix: True
+new event: {"id": "response-evin-salt-court", "tick": 12, "entity_id": "evin", "place_id": "salt-court", "depends_on": ["aftermath-missing-evin"], "description": "Evin reports being at Salt Court through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved.", "source_id": "evin-response-note"}
+new source: {"id": "evin-response-note", "title": "Evin's Salt Court Response Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; Evin reports being at Salt Court through the same agreed bell. It asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved. It records one crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an external historical fact."}
+=== excerpt prefix ===
+r95 bytes 1845 r96 bytes 2588 prefix identical: True
+=== r95 dir git-clean vs baseline? ===
+(empty above = untouched)
+=== corpus-wide git status ===
+ M LOG.md
+?? .ufo/waves/round-96/
+?? corpus/fixtures/r96-crossing-response/
+?? corpus/tools/dependency-freeze-contract.json
+?? corpus/tools/dependency_freeze.py

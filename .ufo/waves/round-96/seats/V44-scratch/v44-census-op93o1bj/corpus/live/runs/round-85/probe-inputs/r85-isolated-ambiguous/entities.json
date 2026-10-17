@@ -1,0 +1,94 @@
+[
+  {
+    "id": "mira",
+    "kind": "character",
+    "name": "Mira",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Mira carried the blue seal.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "harbor",
+    "kind": "place",
+    "name": "Lantern Harbor",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "Lantern Harbor has a registry.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "tower",
+    "kind": "place",
+    "name": "North Tower",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "North Tower has a watch bell.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "seal",
+    "kind": "item",
+    "name": "Blue Seal",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "The seal accompanied Mira.",
+        "source_id": "courier-log"
+      }
+    ],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "mira",
+        "source_id": "courier-log"
+      },
+      {
+        "tick": 3,
+        "from_holder": "mira",
+        "to_holder": "harbor",
+        "source_id": "archive-ledger"
+      },
+      {
+        "tick": 4,
+        "from_holder": "harbor",
+        "to_holder": "vault",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "vault",
+    "kind": "place",
+    "name": "Old Vault",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "The vault held registries.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "vault",
+    "kind": "place",
+    "name": "Old Vault",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "The vault held registries.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  }
+]

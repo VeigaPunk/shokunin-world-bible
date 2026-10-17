@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r17-wrong-last
+exit_code=1
+VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'
+VIOLATION: timeline[2].place_id: not a place 'mira'
+2 violation(s); no canon changed

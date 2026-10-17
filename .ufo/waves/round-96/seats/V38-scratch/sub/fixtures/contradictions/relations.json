@@ -1,0 +1,14 @@
+[
+  {
+    "from": "mira",
+    "to": "seal",
+    "type": "carries",
+    "source_id": "courier-log"
+  },
+  {
+    "from": "mira",
+    "to": "missing-map",
+    "type": "consults",
+    "source_id": "courier-log"
+  }
+]

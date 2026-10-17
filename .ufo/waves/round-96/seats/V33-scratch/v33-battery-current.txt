@@ -1,0 +1,134 @@
+REVISION STAMP 2026-10-17T17:45:11-03:00
+a3b57978f0cbf314389ee3f9862920a46cf109fca6d1eec488c39be0457f0980  corpus/tools/dependency_freeze.py
+7d568cc422cda42297b7506a1a3e083e8798866efd16d58617bf4ea468576975  corpus/tools/dependency-freeze-contract.json
+
+### chain clean r88
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST 15ef230ef806ea7e7431f5afc7d999aee978b024cf47f2a20cbba726fc3fc279
+RESULT PASS
+exit=0
+
+### chain clean r94
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+exit=0
+
+### chain clean r95
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+exit=0
+
+### chain clean r96
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+RESULT PASS
+exit=0
+
+### BR-01 reduce r94 tick-10
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/reduce/r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 1/2; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+exit=1
+
+### add edge r95
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/add/r95-crossing-aftermath
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 4/3; relations 1/1
+FINDING ADDITION-DETECTED: event aftermath-missing-evin gained depends_on ['aru-ninth-bell']
+RESULT FAIL
+exit=1
+
+### endpoint swap to existing entity
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/endpoint-valid/r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+FINDING ENDPOINT-CHANGE: relation endpoints changed: removed [aru, evin, agreed_co_stewardship_for_this_crossing]; added [aru, quiet-rise, agreed_co_stewardship_for_this_crossing]
+RESULT FAIL
+exit=1
+
+### endpoint dangling
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/endpoint-dangling/r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+FINDING ENDPOINT-CHANGE: relation endpoints changed: removed [aru, evin, agreed_co_stewardship_for_this_crossing]; added [aru, unknown-endpoint-x, agreed_co_stewardship_for_this_crossing]
+RESULT FAIL
+exit=1
+
+### byte tamper (non-inventory)
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/tamper/r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 4745a2d857fae916e7cf726d4fe3fb820dbb8dfc9fe4ed260f3fd18aeab3b017 != pin 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75; fixture bytes changed outside the frozen inventory
+RESULT ERROR
+exit=2
+
+### r96 deepest edge drop
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/r96reduce/r96-crossing-response
+FREEZE r96-crossing-response: events 5/5; dependency-edges 3/4; relations 1/1
+FINDING REDUCTION-DETECTED: event response-evin-salt-court lost depends_on ['aftermath-missing-evin']
+RESULT FAIL
+exit=1
+
+### r96 mid edge drop
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/r96drop-second/r96-crossing-response
+FREEZE r96-crossing-response: events 5/5; dependency-edges 3/4; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['aru-ninth-bell']
+RESULT FAIL
+exit=1
+
+### format-only re-serialization
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/format/r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 12533009fe96d93ed0949d723cb05b86c3cf72a8945583a7c5e0f8feea234b30 != pin 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75; fixture bytes changed outside the frozen inventory
+RESULT ERROR
+exit=2
+
+### empty timeline
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/empty/r94-paired-crossing
+FREEZE r94-paired-crossing: events 0/3; dependency-edges 0/2; relations 1/1
+FINDING REDUCTION-DETECTED: event aru-ninth-bell is missing; 0 frozen dependency edge(s) gone
+FINDING REDUCTION-DETECTED: event evin-ninth-bell is missing; 0 frozen dependency edge(s) gone
+FINDING REDUCTION-DETECTED: event paired-crossing-decision is missing; 2 frozen dependency edge(s) gone
+RESULT FAIL
+exit=1
+
+### missing relations.json
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/norel/r94-paired-crossing
+FINDING FILE-MISSING: relations.json is missing from .ufo/waves/round-96/seats/V33-scratch/replay/norel/r94-paired-crossing
+RESULT ERROR
+exit=2
+
+### unpinned new event, no deps
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V33-scratch/replay/newevent/r94-paired-crossing
+FREEZE r94-paired-crossing: events 4/3; dependency-edges 2/2; relations 1/1
+FINDING DIGEST-MISMATCH: content digest c142933c27b605904c67f2b9eadac83b19d7753ea37ad2f62428301aa606a7c4 != pin 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75; fixture bytes changed outside the frozen inventory
+RESULT ERROR
+exit=2
+
+### non-chain fixture (bound)
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r93-m2-kojiki-cluster
+FINDING UNPINNED-FIXTURE: no pin for 'r93-m2-kojiki-cluster' in corpus/tools/dependency-freeze-contract.json (pinned: ['c3red', 'r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response'])
+RESULT ERROR
+exit=2
+
+### nonexistent fixture
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/nonexistent-xyz
+FINDING UNPINNED-FIXTURE: no pin for 'nonexistent-xyz' in corpus/tools/dependency-freeze-contract.json (pinned: ['c3red', 'r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response'])
+RESULT ERROR
+exit=2
+
+### both fixture and --freeze (invalid args)
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing --freeze corpus/fixtures/r94-paired-crossing
+FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both
+RESULT ERROR
+exit=2
+
+### no arguments
+$ python3 corpus/tools/dependency_freeze.py 
+FINDING INVALID-ARGUMENTS: expected a fixture directory, --freeze DIR, or --self-test
+RESULT ERROR
+exit=2
+

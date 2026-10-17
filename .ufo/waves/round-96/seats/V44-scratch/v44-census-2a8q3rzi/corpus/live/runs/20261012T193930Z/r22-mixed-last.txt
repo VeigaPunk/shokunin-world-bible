@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r22-mixed-last
+exit_code=1
+VIOLATION: timeline[1].depends_on: expected event-id strings
+VIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1
+2 violation(s); no canon changed

@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r27-target-only
+exit_code=1
+VIOLATION: entities[4].id: duplicate entities id 'seal'
+VIOLATION: relations[0].to: ambiguous entity 'seal'
+2 violation(s); no canon changed

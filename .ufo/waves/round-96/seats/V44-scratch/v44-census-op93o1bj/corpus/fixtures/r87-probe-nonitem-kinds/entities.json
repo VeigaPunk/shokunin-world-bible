@@ -1,0 +1,102 @@
+[
+ {
+  "id": "relic-x",
+  "kind": "relic",
+  "name": "Odd Relic",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Odd Relic record",
+    "source_id": "courier-log"
+   }
+  ],
+  "provenance": [
+   {
+    "tick": 0,
+    "from_holder": null,
+    "to_holder": "mira",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "vault",
+  "kind": "character",
+  "name": "Vault A",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Vault A record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "vault",
+  "kind": "character",
+  "name": "Vault B",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Vault B record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "mira",
+  "kind": "character",
+  "name": "Mira",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Mira record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "harbor",
+  "kind": "character",
+  "name": "Harbor",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Harbor record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "chalice",
+  "kind": "character",
+  "name": "Chalice",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Chalice record",
+    "source_id": "courier-log"
+   }
+  ],
+  "provenance": [
+   {
+    "tick": 0,
+    "from_holder": null,
+    "to_holder": "mira",
+    "source_id": "courier-log"
+   },
+   {
+    "tick": 1,
+    "from_holder": "vault",
+    "to_holder": "harbor",
+    "source_id": "courier-log"
+   },
+   {
+    "tick": 2,
+    "from_holder": "harbor",
+    "to_holder": "mira",
+    "source_id": "courier-log"
+   }
+  ]
+ }
+]

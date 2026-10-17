@@ -1,0 +1,8 @@
+[
+  {
+    "from": "alpha",
+    "to": "beta",
+    "type": "linked",
+    "source_id": "reg-source"
+  }
+]

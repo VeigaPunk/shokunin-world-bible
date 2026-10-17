@@ -1,0 +1,55 @@
+PARSED corpus/fixtures/r96-crossing-response/claim-excerpt-map.md
+  JSON-fact rows: 16 (J01, J02, J03, J04, J05, J06, J07, J08, J09, J10, J11, J12, J13, J14, J15, J16)
+  editorial rows: 2 (S01, S02)
+  declared inventory: (16, 2, 18, 14)
+  OK   J01 span 12-12 anchor found at line(s) [12]
+  OK   J02 span 13-13 anchor found at line(s) [13]
+  OK   J03 span 12-12 anchor found at line(s) [12]
+  OK   J04 span 13-13 anchor found at line(s) [13]
+  OK   J05 span 17-17 anchor found at line(s) [17]
+  OK   J06 span 12-12 anchor found at line(s) [12]
+  OK   J07 span 13-13 anchor found at line(s) [13]
+  OK   J08 span 12-12 anchor found at line(s) [12]
+  OK   J09 span 13-13 anchor found at line(s) [13]
+  OK   J10 span 18-18 anchor found at line(s) [18]
+  OK   J11 span 19-19 anchor found at line(s) [19]
+  OK   J12 span 12-12 anchor found at line(s) [12]
+  OK   J13 span 13-13 anchor found at line(s) [13]
+  OK   J14 span 18-20 anchor found at line(s) [20]
+  OK   J15 span 22-31 anchor found at line(s) [26]
+  OK   J16 span 33-42 anchor found at line(s) [37]
+ANCHOR CHECK: 16/16 in-span; misses=[]; outside-span=[]
+  EDITORIAL S01 span 5-5 anchor found at line(s) [5] in-span=[5] OK
+  EDITORIAL S02 span 5-5 anchor found at line(s) [5] in-span=[5] OK
+
+== inherited rows vs r95 map ==
+  J01 span (12, 12)==(12, 12) anchor-identical=True lines r95=[12] r96=[12] PRESERVED
+  J02 span (13, 13)==(13, 13) anchor-identical=True lines r95=[13] r96=[13] PRESERVED
+  J03 span (12, 12)==(12, 12) anchor-identical=True lines r95=[12] r96=[12] PRESERVED
+  J04 span (13, 13)==(13, 13) anchor-identical=True lines r95=[13] r96=[13] PRESERVED
+  J05 span (17, 17)==(17, 17) anchor-identical=True lines r95=[17] r96=[17] PRESERVED
+  J06 span (12, 12)==(12, 12) anchor-identical=True lines r95=[12] r96=[12] PRESERVED
+  J07 span (13, 13)==(13, 13) anchor-identical=True lines r95=[13] r96=[13] PRESERVED
+  J08 span (12, 12)==(12, 12) anchor-identical=True lines r95=[12] r96=[12] PRESERVED
+  J09 span (13, 13)==(13, 13) anchor-identical=True lines r95=[13] r96=[13] PRESERVED
+  J10 span (18, 18)==(18, 18) anchor-identical=True lines r95=[18] r96=[18] PRESERVED
+  J11 span (19, 19)==(19, 19) anchor-identical=True lines r95=[19] r96=[19] PRESERVED
+  J12 span (12, 12)==(12, 12) anchor-identical=True lines r95=[12] r96=[12] PRESERVED
+  J13 span (13, 13)==(13, 13) anchor-identical=True lines r95=[13] r96=[13] PRESERVED
+  J14 span (18, 20)==(18, 20) anchor-identical=True lines r95=[20] r96=[20] PRESERVED
+  J15 span (22, 31)==(22, 31) anchor-identical=True lines r95=[26] r96=[26] PRESERVED
+INHERITED: 15 rows; cell mismatches=[]; changed physical lines=[]
+
+== new rows vs r95 map ==
+new row ids: ['J16']
+  J16: excerpt=fictional-excerpts.md span=(33, 42) hits=[37] pre-appended(<= 32)=[] appended=[37]
+
+== byte-prefix ==
+fictional-excerpts.md r95=1845B r96=2588B prefix-ok=True
+source-excerpt.md identical=True (640B)
+
+== inventory ==
+declared=(16, 2, 18, 14) parsed=(16, 2, 18, 14) match=True
+COUNT CHECK: 16 JSON rows == expected 16
+
+V45 VERDICT: PASS

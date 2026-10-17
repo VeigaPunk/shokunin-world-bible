@@ -1,0 +1,4 @@
+OBLIGATIONS raw=10 mapped=10
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+FINDING dual_pointer: row E4 (line 30) names a second pointer token 'entities[2].claims[0]' alongside entities.json#/3/claims/0
+RESULT FAIL

@@ -1,0 +1,38 @@
+try 1 17:40:31 not-ready: q1=n q3=n q4=n q6=n reports=0
+try 2 17:40:51 not-ready: q1=n q3=n q4=n q6=n reports=0
+try 3 17:41:11 not-ready: q1=n q3=n q4=n q6=n reports=0
+try 4 17:41:31 not-ready: q1=n q3=n q4=n q6=n reports=0
+try 5 17:41:51 not-ready: q1=n q3=n q4=n q6=n reports=0
+try 6 17:42:11 not-ready: q1=n q3=n q4=n q6=n reports=1
+try 7 17:42:31 not-ready: q1=n q3=y q4=n q6=n reports=1
+try 8 17:42:51 not-ready: q1=n q3=y q4=n q6=n reports=1
+try 9 17:43:11 not-ready: q1=n q3=y q4=y q6=n reports=1
+try 10 17:43:31 not-ready: q1=n q3=y q4=y q6=n reports=1
+try 11 17:43:51 not-ready: q1=n q3=y q4=y q6=n reports=1
+try 12 17:44:11 not-ready: q1=y q3=y q4=y q6=y reports=1
+try 13 17:44:31 not-ready: q1=y q3=y q4=y q6=y reports=1
+try 14 17:44:51 not-ready: q1=y q3=y q4=y q6=y reports=1
+try 15 17:45:11 not-ready: q1=y q3=y q4=y q6=y reports=1
+try 16 17:45:31 not-ready: q1=y q3=y q4=y q6=y reports=1
+try 17 17:45:51 not-ready: q1=y q3=y q4=y q6=y reports=3
+try 18 17:46:11 not-ready: q1=y q3=y q4=y q6=y reports=3
+try 19 17:46:31 not-ready: q1=y q3=y q4=y q6=y reports=3
+try 20 17:46:51 not-ready: q1=y q3=y q4=y q6=y reports=3
+try 21 17:47:11 not-ready: q1=y q3=y q4=y q6=y reports=3
+try 22 17:47:31 not-ready: q1=y q3=y q4=y q6=y reports=4
+try 23 17:47:51 not-ready: q1=y q3=y q4=y q6=y reports=4
+try 24 17:48:11 not-ready: q1=y q3=y q4=y q6=y reports=4
+try 25 17:48:31 not-ready: q1=y q3=y q4=y q6=y reports=4
+try 26 17:48:51 not-ready: q1=y q3=y q4=y q6=y reports=4
+try 27 17:49:11 not-ready: q1=y q3=y q4=y q6=y reports=4
+try 28 17:49:31 not-ready: q1=y q3=y q4=y q6=y reports=4
+try 29 17:49:51 not-ready: q1=y q3=y q4=y q6=y reports=5
+try 30 17:50:11 not-ready: q1=y q3=y q4=y q6=y reports=5
+try 31 17:50:31 not-ready: q1=y q3=y q4=y q6=y reports=5
+try 32 17:50:51 not-ready: q1=y q3=y q4=y q6=y reports=5
+READY at try 33 17:51:11
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-tool-hardening.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q3-dependency-freeze.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q4-fixture-json.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q5-fixture-docs.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q6-knowledge-note.md

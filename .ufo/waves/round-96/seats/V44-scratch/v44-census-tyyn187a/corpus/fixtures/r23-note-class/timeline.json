@@ -1,0 +1,33 @@
+[
+  {
+    "id": "departure",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "arrival",
+    "tick": 2,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [
+      "departure"
+    ],
+    "description": "Mira reaches the tower.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "strip-absence-note",
+    "tick": 3,
+    "entity_id": "sella",
+    "place_id": "harbor",
+    "depends_on": [
+      "departure"
+    ],
+    "description": "Sella reports that, later at Lantern Harbor, she looked for Mira\u2019s outbound route strip on the registry hook rack and did not find it there. Fixture input only: no cause, no proof the strip was absent as fact, and no claim about Mira\u2019s Blue Seal.",
+    "source_id": "sella-absence-note"
+  }
+]

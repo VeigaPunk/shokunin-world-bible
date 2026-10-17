@@ -271,3 +271,19 @@ Discriminator pair from the repository root: `python3 corpus/tools/discriminate_
 | 2026-10-17 (r95) | `ff9fd2aa…d1421` | **DISCRIMINATION HELD** — re-check 4 (r95 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r96. |
 
 Gate 3 remains **not met**; the four-gate falsification trigger remains unsatisfied; nothing in r95 changes the sequence-scope evidence state.
+
+## 2026-10-17 — r96 re-check (fifth)
+
+Fifth periodic re-check, executed at the r96 closure (2026-10-17). Checker byte pin verified fresh:
+
+```text
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+```
+
+Discriminator pair from the repository root: `python3 corpus/tools/discriminate_check.py` → `RESULT: DISCRIMINATION HELD` (exit 0); `python3 corpus/tools/discriminate_check.py --checker e97613c` → `REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved` (exit 2, expected control).
+
+| Date | Checker SHA-256 | Discrimination re-check |
+|---|---|---|
+| 2026-10-17 (r96) | `ff9fd2aa…d1421` | **DISCRIMINATION HELD** — re-check 5 (r96 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r97. |
+
+Gate 3 remains **not met**; the four-gate falsification trigger remains unsatisfied; nothing in r96 changes the sequence-scope evidence state.

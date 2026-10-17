@@ -1,0 +1,1 @@
+dirs=170 clean=36 negative=134 violation_prefix_lines=421

@@ -1,0 +1,135 @@
+{
+  "r88-m3-maya-cluster": {
+    "digests": {
+      "relations_bytes": 3,
+      "relations_canonical_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "relations_raw_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "timeline_bytes": 455,
+      "timeline_canonical_sha256": "9857489110adbdc159aaa5eb7493e831efb28aa90dd2484e838061f36c5735c1",
+      "timeline_raw_sha256": "f74c664b17fd8d575235ab59432a0ce6f938380e9b5a8d07640aae1d38773493"
+    },
+    "dir": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r88-m3-maya-cluster",
+    "edge_count": 0,
+    "edges": {
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": []
+    },
+    "event_ids": [
+      "aru-ninth-bell",
+      "evin-ninth-bell"
+    ],
+    "fixture": "r88-m3-maya-cluster",
+    "relations": []
+  },
+  "r94-paired-crossing": {
+    "digests": {
+      "relations_bytes": 139,
+      "relations_canonical_sha256": "1f2dc8fcbfea8b424ce07e09852955dd4ede7983f2681529d130ca103dee6bb4",
+      "relations_raw_sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "timeline_bytes": 826,
+      "timeline_canonical_sha256": "7d9175181923af9043624f0f6dda6476d12c1fad372aa46bc3efbdea72f4516a",
+      "timeline_raw_sha256": "f0209f90a6ce795211369bd900ac1d333d16eb0af123f1b170831e192660533c"
+    },
+    "dir": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r94-paired-crossing",
+    "edge_count": 2,
+    "edges": {
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": [],
+      "paired-crossing-decision": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ]
+    },
+    "event_ids": [
+      "aru-ninth-bell",
+      "evin-ninth-bell",
+      "paired-crossing-decision"
+    ],
+    "fixture": "r94-paired-crossing",
+    "relations": [
+      {
+        "from": "aru",
+        "to": "evin",
+        "type": "agreed_co_stewardship_for_this_crossing"
+      }
+    ]
+  },
+  "r95-crossing-aftermath": {
+    "digests": {
+      "relations_bytes": 139,
+      "relations_canonical_sha256": "1f2dc8fcbfea8b424ce07e09852955dd4ede7983f2681529d130ca103dee6bb4",
+      "relations_raw_sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "timeline_bytes": 1254,
+      "timeline_canonical_sha256": "96c6a4a4fe8a5c7cd3b0ae14fdd65665f5ac2c47e7a0e95a991dad0348c2a7e9",
+      "timeline_raw_sha256": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177"
+    },
+    "dir": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath",
+    "edge_count": 3,
+    "edges": {
+      "aftermath-missing-evin": [
+        "paired-crossing-decision"
+      ],
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": [],
+      "paired-crossing-decision": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ]
+    },
+    "event_ids": [
+      "aftermath-missing-evin",
+      "aru-ninth-bell",
+      "evin-ninth-bell",
+      "paired-crossing-decision"
+    ],
+    "fixture": "r95-crossing-aftermath",
+    "relations": [
+      {
+        "from": "aru",
+        "to": "evin",
+        "type": "agreed_co_stewardship_for_this_crossing"
+      }
+    ]
+  },
+  "r96-crossing-response": {
+    "digests": {
+      "relations_bytes": 139,
+      "relations_canonical_sha256": "1f2dc8fcbfea8b424ce07e09852955dd4ede7983f2681529d130ca103dee6bb4",
+      "relations_raw_sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "timeline_bytes": 1678,
+      "timeline_canonical_sha256": "dbc78fa4e41f3ee85d0fa499dc4ffc6c95f8fa0188f1b94c8433090efedb3d00",
+      "timeline_raw_sha256": "50e3d2b6433a7f96a182f510081c945ffc729603b3118203fb60e5827188cd37"
+    },
+    "dir": "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r96-crossing-response",
+    "edge_count": 4,
+    "edges": {
+      "aftermath-missing-evin": [
+        "paired-crossing-decision"
+      ],
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": [],
+      "paired-crossing-decision": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ],
+      "response-evin-salt-court": [
+        "aftermath-missing-evin"
+      ]
+    },
+    "event_ids": [
+      "aftermath-missing-evin",
+      "aru-ninth-bell",
+      "evin-ninth-bell",
+      "paired-crossing-decision",
+      "response-evin-salt-court"
+    ],
+    "fixture": "r96-crossing-response",
+    "relations": [
+      {
+        "from": "aru",
+        "to": "evin",
+        "type": "agreed_co_stewardship_for_this_crossing"
+      }
+    ]
+  }
+}

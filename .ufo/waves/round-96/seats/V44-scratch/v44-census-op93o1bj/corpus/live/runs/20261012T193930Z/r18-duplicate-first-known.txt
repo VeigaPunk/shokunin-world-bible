@@ -1,0 +1,6 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r18-duplicate-first-known
+exit_code=1
+VIOLATION: entities[4].id: duplicate entities id 'harbor'
+VIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'
+VIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[1] ('tower') and 'quay'
+3 violation(s); no canon changed

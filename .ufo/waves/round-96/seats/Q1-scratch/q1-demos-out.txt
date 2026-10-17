@@ -1,0 +1,114 @@
+### A deletion class (claims key + map row removed, r95 copy)
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/deletion-class
+    OBLIGATIONS raw=14 mapped=14
+    INVENTORY JSON-FACTS 14/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/17 MISMATCH
+    FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 15/2/17; observed 14/2/16
+    RESULT FAIL
+    exit=1 (expected exit 1 inventory_mismatch)
+
+### B dual_pointer legacy parenthetical, canonical second token
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/dual-pointer-paren-canonical
+    OBLIGATIONS raw=10 mapped=10
+    INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+    FINDING dual_pointer: row P1 (line 23) names a second pointer token 'relations.json#' alongside entities.json#/0/first_appearance
+    RESULT FAIL
+    exit=1 (expected exit 1 dual_pointer)
+
+### C dual_pointer legacy parenthetical, legacy second token
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/dual-pointer-paren-legacy
+    OBLIGATIONS raw=10 mapped=10
+    INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+    FINDING dual_pointer: row P2 (line 24) names a second pointer token 'entities[9].claims[0]' alongside entities.json#/1/first_appearance
+    RESULT FAIL
+    exit=1 (expected exit 1 dual_pointer)
+
+### D dual_pointer legacy colon-prose
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/dual-pointer-colon-prose
+    OBLIGATIONS raw=10 mapped=10
+    INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+    FINDING dual_pointer: row T2 (line 32) names a second pointer token 'entities[9].claims[0]' alongside timeline.json#/1
+    RESULT FAIL
+    exit=1 (expected exit 1 dual_pointer)
+
+### E control legacy tail prose (grammar unchanged)
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/legacy-tail-prose-control
+    FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer
+    RESULT ERROR
+    exit=2 (expected exit 2 unsupported_map)
+
+### F schema_drift (claims renamed, row removed)
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/schema-drift-row-removed
+    OBLIGATIONS raw=14 mapped=14
+    INVENTORY JSON-FACTS 14/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/17 MISMATCH
+    FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 15/2/17; observed 14/2/16
+    FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
+    RESULT FAIL
+    exit=1 (expected exit 1 schema_drift + inventory_mismatch)
+
+### G schema_drift (claims renamed, row kept)
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/schema-drift-row-kept
+    OBLIGATIONS raw=14 mapped=15
+    INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17
+    FINDING phantom_obligation: entities.json#/0/claims/0 is not a raw source-attributed obligation
+    FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
+    RESULT FAIL
+    exit=1 (expected exit 1 phantom_obligation + schema_drift)
+
+### H malformed declaration (fail-closed)
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/declaration-malformed
+    OBLIGATIONS raw=12 mapped=12
+    INVENTORY declaration-malformed
+    FINDING inventory_mismatch: map declares an **Expected inventory:** line whose counts cannot be parsed
+    RESULT FAIL
+    exit=1 (expected exit 1 inventory_mismatch)
+
+### I declaration undercount
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/declaration-undercount
+    OBLIGATIONS raw=12 mapped=12
+    INVENTORY JSON-FACTS 12/11; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/14 MISMATCH
+    FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 11/3/14; observed 12/3/15
+    RESULT FAIL
+    exit=1 (expected exit 1 inventory_mismatch)
+
+### J control no declaration line
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q1-scratch/work/no-declaration-control
+    OBLIGATIONS raw=10 mapped=10
+    RESULT PASS
+    exit=0 (expected exit 0 PASS)
+
+### K1 usage: no arguments
+$ python3 corpus/tools/map_obligations.py 
+    FINDING invalid_arguments: cluster directory is required
+    RESULT ERROR
+    exit=2 (expected exit 2 invalid_arguments)
+
+### K2 usage: --self-test with a cluster
+$ python3 corpus/tools/map_obligations.py --self-test /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r93-m2-kojiki-cluster
+    FINDING invalid_arguments: --self-test cannot be combined with cluster, --map, or --frozen
+    RESULT ERROR
+    exit=2 (expected exit 2 invalid_arguments)
+
+### K3 usage: --frozen with a cluster
+$ python3 corpus/tools/map_obligations.py --frozen /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/frozen/map-obligations-r93 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r93-m2-kojiki-cluster
+    FINDING invalid_arguments: --frozen cannot be combined with cluster or --map
+    RESULT ERROR
+    exit=2 (expected exit 2 invalid_arguments)
+
+### K4 usage: --frozen with --map
+$ python3 corpus/tools/map_obligations.py --frozen /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/frozen/map-obligations-r93 --map claim-excerpt-map.md
+    FINDING invalid_arguments: --frozen cannot be combined with cluster or --map
+    RESULT ERROR
+    exit=2 (expected exit 2 invalid_arguments)
+
+### K5 usage: --map outside the cluster
+$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r93-m2-kojiki-cluster --map /etc/hosts
+    FINDING foreign_path: map path is outside the cluster
+    RESULT ERROR
+    exit=2 (expected exit 2 foreign_path)
+
+### K6 usage: unknown flag
+$ python3 corpus/tools/map_obligations.py --bogus
+    FINDING invalid_arguments: unrecognized arguments: --bogus
+    RESULT ERROR
+    exit=2 (expected exit 2 invalid_arguments)
+

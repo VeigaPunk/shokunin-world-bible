@@ -1,0 +1,64 @@
+[
+  {
+    "id": "f1-mixed-dup",
+    "kind": "character",
+    "name": "Mixed Duplicate A",
+    "first_appearance": "f1-mixed-source",
+    "claims": [{"statement": "Fixture duplicate A", "source_id": "f1-mixed-source"}]
+  },
+  {
+    "id": "f1-mixed-dup",
+    "kind": "character",
+    "name": "Mixed Duplicate B",
+    "first_appearance": "f1-mixed-source",
+    "claims": [{"statement": "Fixture duplicate B", "source_id": "f1-mixed-source"}]
+  },
+  {
+    "id": "f1-mixed-mira",
+    "kind": "character",
+    "name": "Mixed Mira",
+    "first_appearance": "f1-mixed-source",
+    "claims": [{"statement": "Fixture Mira", "source_id": "f1-mixed-source"}]
+  },
+  {
+    "id": "f1-mixed-harbor",
+    "kind": "character",
+    "name": "Mixed Harbor",
+    "first_appearance": "f1-mixed-source",
+    "claims": [{"statement": "Fixture Harbor", "source_id": "f1-mixed-source"}]
+  },
+  {
+    "id": "f1-mixed-tower",
+    "kind": "character",
+    "name": "Mixed Tower",
+    "first_appearance": "f1-mixed-source",
+    "claims": [{"statement": "Fixture Tower", "source_id": "f1-mixed-source"}]
+  },
+  {
+    "id": "f1-mixed-seal",
+    "kind": "item",
+    "name": "Mixed Seal",
+    "first_appearance": "f1-mixed-source",
+    "claims": [{"statement": "Fixture seal", "source_id": "f1-mixed-source"}],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "f1-mixed-mira",
+        "source_id": "f1-mixed-missing-source"
+      },
+      {
+        "tick": 3,
+        "from_holder": "f1-mixed-mira",
+        "to_holder": "f1-mixed-dup",
+        "source_id": "f1-mixed-source"
+      },
+      {
+        "tick": 2,
+        "from_holder": "f1-mixed-harbor",
+        "to_holder": "f1-mixed-tower",
+        "source_id": "f1-mixed-source"
+      }
+    ]
+  }
+]

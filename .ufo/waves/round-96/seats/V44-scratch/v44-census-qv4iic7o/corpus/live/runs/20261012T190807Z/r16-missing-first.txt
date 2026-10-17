@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r16-missing-first
+exit_code=1
+VIOLATION: timeline[0].place_id: dangling entity 'unlisted'
+1 violation(s); no canon changed

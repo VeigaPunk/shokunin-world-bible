@@ -1,0 +1,61 @@
+=== REVISION PINS ===
+2b0ba815326b1cb3f65f7eab1842b85abedb9823228a37adc6a9335edc4a3ba8  corpus/tools/map_obligations.py
+97b76bb8b1fea97f166ef7586eba69c427ec15bbe7b34eb5345ec65c936493b6  corpus/tools/map-obligations-contract.json
+965b29cd41a8af14293eb2e1948f58f310e58c6e752b8fe322c5445b20a91f24  corpus/tools/README.md
+=== C1(b): self-test ===
+EXIT=0
+PASS lines: 24  FAIL lines: 0
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+RESULT PASS
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+=== C1(b): contract case count ===
+n cases: 24
+['complete', 'missing', 'duplicate', 'phantom', 'source_id_mismatch', 'schema_drift', 'inventory_mismatch', 'malformed_json', 'co_mapped_grammar', 'legacy_grammar', 'invalid_pointer', 'empty_segment', 'noncanonical_index', 'noncanonical_claim_index', 'foreign_path', 'traversal_path', 'symlink_path', 'frozen_complete', 'frozen_tampered', 'frozen_missing_digests', 'frozen_expected_failure', 'frozen_verdict_mismatch', 'map_missing', 'invalid_arguments']
+exit_codes: {'0': 'PASS', '1': 'FAIL', '2': 'ERROR'}
+=== C1(a): deletion class (claims key + map row removed) ===
+rows removed: 1
+OBLIGATIONS raw=14 mapped=14
+INVENTORY JSON-FACTS 14/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/17 MISMATCH
+FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 15/2/17; observed 14/2/16
+RESULT FAIL
+EXIT=1
+=== C1(a) isolation: row removed, key intact ===
+rows removed: 1
+OBLIGATIONS raw=15 mapped=14
+INVENTORY JSON-FACTS 14/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/17 MISMATCH
+FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 15/2/17; observed 14/2/16
+FINDING missing_obligation: entities.json#/1/claims/0 has no map row
+RESULT FAIL
+EXIT=1
+=== C1(c): legacy dual-pointer cell ===
+mutated P2 cell
+OBLIGATIONS raw=10 mapped=10
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+FINDING dual_pointer: row P2 (line 24) names a second pointer token 'entities[1].claims[0]' alongside entities.json#/1/first_appearance
+RESULT FAIL
+EXIT=1
+=== C1(c) isolation: unmutated r88 ===
+OBLIGATIONS raw=10 mapped=10
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+RESULT PASS
+EXIT=0
+=== C1 non-regression: frozen r93 replay ===
+SNAPSHOT inputs=4 digests=verified
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+FROZEN expected=PASS/0 findings=none matched
+RESULT PASS
+EXIT=0
+=== C1 non-regression: r87/r89 fail-closed sweep ===
+r87 dirs=12 r89 dirs=11 all_exit2=yes
+=== C1 non-regression: full corpus sweep ===
+exit histogram:
+  exit 0: 5
+  exit 2: 165
+exit0 dirs: r88-m3-maya-cluster r93-m2-kojiki-cluster r94-paired-crossing r95-crossing-aftermath r96-crossing-response
+=== C1 non-regression: 0/1/2 CLI contract ===
+no-arg EXIT=2
+bad-flag EXIT=2
+r95 EXIT=0

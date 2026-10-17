@@ -1,0 +1,9 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-allied-empty
+exit_code=1
+VIOLATION: entities[0].first_appearance: unknown in-world source 'harbor-compact'
+VIOLATION: entities[0].claims[0].source_id: unknown in-world source 'harbor-compact'
+VIOLATION: entities[1].first_appearance: unknown in-world source 'harbor-compact'
+VIOLATION: entities[1].claims[0].source_id: unknown in-world source 'harbor-compact'
+VIOLATION: relations[0].source_id: unknown in-world source 'harbor-compact'
+VIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation
+6 violation(s); no canon changed

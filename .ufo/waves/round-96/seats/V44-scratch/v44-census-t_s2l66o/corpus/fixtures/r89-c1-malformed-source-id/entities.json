@@ -1,0 +1,58 @@
+[
+ {
+  "id": "mira",
+  "kind": "character",
+  "name": "Mira",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "keeper",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "harbor",
+  "kind": "character",
+  "name": "Harbor",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "holder",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "seal",
+  "kind": "item",
+  "name": "Seal",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "item",
+    "source_id": "courier-log"
+   }
+  ],
+  "provenance": [
+   {
+    "tick": 0,
+    "from_holder": null,
+    "to_holder": "mira",
+    "source_id": "courier-log"
+   },
+   {
+    "tick": 1,
+    "from_holder": "mira",
+    "to_holder": "harbor",
+    "source_id": 123
+   },
+   {
+    "tick": 2,
+    "from_holder": "harbor",
+    "to_holder": "mira",
+    "source_id": "courier-log"
+   }
+  ]
+ }
+]

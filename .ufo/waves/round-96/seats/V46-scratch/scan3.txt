@@ -1,0 +1,224 @@
+FIXTURE /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r96-crossing-response
+counts {"contradictions.json": 0, "entities.json": 5, "relations.json": 1, "sources.json": 5, "timeline.json": 5}
+BASE /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath
+base-counts {"contradictions.json": 0, "entities.json": 5, "relations.json": 1, "sources.json": 4, "timeline.json": 4}
+prefix-equal entities.json: True (len 5 vs 5)
+prefix-equal relations.json: True (len 1 vs 1)
+prefix-equal contradictions.json: True (len 0 vs 0)
+prefix-equal sources.json: True (len 5 vs 4)
+prefix-equal timeline.json: True (len 5 vs 4)
+
+== TOKEN SCAN ==
+fictional-excerpts.md:29 [accusation:'breach'] neg-before=True :: ...> I assert no other duty, no breach, and no obligation beyond this crossing...
+fictional-excerpts.md:31 [accusation:'breach'] neg-before=True :: ...rival at the Chalk Stair. It asserts no breach and no perpetual or continuing obligati...
+fictional-excerpts.md:38 [accusation:'accus'] neg-before=True :: ...> I make no accusation against Aru....
+fictional-excerpts.md:42 [accusation:'accus'] neg-before=True :: ...of one crossing occasion. It asserts no accusation and no breach, selects no winner,...
+fictional-excerpts.md:42 [accusation:'breach'] neg-before=True :: ...casion. It asserts no accusation and no breach, selects no winner, and does not resolv...
+fictional-excerpts.md:39 [winner:'winner'] neg-before=True :: ...> I select no winner between our two accounts....
+fictional-excerpts.md:39 [winner:'win'] neg-before=True :: ...> I select no winner between our two accounts....
+fictional-excerpts.md:40 [winner:'resolved'] neg-before=True :: ...> Both accounts stand unresolved....
+fictional-excerpts.md:42 [winner:'winner'] neg-before=True :: ...no accusation and no breach, selects no winner, and does not resolve the two first-per...
+fictional-excerpts.md:42 [winner:'win'] neg-before=True :: ...no accusation and no breach, selects no winner, and does not resolve the two first-...
+README.md:11 [accusation:'accus'] neg-before=True :: ...cit in the record: Evin's note makes no accusation against Aru and selects no winner...
+README.md:11 [accusation:'breach'] neg-before=True :: ...nd the record asserts no other duty, no breach, no continuing obligation, and no oblig...
+README.md:9 [winner:'verdict'] neg-before=True :: ...ction, or convert either account into a verdict....
+README.md:11 [winner:'winner'] neg-before=True :: ...o accusation against Aru and selects no winner between the two accounts, and the two f...
+README.md:11 [winner:'win'] neg-before=True :: ...o accusation against Aru and selects no winner between the two accounts, and the tw...
+README.md:11 [winner:'adjudicat'] neg-before=True :: ...account does not overturn, confirm, or adjudicate the first. The crossing-only bound is...
+README.md:11 [winner:'resolved'] neg-before=True :: ...The unresolved-two-accounts bound is explicit in the r...
+README.md:7 [contradiction:'contradict'] neg-before=False :: ...a separate source, entity identity, or contradiction. The added source is `evin-response-...
+README.md:9 [contradiction:'contradict'] neg-before=False :: ...earlier locations, resolve or create a contradiction, or convert either account into a ve...
+README.md:11 [contradiction:'contradict'] neg-before=True :: ...Chalk Stair, Evin at Salt Court), so no contradiction is asserted and `contradictions.json...
+claim-excerpt-map.md:52 [accusation:'breach'] neg-before=True :: ...ound, and the explicit no-other-duty/no-breach assertion (lines 28-29). The event reco...
+claim-excerpt-map.md:54 [accusation:'accus'] neg-before=True :: ...ose remaining quoted lines carry the no-accusation assertion (`I make no accusation a...
+claim-excerpt-map.md:54 [accusation:'breach'] neg-before=True :: ...tion is made, and the record asserts no breach, no continuing duty, and no obligation...
+claim-excerpt-map.md:18 [winner:'resolved'] neg-before=False :: .... The raw source IDs are cluster-local, resolved here as `r96-crossing-response:paired-c...
+claim-excerpt-map.md:54 [winner:'winner'] neg-before=True :: ...usation against Aru.`, line 38), the no-winner selection (`I select no winner between...
+claim-excerpt-map.md:54 [winner:'win'] neg-before=True :: ...usation against Aru.`, line 38), the no-winner selection (`I select no winner betwe...
+claim-excerpt-map.md:54 [winner:'resolved'] neg-before=True :: ...our two accounts.`, line 39), and the unresolved-status statement (`Both accounts stand...
+claim-excerpt-map.md:56 [winner:'verdict'] neg-before=False :: ...not manual whole-claim entailment or a verdict on source authenticity, truth, rights,...
+claim-excerpt-map.md:54 [contradiction:'contradict'] neg-before=True :: ...erent actors at different places, so no contradiction is asserted and `contradictions.json...
+
+== JSON STRING SCAN ==
+sources.json [accusation:'accus'] :: ...Court through the same agreed bell. It asserts no accusation against Aru, selects no winner, and states t...
+sources.json [accusation:'breach'] :: ...e crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an...
+sources.json [accusation:'breach'] :: ...e crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an...
+sources.json [winner:'winner'] :: ... It asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand...
+sources.json [winner:'win'] :: ... It asserts no accusation against Aru, selects no winner, and states that both first-person accounts st...
+sources.json [winner:'resolved'] :: ...nd states that both first-person accounts stand unresolved. It records one crossing occasion only and is not...
+timeline.json [accusation:'accus'] :: ...through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states t...
+timeline.json [accusation:'breach'] :: ...o this crossing only and asserts no other duty or breach.", "source_id": "aru-aftermath-note"}, {"id": "re...
+timeline.json [winner:'winner'] :: ...ote asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand...
+timeline.json [winner:'win'] :: ...ote asserts no accusation against Aru, selects no winner, and states that both first-person accounts st...
+timeline.json [winner:'resolved'] :: ...nd states that both first-person accounts stand unresolved.", "source_id": "evin-response-note"}]...
+
+== STRUCTURAL CONFLICT CANDIDATES ==
+(end of structural candidates)
+contradictions.json = []
+
+== LINE DUMPS ==
+
+---- fictional-excerpts.md ----
+   1	# Authored in-world excerpts
+   2	
+   3	**Delivery mode (R9):** `verbatim` — newly authored fictional text.
+   4	
+   5	Newly authored fictional verse, attributed to in-world source ID `veil-verse`:
+   6	
+   7	> The chalk stair stays a crossing, never a map.
+   8	> We leave its name unowned in the rain.
+   9	
+  10	Newly authored fictional register, attributed to in-world source ID `paired-clock`, folio 3, lines 1–2:
+  11	
+  12	> Tick 9: Aru carried the north lantern at Quiet Rise.
+  13	> Tick 9: Evin held the south bell at Salt Court.
+  14	
+  15	Newly authored fictional minute, attributed to in-world source ID `crossing-minute`, folio 4, lines 1–4:
+  16	
+  17	> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+  18	> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+  19	> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+  20	> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+  21	
+  22	## Round 95 aftermath note (2026-10-17)
+  23	
+  24	Newly authored fictional first-person note, attributed to in-world source ID `aru-aftermath-note`, folio 5, lines 1–4. This section is appended after the preserved r94 text above; the inherited wording is unchanged.
+  25	
+  26	> Tick 11: I waited at the Chalk Stair through the agreed bell.
+  27	> Evin did not come.
+  28	> The agreement we chalked covered this crossing only.
+  29	> I assert no other duty, no breach, and no obligation beyond this crossing.
+  30	
+  31	Scope: this appended section is Aru's first-person report of one non-arrival at the Chalk Stair. It asserts no breach and no perpetual or continuing obligation; the crossing-scoped agreement above is unchanged, and the record supplies no other duty.
+  32	
+  33	## Round 96 response note (2026-10-17)
+  34	
+  35	Newly authored fictional first-person note, attributed to in-world source ID `evin-response-note`, folio 6, lines 1–4. This section is appended after the preserved r95 text above; the inherited wording is unchanged.
+  36	
+  37	> Tick 12: I was at Salt Court through the same agreed bell.
+  38	> I make no accusation against Aru.
+  39	> I select no winner between our two accounts.
+  40	> Both accounts stand unresolved.
+  41	
+  42	Scope: this appended section is Evin's first-person report of one crossing occasion. It asserts no accusation and no breach, selects no winner, and does not resolve the two first-person accounts against each other; the crossing-scoped agreement above is unchanged, and the record supplies no other duty.
+
+---- README.md ----
+   1	# Round 96 crossing-response continuation
+   2	
+   3	This is an explicit continuation of `r95-crossing-aftermath`, itself a continuation of `r94-paired-crossing`, itself a continuation of `r88-m3-maya-cluster`; it is not an unrelated bible and not a rewrite of any snapshot. The five inherited entity records, the one inherited relation, the four inherited events, and the four inherited sources are copied by JSON value; their source IDs, the paired-clock and crossing-minute excerpt wording, the Spence excerpt, and the inspiration context are retained. The added tick-12 response event and its note make the counts 5 entities / 1 relation / 5 events / 5 sources.
+   4	
+   5	## Namespace and occasion comparison
+   6	
+   7	Source IDs are cluster-local. Compare them as path-qualified pairs, for example `(r95-crossing-aftermath, paired-clock)` and `(r96-crossing-response, paired-clock)`, not by bare ID alone. This continuation intentionally reuses the inherited IDs and records; path qualification names the lookup namespace and does not imply a separate source, entity identity, or contradiction. The added source is `evin-response-note`, Evin's first-person response note, and the added event is `response-evin-salt-court`.
+   8	
+   9	The inherited paired-clock entries remain distinct tick-9 events: Aru's north lantern at Quiet Rise and Evin's south bell at Salt Court. The inherited tick-10 meeting at the Chalk Stair remains ordered after and explicitly dependent on both named tick-9 entries. The inherited tick-11 event is ordered after and depends on the tick-10 decision (`paired-crossing-decision`), and it records only Aru's report that he waited through the agreed bell and that Evin did not come. The new tick-12 event is ordered after and depends on that tick-11 report (`aftermath-missing-evin`), and it records only Evin's second account of the same occasion: that he was at Salt Court through the same agreed bell. It adds one second first-person account; it does not change earlier locations, resolve or create a contradiction, or convert either account into a verdict.
+  10	
+  11	The unresolved-two-accounts bound is explicit in the record: Evin's note makes no accusation against Aru and selects no winner between the two accounts, and the two first-person accounts stand unresolved. The accounts name different actors at different places (Aru at the Chalk Stair, Evin at Salt Court), so no contradiction is asserted and `contradictions.json` remains empty; the second account does not overturn, confirm, or adjudicate the first. The crossing-only bound is likewise retained: the agreement covered this crossing only, and the record asserts no other duty, no breach, no continuing obligation, and no obligation beyond this crossing. It is not evidence of an alliance, a continuing practice, perpetual performance, a standing duty, or an external historical fact. The tick-12 event's `entity_id` is Evin because the schema has one actor slot; its description and the note name the other account, so the field does not exclude Aru.
+  12	
+  13	The integer ticks and event-ID edges in `timeline.json` are editorial encodings of the excerpts' tick labels and stated order/dependence, not literal JSON wording in the sources. Inherited empty `depends_on` arrays mean no earlier dependency is represented for those entries in this mapped sequence; they do not assert that no earlier event exists anywhere.
+  14	
+  15	`first_appearance: crossing-minute` identifies the source that first presents Chalk Stair as a specific place in the JSON bible, not the earliest occurrence of the words: the inherited r88 verse already uses “chalk stair” as an unowned crossing metaphor. That image is retained and is not retroactively made a map/location record.
+  16	
+  17	## Bounded external design prompt
+  18	
+  19	The copied Spence passage is his English prose about a story he labels “Kiche,” not an authenticated K'iche-language primary text. It is an editorial design prompt only: the comparison sets Spence's narrated naming/land appearance beside this invented crossing's name-without-map framing. It supplies no in-world witness, cultural authority, or fictional canon, and asserts no cultural meaning. Rights and AI-training permission remain unassessed; neither is granted or inferred here.
+  20	
+  21	`claim-excerpt-map.md` has 16 source-attributed JSON pointer obligations (the 15 inherited rows carried unchanged plus the new tick-12 event row) and separately labeled editorial comparisons. The `support_check.py` receipt is lexical preflight only, not whole-claim entailment, source authentication, chronology truth, rights, permission, or canon review.
+  22	
+  23	Replay from the repository root:
+  24	
+  25	```sh
+  26	python3 corpus/fixtures/check_bible.py corpus/fixtures/r96-crossing-response
+  27	python3 corpus/tools/support_check.py corpus/fixtures/r96-crossing-response
+  28	python3 corpus/tools/map_obligations.py corpus/fixtures/r96-crossing-response
+  29	```
+
+---- claim-excerpt-map.md ----
+   1	# r96 crossing-response: canonical claim-to-excerpt map
+   2	
+   3	Scope: all 16 source-attributed JSON obligations in this continuation (five first-appearance pointers, five entity claims, one relation, and five timeline events), plus two separately labeled editorial comparisons. JSON pointers are relative to this fixture. `source_id` values remain cluster-local in JSON and are qualified in the map as `(cluster path, source ID)` pairs.
+   4	
+   5	**Expected inventory:** 16 JSON facts; 2 editorial rows; 18 total mapped rows; 14 distinct excerpt anchors.
+   6	
+   7	## R9 excerpt declarations
+   8	
+   9	| Excerpt path | Source namespace / citation | Delivery mode | Status |
+  10	|---|---|---|---|
+  11	| `fictional-excerpts.md:12-40` | `r96-crossing-response:paired-clock`; `r96-crossing-response:crossing-minute`; `r96-crossing-response:aru-aftermath-note`; `r96-crossing-response:evin-response-note` | `verbatim` | Newly authored fictional register, minute, aftermath note, and response note; JSON sources in this fixture. Inherited namespaces were `r95-crossing-aftermath:paired-clock`, `r95-crossing-aftermath:crossing-minute`, `r95-crossing-aftermath:aru-aftermath-note`, `r94-paired-crossing:paired-clock`, `r94-paired-crossing:crossing-minute`, and (before that) `r88-m3-maya-cluster:paired-clock`. |
+  12	| `source-excerpt.md:5` | Lewis Spence, *The Myths of Mexico & Peru* (1913), English prose | `verbatim` | Delivered external comparison only; not an in-world source or support for JSON facts. The underlying K'iche primary text is not reproduced (`external-only`). |
+  13	
+  14	`verbatim` names the delivered wording, not a claim that every normalized JSON field is a literal quotation. Review each whole proposition and its bounded scope.
+  15	
+  16	## JSON facts (16 canonical pointers)
+  17	
+  18	The 15 inherited rows carry the r94 JSON pointers, excerpt anchors, spans, and delivery modes unchanged; only the path-qualification column names this fixture's cluster path. The raw source IDs are cluster-local, resolved here as `r96-crossing-response:paired-clock` and `r96-crossing-response:crossing-minute`; the prior namespaces were `r95-crossing-aftermath:paired-clock` and `r95-crossing-aftermath:crossing-minute`. The new row resolves as `r96-crossing-response:evin-response-note`.
+  19	
+  20	| ID | JSON fact pointer and fields | In-world source ID | Path-qualified source namespace | Excerpt path | Line span | R9 delivery mode | Exact anchor |
+  21	|---|---|---|---|---|---:|---|---|
+  22	| J01 | `entities.json#/0/first_appearance` (`aru`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Aru carried the north lantern at Quiet Rise` |
+  23	| J02 | `entities.json#/1/first_appearance` (`evin`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
+  24	| J03 | `entities.json#/2/first_appearance` (`quiet-rise`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Aru carried the north lantern at Quiet Rise` |
+  25	| J04 | `entities.json#/3/first_appearance` (`salt-court`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
+  26	| J05 | `entities.json#/4/first_appearance` (`chalk-stair`) | `crossing-minute` | `r96-crossing-response:crossing-minute` | `fictional-excerpts.md` | 17 | `verbatim` | `The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.` |
+  27	| J06 | `entities.json#/0/claims/0` (`statement`, `source_id`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Tick 9: Aru carried the north lantern at Quiet Rise.` |
+  28	| J07 | `entities.json#/1/claims/0` (`statement`, `source_id`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Tick 9: Evin held the south bell at Salt Court.` |
+  29	| J08 | `entities.json#/2/claims/0` (`statement`, `source_id`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `north lantern at Quiet Rise` |
+  30	| J09 | `entities.json#/3/claims/0` (`statement`, `source_id`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `south bell at Salt Court` |
+  31	| J10 | `entities.json#/4/claims/0` (`statement`, `source_id`) | `crossing-minute` | `r96-crossing-response:crossing-minute` | `fictional-excerpts.md` | 18 | `verbatim` | `After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.` |
+  32	| J11 | `relations.json#/0` (`from`, `to`, `type`, `source_id`) | `crossing-minute` | `r96-crossing-response:crossing-minute` | `fictional-excerpts.md` | 19 | `verbatim` | `There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.` |
+  33	| J12 | `timeline.json#/0` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Aru carried the north lantern at Quiet Rise` |
+  34	| J13 | `timeline.json#/1` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
+  35	| J14 | `timeline.json#/2` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `crossing-minute` | `r96-crossing-response:crossing-minute` | `fictional-excerpts.md` | 18-20 | `verbatim` | `Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.` |
+  36	| J15 | `timeline.json#/3` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `aru-aftermath-note` | `r96-crossing-response:aru-aftermath-note` | `fictional-excerpts.md` | 22-31 | `verbatim` | `Tick 11: I waited at the Chalk Stair through the agreed bell.` |
+  37	| J16 | `timeline.json#/4` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `evin-response-note` | `r96-crossing-response:evin-response-note` | `fictional-excerpts.md` | 33-42 | `verbatim` | `Tick 12: I was at Salt Court through the same agreed bell.` |
+  38	
+  39	## Editorial rows (2 bounded Spence comparisons; not JSON facts)
+  40	
+  41	These rows compare delivered Spence clauses with the fictional design; they do not make Spence an in-world witness, assign cultural meaning, or add canon. `verbatim` describes the English prose delivered in `source-excerpt.md`, not an authenticated K'iche-language text.
+  42	
+  43	| ID | Bounded editorial comparison | Source citation | Excerpt path | Line span | R9 delivery mode | Exact anchor |
+  44	|---|---|---|---|---|---:|---|---|
+  45	| S01 | Spence's phrase has the narrator call out “Earth”; the fiction's named Chalk Stair is a bounded crossing, not a world-making act. | Lewis Spence (1913), cited above | `source-excerpt.md` | 5 | `verbatim` | `He called out “Earth,”` |
+  46	| S02 | Spence says solid land appeared; the fiction's chalk stair remains “a crossing, never a map,” a limited design contrast rather than a shared cosmology. | Lewis Spence (1913), cited above | `source-excerpt.md` | 5 | `verbatim` | `and the solid land appeared.` |
+  47	
+  48	## Timeline normalization and scope
+  49	
+  50	The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` and `evin-ninth-bell`); the inherited tick-11 aftermath event is ordered after and depends on the tick-10 decision (`paired-crossing-decision`); the new tick-12 response event is ordered after and depends on the tick-11 report (`aftermath-missing-evin`). The tick integers and `depends_on` event IDs are editorial encodings of the excerpts' explicit tick/order/dependence wording, not literal JSON syntax in the sources. Each inherited empty dependency list means no earlier dependency is represented in this mapped sequence, not that no earlier event exists anywhere. The new relation encodes only the agreement for this crossing, not perpetual performance or alliance.
+  51	
+  52	J15's anchor is the tick-11 waiting sentence (line 26); its declared span 22-31 is exactly the inherited aftermath section, whose remaining quoted lines carry the non-arrival (`Evin did not come.`, line 27), the crossing-only bound, and the explicit no-other-duty/no-breach assertion (lines 28-29). The event records one non-arrival on one occasion: it asserts no breach, no continuing duty, and no obligation beyond this crossing, and the record supplies no other duty. The event's `entity_id` is Aru because the schema has one actor slot; its description names Evin's non-arrival, so the field does not exclude the second participant.
+  53	
+  54	J16's anchor is the tick-12 response sentence (line 37); its declared span 33-42 is exactly the appended response section, whose remaining quoted lines carry the no-accusation assertion (`I make no accusation against Aru.`, line 38), the no-winner selection (`I select no winner between our two accounts.`, line 39), and the unresolved-status statement (`Both accounts stand unresolved.`, line 40). The event records one second account of the same occasion: Evin reports being at Salt Court through the same agreed bell, while Aru's inherited report placed himself at the Chalk Stair. The two accounts name different actors at different places, so no contradiction is asserted and `contradictions.json` remains empty; neither account is selected as winner, no accusation is made, and the record asserts no breach, no continuing duty, and no obligation beyond this crossing. The event's `entity_id` is Evin because the schema has one actor slot; its description names Aru's account, so the field does not exclude the other participant.
+  55	
+  56	`support_check.py` checks declared row inventory, fixed-string anchors, spans, and R9 mode; its receipt is lexical preflight, not manual whole-claim entailment or a verdict on source authenticity, truth, rights, permission, or canon.
+
+---- inspiration-note.md ----
+   1	# Sourced inspiration note
+   2	
+   3	## Parallel cited
+   4	
+   5	Lewis Spence, *The Myths of Mexico & Peru* (London: George G. Harrap & Co., 1913), Chapter V, “The Maya,” subsection “The Creation-Story,” printed p. 209. The quoted lines are delivered in `source-excerpt.md`; the online text is [Project Gutenberg eBook 53080](https://www.gutenberg.org/ebooks/53080), full text at <https://www.gutenberg.org/files/53080/53080-h/53080-h.htm>.
+   6	
+   7	The excerpt reproduces Spence's English prose and his label “Kiche story.” This note attributes the quoted passage only to Spence's account; it does not treat it as a K'iche-language edition or authenticate the underlying narrative. It does not identify an original individual author, represent all Maya or K'iche traditions, or establish oral continuity. The fictional verse's “chalk stair” asks a limited design question about a name versus a place; it explicitly rejects the source passage's world-making outcome. It imports no named beings, plot, ritual, or cultural rule.
+   8	
+   9	## Attribution question
+  10	
+  11	The English prose and its interpretation as Spence's account are attributed to Lewis Spence and the cited 1913 edition, not to an identified ancient or contemporary K'iche author. The primary K'iche-language source is not reproduced or independently assessed here.
+  12	
+  13	## Rights question
+  14	
+  15	The rights status of this edition, its presentation, and the delivered excerpt has not been determined for all jurisdictions. Consult applicable terms before reuse. Neither age of the narrative nor public accessibility answers the rights question for this edition.
+  16	
+  17	## AI-training-permission question
+  18	
+  19	AI-training permission has not been assessed or established. Public accessibility, attribution, or a possible copyright conclusion does not imply permission for training; this question remains separate and unanswered.
+  20	
+  21	This note records sourced inspiration only. It is not an in-world source and supplies no fictional canon.
+
+---- source-excerpt.md ----
+   1	# Delivered source excerpt
+   2	
+   3	Lewis Spence, *The Myths of Mexico & Peru* (1913), Chapter V, “The Maya,” “The Creation-Story,” printed p. 209; Project Gutenberg eBook 53080, <https://www.gutenberg.org/files/53080/53080-h/53080-h.htm>.
+   4	
+   5	> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+   6	
+   7	This is Spence's English prose about a story he labels “Kiche,” not a quotation from a K'iche-language edition. The locator resolves to the printed-page marker `[209]` in the linked text.

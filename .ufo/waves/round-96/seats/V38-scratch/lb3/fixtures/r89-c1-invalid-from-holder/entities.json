@@ -1,0 +1,35 @@
+[
+  {
+    "id": "r89-c1-invalid-from-holder-mira",
+    "kind": "character",
+    "name": "Invalid From Holder Mira",
+    "first_appearance": "r89-c1-invalid-from-holder-source",
+    "claims": [{"statement": "Fixture holder", "source_id": "r89-c1-invalid-from-holder-source"}]
+  },
+  {
+    "id": "r89-c1-invalid-from-holder-harbor",
+    "kind": "character",
+    "name": "Invalid From Holder Harbor",
+    "first_appearance": "r89-c1-invalid-from-holder-source",
+    "claims": [{"statement": "Fixture holder", "source_id": "r89-c1-invalid-from-holder-source"}]
+  },
+  {
+    "id": "r89-c1-invalid-from-holder-tower",
+    "kind": "character",
+    "name": "Invalid From Holder Tower",
+    "first_appearance": "r89-c1-invalid-from-holder-source",
+    "claims": [{"statement": "Fixture holder", "source_id": "r89-c1-invalid-from-holder-source"}]
+  },
+  {
+    "id": "r89-c1-invalid-from-holder-seal",
+    "kind": "item",
+    "name": "Invalid From Holder Seal",
+    "first_appearance": "r89-c1-invalid-from-holder-source",
+    "claims": [{"statement": "Fixture item", "source_id": "r89-c1-invalid-from-holder-source"}],
+    "provenance": [
+      {"tick": 0, "from_holder": null, "to_holder": "r89-c1-invalid-from-holder-mira", "source_id": "r89-c1-invalid-from-holder-source"},
+      {"tick": 1, "from_holder": "   ", "to_holder": "r89-c1-invalid-from-holder-harbor", "source_id": "r89-c1-invalid-from-holder-source"},
+      {"tick": 2, "from_holder": "r89-c1-invalid-from-holder-harbor", "to_holder": "r89-c1-invalid-from-holder-tower", "source_id": "r89-c1-invalid-from-holder-source"}
+    ]
+  }
+]

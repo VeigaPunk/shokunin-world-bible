@@ -1,0 +1,4 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/map_obligations_r95.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/case-f --map /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/outside-map/claim-excerpt-map.md
+FINDING foreign_path: map path is outside the cluster
+RESULT ERROR
+EXIT=2

@@ -1,0 +1,11 @@
+diff -ru .ufo/waves/round-96/seats/V01-scratch/old/corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md .ufo/waves/round-96/seats/V01-scratch/mutations/row-only/claim-excerpt-map.md
+--- .ufo/waves/round-96/seats/V01-scratch/old/corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md	2026-10-17 17:31:49.000000000 -0300
++++ .ufo/waves/round-96/seats/V01-scratch/mutations/row-only/claim-excerpt-map.md	2026-10-17 17:38:46.009237444 -0300
+@@ -28,7 +28,6 @@
+ | J07 | `entities.json#/1/claims/0` (`statement`, `source_id`) | `paired-clock` | `r95-crossing-aftermath:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Tick 9: Evin held the south bell at Salt Court.` |
+ | J08 | `entities.json#/2/claims/0` (`statement`, `source_id`) | `paired-clock` | `r95-crossing-aftermath:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `north lantern at Quiet Rise` |
+ | J09 | `entities.json#/3/claims/0` (`statement`, `source_id`) | `paired-clock` | `r95-crossing-aftermath:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `south bell at Salt Court` |
+-| J10 | `entities.json#/4/claims/0` (`statement`, `source_id`) | `crossing-minute` | `r95-crossing-aftermath:crossing-minute` | `fictional-excerpts.md` | 18 | `verbatim` | `After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.` |
+ | J11 | `relations.json#/0` (`from`, `to`, `type`, `source_id`) | `crossing-minute` | `r95-crossing-aftermath:crossing-minute` | `fictional-excerpts.md` | 19 | `verbatim` | `There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.` |
+ | J12 | `timeline.json#/0` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `paired-clock` | `r95-crossing-aftermath:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Aru carried the north lantern at Quiet Rise` |
+ | J13 | `timeline.json#/1` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `paired-clock` | `r95-crossing-aftermath:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
