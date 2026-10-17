@@ -1,0 +1,86 @@
+{
+ "baseline_87779a0": "87779a00f25bd1855ede479e490123843e5f056e",
+ "comparisons": {
+  "B1": {
+   "extra_in_mine": [
+    "corpus/fixtures/r93-m2-kojiki-cluster"
+   ],
+   "missing_from_mine": [],
+   "other_rows": 166,
+   "tuple_mismatches": []
+  },
+  "B2": {
+   "extra_in_mine": [
+    "corpus/fixtures/r93-m2-kojiki-cluster"
+   ],
+   "missing_from_mine": [],
+   "other_rows": 166,
+   "tuple_mismatches": []
+  },
+  "R14": {
+   "extra_in_mine": [],
+   "missing_from_mine": [],
+   "other_rows": 167,
+   "tuple_mismatches": []
+  }
+ },
+ "enumeration": {
+  "all_equal": true,
+  "git": 167,
+  "pathlib": 167,
+  "scandir": 167
+ },
+ "exit_counts": {
+  "0": 33,
+  "1": 134
+ },
+ "extra_fields_note": "extra[rel] = stderr_len/stdout_len/last_line recorded in this run; not persisted per-row to keep evidence small",
+ "head": "4780cf088ab338f42b85739517aa237c968c4aea",
+ "invocation": "python3 -I corpus/fixtures/check_bible.py corpus/fixtures/<name> (cwd=repo root)",
+ "manifest_head": {
+  "all_files": 980,
+  "all_manifest_sha256": "9682d1ce3f2f23a4c25889f6439393e9ef8a9348fe9b0cf00cf45352e44ac352",
+  "all_matches_r14_declared": false,
+  "json_files": 830,
+  "json_manifest_sha256": "1f59d950297c2a312be7e36b63f21704b0b4bbe56322a5ec77ef7ed1d0ff39fb",
+  "r14_declared_all_files_hash": "71f51a76dcbdee339184a7594a81023706a454d68b898e56c55593bb0df42ea8"
+ },
+ "measured_revision_65838f8": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+ "python": "3.14.7 /usr/bin/python3",
+ "rerun_sample": {
+  "corpus/fixtures/r5-missing-file": {
+   "exit": 1,
+   "stderr_len": 0,
+   "tuple_equal": true
+  },
+  "corpus/fixtures/r60-partial": {
+   "exit": 1,
+   "stderr_len": 0,
+   "tuple_equal": true
+  },
+  "corpus/fixtures/r88-m3-maya-cluster": {
+   "exit": 0,
+   "stderr_len": 0,
+   "tuple_equal": true
+  },
+  "corpus/fixtures/r90-c1-rawpresent-to": {
+   "exit": 1,
+   "stderr_len": 0,
+   "tuple_equal": true
+  },
+  "corpus/fixtures/r93-m2-kojiki-cluster": {
+   "exit": 0,
+   "stderr_len": 0,
+   "tuple_equal": true
+  }
+ },
+ "shuffle": {
+  "first": "r90-c1-rawpresent-to",
+  "last": "r60-partial",
+  "order_sha256": "ebf565e7a3d2331a57c2fce69d4907314d07b412185708ea9d271c9365187de6",
+  "seed": 9302
+ },
+ "stderr_nonempty_count": 0,
+ "unexpected_exit_count": 0,
+ "violation_lines": 421
+}

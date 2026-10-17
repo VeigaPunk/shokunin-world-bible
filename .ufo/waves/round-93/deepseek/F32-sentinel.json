@@ -1,0 +1,157 @@
+{
+  "seat": "F32",
+  "role": "delivered-revision sentinel",
+  "round": 93,
+  "regimen_round": 7,
+  "requested_route": "opencode-go/deepseek-v4.1-flash",
+  "routing_note": "Model invocation is routing evidence only. No independently echoed backend serving identity is available; none is invented.",
+  "read_cutoff_utc": "2026-10-17T17:07:37Z",
+  "revisions": {
+    "head": "4780cf088ab338f42b85739517aa237c968c4aea",
+    "head_tree": "198376a81c5c11c8c5809f758f3bd0c7dd803dfc",
+    "candidate_commit_matches_head": true,
+    "work_commit": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+    "work_tree": "70d1fbc536e94a9bbe42fa2c14eb1b29a01cf237",
+    "pre_round_commit": "87779a00f25bd1855ede479e490123843e5f056e",
+    "tracked_tree_clean_before": true,
+    "tracked_tree_clean_after": true,
+    "pre_check_status_porcelain": "?? .ufo/waves/round-93/deepseek/",
+    "git_diff_stat_head_exit": 0,
+    "git_diff_cached_stat_exit": 0
+  },
+  "pins": {
+    "boundary_doc": {
+      "path": "corpus/knowledge/holder-assessment-boundary.md",
+      "worktree_sha256": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e",
+      "at_4780cf0_sha256": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e",
+      "at_65838f8_sha256": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e",
+      "contract_pin_match": true
+    },
+    "checker": {
+      "path": "corpus/fixtures/check_bible.py",
+      "worktree_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "at_4780cf0_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "at_65838f8_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "contract_pin_match": true,
+      "delivered_line_count": 428
+    },
+    "legacy_checker": {
+      "revision": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+      "sha256_from_git_show": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+      "contract_pin_match": true,
+      "line_count": 330,
+      "contract_line_count_match": true
+    },
+    "control_note": "contract self_test.expected.anchor_range_control.delivered_line_count=220 is a synthetic control file (boundary_doc_check.py:555 builds b'control line\\n'*220), not the delivered checker's line count (428). Not a drift finding; possible naming confusion only.",
+    "boundary_doc_check_sha256": "ebb6a0843e67bfaa3118eda7fbf69bac124aca8f5b87cd0b9721b5e6346b0053",
+    "boundary_contract_sha256": "e89d2a76d3c8c5c4926c830f6576531d22cf9c18a370cf70ef2657eae1539871",
+    "discriminate_check_sha256": "6c7b7cd8b6676619c6f00eb692c946cfe8d007dc963de5c4a2114757f6108eef",
+    "support_check_sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+    "r93_r8_dossier_sha256": "ddac48a1c7690ea31a1871847662fa74d29ef4ed7279338a0af64055524735ef",
+    "r88_decision_table_sha256": "80490adcc8144f0604a4f28ff6008bde037e9a32843530d4c537fa5a2338bb54"
+  },
+  "checks": [
+    {
+      "name": "boundary_default",
+      "command": "python3 corpus/tools/boundary_doc_check.py",
+      "exit": 0,
+      "key_output": "CHECK pinned inputs/receipt replay/explicit anchor ranges/document structure PASS; replay_receipts=3/3; replay_cases=14/14; anchors=2/2; CERTIFIED"
+    },
+    {
+      "name": "boundary_selftest",
+      "command": "python3 corpus/tools/boundary_doc_check.py --self-test",
+      "exit": 0,
+      "key_output": "8/8 cases PASS: anchor_range_control exit=1 findings=['anchor_range'] anchors=1/2 baseline_lines=330; committed_default exit=0; comment_parked_c9/wrong_bare_anchor document_drift; checker_drift; missing_document; missing_checker; receipt_drift"
+    },
+    {
+      "name": "r8_active_replay",
+      "command": "extract LAST fenced sh block of corpus/knowledge/r93-r8-worked-example.md ('### Corrected replay'), run with D2_DOSSIER set",
+      "exit": 0,
+      "key_output": "R8 replay: PASS; delivered R8 appendix: VERIFIED; record cells: 12/12; canonical record SHA-256 da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+      "note": "historical first 5/5 block not used; corrected block is last"
+    },
+    {
+      "name": "r9_active_replay",
+      "command": "extract LAST fenced sh block of corpus/knowledge/r88-sourced-inspiration-decision-table.md, run",
+      "exit": 0,
+      "key_output": "R9 appendix-only baseline: PASS (36/36 requirements); R9 clause-removal controls: 36/36"
+    },
+    {
+      "name": "c2_check_bible",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r93-m2-kojiki-cluster",
+      "exit": 0,
+      "key_output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "name": "c2_support_check",
+      "command": "python3 corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster",
+      "exit": 0,
+      "key_output": "JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15; SOURCE-SUPPORT 12/12; RESULT PASS"
+    },
+    {
+      "name": "discriminator_default",
+      "command": "python3 corpus/tools/discriminate_check.py",
+      "exit": 0,
+      "key_output": "mode=delivered matches_pin=True; both fixtures README_exact=True; RESULT: DISCRIMINATION HELD"
+    },
+    {
+      "name": "discriminator_negative_control",
+      "command": "python3 corpus/tools/discriminate_check.py --checker e97613c",
+      "exit": 2,
+      "key_output": "REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved; expected negative control, not a passing delivered result"
+    },
+    {
+      "name": "census_r25_digest",
+      "command": "stdlib sha256 over the 18 sorted path/NUL/content/NUL stream listed in recovery/R25.md",
+      "exit": 0,
+      "key_output": "0761d3752ac8b842c55454eed4ce54cbeb2056d3caf2f6d46137d0043debb036 \u2014 matches R25 recorded value exactly at current HEAD"
+    },
+    {
+      "name": "r10_key_scan_rerun",
+      "command": "python3 .ufo/waves/round-93/recovery/R10-key-scan.py (> tmp capture)",
+      "exit": 0,
+      "key_output": "measured_revision=4780cf088ab338f42b85739517aa237c968c4aea; normalized intersections empty 2/2 vs r87 and r88"
+    },
+    {
+      "name": "r10_post_addendum_hashes_recompute",
+      "command": "stdlib recompute with exact recorded method (sorted relpath UTF-8, NUL, bytes; exclude README.md)",
+      "exit": 0,
+      "key_output": "all 3 match: M2 599d2507c26c57b7b185ecbb644b02880300a099df973501f6be665e832b1e23; r87 997472173c52010858d620626874976759c5a7f82ccc657f0ec8960f67573e31; r88 0bb9084f5945951fee9d9a9c47c34ed808428fafc840a471648c9ef3b9ba8e7f",
+      "note": "first attempt mismatched because my stream added a trailing NUL after content; reviewer-side method error, not fixture drift"
+    },
+    {
+      "name": "seat_census",
+      "command": "grep summary + subagent counts of original-work-results.xml / work-results.xml / glm-preliminary-results.xml",
+      "exit": 0,
+      "key_output": "31 completed (31 subagents) + 32 completed (32 subagents) = 63 unique WORK seats; GLM preliminary 32 completed + 1 failed (33 subagents), retained as preliminary and not relabeled"
+    },
+    {
+      "name": "closure_extras",
+      "command": "validate_wave_spec.py --self-test; R08-skill-check.py; git diff --check",
+      "exit": 0,
+      "key_output": "validator 8 controls + unknown-backend warning PASS; skill check 45 source refs resolve, artifact sha c5e6958a82900b07a13c21d80d2dca18899ebd6a92b9d7c0a54830c241ff531d; git diff --check clean"
+    },
+    {
+      "name": "c9_watch_row2",
+      "command": "read corpus/knowledge/r91-c9-watch.md check-log",
+      "exit": 0,
+      "key_output": "row 2 dated 2026-10-17 (r93), executor X1, DISCRIMINATION HELD, gate 3 not met; discriminator exits 0/2 reproduced by F32"
+    }
+  ],
+  "artifacts_hashes": {
+    "m2_readme_sha256": "071b8628aa8b5c67eac2ae94a5fa2ae19a47274b75e370afa10560ecd2250856",
+    "m2_readme_matches_r10_record": true,
+    "integration_record_sha256": "cbfa5b7f1b7c0749d1b65bed56f4961d3cea59cc671a6e5f22947bbe3b49f250"
+  },
+  "peer_deepseek_reports_present_at_cutoff": ["dispatch-declaration.json", "F01-delta.json", "F01-tuples.json", "F08-probe.py", "F08-results.json", "F10-lastblock.out", "F10-lastblock.sh", "F17-receipts"],
+  "missing_closure_artifacts": [
+    "Full 32-seat DeepSeek roster completion (partial peer files present at cutoff) - L1 synthesis item, not this seat's",
+    "R23-prior-dispatches.json already names the raw failed-opencode evidence gap; unchanged by F32"
+  ],
+  "limits": [
+    "Replays verify textual/structural completeness only; no semantic, source, rights, translation-fidelity, or canon verification",
+    "No backend serving echo available; routing not independently attested",
+    "support_check and discriminate_check still have no self-test modes (documented conformance debt)",
+    "C2 CLEAN+PASS is lexical/structural preflight, not R9 manual review"
+  ]
+}

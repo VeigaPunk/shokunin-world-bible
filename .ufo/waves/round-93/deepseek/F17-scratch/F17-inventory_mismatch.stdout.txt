@@ -1,0 +1,9 @@
+INVENTORY JSON-FACTS 1/2; EDITORIAL-ROWS 0/0; TOTAL-ROWS 1/2; DISTINCT-ANCHORS 1/2
+ANCHORS repeated-references=0; DUPLICATE-ROWS 0
+PASS E1: source-support; mode=verbatim; anchor=found; 5:The bell rang once at the west stair.
+RECEIPT JSON-FACTS 1; EDITORIAL-ROWS 0; TOTAL-ROWS 1
+SOURCE-SUPPORT 1/1; EDITORIAL-ANCHORS 0/0; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 1/1; VALIDATED-ROWS 1/1
+FAIL: inventory JSON facts mismatch: expected=2 parsed=1
+FAIL: inventory total mapped rows mismatch: expected=2 parsed=1
+FAIL: inventory distinct excerpt anchors mismatch: expected=2 parsed=1
+RESULT FAIL

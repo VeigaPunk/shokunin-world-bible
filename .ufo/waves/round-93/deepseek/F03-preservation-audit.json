@@ -1,0 +1,866 @@
+{
+  "seat": "F03",
+  "kind": "preservation-judge",
+  "date": "2026-10-17",
+  "lane": "lore-shokunin",
+  "round": 93,
+  "regimen_round": 7,
+  "candidate": "4780cf088ab338f42b85739517aa237c968c4aea",
+  "original_work": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "pre_round_baseline": "87779a00f25bd1855ede479e490123843e5f056e",
+  "candidate_identity": {
+    "tree": "198376a81c5c11c8c5809f758f3bd0c7dd803dfc",
+    "parent": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+    "author": "lore-shokunin <lore@shokunin.local>",
+    "committer": "lore-shokunin <lore@shokunin.local>",
+    "subject": "lore r93: correct dossier verification and freeze bounded document checks",
+    "work_identity": {
+      "parent": "87779a00f25bd1855ede479e490123843e5f056e",
+      "author": "lore-shokunin <lore@shokunin.local>",
+      "committer": "lore-shokunin <lore@shokunin.local>"
+    },
+    "ancestry": {
+      "merge_base_is_ancestor_exit": 0,
+      "merge_base": "87779a00f25bd1855ede479e490123843e5f056e",
+      "commits_base_to_cand": 2,
+      "chain": "87779a0 -> 65838f8 -> 4780cf0 (linear, no merges)"
+    }
+  },
+  "delta_base_to_cand": {
+    "name_status_lines": 175,
+    "counts": {
+      "A": 168,
+      "M": 7,
+      "D": 0
+    },
+    "name_status_output_sha256": "70433d2ee9e85e8d31c06692cad36e7f07fefef297313c565dc4f1ee9e1a01f9",
+    "additions": [
+      {
+        "path": ".ufo/waves/round-93/B1.md",
+        "blob": "c6fd0ff6b7836d9bb9e3de4d0800f8960ce10d67"
+      },
+      {
+        "path": ".ufo/waves/round-93/B2.md",
+        "blob": "b5bb6ef526b6502c5e3ea7b496494e23591864c5"
+      },
+      {
+        "path": ".ufo/waves/round-93/C5.md",
+        "blob": "256d7272d60c26cda5a207e97c56a7f0ea65df6e"
+      },
+      {
+        "path": ".ufo/waves/round-93/C6.md",
+        "blob": "ddfc937dd94b832a35ea476c48fe102d41ca45fe"
+      },
+      {
+        "path": ".ufo/waves/round-93/C7.md",
+        "blob": "4774a39e04769c50250928380394ce4468fd17e7"
+      },
+      {
+        "path": ".ufo/waves/round-93/C7b.md",
+        "blob": "ed4e2c92b582ec3291df59604682ff2ee287910c"
+      },
+      {
+        "path": ".ufo/waves/round-93/CB-audit.md",
+        "blob": "9c460974eac853da02f5e07869950f40ac87e4e3"
+      },
+      {
+        "path": ".ufo/waves/round-93/CERT.md",
+        "blob": "7077b460ff78144c56a1cd646a0af08c923137e6"
+      },
+      {
+        "path": ".ufo/waves/round-93/D1.md",
+        "blob": "419a6a1ff1a595028786721c8d5d26f11ac333ae"
+      },
+      {
+        "path": ".ufo/waves/round-93/D2.md",
+        "blob": "11dfe159bcba02017ceebfb8251180c7f6d1874a"
+      },
+      {
+        "path": ".ufo/waves/round-93/E1.md",
+        "blob": "4d6bdc6108a654b7293feed5e9f2868305c63b5d"
+      },
+      {
+        "path": ".ufo/waves/round-93/E3.md",
+        "blob": "23d3cbc239c52942bda21d7901471c5ee8ef01ec"
+      },
+      {
+        "path": ".ufo/waves/round-93/J3.md",
+        "blob": "bf509568cac83bf156c3d084c13de695dc8c7fe9"
+      },
+      {
+        "path": ".ufo/waves/round-93/K1.md",
+        "blob": "eaf1981445b5844949014ab83dfe45e70bb643d3"
+      },
+      {
+        "path": ".ufo/waves/round-93/M1.md",
+        "blob": "fb30223c35aa2be71614ebf68472375ff6a1760c"
+      },
+      {
+        "path": ".ufo/waves/round-93/M2.md",
+        "blob": "73b40b97e11d732f8a2ab081b377b60b72006cfb"
+      },
+      {
+        "path": ".ufo/waves/round-93/M3.md",
+        "blob": "945651259123d93616a2c7fc447d4603ffda0c54"
+      },
+      {
+        "path": ".ufo/waves/round-93/M4.md",
+        "blob": "a7f713c76a183d3c14a83136eba916648293df4f"
+      },
+      {
+        "path": ".ufo/waves/round-93/M5.md",
+        "blob": "e7373985c3da7b8444e0426d58d97f3e78a3efa5"
+      },
+      {
+        "path": ".ufo/waves/round-93/M6.md",
+        "blob": "7ea66d69f6d14ef27e9cfa1b349193748a8371ae"
+      },
+      {
+        "path": ".ufo/waves/round-93/Q1.md",
+        "blob": "928deb30979a995bff8602cbf0e4339d9e4e3ffb"
+      },
+      {
+        "path": ".ufo/waves/round-93/Q2.md",
+        "blob": "d437045fca869c42e3319b986a023b35d044a107"
+      },
+      {
+        "path": ".ufo/waves/round-93/R1.md",
+        "blob": "21e37f74096d9ba59cc692145a749c1e36e8347f"
+      },
+      {
+        "path": ".ufo/waves/round-93/S1.md",
+        "blob": "f9833d0b70f665d6ad58e428742153a19a08c1c6"
+      },
+      {
+        "path": ".ufo/waves/round-93/S2.md",
+        "blob": "4e86cde540beb6f771248db7abd7e6638935130f"
+      },
+      {
+        "path": ".ufo/waves/round-93/SE1.md",
+        "blob": "3eec105807b5b66848339bc7c0a5bbc59bd66e54"
+      },
+      {
+        "path": ".ufo/waves/round-93/T1.md",
+        "blob": "de0aa65fa6f1f0f93b97f21a47410a2d8ce83174"
+      },
+      {
+        "path": ".ufo/waves/round-93/W1.md",
+        "blob": "2af7b9f62d000eaece2ff199b65d591f8f9341ff"
+      },
+      {
+        "path": ".ufo/waves/round-93/W2.md",
+        "blob": "c2c5e334410d76c90b2b14f63f0874b49f0e4815"
+      },
+      {
+        "path": ".ufo/waves/round-93/X1.md",
+        "blob": "1f69ae11babf8678a7c70e597800ec52372f31dc"
+      },
+      {
+        "path": ".ufo/waves/round-93/X2.md",
+        "blob": "09d691236a1bc90500e13641e7327fd245afe5d2"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/E1.md",
+        "blob": "6bbd3c42e37b966da0e882b2cfd8324ecfdaf8ea"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H1.md",
+        "blob": "395118f5fc188cb6488ccbfc432771f15963549b"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H2-delta.json",
+        "blob": "e6f0e0c9cdb63b638fb64ea6af9c0ce64133d904"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H2.md",
+        "blob": "bcdc142a948fbb70fe034712c2b5901634e38d36"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H3-probes.json",
+        "blob": "20eb381061c24f85462590fbbabd61bb4afba4eb"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H3.md",
+        "blob": "65be9c353b16a6d36fe5b475d7627110a7b432b6"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H4-census.json",
+        "blob": "8b2b5391308a37e829d1a5cdbed36757b95fd240"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H4-lineage.json",
+        "blob": "163960c27f3f493a6e6deeb6cda15f1a802398e3"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H4-probes.json",
+        "blob": "4de6de20d9f30de29f5a0894e16f4112361847d8"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H4.md",
+        "blob": "51c74c9389aaf4a05140ac6921033d366e5e4dd5"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/H5.md",
+        "blob": "a345ce69dc9c090f5fe427ed807f39fc36a61a8f"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JAXIS-verdicts.json",
+        "blob": "fecdae62a8042bda433008b3988b79a755baa2bb"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JAXIS.md",
+        "blob": "256c8515bbd32b9af50c6bc8989a8aa2f27dade0"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL1-delta.json",
+        "blob": "b65f65c205a8cc00acd3f36d4f97c4c3a966c22f"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL1-tuples.json",
+        "blob": "00467708cd01aedf66168d6d23f79dea51bf880e"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL1.md",
+        "blob": "151770572ae873fe48806e74d76ead7fb75955b6"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL2.md",
+        "blob": "163a02c590884df35dd1077e975feb290563795b"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL3.md",
+        "blob": "058a492053d68396bbdc19fba6735a8076156670"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL4.md",
+        "blob": "5755da90352842544c6fae36e1df2e8c67888342"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL5-delta.json",
+        "blob": "7241ead99285a04368f7edf540df4994c35ad890"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL5-tuples.json",
+        "blob": "869751d6b1ebadb081d468616296227de87f12c8"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCAL5.md",
+        "blob": "ec2ef9afe1c51657fb5f1a39fd459348cb7da792"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCOV1.md",
+        "blob": "00124c9d8e57ff10c4ce2f72f5b2f61410bb0c79"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCOV2.md",
+        "blob": "c7d1bb9c5f8271c877882dabd1a5662b868768c6"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCOV3.md",
+        "blob": "73fae541f3ca65d99a9faae5d7e934651fcb0e90"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCOV4.md",
+        "blob": "612ea6c2358b8c3db7ef8e5264b336c84c00745c"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCOV5-probes.json",
+        "blob": "6e55ca62954a31f90e5442c0c10aabb492412f32"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JCOV5.md",
+        "blob": "37ab168c49baa61f7d63f377f98b7c0a2adcb51a"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JDEP1.md",
+        "blob": "79ceffcc2cadd1e43d2892c796a1c7432944c070"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JDEP2.md",
+        "blob": "02c45c0ee0cbb2ec1bf0745a3054ad070951ad32"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JDEP3-scan.md",
+        "blob": "07b53c761ee7229e5540fed71c6ead3b26a5a6ef"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JDEP3.md",
+        "blob": "3c76539bd1fecf48571439efcf27b03a538f114c"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JDEP4-evidence.json",
+        "blob": "d18e9e5dcea27e7d75c0658f40b6ad17b5df25c4"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/JDEP4.md",
+        "blob": "0d63c462c3dc7651b863fe5542f68424e785fd30"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/K1.md",
+        "blob": "128353cdbff9120eecd4e525df9ce6fa74aeb9c8"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/P1-manifest-entry.json",
+        "blob": "d727abbfd941a4f2fc4efd606f5133e98ab3bae0"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/P1.md",
+        "blob": "27a81fa219f1cc415c258c9fae7de677df9d1230"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/P2.md",
+        "blob": "a20223eef390b1a05b75daa2a15ea3ed01d0ec69"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/P3.md",
+        "blob": "fd06a8906efd0631d76d3ff43b22cb557a6cb532"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/P4.md",
+        "blob": "81103585b5e0f15a8c2ce6bfb164bca9ee138e0d"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/Q1-r93-debt.json",
+        "blob": "0c4175e78357d1e219f1b59eb18ed5babe1cfa94"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/Q1-r94-proposal.md",
+        "blob": "c36cd077bbf7848545129e177e6b88d53489f0ff"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/Q1.md",
+        "blob": "3b491acda6f01e12458be521a48f470f4f42d92f"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/Q2.md",
+        "blob": "1122d7e23f2796e73b6572628443d57b15547f45"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/SE2.md",
+        "blob": "2110f3c36fcde343598a2d673f5f82a33a45b336"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/V2.md",
+        "blob": "e7667952a05dcbd7109b319a6c95344040941d3e"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/W1-disposition.json",
+        "blob": "46510f3fa58036b4de19d57f025e24fb773f212c"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/W1.md",
+        "blob": "c5ccf5bf9e83f89edcc18fd08f64360e0db363a4"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/X1-receipts.json",
+        "blob": "a0379d1ae31c3815d8d6207ccb73bf6e4d1732f5"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/X1.md",
+        "blob": "1d207e677075dc1400f22b41b3463c99352825be"
+      },
+      {
+        "path": ".ufo/waves/round-93/followup/X2.md",
+        "blob": "a37b0603ca26ce463d9f059ca333bcc4418378fd"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/B1-tuples.json",
+        "blob": "08eb33fce454b28ec5c9f074ea6c4328c3d19c21"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/B2-tuples.json",
+        "blob": "08eb33fce454b28ec5c9f074ea6c4328c3d19c21"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/CERT-tool.patch",
+        "blob": "25c232749dce4191bb9240f8190714337b42a3de"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/D1-venue.patch",
+        "blob": "e923f47dc5e493abf0c69b62c9506ff9d4f0b829"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/D2-dossier.patch",
+        "blob": "eb501e20c9dd33b1329085986ef9ea7e4a6e2abd"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/E1-wording.md",
+        "blob": "cfaf533faac0a6542757ce30b88075688c3fbe56"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/E3-c3-wording.patch",
+        "blob": "37817fc6f21cbb38ca388640dc495779db0d25e4"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/M1-cluster3.patch",
+        "blob": "22a708326fa5cc2917a5ed7b2ad0a464752e4897"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/M2-kojiki-cluster.patch",
+        "blob": "2f206cd731c721bf7cba41937f4f3dd8825d6d29"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/M3-ovid-cluster.patch",
+        "blob": "8ab47582fedcff045c3df0cfff65a0d94bd60048"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/M4-cluster-final.patch",
+        "blob": "2f206cd731c721bf7cba41937f4f3dd8825d6d29"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/M5-kojiki-ledger.patch",
+        "blob": "34f37aae4b05b327722cf0ad77ef7c52188900a2"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/M6-namespace.json",
+        "blob": "4ca092c863f913d22520e496e7cadd39cc8115cc"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/Q1-r93-debt.json",
+        "blob": "4cfc48987ad596fdf70e8788c1e1ed996cbc5453"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/Q1-r94-proposal.md",
+        "blob": "53e9deaef655c6de378a5a64fcb54d7e395887c4"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/S1-venue-plan.json",
+        "blob": "44749652e4cc723dd82cbbb30094a39b183deaa3"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/W1-landing-record.patch",
+        "blob": "ceaf8a18adb8ad4490462c2fd067601c1820cd74"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/W2-log-r93.proposal.md",
+        "blob": "ddf10b4520c24d14f3c90083052323e7c1dfc9be"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/W2-report-r93.skeleton.md",
+        "blob": "e7ec93542cbee79790346da5313062cdcb3926ab"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/W2-scorecard-r93.proposal.md",
+        "blob": "b8bf70b426ed54e165bcd2584e077979b7c809c6"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/X1-recheck2.patch",
+        "blob": "373e3bd1d83c4c20d2d6c41f32c74e54df76a44c"
+      },
+      {
+        "path": ".ufo/waves/round-93/patches/X2-discriminate-tool.patch",
+        "blob": "c18c064143f47f57fa81527ac1a5baf8845b2b8f"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R01.md",
+        "blob": "9895557674846d1410e3a56a790937849a2350d5"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R02.md",
+        "blob": "6cc1070e4dfc7313589ed595ca7821b0cf6c2e58"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R03.md",
+        "blob": "c20aa1aa8bab332f3c51f15f0526d5b45b71ef60"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R04.md",
+        "blob": "91f5dd4968d9a988bae36cd48f33716de70ca7e9"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R05.md",
+        "blob": "3b3cc15982af55e7b0774097c1fc5fa1697ba8d2"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R06.md",
+        "blob": "a72cc1ab7460115df3e25056acca4fdbb4ca42a6"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R07.md",
+        "blob": "26c3c282073afb7d1ef69d98b3e7900985ca0815"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R08-skill-check.py",
+        "blob": "1101bfe76438f1a588086865b09e98ff895e6c54"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R08.md",
+        "blob": "4899ef210f5859b2b32d3a02023b307dad33db28"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R09.md",
+        "blob": "8fa21a9b7dda2f78960a1f27f3134698d018f60b"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R10-key-scan.json",
+        "blob": "ef884a2ee7207c1d4c3a1376170912ccb9f49ed6"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R10-key-scan.py",
+        "blob": "128954f0352d036f8103d26bae9c1472bea11b6a"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R10.md",
+        "blob": "303993428a100d112ffe888b5dc3b32cae4cd0ab"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R11.md",
+        "blob": "f711179260d5e0f0df9f9769a623d671a2bf8d8a"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R12.md",
+        "blob": "0d26d84c11aad418c6a4f10d26ab5b48cded923a"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R13.md",
+        "blob": "bcac8797b4b244dd9e81e38f475a72a3854f4379"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R14-tuples.json",
+        "blob": "00467708cd01aedf66168d6d23f79dea51bf880e"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R14.md",
+        "blob": "2075ec537d05fa241a906c633c9c8d96a5d5718b"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R15.md",
+        "blob": "ae12cf43a655044002d358e9d27fff2e50b0d3b9"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R16.md",
+        "blob": "f5e29a4f60402ed8d6c6646431447fb1e4e5ce58"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R17-replay.json",
+        "blob": "9e1b572090e2a74645647d9c586643e25e83663e"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R17.md",
+        "blob": "4593e8b1112a4be61060daf62d6ad52a62a82986"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R18-cases.json",
+        "blob": "5ac982ba0b0c67f48ef92a3709cd51a6521560b7"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R18-mutations.py",
+        "blob": "ea2a85ad52574df76c068c9e497e9d2d94ec7fb9"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R18.md",
+        "blob": "8d1dd189d971809bd35a05bb5746b5e65f91f7b5"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R19.md",
+        "blob": "92290b29f2550422d1d39399c745939d3b0cce0b"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R20-probe.py",
+        "blob": "7f3622ac56354e197d9dc821536afe82dba8b8ea"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R20.md",
+        "blob": "0d4a123960d042458d209b473ec874e1ca74c704"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R21.md",
+        "blob": "14ec16d6686fbc7273b7b456f67d98349d08c108"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R22.md",
+        "blob": "7c5b66649e296fa4fc76cae01ddce726417c754f"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R23-prior-dispatches.json",
+        "blob": "7270efa28b5a0ae52045671fb324da44603c9a3f"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R24-evidence.json",
+        "blob": "cc8120df63d087367dc43c07eade614658991feb"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R24.md",
+        "blob": "ad84286b7d41df6d71a759f423b64c2d31f31c23"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R25.md",
+        "blob": "9c6a14fae5cc677d45e1315faa92250cc543a37e"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R26.md",
+        "blob": "cfa007298d730490480852c6806f8872532b6d68"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R27.md",
+        "blob": "7c6c4d4b7af0a618ebb17bb8eb864dd740cc9c77"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R28.md",
+        "blob": "28e38be201057db57a2a66cd8df813c0334245f0"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R29-record-errata.md",
+        "blob": "852d60e49154cd6b6a473a831464c86aad216457"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R30.md",
+        "blob": "c78e984fcaa4aaa524f6c9b1ea3f3d6f26ba50da"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/R32.md",
+        "blob": "29550a52595dbe9307ed663545eba1982027bf0f"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/glm-preliminary-results.xml",
+        "blob": "0573209d6d02128a30e9a0746d82cb87d69e9573"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/integration-record.md",
+        "blob": "6b57733bb09a4afe53ab829bfa5e3adc738b6834"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/original-work-results.xml",
+        "blob": "62b603e79920f59f70c05e97664373596394a1e4"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/work-dispatch.json",
+        "blob": "8ee7f9bca0578a44b96769bb25379e83f2c55b7d"
+      },
+      {
+        "path": ".ufo/waves/round-93/recovery/work-results.xml",
+        "blob": "9d5f6176b8ca13a80046102ca540a01895db0a32"
+      },
+      {
+        "path": ".ufo/waves/round-93/validate_wave_spec.py",
+        "blob": "e98302100835e48af927afa60cf035b2b33f1c46"
+      },
+      {
+        "path": ".ufo/waves/round-93/wave-spec.json",
+        "blob": "e05661989d5d21aa8458e4a44da7a7b6034f8252"
+      },
+      {
+        "path": ".ufo/waves/round-93/wave-spec.md",
+        "blob": "05f14507721d09e3d6b40849725b91f096ac452a"
+      },
+      {
+        "path": "SKILL.md",
+        "blob": "f06473445a8ddfe290efe2f2fe3a51941d60382e"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/README.md",
+        "blob": "4d1c231bd9a3c103eacc5573e64dc9605c23c679"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/archive-record-excerpt.md",
+        "blob": "3308fbee011615cb09896e956785991b94fc8146"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/claim-excerpt-map.md",
+        "blob": "31291c57a6712587577b12d308f17280f21191a8"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/contradictions.json",
+        "blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json",
+        "blob": "86735af02b543879fbbfe39408f6b05bc63ea953"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/inspiration-note.md",
+        "blob": "1710d201b82695e73ebdbcb3325874f916a8e4b8"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md",
+        "blob": "6fc8aeb73fddc7018947c3001726f9dbc2e0367b"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/relations.json",
+        "blob": "7e33e6f9839aeaf0d3dfb50e0d6076dc6b3094f8"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/sources.json",
+        "blob": "19c5aafe6308d623530beb3c2899d9500a2ef6ca"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/symbolism-clause-map.md",
+        "blob": "14e301d2b20f1ca27b0871cd2e058953b72dc7c6"
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/timeline.json",
+        "blob": "4658c9d421762fdc5b1223d281e87fa6960d9d69"
+      },
+      {
+        "path": "corpus/knowledge/r93-r8-worked-example.md",
+        "blob": "68cb4b1640e68cddd8c4c9cc3d2dec98f56336e1"
+      },
+      {
+        "path": "corpus/tools/boundary-doc-contract.json",
+        "blob": "9b73e150ceaf59225bb256006b1b3bcfa0ec0f91"
+      },
+      {
+        "path": "corpus/tools/boundary_doc_check.py",
+        "blob": "4daa9998023f247fef7ca07d7cf2723f95cab0be"
+      },
+      {
+        "path": "corpus/tools/discriminate_check.py",
+        "blob": "aa601eee3ec288eccf21e5bb78cd01caaacfea7c"
+      }
+    ],
+    "modifications": [
+      {
+        "path": "corpus/README.md",
+        "blob_before": "73eee61d4ecd2927cde42cbbfef832beebd35b74",
+        "blob_after": "9e83e2a3be22fc0842e22eaad6748f52062b1915"
+      },
+      {
+        "path": "corpus/fixtures/README.md",
+        "blob_before": "6d657cdbb992757cc5409c4a5583cb65f067a967",
+        "blob_after": "adb9ae565ea10766ba4bb66ce7aedc2f0a1a4c7d"
+      },
+      {
+        "path": "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+        "blob_before": "304fa31fa8ce1f9f8a287a056aeabf94e2d72b39",
+        "blob_after": "2a19e65057ef74c3ba50308f7f2e7dd8db4f5bc0"
+      },
+      {
+        "path": "corpus/knowledge/r91-c9-watch.md",
+        "blob_before": "3c0b879cdeed62226293710b9ea149389bb2319f",
+        "blob_after": "879b0dccad8dad51433454643c2c3b2fa8a56439"
+      },
+      {
+        "path": "corpus/knowledge/reference-ledger.md",
+        "blob_before": "87cab68a08388dc98a1f539dc9623aa873dc8089",
+        "blob_after": "2f6334fec7c87749304084eeb720ab981875c492"
+      },
+      {
+        "path": "corpus/tools/README.md",
+        "blob_before": "f129bcd5fb2a3ef7964d3b26d53b270e86c4e595",
+        "blob_after": "487d5c7af40b95fb54c404a3cfe6fa738a93f6d5"
+      },
+      {
+        "path": "l0-questions.md",
+        "blob_before": "6a733926a5008f394a9ffce30af2c74cd515818d",
+        "blob_after": "f9fdff500e043c63d7bbfd0ffad90f8cfd66de4e"
+      }
+    ],
+    "deletions": []
+  },
+  "commit2_delta": {
+    "name_status_lines": 109,
+    "counts": {
+      "A": 100,
+      "M": 9,
+      "D": 0
+    },
+    "name_status_output_sha256": "629c007b0c50b88fe3f4cfaaf03583f3ac874146ac008f07b65bfc3a1af4f114",
+    "modified_paths": [
+      {
+        "path": "corpus/README.md",
+        "added_in_commit1": false
+      },
+      {
+        "path": "corpus/fixtures/README.md",
+        "added_in_commit1": false
+      },
+      {
+        "path": "corpus/fixtures/r93-m2-kojiki-cluster/README.md",
+        "added_in_commit1": true
+      },
+      {
+        "path": "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+        "added_in_commit1": false
+      },
+      {
+        "path": "corpus/knowledge/r91-c9-watch.md",
+        "added_in_commit1": false
+      },
+      {
+        "path": "corpus/knowledge/r93-r8-worked-example.md",
+        "added_in_commit1": true
+      },
+      {
+        "path": "corpus/tools/README.md",
+        "added_in_commit1": false
+      },
+      {
+        "path": "corpus/tools/boundary_doc_check.py",
+        "added_in_commit1": true
+      },
+      {
+        "path": "l0-questions.md",
+        "added_in_commit1": false
+      }
+    ]
+  },
+  "protection": {
+    "fixture_json_count_at_base": 825,
+    "checkers": [
+      "corpus/fixtures/check_bible.py",
+      "corpus/live/rejected-r4/check_bible.py"
+    ],
+    "protected_paths": 827,
+    "json_changed_at_work": 0,
+    "json_changed_at_cand": 0,
+    "json_missing_at_cand": 0,
+    "checker_blob_cand": "20c56dbb90d9f59ca4fb85971154c0774f5ce0d0",
+    "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "checker_live_rejected_blob": "072402681f7cbe153b72866772ce3e9a1abf612b",
+    "checker_live_rejected_sha256": "1eb06de5f2aedae036899c40e054a8217631cf77a4b1ce9d84a5ff40382f62eb",
+    "my_827_path_blob_manifest_sha256": "6a0ad975e3bf3a6864d9753b24a77b68ba23132d3b656e459258eb5a4a876c75",
+    "all_base_json_count": 1095,
+    "all_base_json_changed": 0,
+    "worktree_vs_cand_content_diff": 0,
+    "worktree_missing": 0,
+    "fixture_dir_delta": "1 M (README.md) + 11 A (5 JSON + 6 MD), 0 D"
+  },
+  "holder_document": {
+    "path": "corpus/knowledge/holder-assessment-boundary.md",
+    "blob": "625148b6f444f0c7c7b0404646c232fca6149a3d",
+    "sha256": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e",
+    "bytes": 54377,
+    "lines": 648,
+    "identical_at": [
+      "87779a00f25bd1855ede479e490123843e5f056e",
+      "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+      "4780cf088ab338f42b85739517aa237c968c4aea"
+    ],
+    "worktree_identical": true
+  },
+  "contract_pins_crosscheck": {
+    "path": "corpus/tools/boundary-doc-contract.json",
+    "document_pin_matches_actual": true,
+    "checker_pin_matches_actual": true,
+    "legacy_baseline_revision": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+    "legacy_baseline_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+    "legacy_baseline_resolves_in_git": true,
+    "legacy_baseline_is_ancestor_of_cand": true,
+    "note": "contract document.revision field labels 65838f8 as capture revision; document bytes identical at all three audited revisions, so no drift"
+  },
+  "refs_and_push": {
+    "for_each_ref": "refs/heads/main=4780cf0; refs/remotes/origin/main=refs/remotes/origin/HEAD=28706dc73a9b7667851fd82adb71e905ae5eb896",
+    "commits_main_ahead_of_origin_main": 17,
+    "last_remote_update": "28706dc refs/remotes/origin/main@{0}: update by push",
+    "commit_message_says": "...no admission or push.",
+    "candidate_on_remote": false,
+    "push_claim_beyond_refs_found": false,
+    "worktree_status": "only untracked .ufo/waves/round-93/deepseek/ (this seat's write area)"
+  },
+  "commands": [
+    "git show -s --format=... 4780cf0 / 87779a0 / 65838f8",
+    "git merge-base --is-ancestor 87779a0 4780cf0 -> exit 0",
+    "git diff --name-status --no-renames 87779a0 4780cf0 -> 175 lines, A=168 M=7 D=0",
+    "git ls-tree -r <rev> + in-memory blob comparison for 825 corpus/fixtures JSON + 2 checkers",
+    "git cat-file blob for holder doc at 3 revisions + sha256sum; worktree sha256",
+    "git show 5eb9451b:corpus/fixtures/check_bible.py | sha256sum -> 88c9b1d0... (pin resolves)",
+    "git for-each-ref refs/heads refs/remotes refs/tags; git reflog show refs/remotes/origin/main",
+    "git status --porcelain=v1 -> only untracked deepseek/"
+  ],
+  "limits": [
+    "Read-only audit; no fixture checker or tool was executed by this seat; tool behavior is other seats' scope.",
+    "My manifest hash uses my own path+blob line format; it does not reproduce R30's separately computed manifest values.",
+    "Blob-OID equality is byte-exactness evidence for tracked content; untracked working-tree bytes were compared for the protected set only.",
+    "This seat makes no promotion, admission, external-approval, or numeric axis-score claim."
+  ]
+}

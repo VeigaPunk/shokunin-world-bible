@@ -1,0 +1,259 @@
+{
+  "seat": "F11",
+  "candidate_commit": "4780cf088ab338f42b85739517aa237c968c4aea",
+  "fixture": "corpus/fixtures/r93-m2-kojiki-cluster",
+  "file_sha256": {
+    "README.md": "071b8628aa8b5c67eac2ae94a5fa2ae19a47274b75e370afa10560ecd2250856",
+    "archive-record-excerpt.md": "71876794bcdff367c30f64bc1c7c60f2f06dff46c081d3fce52c1c0dc9419287",
+    "claim-excerpt-map.md": "ac10daeaae398b5280f6976dfe181349f38ecca1847aab599a5673c3e2845d00",
+    "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "entities.json": "19f75678dae1b59e6704d1be903a5cecf1b070dd44165e3047bc47efdb8e2d1d",
+    "inspiration-note.md": "fdac1458e88452fd61f04b5756e6a3e5b8793c0ec36fd8491286e5fd12710e09",
+    "kojiki-chamberlain-excerpt.md": "2586c1f2505e948f6aeac02fc8a3db01886396a98e0dccd10e2ab46055edd592",
+    "relations.json": "32b79cd4d02793ce4c1f600522fb3810ffdbbad173b5707975fe9197ebf6e46d",
+    "sources.json": "658610f15d677616adb758c347d2c0afe53b269d926515de686e1a12ceb7fdbd",
+    "symbolism-clause-map.md": "eeb56880b93f4a239516cd0f38b61097e0d834afee29392713491700f3c10243",
+    "timeline.json": "69da079eb29104cf4da04942ec3df79155569aa61d64fec00cb4aa7ffe2417e2"
+  },
+  "mechanical_pointer_count": {
+    "first_appearance": 4,
+    "claim_source_id": 4,
+    "relation_source_id": 2,
+    "event_source_id": 2,
+    "total": 12,
+    "contradictions.json": 0,
+    "sources.json": "defines source id (not an attribution)"
+  },
+  "rows": [
+    {
+      "id": "E1",
+      "pointer": "entities.json#/0/first_appearance",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:5",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        5
+      ],
+      "anchor_len_chars": 44
+    },
+    {
+      "id": "E2",
+      "pointer": "entities.json#/0/claims/0",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:6",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        6
+      ],
+      "anchor_len_chars": 78
+    },
+    {
+      "id": "E3",
+      "pointer": "entities.json#/1/first_appearance",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:7",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        7
+      ],
+      "anchor_len_chars": 58
+    },
+    {
+      "id": "E4",
+      "pointer": "entities.json#/1/claims/0",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:8",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        8
+      ],
+      "anchor_len_chars": 57
+    },
+    {
+      "id": "E5",
+      "pointer": "entities.json#/2/first_appearance",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:5",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        5
+      ],
+      "anchor_len_chars": 31
+    },
+    {
+      "id": "E6",
+      "pointer": "entities.json#/2/claims/0",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:9",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        9
+      ],
+      "anchor_len_chars": 67
+    },
+    {
+      "id": "E7",
+      "pointer": "entities.json#/3/first_appearance",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:6",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        6
+      ],
+      "anchor_len_chars": 24
+    },
+    {
+      "id": "E8",
+      "pointer": "entities.json#/3/claims/0",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:12",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        12
+      ],
+      "anchor_len_chars": 57
+    },
+    {
+      "id": "E9",
+      "pointer": "relations.json#/0",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:10",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        10
+      ],
+      "anchor_len_chars": 45
+    },
+    {
+      "id": "E10",
+      "pointer": "relations.json#/1",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:11",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        11
+      ],
+      "anchor_len_chars": 78
+    },
+    {
+      "id": "E11",
+      "pointer": "timeline.json#/0",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:10",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        10
+      ],
+      "anchor_len_chars": 54
+    },
+    {
+      "id": "E12",
+      "pointer": "timeline.json#/1",
+      "json_source_value": "m2-record-archive",
+      "declared_in_world_source_id": "m2-record-archive",
+      "source_id_resolves_in_sources_json": true,
+      "excerpt": "archive-record-excerpt.md:11",
+      "declared_mode": "verbatim",
+      "anchor_literal": true,
+      "anchor_occurrences_in_excerpt": [
+        11
+      ],
+      "anchor_len_chars": 102
+    }
+  ],
+  "normalization": [
+    {
+      "field": "timeline[0].tick=1 / timeline[1].tick=2",
+      "literal_excerpt": "Entry A / Entry B labels only",
+      "class": "editorial ordinal encoding of excerpt sequence; not a literal quoted value"
+    },
+    {
+      "field": "timeline[1].depends_on=[\"teva-files-index\"]",
+      "literal_excerpt": "'Entry B: after Entry A, ...'",
+      "class": "temporal order literal; event-id dependency is editorial normalization"
+    },
+    {
+      "field": "timeline[0].depends_on=[]",
+      "literal_excerpt": "no dependency stated for Entry A",
+      "class": "empty list = no prior dependency in the mapped sequence; NOT proof that no earlier event exists"
+    },
+    {
+      "field": "timeline[*].id (teva-files-index / orni-marks-index)",
+      "literal_excerpt": "absent",
+      "class": "editorial identifiers"
+    },
+    {
+      "field": "timeline[1].description",
+      "literal_excerpt": "Entry B: after Entry A, Orni adds \"not weighed; mark unmeasured\" ...",
+      "class": "'Entry B: ' prefix dropped; double quotes -> single quotes; references excerpt label 'Entry A' rather than event id"
+    },
+    {
+      "field": "timeline[0].description",
+      "literal_excerpt": "Entry A: Teva files the Lorn Index on the Slate Table.",
+      "class": "'Entry A: ' prefix dropped, remainder byte-identical"
+    },
+    {
+      "field": "entities.json#/0/claims/0.statement",
+      "literal_excerpt": "Teva names the paper folio \"Lorn Index\" as the sheet she opened for the check.",
+      "class": "declared mode verbatim (excerpt delivery); JSON statement is a paraphrase, not byte-identical"
+    },
+    {
+      "field": "entities.json#/1/claims/0.statement",
+      "literal_excerpt": "The folio identifies Teva and Orni as its two annotators.",
+      "class": "paraphrase of the anchor, not byte-identical"
+    },
+    {
+      "field": "entities.json#/2/claims/0.statement and #/3/claims/0.statement",
+      "literal_excerpt": "byte-identical",
+      "class": "none"
+    },
+    {
+      "field": "claim-excerpt-map.md E1/E3/E5/E7 parenthetical",
+      "literal_excerpt": "n/a",
+      "class": "parenthetical names the pointer VALUE (teva/orni/slate-table/lorn-index); E2..E12 parentheticals name field keys - table notation is not uniform"
+    },
+    {
+      "field": "claim-excerpt-map.md E11/E12 field list",
+      "literal_excerpt": "n/a",
+      "class": "node has an 'id' key not named in the declared field list"
+    },
+    {
+      "field": "pointer granularity E2..E12",
+      "literal_excerpt": "n/a",
+      "class": "rows cite the attribution-bearing node (entities.json#/0/claims/0, relations.json#/0, timeline.json#/0) while naming source_id in the field list; mechanical leaf-path form differs but maps 1:1"
+    }
+  ]
+}

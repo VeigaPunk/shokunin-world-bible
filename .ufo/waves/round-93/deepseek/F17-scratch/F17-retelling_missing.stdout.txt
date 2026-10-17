@@ -1,0 +1,7 @@
+INVENTORY JSON-FACTS 1/1; EDITORIAL-ROWS 0/0; TOTAL-ROWS 1/1; DISTINCT-ANCHORS 1/1
+ANCHORS repeated-references=0; DUPLICATE-ROWS 0
+WARN E1: retelling-support-only; anchor=not-found; mode=paraphrase
+RECEIPT JSON-FACTS 1; EDITORIAL-ROWS 0; TOTAL-ROWS 1
+SOURCE-SUPPORT 0/0; EDITORIAL-ANCHORS 0/0; RETELLING-SUPPORT-ONLY 1 entries (0/1 anchors); MODES 1/1; VALIDATED-ROWS 0/1
+WARN: retelling anchor not found for E1; excluded from source support
+RESULT PASS WITH WARNINGS

@@ -61,7 +61,7 @@ Rows follow the fleet schema in `../PROTOCOL.md:360-406`. `boundary_doc_check` n
 - **name:** `discriminate_check`
 - **gate/probe:** gate
 - **entry command:** `python3 corpus/tools/discriminate_check.py` (repository root); negative control: `python3 corpus/tools/discriminate_check.py --checker e97613c`
-- **code → class:** `0 → clean` (delivered semantics held); `2 → failed` (regression detected; expected for the negative control); `1 → could-not-evaluate` (check error/inconclusive); other codes → `could-not-evaluate`
+- **code → class:** for the valid entry commands above, `0 → clean` (delivered semantics held); `2 → failed` only with `REGRESSION-DETECTED` (expected for the negative control); `1 → could-not-evaluate` (check error/inconclusive). Argparse/usage errors also exit 2 but mean `could-not-evaluate`, not a regression verdict; require both the valid invocation and result text. Other codes → `could-not-evaluate`.
 - **self-test command:** unavailable; no self-test mode/flag (`--selftest` spelling absent); conformance debt
 - **pinned-values path:** `corpus/tools/discriminate_check.py` (`PIN`, `BASELINE`, fixture names) plus expected outputs in `corpus/fixtures/r91-c1-null-chain/README.md` and `corpus/fixtures/r91-c1-tick-unresolved/README.md`
 - **scope:** read-only comparison of the delivered checker and the pinned `e97613c` source on two durable fixtures; not a world-bible or source-support verdict

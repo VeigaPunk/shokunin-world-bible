@@ -39,3 +39,7 @@ Scope: all source-attributed JSON pointers in this cluster plus the three bounde
 | S3 | The named passage says the lands again become light; the comparison is only to making the record's unknown measurement explicit. | `kojiki-chamberlain-excerpt.md:10` | `translation` | `again became light` |
 
 These editorial rows do not make the Kojiki translation an in-world source, establish cultural meaning, or support any fictional JSON fact. The checker reports their lexical anchors separately as `EDITORIAL-ANCHORS`; its result is not a non-submitter R9 manual review.
+
+## Timeline normalization bound (2026-10-17)
+
+**E11/E12 bound.** The `tick` values `1`/`2` and both `depends_on` lists are editorial representations of the excerpt's order, not delivered excerpt wording: the ticks encode the `Entry A`/`Entry B` sequence at `archive-record-excerpt.md:10-11`, and E12's dependency encodes the literal phrase `after Entry A`. E11's empty `depends_on` means no earlier dependency in this mapped sequence; it is not an assertion that no earlier event exists anywhere. The row mode labels describe the delivered excerpt wording; they do not promise that every listed JSON metadata field is verbatim source text. This bound changes no row, span, anchor, or JSON value.

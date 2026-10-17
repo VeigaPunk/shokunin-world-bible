@@ -1,0 +1,43 @@
+{
+  "verbatim_active": {
+    "exit": 0,
+    "stdout": "R8 replay: PASS\ndelivered R8 appendix: VERIFIED\nrecord cells: 12/12\ncanonical record SHA-256: da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+    "stderr": ""
+  },
+  "verbatim_historical": {
+    "exit": 0,
+    "stdout": "gate_result: PASS\ncontrary_evidence: PASS\nseparability_rationale: PASS\nscope: PASS\nnext_action: PASS\nR8 record fields: 5/5",
+    "stderr": ""
+  },
+  "limits_phrase_occurrences": {
+    "in_active_code": true,
+    "total_lines": 2
+  },
+  "value_swap_gate_contrary": {
+    "exit": 1,
+    "finding": "R8_RECORD_DRIFT"
+  },
+  "nbsp_whitespace_variant": {
+    "exit": 0,
+    "finding": ""
+  },
+  "emspace_whitespace_variant": {
+    "exit": 0,
+    "finding": ""
+  },
+  "second_record_block_appended": {
+    "exit": 1,
+    "finding": "R8_RECORD_FIELDS"
+  },
+  "case_only_change_gate": {
+    "exit": 1,
+    "finding": "R8_RECORD_DRIFT"
+  },
+  "punct_only_change_scope": {
+    "exit": 1,
+    "finding": "R8_RECORD_DRIFT"
+  },
+  "patch_presence": {
+    "repo": true
+  }
+}

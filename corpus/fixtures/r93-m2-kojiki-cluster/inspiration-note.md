@@ -21,3 +21,7 @@ Open question — not assessed; no rights grant asserted. This covers Chamberlai
 ## AI-training-permission question
 
 Open question — not assessed; no permission inferred. Public access, attribution, and any rights conclusion do not establish AI-training permission; no explicit permission evidence was found or inferred.
+
+## Correction (2026-10-17)
+
+This correction supersedes the line-5 phrase “attributed on the source page to Basil Hall Chamberlain (1882).” The cited page labels the translator only “B.H. Chamberlain, translator 1882”; the expansion to the fuller name is not verified by that page, and no added full-name source claim is required or made. The three selected clauses are non-contiguous selections from the passage: one source sentence between the first and second clause is omitted, not reproduced. The edition/printed-copy, rights, and AI-training-permission questions above remain open and unassessed.
