@@ -48,3 +48,23 @@ fallback on the canonical taxonomy surface. Then a fresh L1 session may
 continue the pending r86 candidate after reconciling this blocked attempt.
 Receipt authority and missing lane contracts are separate named debt.
 retired: none added; no saturation or arbitrary round-count stop.
+
+## Capabilities
+
+| Capability | What it can now do | Evidence pointer | First-working round |
+|---|---|---|---|
+| — none yet — | | | |
+
+Rows enter only through a round that demonstrates the capability running (`AXES.md` §Capabilities); none enter through this rollout.
+
+## Saturation
+
+The lane's saturation line and stagnation window N are to be declared by the lane on its next round per `AXES.md` §The stagnation nudge; not asserted by this conformance change.
+
+## Planned
+
+Populated by the lane at each round start per the `SCORECARD.md` contract; no entries declared by this rollout.
+
+## Retired
+
+- none retired; record with justification when an axis is retired.
