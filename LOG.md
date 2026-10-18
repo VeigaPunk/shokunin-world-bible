@@ -3542,3 +3542,47 @@ self-test 19/19; chain 8/8; boundary CERTIFIED; C9 pair green (re-check
 checker pin `ff9fd2aa…` reproduced. SHONEN unchanged (four `[~]`, no
 `[x]`). No promotion, no push. r102 — the final round of the operator's
 loop (16–32 seats, zai glm-5.3-flash-low) — may start.
+
+## Round 102 — declaration before dispatch (2026-10-18)
+
+Operator closing-pair round 2 of 2 — the CAPSTONE. 20 seats (2 producers
++ 18 verifiers, counted at declaration and roster-verified: U1–U2,
+V01–V18) on `zai-coding-plan/glm-5.3-flash-low`. Baseline = r101 closure
+`542021a`. One batched AgentSwarm; poll-wait protocol; seat reports
+exclusive under `.ufo/waves/round-102/seats/` (absolute paths; ENDGAME
+CONVENTION: all-reports polls subtract SELF). Scores remain unmeasured.
+Owned axis set: depth, coverage, calibration; operability/freshness/
+adjacency judged as witnessed.
+
+**C1 — depth:** the push synthesis record
+`corpus/knowledge/r102-push-synthesis-r95-r102.md` — the eight-round
+regimen arc (r94 reconciliation; r95–r98 deepseek-flash; r98 hyper
+completion wave; r99 grok-4.7 xhigh; r100 sol-max; r101–r102 GLM) with a
+per-round capability-delta table, the tool suite's final state (six
+registry gates), the honesty ledger (no rubric invented, SHONEN unchanged,
+no promotion), and the explicit non-achievements. Every cited commit hash
+exists; every per-round delta matches its SCORECARD section.
+
+**C2 — calibration:** the consolidated machine-readable debt ledger
+`corpus/knowledge/r102-debt-ledger.json` — every debt item raised across
+r94–r101 with its final disposition (closed / addressed / carried with
+named owner), each carrying its evidence pointer. Falsifiable: item count
+and dispositions match the source debt ledgers (r94 F29, r95 V31, r96
+V40, r97 V37, r98 V33, r99 V36, r100 V33, r101 carried notes), and no
+item is silently dropped.
+
+**C3 — freshness:** the final stale-pin sweep across every knowledge
+note and index surface — every SHA-like token and receipt claim
+re-verified against delivered bytes; anything stale is corrected by a
+dated addendum (U2-owned) or explicitly waived with reason; the C9
+watch's due r102 re-check lands at closure.
+
+**Admission rule:** admit iff C1/C2/C3 verify on the delivered revision
+and no axis is harmed; per-axis verdicts, no scalars; harmed or
+unprovable claims reported as such. Same-lane rule. This is the final
+round of the operator's loop: closure brings the ledger to
+`lane_rounds.lore == 102`. Producer byte-ownership: U1
+`corpus/knowledge/r102-push-synthesis-r95-r102.md` +
+`corpus/knowledge/r102-debt-ledger.json`; U2 dated correction addenda in
+any knowledge file plus `corpus/knowledge/r102-freshness-sweep.md`.
+Everything else is read-only except seat reports.
