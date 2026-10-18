@@ -3345,3 +3345,60 @@ self-test 25/25; boundary CERTIFIED; C9 pair green; census 173/39/134/421;
 checker pin `ff9fd2aa…` reproduced. SHONEN unchanged (four `[~]`, no `[x]`).
 No promotion, no push. r100 (32-seat `openai-codex/gpt-6.1-sol` max) may
 start; then r101–r102 (16–32-seat zai glm-5.3-flash each).
+
+## Round 100 — declaration before dispatch (2026-10-17)
+
+Operator 100-round regimen round 6 — the 32-seat `openai-codex/gpt-6.1-sol`
+[max effort, via the pool variant `openai-codex/gpt-6.1-sol-max`] flagship
+round. Baseline = r99 closure `fe1ce46`. One batched AgentSwarm, 32 seats:
+4 producer seats (exclusive byte-ownership) + 28 verifier/judge seats on
+the poll-wait protocol (20 s cadence, 40 tries; ABSENT, never verify a
+plan; ENDGAME CONVENTION: all-reports polls subtract SELF). Seat reports
+exclusive under `.ufo/waves/round-100/seats/` (absolute paths). Scores
+remain unmeasured. Owned axis set: depth, coverage, calibration;
+operability/freshness/adjacency judged as witnessed.
+
+**C1 — coverage:** pin `r99-window-lapse` into the frozen chain through the
+guarded `--freeze`; the chain becomes seven fixtures (r88-m3, r94, r95,
+r96, r97, r98, r99) verifying 7/7 clean; the pin records the schema-2
+ten-file payload; no other pin's fields change. This discharges the r99
+recorded bound (the tick-15 edge unfrozen).
+
+**C2 — depth (one axis-move, two falsifiable components):** component 1 —
+sixth beat: `corpus/fixtures/r100-docket-review/`, a preserving copy of
+`r99-window-lapse` plus one authored source (`clerk-review-note`) and one
+tick-16 event (`clerk-review-first-passage`, actor `clerk-maren`, place
+`chalk-stair`, `depends_on: ["clerk-lapse-recorded"]`) recording the
+clerk's first-passage docket review: the entry remains open, no new
+filings, no finding. Before: 6/1/8, 8 sources at r99. After: 6/1/9,
+9 sources, 22 map obligations (21 inherited + 1 event), `check_bible`
+CLEAN, inherited rows parsed-value identical, census 173→174.
+Component 2 — `corpus/knowledge/r100-crossing-arc-synthesis.md`: the
+six-beat arc dossier (r94 minute → r95 aftermath → r96 response → r97
+acknowledgment → r98 filing → r99 lapse → r100 review) with per-beat
+records, the unresolved-throughout invariant, and the explicit
+non-establishment bounds (no testimony truth, no chronology
+authentication, editorial ticks/IDs).
+
+**C3 — calibration:** the BR-01 semantics-boundary record
+(`corpus/knowledge/r100-provenance-semantics-boundary.md`) stating
+precisely what full-file pinning establishes (byte-change detectability)
+and does not (dependency semantics, prose entailment), plus three dated
+row-additions to `corpus/knowledge/r99-gate-blind-spot-table.md` for the
+classes r99 discovered (mapped-verbatim-anchor removal was already
+support_check-visible; semantic findings precede DIGEST-MISMATCH; combined
+`fixture --freeze fixture` exits INVALID-ARGUMENTS only) — each new row
+carrying a replayed command and observed output on the delivered revision.
+
+**Admission rule:** admit iff C1, C2 (both components), and C3 verify on
+the delivered revision and no axis is harmed; per-axis verdicts, no
+scalars; harmed or unprovable claims reported as such. Same-lane rule.
+r101 does not start on an unclosed r100. Producer byte-ownership: T1
+`corpus/tools/dependency-freeze-contract.json` (via guarded --freeze only)
++ `corpus/tools/README.md` + SKILL.md freeze row; T2
+`corpus/fixtures/r100-docket-review/` JSON tables + `fictional-excerpts.md`
+(byte copies of r99's other 7 files); T3 `r100-docket-review/README.md` +
+`claim-excerpt-map.md`; T4 `corpus/knowledge/r100-crossing-arc-synthesis.md`
++ `corpus/knowledge/r100-provenance-semantics-boundary.md` + dated
+addenda rows in `corpus/knowledge/r99-gate-blind-spot-table.md`. Everything
+else is read-only except seat reports.
