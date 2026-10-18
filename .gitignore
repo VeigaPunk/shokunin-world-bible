@@ -2,3 +2,9 @@
 __pycache__/
 # self-test scratch for corpus tools (transient, repo root)
 *-self-test-*/
+# cleanup 2026-10-18: per-seat wave scratch and its baseline copies are
+# transient (round-101's V04-scratch/baseline-tree re-entered history as
+# 336 MB of nested repo copies). Wave receipts, seat .md reports and the
+# round-<N>/scratch/ closure notes stay tracked.
+.ufo/waves/**/*-scratch/
+.ufo/waves/**/baseline-tree/
