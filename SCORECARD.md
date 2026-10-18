@@ -593,3 +593,38 @@ round; candidates: pin r99-window-lapse into the chain (seven fixtures),
 the arc's sixth beat or a synthesis record, BR-01 semantics boundary
 documentation. Then r101–r102 (16–32-seat zai glm-5.3-flash each).
 saturation: not declared. retired: none.
+
+## Round 100 — closed, ADMITTED (2026-10-17)
+
+Flagship round on `openai-codex/gpt-6.1-sol` [max effort, pool variant
+`gpt-6.1-sol-max`]. ROSTER ERRATUM (recorded append-only in LOG): the
+declaration said 32 seats; the dispatched roster was 34 (4 producers +
+30 verifiers); 34/34 reports; receipt filled from the real dispatch.
+Baseline `fe1ce46` (+ legitimate pre-dispatch `b5fe472`, `ae67105`);
+closure `6f86bf2`. V29 adjudication: all substantive claims verify on the
+delivered bytes; admission was conditioned on L1 items only (roster,
+baseline qualification, docs, report-only errata) — all discharged at
+closure. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| coverage | improved (bounded) | C1: `r99-window-lapse` pinned into the chain through the guarded `--freeze` (the sole non-addition delta is the writer-managed top-level `revision` refresh, disclosed); seven fixtures verify 7/7 clean; all six inherited pins byte-identical; r99's recorded bound (tick-15 edge unfrozen) discharged — a scratch REDUCTION-DETECTED on that exact edge reproduced by the adjudicator. Bounds: r100-docket-review unpinned; r88 symbolism file outside the pins. |
+| depth | improved (bounded) | C2 component 1: `r100-docket-review` — beat six (first-passage review; entry open; nothing resolved); 6/1/8→6/1/9, sources 8→9, 22/22 obligations, CLEAN, census 173→174, zero inherited changes. Component 2: `r100-crossing-arc-synthesis.md` — the six-continuation dossier; adjudicator-verified 6/6 preservation steps, seven snapshot counts, unresolved-throughout invariant with the temporal qualification (OPEN first appears at r98); non-establishment bounds explicit. |
+| calibration | improved (bounded) | C3: `r100-provenance-semantics-boundary.md` separates byte-detectability from semantics; three dated addenda rows (10–12) in the blind-spot table replay 9/9 (anchor-removal visibility bound, semantic-first precedence, combined-invocation INVALID-ARGUMENTS); the original 20,526 table bytes preserved as an exact prefix. |
+| operability | unchanged (not harmed) | Documented commands replay; V21's literal-harness limit retained (two T4 harnesses not independently re-runnable — bounded, recorded). |
+| freshness | unchanged (bounded) | Closure docs landed (fixtures README Round-100, corpus README freeze bullet repaired, C9 row 9); historical receipts preserved. |
+| adjacency | unchanged (not harmed) | Charter byte-identical; the parent probes were read-only; V15/V18/V20 FAILs discharged or bounded, none re-rolled. |
+
+Learning trends: expansion improved (174 dirs; seven-fixture chain; the
+arc dossier); quality improved (guarded pin reproduction byte-identical;
+6/6 arc preservation); discernment improved (V29 withheld admission on
+process grounds alone — roster arithmetic, baseline attribution, report-only
+digests — and every condition was discharged without re-rolling a single
+FAIL; the guarded writer's revision-refresh delta disclosed rather than
+hidden).
+
+planned (r101–r102): two rounds of 16–32 seats on
+`zai-coding-plan/glm-5.3-flash-low`, closing the operator's loop at 102.
+Candidates: pin r100 into the chain (eight fixtures), SHONEN/promotion
+assessment as a named question for the operator, BR-01 semantics follow-ups.
+saturation: not declared. retired: none.
