@@ -1,0 +1,40 @@
+{
+  "ref": "f3e09f9",
+  "root": "corpus/fixtures",
+  "baseline_top_dirs": 170,
+  "work_top_dirs": 171,
+  "baseline_all_dirs": 170,
+  "work_all_dirs": 171,
+  "baseline_files": 1010,
+  "work_files": 1020,
+  "inherited_files": 1009,
+  "modified_inherited": [
+    "r96-crossing-response/claim-excerpt-map.md"
+  ],
+  "deleted_inherited": [],
+  "new_top_dirs": [
+    "r97-crossing-acknowledgment"
+  ],
+  "gone_top_dirs": [],
+  "new_files_count": 10,
+  "new_files": [
+    "r97-crossing-acknowledgment/README.md",
+    "r97-crossing-acknowledgment/claim-excerpt-map.md",
+    "r97-crossing-acknowledgment/contradictions.json",
+    "r97-crossing-acknowledgment/entities.json",
+    "r97-crossing-acknowledgment/fictional-excerpts.md",
+    "r97-crossing-acknowledgment/inspiration-note.md",
+    "r97-crossing-acknowledgment/relations.json",
+    "r97-crossing-acknowledgment/source-excerpt.md",
+    "r97-crossing-acknowledgment/sources.json",
+    "r97-crossing-acknowledgment/timeline.json"
+  ],
+  "unexpected_new_dirs": [
+    "r97-crossing-acknowledgment"
+  ],
+  "verdict": "FAIL",
+  "reasons": [
+    "top_dirs 171 != expected 170",
+    "unexpected new dirs ['r97-crossing-acknowledgment']"
+  ]
+}

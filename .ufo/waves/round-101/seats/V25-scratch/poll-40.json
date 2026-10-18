@@ -1,0 +1,179 @@
+{
+ "census_utc": "2026-10-18T03:19:16.038424+00:00",
+ "expected_roster": [
+  "U1",
+  "U2",
+  "V01",
+  "V02",
+  "V03",
+  "V04",
+  "V05",
+  "V06",
+  "V07",
+  "V08",
+  "V09",
+  "V10",
+  "V11",
+  "V12",
+  "V13",
+  "V14",
+  "V15",
+  "V16",
+  "V17",
+  "V18",
+  "V19",
+  "V20",
+  "V21",
+  "V22",
+  "V23",
+  "V24",
+  "V25",
+  "V26"
+ ],
+ "expected_count": 28,
+ "present": [
+  "V02",
+  "V13",
+  "V22",
+  "V26",
+  "V28"
+ ],
+ "present_count": 5,
+ "present_excl_self": [
+  "V02",
+  "V13",
+  "V22",
+  "V26",
+  "V28"
+ ],
+ "present_excl_self_count": 5,
+ "self_seat": "V25",
+ "self_report_files": [],
+ "missing_seat_ids": [
+  "U1",
+  "U2",
+  "V01",
+  "V03",
+  "V04",
+  "V05",
+  "V06",
+  "V07",
+  "V08",
+  "V09",
+  "V10",
+  "V11",
+  "V12",
+  "V14",
+  "V15",
+  "V16",
+  "V17",
+  "V18",
+  "V19",
+  "V20",
+  "V21",
+  "V23",
+  "V24",
+  "V25"
+ ],
+ "excess_seat_ids": [
+  "V28"
+ ],
+ "duplicate_report_prefixes": {},
+ "scratch_dirs": [
+  ".V11-scratch",
+  ".v05-scratch",
+  ".v14-scratch",
+  ".v16-scratch",
+  ".v28-scratch",
+  "U1-chain-eight-scratch",
+  "V03-scratch",
+  "V04-scratch",
+  "V06-scratch",
+  "V09-scratch",
+  "V13-scratch",
+  "V17-scratch",
+  "V20-scratch",
+  "V21-scratch",
+  "V23-scratch",
+  "V25-scratch"
+ ],
+ "scratch_dirs_without_report": [
+  ".V11-scratch",
+  ".v05-scratch",
+  ".v14-scratch",
+  ".v16-scratch",
+  ".v28-scratch",
+  "U1-chain-eight-scratch",
+  "V03-scratch",
+  "V04-scratch",
+  "V06-scratch",
+  "V09-scratch",
+  "V17-scratch",
+  "V20-scratch",
+  "V21-scratch",
+  "V23-scratch",
+  "V25-scratch"
+ ],
+ "header_token_misses_first20": [],
+ "empty_reports": [],
+ "tiny_reports_under_200_bytes": [],
+ "unexpected_md_in_seats_dir": [],
+ "seat_reports": {
+  "V02": [
+   {
+    "file": "V02-c1-discharge.md",
+    "sha256": "caf17af6991cd87ec7226035b342b672e8f230af4cc949caed65450bdaa57c1e",
+    "bytes": 6001,
+    "mtime_utc": "2026-10-18T03:15:06.141725+00:00",
+    "header_has_seat_token": true,
+    "empty": false,
+    "tiny_under_200": false
+   }
+  ],
+  "V13": [
+   {
+    "file": "V13-scope-creep.md",
+    "sha256": "83b5e8220699bf8941bb6eedcc282ad6714c10bb6a1422fba7c3d06b625565af",
+    "bytes": 2450,
+    "mtime_utc": "2026-10-18T03:15:34.935783+00:00",
+    "header_has_seat_token": true,
+    "empty": false,
+    "tiny_under_200": false
+   }
+  ],
+  "V22": [
+   {
+    "file": "V22-verdict-freshness.md",
+    "sha256": "67e0afe034f9425e3a5843003ebb262e357bdd212a10cc678f672f37b685bf2a",
+    "bytes": 5524,
+    "mtime_utc": "2026-10-18T03:16:06.273846+00:00",
+    "header_has_seat_token": true,
+    "empty": false,
+    "tiny_under_200": false
+   }
+  ],
+  "V26": [
+   {
+    "file": "V26-cross-seat-audit.md",
+    "sha256": "3eaecff898a54e8260fd052f7cc586a87bf8e10bfb69095a7c978932092aaac7",
+    "bytes": 6126,
+    "mtime_utc": "2026-10-18T03:18:18.502106+00:00",
+    "header_has_seat_token": true,
+    "empty": false,
+    "tiny_under_200": false
+   }
+  ],
+  "V28": [
+   {
+    "file": "V28-late-bookkeeper.md",
+    "sha256": "b76fab131b2e206c873342ebf1308f6429443e238b398b5c8d8ffeb1e3d6d647",
+    "bytes": 9766,
+    "mtime_utc": "2026-10-18T03:19:15.570218+00:00",
+    "header_has_seat_token": true,
+    "empty": false,
+    "tiny_under_200": false
+   }
+  ]
+ },
+ "complete_excl_self": false
+}

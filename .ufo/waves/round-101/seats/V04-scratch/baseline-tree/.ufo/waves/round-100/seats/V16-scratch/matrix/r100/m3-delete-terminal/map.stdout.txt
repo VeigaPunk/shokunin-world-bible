@@ -1,0 +1,4 @@
+OBLIGATIONS raw=21 mapped=22
+INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24
+FINDING phantom_obligation: timeline.json#/8 is not a raw source-attributed obligation
+RESULT FAIL

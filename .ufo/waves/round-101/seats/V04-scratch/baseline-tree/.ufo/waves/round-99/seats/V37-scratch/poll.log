@@ -1,0 +1,148 @@
+2026-10-17T22:01:26-03:00
+HEAD=337f0fa52b02626b7687eedbb2d99fab30446fe4
+BASELINE=4265df5e86e4121bde4125b649b89bb1676676a5
+--- poll 0 artifact snapshot ---
+events 8 last_id clerk-lapse-recorded tick 15
+corpus/knowledge/r99-gate-blind-spot-table.md ABSENT
+corpus/knowledge/r99-lapse-scope-note.md ABSENT
+reports []
+report S1-freeze-hygiene.md False
+report S1.md False
+report S2-tools-docs.md False
+report S3-fixture-author.md False
+report S4-fixture-docs.md False
+report S5-knowledge-notes.md False
+S2-scratch
+S4-scratch
+V03-scratch
+V04-scratch
+V07-scratch
+V08-scratch
+V09-scratch
+V103-scratch
+V11-scratch
+V12-scratch
+V15-scratch
+V16-scratch
+V19-scratch
+V20-scratch
+V22-scratch
+V23-scratch
+V24-scratch
+V26-scratch
+V27-scratch
+V28-scratch
+V29-scratch
+V31-scratch
+V32-scratch
+V33-scratch
+V36-scratch
+V37-scratch
+V38-scratch
+V42-scratch
+V47-scratch
+V48-scratch
+V65-scratch
+V72-scratch
+V84-scratch
+2026-10-17T22:02:18-03:00
+FIXTURE True
+  README.md 5829 32efc78f70e6 mtime=1792283770
+  claim-excerpt-map.md 15028 c1099d0ee9ee mtime=1792283770
+  contradictions.json 3 37517e5f3dc6 mtime=1792283770
+  entities.json 1793 db2d8e5d3866 mtime=1792283770
+  fictional-excerpts.md 5114 fefebaf93d14 mtime=1792285274
+  inspiration-note.md 1956 58f5390e5928 mtime=1792283770
+  relations.json 139 c279254bc7de mtime=1792283770
+  source-excerpt.md 640 b5edc2fd3c2e mtime=1792283770
+  sources.json 3293 8c215b38dc02 mtime=1792285274
+  timeline.json 2998 2cdb9fda5baa mtime=1792285274
+events 8 last clerk-lapse-recorded 15
+sources 8 ids ['veil-verse', 'paired-clock', 'crossing-minute', 'aru-aftermath-note', 'evin-response-note', 'aru-acknowledgment-note', 'clerk-filing-note', 'clerk-lapse-note']
+corpus/knowledge/r99-gate-blind-spot-table.md ABSENT 
+corpus/knowledge/r99-lapse-scope-note.md ABSENT 
+tool 65c1ae309385feed mtime 1792285324.079078
+contract 153ebc5b2092948e mtime 1792280016.6118748
+reports ['S3-fixture-author.md']
+S-dirs ['S2-scratch', 'S3-fixture-author.md', 'S4-scratch']
+2026-10-17T22:02:53-03:00
+FIXTURE files:
+  README.md 5829 32efc78f70e6
+  claim-excerpt-map.md 15028 c1099d0ee9ee
+  contradictions.json 3 37517e5f3dc6
+  entities.json 1793 db2d8e5d3866
+  fictional-excerpts.md 5114 fefebaf93d14
+  inspiration-note.md 1956 58f5390e5928
+  relations.json 139 c279254bc7de
+  source-excerpt.md 640 b5edc2fd3c2e
+  sources.json 3293 8c215b38dc02
+  timeline.json 2998 2cdb9fda5baa
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+FILE corpus/tools/dependency_freeze.py 29211 65c1ae309385feed mtime=1792285324
+FILE corpus/tools/dependency-freeze-contract.json 19291 153ebc5b2092948e mtime=1792280017
+FILE corpus/tools/README.md 32577 294dd56f29ce1fd4 mtime=1792283525
+FILE SKILL.md 16802 22ffaa822ec7614f mtime=1792283664
+reports ['S3-fixture-author.md', 'V80-c2-prose-prefix.md']
+schema 1 pins ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+self_test n 17 keys ['clean', 'reduction_edge_drop', 'addition_edge_phantom', 'event_removed', 'event_endpoint_change', 'relation_endpoint_flip', 'relation_removed', 'relation_added', 'digest_tamper', 'malformed_json', 'missing_timeline', 'unpinned_fixture', 'missing_fixture', 'invalid_arguments', 'scope_refused', 'path_mismatch', 'self_test_mismatch']
+2026-10-17T22:04:47-03:00
+map 17119 d2fe20e581d1
+readme 6176 b93209417a91
+excerpt 5114 fefebaf93d14
+corpus/knowledge/r99-gate-blind-spot-table.md ABSENT 
+corpus/knowledge/r99-lapse-scope-note.md ABSENT 
+tool 1728ed892442c498 size 29048
+contract 8f9c1f5316141b61 size 21007
+schema 2 pins ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+self_test 18 True
+pin keys sample ['content_sha256', 'counts', 'events', 'files', 'fixture', 'relations', 'revision']
+payload_schema None nfiles 5
+reports ['S3-fixture-author.md', 'S4-fixture-docs.md', 'V10-c2-checker.md', 'V68-adjacency-2.md', 'V80-c2-prose-prefix.md']
+2026-10-17T22:05:13-03:00
+tool 1728ed892442c498 29048 mtime 1792285401
+contract 8f9c1f5316141b61 21007 mtime 1792285468
+schema 2
+data_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json']
+keys ['data_files', 'exit_codes', 'payload_schema_version', 'pinned_files', 'pins', 'precedence', 'provenance_note', 'required_files', 'revision', 'schema_version', 'scope', 'self_test', 'tool']
+pins ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+  r88-m3-maya-cluster schema=None nfiles=5 files=['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json'] rev=60dba0c2aa34
+  r94-paired-crossing schema=None nfiles=5 files=['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json'] rev=60dba0c2aa34
+  r95-crossing-aftermath schema=None nfiles=5 files=['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json'] rev=60dba0c2aa34
+  r96-crossing-response schema=None nfiles=5 files=['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json'] rev=2393934237ea
+  r97-crossing-acknowledgment schema=None nfiles=5 files=['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json'] rev=dd4df1b36a64
+  r98-clerk-filing schema=None nfiles=5 files=['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json'] rev=dd4df1b36a64
+self_test 18
+markdown_tamper {"exit": 2, "finding_ids": ["DIGEST-MISMATCH"], "names_file": "fictional-excerpts.md", "forbid_traceback": true}
+precedence has DIGEST True
+precedence snippet semantic inventory findings decide first (exit 1: REDUCTION-DETECTED, ADDITION-DETECTED, ENDPOINT-CHANGE); a content digest change the semantic inventory does not model exits 2 (DIGEST-MISMATCH) and names each changed pinned file, including
+corpus/knowledge/r99-gate-blind-spot-table.md ABSENT 
+corpus/knowledge/r99-lapse-scope-note.md ABSENT 
+S-reports ['S3-fixture-author.md', 'S4-fixture-docs.md']
+2026-10-17T22:09:38-03:00
+tool 6f81f8be19742372 29104 mtime 1792285653
+contract 8c2561b043c25db7 25987 mtime 1792285726
+schema 2 payload_schema_version 2
+pinned_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+n_pins 6
+  r88-m3-maya-cluster psv=2 nfiles=10 md=['README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+  r94-paired-crossing psv=2 nfiles=10 md=['README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+  r95-crossing-aftermath psv=2 nfiles=10 md=['README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+  r96-crossing-response psv=2 nfiles=10 md=['README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+  r97-crossing-acknowledgment psv=2 nfiles=10 md=['README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+  r98-clerk-filing psv=2 nfiles=10 md=['README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+self_test 18 True
+corpus/knowledge/r99-gate-blind-spot-table.md ABSENT 
+corpus/knowledge/r99-lapse-scope-note.md ABSENT 
+S-reports ['S3-fixture-author.md', 'S4-fixture-docs.md']
+n_reports 7
+2026-10-17T22:16:09-03:00
+snap-b
+corpus/tools/dependency_freeze.py 6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067 29104 1792285653
+corpus/tools/dependency-freeze-contract.json 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628 25987 1792285726
+corpus/tools/README.md 294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207 32577 1792283525
+SKILL.md 22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5 16802 1792283663
+S ['S3-fixture-author.md', 'S4-fixture-docs.md']
+corpus/knowledge/r99-gate-blind-spot-table.md False 0
+corpus/knowledge/r99-lapse-scope-note.md False 0
+2026-10-17T23:01:48-03:00

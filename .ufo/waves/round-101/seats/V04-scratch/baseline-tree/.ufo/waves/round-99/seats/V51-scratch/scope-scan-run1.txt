@@ -1,0 +1,79 @@
+
+===== corpus/fixtures/r99-window-lapse/README.md (6168 chars) =====
+  L9 [UNSCOPED blame,verdict] The inherited paired-clock entries remain distinct tick-9 events: Aru's north lantern at Quiet Rise and Evin's south bell at Salt Court. The inherited tick-10 meeting at the Chalk Stair remains ordered after and explicit
+  L11 [UNSCOPED duty,closed] The lapse bound is explicit in the record: the window closed per the original minute's terms; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry and the matter stays open. Th
+  L15 [scoped] `first_appearance: crossing-minute` identifies the source that first presents Chalk Stair as a specific place in the JSON bible, not the earliest occurrence of the words: the inherited r88 verse already uses “chalk stair
+  L21 [UNSCOPED claim,obligation] `claim-excerpt-map.md` has 21 source-attributed JSON pointer obligations (the 20 inherited rows carried unchanged plus the new tick-15 lapse event, pointer `timeline.json#/7`) and separately labeled editorial comparisons
+  L28 [UNSCOPED obligation] python3 corpus/tools/map_obligations.py corpus/fixtures/r99-window-lapse
+
+===== corpus/fixtures/r99-window-lapse/claim-excerpt-map.md (17107 chars) =====
+  L1 [UNSCOPED claim] # r99 window-lapse: canonical claim-to-excerpt map
+  L3 [UNSCOPED obligation,claim] Scope: all 21 source-attributed JSON obligations in this continuation (six first-appearance pointers, six entity claims, one relation, and eight timeline events), plus two separately labeled editorial comparisons. JSON p
+  L14 [scoped] `verbatim` names the delivered wording, not a claim that every normalized JSON field is a literal quotation. Review each whole proposition and its bounded scope.
+  L27 [UNSCOPED claim] | J06 | `entities.json#/0/claims/0` (`statement`, `source_id`) | `paired-clock` | `r99-window-lapse:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Tick 9: Aru carried the north lantern at Quiet Rise.` |
+  L28 [UNSCOPED claim] | J07 | `entities.json#/1/claims/0` (`statement`, `source_id`) | `paired-clock` | `r99-window-lapse:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Tick 9: Evin held the south bell at Salt Court.` |
+  L29 [UNSCOPED claim] | J08 | `entities.json#/2/claims/0` (`statement`, `source_id`) | `paired-clock` | `r99-window-lapse:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `north lantern at Quiet Rise` |
+  L30 [UNSCOPED claim] | J09 | `entities.json#/3/claims/0` (`statement`, `source_id`) | `paired-clock` | `r99-window-lapse:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `south bell at Salt Court` |
+  L31 [UNSCOPED claim] | J10 | `entities.json#/4/claims/0` (`statement`, `source_id`) | `crossing-minute` | `r99-window-lapse:crossing-minute` | `fictional-excerpts.md` | 18 | `verbatim` | `After both Tick 9 entries above, Aru and Evin met at 
+  L40 [UNSCOPED claim] | J19 | `entities.json#/5/claims/0` (`statement`, `source_id`) | `clerk-filing-note` | `r99-window-lapse:clerk-filing-note` | `fictional-excerpts.md` | 59-60 | `verbatim` | `I filed both pending accounts at the Chalk Sta
+  L42 [scoped] | J21 | `timeline.json#/7` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `clerk-lapse-note` | `r99-window-lapse:clerk-lapse-note` | `fictional-excerpts.md` | 66-76 | `verbatim` | `Tick 15:
+  L55 [scoped] The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` and `evin-ninth-bell`); the inherited tick-11 aftermath event 
+  L57 [UNSCOPED duty,breach] J15's anchor is the tick-11 waiting sentence (line 26); its declared span 22-31 is exactly the inherited aftermath section, whose remaining quoted lines carry the non-arrival (`Evin did not come.`, line 27), the crossing
+  L59 [scoped] J16's anchor is the tick-12 response sentence (line 37); its declared span 33-42 is exactly the appended response section, whose remaining quoted lines carry the no-accusation assertion (`I make no accusation against Aru
+  L61 [UNSCOPED winner,duty] J17's anchor is the tick-13 receipt sentence (line 48); its declared span 44-53 is exactly the appended acknowledgment section, whose remaining quoted lines carry the retained account (`I hold to my own account; both acc
+  L63 [scoped] J18's anchor is the self-naming sentence (line 60); its declared span 60 is that sentence alone, which names Maren as clerk of the Chalk Stair registry and records the matter OPEN. The record's `first_appearance` is `cle
+  L65 [scoped] J19's anchor is the filing sentence (line 59); its declared span 59-60 covers the filing sentence and the self-naming sentence that follows, whose remaining words carry the naming (`I am Maren, clerk of the Chalk Stair r
+  L67 [scoped] J20's anchor is the tick-14 filing sentence (line 59); its declared span 55-64 is exactly the appended clerk-filing section, whose remaining quoted lines carry the self-naming and OPEN record (line 60), the no-finding as
+  L69 [UNSCOPED closed,blame,reconcil,closed] J21's anchor is the tick-15 window-closed sentence (line 70); its declared span 66-76 is exactly the appended lapse section, whose remaining quoted lines carry the unfulfilled agreement (`The agreement was unfulfilled.`,
+  L70 [scoped] `support_check.py` checks declared row inventory, fixed-string anchors, spans, and R9 mode; its receipt is lexical preflight, not manual whole-claim entailment or a verdict on source authenticity, truth, rights, permissi
+
+===== corpus/fixtures/r99-window-lapse/contradictions.json (3 chars) =====
+
+===== corpus/fixtures/r99-window-lapse/entities.json (1793 chars) =====
+  L7 [UNSCOPED claim]     "claims": [
+  L19 [UNSCOPED claim]     "claims": [
+  L31 [UNSCOPED claim]     "claims": [
+  L43 [UNSCOPED claim]     "claims": [
+  L55 [UNSCOPED claim]     "claims": [
+  L67 [UNSCOPED claim]     "claims": [
+
+===== corpus/fixtures/r99-window-lapse/fictional-excerpts.md (5098 chars) =====
+  L29 [scoped] > I assert no other duty, no breach, and no obligation beyond this crossing.
+  L31 [scoped] Scope: this appended section is Aru's first-person report of one non-arrival at the Chalk Stair. It asserts no breach and no perpetual or continuing obligation; the crossing-scoped agreement above is unchanged, and the r
+  L39 [scoped] > I select no winner between our two accounts.
+  L42 [scoped] Scope: this appended section is Evin's first-person report of one crossing occasion. It asserts no accusation and no breach, selects no winner, and does not resolve the two first-person accounts against each other; the c
+  L50 [scoped] > I make no accusation against Evin, and I select no winner between us.
+  L51 [scoped] > I assert no reconciliation, no new duty, and no obligation beyond this crossing.
+  L53 [scoped] Scope: this appended section is Aru's first-person acknowledgment that he received Evin's response. It records receipt only; it asserts no accusation, no reconciliation, no winner between the two accounts, and no new dut
+  L60 [scoped] > I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+  L61 [scoped] > I assert no finding.
+  L62 [scoped] > I reach no verdict and reconcile nothing.
+  L64 [scoped] Scope: this appended section is the harbor clerk's first-person filing record. It is an institutional filing only: it asserts no finding and no resolution, reaches no verdict, and reconciles nothing; the two first-person
+  L70 [scoped] > Tick 15: The crossing-window named in the original minute has closed.
+  L71 [scoped] > The agreement was unfulfilled.
+  L72 [scoped] > No claim was lodged.
+  L73 [scoped] > The matter stands as a historical open entry.
+  L74 [scoped] > I record no resolution, assign no blame, and reconcile nothing.
+  L76 [scoped] Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that t
+
+===== corpus/fixtures/r99-window-lapse/inspiration-note.md (1940 chars) =====
+
+===== corpus/fixtures/r99-window-lapse/relations.json (139 chars) =====
+
+===== corpus/fixtures/r99-window-lapse/source-excerpt.md (622 chars) =====
+
+===== corpus/fixtures/r99-window-lapse/sources.json (3293 chars) =====
+  L24 [UNSCOPED obligation]     "reliability_note": "Newly authored fictional note; Aru reports waiting at the Chalk Stair through the agreed bell and that Evin did not come. It records one crossing occasion only and is not evidence of a breach, a 
+  L30 [UNSCOPED obligation]     "reliability_note": "Newly authored fictional note; Evin reports being at Salt Court through the same agreed bell. It asserts no accusation against Aru, selects no winner, and states that both first-person accounts s
+  L36 [UNSCOPED winner,duty]     "reliability_note": "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of
+  L42 [scoped]     "reliability_note": "Newly authored fictional note; the clerk reports filing both pending accounts at the Chalk Stair registry and recording the matter OPEN. It asserts no finding, no verdict, no reconciliation, and 
+  L48 [UNSCOPED winner]     "reliability_note": "Newly authored fictional note; the clerk reports that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matte
+
+===== corpus/fixtures/r99-window-lapse/timeline.json (2998 chars) =====
+  L40 [scoped]     "description": "At the Chalk Stair at tick 11, Aru reports waiting through the agreed bell and that Evin did not come; the note scopes the agreement to this crossing only and asserts no other duty or breach.",
+  L51 [scoped]     "description": "Evin reports being at Salt Court through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved.",
+  L62 [scoped]     "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between t
+  L66 [scoped]     "id": "clerk-filing-open",
+  L73 [scoped]     "description": "At the Chalk Stair at tick 14, the clerk filed both pending accounts and recorded the matter OPEN, asserting no finding and no resolution.",
+  L82 [scoped]       "clerk-filing-open"
+  L84 [scoped]     "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical

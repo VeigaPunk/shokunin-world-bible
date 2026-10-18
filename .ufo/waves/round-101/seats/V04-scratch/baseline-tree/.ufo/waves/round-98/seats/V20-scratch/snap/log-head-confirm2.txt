@@ -1,0 +1,4 @@
+dd4df1b lore r97: close round — SCORECARD admitted section
+9a3d648 lore r97: drop embedded scratch clone (V37 mirror-freeze gitlink) from the wave tree
+9d25df9 lore r97: freeze admitted wave + closure docs (pinning/ freeze hardening, r96 repair, receipt 64/64)
+2393934 lore r96: close round — SCORECARD admitted section

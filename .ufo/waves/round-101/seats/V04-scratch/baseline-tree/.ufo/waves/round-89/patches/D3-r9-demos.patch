@@ -1,0 +1,146 @@
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/README.md b/corpus/fixtures/r89-inspiration-paraphrase/README.md
+new file mode 100644
+index 0000000..a230571
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/README.md
+@@ -0,0 +1,19 @@
++# R9 paraphrase-delivery negative demo
++
++This is a minimal fictional bible for the in-world source `ash-ledger`. Its delivered `ash-ledger-excerpt.md` is explicitly a modern paraphrase, not the source's own text; the underlying wording is not included. The entity claim and excerpt deliberately share the exact anchor `moved to the west stair`.
++
++R9 requires declaring the excerpt's delivery mode (verbatim, translation, paraphrase, or summary) in both the excerpt and each claim-to-excerpt map entry, with the path, line span, and paraphrase author/editor when known. A paraphrase is not the source's own text and cannot by itself support a claim about that source; it documents only the existence of the retelling, and its anchor only proves that the phrase occurs in the paraphrase. The underlying source text is marked `not delivered / unverified`, so the mapped claim fails R9 support even though the excerpt is anchored and the bible is structurally clean. See `claim-to-excerpt-map.md`.
++
++Replay from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r89-inspiration-paraphrase
++```
++
++The checker is structural only; its expected `CLEAN` result does not establish excerpt fidelity or prose support. The exact anchor is present, but a fixed-string match is only a lexical preflight:
++
++```sh
++grep -nF -- 'moved to the west stair' corpus/fixtures/r89-inspiration-paraphrase/ash-ledger-excerpt.md
++```
++
++That match does not turn the paraphrase into the source's own text. A production response would re-source or rephrase the claim; it remains unchanged here only to demonstrate the R9 support failure.
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/ash-ledger-excerpt.md b/corpus/fixtures/r89-inspiration-paraphrase/ash-ledger-excerpt.md
+new file mode 100644
+index 0000000..4a13e61
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/ash-ledger-excerpt.md
+@@ -0,0 +1,9 @@
++# Ash-ledger delivered excerpt
++
++**Delivery mode:** paraphrase (modern wording; not the source's own text)
++
++**Paraphrase author/editor:** fixture writer (R9 demonstration)
++
++## Excerpt
++
++A modern paraphrase says that the keeper later summarized the ledger for the court: the tide-mark had been moved to the west stair.
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/claim-to-excerpt-map.md b/corpus/fixtures/r89-inspiration-paraphrase/claim-to-excerpt-map.md
+new file mode 100644
+index 0000000..5401ea7
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/claim-to-excerpt-map.md
+@@ -0,0 +1,7 @@
++# Claim-to-excerpt map
++
++| Claim pointer | In-world source | Excerpt path and lines | Delivery mode / author | Anchor | R9 support result |
++|---|---|---|---|---|---|
++| `entities.json#/0/claims/0` | `ash-ledger` | `ash-ledger-excerpt.md:9` | `paraphrase`; fixture writer (R9 demonstration) | `moved to the west stair` | Fails: the anchor occurs in the paraphrase, but the underlying source text is not delivered, so the paraphrase cannot support a claim about the source's own record. |
++
++The underlying Ash-Stair Ledger text is `not delivered / unverified`. The paraphrase supports only the existence of that retelling, not the source's own wording. The map records a failed support check, not a claim that the paraphrase is false or that the Ash-Stair Ledger exists outside this fictional fixture. The matching phrase is a lexical hit only.
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/contradictions.json b/corpus/fixtures/r89-inspiration-paraphrase/contradictions.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/contradictions.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/entities.json b/corpus/fixtures/r89-inspiration-paraphrase/entities.json
+new file mode 100644
+index 0000000..92a6751
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/entities.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "id": "west-stair",
++    "kind": "place",
++    "name": "West Stair",
++    "first_appearance": "ash-ledger",
++    "claims": [
++      {
++        "statement": "The Ash-Stair Ledger records the tide-mark moved to the west stair.",
++        "source_id": "ash-ledger"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/relations.json b/corpus/fixtures/r89-inspiration-paraphrase/relations.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/relations.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/sources.json b/corpus/fixtures/r89-inspiration-paraphrase/sources.json
+new file mode 100644
+index 0000000..354e9e3
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "ash-ledger",
++    "title": "Ash-Stair Ledger",
++    "kind": "fictional register",
++    "reliability_note": "Newly authored fictional source metadata; no original source text is delivered in this demo."
++  }
++]
+diff --git a/corpus/fixtures/r89-inspiration-paraphrase/timeline.json b/corpus/fixtures/r89-inspiration-paraphrase/timeline.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/corpus/fixtures/r89-inspiration-paraphrase/timeline.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/knowledge/r89-cross-cluster-contradiction.md b/corpus/knowledge/r89-cross-cluster-contradiction.md
+new file mode 100644
+index 0000000..99e9b9e
+--- /dev/null
++++ b/corpus/knowledge/r89-cross-cluster-contradiction.md
+@@ -0,0 +1,32 @@
++# R10 cross-cluster contradiction demo
++
++## Scope and status
++
++This is a worked example of the R10 record format, not a new canon assertion or an integration-ready register entry. The existing side is `corpus/fixtures/r87-myth-cluster/`; the second cluster is explicitly hypothetical, is not present, and is not a landed cluster. This D3 artifact is kept at the requested `corpus/knowledge/r89-cross-cluster-contradiction.md` path; R10's live corpus register destination is `corpus/knowledge/cross-cluster-contradictions.md`. Do not treat this demo as an append to that register. Preserve both clusters and the existing local contradiction record. The checker accepts one bible directory at a time and cannot validate cross-cluster references; the procedure is a manual integration gate.
++
++## Record: `r89-demo-moon-basin-vow-cross-cluster`
++
++**Status:** `unresolved` (conditional worked example). A shared event identity, date, and occasion must be supported by the cited in-world accounts. Equal local ticks, matching IDs, or an external mythology parallel do not establish those conditions. The hypothetical side is only for demonstrating the record shape; it does not satisfy R10's landed-cluster trigger.
++
++**Relative cluster paths:**
++
++- `corpus/fixtures/r87-myth-cluster/` (existing)
++- `corpus/fixtures/r89-hypothetical-moon-basin/` (hypothetical; absent from this repository)
++
++**Existing local record:** `corpus/fixtures/r87-myth-cluster/contradictions.json#moon-basin-vow-location` already records Hara's and Sen's different location claims. It says both concern the same single Moon-Basin Vow of Saltmonth 4 during the first low-water bell.
++
++**Hypothetical account:** `corpus/fixtures/r89-hypothetical-moon-basin/timeline.json#moon-basin-vow-river-account.place_id`, cited to the hypothetical in-world source `reed-arch-register`, asserts `reed-arch`. Its hypothetical source text would read: “The one Moon-Basin Vow of Saltmonth 4 took place at Reed Arch during the first low-water bell.” Neither the path, source, assertion, nor sentence exists in the corpus; it is invented solely for this procedure demo.
++
++### Pair A — Hara account versus hypothetical account
++
++- Conflicting assertions and claim pointers: `corpus/fixtures/r87-myth-cluster/timeline.json#moon-basin-vow-gate-account.place_id` (`source_id=gate-witness`; asserts `mother-tide-gate`; statement: “Hara's slip places the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.”) and `corpus/fixtures/r89-hypothetical-moon-basin/timeline.json#moon-basin-vow-river-account.place_id` (`source_id=reed-arch-register`; asserts `reed-arch`; hypothetical statement: “The one Moon-Basin Vow of Saltmonth 4 took place at Reed Arch during the first low-water bell.”).
++- Why they cannot both be true as stated: if both source-attributed assertions refer to the same single vow on Saltmonth 4 during the first low-water bell, that one event cannot have both distinct place values.
++- Status: `unresolved`.
++
++### Pair B — Sen account versus hypothetical account
++
++- Conflicting assertions and claim pointers: `corpus/fixtures/r87-myth-cluster/timeline.json#moon-basin-vow-dune-account.place_id` (`source_id=dune-register`; asserts `ash-dune-sanctuary`; statement: “Sen's register places that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.”) and `corpus/fixtures/r89-hypothetical-moon-basin/timeline.json#moon-basin-vow-river-account.place_id` (`source_id=reed-arch-register`; asserts `reed-arch`; hypothetical statement: “The one Moon-Basin Vow of Saltmonth 4 took place at Reed Arch during the first low-water bell.”).
++- Why they cannot both be true as stated: under the same shared-event and shared-occasion condition, the single event cannot have both distinct place values.
++- Status: `unresolved`.
++
++This record links the existing Hara/Sen pair without changing its `contradictions.json`; foreign-cluster pointers do not belong in that fixture-local ledger. Keep all three claims distinct and unresolved, and do not select a canonical location. A real-world parallel cannot adjudicate this in-world disagreement. If the texts do not support the shared event/occasion or a pair's claim, record that limit and do not promote that candidate pair to a contradiction finding.

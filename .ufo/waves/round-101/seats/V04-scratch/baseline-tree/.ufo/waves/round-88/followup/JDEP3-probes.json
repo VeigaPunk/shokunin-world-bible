@@ -1,0 +1,88 @@
+{
+  "seat": "JDEP3",
+  "wave": "round-88 follow-up (world-bible lane, depth judge #3 / table attacker)",
+  "measured_revision": "2ea9ef13a928475b13fd578740ea521bed4bd649",
+  "baseline": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+  "tree_status_at_measure": "git status --porcelain --untracked-files=no -> empty (tracked tree clean)",
+  "hashes": {
+    "corpus/fixtures/check_bible.py": "dcacffd6981e1af5f60b31bed20c6eccce25970444088e4ee2e30e3249411911",
+    "corpus/knowledge/r88-sourced-inspiration-decision-table.md": "f85b63e46516f16f2f717574d08be46a9bcc96acee507492f5875fecd113b873",
+    "corpus/knowledge/reference-ledger.md": "d4c736daabd2dd5f67cfa0d0cdccde1c89ae4e5aaa6fb8dc3a02b10c1465c371"
+  },
+  "table_under_attack": {
+    "path": "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+    "lines": 19,
+    "data_rows": 7,
+    "row_line_numbers": {
+      "R1_real_world_materially_informs_or_named_parallel": 11,
+      "R2_no_outside_source_optional": 12,
+      "R3_citation_field_not_yet_known": 13,
+      "R4_passage_specific_parallel_or_claim": 14,
+      "R5_in_world_claim_attributed_to_delivered_excerpt": 15,
+      "R6_real_world_reference_used_ledger_row": 16,
+      "R7_inspired_content_conflicts_with_another_in_world_account": 17
+    }
+  },
+  "probes": {
+    "S1-rights-blocked-source": {
+      "situation": "A cluster's element is materially informed by a real-world work whose source text cannot be delivered for rights reasons.",
+      "classification": "uncovered (citation side covered by R4/R6; element disposition and the R1/R2 materiality trigger ungoverned)",
+      "table_scan_command": "for t in 'may not land' 'must not ship' 'blocked' 'withhold' 'may remain' 'disposition' 'materiality' 'cross-cluster' 'landed canon' 'another fixture' 'aggregate' 'paraphrase' 'verbatim' 'derivative' 'delivery mode'; do grep -ic -- \"$t\" corpus/knowledge/r88-sourced-inspiration-decision-table.md; done",
+      "table_scan_observed": {
+        "may not land": 0, "must not ship": 0, "blocked": 0, "withhold": 0,
+        "may remain": 0, "disposition": 0, "materiality": 0,
+        "cross-cluster": 0, "landed canon": 0, "another fixture": 0, "aggregate": 0,
+        "paraphrase": 0, "verbatim": 0, "derivative": 0, "delivery mode": 0
+      },
+      "governs_citation": "R4 line 14: 'mark the passage `external-only / unverified` ... if text cannot be delivered, retain the citation as a research lead, not as verified support'; R6 line 16: ledger 'Use here' cell must state 'whether text is delivered or external-only'.",
+      "uncovered_core": "No row states whether a materially-informed element whose required source text is undeliverable may land, what the cluster must record about it, or how 'materially informs' (the R1 vs R2 trigger) is established when the text that would prove materiality cannot be delivered.",
+      "delivered_tree_anchor": "R4's own evidence cell names this exact state for r87: 'r87's ETCSL note gives `lines 122-163` but delivers no ETCSL text' -- the table cites the situation yet supplies no disposition row for the element it informed.",
+      "r89_candidate": "Add a decision row / field for 'required source text undeliverable': define the R1-vs-R2 materiality test, and state the element's disposition (may land as unverified-support with an explicit cluster-level marker, or must be re-derived) plus a required marker in the inspiration note and the ledger 'Use here' cell."
+    },
+    "S2-paraphrased-in-world-excerpt": {
+      "situation": "A fictional source is presented as excerpted but the delivered 'excerpt' is a modern paraphrase/summary, not the source's own words.",
+      "classification": "uncovered",
+      "probe_dir": "/tmp/jdep3-B/paraphrase2",
+      "checker_command": "python3 corpus/fixtures/check_bible.py /tmp/jdep3-B/paraphrase2",
+      "checker_stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "checker_exit": 0,
+      "r5_anchor_command": "grep -nF -- 'moved to the west stair' /tmp/jdep3-B/paraphrase2/ash-ledger-excerpt.md",
+      "r5_anchor_stdout": "3:> The keeper later summarized the ledger for the court: the tide-mark had been moved to the west stair.",
+      "r5_anchor_match": 1,
+      "uncovered_core": "R5 (line 15) requires resolving source_id and a 'distinctive exact phrase' fixed-string match. The anchor is chosen from the delivered text, so a self-consistent paraphrase passes trivially. No row requires the delivered excerpt to be the source's own words, and there is no verbatim/translation/paraphrase/summary delivery-mode field. R5's 'A match is only a lexical preflight ... review that the passage supports the whole claim' reviews support, not fidelity.",
+      "asymmetry": "R4's attribution column ('do not infer an ancient author from a modern host or translation') shows the table considered derivative delivery for real-world sources but never extended a delivery-mode concept or label to in-world excerpts (R5).",
+      "r89_candidate": "Add a delivery-mode field to R5 (verbatim / translation / paraphrase / summary), require it declared in the excerpt file, require the claim-to-excerpt map to state the mode, and rule that a paraphrase delivery is not the source's own text for support purposes unless linked to the underlying text."
+    },
+    "S3-parallel-conflicts-with-landed-canon": {
+      "situation": "A mythology parallel (real-world-sourced) conflicts with canon already landed by a different cluster.",
+      "classification": "uncovered (cross-cluster scope)",
+      "probe_dirs": ["/tmp/jdep3-C/landed-canon", "/tmp/jdep3-C/inspired-cluster"],
+      "checker_command_each": "python3 corpus/fixtures/check_bible.py /tmp/jdep3-C/landed-canon ; python3 corpus/fixtures/check_bible.py /tmp/jdep3-C/inspired-cluster",
+      "checker_stdout_each": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "checker_exit_each": 0,
+      "per_fixture_contradictions": {"landed-canon": [], "inspired-cluster": []},
+      "single_dir_cli": "python3 corpus/fixtures/check_bible.py --help -> 'usage: check_bible.py [-h] bible'; passing two dirs -> 'check_bible.py: error: unrecognized arguments', exit 2",
+      "cross_cluster_registry": "ls corpus/knowledge/ | grep -i 'contradict|registry' -> none",
+      "table_scan_observed": {"cross-cluster": 0, "another cluster": 0, "landed canon": 0, "prior fixture": 0, "aggregate": 0},
+      "uncovered_core": "R7 (line 17) governs 'Inspired content conflicts with another in-world account', but the contradiction record is contradictions.json inside one fixture directory and the checker takes exactly one directory. A conflict between a new cluster and already-landed canon is invisible to R7 and to the checker. R7's evidence cell exercises only intra-cluster disagreements (Hara vs Sen; two Hush Lantern first-light locations).",
+      "r89_candidate": "Extend R7 with a cross-cluster branch: define where an inspired-content-vs-landed-canon conflict is recorded (corpus-level register or a pointer in the new cluster's contradictions.json naming the landed event/place and its cluster path), require both sides' cluster paths, and state that a real-world parallel cannot overwrite landed canon; consider a checker extension for cross-fixture contradiction references or a documented manual register."
+    }
+  },
+  "covered_controls": {
+    "C1_delivered_text_passage_parallel_R4": {
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-m3-maya-cluster",
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "exit": 0,
+      "detail": "locator_page=True (printed p. 209); excerpt_delivered=True ('solid land appeared'); clause_map_cols=True (| Cited clause | Fictional element |)"
+    },
+    "C2_in_world_claim_to_excerpt_R5": {
+      "command": "python3 -c \"...r87-myth-cluster lowwater-hymn...\"",
+      "observed": "gate_named=True; first_appearance=lowwater-hymn; claim_source=lowwater-hymn; clause_matches=8/8",
+      "checker": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster -> CLEAN, exit 0"
+    },
+    "C3_intra_cluster_contradiction_R7": {
+      "observed": "r87_intra_cluster_contradictions=1; id=moon-basin-vow-location"
+    }
+  },
+  "verdict": "depth: improved (bounded) -- the landed table is a real depth gain over the no-table baseline, but 3 inspired-content classes remain ungoverned (S1 element disposition / materiality trigger, S2 paraphrase delivery mode, S3 cross-cluster conflict). All three are r89 candidates; none is a harm to a previously working surface."
+}

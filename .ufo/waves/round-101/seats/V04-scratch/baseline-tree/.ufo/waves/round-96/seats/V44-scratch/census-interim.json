@@ -1,0 +1,35 @@
+{
+ "ref": "dcb2d92",
+ "root": "corpus/fixtures",
+ "baseline_top_dirs": 169,
+ "work_top_dirs": 170,
+ "baseline_all_dirs": 169,
+ "work_all_dirs": 170,
+ "baseline_files": 1000,
+ "work_files": 1010,
+ "inherited_files": 1000,
+ "modified_inherited": [],
+ "deleted_inherited": [],
+ "new_top_dirs": [
+  "r96-crossing-response"
+ ],
+ "gone_top_dirs": [],
+ "new_files_count": 10,
+ "new_files": [
+  "r96-crossing-response/README.md",
+  "r96-crossing-response/claim-excerpt-map.md",
+  "r96-crossing-response/contradictions.json",
+  "r96-crossing-response/entities.json",
+  "r96-crossing-response/fictional-excerpts.md",
+  "r96-crossing-response/inspiration-note.md",
+  "r96-crossing-response/relations.json",
+  "r96-crossing-response/source-excerpt.md",
+  "r96-crossing-response/sources.json",
+  "r96-crossing-response/timeline.json"
+ ],
+ "unexpected_new_files": [],
+ "unexpected_new_dirs": [],
+ "verdict": "PASS",
+ "reasons": []
+}
+CENSUS PASS: dirs=170 files=1010 modified=0 deleted=0 new=10

@@ -1,0 +1,372 @@
+{
+  "seat": "JDEP1",
+  "measured_tree": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+  "checker_sha256_observed": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+  "checker_sha256_claimed": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+  "checker_sha_match": true,
+  "table_path": "corpus/knowledge/r87-provenance-chain-decision-table.md",
+  "table_sha256": "6455dc14e74e7aab0588f14607dfcc4916d9b8ac39432d565c938625f02074c3",
+  "receipts": [
+    {
+      "target": "corpus/fixtures/consistent",
+      "recorded": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "recorded_exit": 0,
+      "observed": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "observed_exit": 0,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/item-chain-valid",
+      "recorded": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "recorded_exit": 0,
+      "observed": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "observed_exit": 0,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r87-chain-unique-valid",
+      "recorded": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "recorded_exit": 0,
+      "observed": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "observed_exit": 0,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/item-chain-broken",
+      "recorded": [
+        "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "1 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "1 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r87-chain-unique-broken",
+      "recorded": [
+        "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "1 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "1 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r7-item-ambiguous",
+      "recorded": [
+        "VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'",
+        "VIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[1].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[2].source_id: ambiguous in-world source 'archive-ledger'",
+        "7 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'",
+        "VIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[1].source_id: ambiguous in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].provenance[2].source_id: ambiguous in-world source 'archive-ledger'",
+        "7 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r87-masked-break-to-ambiguous",
+      "recorded": [
+        "VIOLATION: entities[5].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "6 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[5].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "6 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r87-masked-break-from-ambiguous",
+      "recorded": [
+        "VIOLATION: entities[5].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "6 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[5].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "6 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r87-probe-entry-shape",
+      "recorded": [
+        "VIOLATION: entities[6].id: duplicate entities id 'rope'",
+        "VIOLATION: entities[4].provenance: expected array",
+        "2 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[6].id: duplicate entities id 'rope'",
+        "VIOLATION: entities[4].provenance: expected array",
+        "2 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r87-probe-record-and-chain",
+      "recorded": [
+        "VIOLATION: sources[3].id: duplicate sources id 'ambig-source'",
+        "VIOLATION: entities[9].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0]: expected object",
+        "VIOLATION: entities[3].provenance[1]: expected exactly tick, from_holder, to_holder, source_id",
+        "VIOLATION: entities[3].provenance[2].tick: required nonnegative integer",
+        "VIOLATION: entities[3].provenance[3].tick: required nonnegative integer",
+        "VIOLATION: entities[3].provenance[4].from_holder: required null or nonempty entity id",
+        "VIOLATION: entities[3].provenance[5].to_holder: required nonempty entity id",
+        "VIOLATION: entities[3].provenance[6].to_holder: dangling entity 'ghost'",
+        "VIOLATION: entities[3].provenance[7].from_holder: dangling entity 'ghost2'",
+        "VIOLATION: entities[3].provenance[8].source_id: required nonempty source id",
+        "VIOLATION: entities[3].provenance[9].source_id: unknown in-world source 'ghost-source'",
+        "VIOLATION: entities[3].provenance[10]: expected exactly tick, from_holder, to_holder, source_id",
+        "VIOLATION: entities[4].provenance[0]: provenance chain break; first record must have from_holder null",
+        "VIOLATION: entities[4].provenance[1].tick: provenance tick 0 must be greater than previous tick 0",
+        "VIOLATION: entities[4].provenance[3].tick: provenance tick 1 must be greater than previous tick 2",
+        "VIOLATION: entities[4].provenance[4]: provenance chain break; expected from_holder 'tower', got 'mira'",
+        "VIOLATION: entities[4].provenance[5]: provenance chain break; expected from_holder 'tower', got 'mira'",
+        "VIOLATION: entities[4].provenance[6].tick: provenance tick 3 must be greater than previous tick 5",
+        "VIOLATION: entities[4].provenance[6]: provenance chain break; expected from_holder 'harbor', got 'tower'",
+        "VIOLATION: entities[4].provenance[7].source_id: unknown in-world source 'ghost-source'",
+        "VIOLATION: entities[4].provenance[8].to_holder: dangling entity 'later-ghost'",
+        "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[5].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+        "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+        "VIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[6].provenance[0].source_id: unknown in-world source 'ghost-source'",
+        "VIOLATION: entities[6].provenance[1].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]",
+        "VIOLATION: entities[7].provenance[1].source_id: ambiguous in-world source 'ambig-source'",
+        "VIOLATION: entities[7].provenance[2].source_id: ambiguous in-world source 'ambig-source'",
+        "VIOLATION: entities[7].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "35 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: sources[3].id: duplicate sources id 'ambig-source'",
+        "VIOLATION: entities[9].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0]: expected object",
+        "VIOLATION: entities[3].provenance[1]: expected exactly tick, from_holder, to_holder, source_id",
+        "VIOLATION: entities[3].provenance[2].tick: required nonnegative integer",
+        "VIOLATION: entities[3].provenance[3].tick: required nonnegative integer",
+        "VIOLATION: entities[3].provenance[4].from_holder: required null or nonempty entity id",
+        "VIOLATION: entities[3].provenance[5].to_holder: required nonempty entity id",
+        "VIOLATION: entities[3].provenance[6].to_holder: dangling entity 'ghost'",
+        "VIOLATION: entities[3].provenance[7].from_holder: dangling entity 'ghost2'",
+        "VIOLATION: entities[3].provenance[8].source_id: required nonempty source id",
+        "VIOLATION: entities[3].provenance[9].source_id: unknown in-world source 'ghost-source'",
+        "VIOLATION: entities[3].provenance[10]: expected exactly tick, from_holder, to_holder, source_id",
+        "VIOLATION: entities[4].provenance[0]: provenance chain break; first record must have from_holder null",
+        "VIOLATION: entities[4].provenance[1].tick: provenance tick 0 must be greater than previous tick 0",
+        "VIOLATION: entities[4].provenance[3].tick: provenance tick 1 must be greater than previous tick 2",
+        "VIOLATION: entities[4].provenance[4]: provenance chain break; expected from_holder 'tower', got 'mira'",
+        "VIOLATION: entities[4].provenance[5]: provenance chain break; expected from_holder 'tower', got 'mira'",
+        "VIOLATION: entities[4].provenance[6].tick: provenance tick 3 must be greater than previous tick 5",
+        "VIOLATION: entities[4].provenance[6]: provenance chain break; expected from_holder 'harbor', got 'tower'",
+        "VIOLATION: entities[4].provenance[7].source_id: unknown in-world source 'ghost-source'",
+        "VIOLATION: entities[4].provenance[8].to_holder: dangling entity 'later-ghost'",
+        "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[5].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+        "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+        "VIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[6].provenance[0].source_id: unknown in-world source 'ghost-source'",
+        "VIOLATION: entities[6].provenance[1].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]",
+        "VIOLATION: entities[7].provenance[1].source_id: ambiguous in-world source 'ambig-source'",
+        "VIOLATION: entities[7].provenance[2].source_id: ambiguous in-world source 'ambig-source'",
+        "VIOLATION: entities[7].provenance[2]: input-structural finding, not sourced-canon; provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "35 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control",
+      "recorded": [
+        "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'",
+        "1 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'",
+        "1 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "recorded": [
+        "VIOLATION: entities[5].id: duplicate entities id 'vault'",
+        "VIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+        "5 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[5].id: duplicate entities id 'vault'",
+        "VIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+        "5 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r61-independent-empty",
+      "recorded": [
+        "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: relations[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[0].provenance: only valid on item entities",
+        "VIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'",
+        "VIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'",
+        "VIOLATION: entities[0].provenance[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: timeline[0].tick: must be nonnegative",
+        "VIOLATION: timeline[0].depends_on: unknown event 'missing-event'",
+        "VIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'",
+        "17 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'",
+        "VIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: relations[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: entities[0].provenance: only valid on item entities",
+        "VIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'",
+        "VIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'",
+        "VIOLATION: entities[0].provenance[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'",
+        "VIOLATION: timeline[0].tick: must be nonnegative",
+        "VIOLATION: timeline[0].depends_on: unknown event 'missing-event'",
+        "VIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'",
+        "17 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    },
+    {
+      "target": "corpus/fixtures/r61-independent-unavailable",
+      "recorded": [
+        "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+        "VIOLATION: entities[0].provenance: only valid on item entities",
+        "VIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'",
+        "VIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'",
+        "VIOLATION: timeline[0].tick: must be nonnegative",
+        "VIOLATION: timeline[0].depends_on: unknown event 'missing-event'",
+        "6 violation(s); no canon changed"
+      ],
+      "recorded_exit": 1,
+      "observed": [
+        "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+        "VIOLATION: entities[0].provenance: only valid on item entities",
+        "VIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'",
+        "VIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'",
+        "VIOLATION: timeline[0].tick: must be nonnegative",
+        "VIOLATION: timeline[0].depends_on: unknown event 'missing-event'",
+        "6 violation(s); no canon changed"
+      ],
+      "observed_exit": 1,
+      "stdout_match": true,
+      "exit_match": true
+    }
+  ],
+  "receipts_summary": {
+    "parsed": 14,
+    "full_match": 14,
+    "mismatch": 0
+  }
+}

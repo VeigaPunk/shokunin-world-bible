@@ -1,0 +1,10 @@
+command: /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/fixtures/r95-crossing-aftermath
+cwd: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror
+exit: 0
+--- stdout ---
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+RESULT PASS
+
+--- stderr ---
+

@@ -1,0 +1,11 @@
+--- base/claim-excerpt-map.md
++++ span-break/claim-excerpt-map.md
+@@ -34,7 +34,7 @@
+ | J13 | `timeline.json#/1` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `paired-clock` | `r96-crossing-response:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
+ | J14 | `timeline.json#/2` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `crossing-minute` | `r96-crossing-response:crossing-minute` | `fictional-excerpts.md` | 18-20 | `verbatim` | `Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.` |
+ | J15 | `timeline.json#/3` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `aru-aftermath-note` | `r96-crossing-response:aru-aftermath-note` | `fictional-excerpts.md` | 22-31 | `verbatim` | `Tick 11: I waited at the Chalk Stair through the agreed bell.` |
+-| J16 | `timeline.json#/4` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `evin-response-note` | `r96-crossing-response:evin-response-note` | `fictional-excerpts.md` | 33-42 | `verbatim` | `Tick 12: I was at Salt Court through the same agreed bell.` |
++| J16 | `timeline.json#/4` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `evin-response-note` | `r96-crossing-response:evin-response-note` | `fictional-excerpts.md` | 33-36 | `verbatim` | `Tick 12: I was at Salt Court through the same agreed bell.` |
+ 
+ ## Editorial rows (2 bounded Spence comparisons; not JSON facts)
+ 

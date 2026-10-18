@@ -1,0 +1,39 @@
+=== tool sha256 ===
+03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b  corpus/tools/dependency_freeze.py
+153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947  corpus/tools/dependency-freeze-contract.json
+=== P1: delivered --self-test (real tree) ===
+rc=0
+CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+SELF-TEST 17/17
+RESULT PASS
+=== P2: chain verify on the six fixtures (real tree) ===
+r88-m3-maya-cluster rc=0 : FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0 DIGEST 15ef230ef806ea7e7431f5afc7d999aee978b024cf47f2a20cbba726fc3fc279 RESULT PASS 
+r94-paired-crossing rc=0 : FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1 DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75 RESULT PASS 
+r95-crossing-aftermath rc=0 : FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1 DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9 RESULT PASS 
+r96-crossing-response rc=0 : FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1 DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6 RESULT PASS 
+r97-crossing-acknowledgment rc=0 : FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1 DIGEST 3c922d20a01bbd3f7941ed64f5c8796a619699197ae89fb10fca317cf83abea6 RESULT PASS 
+r98-clerk-filing rc=0 : FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1 DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133 RESULT PASS 
+=== P3: fakerepo r97 edge REDUCTION-DETECTED ===
+dropped response-evin-salt-court from tick-13 depends_on
+rc=1
+FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 4/5; relations 1/1
+FINDING REDUCTION-DETECTED: event acknowledgment-aru-records lost depends_on ['response-evin-salt-court']
+RESULT FAIL
+=== P4: path-less legacy pin migration via --freeze ===
+pin made path-less
+rc=0
+MIGRATED r95-crossing-aftermath: path-less legacy pin now names corpus/fixtures/r95-crossing-aftermath
+FROZEN r95-crossing-aftermath: events 4; dependency-edges 3; relations 1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+pin fixture now: corpus/fixtures/r95-crossing-aftermath
+=== P5: flipped-expectation mismatch path (delivered) ===
+flipped clean expectation to exit 1
+rc=2
+CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+SELF-TEST 16/17
+FINDING SELF-TEST-MISMATCH: cases failed: ['clean']
+RESULT ERROR
+=== done delivered ===

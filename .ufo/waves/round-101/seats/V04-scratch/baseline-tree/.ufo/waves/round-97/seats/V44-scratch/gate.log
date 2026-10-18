@@ -1,0 +1,11 @@
+GATE try=1 t=20s r1=none r2=none sha=275c2e35b47fc321
+GATE try=2 t=40s r1=none r2=none sha=275c2e35b47fc321
+GATE try=3 t=60s r1=none r2=none sha=275c2e35b47fc321
+GATE try=4 t=80s r1=none r2=none sha=275c2e35b47fc321
+GATE try=5 t=100s r1=none r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md sha=275c2e35b47fc321
+GATE try=6 t=120s r1=none r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md sha=275c2e35b47fc321
+GATE try=7 t=140s r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md sha=275c2e35b47fc321
+STAB i=1 sha=275c2e35b47fc321 stable=0
+STAB i=2 sha=275c2e35b47fc321 stable=1
+STAB i=3 sha=275c2e35b47fc321 stable=2
+GATE_READY sha=275c2e35b47fc321 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md

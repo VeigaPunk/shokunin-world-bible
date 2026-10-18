@@ -1,0 +1,89 @@
+$ date
+Sat Oct 17 10:02:29 PM -03 2026
+rc=0
+
+$ git rev-parse HEAD
+337f0fa52b02626b7687eedbb2d99fab30446fe4
+rc=0
+
+$ git rev-parse 4265df5
+4265df5e86e4121bde4125b649b89bb1676676a5
+rc=0
+
+$ cmp -n 1116 corpus/fixtures/r94-paired-crossing/fictional-excerpts.md corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md
+
+rc=0
+
+$ cmp -s corpus/fixtures/r94-paired-crossing/fictional-excerpts.md corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md
+
+rc=1
+
+$ cmp -n 1845 corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+
+rc=0
+
+$ cmp -s corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+
+rc=1
+
+$ cmp -n 2588 corpus/fixtures/r96-crossing-response/fictional-excerpts.md corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+
+rc=0
+
+$ cmp -s corpus/fixtures/r96-crossing-response/fictional-excerpts.md corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+
+rc=1
+
+$ cmp -n 3410 corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+
+rc=0
+
+$ cmp -s corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+
+rc=1
+
+$ cmp -n 4187 corpus/fixtures/r98-clerk-filing/fictional-excerpts.md corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+
+rc=0
+
+$ cmp -s corpus/fixtures/r98-clerk-filing/fictional-excerpts.md corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+
+rc=1
+
+$ wc -c corpus/fixtures/r94-paired-crossing/fictional-excerpts.md corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md corpus/fixtures/r96-crossing-response/fictional-excerpts.md corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md corpus/fixtures/r98-clerk-filing/fictional-excerpts.md corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+ 1116 corpus/fixtures/r94-paired-crossing/fictional-excerpts.md
+ 1845 corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md
+ 2588 corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+ 3410 corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+ 4187 corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+ 5114 corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+18260 total
+rc=0
+
+$ python3 sha256 + startswith
+585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2  1116  corpus/fixtures/r94-paired-crossing/fictional-excerpts.md
+0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282  1845  corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md
+06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3  2588  corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c  3410  corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de  4187  corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d  5114  corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+startswith r95-crossing-aftermath of r94-paired-crossing: True strict=True delta=729
+startswith r96-crossing-response of r95-crossing-aftermath: True strict=True delta=743
+startswith r97-crossing-acknowledgment of r96-crossing-response: True strict=True delta=822
+startswith r98-clerk-filing of r97-crossing-acknowledgment: True strict=True delta=777
+startswith r99-window-lapse of r98-clerk-filing: True strict=True delta=927
+count '## Round 99 lapse note' = 1
+count 'clerk-lapse-note' = 1
+count 'Tick 15:' = 1
+case-insensitive lapse matches = 3
+  line 66: 'anged.\n\n## Round 99 lapse note (2026-10-17)\n\nNewly auth'
+  line 68: 'ld source ID `clerk-lapse-note`, folio 9, lines 1–5. Th'
+  line 76: "lerk's first-person lapse record. It records that the c"
+headings after lapse section: []
+file ends with newline: True
+delta starts with newline+heading: b'\n## Round 99 lapse note (202'
+match 4265df5 corpus/fixtures/r94-paired-crossing/fictional-excerpts.md: True
+match 4265df5 corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md: True
+match 4265df5 corpus/fixtures/r96-crossing-response/fictional-excerpts.md: True
+match 4265df5 corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md: True
+match 4265df5 corpus/fixtures/r98-clerk-filing/fictional-excerpts.md: True

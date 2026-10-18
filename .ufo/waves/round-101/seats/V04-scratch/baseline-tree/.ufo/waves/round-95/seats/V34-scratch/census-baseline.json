@@ -1,0 +1,21 @@
+{
+  "ref": "fb118c4",
+  "root": "corpus/fixtures",
+  "work_head": "fb118c42038ed27a747eec704b9aab41bb4b2ebe",
+  "baseline_top_dirs": 168,
+  "work_top_dirs": 168,
+  "baseline_all_dirs": 168,
+  "work_all_dirs": 168,
+  "baseline_files": 990,
+  "work_files": 990,
+  "inherited_files": 990,
+  "modified_inherited": [],
+  "deleted_inherited": [],
+  "new_files": [],
+  "new_top_dirs": [],
+  "gone_top_dirs": [],
+  "unexpected_new_files": [],
+  "unexpected_new_dirs": [],
+  "verdict": "PASS",
+  "reasons": []
+}

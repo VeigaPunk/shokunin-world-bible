@@ -1,0 +1,23 @@
+=== TOOL BLOB vs 4265df5 ===
+IDENTICAL corpus/fixtures/check_bible.py base=20c56dbb90d9f59ca4fb85971154c0774f5ce0d0 cur=20c56dbb90d9f59ca4fb85971154c0774f5ce0d0
+IDENTICAL corpus/tools/support_check.py base=a69ae9d27ad1e848c3188fa832352d00b7c0ffc7 cur=a69ae9d27ad1e848c3188fa832352d00b7c0ffc7
+IDENTICAL corpus/tools/boundary_doc_check.py base=4daa9998023f247fef7ca07d7cf2723f95cab0be cur=4daa9998023f247fef7ca07d7cf2723f95cab0be
+IDENTICAL corpus/tools/discriminate_check.py base=aa601eee3ec288eccf21e5bb78cd01caaacfea7c cur=aa601eee3ec288eccf21e5bb78cd01caaacfea7c
+IDENTICAL corpus/tools/map_obligations.py base=9509c849db222867896b32bbece568c92086bcba cur=9509c849db222867896b32bbece568c92086bcba
+IDENTICAL corpus/live/rejected-r4/check_bible.py base=072402681f7cbe153b72866772ce3e9a1abf612b cur=072402681f7cbe153b72866772ce3e9a1abf612b
+=== CMP vs git show ===
+CMP-EQUAL corpus/fixtures/check_bible.py
+CMP-EQUAL corpus/tools/support_check.py
+CMP-EQUAL corpus/tools/boundary_doc_check.py
+CMP-EQUAL corpus/tools/discriminate_check.py
+CMP-EQUAL corpus/tools/map_obligations.py
+CMP-EQUAL corpus/live/rejected-r4/check_bible.py
+=== sha256 tools ===
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c  corpus/tools/support_check.py
+ebb6a0843e67bfaa3118eda7fbf69bac124aca8f5b87cd0b9721b5e6346b0053  corpus/tools/boundary_doc_check.py
+6c7b7cd8b6676619c6f00eb692c946cfe8d007dc963de5c4a2114757f6108eef  corpus/tools/discriminate_check.py
+86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+1eb06de5f2aedae036899c40e054a8217631cf77a4b1ce9d84a5ff40382f62eb  corpus/live/rejected-r4/check_bible.py
+=== git diff --stat named tools ===
+(end diff stat, empty means no tracked diff)

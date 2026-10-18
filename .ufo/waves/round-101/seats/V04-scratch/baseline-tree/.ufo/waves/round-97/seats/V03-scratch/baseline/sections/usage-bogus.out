@@ -1,0 +1,6 @@
+=== usage-bogus ===
+$ python3 corpus/tools/map_obligations.py --bogus-flag
+FINDING invalid_arguments: unrecognized arguments: --bogus-flag
+RESULT ERROR
+EXIT=2
+

@@ -1,0 +1,183 @@
+{
+  "seat": "JCAL3",
+  "wave": "round-88 FOLLOW-UP (calibration judge #3)",
+  "judged_tree": "2ea9ef13a928475b13fd578740ea521bed4bd649",
+  "baseline_tree": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+  "method": "git archive of dfd1fbc unpacked to /tmp/JCAL3-base; every receipt below produced by running the same command in both trees (or in the HEAD tree only, for fixtures/scratch that do not exist at baseline).",
+  "command_template": "python3 corpus/fixtures/check_bible.py <target>",
+  "runs": [
+    {
+      "case": "r85-control",
+      "target": "corpus/live/runs/round-85/probe-inputs/r85-control",
+      "before": {"exit": 0, "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e", "violation_lines": 0, "disclosure_lines": 0, "legacy_notice_lines": 0},
+      "after":  {"exit": 0, "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e", "violation_lines": 0, "disclosure_lines": 0, "legacy_notice_lines": 0},
+      "identical": true
+    },
+    {
+      "case": "r85-harbor-repro",
+      "target": "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro",
+      "before": {"exit": 1, "stdout_sha256": "5ce27e4fbe03607e9afb9f8585c2db6f116d0d523805bc3e2f08455f6fc77799", "violation_lines": 7, "disclosure_lines": 0, "legacy_notice_lines": 1},
+      "after":  {"exit": 1, "stdout_sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d", "violation_lines": 6, "disclosure_lines": 2, "legacy_notice_lines": 0},
+      "identical": false,
+      "note": "not additions-only: the legacy global-notice line is dropped and the per-record lines are reworded; the 2 affected records are each disclosed"
+    },
+    {
+      "case": "r85-isolated-ambiguous",
+      "target": "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+      "before": {"exit": 1, "stdout_sha256": "548c7436d94fe00ccbb9cddf79948ea35ea78569ff29e8b00303b62e74939bce", "violation_lines": 4, "disclosure_lines": 0, "legacy_notice_lines": 1},
+      "after":  {"exit": 1, "stdout_sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad", "violation_lines": 3, "disclosure_lines": 1, "legacy_notice_lines": 0},
+      "identical": false
+    },
+    {
+      "case": "r85-masked-ambiguous",
+      "target": "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "before": {"exit": 1, "stdout_sha256": "4e9bcd6a139e53d8badb45177206379ddde757179dc75dc7b6d197da83a963dd", "violation_lines": 5, "disclosure_lines": 0, "legacy_notice_lines": 1},
+      "after":  {"exit": 1, "stdout_sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1", "violation_lines": 4, "disclosure_lines": 2, "legacy_notice_lines": 0},
+      "identical": false
+    },
+    {
+      "case": "r85-unique-break-control",
+      "target": "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control",
+      "before": {"exit": 1, "stdout_sha256": "1a218a9a71a13d2772b7ef3d739f3949c10b12f126463af40e4656988c9c9094", "violation_lines": 1, "disclosure_lines": 0, "legacy_notice_lines": 0},
+      "after":  {"exit": 1, "stdout_sha256": "1a218a9a71a13d2772b7ef3d739f3949c10b12f126463af40e465698c9c9094", "violation_lines": 1, "disclosure_lines": 0, "legacy_notice_lines": 0},
+      "identical": true
+    },
+    {
+      "case": "r87-probe-shape-ambiguous (residual i pin)",
+      "target": "corpus/fixtures/r87-probe-shape-ambiguous",
+      "before": {"exit": 1, "stdout_sha256": "979ff05fffd6f10f097163bcb3b9d6d2c5b0a2e6565ea687c66202cf6ee0c6c5", "violation_lines": 2, "disclosure_lines": 0, "legacy_notice_lines": 0},
+      "after":  {"exit": 1, "stdout_sha256": "a73e70a141c85489d9e2d54c800acf25472ff65c51909c428f69c98938df545c", "violation_lines": 5, "disclosure_lines": 2, "legacy_notice_lines": 0},
+      "identical": false,
+      "matches_b3_before_state": true
+    },
+    {
+      "case": "r88-shape-ambiguous-armed",
+      "target": "corpus/fixtures/r88-shape-ambiguous-armed",
+      "before": null,
+      "before_note": "fixture does not exist at dfd1fbc; a run against the baseline checker in the baseline tree returns 5 'cannot load JSON' lines, which is an artifact, not a before-state",
+      "after": {"exit": 1, "stdout_sha256": "b665ea9ef9fb593d9016e6c9bbcee40660e0d057013fd52a87415e1774c5411b", "violation_lines": 5, "disclosure_lines": 2, "legacy_notice_lines": 0}
+    },
+    {
+      "case": "r88-mixed-stop",
+      "target": "corpus/fixtures/r88-mixed-stop",
+      "before": null,
+      "before_note": "fixture does not exist at dfd1fbc; pre-state is B3's scratch construction recorded in patches/B3-before-state.json",
+      "after": {"exit": 1, "stdout_sha256": "403a1c1b8be2d7ff988713fdccf00234f5ee91e46ec95cf64a5bba936bb4148c", "violation_lines": 6, "disclosure_lines": 3, "legacy_notice_lines": 0}
+    },
+    {
+      "case": "r88-nonholder-stop",
+      "target": "corpus/fixtures/r88-nonholder-stop",
+      "before": null,
+      "before_note": "fixture does not exist at dfd1fbc; pre-state is B3's scratch construction recorded in patches/B3-before-state.json",
+      "after": {"exit": 1, "stdout_sha256": "8a0756c32f7b69968b6f2b12c7b743aec8abb7e2e14fdc1f779f4069ef96f76f", "violation_lines": 4, "disclosure_lines": 3, "legacy_notice_lines": 0}
+    },
+    {
+      "case": "scratch: sources.json absent (B3 before-state case 3)",
+      "target": "/tmp/JCAL3-probes4/no-sources-json",
+      "constructed_from": "corpus/fixtures/item-chain-valid with sources.json removed",
+      "before": {"exit": 1, "stdout_sha256": "d021bbb3296d5e9d0e3d4cd203314c1e305d736030e4eebff21e7408bded2ee1", "violation_lines": 1, "disclosure_lines": 0, "legacy_notice_lines": 0},
+      "after":  {"exit": 1, "stdout_sha256": "03a5ba94dcfe82f27a12528ca6c977f93710d2e11a9cd2dd18f57581cbe27206", "violation_lines": 4, "disclosure_lines": 3, "legacy_notice_lines": 0},
+      "identical": false
+    }
+  ],
+  "census": {
+    "command": "python3 /tmp/JCAL3-census.py  (runs check_bible.py in both trees over the 145 baseline fixture dirs)",
+    "baseline_fixture_dirs": 145,
+    "head_fixture_dirs": 149,
+    "new_dirs": ["corpus/fixtures/r88-m3-maya-cluster", "corpus/fixtures/r88-mixed-stop", "corpus/fixtures/r88-nonholder-stop", "corpus/fixtures/r88-shape-ambiguous-armed"],
+    "exit_0_before": 30,
+    "exit_0_after": 30,
+    "violation_lines_before": 331,
+    "violation_lines_after": 352,
+    "changed_tuples": 9,
+    "exit_changes": 0,
+    "stderr_changes": 0,
+    "changed": [
+      ["r61-independent-empty", 1, 1, 17, 18],
+      ["r61-independent-unavailable", 1, 1, 6, 7],
+      ["r87-masked-break-from-ambiguous", 1, 1, 6, 5],
+      ["r87-masked-break-to-ambiguous", 1, 1, 6, 5],
+      ["r87-probe-entry-shape", 1, 1, 2, 8],
+      ["r87-probe-multi-invalid", 1, 1, 6, 5],
+      ["r87-probe-nonitem-kinds", 1, 1, 8, 9],
+      ["r87-probe-record-and-chain", 1, 1, 34, 46],
+      ["r87-probe-shape-ambiguous", 1, 1, 2, 5]
+    ]
+  },
+  "grammar_audit": {
+    "command": "python3 - <<'PY' ... check_bible.py over all 149 dirs, filter lines containing 'remain unassessed'",
+    "disclosure_lines_total": 47,
+    "disclosure_lines_missing_qualifier": 0,
+    "qualifier": "(input-structural finding, not sourced-canon)",
+    "non_contiguous_disclosure_runs": 0,
+    "distinct_first_stop_causes": [
+      "ambiguous holder identity from_holder 'dup'",
+      "ambiguous holder identity from_holder 'vault'",
+      "ambiguous holder identity to_holder 'dup'",
+      "ambiguous holder identity to_holder 'dup', from_holder 'dup'",
+      "duplicate item id 'rope'",
+      "malformed record (expected object)",
+      "malformed record (unexpected field set); ambiguous holder identity to_holder 'dup'",
+      "malformed record (unexpected field set); ambiguous holder identity to_holder 'f1-shape-dup'",
+      "provenance attached to a non-item entity",
+      "source table unavailable",
+      "unknown source 'f1-mixed-missing-source'",
+      "unknown source 'f1-nonholder-missing-source'",
+      "unknown source 'ghost-source'"
+    ]
+  },
+  "scratch_probes": [
+    {
+      "case": "dangling-first",
+      "constructed_from": "item-chain-valid, record [0] to_holder 'ghost-holder' (dangling), records [1][2] continuous",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/JCAL3-probes/dangling-first",
+      "exit": 1,
+      "disclosure_lines": 3,
+      "first_stop": "dangling holder to_holder 'ghost-holder' at entities[3].provenance[0]"
+    },
+    {
+      "case": "nonitem-first",
+      "constructed_from": "item-chain-valid, seal.kind -> 'relic'",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/JCAL3-probes2/nonitem-first",
+      "exit": 1,
+      "disclosure_lines": 3,
+      "first_stop": "provenance attached to a non-item entity at entities[3].provenance"
+    },
+    {
+      "case": "dupitem-first",
+      "constructed_from": "item-chain-valid with a second entity id 'seal'",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/JCAL3-probes2/dupitem-first",
+      "exit": 1,
+      "disclosure_lines": 4,
+      "first_stop": "duplicate item id 'seal' at entities[3].provenance"
+    },
+    {
+      "case": "both-amb-and-unknown (same-record multi-cause, shape-valid)",
+      "constructed_from": "item-chain-valid, duplicate 'mira', record [0] to_holder 'mira' ambiguous + source_id 'no-such-source'",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/JCAL3-probes3/both-amb-and-unknown",
+      "exit": 1,
+      "disclosure_lines": 2,
+      "first_stop": "ambiguous holder identity to_holder 'mira' at entities[3].provenance[0]",
+      "note": "the simultaneous unknown source is reported as its own finding but is not named in the first-stop summary; the combined-cause summary exists only on the shape-invalid dict branch"
+    },
+    {
+      "case": "dangling-and-unknown (same-record multi-cause, shape-valid)",
+      "constructed_from": "item-chain-valid, record [0] to_holder 'ghost' dangling + source_id 'no-such-source'",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/JCAL3-probes3/dangling-and-unknown",
+      "exit": 1,
+      "disclosure_lines": 2,
+      "first_stop": "dangling holder to_holder 'ghost' at entities[3].provenance[0]",
+      "note": "same asymmetry as above"
+    }
+  ],
+  "b3_before_state_reconstruction": {
+    "source": ".ufo/waves/round-88/patches/B3-before-state.json",
+    "residual_i_shape_ambiguous": {"before": "r87-probe-shape-ambiguous at dfd1fbc: 2 findings, 0 unassessed lines, ambiguity not reported at all", "after": "2 -> 5 findings, ambiguity reported, 2 disclosures", "closed": true},
+    "residual_ii_mixed_stop": {"before": "B3 scratch: 7 findings, 4 unassessed lines, global notice index 1, per-record disclosure indexes [1,2,3], disclosed cause = later ambiguity at [1] though first_stop was unknown source at [0]", "after": "r88-mixed-stop: 6 findings, 3 disclosures, every disclosure names 'unknown source f1-mixed-missing-source at entities[5].provenance[0]'", "closed": true},
+    "residual_iii_nonholder": {"before": "B3 scratch unknown-source-only (sources.json removed): 1 finding, 0 disclosure lines", "after": "reproduced in /tmp/JCAL3-probes4/no-sources-json: 1 -> 4 findings, 3 disclosures ('source table unavailable'); durable fixture r88-nonholder-stop covers the unknown-in-world-source sub-case (4 findings, 3 disclosures)", "closed": true}
+  },
+  "tree_hygiene": {
+    "git_status_after_judging": "?? .ufo/waves/round-88/followup/  (only the authorised followup dir)",
+    "head": "2ea9ef13a928475b13fd578740ea521bed4bd649"
+  }
+}

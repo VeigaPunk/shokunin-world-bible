@@ -1,0 +1,58 @@
+#!/bin/bash
+# V05 supporting checks: (a) SELF-TEST-MISMATCH exit-2 load-bearing,
+# (b) path-less legacy pin migration via --freeze, before (9a3d648) and after.
+set -u
+R=/home/vgpnk/Projects/shokunin/lore-shokunin
+S="$R/v05-self-test-scratch/c1probe"
+rm -rf "$S"; mkdir -p "$S"
+
+mk_mirror() { # $1=dir $2=tool_source_path_or_gitrev
+  local d="$1" src="$2"
+  mkdir -p "$d/corpus/tools" "$d/corpus/fixtures"
+  cp -r "$R/corpus/fixtures/r97-crossing-acknowledgment" "$d/corpus/fixtures/"
+  cp "$R/corpus/tools/dependency-freeze-contract.json" "$d/corpus/tools/"
+  if [ "$src" = "now" ]; then
+    cp "$R/corpus/tools/dependency_freeze.py" "$d/corpus/tools/"
+  else
+    git -C "$R" show "$src:corpus/tools/dependency_freeze.py" > "$d/corpus/tools/dependency_freeze.py"
+    git -C "$R" show "$src:corpus/tools/dependency-freeze-contract.json" > "$d/corpus/tools/dependency-freeze-contract.json"
+  fi
+}
+
+echo "===== (a) SELF-TEST-MISMATCH neutrality: flip one persisted expectation, expect exit 2 ====="
+for variant in now 9a3d648; do
+  d="$S/selfneutral-$variant"; mk_mirror "$d" "$variant"
+  python3 - "$d/corpus/tools/dependency-freeze-contract.json" <<'PY'
+import json, sys
+p = sys.argv[1]
+c = json.loads(open(p).read())
+c["self_test"]["expected"]["clean"]["exit"] = 1   # deliberate wrong expectation
+open(p, "w").write(json.dumps(c, indent=2, ensure_ascii=False) + "\n")
+PY
+  echo "--- $variant ---"
+  python3 "$d/corpus/tools/dependency_freeze.py" --self-test 2>&1 | tail -3
+  echo "exit=${PIPESTATUS[0]}"
+done
+
+echo "===== (b) path-less legacy pin migration: pins.<name>.fixture = null, then --freeze ====="
+for variant in now 9a3d648; do
+  d="$S/legacypin-$variant"; mk_mirror "$d" "$variant"
+  python3 - "$d/corpus/tools/dependency-freeze-contract.json" <<'PY'
+import json, sys
+p = sys.argv[1]
+c = json.loads(open(p).read())
+pin = c["pins"]["r97-crossing-acknowledgment"]
+pin["fixture"] = None          # path-less legacy pin
+pin["revision"] = "unversioned"
+c["pins"] = {"r97-crossing-acknowledgment": pin}
+open(p, "w").write(json.dumps(c, indent=2, ensure_ascii=False) + "\n")
+PY
+  echo "--- $variant: --freeze on in-scope fixture ---"
+  python3 "$d/corpus/tools/dependency_freeze.py" --freeze "$d/corpus/fixtures/r97-crossing-acknowledgment" 2>&1 | tail -4
+  echo "exit=${PIPESTATUS[0]}"
+  python3 -c "
+import json,sys
+c=json.load(open('$d/corpus/tools/dependency-freeze-contract.json'))
+print('   migrated pin fixture =',repr(c['pins']['r97-crossing-acknowledgment']['fixture']))
+"
+done

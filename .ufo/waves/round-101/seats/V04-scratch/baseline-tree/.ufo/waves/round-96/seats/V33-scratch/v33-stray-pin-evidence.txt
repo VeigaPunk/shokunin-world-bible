@@ -1,0 +1,17 @@
+EVIDENCE: stray pin in delivered contract (V33, 2026-10-17T17:46:12-03:00)
+contract sha256: 7d568cc422cda42297b7506a1a3e083e8798866efd16d58617bf4ea468576975  corpus/tools/dependency-freeze-contract.json
+tool sha256: a3b57978f0cbf314389ee3f9862920a46cf109fca6d1eec488c39be0457f0980  corpus/tools/dependency_freeze.py
+
+pins: ['c3red', 'r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response']
+c3red.fixture = .ufo/waves/round-96/seats/V41-scratch/c3red
+c3red.content_sha256 = eff4b354c092a9c4a3ea6de6857ee1a21be1ab4bafac957568b6813dac8dbd28
+c3red.counts = {'events': 3, 'dependency_edges': 1, 'relations': 1, 'entities': 5, 'sources': 3}
+c3red.events.paired-crossing-decision.depends_on = ['aru-ninth-bell']
+
+r94 pin (intact?): 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-96/seats/V41-scratch/c3red
+FREEZE c3red: events 3/3; dependency-edges 1/1; relations 1/1
+DIGEST eff4b354c092a9c4a3ea6de6857ee1a21be1ab4bafac957568b6813dac8dbd28
+RESULT PASS
+exit=0

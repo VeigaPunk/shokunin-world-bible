@@ -1,0 +1,79 @@
+{
+  "seat": "I3",
+  "revision": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+  "command_form": "python3 corpus/fixtures/check_bible.py corpus/fixtures/<fixture>",
+  "cwd": "repository root (detached worktree /tmp/r87-I3 at 2b48ca7)",
+  "declared_expected_exit_source": "corpus/fixtures/<fixture>/README.md (C1 commit 03c6746 for the four chain/masked fixtures; C3 commit e4708cb for r87-myth-cluster)",
+  "fixtures": [
+    {
+      "fixture": "r87-chain-unique-valid",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "match": true,
+      "observed_violation_count": 0,
+      "observed_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+      "stderr": "",
+      "declared": "expected result is CLEAN with exit 0"
+    },
+    {
+      "fixture": "r87-chain-unique-broken",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "match": true,
+      "observed_violation_count": 1,
+      "observed_stdout_sha256": "6d2e1487098a48da83c3b11274cc2c332a60a4ef70a968e22b88b663bdcf0fbf",
+      "stderr": "",
+      "declared": "expected result is a reported final-record chain break and exit 1",
+      "observed_findings": [
+        "entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'"
+      ]
+    },
+    {
+      "fixture": "r87-masked-break-to-ambiguous",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "match": true,
+      "observed_violation_count": 6,
+      "observed_stdout_sha256": "bded9b133e16d975903ddb5cc945643097a740cd3fae85f41f03410cc073d72b",
+      "stderr": "",
+      "declared": "ambiguous first holder reported; post-C1 tree must additionally disclose per record that later comparisons were unassessed",
+      "observed_findings": [
+        "entities[5].id: duplicate entities id 'dup'",
+        "entities[3].provenance[0].to_holder: ambiguous entity 'dup'",
+        "entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "entities[3].provenance[0]: ... ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "entities[3].provenance[1]: ... first occurred at entities[3].provenance[0]",
+        "entities[3].provenance[2]: ... first occurred at entities[3].provenance[0]"
+      ]
+    },
+    {
+      "fixture": "r87-masked-break-from-ambiguous",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "match": true,
+      "observed_violation_count": 6,
+      "observed_stdout_sha256": "f6ec78fbeac0c25826048e1c36a1dafb0d40a667979f4333451e84d8174ccb4a",
+      "stderr": "",
+      "declared": "ambiguous first holder reported; post-C1 tree must additionally disclose per record that later comparisons were unassessed",
+      "observed_findings": [
+        "entities[5].id: duplicate entities id 'dup'",
+        "entities[3].provenance[0].from_holder: ambiguous entity 'dup'",
+        "entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "entities[3].provenance[0]: ... ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "entities[3].provenance[1]: ... first occurred at entities[3].provenance[0]",
+        "entities[3].provenance[2]: ... first occurred at entities[3].provenance[0]"
+      ]
+    },
+    {
+      "fixture": "r87-myth-cluster",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "match": true,
+      "observed_violation_count": 0,
+      "observed_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+      "stderr": "",
+      "declared": "clean cluster required by C3; declared expected exit 0 (.ufo/waves/round-87/S4.md:22)"
+    }
+  ],
+  "all_match": true
+}

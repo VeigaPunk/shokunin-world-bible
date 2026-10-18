@@ -1,0 +1,21 @@
+=== SPOT REPLAY 1: check_bible ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit=0
+=== SPOT REPLAY 2: map_obligations ===
+OBLIGATIONS raw=15 mapped=15
+RESULT PASS
+exit=0
+=== counts ===
+entities 5 relations 1 events 4 sources 4
+timeline ids ['aru-ninth-bell', 'evin-ninth-bell', 'paired-crossing-decision', 'aftermath-missing-evin']
+source ids ['veil-verse', 'paired-clock', 'crossing-minute', 'aru-aftermath-note']
+new event: [{"id": "aftermath-missing-evin", "tick": 11, "entity_id": "aru", "place_id": "chalk-stair", "depends_on": ["paired-crossing-decision"], "description": "At the Chalk Stair at tick 11, Aru reports waiting through the agreed bell and that Evin did not come; the note scopes the agreement to this crossing only and asserts no other duty or breach.", "source_id": "aru-aftermath-note"}]
+=== inherited byte-copy check ===
+entities.json BYTE_IDENTICAL
+relations.json BYTE_IDENTICAL
+contradictions.json BYTE_IDENTICAL
+inspiration-note.md BYTE_IDENTICAL
+source-excerpt.md BYTE_IDENTICAL
+=== inherited parsed-value check (timeline/sources) ===
+timeline.json inherited_prefix_identical= True new_tail= [{"id": "aftermath-missing-evin", "tick": 11, "entity_id": "aru", "place_id": "chalk-stair", "depends_on": ["paired-crossing-decision"], "description": "At the Chalk Stair at tick 11, Aru reports waiting through the agreed bell and that Evin did not come; the note scopes the agreement to this crossing only and asserts no other duty or breach.", "source_id": "aru-aftermath-note"}]
+sources.json inherited_prefix_identical= True new_tail= [{"id": "aru-aftermath-note", "title": "Aru's Chalk Stair Aftermath Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; Aru reports waiting at the Chalk Stair through the agreed bell and that Evin did not come. It records one crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an external historical fac

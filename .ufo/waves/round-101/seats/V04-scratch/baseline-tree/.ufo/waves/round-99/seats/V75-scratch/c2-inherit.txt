@@ -1,0 +1,24 @@
+README.md: identical=False now=6176 base=5829 rc=0
+claim-excerpt-map.md: identical=False now=17119 base=15028 rc=0
+contradictions.json: identical=True now=3 base=3 rc=0
+entities.json: identical=True now=1793 base=1793 rc=0
+fictional-excerpts.md: identical=False now=5114 base=4187 rc=0
+inspiration-note.md: identical=True now=1956 base=1956 rc=0
+relations.json: identical=True now=139 base=139 rc=0
+source-excerpt.md: identical=True now=640 base=640 rc=0
+sources.json: identical=False now=3293 base=2725 rc=0
+timeline.json: identical=False now=2998 base=2552 rc=0
+prefix sources.json: cur_len=8 old_len=7 prefix_eq=True extra=1
+  extra=[{"id": "clerk-lapse-note", "title": "Maren's Chalk Stair Lapse Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; the clerk reports that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation; it is not evidence of a breach finding, a continuing duty, a winner between the accounts, or an external historical fact."}]
+prefix timeline.json: cur_len=8 old_len=7 prefix_eq=True extra=1
+  extra=[{"id": "clerk-lapse-recorded", "tick": 15, "entity_id": "clerk-maren", "place_id": "chalk-stair", "depends_on": ["clerk-filing-open"], "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry.", "source_id": "clerk-lapse-note"}]
+prefix entities.json: cur_len=6 old_len=6 prefix_eq=True extra=0
+prefix relations.json: cur_len=1 old_len=1 prefix_eq=True extra=0
+excerpt startswith base=True base_lines=64 cur_lines=0
+count entities.json=6
+count relations.json=1
+count timeline.json=8
+count sources.json=8
+count contradictions.json=0
+last_event={"id": "clerk-lapse-recorded", "tick": 15, "entity_id": "clerk-maren", "place_id": "chalk-stair", "depends_on": ["clerk-filing-open"], "source_id": "clerk-lapse-note", "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry."}
+last_source={"id": "clerk-lapse-note", "title": "Maren's Chalk Stair Lapse Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; the clerk reports that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation; it is not evidence of a breach finding, a continuing duty, a winner between the accounts, or an external historical fact."}

@@ -1,0 +1,48 @@
+NEW tool sha256=d1c239ccb21404490bfe120a8c8de45af89265437d5be53fb712ff27e4212108
+NEW tool size=33320
+
+=== BR-02 mutation through NEW (stability: 3 independent copies) ===
+new-br02-run1: exit=1 findings=['schema_drift']
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+FINDING schema_drift: entities.json#/4: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
+RESULT FAIL
+------------------------------------------------------------
+new-br02-run2: exit=1 findings=['schema_drift']
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+FINDING schema_drift: entities.json#/4: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
+RESULT FAIL
+------------------------------------------------------------
+new-br02-run3-copy2: exit=1 findings=['schema_drift']
+OBLIGATIONS raw=13 mapped=13
+INVENTORY JSON-FACTS 13/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 15/16 MISMATCH
+FINDING schema_drift: entities.json#/4: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
+RESULT FAIL
+------------------------------------------------------------
+
+=== Sweep of current fixtures through NEW ===
+r87-myth-cluster: exit=2 findings=['unsupported_map'] 
+    first: FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer
+    last : RESULT ERROR
+r87-chain-unique-valid: exit=2 findings=['map_missing'] 
+    first: FINDING map_missing: expected exactly one conventional claim-to-excerpt map
+    last : RESULT ERROR
+r88-m3-maya-cluster: exit=0 findings=none 
+    first: OBLIGATIONS raw=10 mapped=10
+    last : RESULT PASS
+r89-inspiration-paraphrase: exit=2 findings=['unsupported_map'] 
+    first: FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column
+    last : RESULT ERROR
+r93-m2-kojiki-cluster: exit=0 findings=none 
+    first: OBLIGATIONS raw=12 mapped=12
+    last : RESULT PASS
+r94-paired-crossing: exit=0 findings=none 
+    first: OBLIGATIONS raw=14 mapped=14
+    last : RESULT PASS
+r95-crossing-aftermath: exit=0 findings=none 
+    first: OBLIGATIONS raw=15 mapped=15
+    last : RESULT PASS
+
+=== Full map-bearing fixture sweep (schema_drift check) ===
+fixtures tripping schema_drift: none

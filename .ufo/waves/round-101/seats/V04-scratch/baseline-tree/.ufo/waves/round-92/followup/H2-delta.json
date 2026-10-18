@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "seat": "H2",
+  "mission": "independent census + delta (committed tree)",
+  "wave": "round-92-followup",
+  "baseline_head": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+  "committed_head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "tree_clean_at_measurement": true,
+  "commits_since_baseline": 1,
+  "axes": [
+    "census integrity (166-directory tuple census on the committed tree)",
+    "delta fidelity (baseline -> committed tracked delta; candidate-patch composition)",
+    "receipt and replay stability (boundary-doc receipts, support command, contract exits)"
+  ],
+  "checker": {
+    "path": "corpus/fixtures/check_bible.py",
+    "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "lines": 428,
+    "unchanged_from_baseline": true
+  },
+  "census": {
+    "fixture_dirs": 166,
+    "exit_counts": { "0": 32, "1": 134 },
+    "violation_lines": 421,
+    "stderr_nonempty": 0,
+    "unexpected_exits": 0,
+    "live_receipt_bytes": 29407,
+    "live_receipt_sha256": "185ce02d2e2bf80e2846dada9e864fc533d58cfd229be9e2596d4b1f2a21baaf",
+    "live_receipt_byte_equal_B1": true,
+    "live_receipt_byte_equal_B2": true,
+    "tuple_mismatches_vs_B1": 0,
+    "tuple_mismatches_vs_B2": 0,
+    "missing_vs_B1": 0,
+    "extra_vs_B1": 0
+  },
+  "boundary_doc": {
+    "path": "corpus/knowledge/holder-assessment-boundary.md",
+    "baseline": {
+      "sha256": "c0c59dafc32c7fdc52f30352359b2c252e7607c76010063231b8f89d223911c9",
+      "lines": 549,
+      "bytes": 47857
+    },
+    "committed": {
+      "sha256": "8e1fe8774a70f06c31efd783b4313a1639c1da4bcfd830be92134e8964536728",
+      "lines": 671,
+      "bytes": 55876
+    },
+    "equals_baseline_plus_D2_patch": true,
+    "D2_patch": {
+      "path": ".ufo/waves/round-92/patches/D2-boundary-doc.md",
+      "sha256": "55495d1002baa2776abf93c8bd0df26bd39493ba8cbe4b2dddac77aaf6c8d428",
+      "patch_exit_on_baseline": 0,
+      "raw_accounting_plus_minus": [290, 168],
+      "committed_numstat_plus_minus": [282, 160],
+      "accounting_note": "8 remove/add pairs of identical text inside D2 cancel; net line change is +122 in both accountings and the applied result is byte-identical to the committed doc"
+    },
+    "structure": {
+      "h1": 1,
+      "h2": 9,
+      "h3": 0,
+      "duplicate_normalized_titles": 0,
+      "fence_markers": 16,
+      "odd_fence_count": 0,
+      "fenced_blocks": 8,
+      "instruction_markers": { "instruction sheet": 0, "Skipped as named debt": 0, "not landed": 0, "TODO": 0 }
+    },
+    "receipt_replay": {
+      "blocks_with_cases": 3,
+      "cases": 14,
+      "rebuild_equals_pasted_all_blocks": true,
+      "case_receipts": [
+        { "case": "r85-control", "exit": 0, "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e", "stderr_bytes": 0 },
+        { "case": "r85-unique-break-control", "exit": 1, "stdout_sha256": "1a218a9a71a13d2772b7ef3d739f3949c10b12f126463af40e4656988c9c9094", "stderr_bytes": 0 },
+        { "case": "r85-masked-ambiguous", "exit": 1, "stdout_sha256": "757cc1308914ffe5968464c3e9b3fbffef70b040ba89e5f3b0aa1a4186d489c1", "stderr_bytes": 0 },
+        { "case": "r85-isolated-ambiguous", "exit": 1, "stdout_sha256": "3e50866af53011ee465ac9126f37ce098420ba64360a1f5283f13340eb4904ad", "stderr_bytes": 0 },
+        { "case": "r85-harbor-repro", "exit": 1, "stdout_sha256": "5c5b5955d87f87797c2389ee1ef7dc67f04392fa407521aa0a77b79c6bb6e54d", "stderr_bytes": 0 },
+        { "case": "r88-mixed-stop", "exit": 1, "stdout_sha256": "7179e0ccef3e3aa07a9782d9c60ebfbe6a9d004202ed24f28079dd7a11f702b5", "stderr_bytes": 0 },
+        { "case": "r88-nonholder-stop", "exit": 1, "stdout_sha256": "b5ff4b29194ca64b98282bd08450785b2b46901a3b3da2f042ad35a2a6565529", "stderr_bytes": 0 },
+        { "case": "r88-shape-ambiguous-armed", "exit": 1, "stdout_sha256": "b665ea9ef9fb593d9016e6c9bbcee40660e0d057013fd52a87415e1774c5411b", "stderr_bytes": 0 },
+        { "case": "r89-f2-dangling-to", "exit": 1, "stdout_sha256": "e0002f47309838a7632370de77d650329404f3cbe8f8feb960406828a8b0262c", "stderr_bytes": 0 },
+        { "case": "r89-f2-dangling-from", "exit": 1, "stdout_sha256": "3c58ea3c26ff025e9ae1fbce13f77504902c9a1fc0b7448494740b7145804838", "stderr_bytes": 0 },
+        { "case": "r89-f2-invalid-source-id", "exit": 1, "stdout_sha256": "68f8b0e8e72f89f359d9e86bc1ad956e2d586e89ce4c2a4013af02275230a6b3", "stderr_bytes": 0 },
+        { "case": "r89-c1-multi-cause-valid", "exit": 1, "stdout_sha256": "35db96cd3891b33bf51573eed4dc8bf2f5414bd97b56b6a11bd08292cc14e66d", "stderr_bytes": 0 },
+        { "case": "r89-fn2-unresolved-chain-break", "exit": 1, "stdout_sha256": "66ed1438c6d1af003492d29569492ec0990e5b01b041fba1b4e21147eab4327a", "stderr_bytes": 0 },
+        { "case": "r89-fn2-control", "exit": 1, "stdout_sha256": "4283f6955f40d49f6036ad61f55ab94e682cdb3c475af73c3d8350920cf06951", "stderr_bytes": 0 }
+      ],
+      "r85_block_byte_equal_e97613c": true,
+      "r85_block_sha256": "53f4eb4b2adb3328f1544c4ae7fe76f5c47812ecbee9b45a985fdbe6da13b2dd"
+    },
+    "anchor_spot_checks": {
+      "delivered_relation_ambiguity_184": "PASS (errors.append ... ambiguous entity at line 184)",
+      "delivered_to_holder_277": "PASS",
+      "delivered_from_holder_290": "PASS",
+      "delivered_template_208_210": "PASS (report_unassessed first-stop f-string)",
+      "historical_5eb9451_212_224": "PASS (silent/dangling branch content in that revision)",
+      "failures": [
+        "doc:330 cites delivered span `:198-203` for the three item-level first-stop tests; delivered span is `:200-205` (the correct range appears at doc:331 and doc:552). Stale.",
+        "Evidence and citations orphan tail (doc:545+): the bullet head is lost (text begins mid-sentence `lines, sha256 e2bb9639...):`), so its revision-scoped anchors are unqualified; sample check: tail `:425-435` matches e97613c checker CLI/exit (435-line, sha e2bb9639...) but not the delivered checker (CLI/exit at `:418-428`)."
+      ]
+    }
+  },
+  "support_command": {
+    "path": "corpus/tools/support_check.py",
+    "baseline_sha256": "9da149b8e51f5c6c39477f17b8b19d17da3568a1a7c72412079efccff1f330bf",
+    "committed_sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+    "receipts": {
+      "r87-myth-cluster": { "summary": "22/22 PASS", "result": "RESULT PASS", "exit": 0 },
+      "r88-m3-maya-cluster": { "json_facts": 10, "editorial_rows": 2, "total": 12, "warn": false, "result": "RESULT PASS", "exit": 0 },
+      "r89-inspiration-paraphrase": { "summary": "1/1 PASS", "result": "RESULT PASS", "exit": 0 }
+    },
+    "m2_contract_probes": {
+      "missing_inventory_map": { "exit": 1, "stdout": "RESULT FAIL", "stderr": "FAIL: map must contain exactly one expected inventory declaration" },
+      "map_row_cell_count_error": { "exit": 2, "stdout": "RESULT ERROR", "stderr": "FAIL: map table row has a different number of cells than its header" },
+      "missing_cluster_dir": { "exit": 2, "stdout": "RESULT ERROR", "stderr": "FAIL: cluster directory not found: corpus/fixtures/no-such-cluster" },
+      "missing_map_file": { "exit": 2, "stdout": "RESULT ERROR", "stderr": "FAIL: claim-to-excerpt map not found" }
+    }
+  },
+  "watch_and_notes": {
+    "r91-c9-watch.md": {
+      "baseline_lines": 43,
+      "committed_lines": 206,
+      "check_log_first_row_present": true,
+      "check_log_row": "2026-10-17 | ff9fd2aa... | DISCRIMINATION HELD - all four C5 scenarios retained their r91 distinctions; no drift alarm",
+      "first_recheck_section_present": true,
+      "census_path_convention_note_present": true,
+      "census_note_lines": [205, 206],
+      "durable_pair_replay_matches": true
+    },
+    "fixtures_README.md": {
+      "baseline_lines": 1018,
+      "committed_lines": 1062,
+      "repo_relative_invocation_note_present": true,
+      "note_region": "1044-1061",
+      "five_argv_embedding_fixtures_named": ["r5-missing-file", "r62-missing", "r67-claim-source-unavailable-control", "r67-claim-source-unavailable-empty", "r67-claim-source-unavailable-whitespace"],
+      "watch_cross_reference_holds": true
+    }
+  },
+  "decision_table_defect": {
+    "path": "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+    "line": 40,
+    "issue": "the bold label '**Failed-gate disposition (clarified r92):**' is duplicated twice in a row; body text and R9 row are single-label",
+    "committed_label_count": 2,
+    "E1_patch_label_count": 1,
+    "E2_patch_label_count": 1,
+    "baseline_clarified_label_count": 0,
+    "assessment": "integration blemish (editorial); content otherwise landed"
+  },
+  "delta": {
+    "name_status_counts": { "A": 61, "M": 6, "D": 0 },
+    "added_paths_note": "60 under .ufo/waves/round-92/ (31 round reports + wave-spec + 25 patch artifacts + 3 sentinel follow-up artifacts) plus .ufo/waves/poll_wait.sh",
+    "files": [
+      { "path": "corpus/knowledge/holder-assessment-boundary.md", "before_sha256": "c0c59dafc32c7fdc52f30352359b2c252e7607c76010063231b8f89d223911c9", "after_sha256": "8e1fe8774a70f06c31efd783b4313a1639c1da4bcfd830be92134e8964536728", "before_lines": 549, "after_lines": 671, "numstat_plus_minus": [282, 160] },
+      { "path": "corpus/fixtures/README.md", "before_sha256": "4a5fdb11f7878cb0ff1f4f8b251a47fbcd64f3ef236ccfb7138edf5a9d7c0b69", "after_sha256": "e2eab01eef2f652626f39fb7543cf40c52248de1247cb18a0312504f28833ee1", "before_lines": 1018, "after_lines": 1062, "numstat_plus_minus": [44, 0] },
+      { "path": "corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md", "before_sha256": "6fc0e867ad132cbe1bdcedad40c688c0bf221603ee84da309346a6fddd86ba86", "after_sha256": "b3b79fe5b5b9272b898b5714291739503c4250c415b3959032fcdba84a73fd43", "before_lines": 45, "after_lines": 47, "numstat_plus_minus": [8, 6] },
+      { "path": "corpus/knowledge/r88-sourced-inspiration-decision-table.md", "before_sha256": "1afefbf3489bfefa0d408885087bdc23c8f927f39c006d91f25d933b02dbb5b8", "after_sha256": "ee34c0d21c1b98cd5cd48eb482753e1187533eb3d438092cd1b1f32315e146a4", "before_lines": 131, "after_lines": 132, "numstat_plus_minus": [9, 8] },
+      { "path": "corpus/knowledge/r91-c9-watch.md", "before_sha256": "698a84567e8d34dffed8276af537ff7385099e2a52943dd4823c29e2df98ad2c", "after_sha256": "a6b2b9db92d494f390a414d1d84bfc4f074865f93e4ad4874cbfa7b9c95d9c77", "before_lines": 43, "after_lines": 206, "numstat_plus_minus": [163, 0] },
+      { "path": "corpus/tools/support_check.py", "before_sha256": "9da149b8e51f5c6c39477f17b8b19d17da3568a1a7c72412079efccff1f330bf", "after_sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c", "before_lines": 399, "after_lines": 420, "numstat_plus_minus": [38, 17] }
+    ],
+    "files_unchanged": "no other tracked path changed; check_bible.py byte-identical; corpus/tools/README.md untouched"
+  },
+  "landing_fidelity": {
+    "boundary_doc": "baseline + D2-boundary-doc.md applied with patch(1) -> byte-identical to committed doc (sha 8e1fe877...)",
+    "README": "baseline + R2-readme.patch -> byte-identical committed README; all 44 inserted lines present",
+    "r88-m3 map": "baseline + M1-spence-rows.patch -> byte-identical committed map; all 8 inserted lines present",
+    "support_check.py": "baseline + M2-contract.patch -> byte-identical committed tool; all 38 inserted lines present",
+    "watch": "content-faithful hand-merge: X1-recheck (161 inserted) and X2-note (3 inserted) lines all present verbatim in committed watch (+163 net); no single patch or tested sequence reproduces committed bytes (X1-alone differ, X2-alone differ, X1->X2 fails 1 hunk, X2->X1 fails 1 hunk)",
+    "candidates_not_landed": [
+      ".ufo/waves/round-92/patches/K1-tools-readme.patch (corpus/tools/README.md +6/-4; 0/6 lines present; file unchanged)",
+      ".ufo/waves/round-92/patches/K1-watch-compose.patch (does not apply to baseline watch: 2/2 hunks FAILED)",
+      ".ufo/waves/round-92/patches/E3-c3-wording.patch (watch+README variant superseded by X1/X2/R2 landings)"
+    ]
+  },
+  "h_delta_prediction_check": {
+    "H_delta_predicted": "doc-only candidate scope for D1/D2; 166-tuple census stable; five r85 receipts stable; bounded, pre-integration only",
+    "confirmed": [
+      "D2 is the applied re-derivation (byte-identical result on the committed tree)",
+      "166-directory census stable on the committed tree (byte-identical receipt)",
+      "r85 receipts byte-stable (committed block equals e97613c block)"
+    ],
+    "qualified": [
+      "the round-92 committed tracked delta is 6 corpus files, not doc-only; H-delta's doc-only statement was explicitly scoped to the D1/D2 candidate and its bounded-verification caveat correctly flagged that the integrated after-state was not measured",
+      "the delivered doc turned out to carry anchor-resolution defects invisible to candidate-scope verification (see boundary_doc.anchor_spot_checks.failures)"
+    ]
+  },
+  "peer_consistency_observed": {
+    "note": "peer follow-up artifacts observed during this run (uncommitted at c4d4823; not part of the judgment surface): H4-census.json reports 0 tuple mismatches vs B1 on c4d4823 (consistent); JDEP1-certification.json (follow-up certifier) reports overall FAIL blocking on anchor resolution (gate b) with one stale delivered-context site and orphaned r89 tail sites (consistent with this seat's independent spot-checks)"
+  },
+  "certification_of_record": {
+    "committed_doc_certifier_artifact": "absent",
+    "T1_certification_json": "overall FAIL - input gate: no integrated document present at its run time (baseline 396c568)",
+    "CB_audit_json": "NOT_SELECTED (same pre-integration reason)",
+    "independent_gate_sample": "A (checker pin) PASS; B (14/14 receipt replay) PASS; D (structure/cruft) PASS; C (anchor resolution) FAIL on the two verified defect sites",
+    "B3_certifier_implementation": "tools/certify_boundary_doc.py still absent (spec only)"
+  },
+  "named_debt": [
+    "Committed boundary doc anchor resolution: doc:330 stale delivered span `:198-203` (should be `:200-205`); Evidence-and-citations orphan tail with lost revision head (doc:545+). Repair + certified re-run needed.",
+    "Decision table line 40 doubled bold label (editorial).",
+    "Watch landing not byte-reproducible from pinned candidate patches (hand-merge; content verbatim).",
+    "K1-tools-readme.patch not landed (corpus/tools/README.md unchanged); K1-watch-compose/E3 candidates inapplicable or superseded - record as integration choice.",
+    "No certification roll-up for the committed doc bytes (T1 FAIL pre-integration; CB-audit NOT_SELECTED)."
+  ],
+  "verification_scope": {
+    "judged_tree": "c4d4823 only (tree clean; scratch for probes/controls under /tmp, cleaned)",
+    "tracked_files_modified": false,
+    "committed_or_pushed": false,
+    "sibling_repos_touched": false,
+    "four_C5_probe_suite_reconstructed": false,
+    "full_B3_anchor_catalog_run": false
+  },
+  "files_written": [
+    ".ufo/waves/round-92/followup/H2.md",
+    ".ufo/waves/round-92/followup/H2-delta.json"
+  ]
+}

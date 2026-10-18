@@ -1,0 +1,29 @@
+access_lines 3955
+first_200 2026-10-17T21:56:52-03:00
+last_502 2026-10-17T21:54:30-03:00
+--- per minute ---
+21:41 total=370 502=370
+21:42 total=550 502=550
+21:43 total=222 502=222
+21:44 total=212 502=212
+21:45 total=209 502=209
+21:46 total=212 502=212
+21:47 total=221 502=221
+21:48 total=207 502=207
+21:49 total=217 502=217
+21:50 total=129 502=129
+21:51 total=13 502=13
+21:54 total=1 502=1
+21:56 total=4 200=1 404=3
+21:59 total=33 200=33
+22:00 total=360 200=360
+22:01 total=695 200=695
+22:02 total=300 200=300
+--- paths ---
+3952 /v1/chat/completions
+3 /v1/models
+--- non-502 non-200 (up to 30) ---
+2026-10-17T21:56:02-03:00 404 /v1/chat/completions
+2026-10-17T21:56:20-03:00 404 /v1/chat/completions
+2026-10-17T21:56:34-03:00 404 /v1/chat/completions
+non200_other_count 3 captured_non200 8

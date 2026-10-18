@@ -1,0 +1,143 @@
+{
+  "seat": "JAXIS",
+  "role": "synthesizer (round-93 follow-up, world-bible lane)",
+  "head": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "baseline_head": "87779a00f25bd1855ede479e490123843e5f056e",
+  "tree_clean": true,
+  "reports_read": {
+    "md_full": ["E1", "H4", "H5", "JCAL1", "JCAL2", "JCAL3", "JCAL4", "JCAL5", "JCOV1", "JCOV2", "JDEP2", "JDEP4", "P1", "P2", "P3", "P4", "Q1", "Q1-r94-proposal", "SE2", "V2", "X1", "X2"],
+    "md_count": 22,
+    "json_read_full": ["JCAL1-delta.json"],
+    "json_via_parent_reports": ["JCAL1-tuples.json", "JCAL5-delta.json", "JCAL5-tuples.json", "H4-census.json", "H4-lineage.json", "H4-probes.json", "JDEP4-evidence.json", "P1-manifest-entry.json", "Q1-r93-debt.json", "X1-receipts.json"]
+  },
+  "dependency_receipts": {
+    "contract": "two 60s wait-checks",
+    "checks": [
+      "t=0s   2026-10-17T12:07:14-03:00 HEAD=65838f8 files=0",
+      "t=60s  2026-10-17T12:08:14-03:00 HEAD=65838f8 files=1 (JCAL1-delta.json)",
+      "t=120s 2026-10-17T12:09:14-03:00 HEAD=65838f8 files=1",
+      "CHECK3.1 t=+60m 2026-10-17T12:42:55-03:00 md_files=22 all_files=33 (early-exit poll)"
+    ],
+    "gap_note": "batch landed 12:07-12:40, after the contract window; full batch read before writing; no report arrived during the read pass"
+  },
+  "per_axis_verdicts": {
+    "depth_C1": {
+      "verdict": "improved (bounded)",
+      "positive_evidence": [
+        "Q92-002 closed on delivered tree: all four defect counts flipped (JCAL4 B2, V2, H5, P2, SE2, Q1)",
+        "R9 manual-gate wording internally consistent, no over-claim (JCAL4 B3)",
+        "R8 dossier committed, 5 required record fields, replay 5/5 exit 0 (JCAL4 B1, X2 22-probe audit, V2, JAXIS run)",
+        "cert tool committed: CERTIFIED exit 0, byte-identical across >=6 executions (CERT patch-stage, H5, JCAL2 A1, JDEP4 M2, V2, SE2, JAXIS)",
+        "fail-closed named failures: tampered checker, {expected} contradiction, receipt drift, anchor-beyond-range, pin drift (JCAL2 A2/A3, JDEP4 M3, SE2, JAXIS mutation control exit 1)"
+      ],
+      "named_bounds": [
+        "anchor census 2 of ~127 colon-refs; in-range wrong anchor certifies (SE2 live probe, JDEP2 sizing + drift demo) — AST/content-signature debt, r94",
+        "C9 gate needle-narrow: CB-audit verbatim {details} contradiction CERTIFIES (JDEP4 M4); the historical harm's phrasing",
+        "doc:78 full-form baseline anchor range-checked against wrong revision (JDEP2)",
+        "corpus/tools/README.md has no certifier section; 'AST debt named r94' sub-claim half-landed (JCAL2 A4 NOT CONFIRMED, E1, H5, JDEP4 F2(v)); CERTIFIED unbounded in docs (E1)",
+        "unguarded --doc/--checker reads crash unnamed, fail-closed (JCAL2, JDEP2, SE2)",
+        "dossier omits integration-editor owner role and element-map recording target (X2, bounded)",
+        "pin hardcoded, not Gate A CLI argument (Q1)"
+      ]
+    },
+    "coverage_C2": {
+      "verdict": "improved (bounded)",
+      "positive_evidence": [
+        "third sourced-mythology family: CLEAN census tuple (exit 0, 0 violations, afe570fc…) inside zero-drift census 166->167 (JCAL1, JCAL5, H4, V2, JAXIS ls-tree 207->208)",
+        "support receipt 12/12 + 3/3 RESULT PASS exit 0; byte-identical archive vs live vs recorded (JCOV1, X1 x4, V2, JDEP4 M6, JAXIS)",
+        "15/15 anchors independently replayed checker-free (JCOV2)",
+        "zero shared referents lexically corroborated by 3 independent scans, pairwise intersections empty incl. r87∩r88 control (JCOV1, JCOV2, V2)",
+        "attribution verified against live Terebess page incl. Part III locator and verbatim clauses (JCAL4 B4, JCOV2)",
+        "three-question discipline, bounded symbolism, no rights claims, ledger row (JCOV2, JAXIS diff)",
+        "both support-path checkers byte-unchanged: ff9fd2aa (check_bible), 55a5eb27 (support_check) (JCOV1)"
+      ],
+      "named_bounds": [
+        "integrated zero-referent conclusion is author-side + lexical only; cluster README defers M6's M2-specific semantic review (R93-N2) — do not promote claim strength until it lands",
+        "commit message says '10 JSON', measured 12 (V2, JDEP4 M6, X1, SE2); 10 was M1's losing candidate's count",
+        "fixtures README indexes neither Round 91 nor the new cluster (H5, Q1 Q92-005; two rounds deep)",
+        "rights/AI-training/edition identity open by design (correct)"
+      ]
+    },
+    "calibration_C3": {
+      "verdict": "improved (bounded)",
+      "positive_evidence": [
+        "watch row 2 landed: two distinct dated rows, ruling retained, next-recheck r94 pointer present (closes Q92-010 pointer debt) (JCAL3, V2, JDEP4 F5, JAXIS diff)",
+        "discriminate_check.py promoted; both documented modes verified exit 0 HELD / exit 2 REGRESSION-DETECTED, matches_pin=True (JCAL3, V2, SE2, P2, JDEP4 M5, JAXIS both modes)",
+        "census zero-drift under four methods (sorted / reverse / seed-9301 shuffle / git-archive), 421 = 421 violation lines (JCAL5)",
+        "baseline receipts proven faithful: regenerated base == B1, 0 mismatches (JCAL5)",
+        "receipts byte-parity vs baseline on all pre-existing clusters (JCOV1 PARITY x3, X1)"
+      ],
+      "named_bounds": [
+        "row 2 abbreviates hash and shares row 1's calendar date (distinct only by '(r93)' suffix) (JCAL3)",
+        "watch residuals: no pointer to promoted tool; E3 stable-checkout wording absent (Q1 Q92-010 residuals)",
+        "discriminate_check depends on e97613c reachability (JCAL3, Q1 R93-N6)",
+        "trigger gate 3 unmet — correctly retained, not a defect",
+        "census proves behavior-identity, not byte-identity, of pre-existing fixtures (JCAL1/JCAL5, R93-N7)"
+      ]
+    }
+  },
+  "reconciliations": [
+    {
+      "topic": "C9 contradiction class",
+      "parties": ["JCAL2 finding 1", "JDEP4 M4"],
+      "resolution": "both measurements correct ({expected} fails, {details} certifies); JCAL2's conclusion and the commit message overclaim; closure text must say pin class closed, contradiction class not closed for {details}"
+    },
+    {
+      "topic": "adversarial probes 'unre-probed' (Q1) vs JCAL2/JDEP4",
+      "resolution": "landing-order artifact; probes now exist; Q1 flag superseded with JDEP4 sharpening"
+    },
+    {
+      "topic": "JCAL5 'per its README' (AST debt) vs JCAL2 A4",
+      "resolution": "JCAL2 measured zero README hits; JCAL5 aside is a mis-citation, not a competing measurement"
+    },
+    {
+      "topic": "capabilities fourth row",
+      "parties": ["JDEP4 FOR (bounded)", "P3/P4/W2 unchanged"],
+      "resolution": "OPEN for L1 — classification judgment, not a data conflict; JDEP4 F4 is the decision frame; forbidden state: a row reading as semantic certification"
+    }
+  ],
+  "admission_recommendation": {
+    "verdict": "ADMIT",
+    "basis": "all three axes improved (bounded); no harmed axis; no trade found by any seat; checker and both support-path tools byte-unchanged; unlike r92 there is no content repair list",
+    "record_conditions": [
+      "record Kojiki receipt as JSON-FACTS 12 + 3 editorial (R93-N5)",
+      "word certification as lexical-only; state CB-audit's {details} contradiction probe still certifies",
+      "rule the capabilities classification explicitly (fourth row with JDEP4 F2 bounds, or table unchanged)",
+      "keep zero-shared-referents claim qualified pending M6's M2-specific semantic review",
+      "carry the r94 queue (see named_debt_rollup); Q1-r94-proposal.md selection gate is the ranking input"
+    ]
+  },
+  "named_debt_rollup": [
+    "D-r93-ast-anchors", "D-r93-c9-contradiction", "D-r93-cert-readme", "D-r93-cert-guarded-reads",
+    "D-r93-pin-constant", "D-r93-cert-wrong-revision-anchor", "D-r93-dossier-owner", "D-r93-dossier-links",
+    "D-r93-zero-referent-semantic", "D-r93-record-refresh", "D-r93-commit-msg-12", "D-r93-fixtures-readme-index",
+    "D-r93-watch-row2-cosmetics", "D-r93-e97613c-reachability", "D-r93-silent-venue-repair",
+    "D-r93-capabilities-classification", "D-r93-boundary-doc-header", "D-r93-behavior-not-byte"
+  ],
+  "carried_debt_unchanged": ["Q92-004", "Q92-008 residual", "Q92-006/007/009 (process)", "R93-N9 (rights/training, open by design)", "C5-001", "support_check stream asymmetry"],
+  "agreements": [
+    "checker unchanged ff9fd2aa (JAXIS + H4 + JCOV1 + JCAL1/3/5 + V2 + E1 + SE2 + P2)",
+    "census 166->167, 0 changed, 1 new (5 receipts + JAXIS)",
+    "cert tool positive + fail-closed (JAXIS + 6 seats)",
+    "discrimination exit 0/2 both modes (JAXIS + 5 seats)",
+    "Q92-002 closed (JCAL4, V2, H5, P2, SE2, Q1 + JAXIS diff)",
+    "cluster receipts 12+3 PASS byte-identical (JAXIS + 4 seats)",
+    "no over-claim in the four worded surfaces (JCAL4 adversarial sweep)",
+    "SHONEN unchanged, no promotion (P4, P3)"
+  ],
+  "jaxis_first_hand_receipts": {
+    "checker_unchanged": "sha256 ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421; diff vs 87779a0 empty",
+    "census_dirs": "git ls-tree -d -r -t corpus: 207 -> 208 (+r93-m2-kojiki-cluster)",
+    "cert_tool": "CERTIFIED exit 0; mutated-anchor copy -> 'FAIL: unresolved anchor check_bible.py:9212-224: checker has 428 lines' CERTIFICATION FAIL exit 1",
+    "discriminate_tool": "delivered: DISCRIMINATION HELD exit 0; --checker e97613c: REGRESSION-DETECTED exit 2",
+    "cluster_support": "JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; SOURCE-SUPPORT 12/12; RESULT PASS exit 0; dir = 5 JSON + 6 md (claim counts facts/rows, not files)",
+    "dossier_replay": "R8 record fields 5/5, exit 0",
+    "diffs": "watch +1 row (2026-10-17 (r93), next re-check r94); ledger +Chamberlain row (rights/training open questions); decision table: R9 blocks inside R9 appendix, doubled label 2->1, R8 example = seven-threshold-names case; boundary doc diff vs baseline EMPTY (r92 repairs are in the 87779a0 closure)"
+  },
+  "gaps": [
+    "contract wait-checks saw only JCAL1-delta.json; batch landed 12:07-12:40; full batch read before writing",
+    "10 non-JCAL1 .json artifacts read via parent reports, not byte-for-byte",
+    "JDEP2's ~119-ref content audit is probe-side (script deleted per file-frugality); its 'no wrong-content anchor' rests on one seat's pass, corroborated by the r92-closure repair provenance",
+    "no closure commit existed at write time; record-wording conditions are forward obligations on the scribe"
+  ]
+}

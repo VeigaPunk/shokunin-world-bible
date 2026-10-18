@@ -1,0 +1,346 @@
+V69 battery start 2026-10-17 22:50:12 -0300
+=== stability watch 2026-10-17 22:50:12 -0300 ===
+stab=1 ts=2026-10-17 22:50:12 -0300 tool=fb9bb9ff608c3333 contract=8c2561b043c25db7 s1=True v30=False
+stab=2 ts=2026-10-17 22:50:32 -0300 tool=fb9bb9ff608c3333 contract=8c2561b043c25db7 s1=True v30=False
+stab=3 ts=2026-10-17 22:50:52 -0300 tool=fb9bb9ff608c3333 contract=8c2561b043c25db7 s1=True v30=False
+STABLE after stab=3
+=== BEFORE (baseline tool+contract from 4265df5, mirror ROOT) ===
+baseline tool 03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b
+baseline contract 153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947
+$ baseline clean r98
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+EXIT:0
+
+wording removal changed=True count=1->0
+$ BEFORE wording-removal
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+EXIT:0
+
+$ BEFORE readme-append
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+EXIT:0
+
+$ BEFORE json-space
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 4a54729c1494761e69faa5aa700f80b43f23f67107d874768c8fe8e356c1034d != pin 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133; changed: timeline.json (sha256 eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af -> 902783ef67ea8a089efe68a5be28cf643086b9c272dbb2b37ddfea6a91a8e52d); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+EXIT:2
+
+=== AFTER delivered revision 2026-10-17 22:50:52 -0300 ===
+tool fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c
+contract 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628
+schema_version 2 payload_top 2
+pinned_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+npins 6 names ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+self_test cases ['clean', 'reduction_edge_drop', 'addition_edge_phantom', 'event_removed', 'event_endpoint_change', 'relation_endpoint_flip', 'relation_removed', 'relation_added', 'digest_tamper', 'malformed_json', 'missing_timeline', 'unpinned_fixture', 'missing_fixture', 'invalid_arguments', 'scope_refused', 'path_mismatch', 'self_test_mismatch', 'markdown_tamper'] n=18
+--- chain verify ---
+$ verify r88-m3-maya-cluster
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+RESULT PASS
+EXIT:0
+
+$ verify r94-paired-crossing
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+RESULT PASS
+EXIT:0
+
+$ verify r95-crossing-aftermath
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+RESULT PASS
+EXIT:0
+
+$ verify r96-crossing-response
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+RESULT PASS
+EXIT:0
+
+$ verify r97-crossing-acknowledgment
+FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1
+DIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+RESULT PASS
+EXIT:0
+
+$ verify r98-clerk-filing
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+RESULT PASS
+EXIT:0
+
+--- r99 unpinned ---
+$ verify r99-window-lapse
+FINDING UNPINNED-FIXTURE: no pin for 'r99-window-lapse' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'])
+RESULT ERROR
+EXIT:2
+
+--- independent recompute (no tool import) ---
+PIN r88-m3-maya-cluster: files=True digest=True events=True relations=True vs-baseline-events=True vs-baseline-relations=True payload=2 nfiles=10 rev=337f0fa52b02626b7687eedbb2d99fab30446fe4 digest=acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae extra=['symbolism-clause-map.md']
+PIN r94-paired-crossing: files=True digest=True events=True relations=True vs-baseline-events=True vs-baseline-relations=True payload=2 nfiles=10 rev=337f0fa52b02626b7687eedbb2d99fab30446fe4 digest=048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef extra=[]
+PIN r95-crossing-aftermath: files=True digest=True events=True relations=True vs-baseline-events=True vs-baseline-relations=True payload=2 nfiles=10 rev=337f0fa52b02626b7687eedbb2d99fab30446fe4 digest=97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710 extra=[]
+PIN r96-crossing-response: files=True digest=True events=True relations=True vs-baseline-events=True vs-baseline-relations=True payload=2 nfiles=10 rev=337f0fa52b02626b7687eedbb2d99fab30446fe4 digest=43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c extra=[]
+PIN r97-crossing-acknowledgment: files=True digest=True events=True relations=True vs-baseline-events=True vs-baseline-relations=True payload=2 nfiles=10 rev=337f0fa52b02626b7687eedbb2d99fab30446fe4 digest=a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54 extra=[]
+PIN r98-clerk-filing: files=True digest=True events=True relations=True vs-baseline-events=True vs-baseline-relations=True payload=2 nfiles=10 rev=337f0fa52b02626b7687eedbb2d99fab30446fe4 digest=5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0 extra=[]
+--- self-test ---
+$ self-test
+CASE clean: exit=0 expected=0 findings=[] ok
+CASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+CASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok
+CASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+CASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+SELF-TEST 18/18
+RESULT PASS
+EXIT:0
+
+contract unchanged by self-test: True
+self-test leftovers: []
+--- scope guard (delivered tool, out-of-scope target; contract must not change) ---
+$ scope-refused outscope
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V69-scratch/outscope (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V69-scratch/outscope); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+EXIT:2
+
+contract unchanged by refused freeze: True
+--- path mismatch (mirror) ---
+$ path-mismatch foreign r98
+FINDING PATH-MISMATCH: pin r98-clerk-filing names corpus/fixtures/r98-clerk-filing (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V69-scratch/after/path-mismatch/corpus/fixtures/r98-clerk-filing); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V69-scratch/after/path-mismatch/foreign/r98-clerk-filing
+RESULT ERROR
+EXIT:2
+
+--- guarded --freeze reproducibility (mirror; delivered contract never written) ---
+$ mirror --freeze r88-m3-maya-cluster
+FROZEN r88-m3-maya-cluster: events 2; dependency-edges 0; relations 0
+DIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+RESULT PASS
+EXIT:0
+
+$ mirror --freeze r94-paired-crossing
+FROZEN r94-paired-crossing: events 3; dependency-edges 2; relations 1
+DIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+RESULT PASS
+EXIT:0
+
+$ mirror --freeze r95-crossing-aftermath
+FROZEN r95-crossing-aftermath: events 4; dependency-edges 3; relations 1
+DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+RESULT PASS
+EXIT:0
+
+$ mirror --freeze r96-crossing-response
+FROZEN r96-crossing-response: events 5; dependency-edges 4; relations 1
+DIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+RESULT PASS
+EXIT:0
+
+$ mirror --freeze r97-crossing-acknowledgment
+FROZEN r97-crossing-acknowledgment: events 6; dependency-edges 5; relations 1
+DIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1
+DIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+RESULT PASS
+EXIT:0
+
+$ mirror --freeze r98-clerk-filing
+FROZEN r98-clerk-filing: events 7; dependency-edges 6; relations 1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+RESULT PASS
+EXIT:0
+
+PIN-REPRODUCIBILITY r88-m3-maya-cluster: EXACT-MATCH
+PIN-REPRODUCIBILITY r94-paired-crossing: EXACT-MATCH
+PIN-REPRODUCIBILITY r95-crossing-aftermath: EXACT-MATCH
+PIN-REPRODUCIBILITY r96-crossing-response: EXACT-MATCH
+PIN-REPRODUCIBILITY r97-crossing-acknowledgment: EXACT-MATCH
+PIN-REPRODUCIBILITY r98-clerk-filing: EXACT-MATCH
+--- markdown tamper, one file at a time (mirror, pinned path) ---
+$ append newline to README.md
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 3322eda76a6885f76f251bb35651ada8dce3f853f344d653c43acf6843416f70 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> d2a1d6596c8e875bd54fd17d6695d7e90945867a724bc116daada2f653c48ffa); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT:2
+
+$ append newline to claim-excerpt-map.md
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 466c8f7b77cf44090e9b5c81569612a7df16dd0696f81666d23e838dca8d5eb0 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> 76d3db9831b7d7e66f5a33584a62417d394ccb8a736f64461c4c41d83be375c5); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT:2
+
+$ append newline to fictional-excerpts.md
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 3e992626a155faba83490f4810d2aa0b13bd1e51e2153e98e1e7af86c925beab != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> a6bff890dd8821e255896ccdf63426c725a2951a8a9111deed067339dd21ad2f); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT:2
+
+$ append newline to inspiration-note.md
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 02fc00a950188f1433e2302946b41183c42b95df27dbe25730a579dfa2ffa20c != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> a1be0d5b00e0c695acbebbdee55d1fc00e8956e53f71ec8f6fde1157c055b3af); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT:2
+
+$ append newline to source-excerpt.md
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest b413f00ea52299788617c551091e5fe6514935be43c6cf32967cf629ce22541a != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 5426ef14362d94f3388ec24a3d29973add977e369a368271a3ae50c4f0dfac3e); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT:2
+
+--- dependency-wording removal on pinned path ---
+$ wording removal fictional-excerpts.md
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest c811669ea2534d48122939e270599376160b8f5936eecb2e766c141464b6808b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT:2
+
+$ wording-removal other gates :: corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V69-scratch/after/wording-removal/corpus/fixtures/r98-clerk-filing
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT:0
+
+$ wording-removal other gates :: corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V69-scratch/after/wording-removal/corpus/fixtures/r98-clerk-filing
+OBLIGATIONS raw=20 mapped=20
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22
+RESULT PASS
+EXIT:0
+
+$ wording-removal other gates :: corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V69-scratch/after/wording-removal/corpus/fixtures/r98-clerk-filing
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 18/18
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+FAIL J14: source-support; mode=verbatim; anchor=not-found
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.
+PASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+PASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 20; EDITORIAL-ROWS 2; TOTAL-ROWS 22
+SOURCE-SUPPORT 19/20; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 21/22
+FAIL: J14: source-support anchor missing
+RESULT FAIL
+EXIT:1
+
+--- other gates on intact r98 (control) ---
+$ intact r98 :: corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT:0
+
+$ intact r98 :: corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing
+OBLIGATIONS raw=20 mapped=20
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22
+RESULT PASS
+EXIT:0
+
+$ intact r98 :: corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 18/18
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.
+PASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+PASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 20; EDITORIAL-ROWS 2; TOTAL-ROWS 22
+SOURCE-SUPPORT 20/20; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 22/22
+RESULT PASS
+EXIT:0
+
+--- semantic reduction still exit 1, and still first when markdown also changes ---
+$ drop clerk-filing-open edge
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL
+EXIT:1
+
+$ edge drop PLUS excerpt newline
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL
+EXIT:1
+
+--- r88 extra file outside the ten ---
+$ r88 symbolism-clause-map.md newline
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+RESULT PASS
+EXIT:0
+
+--- delete one pinned markdown (verify, not freeze) ---
+$ delete inspiration-note.md
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 148f3bd6ffcd51aa494746ccc1038dd70dabfd42161653c9f2564b3be0699940 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> None); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT:2
+
+--- end hashes ---
+tool fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c
+contract 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628
+s1 report [PosixPath('/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1-full-file-pins.md')]
+s2 report []
+s5 report []
+v30 report []
+table exists False
+=== post-battery stall-escape (max 4) ===
+escape=1 ts=2026-10-17 22:50:55 -0300 s1=True v30=False tool=fb9bb9ff608c3333
+escape=2 ts=2026-10-17 22:51:15 -0300 s1=True v30=False tool=fb9bb9ff608c3333
+escape=3 ts=2026-10-17 22:51:35 -0300 s1=True v30=False tool=fb9bb9ff608c3333
+escape=4 ts=2026-10-17 22:51:55 -0300 s1=True v30=False tool=fb9bb9ff608c3333
+ESCAPE-EXPIRED

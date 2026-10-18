@@ -1,0 +1,11 @@
+corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md
+corpus/fixtures/r98-clerk-filing/contradictions.json
+corpus/fixtures/r98-clerk-filing/entities.json
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+corpus/fixtures/r98-clerk-filing/inspiration-note.md
+corpus/fixtures/r98-clerk-filing/README.md
+corpus/fixtures/r98-clerk-filing/relations.json
+corpus/fixtures/r98-clerk-filing/source-excerpt.md
+corpus/fixtures/r98-clerk-filing/sources.json
+corpus/fixtures/r98-clerk-filing/timeline.json
+corpus/knowledge/r98-clerk-scope-note.md

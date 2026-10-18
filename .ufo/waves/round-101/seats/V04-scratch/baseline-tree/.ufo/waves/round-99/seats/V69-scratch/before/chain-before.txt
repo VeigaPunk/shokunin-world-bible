@@ -1,0 +1,66 @@
+=== HEAD 337f0fa52b02626b7687eedbb2d99fab30446fe4 ts=2026-10-17 22:04:28 -0300 ===
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+=== chain verify (delivered tool, delivered contract, schema 1 / 5-file pins) ===
+--- r88-m3-maya-cluster ---
+FINDING CONTRACT-INVALID: pin r88-m3-maya-cluster payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+--- r94-paired-crossing ---
+FINDING CONTRACT-INVALID: pin r94-paired-crossing payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+--- r95-crossing-aftermath ---
+FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+--- r96-crossing-response ---
+FINDING CONTRACT-INVALID: pin r96-crossing-response payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+--- r97-crossing-acknowledgment ---
+FINDING CONTRACT-INVALID: pin r97-crossing-acknowledgment payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+--- r98-clerk-filing ---
+FINDING CONTRACT-INVALID: pin r98-clerk-filing payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+=== self-test ===
+CASE clean: exit=2 expected=0 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE reduction_edge_drop: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE addition_edge_phantom: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE event_removed: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE event_endpoint_change: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE relation_endpoint_flip: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE relation_removed: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE relation_added: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE digest_tamper: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE malformed_json: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE missing_timeline: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+CASE markdown_tamper: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)', 'RESULT ERROR']
+SELF-TEST 4/18
+FINDING SELF-TEST-MISMATCH: cases failed: ['addition_edge_phantom', 'clean', 'digest_tamper', 'event_endpoint_change', 'event_removed', 'malformed_json', 'markdown_tamper', 'missing_fixture', 'missing_timeline', 'path_mismatch', 'reduction_edge_drop', 'relation_added', 'relation_endpoint_flip', 'relation_removed']
+RESULT ERROR
+SELFTEST_EXIT:2
+=== prose-half BEFORE: markdown append on scratch copy of r98, verify against delivered pin ===

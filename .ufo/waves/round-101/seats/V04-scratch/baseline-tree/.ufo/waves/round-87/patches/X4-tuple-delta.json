@@ -1,0 +1,32 @@
+{
+  "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+  "scope": "all directories under corpus containing at least one checker section JSON file",
+  "fixture_count": 142,
+  "before_finding_count": 274,
+  "after_finding_count": 279,
+  "added_tuples": [
+    {
+      "fixture": "live/runs/round-85/probe-inputs/r85-harbor-repro",
+      "finding": "entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+    },
+    {
+      "fixture": "live/runs/round-85/probe-inputs/r85-harbor-repro",
+      "finding": "entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+    },
+    {
+      "fixture": "live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+      "finding": "entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[2]"
+    },
+    {
+      "fixture": "live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "finding": "entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]"
+    },
+    {
+      "fixture": "live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "finding": "entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]"
+    }
+  ],
+  "removed_tuples": [],
+  "status_or_stderr_changes": [],
+  "all_preexisting_finding_bytes_preserved_in_order": true
+}

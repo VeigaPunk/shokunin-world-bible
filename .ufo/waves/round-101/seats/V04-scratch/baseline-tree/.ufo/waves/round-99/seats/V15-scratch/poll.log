@@ -1,0 +1,47 @@
+POLL_START 2026-10-17T22:02:15-03:00
+try=1 22:02:15 missing: readme map table note S4rep S5rep
+try=2 22:02:35 missing: readme map table note S4rep S5rep
+try=3 22:02:55 missing: table note S4rep S5rep
+try=4 22:03:15 missing: table note S4rep S5rep
+POLL_START 2026-10-17T22:03:37-03:00
+try=1 22:03:37 missing: table note S4rep S5rep
+try=2 22:03:57 missing: table note S5rep
+try=3 22:04:17 missing: table note S5rep
+try=4 22:04:37 missing: table note S5rep
+try=5 22:04:57 missing: table note S5rep
+try=6 22:05:17 missing: table note S5rep
+try=7 22:05:37 missing: table note S5rep
+try=8 22:05:57 missing: table note S5rep
+try=9 22:06:17 missing: table note S5rep
+try=10 22:06:37 missing: table note S5rep
+try=11 22:06:57 missing: table note S5rep
+try=12 22:07:17 missing: table note S5rep
+try=13 22:07:37 missing: table note S5rep
+try=14 22:07:57 missing: table note S5rep
+try=15 22:08:17 missing: table note S5rep
+try=16 22:08:37 missing: table note S5rep
+try=17 22:08:57 missing: table note S5rep
+try=18 22:09:17 missing: table note S5rep
+try=19 22:09:37 missing: table note S5rep
+try=20 22:09:57 missing: table note S5rep
+try=21 22:10:17 missing: table note S5rep
+try=22 22:10:37 missing: table note S5rep
+try=23 22:10:57 missing: table note S5rep
+try=24 22:11:17 missing: table note S5rep
+try=25 22:11:37 missing: table note S5rep
+try=26 22:11:57 missing: table note S5rep
+try=27 22:12:17 missing: table note S5rep
+try=28 22:12:37 missing: table note S5rep
+try=29 22:12:57 missing: table note S5rep
+try=30 22:13:17 missing: table note S5rep
+try=31 22:13:37 missing: table note S5rep
+try=32 22:13:57 missing: table note S5rep
+try=33 22:14:17 missing: table note S5rep
+try=34 22:14:37 missing: table note S5rep
+try=35 22:14:57 missing: table note S5rep
+try=36 22:15:17 missing: table note S5rep
+try=37 22:15:37 missing: table note S5rep
+try=38 22:15:57 missing: table note S5rep
+try=39 22:16:17 missing: table note S5rep
+try=40 22:16:37 missing: table note S5rep
+ABSENT after 40 tries 2026-10-17T22:16:37-03:00

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "archive-ledger",
+    "title": "Lantern Harbor Registry, year 12",
+    "kind": "fictional municipal record",
+    "reliability_note": "in-world fiction; records movements, not omniscient truth"
+  },
+  {
+    "id": "courier-log",
+    "title": "Courier Mira\u2019s Route Log, year 12",
+    "kind": "fictional personal log",
+    "reliability_note": "in-world fiction; first-person account"
+  },
+  {
+    "id": "archive-ledger",
+    "title": "Lantern Harbor Registry, year 12",
+    "kind": "fictional municipal record",
+    "reliability_note": "in-world fiction; records movements, not omniscient truth"
+  }
+]

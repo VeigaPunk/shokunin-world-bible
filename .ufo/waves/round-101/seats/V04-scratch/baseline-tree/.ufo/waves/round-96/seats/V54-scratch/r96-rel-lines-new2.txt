@@ -1,0 +1,13 @@
+26:RAW_FILES = ("entities.json", "relations.json", "timeline.json")
+33:    r"^(entities|relations|timeline)\[([0-9]+)\]"
+38:    r"`[^`]*\.json#[^`]*`|`(?:entities|relations|timeline)\[[0-9]+\][^`]*`"
+40:    r"|(?<![A-Za-z0-9_./-])(?:entities|relations|timeline)\[[0-9]+\]"
+423:def raw_obligations_values(entities, relations, timeline):
+424:    if not isinstance(entities, list) or not isinstance(relations, list) or not isinstance(timeline, list):
+425:        fail("invalid_raw_data", "entities, relations, and timeline roots must be arrays")
+457:    for filename, records in (("relations.json", relations), ("timeline.json", timeline)):
+469:        read_raw(cluster, "relations.json"),
+596:            parse_frozen_json(contents, "relations.json"),
+629:        ("R1", "relations.json#/0", "fixture-source"),
+642:        "relations.json": [{
+738:        pointer_overrides[0] = "`entities.json#/0/first_appearance; relations.json#/0`"

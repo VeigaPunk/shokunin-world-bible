@@ -1,0 +1,423 @@
+diff --git c/SKILL.md w/SKILL.md
+index 27b9b6f..05c8a4f 100644
+--- c/SKILL.md
++++ w/SKILL.md
+@@ -93,10 +93,11 @@ Rows follow the fleet schema in `../PROTOCOL.md:360-406`. `boundary_doc_check` n
+ 
+ - **name:** `dependency_freeze`
+ - **gate/probe:** gate
+-- **entry command:** `python3 corpus/tools/dependency_freeze.py <fixture-dir>` (repository root; frozen chain: r88-m3-maya-cluster, r94-paired-crossing, r95-crossing-aftermath, r96-crossing-response, r97-crossing-acknowledgment, r98-clerk-filing, r99-window-lapse)
++- **entry command:** `python3 corpus/tools/dependency_freeze.py <fixture-dir>` (repository root; frozen chain: r88-m3-maya-cluster, r94-paired-crossing, r95-crossing-aftermath, r96-crossing-response, r97-crossing-acknowledgment, r98-clerk-filing, r99-window-lapse, r100-docket-review)
+ - **code → class:** `0 → clean`; `1 → failed` (`REDUCTION-DETECTED` / `ADDITION-DETECTED` / `ENDPOINT-CHANGE`); `2 → could-not-evaluate`; other codes → `could-not-evaluate`
+-- **self-test command:** `python3 corpus/tools/dependency_freeze.py --self-test`; 18 cases (r97 added `SCOPE-REFUSED`, `PATH-MISMATCH`; r98 added `self_test_mismatch`; r99 added `markdown_tamper`) with expectations persisted in `corpus/tools/dependency-freeze-contract.json`; `SELF-TEST-MISMATCH` exits 2 (aligned with `map_obligations`); path-less legacy pins are migrated in place by `--freeze`; the scratch directory is created at the repository root and gitignored (see `.gitignore` `*-self-test-*/`).
+-- **pinned-values path:** `corpus/tools/dependency-freeze-contract.json` — `schema_version` 2 / `payload_schema_version` 2; per-fixture repo-relative path binding, event→depends_on edge sets, relation endpoint triples, and content SHA-256 over all ten declared files per fixture (five JSON tables + `README.md` + `claim-excerpt-map.md` + `fictional-excerpts.md` + `inspiration-note.md` + `source-excerpt.md`); exactly the seven chain fixtures, verifying 7/7 clean (a foreign `c3red` scratch pin written by an r96 verifier probe was removed at r96 closure, adjudication condition C-1; r97/r98 pinned at r98 through the guarded path, discharging r97's recorded V46 FAIL; the six were re-frozen at r99 through the same guarded `--freeze`; r99-window-lapse pinned at r100 through that guarded path, discharging r99's AC-4 tick-15 unfrozen-edge bound). The six existing pins retain every field from r99 closure `fe1ce46`; the guarded writer also refreshes the contract's top-level revision metadata.
++- **self-test command:** `python3 corpus/tools/dependency_freeze.py --self-test`; 19 cases (r97 added `SCOPE-REFUSED`, `PATH-MISMATCH`; r98 added `self_test_mismatch`; r99 added `markdown_tamper`; r101 added `repointed_edge`, the wrong-but-earlier repointed dependency edge) with expectations persisted in `corpus/tools/dependency-freeze-contract.json`; `SELF-TEST-MISMATCH` exits 2 (aligned with `map_obligations`); path-less legacy pins are migrated in place by `--freeze`; the scratch directory is created at the repository root and gitignored (see `.gitignore` `*-self-test-*/`).
++- **pinned-values path:** `corpus/tools/dependency-freeze-contract.json` — `schema_version` 2 / `payload_schema_version` 2; per-fixture repo-relative path binding, event→depends_on edge sets, relation endpoint triples, and content SHA-256 over all ten declared files per fixture (five JSON tables + `README.md` + `claim-excerpt-map.md` + `fictional-excerpts.md` + `inspiration-note.md` + `source-excerpt.md`); exactly the eight chain fixtures, verifying 8/8 clean (a foreign `c3red` scratch pin written by an r96 verifier probe was removed at r96 closure, adjudication condition C-1; r97/r98 pinned at r98 through the guarded path, discharging r97's recorded V46 FAIL; the six were re-frozen at r99 through the same guarded `--freeze`; r99-window-lapse pinned at r100 through that guarded path, discharging r99's AC-4 tick-15 unfrozen-edge bound; r100-docket-review pinned at r101 through that guarded path). The seven inherited pins retain every field from r100 closure `6f86bf2`; the guarded writer also refreshes the contract's top-level revision metadata.
+ - **scope:** JSON-layer dependency edges, relation endpoints, and full-file content digests over the ten declared files per fixture. Path-bound since r97 (pins carry repo-relative paths; a byte-identical copy at a foreign path exits 2 `PATH-MISMATCH`); `--freeze` is scope-guarded to `corpus/fixtures/**` (exit 2 `SCOPE-REFUSED` otherwise) and is integration-time only; when the semantic inventory is clean, a pinned-file edit exits 2 `DIGEST-MISMATCH` naming the file (semantic findings decide first, exit 1, r99 AC-1 correction). Bounds: BR-01's prose half is now "any prose edit is detectable", not "dependency semantics provable" — a byte change in pinned prose is detectable, and the gate does not judge whether the remaining prose still states the dependency. Files outside the declared ten (r88 `symbolism-clause-map.md`) are not pinned. No prose entailment, testimony, chronology-truth, rights, permission, or canon judgment.
+ - **owner:** `lore-shokunin`
+ - **dated supersession (2026-10-17, round 100):** the former "exactly the six chain fixtures" wording and r99's recorded unpinned-fixture bound are superseded by the seven-fixture chain above. The r99 pin has payload schema 2, all ten file digests, and `clerk-lapse-recorded` depending on `clerk-filing-open`; no semantics, chronology-truth, or canon claim is added.
++- **dated supersession (2026-10-18, round 101):** the former "exactly the seven chain fixtures" / "verifying 7/7 clean" wording, the 18-case count, and the "six existing pins retain every field from r99 closure" sentence are superseded by the eight-fixture chain, the 19-case self-test, and the seven inherited pins above. The r100 pin has payload schema 2, all ten file digests, and `clerk-review-first-passage` depending on `clerk-lapse-recorded`; the `repointed_edge` case persists the blind-spot decision table's "wrong-but-earlier edge" row in the delivered gate; no semantics, chronology-truth, or canon claim is added.
+
+diff --git c/corpus/tools/README.md w/corpus/tools/README.md
+index 309341b..e87573c 100644
+--- c/corpus/tools/README.md
++++ w/corpus/tools/README.md
+@@ -419,3 +419,62 @@ RESULT FAIL
+ ```
+ 
+ The delivered fixture was never changed. The same byte-identical tool and contract mirror's `--self-test` still prints `SELF-TEST 18/18` and `RESULT PASS`, exit 0; the case set and expectations are unchanged. The 0/1/2 contract, semantic-finding precedence, scope guard, path binding, and all semantic/non-establishment bounds remain unchanged. `r100-docket-review` is not part of this seven-fixture frozen chain; the pin addition covers r99, not the new continuation.
++
++### Round-101 addendum: r100 pinned, eight-fixture chain, wrong-but-earlier edge persisted as self-test case (2026-10-18)
++
++#### Dated supersession (prior text kept as delivered history)
++
++The current chain is eight fixtures. Earlier chain-size wording — including Round-100's "seven-fixture chain", "7/7 clean", and its closing sentence that "`r100-docket-review` is not part of this seven-fixture frozen chain" — is superseded as of 2026-10-18 (round 101); those receipts remain historical measurements of their revisions. The blind-spot decision table's row 2 ("wrong-but-earlier dependency edge", `corpus/knowledge/r99-gate-blind-spot-table.md`, demonstrated at r99 by verifier probe V16 P8) is now pinned by a persisted self-test case in the delivered gate (below). The knowledge table itself is unchanged in r101 (outside the round's producer byte ownership); this addendum is the dated record of that row's closure. This is calibration, not a new dependency-semantics or chronology-truth claim.
++
++#### Guarded r100 pin addition
++
++The integration-time operation was run once from the repository root; this is not a verification command and must not be rerun to check a delivery:
++
++```sh
++python3 corpus/tools/dependency_freeze.py --freeze corpus/fixtures/r100-docket-review
++```
++
++Observed output (exit 0):
++
++```
++FROZEN r100-docket-review: events 9; dependency-edges 8; relations 1
++DIGEST 77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19
++FREEZE r100-docket-review: events 9/9; dependency-edges 8/8; relations 1/1
++DIGEST 77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19
++RESULT PASS
++```
++
++The new pin records `corpus/fixtures/r100-docket-review`, revision `ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026` (the r101 round-declaration commit; the tree HEAD at freeze time), payload schema 2, all ten declared filenames and matching per-file SHA-256 values, 9 events / 8 dependency edges / 1 relation / 6 entities / 9 sources, and the tick-16 edge `clerk-review-first-passage` → `clerk-lapse-recorded`. The declared ten-file set is unchanged from r99.
++
++`git diff 6f86bf2 -- corpus/tools/dependency-freeze-contract.json` shows exactly three hunks: the r100-docket-review pin addition, the new `self_test.expected.repointed_edge` case, and the guarded writer's top-level `revision` refresh (`b5fe472957ab1e4e9c90f5613acc14cd24a288ae` → `ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026`). Every field of every inherited pin is unchanged from the r100 closure; none was re-frozen. The Round-100 sentence that the delivered pins record revision `b5fe472…` now applies to the inherited seven only. Aside from the guarded writer, contract bytes were hand-edited only to add the `repointed_edge` expectation.
++
++#### Persisted self-test: 19 cases, `repointed_edge`
++
++The new case copies the self-test base fixture `r95-crossing-aftermath` into an isolated mirror and swaps `aftermath-missing-evin`'s single `depends_on` entry from its correct predecessor `paired-crossing-decision` (tick 10) to a different valid earlier event, `aru-ninth-bell` (tick 9, pinned in the same fixture). Hand-derived expectation: the compare loses `paired-crossing-decision` (`REDUCTION-DETECTED`) and gains `aru-ninth-bell` (`ADDITION-DETECTED`) on the same event in one run; no endpoint or relation change; exit 1. Persisted: `"repointed_edge": {"exit": 1, "finding_ids": ["ADDITION-DETECTED", "REDUCTION-DETECTED"], "forbid_traceback": true}`.
++
++```sh
++python3 corpus/tools/dependency_freeze.py --self-test   # SELF-TEST 19/19 / RESULT PASS, exit 0
++```
++
++The run printed 19 `CASE … ok` lines — the 18 prior case ids with unchanged expectations plus `CASE repointed_edge: exit=1 expected=1 findings=['ADDITION-DETECTED', 'REDUCTION-DETECTED'] ok` — then `SELF-TEST 19/19` and `RESULT PASS`, exit 0. The same class was independently reproduced outside the self-test harness on a seat-scratch mirror (delivered tool + contract copy + r95 fixture; the swap applied by hand), which printed `FINDING ADDITION-DETECTED: event aftermath-missing-evin gained depends_on ['aru-ninth-bell']`, `FINDING REDUCTION-DETECTED: event aftermath-missing-evin lost depends_on ['paired-crossing-decision']`, `RESULT FAIL`, exit 1. `SELF-TEST-MISMATCH` still exits 2.
++
++#### Eight-fixture verification (read-only)
++
++Run from the repository root:
++
++```sh
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r100-docket-review
++```
++
++All eight print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0 (8/8 clean). The seven inherited digests are exactly the earlier values (r88 `acf677a7085be3f6…`, r94 `048b8ff39e4a5232…`, r95 `97cffd7bfe6e0c92…`, r96 `43911900923c110b…`, r97 `a28b9ea0d65ec355…`, r98 `5ecf84e19121ea12…`, r99 `7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`); the r100 digest is `77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19`.
++
++#### Unchanged
++
++The 0/1/2 exit contract, the clean-run `FREEZE` / `DIGEST` / `RESULT` receipt surface, path binding (`PATH-MISMATCH`), the `--freeze` scope guard, and semantic-finding precedence (exit 1) are unchanged. This addendum does not change `map_obligations.py`, `support_check.py`, or `boundary_doc_check.py`.
+
+diff --git c/corpus/tools/dependency_freeze.py w/corpus/tools/dependency_freeze.py
+index ac590a8..49c41c8 100644
+--- c/corpus/tools/dependency_freeze.py
++++ w/corpus/tools/dependency_freeze.py
+@@ -28,6 +28,14 @@ inspiration-note, and source-excerpt), not the five JSON tables alone, so an
+ edit to any pinned file — including dependency wording in an excerpt — exits 2
+ `DIGEST-MISMATCH` naming that file. The payload carries a schema version;
+ self-test case `markdown_tamper` pins the Markdown-tamper detection (17 -> 18).
++
++Round-101 hardening: the self-test grew 18 -> 19 with `repointed_edge` —
++repointing `aftermath-missing-evin` from its correct predecessor
++(`paired-crossing-decision`) to a different valid earlier event
++(`aru-ninth-bell`, tick 9 < 11) exits 1 with BOTH `REDUCTION-DETECTED` (the
++dropped old edge) and `ADDITION-DETECTED` (the new wrong-but-earlier edge)
++in a single run — persisting the blind-spot table's "wrong-but-earlier
++edge" row in the delivered gate.
+ """
+ 
+ import argparse
+@@ -79,6 +87,7 @@ FROZEN_CASES = (
+     "path_mismatch",
+     "self_test_mismatch",
+     "markdown_tamper",
++    "repointed_edge",
+ )
+ SELF_TEST_BASE = "r95-crossing-aftermath"
+ SELF_TEST_CHILD_ENV = "DEPENDENCY_FREEZE_SELF_TEST_CHILD"
+@@ -578,6 +587,15 @@ def self_test_cases(workdir, base):
+     excerpt = scratch / "fictional-excerpts.md"
+     excerpt.write_bytes(excerpt.read_bytes() + b"\n")
+     cases["markdown_tamper"] = (verify_argv(mirror_tool(root), scratch), 2)
++
++    root = mirror_root("repointed_edge")
++    scratch = mirror_fixture(root)
++    timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
++    for record in timeline:
++        if record["id"] == "aftermath-missing-evin":
++            record["depends_on"] = ["aru-ninth-bell" if dep == "paired-crossing-decision" else dep for dep in record["depends_on"]]
++    (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
++    cases["repointed_edge"] = (verify_argv(mirror_tool(root), scratch), 1)
+     return cases
+ 
+ 
+
+diff --git c/corpus/tools/dependency-freeze-contract.json w/corpus/tools/dependency-freeze-contract.json
+index 936a208..3beb22e 100644
+--- c/corpus/tools/dependency-freeze-contract.json
++++ w/corpus/tools/dependency-freeze-contract.json
+@@ -32,7 +32,7 @@
+     "1": "FAIL",
+     "2": "ERROR"
+   },
+-  "revision": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
++  "revision": "ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026",
+   "pins": {
+     "r88-m3-maya-cluster": {
+       "fixture": "corpus/fixtures/r88-m3-maya-cluster",
+@@ -677,6 +677,139 @@
+         "entities": 6,
+         "sources": 8
+       }
++    },
++    "r100-docket-review": {
++      "fixture": "corpus/fixtures/r100-docket-review",
++      "revision": "ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026",
++      "payload_schema_version": 2,
++      "pinned_files": [
++        "entities.json",
++        "relations.json",
++        "timeline.json",
++        "sources.json",
++        "contradictions.json",
++        "README.md",
++        "claim-excerpt-map.md",
++        "fictional-excerpts.md",
++        "inspiration-note.md",
++        "source-excerpt.md"
++      ],
++      "content_sha256": "77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19",
++      "files": {
++        "README.md": "a312a364d4d9476e98c0fae3f62b23bf72e73a06c508aac04ffe48cf9cf4c5fa",
++        "claim-excerpt-map.md": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
++        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
++        "entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
++        "fictional-excerpts.md": "d01825a7e3c8f4af549b7acdde7eb8e1b9074a6eccb8ce6d12401cea19745705",
++        "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
++        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
++        "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
++        "sources.json": "effa5160eb7a6b228d52a972bf52beeffc1544d3cb1f6c5edb2850f88bd2d22e",
++        "timeline.json": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8"
++      },
++      "events": {
++        "aru-ninth-bell": {
++          "depends_on": [],
++          "endpoint": {
++            "tick": 9,
++            "entity_id": "aru",
++            "place_id": "quiet-rise"
++          }
++        },
++        "evin-ninth-bell": {
++          "depends_on": [],
++          "endpoint": {
++            "tick": 9,
++            "entity_id": "evin",
++            "place_id": "salt-court"
++          }
++        },
++        "paired-crossing-decision": {
++          "depends_on": [
++            "aru-ninth-bell",
++            "evin-ninth-bell"
++          ],
++          "endpoint": {
++            "tick": 10,
++            "entity_id": "aru",
++            "place_id": "chalk-stair"
++          }
++        },
++        "aftermath-missing-evin": {
++          "depends_on": [
++            "paired-crossing-decision"
++          ],
++          "endpoint": {
++            "tick": 11,
++            "entity_id": "aru",
++            "place_id": "chalk-stair"
++          }
++        },
++        "response-evin-salt-court": {
++          "depends_on": [
++            "aftermath-missing-evin"
++          ],
++          "endpoint": {
++            "tick": 12,
++            "entity_id": "evin",
++            "place_id": "salt-court"
++          }
++        },
++        "acknowledgment-aru-records": {
++          "depends_on": [
++            "response-evin-salt-court"
++          ],
++          "endpoint": {
++            "tick": 13,
++            "entity_id": "aru",
++            "place_id": "chalk-stair"
++          }
++        },
++        "clerk-filing-open": {
++          "depends_on": [
++            "acknowledgment-aru-records"
++          ],
++          "endpoint": {
++            "tick": 14,
++            "entity_id": "clerk-maren",
++            "place_id": "chalk-stair"
++          }
++        },
++        "clerk-lapse-recorded": {
++          "depends_on": [
++            "clerk-filing-open"
++          ],
++          "endpoint": {
++            "tick": 15,
++            "entity_id": "clerk-maren",
++            "place_id": "chalk-stair"
++          }
++        },
++        "clerk-review-first-passage": {
++          "depends_on": [
++            "clerk-lapse-recorded"
++          ],
++          "endpoint": {
++            "tick": 16,
++            "entity_id": "clerk-maren",
++            "place_id": "chalk-stair"
++          }
++        }
++      },
++      "relations": [
++        [
++          "aru",
++          "evin",
++          "agreed_co_stewardship_for_this_crossing"
++        ]
++      ],
++      "counts": {
++        "events": 9,
++        "dependency_edges": 8,
++        "relations": 1,
++        "entities": 6,
++        "sources": 9
++      }
+     }
+   },
+   "self_test": {
+@@ -806,6 +939,14 @@
+         ],
+         "names_file": "fictional-excerpts.md",
+         "forbid_traceback": true
++      },
++      "repointed_edge": {
++        "exit": 1,
++        "finding_ids": [
++          "ADDITION-DETECTED",
++          "REDUCTION-DETECTED"
++        ],
++        "forbid_traceback": true
+       }
+     }
+   },
+
+source: `corpus/fixtures/r94-paired-crossing/{README.md,entities.json,relations.json,sources.json,timeline.json,fictional-excerpts.md}`; `corpus/fixtures/r95-crossing-aftermath/{README.md,relations.json,sources.json,timeline.json,fictional-excerpts.md,contradictions.json}`; `corpus/fixtures/r96-crossing-response/{README.md,relations.json,sources.json,timeline.json,fictional-excerpts.md,contradictions.json}`; `corpus/fixtures/r100-docket-review/fictional-excerpts.md`; `corpus/knowledge/r88-sourced-inspiration-decision-table.md` (R10 row and R10 appendix); `corpus/knowledge/r89-cross-cluster-contradiction.md`; `corpus/knowledge/r93-r8-worked-example.md`; `corpus/knowledge/r95-aftermath-scope-note.md`; `corpus/knowledge/r96-response-scope-note.md`; `corpus/knowledge/r100-crossing-arc-synthesis.md`; `corpus/fixtures/r35-bell7-conflict/{contradictions.json,timeline.json,manual-clause-pointer-map.md}`; `corpus/fixtures/README.md` (Round 35 section); `LOG.md` (r93 closure R10 negative case; round-101 declaration C2)
+verified-at: 2026-10-18T00:18-03:00 — read every cited local record this pass from the lane root; re-measured the relation byte-identity across all seven arc snapshots (see Receipts), re-derived the excerpt prefix chain r94⊂r95⊂r96, confirmed both notes' presence in the delivered r100 snapshot, and confirmed `corpus/knowledge/cross-cluster-contradictions.md` does not exist. No external URL was fetched. This is an author-seat worked entry, not an independent admission, not a contradiction finding, and not a canon assertion.
+recheck: before integrating any crossing-arc claim, and whenever a cited fixture, note, decision-table row, or the byte-identity chain changes; re-derive the Receipts commands before relying on them, and re-read both notes' whole authored sections rather than the quoted lines alone.
+citation-convention: in the record table, bare `file.json#/pointer` references resolve inside the full fixture path named in the same row; all other citations are lane-root-relative paths, and ranges refer to the delivered files. Source IDs are cluster-local: compare path-qualified pairs, never bare IDs (`corpus/knowledge/r88-sourced-inspiration-decision-table.md:99-100`).
+
+# R10 register — first worked entry: an examined NON-conflict at the agreed bell
+
+## Scope and limits
+
+This is the first real exercise of the R10 procedure on a demonstrated shared referent, applied to the crossing arc's two occasion-sharing accounts. It is a worked **non-conflict** record: the examination demonstrates the shared referent, field, and occasion, finds the two assertions compatible, and therefore creates no register entry. The procedure stood unexercised at r93 closure: the finite universe of the then-delivered clusters yielded "zero shared referents or supported conflicts" (`LOG.md:2656-2658`, r93 R10 negative case), and the r89 format demo used an explicitly hypothetical second cluster (`corpus/knowledge/r89-cross-cluster-contradiction.md:5`). Both clusters examined here are landed, present, and byte-preserved in this repository.
+
+The register destination `corpus/knowledge/cross-cluster-contradictions.md` remains uncreated (verified absent this pass), exactly as the R10 appendix requires: "the register's first real entry awaits a genuine conflict" (`corpus/knowledge/r88-sourced-inspiration-decision-table.md:97`). This document is a knowledge record of the examination, not an append to that register.
+
+No canon, testimony-truth, chronology, rights, or training-permission conclusion is drawn anywhere in this entry.
+
+## Procedure applied
+
+The row applied is the delivered R10 row (`corpus/knowledge/r88-sourced-inspiration-decision-table.md:26`): "Before integrating a new cluster, compare overlapping source-attributed claims with relevant landed-cluster claims and confirm a shared referent, field, and occasion." Its register gate admits only supported *incompatible* pairs: "Only a source-backed shared referent, field, and occasion with incompatible assertions enters `corpus/knowledge/cross-cluster-contradictions.md` (status `unresolved`)" (`:93-94`). The entry format it mandates for such pairs — stable ID, both relative cluster paths, both claim pointers, the assertions, the cited in-world sources, the rationale, status — is mirrored below with the outcome inverted and the register fields that presuppose conflict (incompatibility rationale, `unresolved` status) replaced by the compatibility finding. The namespace rule of the r91 decision is applied: source IDs are cluster-local and comparison keys are path-qualified pairs (`:99-100`). The record-and-replay conventions follow the r93 worked-example discipline: scope and limits first, a field-by-field record, a crosswalk from each finding to the exact decision text, replayable receipts, and dated corrections appended without rewriting (`corpus/knowledge/r93-r8-worked-example.md:3-5`, `:26-34`, `:75-79`).
+
+## The record: `r101-crossing-agreed-bell-nonconflict-01`
+
+| Field | Recorded value |
+|---|---|
+| Stable ID | `r101-crossing-agreed-bell-nonconflict-01` |
+| Outcome | Examined NON-conflict. Shared referent demonstrated; shared field and shared occasion identified; the two assertions are COMPATIBLE as stated; no conflict; both claims preserved. No winner, no world-truth assertion, no register entry, no ledger pair. |
+| Relative cluster paths | `corpus/fixtures/r95-crossing-aftermath/` (claim A's origin snapshot) and `corpus/fixtures/r96-crossing-response/` (claim B's origin snapshot); shared referent anchored at `corpus/fixtures/r94-paired-crossing/`. All three are declared continuations of one lineage (`r96-crossing-response/README.md:3`), so the path-qualified comparison is within one continuation line, per the namespace rule. |
+| Claim A (Aru's account) | `timeline.json#/3` (`aftermath-missing-evin`, tick 11, `entity_id: aru`, `place_id: chalk-stair`, `depends_on: ["paired-crossing-decision"]`, `source_id: aru-aftermath-note`); assertion text at `corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md:26-27` |
+| Claim B (Evin's account) | `timeline.json#/4` (`response-evin-salt-court`, tick 12, `entity_id: evin`, `place_id: salt-court`, `depends_on: ["aftermath-missing-evin"]`, `source_id: evin-response-note`); assertion text at `corpus/fixtures/r96-crossing-response/fictional-excerpts.md:37` |
+| Cited in-world sources | `sources.json#/3` (`aru-aftermath-note`, id at `corpus/fixtures/r95-crossing-aftermath/sources.json:21`) and `sources.json#/4` (`evin-response-note`, id at `corpus/fixtures/r96-crossing-response/sources.json:27`); shared referent sourced to `sources.json#/2` (`crossing-minute`, id at `corpus/fixtures/r94-paired-crossing/sources.json:15`) |
+| Shared referent | Demonstrated — see below |
+| Shared field | Performance status of the crossing-scoped agreement at the agreed bell — see below |
+| Shared occasion | The agreed bell — see below |
+| Compatibility rationale | No assertion in either note contradicts any assertion in the other; both accounts, as accounts, depict the agreed stewardship as not performed at the Chalk Stair during the agreed bell. The register gate's "incompatible assertions" condition (`r88 table:93-94`) is therefore not met. |
+| Preservation | Both claims retained byte-exact through the lineage; neither rewritten, reconciled, or superseded. `contradictions.json` remains `[]` in both clusters (verified this pass). |
+
+## The two accounts, quoted exactly
+
+Claim A — Aru's first-person note, `corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md:26-29` (source `aru-aftermath-note`):
+
+> Tick 11: I waited at the Chalk Stair through the agreed bell.
+> Evin did not come.
+> The agreement we chalked covered this crossing only.
+> I assert no other duty, no breach, and no obligation beyond this crossing.
+
+Claim B — Evin's first-person note, `corpus/fixtures/r96-crossing-response/fictional-excerpts.md:37-40` (source `evin-response-note`):
+
+> Tick 12: I was at Salt Court through the same agreed bell.
+> I make no accusation against Aru.
+> I select no winner between our two accounts.
+> Both accounts stand unresolved.
+
+## Referent, field, occasion — demonstrated
+
+**Shared referent (demonstrated).** Both accounts measure performance against the same agreement: the crossing-scoped co-stewardship relation `relations.json#/0` — `{"from": "aru", "to": "evin", "type": "agreed_co_stewardship_for_this_crossing", "source_id": "crossing-minute"}` — byte-identical across all seven arc snapshots r94 through r100 (sha256 prefix `c279254bc7de0636`, 139 bytes each; measured this pass, see Receipts). Its source is the r94 minute (`crossing-minute`, `sources.json#/2`), whose excerpt bounds it: "There, they agreed, for this crossing only, to share stewardship of the Chalk Stair." (`corpus/fixtures/r94-paired-crossing/fictional-excerpts.md:19`). Claim A invokes that same agreement by the participants' own act: "The agreement we chalked covered this crossing only." (`r95 fictional-excerpts.md:28`). Claim B answers claim A on that same occasion without disturbing it; the r96 README records that the tick-12 event "records only Evin's second account of the same occasion" (`corpus/fixtures/r96-crossing-response/README.md:9`). The referent is one path-qualified record carried unchanged, not two similarly named records: per the r100 dossier, "The reviewed relation is still the one crossing-only agreement sourced to `crossing-minute`" (`corpus/knowledge/r100-crossing-arc-synthesis.md:46`).
+
+**Shared field (identified).** The field both assertions bear on is the *performance status* of that agreement at the agreed bell — whether Evin came to the Chalk Stair to share the stewardship during that bell. Claim A asserts Evin's non-arrival ("Evin did not come." — `r95 fictional-excerpts.md:27`); claim B asserts Evin's own presence at Salt Court through the same bell (`r96 fictional-excerpts.md:37`). This is a semantic field of the two authored accounts, not a JSON field: unlike the r35 precedent, where the compared field was literally `place_id` on two events, no ledger pair is created here, because the R10 register gate admits only incompatible assertions and this field receives none. The accounts also name different actors at different places, so they are not two values of one occupancy field (`corpus/knowledge/r96-response-scope-note.md:31`).
+
+**Shared occasion (identified).** The occasion is the agreed bell — the bell of the crossing whose stewardship the r94 minute's agreement scopes. The two notes reference it by the same phrase: claim A's "the agreed bell" (`r95 fictional-excerpts.md:26`) and claim B's "the same agreed bell" (`r96 fictional-excerpts.md:37`) — Evin's "the same" ties his bell to the one Aru named, and both notes anchor it to the chalked agreement ("The agreement we chalked", `r95:28`; the relation's source `crossing-minute`). The demonstration rests on this common reference to one recorded agreement, **not** on tick equality: the integer ticks are editorial encodings, not literal JSON wording in the sources (`corpus/fixtures/r94-paired-crossing/README.md:13`), and the minute itself names only the two ninth-bell entries and the tick-10 meeting (`corpus/fixtures/r94-paired-crossing/fictional-excerpts.md:20`), so "the agreed bell" as a performance occasion is carried by the two notes' shared reference, which is what the examination records.
+
+## Examination outcome: COMPATIBLE — no conflict
+
+Comparing the assertions under the demonstrated referent, field, and occasion:
+
+- Claim A asserts that Evin did not come to the Chalk Stair during the agreed bell.
+- Claim B asserts that Evin was at Salt Court through that same bell.
+- Nothing in claim B asserts an arrival at the Chalk Stair, and nothing in claim A asserts where Evin was instead. No assertion in either note is incompatible with any assertion in the other. As accounts, both depict the agreed stewardship as not performed at the Chalk Stair during the agreed bell; neither note accuses, selects a winner, or declares the other false (`r96 fictional-excerpts.md:38-40`).
+
+The register gate therefore fails on its final condition: the pair has a source-backed shared referent, field, and occasion, but the assertions are compatible, and "only a source-backed shared referent, field, and occasion with incompatible assertions enters" the register (`corpus/knowledge/r88-sourced-inspiration-decision-table.md:93-94`). Consequences, all verified this pass:
+
+1. No entry is created in `corpus/knowledge/cross-cluster-contradictions.md`; the file does not exist and stays uncreated (`:97`: "the register's first real entry awaits a genuine conflict").
+2. No `contradictions.json` pair is added in either cluster; both remain `[]` (`r95` and `r96`, verified this pass), consistent with the r90 rule that unresolved *identity/occasion candidates* go to comparison records and `l0-questions.md`, not the live register (`:93`) — and here no candidate discrepancy survives at all.
+3. Register status `unresolved` is not used: there is no conflict to hold unresolved. Testimony-level non-adjudication is preserved separately — neither account is declared true, false, or corroborated.
+
+## Verdict
+
+Examined. Shared referent demonstrated (one byte-identical crossing-scoped agreement relation across the lineage); shared field identified (performance status of that agreement at the agreed bell); shared occasion identified (the agreed bell, by the two notes' common reference to the one recorded agreement). Outcome: the claims are COMPATIBLE — a demonstrated NON-conflict. No conflict exists; both claims are preserved unrewritten; no winner is selected; no world truth is asserted about whether Evin came to the Chalk Stair, whether non-performance occurred, or whether either account is accurate. The register gains its first real exercise without gaining a first entry.
+
+## Non-establishment bounds
+
+- **No testimony truth.** Compatibility is a relation between two authored accounts, not corroboration and not a world finding. This entry does not establish that Evin was at Salt Court, that Evin did not come to the Chalk Stair, that non-performance occurred, or that either source is authentic. Both accounts stand non-adjudicated, per their own closing lines and the arc invariant (`corpus/knowledge/r100-crossing-arc-synthesis.md:10`, `:54`).
+- **No chronology authentication.** "The agreed bell" is a phrase in the two notes, not an authenticated time; ticks 9–12 and the `depends_on` edges are editorial encodings (`r94 README.md:13`). Tick equality or adjacency is nowhere used as identity or occasion evidence.
+- **No expansion of duty.** The referent agreement is crossing-scoped ("for this crossing only", `r94 fictional-excerpts.md:19`). Neither account converts it into a standing duty, and the reported non-arrival asserts no breach (`r95 fictional-excerpts.md:29`; `corpus/fixtures/r95-crossing-aftermath/README.md:11`). This entry adds no duty, breach, fault, or alliance finding.
+- **Namespace scoping.** The compared source IDs `(r95-crossing-aftermath, aru-aftermath-note)` and `(r96-crossing-response, evin-response-note)` are path-qualified pairs (`r88 table:99-100`); no ID collision arises, and a collision would have triggered the namespace check before any referent comparison, never the register.
+- **Checker limits.** No gate result is cited as cross-cluster evidence: the R10 row itself says "cross-cluster comparison and register-reference checks are an explicit manual integration gate" and "a per-cluster `CLEAN` is not cross-cluster evidence" (`r88 table:26`); the integration boundary adds that "R10's proposed corpus-level register is a manual procedure until a corpus-wide validator exists. Do not mark any of those surfaces mechanically verified solely from a clean fixture replay." (`:110`). The receipts below measure bytes and pointers only.
+- **No canon, rights, or training-permission conclusion.** This entry is an editorial comparison record; it settles nothing about canon and grants no permission.
+
+## Precedent cross-references
+
+- **r100 six-beat dossier** (`corpus/knowledge/r100-crossing-arc-synthesis.md`). The dossier's docket (`:32-38`) places claim A at beat 1 (r95) and claim B at beat 2 (r96) of the six-beat arc after the r94 minute seed, under the unresolved-throughout invariant (`:10`, `:48`). Its occupancy observation anticipates this outcome: "Aru's account places Aru at the Chalk Stair; Evin's account places Evin at Salt Court. Different actors at different places do not, by themselves, assert one actor's incompatible occupancy, and this arc files no contradiction between them." (`:50`). This entry re-derives that outcome through the R10 row's own referent/field/occasion gate rather than asserting it, and adds what the dossier does not record: the byte-identity receipt for the shared referent across all seven snapshots and the explicit register-gate finding.
+- **r35 two-sided-preservation precedent** (`corpus/fixtures/r35-bell7-conflict/`). The r35 fixture preserves two reports of one named ringing as an editorial ledger pair (`contradictions.json#/0`, `bell7-location-reports`, field `place_id` on `timeline.json#/2-3`) with both accounts retained unresolved and "Neither wins." (`corpus/fixtures/README.md:761`; map limits at `manual-clause-pointer-map.md:3`, `:21`). The same preservation discipline is applied here with the opposite gate outcome: r35's `why` states its incompatibility conditionally on identity/place/occasion assumptions and so records an apparent conflict; this examination's conditionally-stated incompatibility does not arise, so no ledger row exists and preservation is carried by the byte-identical lineage instead. The two records are different classes, as the r96 scope note already distinguishes (`corpus/knowledge/r96-response-scope-note.md:13`, `:40`).
+
+## Receipts (measured 2026-10-18T00:18-03:00, from the lane root)
+
+Relation byte-identity across the arc (command and observed output, abbreviated to the hash prefix):
+
+```sh
+python3 - <<'PY'
+import hashlib, json
+from pathlib import Path
+for fx in ["r94-paired-crossing","r95-crossing-aftermath","r96-crossing-response","r97-crossing-acknowledgment","r98-clerk-filing","r99-window-lapse","r100-docket-review"]:
+    b = Path(f"corpus/fixtures/{fx}/relations.json").read_bytes()
+    print(fx, hashlib.sha256(b).hexdigest()[:16], len(b))
+PY
+```
+
+```text
+r94-paired-crossing c279254bc7de0636 139
+r95-crossing-aftermath c279254bc7de0636 139
+r96-crossing-response c279254bc7de0636 139
+r97-crossing-acknowledgment c279254bc7de0636 139
+r98-clerk-filing c279254bc7de0636 139
+r99-window-lapse c279254bc7de0636 139
+r100-docket-review c279254bc7de0636 139
+```
+
+`relations.json#/0` parsed value: `{"from": "aru", "to": "evin", "type": "agreed_co_stewardship_for_this_crossing", "source_id": "crossing-minute"}`. Claim pointers verified by parsing: `r95 timeline.json#/3` = `aftermath-missing-evin` (tick 11, aru, chalk-stair, `["paired-crossing-decision"]`, `aru-aftermath-note`); `r96 timeline.json#/4` = `response-evin-salt-court` (tick 12, evin, salt-court, `["aftermath-missing-evin"]`, `evin-response-note`). Excerpt prefix chain: `r95 fictional-excerpts.md` starts with the complete `r94` file (`True`), `r96` starts with the complete `r95` file (`True`), and both quoted note sections are present in `corpus/fixtures/r100-docket-review/fictional-excerpts.md` at lines 26 and 37. `contradictions.json` is `[]` in both compared clusters. `corpus/knowledge/cross-cluster-contradictions.md` is absent (`ls` → "No such file or directory").
+
+One recorded variance, not silently normalized: the r90 appendix asks compared-but-dismissed overlaps to be recorded in the incoming cluster README under `## R10 comparison outcomes` (`r88 table:90-92`); the three arc READMEs instead carry their comparison records under the heading `## Namespace and occasion comparison` (`corpus/fixtures/r94-paired-crossing/README.md:5`, `r95:5`, `r96:5`). This entry is filed as the durable record of the examined pair; no README is edited from this seat.
+
+## Limits of this record
+
+This is an author-seat knowledge record, not independent verification, admission, or a non-author review. It extends only to the cited paths and does not authenticate any fictional source, adjudicate any character, or decide truth, breach, chronology, rights, or permission. Both compared fixtures are declared continuations of one lineage (`r96-crossing-response/README.md:3`); source IDs remain cluster-local and path-qualified comparison is not identity evidence beyond what the byte receipts above show. The r89 demo remains the format example; this document does not append to any register. Rights and AI-training permission remain unassessed.

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "bell7-location-reports",
+    "claim_a": {
+      "event_id": "tarin-envelope-observation",
+      "field": "bogus"
+    },
+    "claim_b": {
+      "event_id": "tarin-envelope-observation",
+      "field": "bogus"
+    },
+    "why": "If the names Sella and the place IDs harbor/North Tower align, and both fictional reports refer to the sole Bell-7 ringing on the seventh day of Embermonth, year 12, Tarin reports observing Sella at Lantern Harbor during it, while Sella reports her own physical presence at North Tower throughout it and no presence at Lantern Harbor at any point. The date and sole-ringing description are claims in the fictional notes, not authenticated chronology. Tarin event.place_id records the observation scene for Tarin\u2019s reported sighting; it is not a claim that Tarin himself is Sella or that Tarin\u2019s location is the conflicting Sella location. Both reports are retained unresolved; this is an editorial apparent conflict, not a checker-proven contradiction or a canon verdict."
+  }
+]

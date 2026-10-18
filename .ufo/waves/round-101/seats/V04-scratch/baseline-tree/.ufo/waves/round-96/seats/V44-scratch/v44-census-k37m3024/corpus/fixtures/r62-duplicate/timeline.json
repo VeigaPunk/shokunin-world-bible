@@ -1,0 +1,49 @@
+[
+  {
+    "id": "departure",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "arrival",
+    "tick": 2,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [
+      "departure"
+    ],
+    "description": "Mira reaches the tower.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "tarin-envelope-observation",
+    "tick": 3,
+    "entity_id": "tarin",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Tarin reports seeing Sella place an unlabeled paper envelope on the Lantern Harbor registry desk during Bell-7, the sole seventh-watch registry-bell sounding on the seventh day of Embermonth, year 12.",
+    "source_id": "tarin-note"
+  },
+  {
+    "id": "sella-bell7-presence",
+    "tick": 3,
+    "entity_id": "sella",
+    "place_id": "tower",
+    "depends_on": [],
+    "description": "Sella reports she was physically at North Tower throughout that same Bell-7 ringing and was not at Lantern Harbor at any point during it; Bell-7 is the sole seventh-watch registry-bell sounding on the seventh day of Embermonth, year 12.",
+    "source_id": "missing-sella-note"
+  },
+  {
+    "id": "departure",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor.",
+    "source_id": "courier-log"
+  }
+]

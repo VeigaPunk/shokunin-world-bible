@@ -1,0 +1,14 @@
+[
+  {
+    "from": "lorn-index",
+    "to": "slate-table",
+    "type": "filed_at",
+    "source_id": "m2-record-archive"
+  },
+  {
+    "from": "orni",
+    "to": "lorn-index",
+    "type": "annotates",
+    "source_id": "m2-record-archive"
+  }
+]

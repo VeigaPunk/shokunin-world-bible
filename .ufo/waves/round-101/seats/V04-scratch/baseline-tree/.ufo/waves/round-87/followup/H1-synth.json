@@ -1,0 +1,222 @@
+{
+  "seat": "H1",
+  "purpose": "adversarial additive-only sweep of the C1 provenance-disclosure path",
+  "checkers": {
+    "baseline": "/tmp/H1-base (git archive 28706dc)",
+    "delivered": "/tmp/H1-2b48ca7 (git archive 2b48ca7)"
+  },
+  "cases": {
+    "A-nondict-after-stop": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[1]: expected object"
+      ],
+      "delivered_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: expected object",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "added_findings": [
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    },
+    "B-both-ambiguous-same-record": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[1].from_holder: ambiguous entity 'dup'"
+      ],
+      "delivered_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "added_findings": [
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    },
+    "C-two-items-no-leak": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+      ],
+      "delivered_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "added_findings": [
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    },
+    "D-ambiguous-at-last": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[2].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+      ],
+      "delivered_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[2].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[2]"
+      ],
+      "added_findings": [
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[2]"
+      ],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    },
+    "E-ambiguous-middle": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[1].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[2].from_holder: ambiguous entity 'dup'"
+      ],
+      "delivered_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[1].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[1]",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[1]",
+        "VIOLATION: entities[4].provenance[2].from_holder: ambiguous entity 'dup'"
+      ],
+      "added_findings": [
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[1]",
+        "VIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[1]"
+      ],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    },
+    "F-duplicate-item-id": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[5].id: duplicate entities id 'seal'",
+        "VIOLATION: relations[0].to: ambiguous entity 'seal'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+      ],
+      "delivered_findings": [
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[5].id: duplicate entities id 'seal'",
+        "VIOLATION: relations[0].to: ambiguous entity 'seal'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "added_findings": [
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    },
+    "G-clean-control": {
+      "baseline_exit": 0,
+      "delivered_exit": 0,
+      "baseline_findings": [],
+      "delivered_findings": [],
+      "added_findings": [],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    },
+    "H-no-sources": {
+      "baseline_exit": 1,
+      "delivered_exit": 1,
+      "baseline_findings": [
+        "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/synth-h-no-sources/sources.json'",
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+      ],
+      "delivered_findings": [
+        "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/synth-h-no-sources/sources.json'",
+        "VIOLATION: entities[3].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "added_findings": [
+        "VIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]",
+        "VIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[4].provenance[0]"
+      ],
+      "removed_findings": [],
+      "exit_unchanged": true,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "added_findings_all_disclosure_form": true,
+      "stderr_empty": true,
+      "verdict": "OK"
+    }
+  },
+  "all_cases_ok": true
+}

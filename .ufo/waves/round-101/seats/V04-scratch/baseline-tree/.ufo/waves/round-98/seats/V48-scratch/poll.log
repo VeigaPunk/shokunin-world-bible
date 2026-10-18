@@ -1,0 +1,22 @@
+try 1 23:28:53 reports=0 missing: REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 2 23:29:13 reports=0 missing: REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 3 23:29:33 reports=0 missing: REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 4 23:29:53 reports=1 missing: REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 5 23:30:13 reports=1 missing: REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 6 23:30:33 reports=2 missing: REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 7 23:30:53 reports=2 missing: REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 8 23:31:13 reports=3 missing: REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 9 23:31:33 reports=4 missing: REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 10 23:31:53 reports=4 missing: REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 11 23:32:13 reports=5 missing: REPORT:S1 REPORT:S2 REPORT:S5 ART:corpus/knowledge/r98-clerk-scope-note.md
+try 12 23:32:33 reports=7 missing: REPORT:S1 REPORT:S2 REPORT:S5
+try 13 23:32:53 reports=7 missing: REPORT:S1 REPORT:S2 REPORT:S5
+try 14 23:33:13 reports=12 missing: REPORT:S1 REPORT:S2 REPORT:S5
+try 15 23:33:33 reports=13 missing: REPORT:S1 REPORT:S2 REPORT:S5
+try 16 23:33:53 reports=15 missing: REPORT:S1 REPORT:S2
+try 17 23:34:13 reports=15 missing: REPORT:S1 REPORT:S2
+try 18 23:34:33 reports=17 missing: REPORT:S1 REPORT:S2
+try 19 23:34:53 reports=19 missing: REPORT:S1
+try 20 23:35:13 reports=20 missing: REPORT:S1
+try 21 23:35:33 reports=22 missing:
+ALL-PRESENT try 21 23:35:33

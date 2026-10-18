@@ -1,0 +1,4 @@
+OBLIGATIONS raw=22 mapped=22
+INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24
+FINDING source_id_mismatch: timeline.json#/8 does not bind to 'clerk-lapse-note'
+RESULT FAIL

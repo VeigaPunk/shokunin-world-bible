@@ -1,0 +1,2 @@
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/not-a-fixture (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/not-a-fixture); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR

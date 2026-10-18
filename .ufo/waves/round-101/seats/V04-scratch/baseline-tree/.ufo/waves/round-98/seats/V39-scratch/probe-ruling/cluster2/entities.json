@@ -1,0 +1,74 @@
+[
+  {
+    "id": "aru",
+    "kind": "character",
+    "name": "Aru",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register places Aru carrying the north lantern at Quiet Rise at tick 9.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "evin",
+    "kind": "character",
+    "name": "Evin",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register places Evin holding the south bell at Salt Court at tick 9.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "quiet-rise",
+    "kind": "place",
+    "name": "Quiet Rise",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register locates Aru's north-lantern entry at Quiet Rise.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "salt-court",
+    "kind": "place",
+    "name": "Salt Court",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register locates Evin's south-bell entry at Salt Court.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "chalk-stair",
+    "kind": "place",
+    "name": "Chalk Stair",
+    "first_appearance": "crossing-minute",
+    "claims": [
+      {
+        "statement": "The crossing minute places Aru and Evin together at the Chalk Stair after both tick-9 entries.",
+        "source_id": "crossing-minute"
+      }
+    ]
+  },
+  {
+    "id": "clerk-maren",
+    "kind": "character",
+    "name": "Maren",
+    "first_appearance": "clerk-filing-note",
+    "claims": [
+      {
+        "statement": "The registry clerk ruled that Aru's account prevails and the matter is decided.",
+        "source_id": "clerk-filing-note"
+      }
+    ]
+  }
+]

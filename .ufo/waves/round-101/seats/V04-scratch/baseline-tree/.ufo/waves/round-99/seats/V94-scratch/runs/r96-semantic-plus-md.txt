@@ -1,0 +1,10 @@
+command: /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/fixtures/r96-crossing-response
+cwd: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror
+exit: 1
+--- stdout ---
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+FINDING ENDPOINT-CHANGE: event aru-ninth-bell.tick: 9 -> 10
+RESULT FAIL
+
+--- stderr ---
+

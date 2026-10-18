@@ -1,0 +1,14 @@
+[
+  {
+    "id": "control-entity",
+    "kind": "character",
+    "name": "Control Entity",
+    "first_appearance": "m2-record-archive",
+    "claims": [
+      {
+        "statement": "Isolated control claim.",
+        "source_id": "m2-record-archive"
+      }
+    ]
+  }
+]

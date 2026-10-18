@@ -1,0 +1,112 @@
+# inline pollers 2026-10-17T22:05:46-0300 n=37
+
+PID 1666104 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && mkdir -p /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2-scratch && date -Is && echo "poll-start" && python3 - << 'PY' import os, time root="/home/vgpnk/Projects/sh …  … ", flush=True)         break     if i==40:         print("POLL_ABSENT", flush=True)         break     time.sleep(20) PY 
+
+PID 1666590 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && python3 - << 'PY' import os, time, hashlib, subprocess from pathlib import Path root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin") seats = root / ".ufo/waves/round-99/ …  … "ABSENT_AFTER_40", flush=True)         print("SEAT_FILES", *seat_files, flush=True)         break     time.sleep(20) PY 
+
+PID 1666976 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && python3 - << 'PY' import os, time, hashlib from pathlib import Path root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin") seats = root / ".ufo/waves/round-99/seats" log = seats / "V07- …  … ADY", flush=True)         break     if i < 40:         time.sleep(20) else:     print("ABSENT_AFTER_40", flush=True) PY 
+
+PID 1668137 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u base="/home/vgpnk/Projects/shokunin/lore-shokunin" seats="$base/.ufo/waves/round-99/seats" py="$base/corpus/tools/dependency_freeze.py" contract="$base/corpus/tools/dependency-freeze … "$ct_now" != "$ct_m" ] && echo yes || echo no) seat_reports=$(echo "$reports" | wc -l)" …  d \) | head -200   echo "--- tool mtimes final ---"   stat -c '%y %n' "$py" "$contract" fi echo "POLL_END $(date -Is)" 
+
+PID 1672884 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && mkdir -p /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V19-scratch && cd /home/vgpnk/Projects/shokunin/lore-shokunin && NOTE=corpus/knowledge/r99-lapse-scope-note.md …  … $ts missing:$missing" | tee -a "$LOG"; sleep 20; done; echo "ABSENT after 40 tries $(date -Is)" | tee -a "$LOG"; exit 2 
+
+PID 1673656 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V04-scratch SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats LANE=/home/vgpnk/Projects/s …  … o "POLL_ABSENT tries=40 tool=$tsha contract=$csha s1_reports=$nreports" | tee -a "$LOG"     exit 3   fi   sleep 20 done 
+
+PID 1675325 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && python3 - << 'PY' import json, time from pathlib import Path root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin") seats = root / ".ufo/waves/round-99/seats" cpath = root / "corpus/too …  … )         break     if i < 40:         time.sleep(20) print("RESULT", "LANDED" if landed else "ABSENT", flush=True) PY  
+
+PID 1675452 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u LANE=/home/vgpnk/Projects/shokunin/lore-shokunin SEATS="$LANE/.ufo/waves/round-99/seats" SCRATCH="$SEATS/V57-scratch" mkdir -p "$SCRATCH" LOG="$SCRATCH/poll.log" : > "$LOG" echo "POL …  … 5* 2>/dev/null | tee -a "$LOG" || true   sleep 20 done echo "ABSENT after 40 tries $(date -Is)" | tee -a "$LOG" exit 2  
+
+PID 1677021 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u LANE=/home/vgpnk/Projects/shokunin/lore-shokunin SCRATCH="$LANE/.ufo/waves/round-99/seats/V24-scratch" LOG="$SCRATCH/poll.log" # poller: 20s cadence, 40 tries. Record artifact + prod …       n=$(find "$LANE/corpus/fixtures/r99-window-lapse" -maxdepth 1 -type f | wc -l) … eak     fi     sleep 20   done   echo "POLL-END $(date '+%Y-%m-%d %H:%M:%S')" } >> "$LOG" 2>&1 echo DONE tail -5 "$LOG" 
+
+PID 1677193 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && mkdir -p /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V100-scratch && python3 - << 'PY' import os, time, glob from pathlib import Path root = Path("/home/vgpnk/Proj …  …  f.write(f"POLL_END {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())} tries=40\n") print("POLL_DONE", flush=True) PY 
+
+PID 1678828 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && python3 - << 'PY' import json, time, os from pathlib import Path root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin") log = root / ".ufo/waves/round-99/seats/V89-scratch …  … S1 report exists under any name     if i < 40:         time.sleep(20) else:     print("ABSENT after 40", flush=True) PY 
+
+PID 1679213 flags=STALL
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V65-scratch mkdir -p "$SCR" LOG="$SCR/poll.log" echo "poll-restart $(date -Iseconds) pid=$$" | tee -a …   found=$(ls -1 .ufo/waves/round-99/seats/S*.md 2>/dev/null | wc -l) … =$ts" | tee -a "$LOG"     exit 0   fi   sleep 20 done echo "TIMEOUT after 40 $(date -Iseconds)" | tee -a "$LOG" exit 1  
+
+PID 1680867 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V28-scratch LANE=/home/vgpnk/Projects/shokunin/lore-shokunin SEATS="$LANE/.ufo/waves/round-99/seats" LOG="$S …  … i $ts" | tee -a "$LOG"     exit 0   fi   sleep 20 done echo "POLL-EXHAUSTED $(date '+%H:%M:%S')" | tee -a "$LOG" exit 2 
+
+PID 1682060 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u LANE=/home/vgpnk/Projects/shokunin/lore-shokunin SEATS="$LANE/.ufo/waves/round-99/seats" SCRATCH="$SEATS/V61-scratch" LOG="$SCRATCH/poll.log" CONTRACT="$LANE/corpus/tools/dependency- …  … $LOG"     exit 0   fi   if [ "$try" -lt 40 ]; then     sleep 20   fi done echo "ABSENT_AFTER_40" | tee -a "$LOG" exit 0 
+
+PID 1685424 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V22-scratch SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats LANE=/home/vgpnk/Projec …  … scape note only; keep polling for reports   sleep 20 done echo "POLL-EXHAUSTED" >> "$LOG" echo "POLL-EXHAUSTED" exit 0  
+
+PID 1685688 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u SEATS="/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats" README="/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md" SKILL="/home/vgpnk/Projects/ …  … a "$LOG"     exit 0   fi   if [ "$i" -lt 40 ]; then sleep 20; fi done echo "NOT-READY after 40" | tee -a "$LOG" exit 2  
+
+PID 1685910 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V93-scratch LANE=/home/vgpnk/Projects/shokunin/lore-shokunin SEATS=$LANE/.ufo/waves/round-99/seat … find "$LANE/corpus/fixtures/r99-window-lapse" -maxdepth 1 -type f 2>/dev/null | wc -l) … ee -a "$LOG"     exit 0   fi   sleep 20 done echo "EXHAUSTED ts=$(date '+%Y-%m-%dT%H:%M:%S%z')" | tee -a "$LOG" exit 2  
+
+PID 1686476 flags=STALL
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && mkdir -p /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V88-scratch && date -Is > /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/ …  … 0) PY echo POLL_DONE tail -5 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V88-scratch/poll.log 
+
+PID 1687271 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u ROOT=/home/vgpnk/Projects/shokunin/lore-shokunin SEATS="$ROOT/.ufo/waves/round-99/seats" SCRATCH="$SEATS/V108-scratch" mkdir -p "$SCRATCH" LOG="$SCRATCH/poll.log" echo "POLL-START $( …  … exit 0   fi   if [ "$i" -lt 40 ]; then     sleep 20   fi done echo "POLL-EXHAUSTED $(date -Is)" | tee -a "$LOG" exit 3  
+
+PID 1690658 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && mkdir -p .ufo/waves/round-99/seats/V85-scratch && python3 - << 'PY' import time, json, os from pathlib import Path root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin") s …  … es exhausted"         break     time.sleep(20)  note(f"poll-end reason={ready_reason}") print("READY", ready_reason) PY 
+
+PID 1692402 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && mkdir -p .ufo/waves/round-99/seats/V115-scratch && date '+%Y-%m-%d %H:%M:%S %z' > .ufo/waves/round-99/seats/V115-scratch/poll.log && echo "poll-start: S1 report absent; contra …  … " -lt 40 ]; then     sleep 20   fi done echo "POLL-EXHAUSTED" >> .ufo/waves/round-99/seats/V115-scratch/poll.log exit 3 
+
+PID 1693573 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && {   echo "poll-start $(date +%Y-%m-%dT%H:%M:%S%z)"   for i in $(seq 1 40); do     ts=$(date +%Y-%m-%dT%H:%M:%S%z)     reports=$(ls /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/rou …  … | echo NO-S-REPORTS } | tee /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V79-scratch/poll.log  
+
+PID 1693574 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && {   echo "poll-start $(date +%Y-%m-%dT%H:%M:%S%z)"   for i in $(seq 1 40); do     ts=$(date +%Y-%m-%dT%H:%M:%S%z)     reports=$(ls /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/rou …  … | echo NO-S-REPORTS } | tee /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V79-scratch/poll.log  
+
+PID 1693767 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && set -u LANE=/home/vgpnk/Projects/shokunin/lore-shokunin SEATS="$LANE/.ufo/waves/round-99/seats" SCRATCH="$SEATS/V106-scratch" mkdir -p "$SCRATCH" LOG="$SCRATCH/poll.log" : > "$LOG" for i in …  … t try $i" | tee -a "$LOG"       exit 0     fi   fi   sleep 20 done echo "ABSENT after 40 tries" | tee -a "$LOG" exit 3  
+
+PID 1698941 flags=128,STALL
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && python3 - << 'PY' import hashlib, json, os, time from pathlib import Path root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin") seats_dir = root/".ufo/waves/round-99/seat … e = f"try={i} {now} reports={rec['report_files']} roster_present={len(present)}/128 producer_missing={prod_missing or '-'} artifact_missing={len(art_missing)} unexpected={unexpected or '-'}\n" … pped_reason": final["stopped"]}, indent=1)+"\n") print("DONE tries", history[-1]["try"], "reason", final["stopped"]) PY 
+
+PID 1699476 flags=127,STALL
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && mkdir -p /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V101-scratch && python3 - << 'PY' import time, os, re from pathlib import Path from datetime import datetime   … assert len(roster) == 127, len(roster) … ING=" + ",".join(missing) + "\n")             fh.flush()             break         time.sleep(20) print("poll-done") PY 
+
+PID 1702493 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V97-scratch mkdir -p "$SCRATCH" {   echo "poll-loop start $(date '+%Y-%m-%dT%H:%M:%S%z')"   for i in $(seq 1 40 …     s1n=$(ls -1 "$seats"/S1*.md 2>/dev/null | wc -l) … echo "ABSENT after 40 tries $(date '+%Y-%m-%dT%H:%M:%S%z')"   exit 2 } >> "$SCRATCH/poll.log" 2>&1 echo "poll-exit:$?"  
+
+PID 1704471 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && LANE=/home/vgpnk/Projects/shokunin/lore-shokunin # bounded extra wait inside this call so we don't spin the model; poll.sh is already running for n in 1 2 3 4 5 6; do   sleep 20   ts=$(date …  … .md' -printf '%T+ %f\n' | sort echo '--- poll tail ---' tail -4 "$LANE/.ufo/waves/round-99/seats/V52-scratch/poll.log"  
+
+PID 1705185 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V21-scratch LOG=$SCRATCH/poll.log REPO=/home/vgpnk/Projects/shokunin/lore-shokunin SEATS=$REPO/.ufo/waves/round …  … POLL_EXHAUSTED try=$i missing=[$missing] contract_rc=$crc map_rc=$mrc" | tee -a "$LOG"     exit 2   fi   sleep 20 done  
+
+PID 1706077 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V114-scratch SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats ROOT=/home/vgpnk/Projects/ …  … ing=[$missing]"       exit 2     fi     sleep 20   done } > "$SCR/poll.log" 2>&1 echo "poll-exit=$?" >> "$SCR/poll.log" 
+
+PID 1707183 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && # append-only poll log continues; start a fresh 40-try poller nohup bash /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V50-scratch/poll.sh > /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V50-scratch/poll.stdout 2>&1 & echo "POLLER_PID=$!" disown sleep 0.3 ps -p $! -o pid,etime,cmd | head -3 
+
+PID 1707233 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V103-scratch LOG=$SCRATCH/poll.log : > "$LOG" for i in $(seq 6 15); do   sleep 20   ts=$(date -Iseconds)   t=$( …  … /r99-lapse-scope-note.md | tee -a "$LOG"     exit 0   fi done echo "STILL-ABSENT after poll 15" | tee -a "$LOG" exit 0  
+
+PID 1708906 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V76-scratch LOG=$SCRATCH/poll2.log ROOT=/home/vgpnk/Projects/shokunin/lore-shokunin echo "=== pol …  … i     echo "  unstable py2=$py2 ct2=$ct2" >> "$LOG"   fi   sleep 20 done echo EXHAUSTED >> "$LOG" echo EXHAUSTED exit 0 
+
+PID 1708932 flags=SELF
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && # poll loop: 20s cadence, max 40 tries; exit 0 when table AND S5 report exist and table is non-stub set -u SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V18- …   reports=$(ls -1 "$SEATS"/S5*.md 2>/dev/null | grep -v scratch || true) … ho "HIT try=$i"     exit 0   fi   sleep 20 done echo "POLL_EXHAUSTED $(date -Iseconds)" >> "$LOG" echo EXHAUSTED exit 2 
+
+PID 1717321 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && # bounded multi-poll: 6 tries * 20s, exit early if S1 report + schema v2 pins present for i in 3 4 5 6 7 8; do   ready=0   if ls .ufo/waves/round-99/seats/S1*.md >/dev/null 2> …  … t 0   fi   sleep 20 done echo "NOT_READY after poll 8" | tee -a .ufo/waves/round-99/seats/V110-scratch/poll.log exit 0  
+
+PID 1717940 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats LOG="$SCR/poll.log" KN=/hom …   n=$(ls "$SEATS"/S*.md 2>/dev/null | wc -l) … knowledge at try $i $(date -Is)" | tee -a "$LOG"     break   fi done echo "POLL_LOOP2_DONE $(date -Is)" | tee -a "$LOG" 
+
+PID 1721944 flags=-
+/bin/bash -c cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && mkdir -p .ufo/waves/round-99/seats/V64-scratch LOG=.ufo/waves/round-99/seats/V64-scratch/poll.log echo "=== V64 poll start $(date -Is) prior_tries_approx=6 ===" >> "$LOG" for  …  … s || echo no) s5=${s5:-none}" >> "$LOG"   sleep 20 done echo "POLL_EXHAUSTED try=40 $(date -Is)" | tee -a "$LOG" exit 2 

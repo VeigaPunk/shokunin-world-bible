@@ -1,0 +1,2 @@
+usage: support_check.py [-h] [--map MAP] cluster
+support_check.py: error: the following arguments are required: cluster

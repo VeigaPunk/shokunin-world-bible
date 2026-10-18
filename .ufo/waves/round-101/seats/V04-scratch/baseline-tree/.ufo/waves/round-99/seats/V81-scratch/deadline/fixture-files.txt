@@ -1,0 +1,10 @@
+claim-excerpt-map.md
+contradictions.json
+entities.json
+fictional-excerpts.md
+inspiration-note.md
+README.md
+relations.json
+source-excerpt.md
+sources.json
+timeline.json

@@ -1,0 +1,70 @@
+{
+  "seat": "JCOV3",
+  "subject": "R9 paraphrase demo fixture + R10 cross-cluster contradiction demo",
+  "checker": {
+    "path": "corpus/fixtures/check_bible.py",
+    "sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556"
+  },
+  "demo_sha256": "7f56bdd6c7ea78494fff46d5fb9a3800e4d3f3cda95899c3bc4e2223180cb580",
+  "fixture_sha256": {
+    "README.md": "df3eb33d6abb326a1472d696f967e851c73bb4c9903bbe8420ce78463deaca06",
+    "ash-ledger-excerpt.md": "be7b1e3bdcbe3fe0658e68717481c6c82cbf6a637af3b1cc73c6a3592d35151c",
+    "claim-to-excerpt-map.md": "a621a082752e930c732e9795590c332759435baaef1d5b09b3206de287bdd3f5",
+    "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "entities.json": "1dbc131450458bf357a5105e6db54233bb7ec7ca8d79678da7b317a37ed4be73",
+    "relations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sources.json": "324930c2a229456fe7257ff9c23da1789054dcccd29083102ca787f0a822ca66",
+    "timeline.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "probes": [
+    {
+      "probe": "p0-delivered-fixture",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "probe": "p1-anchor-grep",
+      "exit": 0,
+      "output": "9:A modern paraphrase says that the keeper later summarized the ledger for the court: the tide-mark had been moved to the west stair."
+    },
+    {
+      "probe": "p2-twin-verbatim-control",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "anchor_exit": 0,
+      "anchor_output": "7:\u201cThe tide-mark moved to the west stair.\u201d"
+    },
+    {
+      "probe": "p3-underlying-source-wording",
+      "intent": "is the source own wording delivered in the fixture?",
+      "matches": {
+        "entities.json": [
+          "Ash-Stair Ledger records"
+        ]
+      }
+    },
+    {
+      "probe": "p4-r10-pointer-resolution",
+      "result": {
+        "gate_account_exists": true,
+        "gate_place_id": "mother-tide-gate",
+        "gate_source_resolves": true,
+        "dune_account_exists": true,
+        "dune_place_id": "ash-dune-sanctuary",
+        "dune_source_resolves": true,
+        "local_ledger_row_exists": true,
+        "hypo_fixture_absent": true,
+        "live_register_absent": true
+      }
+    },
+    {
+      "probe": "p5-r87-cluster-replay",
+      "exit": 0,
+      "output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    }
+  ],
+  "tree": {
+    "head": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+    "dirty_tracked": ""
+  }
+}

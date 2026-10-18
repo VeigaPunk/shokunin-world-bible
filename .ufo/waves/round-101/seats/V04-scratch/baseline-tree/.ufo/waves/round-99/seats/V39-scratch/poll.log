@@ -1,0 +1,41 @@
+try=1 2026-10-17T22:03:26-0300 reports=3 roster_present=3/128 producer_missing=['S1', 'S2', 'S4', 'S5'] artifact_missing=2 unexpected=-
+try=2 2026-10-17T22:03:46-0300 reports=3 roster_present=3/128 producer_missing=['S1', 'S2', 'S4', 'S5'] artifact_missing=2 unexpected=-
+try=3 2026-10-17T22:04:06-0300 reports=4 roster_present=4/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=4 2026-10-17T22:04:26-0300 reports=4 roster_present=4/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=5 2026-10-17T22:04:46-0300 reports=5 roster_present=5/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=6 2026-10-17T22:05:06-0300 reports=5 roster_present=5/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=7 2026-10-17T22:05:26-0300 reports=5 roster_present=5/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=8 2026-10-17T22:05:46-0300 reports=6 roster_present=6/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=9 2026-10-17T22:06:06-0300 reports=6 roster_present=6/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=10 2026-10-17T22:06:26-0300 reports=6 roster_present=6/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=11 2026-10-17T22:06:46-0300 reports=6 roster_present=6/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=12 2026-10-17T22:07:06-0300 reports=6 roster_present=6/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=13 2026-10-17T22:07:26-0300 reports=6 roster_present=6/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=14 2026-10-17T22:07:46-0300 reports=6 roster_present=6/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=15 2026-10-17T22:08:06-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=16 2026-10-17T22:08:26-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=17 2026-10-17T22:08:46-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=18 2026-10-17T22:09:06-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=19 2026-10-17T22:09:26-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=20 2026-10-17T22:09:46-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=21 2026-10-17T22:10:06-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=22 2026-10-17T22:10:26-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=23 2026-10-17T22:10:46-0300 reports=7 roster_present=7/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=24 2026-10-17T22:11:06-0300 reports=9 roster_present=9/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=25 2026-10-17T22:11:26-0300 reports=9 roster_present=9/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=26 2026-10-17T22:11:46-0300 reports=9 roster_present=9/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=27 2026-10-17T22:12:06-0300 reports=10 roster_present=10/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=28 2026-10-17T22:12:26-0300 reports=11 roster_present=11/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=29 2026-10-17T22:12:46-0300 reports=11 roster_present=11/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=30 2026-10-17T22:13:06-0300 reports=11 roster_present=11/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=31 2026-10-17T22:13:26-0300 reports=11 roster_present=11/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=32 2026-10-17T22:13:46-0300 reports=11 roster_present=11/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=33 2026-10-17T22:14:06-0300 reports=11 roster_present=11/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=34 2026-10-17T22:14:26-0300 reports=12 roster_present=12/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=35 2026-10-17T22:14:46-0300 reports=12 roster_present=12/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=36 2026-10-17T22:15:06-0300 reports=12 roster_present=12/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=37 2026-10-17T22:15:26-0300 reports=13 roster_present=13/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=38 2026-10-17T22:15:46-0300 reports=13 roster_present=13/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=39 2026-10-17T22:16:06-0300 reports=13 roster_present=13/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+try=40 2026-10-17T22:16:26-0300 reports=13 roster_present=13/128 producer_missing=['S1', 'S2', 'S5'] artifact_missing=2 unexpected=-
+POLL-EXHAUSTED tries=40; writing receipt from last observation. ABSENT stays ABSENT.

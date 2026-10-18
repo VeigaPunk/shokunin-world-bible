@@ -1,0 +1,88 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && mkdir -p .ufo/waves/round-99/seats/V85-scratch && python3 - << 'PY'
+import time, json, os
+from pathlib import Path
+root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin")
+seats = root / ".ufo/waves/round-99/seats"
+log = seats / "V85-scratch" / "poll.log"
+tool = root / "corpus/tools/dependency_freeze.py"
+contract = root / "corpus/tools/dependency-freeze-contract.json"
+EXPECTED_TEN = {
+    "entities.json","relations.json","timeline.json","sources.json","contradictions.json",
+    "README.md","claim-excerpt-map.md","fictional-excerpts.md","inspiration-note.md","source-excerpt.md",
+}
+CHAIN = [
+    "r88-m3-maya-cluster","r94-paired-crossing","r95-crossing-aftermath",
+    "r96-crossing-response","r97-crossing-acknowledgment","r98-clerk-filing","r99-window-lapse",
+]
+
+def note(msg):
+    line = time.strftime("%H:%M:%S ") + msg
+    print(line, flush=True)
+    with log.open("a") as f:
+        f.write(line + "\n")
+
+def s1_reports():
+    hits = []
+    if not seats.is_dir():
+        return hits
+    for p in seats.iterdir():
+        if p.is_file() and p.name.startswith("S1") and p.suffix == ".md":
+            hits.append(p.name)
+    return sorted(hits)
+
+def pin_state():
+    try:
+        c = json.loads(contract.read_text())
+    except Exception as e:
+        return f"contract-unreadable:{e}"
+    pins = c.get("pins", {})
+    if not isinstance(pins, dict) or not pins:
+        return "no-pins"
+    bits = []
+    for k in sorted(pins):
+        files = pins[k].get("files") if isinstance(pins[k], dict) else None
+        n = len(files) if isinstance(files, dict) else -1
+        bits.append(f"{k}:{n}")
+    schema = c.get("schema_version")
+    extra = [k for k in c if "schema" in k.lower() or "pin_schema" in k.lower() or "file_schema" in k.lower()]
+    return f"schema={schema} keys={extra} pins=[{', '.join(bits)}]"
+
+note("poll-start")
+ready_reason = None
+for i in range(1, 41):
+    reports = s1_reports()
+    py_stat = tool.stat()
+    ct_stat = contract.stat()
+    state = pin_state()
+    note(f"try={i} s1_reports={reports or 'NONE'} py_mtime={int(py_stat.st_mtime)} py_size={py_stat.st_size} ct_mtime={int(ct_stat.st_mtime)} ct_size={ct_stat.st_size} {state}")
+    # Delivery signal: contract pins exist AND (S1 report present OR every existing pin lists exactly the declared ten files).
+    ten_ready = False
+    try:
+        c = json.loads(contract.read_text())
+        pins = c.get("pins", {})
+        if pins and all(isinstance(v, dict) and isinstance(v.get("files"), dict) and set(v["files"]) == EXPECTED_TEN for v in pins.values()):
+            ten_ready = True
+    except Exception:
+        ten_ready = False
+    if reports and ten_ready:
+        ready_reason = "S1 report + ten-file pins"
+        break
+    if ten_ready and i >= 3:
+        # pins delivered; keep waiting a few tries for the report but do not block the proof forever
+        if i >= 8:
+            ready_reason = "ten-file pins present; S1 report still absent after extra tries"
+            break
+    if reports and i >= 8:
+        # report landed but pins may not be ten-file — still verify what was delivered
+        ready_reason = "S1 report present; pin payload not necessarily ten-file"
+        break
+    if i == 40:
+        ready_reason = "max tries exhausted"
+        break
+    time.sleep(20)
+
+note(f"poll-end reason={ready_reason}")
+print("READY", ready_reason)
+PY

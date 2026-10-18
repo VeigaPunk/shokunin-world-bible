@@ -1,0 +1,2119 @@
+{
+  "seat": "C8",
+  "wave": "round-89 WORK",
+  "status": "measured_late_X1_patch_after_deadline",
+  "baseline_commit": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94",
+  "scratch_archive": "/tmp/lore-shokunin-C8.fNgPSx",
+  "checker_sha256": "dcacffd6981e1af5f60b31bed20c6eccce25970444088e4ee2e30e3249411911",
+  "baseline_full_capture": {
+    "path": "/tmp/lore-shokunin-C8.fNgPSx.baseline.json",
+    "sha256": "9862cdb95c1ea6e0e3c354f0fc7a4c2fe1026701d9fa62e0fe012932a5199433",
+    "description": "Full baseline tuples with complete stdout/stderr retained in this scratch JSON."
+  },
+  "scope": "Every direct corpus/fixtures child directory containing at least one of sources.json, entities.json, relations.json, timeline.json, contradictions.json.",
+  "tuple_definition": "Per fixture: CLI exit code, complete stdout, complete stderr.",
+  "census_command_template": "python3 corpus/fixtures/check_bible.py corpus/fixtures/<dir> (run from the scratch archive root; one invocation per path in before_fixtures).",
+  "before": {
+    "fixture_count": 149,
+    "exit_0": 31,
+    "exit_nonzero": 118,
+    "stderr_cases": 0,
+    "violation_lines": 367,
+    "observed_output": "directories=149 exit_0=31 exit_nonzero=118 stderr_cases=0 violation_lines=367",
+    "fixtures": {
+      "corpus/fixtures/ally-one-way": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/ally-one-way"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "568425ed6a574bf54e2e0645f24f5b4e9ba5770a8d3a1f98955badd67b20a141",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/ally-reciprocal": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/ally-reciprocal"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/consistent": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/consistent"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/contradictions": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/contradictions"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "f02a6141454c50e4862677af8f0cb2c593787c6aeddb2ab1b215da5dada9f6dd",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/contradictions-ledger-malformed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/contradictions-ledger-malformed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "fdafe46f9c4d177c42a872ba1a50931978ee6ca46d8f32c2cc36978729473f39",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 4
+      },
+      "corpus/fixtures/item-chain-broken": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/item-chain-broken"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "6d2e1487098a48da83c3b11274cc2c332a60a4ef70a968e22b88b663bdcf0fbf",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/item-chain-valid": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/item-chain-valid"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r10-registry-witness": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r10-registry-witness"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r11-character-place": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-character-place"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "e19d9499e15db0272873701bd6940d9aff08cb79454bd03744cd1b52cf64c217",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r11-dangling-place": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-dangling-place"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "1228a12eb95ff0ad1d335ec0e27b1705684734a1f7342a40ba4122df400d5d4f",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r11-place-character": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-place-character"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "e19d9499e15db0272873701bd6940d9aff08cb79454bd03744cd1b52cf64c217",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r11-unique-nonplace": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-unique-nonplace"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "7be79e1edd8f040af4cf2b9916add2ea35d646a8b119773cf7375fe40b9b0b9a",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r12-ambiguous-actor": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r12-ambiguous-actor"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "ce33315bde0b6a5d4df38cc0b900f5df0cd158e569dabf9f34d82775a6810d70",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 4
+      },
+      "corpus/fixtures/r12-unique-actor": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r12-unique-actor"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "8683c339eb78f742c91c91586cab7538bb1fd665b9213c98c0ce9fab9334db78",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r13-missing-actor": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r13-missing-actor"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "f2896499121c1543a701030cac8a78ad09a163f0a00ba5e739df4fc8913d1f38",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r13-unique-actor": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r13-unique-actor"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "8683c339eb78f742c91c91586cab7538bb1fd665b9213c98c0ce9fab9334db78",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r15-carbon-followup": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r15-carbon-followup"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r16-missing-first": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-missing-first"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "1228a12eb95ff0ad1d335ec0e27b1705684734a1f7342a40ba4122df400d5d4f",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r16-missing-place": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-missing-place"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "02f4a94ed59ebcdbdd416633a7f9e5cdae308c8a65e010dd96b1d2a66aa5d7a7",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r16-mixed-three": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-mixed-three"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "efc2ca7106a59cead88c598abbb72819802429c30c562002937b369b78901924",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r16-valid-places": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-valid-places"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "8683c339eb78f742c91c91586cab7538bb1fd665b9213c98c0ce9fab9334db78",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r17-valid-places": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-valid-places"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "8683c339eb78f742c91c91586cab7538bb1fd665b9213c98c0ce9fab9334db78",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r17-wrong-after": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-after"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "633af8714a2cd962ecdb9205c5a12edbcb5300d047add16c6f43be53ada98b72",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r17-wrong-before": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-before"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "7be79e1edd8f040af4cf2b9916add2ea35d646a8b119773cf7375fe40b9b0b9a",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r17-wrong-first": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-first"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "257eb1941c8407bf12f6ac45cf51e0ab7df555344fd309599454bb98773f2822",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r17-wrong-last": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-last"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "62a724311adc63175f78d2e809fa497599fe6de6d97d5919b6be0dfd4f04b550",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r17-wrong-middle": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-middle"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "334a7869f2636328ff447491aaaebe749dd07da5d76facd1f6c59f6b032a7472",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r18-duplicate-first-known": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-first-known"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "731a9fa2794dfeb22703f0eb8c4f7c6773bed08e6768e09aae76b017dd8555be",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r18-duplicate-pair": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-pair"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "a1c7bcccc08d6d954e7a807cab34a267711a2e61f0f081d8da56fcf7f61e72e6",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r18-duplicate-reverse": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-reverse"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "76af56743cfa7c289d33e736a45df5ba35edf60f4b74bc44c7135cef6363e60f",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r18-known-through-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-known-through-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "9607bf12de5af4bc4a9a18bb957daa0492b83177f07a7334a739932706dc1fbd",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r18-mixed-kind": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-mixed-kind"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "a1c7bcccc08d6d954e7a807cab34a267711a2e61f0f081d8da56fcf7f61e72e6",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r18-unique-pair": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-unique-pair"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "adbcd4d862c271eeba757864a8681c8d766fd5bd3f23a763982d9648255d799f",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r19-negative-first-valid": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-negative-first-valid"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "9b45c7699e7ca87f19d7be139af8d03275c671767e87bb3688201cc713879824",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r19-negative-tick": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-negative-tick"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "2c3f40ecb26ee96e50b15f15e412bc281fb436e93ba63cf6f8df0d9dea129c93",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r19-valid-around-negative": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-valid-around-negative"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "a2bd31394895cfee09644033e98972106b7ac8dc093720dea41c70ed63bb6d3c",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r19-valid-tick": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-valid-tick"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "adbcd4d862c271eeba757864a8681c8d766fd5bd3f23a763982d9648255d799f",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r20-both-negative": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-both-negative"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "2c3f40ecb26ee96e50b15f15e412bc281fb436e93ba63cf6f8df0d9dea129c93",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r20-mixed-edges": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-mixed-edges"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "9e4535484f45f4f2acd71fc946e272d755bb412a7e7fb0bfc281da2d5e6b7e7b",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r20-negative-dependent": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-negative-dependent"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "147633690a8942a43917a989ff823309c1290298f27e3e7b3e94bbb260358810",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r20-negative-prereq": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-negative-prereq"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "8aee05476e15b1436fe5396e752ef63e6f20fb32b38bc7fc65691084c6b28521",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r20-valid-equal": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-equal"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "37b5aaee9959838048df3a2fc55adabb649d2a7c5bb3ffca274862252da6f881",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r20-valid-inversion": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-inversion"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "9a043a319acc4735d43829e7d3c0d4eeff12882c4de85ccd345eae37465a8a70",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r20-valid-order": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-order"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r21-ambiguous-actor": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-ambiguous-actor"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "c117936ed433e33ffc52d30f09aef70a664c51780a7082eb9d9199367b734720",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r21-clean": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-clean"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "adbcd4d862c271eeba757864a8681c8d766fd5bd3f23a763982d9648255d799f",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r21-clean-reverse": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-clean-reverse"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "c41f9c40bdf70af8ba1d21372adbec95a9a4a9ff40ffcac46a8bf67bd5778890",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r21-invalid-tick": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-invalid-tick"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "16bb98415fd682e248f39583596fabafca875fb2149517b2fe195222926c6dd4",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r21-malformed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-malformed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "c069fc7a3708788fbb3489527e7d86b8cc2d9aed4e446cef2e2a3a5dfca40c98",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r21-malformed-reverse": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-malformed-reverse"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "38df96602b3a23dc7f689ba4aab26712fe25411a234a2782dce17b676bdd93dd",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r21-same-place": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-same-place"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "6c332fba2ff91e6428628d251a8aee36fe665995e064414dbabfdeecf91f22c3",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r21-wrong-kind-place": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-wrong-kind-place"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "4088471b5014b7a50584920cc7b163ff32a87adae39fe856c3a6804dac43fb28",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r22-clean-inversion": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-clean-inversion"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "9a043a319acc4735d43829e7d3c0d4eeff12882c4de85ccd345eae37465a8a70",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r22-malformed-only": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-malformed-only"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "6c332fba2ff91e6428628d251a8aee36fe665995e064414dbabfdeecf91f22c3",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r22-mixed-first": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-mixed-first"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "784ca903ca5e80341f431888d913ce098aaf17eb0289dbbab3ce34e16416e4f8",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r22-mixed-last": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-mixed-last"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "784ca903ca5e80341f431888d913ce098aaf17eb0289dbbab3ce34e16416e4f8",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r22-multiple-invalid": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-multiple-invalid"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "784ca903ca5e80341f431888d913ce098aaf17eb0289dbbab3ce34e16416e4f8",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r22-self-repeated": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-self-repeated"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "9658bf6052f45a9f9db1cbfe6b00efc49c45f8e6849891d9d4c6fb08179fa0d1",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r22-unknown-mixed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-unknown-mixed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "c5e189db61bb68f71d9ae777fcae61c7ac50106ebf2917e7c09765287eb79f79",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r22-valid-order": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-valid-order"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r23-note-class": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r23-note-class"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r25-to-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r25-to-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "41319b99dbf949214293cb3fc3f3edab6c61656a71c73cb9754baa2f7565417a",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r25-to-unique": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r25-to-unique"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r26-to-malformed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r26-to-malformed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "403e6c72061e4b2f8e23c4adf071f1e3778af34e575f4476e7b765d726b01fb1",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r27-both-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r27-both-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "82153bf93b4ac5d1023c787bdef581f4b3b19f36e755239a65f8d12c82c2a6a9",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 6
+      },
+      "corpus/fixtures/r27-target-only": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r27-target-only"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "41319b99dbf949214293cb3fc3f3edab6c61656a71c73cb9754baa2f7565417a",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r28-courier-excerpt": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r28-courier-excerpt"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r29-near-miss": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r29-near-miss"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r30-explicit-negation": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r30-explicit-negation"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r31-source-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r31-source-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "5b7bdc88da492c7f7f35949000ed2e892fb73ebf78153375e4090eebe3f4c2f8",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 8
+      },
+      "corpus/fixtures/r31-source-unique": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r31-source-unique"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r32-source-malformed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r32-source-malformed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "e99f894e93c67f3ffe5103494b1bef2cde45a9ad76692824da9ce79245592a7a",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r33-tarin-envelope": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r33-tarin-envelope"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r34-tarin-hearsay": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r34-tarin-hearsay"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r35-bell7-conflict": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r35-bell7-conflict"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r36-bell7-wrong-date": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r36-bell7-wrong-date"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r37-ledger-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r37-ledger-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "7796ef9030a24d4a619fcb36bae6b3179f338292769e956350f5e000d22bfdd6",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r37-ledger-unique": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r37-ledger-unique"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r39-ledger-source-missing": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r39-ledger-source-missing"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "0f2f1ad2d96fc2e294a7d9d440603cce935aeca2e02c7af619fa675379fbffc4",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r39-ledger-source-unique": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r39-ledger-source-unique"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r40-vela-listener": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r40-vela-listener"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r41-vela-direct-bell": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r41-vela-direct-bell"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r43-jorin-vela-sighting": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r43-jorin-vela-sighting"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r5-invalid-citation": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-invalid-citation"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "26002e0a2d1d9c71754d0569eb5657094f33655299799157902f4e31e0376d9d",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r5-invalid-json": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-invalid-json"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "05d18451688a78088af7e25c2a7f14cf72ef1b1e9e798ecf3b639640702ace05",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r5-missing-file": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-missing-file"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r5-row-shape": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-row-shape"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "e8a914d9f4d59ec50781060d4687b7ecd89a5bfeea3ab1d19401d97fc558c6f8",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r5-wrong-top-level": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-wrong-top-level"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "d0a7fdc170a35ca0e5038aecc1637ed13337f0ddd90826dea2d8ff0d511a4c23",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r59-duplicate-harbor-tower": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-duplicate-harbor-tower"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "cfbb702f19d7214394cf800780799fcd4373c1a200ae620da2339f4af6af4156",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r59-duplicate-tower-harbor": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-duplicate-tower-harbor"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "cfbb702f19d7214394cf800780799fcd4373c1a200ae620da2339f4af6af4156",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r59-nested-duplicate": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-nested-duplicate"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "4cf226abc1cf7941bc03a80be958c9fa4d020857e0aa0bf4947f136367baa131",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r59-unique-control": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-unique-control"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "832a8a91fa48cadd72fde02f54649c0e68d225e8dbe9e1460426f4a837ce2f2a",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r60-empty": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-empty"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "34da5d3c134dac555142fbb7f36d7146a521ed6727d6c424c6abc973d4b83128",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 6
+      },
+      "corpus/fixtures/r60-partial": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-partial"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "23359cd70e3b84c4c57031058641cf0eba7a3470aac60c396e17b82b5e728097",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r60-unavailable": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-unavailable"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "98c2177c811b588005fa88c19b164d9f99d50a68588e5ad48af3bfd14708f87d",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r60-unavailable-independent": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-unavailable-independent"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "3f139931aa21c7c4cfe04c6512c542873018fcf208b397660d97989eb96e4d0d",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 4
+      },
+      "corpus/fixtures/r61-allied-empty": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-allied-empty"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "97e6554372155013855f728708661f817a67967ebce7d3cd8c2757ae7e6cc756",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 6
+      },
+      "corpus/fixtures/r61-allied-unavailable": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-allied-unavailable"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "d392ce100434ceb1ae7d426e1e667de7d713906862169cb67db10929cbe34c9b",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r61-direct-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "97826dbfb445fb9acbf132594812fdd2221d31819efb10916bbdb13fa5a9f1b2",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r61-direct-duplicate-member": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-duplicate-member"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "f4751e093ef825d352db8873bcd673c7d52683ce10bf21549e653fd2ab9da10c",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r61-direct-empty": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-empty"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "ad600ffbe65362c83094be5ec0277b1a6ac2d68d9457fa264116e6a1eb5466aa",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 11
+      },
+      "corpus/fixtures/r61-direct-malformed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-malformed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "d392ce100434ceb1ae7d426e1e667de7d713906862169cb67db10929cbe34c9b",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r61-direct-nonarray": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-nonarray"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "46e1013d17400f6d640ee5b85bf1b6ba20c6ab57694e24ff56c28148ad1463c7",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r61-direct-partial": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-partial"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "ccf742cb7612384764dc08cf4b22507753f83e4cf609a4324d7431988c6f576d",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 7
+      },
+      "corpus/fixtures/r61-direct-unavailable": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-unavailable"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "d392ce100434ceb1ae7d426e1e667de7d713906862169cb67db10929cbe34c9b",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r61-independent-empty": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-independent-empty"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "b3811fdc3589870f374ce1353f094a6390b723903df5026e44e85387290ff9c1",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 18
+      },
+      "corpus/fixtures/r61-independent-unavailable": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-independent-unavailable"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "02a2876c9ddde1352523a5935b86986b272976e154dee1da14d8adb995c9cfa7",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 7
+      },
+      "corpus/fixtures/r61-ledger-unavailable": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-ledger-unavailable"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "3c02dabd0cf97ffb5acf73cd525a16ea6e5fce23f450b337fd9b9f1972fce298",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r62-duplicate": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-duplicate"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "cd1f14a65b58abaa8ae2582a88160767b16d9bc01f7205abfda32f19138aed26",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 4
+      },
+      "corpus/fixtures/r62-duplicate-member": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-duplicate-member"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "2860f4c2a88836882bde96f852b95ec1684a0ef35fc9785d297f452cc2802df8",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r62-empty": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-empty"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "dfc12013cd89cadebe6e86b4d3bf4687afc69d4edae3772870b302c816a81205",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r62-independent": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-independent"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "63aa5f5e237c36b2c55b86f9327f2f2e875e6d2d545228709133ae1017c32e84",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 4
+      },
+      "corpus/fixtures/r62-loaded": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-loaded"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "0f2f1ad2d96fc2e294a7d9d440603cce935aeca2e02c7af619fa675379fbffc4",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r62-malformed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-malformed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "a93b98918571695bb0b384c7cdf7aa3e7a6e23134d72d064ec149ef01d00b7ba",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r62-malformed-side": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-malformed-side"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "eff26607f9baa8c4f77c6384cc8f686d2667b4502b16d336c387536167873481",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 4
+      },
+      "corpus/fixtures/r62-missing": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-missing"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "f440ca4a0dab465daff17f5a4d3aef36a22b62f68356c20b3f9cb65bfffa0799",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r62-nonarray": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-nonarray"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "f35395e75a079a25c84a51be1926dc2ef5fbb7a526ab0bd5b4a03f3ae2174652",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r62-partial": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-partial"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "062168433dffe7e7f069d55b4081bf07175696fb328f229d8c34c90592ae3eaa",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r67-claim-source-loaded-control": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-loaded-control"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r67-claim-source-loaded-empty": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-loaded-empty"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "15072bdac7be6f20f3d83fd3718eb62e8cb3a50b2bcc88343b3407c587bcc48e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r67-claim-source-unavailable-control": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-control"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "0bbc1b1cbade5b48cd0c5b0124f7e30628c86877bbe82241667d5c04a4352306",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r67-claim-source-unavailable-empty": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-empty"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "983af74ff7867c5670a231db03ee646852a5507f2e03d939ea654ed8d7cb2fe5",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r67-claim-source-unavailable-whitespace": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "ffc2b180d29455258cd12a886ebec663573ec7f8517037744fc31d99a815aacd",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r7-ally-reverse-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r7-ally-reverse-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "4dfc6097305f5724d3ae5341fe746aa5a3201b6afc1f2146fe4c232798222ae5",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r7-item-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r7-item-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "b10bd8a6d6f6a4f79799098753dfb949fc1bee479aaab3a599b799dce1a2407a",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 7
+      },
+      "corpus/fixtures/r72-vela-slate-claim": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r72-vela-slate-claim"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r73-jorin-slate-claim": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r73-jorin-slate-claim"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r8-deps-anomalous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r8-deps-anomalous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "14fa308b1956c3a9d769c5f6044249620365ef881f08ea0757cd8bf92a167759",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 3
+      },
+      "corpus/fixtures/r8-deps-distinct": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r8-deps-distinct"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r83-vela-joint-nonsighting": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r83-vela-joint-nonsighting"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r87-chain-unique-broken": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-chain-unique-broken"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "6d2e1487098a48da83c3b11274cc2c332a60a4ef70a968e22b88b663bdcf0fbf",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 1
+      },
+      "corpus/fixtures/r87-chain-unique-valid": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-chain-unique-valid"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r87-masked-break-from-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-masked-break-from-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "9e16c896c5607187d5c6efe210d6584f57be07795b8ee145674170fd98d89f78",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r87-masked-break-to-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-masked-break-to-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "56574cad390804e520f85792c712a1ad97fcc8e6b49a5609ed920f7fde361f67",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r87-myth-cluster": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-myth-cluster"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r87-probe-entry-shape": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-probe-entry-shape"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "4bef15d82f23759d1958e9b5db47205fbbfde081df64ef870a1eb93ce08399e9",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 8
+      },
+      "corpus/fixtures/r87-probe-multi-invalid": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-probe-multi-invalid"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "e73bb6fe4e2390aa41922ea87ceca832b486b306619d8a5f1f8ec5d3838bc8e3",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r87-probe-nonitem-kinds": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-probe-nonitem-kinds"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "723424c6d25621d5fc3fe6a31e13c99d65362ef3f99eeb08d65a9712dd5414f1",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 9
+      },
+      "corpus/fixtures/r87-probe-record-and-chain": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-probe-record-and-chain"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "0394cd33aa81cec788582938bff8b95d30043a17813fa5e0870de8c3e56631e1",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 46
+      },
+      "corpus/fixtures/r87-probe-rowshape-rejected": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-probe-rowshape-rejected"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "b458579f7179682dbcc01619e18bb1b8ac12b060a208abe84b9cda277892fd2e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r87-probe-shape-ambiguous": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-probe-shape-ambiguous"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "a73e70a141c85489d9e2d54c800acf25472ff65c51909c428f69c98938df545c",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r87-probe-source-prefix": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r87-probe-source-prefix"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "88f2724f22ded1c5378ad11ddd99dcc08323e4990422f85308ce614e293650b0",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r88-m3-maya-cluster": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r88-m3-maya-cluster"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      },
+      "corpus/fixtures/r88-mixed-stop": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r88-mixed-stop"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "403a1c1b8be2d7ff988713fdccf00234f5ee91e46ec95cf64a5bba936bb4148c",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 6
+      },
+      "corpus/fixtures/r88-nonholder-stop": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r88-nonholder-stop"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "8a0756c32f7b69968b6f2b12c7b743aec8abb7e2e14fdc1f779f4069ef96f76f",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 4
+      },
+      "corpus/fixtures/r88-shape-ambiguous-armed": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r88-shape-ambiguous-armed"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "b665ea9ef9fb593d9016e6c9bbcee40660e0d057013fd52a87415e1774c5411b",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 5
+      },
+      "corpus/fixtures/r9-dup-high-low": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-dup-high-low"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "091eff52b70b3d6bb08023ef5f92fd0ed6fd59f4e01a137aaa29618e292a02eb",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r9-dup-low-high": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-dup-low-high"
+        ],
+        "before_exit_code": 1,
+        "before_stdout_sha256": "091eff52b70b3d6bb08023ef5f92fd0ed6fd59f4e01a137aaa29618e292a02eb",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 2
+      },
+      "corpus/fixtures/r9-unique-control": {
+        "command": [
+          "python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-unique-control"
+        ],
+        "before_exit_code": 0,
+        "before_stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+        "before_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "before_violation_count": 0
+      }
+    },
+    "r87_probe_multi_invalid_stdout": "VIOLATION: entities[1].id: duplicate entities id 'vault'\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'vault'\nVIOLATION: entities[5].provenance[1].source_id: unknown in-world source 'ghost-source'\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]\n5 violation(s); no canon changed\n",
+    "r87_probe_multi_invalid_stderr": ""
+  },
+  "baseline_corroboration": [
+    {
+      "source": "B1 independent baseline receipt",
+      "command": "python3 - <<'PY'\nimport json, pathlib\nbase=json.loads(pathlib.Path('/tmp/lore-shokunin-C8.fNgPSx.baseline.json').read_text())\nother=json.loads(pathlib.Path('.ufo/waves/round-89/patches/B1-tuples.json').read_text())\nm=[]\nfor k,v in base['fixtures'].items():\n expected={'exit':v['exit_code'],'stdout_sha256':v['stdout_sha256'],'violation_count':v['violation_count']}\n if other.get(k)!=expected:m.append(k)\nprint(f'B1 tuple_count={len(other)} C8 tuple_count={len(base[\"fixtures\"])} shared_tuple_mismatches={len(m)} sample={m[:10]}')\nPY",
+      "observed_output": "B1 tuple_count=149 C8 tuple_count=149 shared_tuple_mismatches=0 sample=[]"
+    },
+    {
+      "source": "B2 independent baseline receipt",
+      "command": "python3 - <<'PY'\nimport json, pathlib\np=pathlib.Path('.ufo/waves/round-89/patches/B2-tuples.json')\nbase=json.loads(pathlib.Path('/tmp/lore-shokunin-C8.fNgPSx.baseline.json').read_text())\nother=json.loads(p.read_text())\nrows=other.get('fixtures',other)\nprint('B2 keys=',list(other)[:8])\nprint('B2 tuple_count=',len(rows),'C8 tuple_count=',len(base['fixtures']))\nif all(isinstance(v,dict) and {'exit','stdout_sha256','violation_count'} <= v.keys() for v in rows.values()):\n mismatches=[]\n for k,v in base['fixtures'].items():\n  o=rows.get(k)\n  expected={'exit':v['exit_code'],'stdout_sha256':v['stdout_sha256'],'violation_count':v['violation_count']}\n  if o != expected: mismatches.append(k)\n print('shared_tuple_mismatches=',len(mismatches),'samples=',mismatches[:10])\nelse: print('schema_not_B1_tuple_map')\nPY",
+      "observed_output": "B2 keys= ['corpus/fixtures/ally-one-way', 'corpus/fixtures/ally-reciprocal', 'corpus/fixtures/consistent', 'corpus/fixtures/contradictions', 'corpus/fixtures/contradictions-ledger-malformed', 'corpus/fixtures/item-chain-broken', 'corpus/fixtures/item-chain-valid', 'corpus/fixtures/r10-registry-witness']\nB2 tuple_count= 149 C8 tuple_count= 149\nshared_tuple_mismatches= 0 samples= []"
+    }
+  ],
+  "patch_poll": {
+    "target": ".ufo/waves/round-89/patches/X1-c1.patch",
+    "deadline": "2026-10-17T03:52:29-03:00",
+    "initial_command": "patch=\"$PWD/.ufo/waves/round-89/patches/X1-c1.patch\"; for i in $(seq 0 25); do printf '%s check=%02d patch=%s\\n' \"$(date --iso-8601=seconds)\" \"$i\" \"$([ -f \"$patch\" ] && printf present || printf absent)\"; if [ -f \"$patch\" ]; then exit 0; fi; sleep 60; done",
+    "initial_observed_checks": [
+      {
+        "time": "2026-10-17T03:27:29-03:00",
+        "check": 0,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:28:29-03:00",
+        "check": 1,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:29:29-03:00",
+        "check": 2,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:30:29-03:00",
+        "check": 3,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:31:29-03:00",
+        "check": 4,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:32:29-03:00",
+        "check": 5,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:33:29-03:00",
+        "check": 6,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:34:29-03:00",
+        "check": 7,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:35:29-03:00",
+        "check": 8,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:36:29-03:00",
+        "check": 9,
+        "patch": "absent"
+      }
+    ],
+    "initial_process_note": "The background process hit the host 600-second limit during the sleep after check 09. It did not complete the 25-minute protocol; the timeout and the restart gap are recorded rather than hidden.",
+    "manual_absence_checks": [
+      "2026-10-17T03:30:31-03:00",
+      "2026-10-17T03:35:18-03:00",
+      "2026-10-17T03:38:18-03:00",
+      "2026-10-17T03:42:25-03:00",
+      "2026-10-17T03:45:20-03:00",
+      "2026-10-17T03:47:10-03:00",
+      "2026-10-17T03:49:09-03:00",
+      "2026-10-17T03:51:09-03:00"
+    ],
+    "resumed_command": "patch=\"$PWD/.ufo/waves/round-89/patches/X1-c1.patch\"; deadline=$(date -d '2026-10-17T03:52:29-03:00' +%s); i=10; while :; do now=$(date +%s); printf '%s check=%02d patch=%s\\n' \"$(date --iso-8601=seconds)\" \"$i\" \"$([ -f \"$patch\" ] && printf present || printf absent)\"; if [ -f \"$patch\" ]; then exit 0; fi; if [ \"$now\" -ge \"$deadline\" ]; then exit 0; fi; remaining=$((deadline-now)); if [ \"$remaining\" -gt 60 ]; then sleep 60; else sleep \"$remaining\"; fi; i=$((i+1)); done",
+    "resumed_observed_checks": [
+      {
+        "time": "2026-10-17T03:39:15-03:00",
+        "check": 10,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:40:15-03:00",
+        "check": 11,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:41:15-03:00",
+        "check": 12,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:42:15-03:00",
+        "check": 13,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:43:15-03:00",
+        "check": 14,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:44:15-03:00",
+        "check": 15,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:45:15-03:00",
+        "check": 16,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:46:15-03:00",
+        "check": 17,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:47:15-03:00",
+        "check": 18,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:48:15-03:00",
+        "check": 19,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:49:15-03:00",
+        "check": 20,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:50:15-03:00",
+        "check": 21,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:51:15-03:00",
+        "check": 22,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:52:15-03:00",
+        "check": 23,
+        "patch": "absent"
+      },
+      {
+        "time": "2026-10-17T03:52:29-03:00",
+        "check": 24,
+        "patch": "absent"
+      }
+    ],
+    "deadline_observed_output": "2026-10-17T03:52:29-03:00 check=24 patch=absent",
+    "post_deadline_directory_check": {
+      "time": "2026-10-17T03:52:37-03:00",
+      "observed": "round-89 directory listing contained no X1-c1.patch, X1.md, or X1-tuple-delta.json."
+    }
+  },
+  "candidate": {
+    "status": "measured",
+    "patch_path": ".ufo/waves/round-89/patches/X1-c1.patch",
+    "patch_sha256": "8789dcb479a45cf51fa83125654712497bc0d05a88a43e240f2ff3802b896831",
+    "arrival": {
+      "deadline": "2026-10-17T03:52:29-03:00",
+      "first_observed_present": "2026-10-17T03:52:57-03:00",
+      "seconds_after_deadline": 28,
+      "note": "The candidate was measured after the deadline; the final deadline check remains recorded as absent."
+    },
+    "scratch_archive": "/tmp/lore-shokunin-C8-X1.KxRg8s",
+    "patch_dry_run": "PASS",
+    "patch_dry_run_command": "patch --dry-run --batch -p1 -d /tmp/lore-shokunin-C8-X1.KxRg8s < .ufo/waves/round-89/patches/X1-c1.patch",
+    "patch_apply": "PASS",
+    "patch_apply_command": "patch --batch -p1 -d /tmp/lore-shokunin-C8-X1.KxRg8s < .ufo/waves/round-89/patches/X1-c1.patch",
+    "census_command": "python3 /tmp/lore-shokunin-C8.fNgPSx/measure_and_diff.py /tmp/lore-shokunin-C8-X1.KxRg8s /tmp/lore-shokunin-C8.fNgPSx.baseline.json /tmp/lore-shokunin-C8-X1.KxRg8s.after.json /tmp/lore-shokunin-C8-X1.KxRg8s.delta.json 8789dcb479a45cf51fa83125654712497bc0d05a88a43e240f2ff3802b896831",
+    "scratch_py_compile": "PASS",
+    "after_census": {
+      "capture_path": "/tmp/lore-shokunin-C8-X1.KxRg8s.after.json",
+      "capture_sha256": "1ac17014ae67e3716d94b9342be84cfcd4f806c6214892c01cb8dc2b84b34731",
+      "fixture_count": 149,
+      "exit_0": 31,
+      "exit_nonzero": 118,
+      "stderr_cases": 0,
+      "violation_lines": 367,
+      "observed_output": "directories=149 exit_0=31 exit_nonzero=118 stderr_cases=0 violation_lines=367"
+    }
+  },
+  "delta": {
+    "status": "measured",
+    "unchanged_tuple_count": 145,
+    "changed_tuple_count": 4,
+    "added_fixture_count": 0,
+    "removed_fixture_count": 0,
+    "changed_fixture_names": [
+      "corpus/fixtures/r87-probe-multi-invalid",
+      "corpus/fixtures/r87-probe-record-and-chain",
+      "corpus/fixtures/r88-mixed-stop",
+      "corpus/fixtures/r88-nonholder-stop"
+    ],
+    "full_changed_output_capture": {
+      "path": "/tmp/lore-shokunin-C8-X1.KxRg8s.delta.json",
+      "sha256": "a2d0c95f612ffddbc8db1f79e5089635e824069af6926b718e7604a591f620fc",
+      "description": "Full before/after stdout and stderr for all four changed fixtures, including tuple hashes and line text."
+    },
+    "changed_lines": [
+      {
+        "fixture": "corpus/fixtures/r87-probe-multi-invalid",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 4,
+        "primary_classification": "combined-summary",
+        "secondary_classifications": [
+          "wording"
+        ],
+        "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-multi-invalid",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 5,
+        "primary_classification": "combined-summary",
+        "secondary_classifications": [
+          "wording"
+        ],
+        "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-multi-invalid",
+        "stream": "stdout",
+        "side": "added",
+        "line": 4,
+        "primary_classification": "combined-summary",
+        "secondary_classifications": [
+          "wording"
+        ],
+        "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault'; source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[5].provenance[1]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-multi-invalid",
+        "stream": "stdout",
+        "side": "added",
+        "line": 5,
+        "primary_classification": "combined-summary",
+        "secondary_classifications": [
+          "wording"
+        ],
+        "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault'; source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[5].provenance[1]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 33,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 34,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "added",
+        "line": 33,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[4].provenance[7]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "added",
+        "line": 34,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[4].provenance[7]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 41,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 42,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "added",
+        "line": 41,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[6].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r87-probe-record-and-chain",
+        "stream": "stdout",
+        "side": "added",
+        "line": 42,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[6].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-mixed-stop",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 3,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-mixed-stop",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 4,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-mixed-stop",
+        "stream": "stdout",
+        "side": "added",
+        "line": 3,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-mixed-stop",
+        "stream": "stdout",
+        "side": "added",
+        "line": 4,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-mixed-stop",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 6,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-mixed-stop",
+        "stream": "stdout",
+        "side": "added",
+        "line": 6,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-nonholder-stop",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 2,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-nonholder-stop",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 3,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-nonholder-stop",
+        "stream": "stdout",
+        "side": "removed",
+        "line": 4,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-nonholder-stop",
+        "stream": "stdout",
+        "side": "added",
+        "line": 2,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-nonholder-stop",
+        "stream": "stdout",
+        "side": "added",
+        "line": 3,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]"
+      },
+      {
+        "fixture": "corpus/fixtures/r88-nonholder-stop",
+        "stream": "stdout",
+        "side": "added",
+        "line": 4,
+        "primary_classification": "wording",
+        "secondary_classifications": [],
+        "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]"
+      }
+    ],
+    "line_classifications": {
+      "combined-summary": 4,
+      "qualification": 0,
+      "wording": 20,
+      "OTHER": 0
+    },
+    "changed_line_record_count": 24,
+    "exit_status_changes": [],
+    "important": "The four combined-summary primary records are the removed/added stop lines for r87-probe-multi-invalid; each also carries wording as a secondary class. All other changed lines are wording. No census fixture exercises FN-2 raw-duplicate/one-valid-row qualification."
+  },
+  "available_non_target_evidence": {
+    "source": ".ufo/waves/round-89/X2.md",
+    "note": "X2 reports one changed fixture (r87-probe-multi-invalid) and zero exit flips for its summary-only alternative, with exact commands/output in X2.md. C8 did not apply X2 or treat that result as an X1 measurement."
+  },
+  "written_repo_paths": [
+    ".ufo/waves/round-89/C8.md",
+    ".ufo/waves/round-89/patches/C8-delta.json"
+  ]
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "same",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor in the low-tick account.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "same",
+    "tick": 5,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor in the high-tick account.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "consumer",
+    "tick": 3,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [
+      "same"
+    ],
+    "description": "Mira reaches the tower according to the same cited account.",
+    "source_id": "courier-log"
+  }
+]

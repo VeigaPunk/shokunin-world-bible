@@ -1,0 +1,5 @@
+try 1 2026-10-17 22:01:03 -0300 missing: S3-fixture-author.md
+  dir-present files=claim-excerpt-map.md contradictions.json entities.json fictional-excerpts.md inspiration-note.md README.md relations.json source-excerpt.md sources.json timeline.json 
+try 2 2026-10-17 22:01:23 -0300 missing: S3-fixture-author.md
+  dir-present files=claim-excerpt-map.md contradictions.json entities.json fictional-excerpts.md inspiration-note.md README.md relations.json source-excerpt.md sources.json timeline.json 
+try 3 2026-10-17 22:01:43 -0300 ALL-PRESENT

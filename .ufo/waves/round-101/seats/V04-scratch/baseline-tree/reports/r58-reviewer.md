@@ -1,0 +1,21 @@
+# Round 58 independent non-author review — Jorin report proposal
+
+## Verdict: NO-GO on depth as framed
+
+The strongest report-level countercase is plausible: if a new fictional Jorin account says he saw a strip he took to be Mira’s outbound route strip on the registry hook rack while watching what he took to be Sella searching there, the juxtaposition is more immediate than r53’s satchel handling or r55’s earlier rack placement. It puts a positive *reported* visual perception alongside Sella’s reported non-finding, and could prompt a reader to ask how both reports can stand without equating non-finding with objective absence. This is a real conditional contrast, not merely a hypothetical placement.
+
+It nevertheless does not demonstrate material depth beyond r23. The proposed account hedges both crucial identifications: Jorin may misidentify the strip and the person/search. Even accepting his words as accurately reported, it does not show that his sighting and Sella’s search concern the same physical strip, the same search, or a relevant common interval. Without those links, the sound conclusion is only that Jorin reports seeing something he identified as the strip while observing something he identified as Sella’s search. That is not a new fact about the scene or a same-proposition conflict; nor is there a specific reader decision shown to change. The general distinction—Sella’s reported non-finding does not establish objective absence—is already explicit in r23’s clause map and note.
+
+## Evidence and precedent
+
+R23’s fictional excerpt says: “Later at Lantern Harbor, I, Sella, looked for Mira’s outbound route strip on the registry hook rack. I did not find it there.” (`.shokunin/lore/corpus/fixtures/r23-note-class/sella-absence-note-excerpt.md:5`). Its map treats this as Sella’s reported search/non-finding, maps “Later” and the tick to fixture order rather than clock time, and leaves world-absence and cause unmapped (`witnessed-absence-clause-map.md:9-20`). The strip is not an entity row. Thus the baseline itself preserves the non-finding distinction; a second attributed report does not automatically deepen it.
+
+R43 is relevant but narrower: the admitted report named Vela and the east steps, permitting a conditional overlap between Jorin’s sighting and Vela’s own location report, while withholding verified shared occasion and truth (`r43-axis-adjudicator.md`). It does not grant a general depth benefit for adding an observer. R35’s admitted comparison involved attributed reports of mutually exclusive locations under a named-bell condition; it does not make a search/non-finding and an uncertain sighting contradictory. R53 and r55 rejected proposed handling/placement because same-strip identity and compatible sequence were not established; r55’s shared rack still did not prove persistence or presence at Sella’s search. R54’s rejection cautions that another visual report with uncertain referent/identity need not create a consequential comparison. These precedents do not make this case impossible, but its claimed bridge remains unresolved.
+
+No source, fixture, clause map, checker candidate, or candidate output is assessed or claimed here. The proposed Jorin report remains hypothetical. A `harbor` place pointer would not encode rack occupancy or strip identity, and a contradiction pointer to `place_id` would misstate the proposition.
+
+## Falsifier and calibration harm
+
+Falsifier for reconsidering GO: a non-author reader can identify a concrete, useful report-level consequence that survives the possibility that Jorin misidentified both strip and searcher, without relying on a shared occasion or same-object assumption. If the consequence is only “another witness reports a sighting,” or depends on reading the hedges as verified identity, depth remains unchanged.
+
+Calibration harm would be to upgrade Jorin’s attributed perception into objective rack presence, equate his identifications with Sella/the sought strip, or call the accounts a contradiction, Sella a liar, or evidence of removal/theft/custody. Ticks cannot establish shared time. No canon, rights, Blue Seal, carbon, or mark inference is supported. Keep the axis verdict limited to **depth: unchanged materially; NO-GO**; no candidate is authorized by this review.

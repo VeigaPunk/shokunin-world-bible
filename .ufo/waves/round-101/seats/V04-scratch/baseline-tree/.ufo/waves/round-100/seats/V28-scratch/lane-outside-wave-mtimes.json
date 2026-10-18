@@ -1,0 +1,22 @@
+{
+  "since": 1792290655,
+  "files": [
+    "LOG.md",
+    "SKILL.md",
+    "corpus/fixtures/r100-docket-review/README.md",
+    "corpus/fixtures/r100-docket-review/claim-excerpt-map.md",
+    "corpus/fixtures/r100-docket-review/contradictions.json",
+    "corpus/fixtures/r100-docket-review/entities.json",
+    "corpus/fixtures/r100-docket-review/fictional-excerpts.md",
+    "corpus/fixtures/r100-docket-review/inspiration-note.md",
+    "corpus/fixtures/r100-docket-review/relations.json",
+    "corpus/fixtures/r100-docket-review/source-excerpt.md",
+    "corpus/fixtures/r100-docket-review/sources.json",
+    "corpus/fixtures/r100-docket-review/timeline.json",
+    "corpus/knowledge/r100-crossing-arc-synthesis.md",
+    "corpus/knowledge/r100-provenance-semantics-boundary.md",
+    "corpus/knowledge/r99-gate-blind-spot-table.md",
+    "corpus/tools/README.md",
+    "corpus/tools/dependency-freeze-contract.json"
+  ]
+}

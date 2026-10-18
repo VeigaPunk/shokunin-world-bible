@@ -1,0 +1,11 @@
+--- a/corpus/fixtures/check_bible.py
++++ b/corpus/fixtures/check_bible.py
+@@ -168,6 +168,8 @@
+     def holder_identity_detail(holder_id, reference):
++        if holder_id is None:
++            return None
+         raw_count = raw_entity_id_counts.get(holder_id, 0)
+         indexed_count = entity_id_counts.get(holder_id, 0)
+         if raw_count == 1 and indexed_count == 1:
+             return None
+         return f'{reference} {holder_id!r} is not uniquely resolvable ({raw_count} raw entity rows carry this id, but only {indexed_count} is in the resolved index)'

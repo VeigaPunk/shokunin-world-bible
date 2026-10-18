@@ -1,0 +1,239 @@
+{
+  "seat": "JCAL3",
+  "round": 89,
+  "phase": "follow-up",
+  "claim": "C1",
+  "judged_tree": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+  "baseline": "51b286b",
+  "verdict_recommendation": "calibration: improved (bounded)",
+  "wait_checks": [
+    {"start": "2026-10-17T04:17:19-03:00", "end": "2026-10-17T04:18:19-03:00", "new_dependency": false},
+    {"start": "2026-10-17T04:18:19-03:00", "end": "2026-10-17T04:19:19-03:00", "new_dependency": false}
+  ],
+  "fixtures": [
+    {
+      "dir": "corpus/fixtures/r89-c1-invalid-tick",
+      "branch": "invalid tick",
+      "delivered_exit": 1,
+      "delivered_first_stop": "malformed record (invalid tick)",
+      "delivered_origin": "entities[3].provenance[1]",
+      "disclosing_records": ["1", "2", "3"],
+      "readme_expectation_literal_match": true,
+      "baseline_first_stop": "malformed record (invalid tick)",
+      "delta_vs_baseline": "none",
+      "delta_discriminating": false,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M5 rename invalid-tick cause"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-c1-invalid-from-holder",
+      "branch": "invalid from_holder",
+      "delivered_exit": 1,
+      "delivered_first_stop": "malformed record (invalid from_holder)",
+      "delivered_origin": "entities[3].provenance[1]",
+      "disclosing_records": ["1", "2"],
+      "readme_expectation_literal_match": true,
+      "baseline_first_stop": "malformed record (invalid from_holder)",
+      "delta_vs_baseline": "none",
+      "delta_discriminating": false,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M6 rename invalid-from_holder cause"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-c1-invalid-to-holder",
+      "branch": "invalid to_holder",
+      "delivered_exit": 1,
+      "delivered_first_stop": "malformed record (invalid to_holder)",
+      "delivered_origin": "entities[3].provenance[1]",
+      "disclosing_records": ["1", "2"],
+      "readme_expectation_literal_match": true,
+      "baseline_first_stop": "malformed record (invalid to_holder)",
+      "delta_vs_baseline": "none",
+      "delta_discriminating": false,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M7 rename invalid-to_holder cause"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-c1-malformed-source-id",
+      "branch": "malformed source_id (non-string)",
+      "delivered_exit": 1,
+      "delivered_first_stop": "malformed record (invalid source_id)",
+      "delivered_origin": "entities[2].provenance[1]",
+      "disclosing_records": ["1", "2"],
+      "readme_expectation_literal_match": true,
+      "baseline_first_stop": "malformed record (invalid source_id)",
+      "delta_vs_baseline": "none",
+      "delta_discriminating": false,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M8 rename invalid-source_id cause"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-c1-multi-cause-valid",
+      "branch": "valid-key multi-cause (tick + ambiguous holder)",
+      "delivered_exit": 1,
+      "delivered_first_stop": "malformed record (invalid tick); ambiguous holder identity to_holder 'r89-c1-multi-cause-valid-ambiguous-holder'",
+      "delivered_origin": "entities[2].provenance[0]",
+      "disclosing_records": ["0"],
+      "readme_expectation_literal_match": true,
+      "baseline_first_stop": "malformed record (invalid tick)",
+      "delta_vs_baseline": "combined summary added; baseline named only the tick",
+      "delta_discriminating": true,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M1 first-wins stop cause", "M5 rename invalid-tick cause"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-f2-dangling-to",
+      "branch": "dangling to_holder",
+      "delivered_exit": 1,
+      "delivered_first_stop": "holder reference to_holder 'r89-f2-missing-to' absent from raw entities and absent from the resolved index",
+      "delivered_origin": "entities[3].provenance[1]",
+      "disclosing_records": ["1", "2", "3"],
+      "readme_expectation_literal_match": false,
+      "readme_declared_string": "dangling holder to_holder 'r89-f2-missing-to'",
+      "readme_declared_at": "corpus/fixtures/r89-f2-dangling-to/README.md:9",
+      "baseline_first_stop": "dangling holder to_holder 'r89-f2-missing-to'",
+      "delta_vs_baseline": "FN-1 rewording",
+      "delta_discriminating": true,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M3 revert FN-1 to_holder wording"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-f2-dangling-from",
+      "branch": "dangling from_holder",
+      "delivered_exit": 1,
+      "delivered_first_stop": "holder reference from_holder 'r89-f2-missing-from' absent from raw entities and absent from the resolved index",
+      "delivered_origin": "entities[3].provenance[1]",
+      "disclosing_records": ["1", "2", "3"],
+      "readme_expectation_literal_match": false,
+      "readme_declared_string": "dangling holder from_holder 'r89-f2-missing-from'",
+      "readme_declared_at": "corpus/fixtures/r89-f2-dangling-from/README.md:9",
+      "baseline_first_stop": "dangling holder from_holder 'r89-f2-missing-from'",
+      "delta_vs_baseline": "FN-1 rewording",
+      "delta_discriminating": true,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M3b revert FN-1 from_holder wording"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-f2-invalid-source-id",
+      "branch": "unknown source_id (nonempty, absent)",
+      "delivered_exit": 1,
+      "delivered_first_stop": "source reference 'r89-f2-unknown-source' absent from raw sources and absent from the resolved index",
+      "delivered_origin": "entities[3].provenance[1]",
+      "disclosing_records": ["1", "2", "3"],
+      "readme_expectation_literal_match": false,
+      "readme_declared_string": "unknown source 'r89-f2-unknown-source'",
+      "readme_declared_at": "corpus/fixtures/r89-f2-invalid-source-id/README.md:9",
+      "baseline_first_stop": "unknown source 'r89-f2-unknown-source'",
+      "delta_vs_baseline": "FN-1 rewording",
+      "delta_discriminating": true,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M4 revert FN-1 source wording"]
+    },
+    {
+      "dir": "corpus/fixtures/r89-fn2-control",
+      "branch": "FN-2 control (uniquely resolvable holder)",
+      "delivered_exit": 1,
+      "delivered_first_stop": "provenance chain break; expected from_holder 'f3-dup', got 'mira'",
+      "delivered_origin": "entities[3].provenance[1]",
+      "delivered_qualified": false,
+      "disclosing_records": ["1"],
+      "readme_expectation_literal_match": true,
+      "baseline_first_stop": "provenance chain break; expected from_holder 'f3-dup', got 'mira'",
+      "delta_vs_baseline": "none (by design: must remain unqualified)",
+      "delta_discriminating": false,
+      "mutation_discriminating": false,
+      "catching_mutations": []
+    },
+    {
+      "dir": "corpus/fixtures/r89-fn2-unresolved-chain-break",
+      "branch": "FN-2 unresolved holder (2 raw rows, 1 indexed)",
+      "delivered_exit": 1,
+      "delivered_first_stop": "input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'",
+      "delivered_origin": "entities[4].provenance[1]",
+      "delivered_qualified": true,
+      "disclosing_records": ["1"],
+      "readme_expectation_literal_match": true,
+      "baseline_first_stop": "provenance chain break; expected from_holder 'f3-dup', got 'mira'",
+      "delta_vs_baseline": "FN-2 qualifier added",
+      "delta_discriminating": true,
+      "mutation_discriminating": true,
+      "catching_mutations": ["M2 drop FN-2 qualification"]
+    }
+  ],
+  "control_pair_check": {
+    "command": "diff r89-fn2-control/entities.json r89-fn2-unresolved-chain-break/entities.json",
+    "result": "identical except one inserted f3-dup row with first_appearance=\"\"; sources.json byte-identical (diff rc=0)",
+    "valid_control": true
+  },
+  "census_diff": {
+    "command": "per-dir replay of delivered vs /tmp/jcal3/base checker over all corpus/fixtures dirs; compare (returncode, violation-count)",
+    "dirs": 160,
+    "changed": 0,
+    "note": "one earlier run printed dirs=161 due to a transient directory; the clean re-run and ls -d both give 160 with changed=0"
+  },
+  "closure_census": {"dirs": 160, "clean": 32, "violations": 128},
+  "disclosure_string_coverage_160_dirs": {
+    "absent from raw entities and absent from the resolved index": {"total": 6, "dirs": 2},
+    "present in raw entities but": {"total": 0, "dirs": 0},
+    "absent from raw sources and absent from the resolved index": {"total": 15, "dirs": 5},
+    "present in raw sources but": {"total": 0, "dirs": 0},
+    "possible provenance chain break, not a definite identity mismatch": {"total": 1, "dirs": 1},
+    "is not uniquely resolvable (": {"total": 1, "dirs": 1}
+  },
+  "named_debt": [
+    {
+      "id": "JCAL3-D1",
+      "severity": "documentation parity (no behavioural impact)",
+      "summary": "3 r89-f2-* fixture READMEs declare the pre-FN-1 disclosure wording, which the delivered checker no longer emits",
+      "locations": [
+        "corpus/fixtures/r89-f2-dangling-to/README.md:9",
+        "corpus/fixtures/r89-f2-dangling-from/README.md:9",
+        "corpus/fixtures/r89-f2-invalid-source-id/README.md:9"
+      ]
+    },
+    {
+      "id": "JCAL3-D2",
+      "severity": "contract document stale + one direct contradiction",
+      "summary": "corpus/knowledge/holder-assessment-boundary.md untouched at r89; rows 9/10/13, the dangling-holder decision row, the precedence block, and the sample outputs still declare the pre-r89 strings; the shape-valid single-cause precedence rule is contradicted by r89-c1-multi-cause-valid",
+      "locations": [
+        "corpus/knowledge/holder-assessment-boundary.md:152",
+        "corpus/knowledge/holder-assessment-boundary.md:153",
+        "corpus/knowledge/holder-assessment-boundary.md:156",
+        "corpus/knowledge/holder-assessment-boundary.md:165",
+        "corpus/knowledge/holder-assessment-boundary.md:169",
+        "corpus/knowledge/holder-assessment-boundary.md:221-228",
+        "corpus/knowledge/holder-assessment-boundary.md:338-348"
+      ]
+    },
+    {
+      "id": "JCAL3-D3",
+      "severity": "fixture coverage gap",
+      "summary": "FN-1 raw-present-but-not-resolved branch ('present in raw entities/sources but') has 0 fixture coverage across all 160 dirs",
+      "locations": []
+    },
+    {
+      "id": "JCAL3-D4",
+      "severity": "bound, not defect",
+      "summary": "4 of 8 cause-branch fixtures (invalid-tick, invalid-from-holder, invalid-to-holder, malformed-source-id) are output-identical at baseline; they pin vocabulary but are not delta-discriminators",
+      "locations": []
+    },
+    {
+      "id": "JCAL3-D5",
+      "severity": "owed at closure (not a work-wave defect)",
+      "summary": "corpus/fixtures/README.md has no Round 89 section; precedent shows the r88 section was added at closure 51b286b",
+      "locations": ["corpus/fixtures/README.md"]
+    },
+    {
+      "id": "JCAL3-D6",
+      "severity": "pre-existing pattern",
+      "summary": "no harness enforces the prose fixture expectations; all 10 are manual-replay pins",
+      "locations": []
+    }
+  ],
+  "writes": [
+    ".ufo/waves/round-89/followup/JCAL3.md",
+    ".ufo/waves/round-89/followup/JCAL3-fixtures.json"
+  ],
+  "commits": 0,
+  "tree_clean_before_and_after": true
+}

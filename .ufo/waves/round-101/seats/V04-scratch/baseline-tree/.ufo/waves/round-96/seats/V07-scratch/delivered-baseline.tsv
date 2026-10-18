@@ -1,0 +1,7 @@
+corpus/fixtures/r87-myth-cluster rc=2 | FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer~RESULT ERROR~
+corpus/fixtures/r88-m3-maya-cluster rc=0 | OBLIGATIONS raw=10 mapped=10~INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12~RESULT PASS~
+corpus/fixtures/r89-inspiration-paraphrase rc=2 | FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column~RESULT ERROR~
+corpus/fixtures/r93-m2-kojiki-cluster rc=0 | OBLIGATIONS raw=12 mapped=12~INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15~RESULT PASS~
+corpus/fixtures/r94-paired-crossing rc=0 | OBLIGATIONS raw=14 mapped=14~INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16~RESULT PASS~
+corpus/fixtures/r95-crossing-aftermath rc=0 | OBLIGATIONS raw=15 mapped=15~INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17~RESULT PASS~
+corpus/fixtures/r96-crossing-response rc=0 | OBLIGATIONS raw=16 mapped=16~INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18~RESULT PASS~

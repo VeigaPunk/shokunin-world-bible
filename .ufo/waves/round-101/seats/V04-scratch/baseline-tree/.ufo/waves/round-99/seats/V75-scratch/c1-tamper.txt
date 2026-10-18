@@ -1,0 +1,76 @@
+DEPEND_LINES_IN_EXCERPT 1
+  > Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship 
+CHOSEN "> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing on"
+BEFORE_BASELINE_TOOL
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+STDERR 
+BEFORE_EXIT 0
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+BEFORE_CONTROL_EXIT 0
+AFTER_DELIVERED_TOOL
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 301a2a6675e13c2993757245ee94c5fe2b7f6a1c9a3567d84cc0c56905aa6ea6 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> 0c29bcaa2f32025460c439cb353fbbf2e5790a3a255c84ee2497ddab50fdc501); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+STDERR 
+AFTER_EXIT 2
+AFTER_CONTROL
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+RESULT PASS
+AFTER_CONTROL_EXIT 0
+== other gates on prose-removed mirror (not the live fixture) ==
+CMD /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V75-scratch/c1-mirrors/after/corpus/fixtures/r98-clerk-filing EXIT 0
+CLEAN: schema, citations, relations, timeline; 0 violations
+CMD /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V75-scratch/c1-mirrors/after/corpus/fixtures/r98-clerk-filing EXIT 0
+OBLIGATIONS raw=20 mapped=20
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22
+RESULT PASS
+CMD /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/support_check.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V75-scratch/c1-mirrors/after/corpus/fixtures/r98-clerk-filing EXIT 1
+RECEIPT JSON-FACTS 20; EDITORIAL-ROWS 2; TOTAL-ROWS 22
+SOURCE-SUPPORT 19/20; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 21/22
+FAIL: J14: source-support anchor missing
+RESULT FAIL
+== per-file tamper (append newline) delivered tool ==
+entities.json EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest ad2e89633984b442ec70ce9c9604444c84992be0a1d59920089a17062e8ed33f != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457e41d31d3c78cdde591e5
+  RESULT ERROR
+relations.json EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest a7faed8bc46bd23dbd3d6ca409fa02dd0e614e9ee9bcaa7e55e15a589b740f58 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: relations.json (sha256 c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9 -> 811144128783ee753fa02b
+  RESULT ERROR
+timeline.json EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest d8079cd47135901304de8cccd75a347ae22297defc91dbbb9d43b759af149567 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: timeline.json (sha256 eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af -> d31f71fa5766e18980a56fe
+  RESULT ERROR
+sources.json EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest 8c6970fbb9d03fcf3ad230b1e551c9e2c0b334651efeeaa7e124c89681e46535 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: sources.json (sha256 32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3 -> dbc17d2fd3b0576035a5a791
+  RESULT ERROR
+contradictions.json EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest ab3d05303db471923a8a2bdb7fd66223fd9e4356775ec6057f6dd4cf61780272 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: contradictions.json (sha256 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 -> 5239a7754876b9a70
+  RESULT ERROR
+README.md EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest 3322eda76a6885f76f251bb35651ada8dce3f853f344d653c43acf6843416f70 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> d2a1d6596c8e875bd54fd17d669
+  RESULT ERROR
+claim-excerpt-map.md EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest 466c8f7b77cf44090e9b5c81569612a7df16dd0696f81666d23e838dca8d5eb0 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> 76d3db9831b7d7e6
+  RESULT ERROR
+fictional-excerpts.md EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest 3e992626a155faba83490f4810d2aa0b13bd1e51e2153e98e1e7af86c925beab != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> a6bff890dd8821e
+  RESULT ERROR
+inspiration-note.md EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest 02fc00a950188f1433e2302946b41183c42b95df27dbe25730a579dfa2ffa20c != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> a1be0d5b00e0c695a
+  RESULT ERROR
+source-excerpt.md EXIT 2 names_file=True
+  FINDING DIGEST-MISMATCH: content digest b413f00ea52299788617c551091e5fe6514935be43c6cf32967cf629ce22541a != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 5426ef14362d94f3388
+  RESULT ERROR
+== semantic edge-drop on timeline (expect exit 1, not DIGEST-MISMATCH) ==
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL
+EDGE_DROP_EXIT 1
+== scope refused ==
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V75-scratch/c1-mirrors/scope/not-a-fixture (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V75-scratch/c1-mirrors/scope/not-a-fixture); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+SCOPE_EXIT 2

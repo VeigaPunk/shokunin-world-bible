@@ -1,0 +1,26 @@
+# Round 80 prior scout — materiality lessons from r77/r79 and r73 contrast
+
+## Scope
+
+Read the Round 80 declaration in `.shokunin/lore/LOG.md` and the relevant prior reports: `r77-prior-scout.md`, `r77-axis-adjudicator.md`, `r79-axis-adjudicator.md`, `r73-prior-scout.md`, and `r73-axis-adjudicator.md`. This is a bounded prior-art/materiality assessment, not review of an r80 candidate. I made no corpus or LOG changes and infer no fictional-world truth.
+
+## Repeated materiality failure: r77 and r79
+
+- **R77 (Neri):** the actual invented excerpt says, “I, Neri, tended a gate. Its latch caught only after I lifted it twice.” Although distinct in subject from r73’s reported slate wording, the tactile detail yielded only generic attentiveness, patience, or repeated effort. Once gatekeeper authority and presumed slate relevance were removed, a non-author could not identify a specific useful character or setting decision. The adjudicator therefore found depth unchanged materially, not “unprovable-but-better.” A new physical topic, plausible interpretation, source, claim, or citation did not itself make the passage earn material space.
+- **R79 (Iren):** the invented note explicitly contrasts arrival order with clerk-call order and states its own reason: preserve how long people waited. That is a coherent, concrete staging choice, stronger than r77’s generic cue. But the proposed benefit and the clause map simply restated the note’s own newly invented rationale; the reviewers found no separate scene-reading consequence or supported tradeoff that made the choice materially useful beyond the line itself. Adversarial coherence and the blind reader’s selection of arrival order showed that the sentence communicated its own preference, not a distinct material gain. Again, depth unchanged, not “unprovable-but-better.”
+
+**Bounded lesson:** a fresh detail or an internally coherent choice is not sufficient. For a single invented vignette, ask whether the non-author can name a specific, text-supported consequence or editorial distinction beyond (a) repeating the action/detail, (b) repeating the speaker’s stated preference or rationale, and (c) adding generic characterization. It must survive removal of role/title authority and speculative links. A distinct consequence need not be externally authenticated; it does need to be legible in the actual cited passage rather than supplied by the scout’s gloss.
+
+## Contrast: what r73 did—and did not—support
+
+R73’s narrow depth admission was a comparison of **two separately attributed reports**: Vela reported reading “KEEP THE EAST GATE CLEAR,” while Jorin separately reported reading “KEEP THE EAST GATE OPEN.” Their wording and reported circumstances form a bounded difference between accounts that is not merely one speaker’s stated rationale repeated as its own payoff. The comparison makes a useful open question: the reports differ, while shared slate/inscription, reading time, source, and occasion remain unresolved. It did **not** establish a contradiction, a persistent inscription changing, corroboration, or a common event. R73 is not a shortcut that makes any invented contrast material; the actual wording contrast and explicit unresolved comparison mattered, and a non-author review could still falsify its usefulness as arbitrary.
+
+For r80’s declared two-beat idea, the action plus a separately described observable response/consequence is not automatically enough. The non-author must point to exact clauses supporting materially different scene presentations and a consequence beyond the action or the speaker’s own rationale. The response must not be an invented flattering echo with no credible alternative, generic characterization, or removable decoration. If the consequence is only asserted in an editorial gloss, the r77/r79 problem remains.
+
+## Keep evidentiary categories separate
+
+1. **Invented in-world attribution:** prose may be deliberately fictional and unverified, with claims attributed to the named in-world speaker. This describes whose account the fixture presents; it is not external authentication or proof that the described event happened, even within a fictional world.
+2. **Citation-ID and structure checks:** resolved source IDs, claim pointers, clause-map alignment, checker cleanliness, preserved corpus bytes, and raw CLI replay establish structural integrity and regression preservation. They do not establish that prose is true, that a paraphrase semantically follows from an excerpt, or that a scene has material editorial value. Human review of the actual excerpt/map is needed for entailment and materiality.
+3. **Prose truth, canon, rights, mechanics:** neither attribution nor a clean checker nor an editorial depth verdict establishes source authenticity, fictional-world truth, canon, real-world rights, or game mechanics. Do not promote a hypothetical scene consequence into a world rule, established institution, event, or fact without separate support. No such conclusion is made here.
+
+No candidate admission follows from this prior scout alone. The Round 80 declaration’s bounded materiality test is consistent with the r77/r79 failures and should be judged on exact candidate clauses, with r73’s narrow contrast as a distinct precedent rather than a general license for invented novelty.

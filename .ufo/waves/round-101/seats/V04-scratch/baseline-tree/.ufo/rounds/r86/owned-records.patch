@@ -1,0 +1,111 @@
+--- a/LOG.md
++++ b/LOG.md
+@@ -1570,3 +1570,66 @@
+ - Non-author verifier `r85-verifier.md`: all 5 mechanical claims confirmed firsthand, ZERO disagreements — mechanism lines, matched-pair `diff 81,92d80` (sole dup), unique vs masked output asymmetry, `harbor-repro` (dup `harbor` voiced as `ambiguous place entity` while holder refs stay silent — asymmetry in one run), baseline pin `596f70e` 1,368/1,368 bytes + 133/133 raw tuples (28/105) exact. Cosmetic: report elides literal `VIOLATION: ` prefix.
+ - Sealed reviewer `r85-sealed-reviewer.md` (no claim knowledge): blinded run produced only the duplicate-id violation on masked; honest divergence — first repair (dedup) mechanically right but diagnostically wrong target; under single-pass trust the injected break SURVIVES. Mask changed stopping point, not first action. Operative danger CONFIRMED.
+ - Sol `r85-axis-adjudicator.md` independently re-ran matched pair and mechanism lines, replayed all 133 fixtures (28/105, stderr empty), confirmed checker sha at pin vs worktree and r56 old-case replay. **ADMIT — calibration improved (bounded)**; depth/coverage unchanged; none harmed. The defect moves calibration (what a short violation list guarantees), not coverage/depth. No checker fix required now (r83 precedent); repair candidate (voiced `ambiguous entity` at L215/L223 + latch-marker redesign) is the natural r86 needing its own 133-tuple replay. Limits: seal self-attested; danger conditional on single-pass trust; `from_holder` symmetry unexercised; probes are constructed telemetry outside admitted corpus.
++
++## Round 86 — interactive reconciliation; BLOCKED before required native batch
++
++- Correction superseding the two preceding “Fleet round 1” sections: launch
++  counter 1 was not a completed-round count and did not reset craft history.
++  Highest inspected landed craft round remains r85, closure
++  `fc2c3cc3c00e76a6c70b7b788db2b816af821ea7`, verified as an ancestor of
++  baseline `5eb9451baff217c19d5786405f9b2aa500b7c1b7`. This attempt is r86.
++  Historical bytes and errata remain intact. The earlier nine-seat records
++  are interrupted, noncompliant evidence, not this attempt's required batch.
++- WWKD plan saved before work at `.ufo/rounds/r86/wwkd-plan.md`. Calibration
++  continues the r85 pending repair; depth/coverage/calibration remain tied
++  at unmeasured, not invented numeric minima. No new retirement or saturation.
++- Exact 32-scope plan validated by
++  `node scripts/ufo-swarm-wave.mjs plan --spec
++  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/rounds/r86/wave-spec.json
++  --route-families` from the UFO checkout: exit 0, 32 rendered members.
++  Full output: `.ufo/rounds/r86/wave-plan.stdout.json`; process metadata:
++  `wave-validation.json`. The pure canonical renderer produced
++  `undispatched-payload.json`; no registry was persisted and no task batch ran.
++- Required bindings are missing, not merely unprobed: existing executor /
++  scribe use `@m_mid` / `@m_fast`, not content `@m_composer`; reviewer /
++  critic / scout use `@m_mid` / `@m_strong` / `@m_fast`, not `@m_grok`;
++  connector uses `@m_mid`, not `@m_antigravity` with `@m_zfl` fallback.
++  Global alias names exist, but canonical taxonomy bindings do not satisfy
++  the dispatch. Inspected agent frontmatter offers no alternate alias-bound
++  surface. No routing/config/source/package remediation, pins or substitutions.
++- Diagnostic command `python3 .ufo/rounds/r86/diagnose.py` exited 0.
++  Full verdict lines, retained in `diagnostic.stdout.json`:
++  `INHERITED_CANDIDATE_DIAGNOSTIC: PASS`;
++  `ROUND_ADMISSION: BLOCKED required_alias_bindings_missing; native_task_batches=0; no_native_judgment`;
++  `PROTOCOL_GATE_CONFORMANCE: COULD_NOT_EVALUATE missing_SKILL_registry_and_selftest`.
++  `diagnostic.process.json` preserves the exit and stderr. All 133 inherited
++  raw CLI tuples match (28 exit 0, 105 exit 1); all 705 inherited corpus JSON
++  paths/bytes match. Five original probes and seven scratch scenarios ran;
++  every checker stderr was empty. Both holder directions, no restart after
++  ambiguity, earlier invalidity, both fields, per-item reset, prefix findings
++  and dangling controls were exercised. These are diagnostic observations of
++  the inherited dirty checker, not admission, outside review or native judgment.
++- Legacy `check_bible.py` remains the actual domain command surface.
++  Root SKILL.md / AGENTS.md / MINT.md and corpus/QUALITY.md / lessons were
++  absent in explicit sweeps. No conformant registered gate or self-test is
++  claimed. The inherited guide's missing measure_holder_disclosure.py command
++  and pending runtime claims remain unadmitted debt, not working instructions.
++- Canonical `ufo-mission-result.mjs create` exited 0; `result.json` records
++  32 planned scope entries as aborted/not_started, zero workers completed,
++  round_validity unsound, loop_stop blocked, mission_goal incomplete.
++  This is an evidence envelope, not a task receipt or a native verdict.
++- Per-axis outcome for this blocked attempt: depth unchanged; coverage
++  unchanged; calibration unchanged. No integrated axis move and no verified
++  round-count increment. Learning: expansion unchanged; quality unchanged;
++  discernment unchanged. No external admit/reject spot-check or promotion.
++- Inherited implementation, guide, reports and unrelated province/checklist
++  edits remain dirty and unadmitted. `inherited-snapshot.json` records hashes
++  and sizes of 19 inherited paths; `inherited-checker.patch` preserves the
++  checker delta as evidence only. Only owned r86 reconciliation/evidence and
++  appended corrections may be committed. No push and no shared-ledger writes.
++- Receipt blocker: the exact registered mission has no authoritative taskKey,
++  promptSha256/configSha256 expected bag, resultPath or receiptPath, including
++  its nested dispatch/provenance metadata. Do not fabricate those bindings.
++  No applicable receipt was minted or validated; Sighting stays uncompleted.
++  Authorized integrator must supply route and receipt bindings, then dispatch
++  a fresh-session continuation. Do not run an in-session r87 loop.
+--- a/SCORECARD.md
++++ b/SCORECARD.md
+@@ -12,3 +12,39 @@
+ planned: r85 (devin, ADMIT) — masked-defect calibration: holder dup silently latches can_check_chain=False hiding a real break; sealed-confirmed operative danger. r86 candidate: voiced ambiguous-entity repair + latch marker, needs 133-tuple replay.
+ planned: another independently falsifiable move only; source-text truth remains unverified, and the r15 blue mark must not be called a Blue Seal trace. Round-4 duplicate-name detector remains rejected; no active name check or alias coverage.
+ retired: hard-failing exact duplicate names without sourced uniqueness; round 4 showed calibration harm. Scores unchanged because the round was rejected.
++
++## Round 86 — blocked interactive attempt; prior counter declaration corrected
++
++This section supersedes the preceding “Fleet round 1” counter interpretation,
++not its historical bytes. The launch counter did not reset completed craft
++history. Highest inspected landed round is r85 (`fc2c3cc`); this attempt is
++r86, not a newly completed round. Total historically verified rounds was not
++re-audited; increment from this attempt is zero.
++
++| LIVE axis | r86 verdict | Evidence and limit |
++|---|---|---|
++| depth | unchanged | No integrated lore or comparison-rule change. |
++| coverage | unchanged | No admitted surface or fictional-input change. |
++| calibration | unchanged | Candidate disclosure is mechanically observed but unadmitted: required alias bindings prevent the validated 32-scope batch. No improved verdict from an undispatched plan. |
++
++Scores remain unmeasured. Calibration is the existing falsifiability
++tie-break among unmeasured axes, not a numerical lowest-axis claim.
++
++Measurement: `python3 .ufo/rounds/r86/diagnose.py`, exit 0, against baseline
++`5eb9451baff217c19d5786405f9b2aa500b7c1b7` and dirty inherited checker SHA-256
++`e8f241623aa84eb1dce192a03c9e70b8f4ba386344f0b22a99ba1ac0d4942132`.
++Full evidence: `.ufo/rounds/r86/diagnostic.stdout.json` and
++`diagnostic.process.json`: 133/133 inherited CLI tuples unchanged; 705/705
++inherited JSON files byte-identical; five original probes and seven scratch
++cases. These counts are preservation/diagnostic measurements, not expertise
++scores or proof of a sound round. Gate registry/self-test remain unavailable.
++
++Learning trends: expansion unchanged; quality unchanged; discernment
++unchanged. No outside admit/reject spot-check or promotion is claimed.
++
++planned: authorized routing owner supplies content `@m_composer`, audit /
++review / scout / critic `@m_grok`, connector `@m_antigravity` with `@m_zfl`
++fallback on the canonical taxonomy surface. Then a fresh L1 session may
++continue the pending r86 candidate after reconciling this blocked attempt.
++Receipt authority and missing lane contracts are separate named debt.
++retired: none added; no saturation or arbitrary round-count stop.

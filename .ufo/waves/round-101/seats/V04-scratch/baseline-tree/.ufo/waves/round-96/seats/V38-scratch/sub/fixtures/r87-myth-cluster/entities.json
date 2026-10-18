@@ -1,0 +1,86 @@
+[
+  {
+    "id": "hara",
+    "kind": "character",
+    "name": "Hara",
+    "first_appearance": "gate-witness",
+    "claims": [
+      {
+        "statement": "Hara identifies herself as the keeper of the Mother-Tide Gate in her witness slip.",
+        "source_id": "gate-witness"
+      }
+    ]
+  },
+  {
+    "id": "sen",
+    "kind": "character",
+    "name": "Sen",
+    "first_appearance": "dune-register",
+    "claims": [
+      {
+        "statement": "Sen identifies himself as a recorder at Ash-Dune Sanctuary in the register.",
+        "source_id": "dune-register"
+      }
+    ]
+  },
+  {
+    "id": "mother-tide-gate",
+    "kind": "place",
+    "name": "Mother-Tide Gate",
+    "first_appearance": "lowwater-hymn",
+    "claims": [
+      {
+        "statement": "The Low-Water Hymn places the shell ring and bowl at the Mother-Tide Gate.",
+        "source_id": "lowwater-hymn"
+      }
+    ]
+  },
+  {
+    "id": "ash-dune-sanctuary",
+    "kind": "place",
+    "name": "Ash-Dune Sanctuary",
+    "first_appearance": "dune-register",
+    "claims": [
+      {
+        "statement": "Sen's register names Ash-Dune Sanctuary as a record-keeping place.",
+        "source_id": "dune-register"
+      }
+    ]
+  },
+  {
+    "id": "shellweavers",
+    "kind": "faction",
+    "name": "Shellweavers",
+    "first_appearance": "shell-charter",
+    "claims": [
+      {
+        "statement": "The charter names the Shellweavers as one signatory faction.",
+        "source_id": "shell-charter"
+      }
+    ]
+  },
+  {
+    "id": "reedwardens",
+    "kind": "faction",
+    "name": "Reedwardens",
+    "first_appearance": "shell-charter",
+    "claims": [
+      {
+        "statement": "The charter names the Reedwardens as one signatory faction.",
+        "source_id": "shell-charter"
+      }
+    ]
+  },
+  {
+    "id": "reed-bell",
+    "kind": "item",
+    "name": "Reed Bell",
+    "first_appearance": "tide-bell-tally",
+    "claims": [
+      {
+        "statement": "The watch tally records a reed bell being carried for the low-water signal.",
+        "source_id": "tide-bell-tally"
+      }
+    ]
+  }
+]

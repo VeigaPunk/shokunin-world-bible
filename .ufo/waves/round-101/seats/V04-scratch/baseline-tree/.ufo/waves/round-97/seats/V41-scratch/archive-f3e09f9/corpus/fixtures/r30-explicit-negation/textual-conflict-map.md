@@ -1,0 +1,5 @@
+# Textual conflict map
+
+The sole clause in `courier-log-excerpt.md` explicitly negates the carrying proposition represented by the selected `relations[0].type=carries` row. This is a textual conflict between this fictional excerpt and that row, conditional on the editorial alignment of “Mira” and “the blue seal” with the row's entity IDs and on the same-proposition/occasion alignment. The map does not assert that the relation is canonically false, resolve the record, or claim that Mira never carried the seal; it makes no global claim beyond the clause's scope.
+
+Contrast: r28's “I, Mira, carried the blue seal” is positive lexical support for the selected row, conditional on editorial ID alignment. r29's “The blue seal was near Mira” is proximity only and does not entail carrying, so that relation is unsupported by that excerpt—not textually denied. The r30 negation is an explicit textual conflict, not mere absence of support. These are manual readings of constructed text; the checker ignores Markdown and its clean result does not validate them or establish source truth/canon.

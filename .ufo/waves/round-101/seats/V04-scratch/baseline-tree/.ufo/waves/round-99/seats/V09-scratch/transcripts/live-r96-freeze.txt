@@ -1,0 +1,6 @@
+$ /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r96-crossing-response
+cwd=/home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+RESULT PASS
+EXIT=0

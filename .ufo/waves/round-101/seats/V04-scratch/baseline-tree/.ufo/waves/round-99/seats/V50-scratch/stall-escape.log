@@ -1,0 +1,10 @@
+STALL-ESCAPE START 22:27:13 reason=40-try TIMEOUT with contract/tool stable since 22:08 and S1 report still absent
+escape 1 22:27:13 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+escape 2 22:27:33 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+escape 3 22:27:53 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+escape 4 22:28:13 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+escape 5 22:28:33 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+escape 6 22:28:53 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+escape 7 22:29:13 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+escape 8 22:29:33 producers=[S3-fixture-author.md S4-fixture-docs.md ]  missing:r99-gate-blind-spot-table.md missing:r99-lapse-scope-note.md
+ESCAPE-EXHAUSTED 22:29:53

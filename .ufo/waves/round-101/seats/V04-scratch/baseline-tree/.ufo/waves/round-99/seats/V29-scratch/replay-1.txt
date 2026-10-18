@@ -1,0 +1,45 @@
+=== byte identity vs working-tree r98 and vs 4265df5 blob ===
+README.md: vs_wt_r98=True vs_4265df5=True r99=5829 r98=5829 blob=5829 sha=32efc78f70e6de4f
+claim-excerpt-map.md: vs_wt_r98=True vs_4265df5=True r99=15028 r98=15028 blob=15028 sha=c1099d0ee9eece24
+contradictions.json: vs_wt_r98=True vs_4265df5=True r99=3 r98=3 blob=3 sha=37517e5f3dc66819
+entities.json: vs_wt_r98=True vs_4265df5=True r99=1793 r98=1793 blob=1793 sha=db2d8e5d3866009b
+fictional-excerpts.md: vs_wt_r98=False vs_4265df5=False r99=5114 r98=4187 blob=4187 sha=fefebaf93d148dbe
+inspiration-note.md: vs_wt_r98=True vs_4265df5=True r99=1956 r98=1956 blob=1956 sha=58f5390e5928ebad
+relations.json: vs_wt_r98=True vs_4265df5=True r99=139 r98=139 blob=139 sha=c279254bc7de0636
+source-excerpt.md: vs_wt_r98=True vs_4265df5=True r99=640 r98=640 blob=640 sha=b5edc2fd3c2e3d4f
+sources.json: vs_wt_r98=False vs_4265df5=False r99=3293 r98=2725 blob=2725 sha=8c215b38dc024009
+timeline.json: vs_wt_r98=False vs_4265df5=False r99=2998 r98=2552 blob=2552 sha=2cdb9fda5baae1a4
+r98 e=6 claims=6 rel=1 ev=7 src=7 contra=0
+r99 e=6 claims=6 rel=1 ev=8 src=8 contra=0
+entities equal True
+relations equal True
+contradictions equal True
+sources[:-1]==r98 True
+timeline[:-1]==r98 True
+excerpt byte-prefix True
+excerpt starts with r98+newline True
+excerpt lens 4187 5114 delta 927
+new source {
+  "id": "clerk-lapse-note",
+  "title": "Maren's Chalk Stair Lapse Note",
+  "kind": "fictional first-person note",
+  "reliability_note": "Newly authored fictional note; the clerk reports that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation; it is not evidence of a breach finding, a continuing duty, a winner between the accounts, or an external historical fact."
+}
+new event {
+  "id": "clerk-lapse-recorded",
+  "tick": 15,
+  "entity_id": "clerk-maren",
+  "place_id": "chalk-stair",
+  "depends_on": [
+    "clerk-filing-open"
+  ],
+  "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry.",
+  "source_id": "clerk-lapse-note"
+}
+ticks [9, 9, 10, 11, 12, 13, 14, 15]
+ids ['aru-ninth-bell', 'evin-ninth-bell', 'paired-crossing-decision', 'aftermath-missing-evin', 'response-evin-salt-court', 'acknowledgment-aru-records', 'clerk-filing-open', 'clerk-lapse-recorded']
+edges 7 strictly_earlier True
+event entity ids subset True
+event source ids subset True
+dup events []
+dup sources []

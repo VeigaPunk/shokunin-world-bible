@@ -1,0 +1,40 @@
+{
+  "case_id": "clean_r99",
+  "expected_exit": 0,
+  "expected_ids": [],
+  "mode": "verify",
+  "names_file": null,
+  "runs": [
+    {
+      "repeat": 1,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 0,
+      "finding_ids": [],
+      "results": [
+        "RESULT PASS"
+      ],
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    },
+    {
+      "repeat": 2,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 0,
+      "finding_ids": [],
+      "results": [
+        "RESULT PASS"
+      ],
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    }
+  ],
+  "ids_stable": true,
+  "output_byte_stable": true,
+  "ok": true
+}

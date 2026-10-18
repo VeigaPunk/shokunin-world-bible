@@ -1,0 +1,811 @@
+{
+ "seat": "JCAL1",
+ "round": 88,
+ "role": "Calibration judge #1 (census + delta classification)",
+ "judged_tree": {
+  "delivered_commit": "2ea9ef13a928475b13fd578740ea521bed4bd649",
+  "baseline_commit": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+  "tree_clean_at_judgement": true
+ },
+ "method": {
+  "baseline_regeneration": "git archive dfd1fbc3711f2b28597d74444819aca91fe6bc31 | tar -x -C /tmp/jcal1/base",
+  "census_command_template": "python3 corpus/fixtures/check_bible.py corpus/fixtures/<dir>   (cwd = repo root; PYTHONDONTWRITEBYTECODE=1)",
+  "baseline_census": "python3 /tmp/jcal1/census.py BASELINE /tmp/jcal1/base /tmp/jcal1/base-tuples.json",
+  "delivered_census": "python3 /tmp/jcal1/census.py DELIVERED /home/vgpnk/Projects/shokunin/lore-shokunin /tmp/jcal1/delivered-tuples.json",
+  "python": "3.14.7",
+  "scratch_only": "/tmp/jcal1 (no tracked-file writes; repo writes limited to followup/JCAL1*)"
+ },
+ "baseline_reproduction_check": {
+  "compared_against": ".ufo/waves/round-88/patches/B1-tuples.json",
+  "entries": 145,
+  "field_mismatches": 0,
+  "verdict": "my regenerated dfd1fbc baseline reproduces B1-tuples.json exactly (exit, stdout_sha256, violation_count)"
+ },
+ "census": {
+  "baseline": {
+   "dirs": 145,
+   "exit_counts": {
+    "0": 30,
+    "1": 115
+   },
+   "total_violation_lines": 331,
+   "stderr_nonempty": 0
+  },
+  "delivered": {
+   "dirs": 149,
+   "exit_counts": {
+    "0": 31,
+    "1": 118
+   },
+   "total_violation_lines": 367,
+   "stderr_nonempty": 0
+  },
+  "determinism": "delivered census rerun byte-identical (149/149 tuples equal)"
+ },
+ "delta": {
+  "changed_count": 9,
+  "new_count": 4,
+  "gone_count": 0,
+  "unchanged_tuple_count": 136,
+  "exit_flips": [],
+  "stderr_changes": [],
+  "violation_line_delta": {
+   "from_changed_9": 21,
+   "from_new_4": 15,
+   "total": 36
+  },
+  "changed_paths": [
+   "corpus/fixtures/r61-independent-empty",
+   "corpus/fixtures/r61-independent-unavailable",
+   "corpus/fixtures/r87-masked-break-from-ambiguous",
+   "corpus/fixtures/r87-masked-break-to-ambiguous",
+   "corpus/fixtures/r87-probe-entry-shape",
+   "corpus/fixtures/r87-probe-multi-invalid",
+   "corpus/fixtures/r87-probe-nonitem-kinds",
+   "corpus/fixtures/r87-probe-record-and-chain",
+   "corpus/fixtures/r87-probe-shape-ambiguous"
+  ],
+  "new_paths": [
+   "corpus/fixtures/r88-m3-maya-cluster",
+   "corpus/fixtures/r88-mixed-stop",
+   "corpus/fixtures/r88-nonholder-stop",
+   "corpus/fixtures/r88-shape-ambiguous-armed"
+  ]
+ },
+ "classification_totals": {
+  "added_disclosure": 26,
+  "reworded_disclosure": 13,
+  "field_finding": 1,
+  "count_footer": 9,
+  "OTHER": 0,
+  "removed_legacy_disclosure_lines": 19,
+  "removed_count_footer_lines": 9
+ },
+ "invariant_checks": {
+  "disclosure_grammar": "every disclosure line matches: \"VIOLATION: <rec>: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: <cause> at <origin>\"",
+  "delivered_disclosure_lines": 47,
+  "delivered_disclosure_lines_matching_grammar": 47,
+  "legacy_grammar_survivors": 0,
+  "stop_groups": 17,
+  "groups_with_single_origin_and_single_cause": 17,
+  "at_or_after_stop_coverage_violations": 0,
+  "qualifier_present_on_all": true
+ },
+ "pre_r87": {
+  "pre_r87_baseline_commit": "28706dc",
+  "pre_r87_fixture_dirs": 133,
+  "changed_paths_that_are_pre_r87": [
+   "corpus/fixtures/r61-independent-empty",
+   "corpus/fixtures/r61-independent-unavailable"
+  ],
+  "both_pure_additions": true,
+  "detail": {
+   "corpus/fixtures/r61-independent-empty": {
+    "added": [
+     "1 disclosure",
+     "1 count footer 17->18"
+    ],
+    "removed": [
+     "1 count footer 17"
+    ],
+    "net": "+1 disclosure only"
+   },
+   "corpus/fixtures/r61-independent-unavailable": {
+    "added": [
+     "1 disclosure",
+     "1 count footer 6->7"
+    ],
+    "removed": [
+     "1 count footer 6"
+    ],
+    "net": "+1 disclosure only"
+   }
+  }
+ },
+ "per_fixture": {
+  "corpus/fixtures/r61-independent-empty": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "ff1bdabab22f9c7de2c1b79c556e79b93ec30df7faf2f597a8e0a04602437427",
+    "violation_count": 17
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "b3811fdc3589870f374ce1353f094a6390b723903df5026e44e85387290ff9c1",
+    "violation_count": 18
+   },
+   "violation_count": "17 -> 18",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "18 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "17 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [
+    "entities[0].provenance[0]"
+   ],
+   "reworded_disclosure_records": [],
+   "removed_legacy_records": [],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r61-independent-unavailable": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "85e70ef66addaf7cdf24e26ee7452440b3aa1e3c6ce6abb497d79f1b1ed88c83",
+    "violation_count": 6
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "02a2876c9ddde1352523a5935b86986b272976e154dee1da14d8adb995c9cfa7",
+    "violation_count": 7
+   },
+   "violation_count": "6 -> 7",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source table unavailable at entities[0].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "7 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "6 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [
+    "entities[0].provenance[0]"
+   ],
+   "reworded_disclosure_records": [],
+   "removed_legacy_records": [],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r87-masked-break-from-ambiguous": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "f6ec78fbeac0c25826048e1c36a1dafb0d40a667979f4333451e84d8174ccb4a",
+    "violation_count": 6
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "9e16c896c5607187d5c6efe210d6584f57be07795b8ee145674170fd98d89f78",
+    "violation_count": 5
+   },
+   "violation_count": "6 -> 5",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "5 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "6 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [],
+   "reworded_disclosure_records": [
+    "entities[3].provenance[0]",
+    "entities[3].provenance[1]",
+    "entities[3].provenance[2]"
+   ],
+   "removed_legacy_records": [
+    "entities[3].provenance[0]",
+    "entities[3].provenance[1]",
+    "entities[3].provenance[2]"
+   ],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r87-masked-break-to-ambiguous": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "bded9b133e16d975903ddb5cc945643097a740cd3fae85f41f03410cc073d72b",
+    "violation_count": 6
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "56574cad390804e520f85792c712a1ad97fcc8e6b49a5609ed920f7fde361f67",
+    "violation_count": 5
+   },
+   "violation_count": "6 -> 5",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "5 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "6 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [],
+   "reworded_disclosure_records": [
+    "entities[3].provenance[0]",
+    "entities[3].provenance[1]",
+    "entities[3].provenance[2]"
+   ],
+   "removed_legacy_records": [
+    "entities[3].provenance[0]",
+    "entities[3].provenance[1]",
+    "entities[3].provenance[2]"
+   ],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r87-probe-entry-shape": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "feda8bf3c78e9bcc861dfe0554f7d592558470359c6dfd3d60ab852cb83a6b18",
+    "violation_count": 2
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "4bef15d82f23759d1958e9b5db47205fbbfde081df64ef870a1eb93ce08399e9",
+    "violation_count": 8
+   },
+   "violation_count": "2 -> 8",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[5].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[6].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: duplicate item id 'rope' at entities[6].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "8 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "2 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [
+    "entities[5].provenance[0]",
+    "entities[5].provenance[1]",
+    "entities[5].provenance[2]",
+    "entities[6].provenance[0]",
+    "entities[6].provenance[1]",
+    "entities[6].provenance[2]"
+   ],
+   "reworded_disclosure_records": [],
+   "removed_legacy_records": [],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r87-probe-multi-invalid": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "143ae255bbe6cccb94e695ea5f4bd769ca38f0177bd05036bd4b75859affd551",
+    "violation_count": 6
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "e73bb6fe4e2390aa41922ea87ceca832b486b306619d8a5f1f8ec5d3838bc8e3",
+    "violation_count": 5
+   },
+   "violation_count": "6 -> 5",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "5 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "6 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [],
+   "reworded_disclosure_records": [
+    "entities[5].provenance[1]",
+    "entities[5].provenance[2]"
+   ],
+   "removed_legacy_records": [
+    "entities[5].provenance[1]",
+    "entities[5].provenance[2]"
+   ],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r87-probe-nonitem-kinds": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "b92e54ab9dee4ec1dc087386110d456d0cab11e805f9319311b8535f33f173a0",
+    "violation_count": 8
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "723424c6d25621d5fc3fe6a31e13c99d65362ef3f99eeb08d65a9712dd5414f1",
+    "violation_count": 9
+   },
+   "violation_count": "8 -> 9",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[0].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[0].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: provenance attached to a non-item entity at entities[5].provenance",
+     "class": "added disclosure"
+    },
+    {
+     "text": "9 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'vault' first occurred at entities[5].provenance[1]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "8 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [
+    "entities[0].provenance[0]",
+    "entities[5].provenance[0]"
+   ],
+   "reworded_disclosure_records": [
+    "entities[5].provenance[1]",
+    "entities[5].provenance[2]"
+   ],
+   "removed_legacy_records": [
+    "entities[5].provenance[1]",
+    "entities[5].provenance[2]"
+   ],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r87-probe-record-and-chain": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "8bd72d76ad40558e7869c6814780b55011e8910c975db058f82490cebea734d2",
+    "violation_count": 34
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "0394cd33aa81cec788582938bff8b95d30043a17813fa5e0870de8c3e56631e1",
+    "violation_count": 46
+   },
+   "violation_count": "34 -> 46",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[4]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[5]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[6]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[9]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[3].provenance[10]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (expected object) at entities[3].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup', from_holder 'dup' at entities[5].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "46 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[0]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[6].provenance[1]",
+     "class": "removed legacy disclosure"
+    },
+    {
+     "text": "34 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [
+    "entities[3].provenance[0]",
+    "entities[3].provenance[10]",
+    "entities[3].provenance[1]",
+    "entities[3].provenance[2]",
+    "entities[3].provenance[3]",
+    "entities[3].provenance[4]",
+    "entities[3].provenance[5]",
+    "entities[3].provenance[6]",
+    "entities[3].provenance[7]",
+    "entities[3].provenance[8]",
+    "entities[3].provenance[9]",
+    "entities[4].provenance[7]",
+    "entities[4].provenance[8]",
+    "entities[6].provenance[0]"
+   ],
+   "reworded_disclosure_records": [
+    "entities[5].provenance[0]",
+    "entities[5].provenance[1]",
+    "entities[6].provenance[1]"
+   ],
+   "removed_legacy_records": [
+    "entities[5].provenance[0]",
+    "entities[5].provenance[1]",
+    "entities[6].provenance[1]"
+   ],
+   "OTHER_lines": []
+  },
+  "corpus/fixtures/r87-probe-shape-ambiguous": {
+   "before": {
+    "exit": 1,
+    "stdout_sha256": "979ff05fffd6f10f097163bcb3b9d6d2c5b0a2e6565ea687c66202cf6ee0c6c5",
+    "violation_count": 2
+   },
+   "after": {
+    "exit": 1,
+    "stderr_empty": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "a73e70a141c85489d9e2d54c800acf25472ff65c51909c428f69c98938df545c",
+    "violation_count": 5
+   },
+   "violation_count": "2 -> 5",
+   "added_lines": [
+    {
+     "text": "VIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'",
+     "class": "field finding"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]",
+     "class": "added disclosure"
+    },
+    {
+     "text": "5 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "removed_lines": [
+    {
+     "text": "2 violation(s); no canon changed",
+     "class": "count footer"
+    }
+   ],
+   "added_disclosure_records": [
+    "entities[5].provenance[0]",
+    "entities[5].provenance[1]"
+   ],
+   "reworded_disclosure_records": [],
+   "removed_legacy_records": [],
+   "OTHER_lines": []
+  }
+ },
+ "first_cause_taxonomy": {
+  "malformed record (expected object)": 11,
+  "duplicate item id 'rope'": 6,
+  "provenance attached to a non-item entity": 5,
+  "unknown source 'ghost-source'": 4,
+  "ambiguous holder identity from_holder 'dup'": 3,
+  "ambiguous holder identity to_holder 'dup'": 3,
+  "unknown source 'f1-mixed-missing-source'": 3,
+  "unknown source 'f1-nonholder-missing-source'": 3,
+  "ambiguous holder identity from_holder 'vault'": 2,
+  "ambiguous holder identity to_holder 'dup', from_holder 'dup'": 2,
+  "malformed record (unexpected field set); ambiguous holder identity to_holder 'dup'": 2,
+  "malformed record (unexpected field set); ambiguous holder identity to_holder 'f1-shape-dup'": 2,
+  "source table unavailable": 1
+ },
+ "verdict": {
+  "calibration": "improved",
+  "evidence_summary": [
+   "C1(i) armed: r87-probe-shape-ambiguous before=2 findings/0 disclosures (tail neither reported nor disclosed); after=5 findings incl 2 disclosures naming first stop \"ambiguous holder identity to_holder 'dup' at entities[5].provenance[0]\". New durable fixture r88-shape-ambiguous-armed shows the same arm with a combined same-record cause summary.",
+   "C1(ii) over-attribution removed: r87-probe-multi-invalid disclosure for provenance[1]/[2] previously named the ambiguity; now every record at/after the first stop names the actual first cause (unknown source at provenance[0]); r88-mixed-stop pins the case where a later to_holder ambiguity must NOT become the named cause.",
+   "C1(iii) non-holder causes now disclose: r88-nonholder-stop (unknown source), r87-probe-nonitem-kinds (non-item entity), r61-independent-empty/unavailable (non-item provenance / source table unavailable) all gain disclosures.",
+   "Grammar/qualifier uniform: 47/47 disclosure lines match the exact grammar incl. \"(input-structural finding, not sourced-canon)\"; 0 legacy survivors.",
+   "Coverage invariant: 0 violations of \"every provenance record at/after ANY stop within its entity carries a disclosure naming the actual first cause\" across 17 stop groups.",
+   "Tuple preservation: 136/145 baseline tuples byte-identical; 0 exit flips; 0 stderr changes.",
+   "Delta enumerable: every one of the 49 added and 28 removed lines classifies into {added disclosure, reworded disclosure, field finding, count footer}; 0 OTHER."
+  ],
+  "residual_debt": [
+   "Six reachable first-cause branches of the new code have no fixture pinning them (invalid tick / invalid from_holder / invalid to_holder / dangling to_holder / dangling from_holder / invalid source_id). The grammar is uniform and the stop semantics verified, but the cause *content* is only pinned for the causes the 149 fixtures exercise.",
+   "Two first-cause branches are unreachable for the first-stop purpose (record-level \"source table unavailable\" at :293; the \"malformed record\" fallback at :299) \u2014 harmless, but the code carries paths no input can select.",
+   "One new field-level line appears on a shape-invalid record (r87-probe-shape-ambiguous: entities[5].provenance[0].to_holder: ambiguous entity dup). Intended by the arm-from-shape-invalid design, but it is a new finding class on a record that previously produced only a shape error.",
+   "The two knowledge docs that specify the disclosure contract are stale against the delivered checker (see doc_contract_drift)."
+  ],
+  "unprovable_but_better": [],
+  "harmed": [],
+  "named_debt": [
+   "One new field-level line appears on a shape-invalid record (r87-probe-shape-ambiguous: entities[5].provenance[0].to_holder) \u2014 intended by the arm-from-shape-invalid design, but it is a new finding class on a record that previously produced only a shape error; worth an explicit wording/README note if the boundary doc claims field findings are suppressed on shape-invalid records.",
+   "r87-probe-record-and-chain emits container-level origins (\"entities[3].provenance\", no index) alongside record-level origins (\"entities[4].provenance[7]\"); both are semantically correct but the origin grammar has two shapes."
+  ]
+ },
+ "new_fixtures": {
+  "corpus/fixtures/r88-m3-maya-cluster": {
+   "exit": 0,
+   "violation_count": 0,
+   "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n"
+  },
+  "corpus/fixtures/r88-mixed-stop": {
+   "exit": 1,
+   "violation_count": 6,
+   "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[0].source_id: unknown in-world source 'f1-mixed-missing-source'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].to_holder: ambiguous entity 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\n6 violation(s); no canon changed\n"
+  },
+  "corpus/fixtures/r88-nonholder-stop": {
+   "exit": 1,
+   "violation_count": 4,
+   "stdout": "VIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'f1-nonholder-missing-source'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\n4 violation(s); no canon changed\n"
+  },
+  "corpus/fixtures/r88-shape-ambiguous-armed": {
+   "exit": 1,
+   "violation_count": 5,
+   "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'f1-shape-dup' at entities[4].provenance[0]\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'f1-shape-dup' at entities[4].provenance[0]\n5 violation(s); no canon changed\n"
+  }
+ },
+ "first_cause_branch_coverage": {
+  "note": "delivered checker first-cause branches (corpus/fixtures/check_bible.py:183-303) vs causes actually observed across all 149 fixtures",
+  "observed_distinct_causes": 13,
+  "observed_total_disclosure_lines": 47,
+  "reachable_but_unexercised": [
+   "malformed record (invalid tick)",
+   "malformed record (invalid from_holder)",
+   "malformed record (invalid to_holder)",
+   "dangling holder to_holder <id>",
+   "dangling holder from_holder <id>",
+   "malformed record (invalid source_id)"
+  ],
+  "unreachable_for_first_stop": [
+   "record-level 'source table unavailable' (check_bible.py:293) \u2014 container gate already sets first_stop when sources_available is false",
+   "fallback 'malformed record' (check_bible.py:299) \u2014 record_stop_cause is always set whenever valid becomes False"
+  ],
+  "evidence": "grep of all 149 delivered stdout streams: 0 occurrences of each unexercised cause string"
+ },
+ "doc_contract_drift": {
+  "finding": "the two knowledge docs that specify the provenance-disclosure contract were NOT updated by 2ea9ef1 and now contradict the delivered checker",
+  "files": {
+   "corpus/knowledge/holder-assessment-boundary.md": [
+    "line 70: states the delivered disclosure text as \"...unassessed because ambiguous holder identity {field} {id!r} first occurred at {origin_label}\" \u2014 delivered grammar is \"...remain unassessed (input-structural finding, not sourced-canon); first stop: <cause> at <origin>\"",
+    "lines 63-68 (contract item 2): \"Exactly one item-level notice per item ... unassessed at this and all later records because holder identity is ambiguous\" \u2014 that notice is no longer emitted anywhere (0 legacy survivors in the delivered census)",
+    "decision-table row \"Dangling holder\": \"No ambiguous entity line or unassessed notice is owed\" \u2014 a dangling holder now arms the stop (check_bible.py:258,270)",
+    "decision-table row \"Ambiguity after an earlier invalid record\": says the per-record disclosure names the ambiguity as cause even when an earlier invalidity latched first \u2014 that over-attribution is exactly what C1(ii) removed",
+    "doc header still says \"verified-at: RUNTIME REPLAYED on the delivered tree at 2b48ca7\""
+   ],
+   "corpus/knowledge/r87-provenance-chain-decision-table.md": [
+    "row 14: \"First ambiguous-holder record emits exactly one item-level notice\" \u2014 notice removed",
+    "row 15: old disclosure grammar quoted as the C1 after-state",
+    "row 27: quotes the removed item-level notice",
+    "row 32: \"the holder stop is never armed, and the tail is neither reported nor disclosed ... unchanged by C1\" \u2014 now false (r87-probe-shape-ambiguous is armed; 5 findings)",
+    "row 33: \"six findings\" for r87-probe-multi-invalid \u2014 delivered is five",
+    "row 35: \"per-record disclosures at [1] and [2]\" for r87-probe-nonitem-kinds \u2014 delivered is [0],[1],[2]",
+    "rows 12/13/15/26-28: code anchors (:226-230 etc.) predate the +59/-20 line shift in check_bible.py"
+   ]
+  },
+  "severity": "documentation-only; the delivered checker behaviour is correct and the drift is recorded as named debt, not as a calibration harm"
+ }
+}

@@ -1,0 +1,174 @@
+{
+  "artifact": "Q1-r92-debt",
+  "seat": "Q1",
+  "wave": "round-92",
+  "baseline_head": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+  "judged_tree": {
+    "head": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+    "tracked_worktree_diff": "clean",
+    "staged_diff": "clean",
+    "preexisting_untracked": [".ufo/waves/poll_wait.sh", ".ufo/waves/round-92/"]
+  },
+  "scope": "Targeted audit of r91 debts and r92 claims for boundary-document re-derivation, Spence map rows, support-check terminal status, first C9 watch re-check, and fixtures-README path convention. Statuses below describe the delivered frozen tree; patch-only verification is recorded separately and does not close a ledger row.",
+  "dependency_poll": {
+    "interval_seconds": 60,
+    "deadline_seconds": 1200,
+    "last_poll_elapsed_seconds": 1140,
+    "runner_status": "timed_out",
+    "runner_exit_code": -1,
+    "terminal_receipt_emitted": false,
+    "last_poll_present": ["M1.md", "M2.md", "X1.md", "X2.md"],
+    "last_poll_absent": ["D1.md", "D2.md", "T1.md", "R1.md", "README-note.md"],
+    "post_timeout_snapshot": {
+      "present": ["M1.md", "M2.md", "X1.md", "X2.md"],
+      "absent": ["D1.md", "D2.md", "T1.md", "R1.md", "README-note.md"]
+    },
+    "detail": "The background runner was killed at its 1200-second limit while sleeping after the 1140-second check; the final filesystem snapshot confirmed the same missing dependencies. No duplicate poll was started."
+  },
+  "candidate_artifacts": [
+    {
+      "path": ".ufo/waves/round-92/patches/D2-boundary-doc.md",
+      "sha256": "55495d1002baa2776abf93c8bd0df26bd39493ba8cbe4b2dddac77aaf6c8d428",
+      "git_apply_check": "pass",
+      "disposition": "final patch text only; hash changed during audit from an earlier sample; no D1/D2/T1/R1 reports or delivered candidate certification"
+    },
+    {
+      "path": ".ufo/waves/round-92/patches/M1-spence-rows.patch",
+      "sha256": "74ecdcdcc175f726c1afa9676c5d027d990b2aeb429320f752acec703360fd9a",
+      "git_apply_check": "pass",
+      "disposition": "candidate-only; scratch-composed map/checker receipt passes, not integrated"
+    },
+    {
+      "path": ".ufo/waves/round-92/patches/M2-contract.patch",
+      "sha256": "5291b14ed323066f9e51db28dafc3cf3bce1b37e0107f02ad6bc9270a0e35ce9",
+      "git_apply_check": "pass",
+      "disposition": "candidate-only; scratch end-to-end positive and failure paths pass, not integrated"
+    },
+    {
+      "path": ".ufo/waves/round-92/patches/K1-tools-readme.patch",
+      "sha256": "b4d7bd61723450472153153598991166dfec485c9a63be03e0c034b147d31eb2",
+      "git_apply_check": "pass",
+      "disposition": "updates corpus/tools/README.md only; does not satisfy the fixtures-README path-note claim"
+    },
+    {
+      "path": ".ufo/waves/round-92/patches/X1-recheck.patch",
+      "sha256": "246a376fe4c11da386c9a2617fc97ae74f2732d95a273740d10607bce0fd8e20",
+      "git_apply_check": "pass",
+      "disposition": "candidate watch check-log; not integrated"
+    },
+    {
+      "path": ".ufo/waves/round-92/patches/X2-note.patch",
+      "sha256": "1c991b01e9ec8b575746f804490002f8ca24ba1d9546c761ba147f7727fff1c7",
+      "git_apply_check": "pass",
+      "disposition": "watch-file note only; does not name the five fixtures or update corpus/fixtures/README.md"
+    }
+  ],
+  "ledger": [
+    {
+      "id": "Q91-001",
+      "title": "Boundary decision-table stale tick row contradicts the delivered checker",
+      "delivered_status": "open",
+      "candidate_status": "unverified; patch-only",
+      "evidence": ["The frozen boundary document contains both the superseded holder-qualified tick row and the corrected unqualified row.", "The D2 boundary patch passes git apply --check but is not integrated; D1/D2/T1/R1 reports are absent and no certifier implementation is present."]
+    },
+    {
+      "id": "Q91-002",
+      "title": "Boundary reconstruction residue and instruction-surface defects",
+      "delivered_status": "open",
+      "candidate_status": "unverified; patch-only",
+      "evidence": ["The delivered document remains 549 lines with two H1 headings, one superseded pending tick statement, one r91 reconstruction banner, and two instruction-sheet cruft markers.", "The e97613c source is 630 lines and SHA-256 a4b1b331ba96ff5d57200517cfe1d9e4c8f6030b4fd9ec2e46f38e7fbb4b3fd2; the delivered file is not byte-equal.", "No materialized final boundary-document candidate, T1 certification, or R1 review receipt arrived by the bounded wait."]
+    },
+    {
+      "id": "DEP-H1",
+      "title": "Boundary document is not independently certified after anchor-based re-derivation",
+      "delivered_status": "open",
+      "candidate_status": "unverified; patch-only",
+      "evidence": ["B3-certify-spec.md is a specification, not an executable certifier; tools/certify_boundary_doc.py is absent.", "E2 contains proposed header wording but explicitly disclaims certification; the D2 document patch alone is not a certification receipt."]
+    },
+    {
+      "id": "DEP-D2b/R8-R9",
+      "title": "R8 inseparable-element and R9 per-claim manual-receipt governance not delivered",
+      "delivered_status": "open",
+      "candidate_status": "wording proposal only",
+      "evidence": ["E1-edges.md and E2-wording.md are proposed copy-ready text; the tracked decision table remains unchanged.", "Q91-004's patch-space verification-command debt also remains because corpus/knowledge/r88-sourced-inspiration-decision-table.md was not edited."]
+    },
+    {
+      "id": "Q91-003",
+      "title": "Fixtures README lacks Round 91 index; Round 92 note also absent",
+      "delivered_status": "open",
+      "candidate_status": "no README-note report/patch",
+      "evidence": ["The fixtures README has no Round 91 or Round 92 heading; last round section is Round 90.", "No README-note.md was present at the final snapshot."]
+    },
+    {
+      "id": "Q91-004",
+      "title": "Canonical decision-table verification commands inspect wave patches instead of delivered sections",
+      "delivered_status": "open",
+      "candidate_status": "no decision-table edit",
+      "evidence": ["The tracked R9 appendix still reads .ufo/waves/round-91/patches/D2-edges.patch; the current decision table has no delivered R8/R9 text replacement."]
+    },
+    {
+      "id": "Q91-005",
+      "title": "Support-check terminal-status contract deviations",
+      "delivered_status": "open",
+      "candidate_status": "verified on scratch, not integrated",
+      "evidence": ["The current corpus/tools/README.md still names missing-inventory exit 2 and absent RESULT FAIL/RESULT ERROR summaries.", "M2-contract.patch plus M1-spence-rows.patch and K1-tools-readme.patch pass scratch replay: missing inventory exits 1 with RESULT FAIL; missing cluster/map exit 2 with RESULT ERROR; positive r87/r88/r89 receipts retain expected outcomes."]
+    },
+    {
+      "id": "COV-D3",
+      "title": "Spence S1/S2 editorial comparison rows for r88-m3 map",
+      "delivered_status": "open",
+      "candidate_status": "verified on scratch, not integrated",
+      "evidence": ["M1-spence-rows.patch passes git apply --check; its composed map receipt is JSON-FACTS 10/10, EDITORIAL-ROWS 2/2, TOTAL-ROWS 12/12, DISTINCT-ANCHORS 8/8, RESULT PASS, exit 0.", "The live r88-m3 map/checker remains at the baseline 10 JSON rows, zero editorial rows, unreferenced source-excerpt warning, RESULT PASS WITH WARNINGS."]
+    },
+    {
+      "id": "Q91-009/Q89-020",
+      "title": "Carried Spence/reference-ledger and documentation residue outside the map-row patch",
+      "delivered_status": "open",
+      "candidate_status": "not addressed by M1 map patch",
+      "evidence": ["The M1 patch targets only the r88-m3 claim-excerpt-map; it does not move the separate Spence reference-ledger row into its table."]
+    },
+    {
+      "id": "CAL-D4",
+      "title": "Census stdout is path-sensitive for five missing-file fixtures",
+      "delivered_status": "open",
+      "candidate_status": "incomplete note proposal",
+      "evidence": ["X2-note.patch adds a generic note to corpus/knowledge/r91-c9-watch.md, not corpus/fixtures/README.md, and does not list the five paths.", "Required paths: r5-missing-file; r62-missing; r67-claim-source-unavailable-control; r67-claim-source-unavailable-empty; r67-claim-source-unavailable-whitespace."]
+    },
+    {
+      "id": "CAL-D5",
+      "title": "Round 91 fixtures README index row",
+      "delivered_status": "open",
+      "candidate_status": "no README-note report/patch",
+      "evidence": ["The fixtures README contains no Round 91 heading and no Round 92 heading at the final snapshot."]
+    },
+    {
+      "id": "Q92-C3-WATCH",
+      "title": "First periodic C9 check-log row is not in the delivered watch",
+      "delivered_status": "open",
+      "candidate_status": "verified probes and patch, not integrated",
+      "evidence": ["X1 reports a pinned ff9fd2aa check on 2026-10-17, the durable pair, and four C5 semantic probes with no drift alarm; our disposable replay reproduced P1-P4 target distinctions.", "X1-recheck.patch passes independently but the tracked watch has no Check log section at the frozen HEAD."]
+    },
+    {
+      "id": "Q92-C3-PATCH-CONFLICT",
+      "title": "X1 check-log and X2 note patches conflict when stacked",
+      "delivered_status": "open integration risk",
+      "candidate_status": "confirmed conflict",
+      "evidence": ["Both patches individually pass git apply --check against HEAD; applying either order in a disposable tree makes the second patch fail at corpus/knowledge/r91-c9-watch.md:41."]
+    },
+    {
+      "id": "Q91-009",
+      "title": "Other carried documentation rows remain outside this audit's delivered changes",
+      "delivered_status": "carried open",
+      "candidate_status": "not closed",
+      "evidence": ["The r91 ledger's Q89-007, Q89-015, Q89-016, Q89-019, Q89-031, and Q89-041 remain separate from the candidate patches reviewed here; no delivered-tree re-verification or fix is claimed."]
+    }
+  ],
+  "r93_proposal": {
+    "status": "conditional; unselected; no axis verdict or score assigned",
+    "selection_gate": "Wait for L1's actual r92 per-axis verdict words on the frozen integrated tree. Select one claim for the single weakest axis using the established harm/unchanged/unprovable/improved ordering; on a tie, prefer the axis with more open ledger rows. Do not infer from patch counts or this audit.",
+    "candidate_scopes": ["depth: complete and independently certify the boundary document from e97613c by content anchors, integrate R8/R9 decisions, and repair patch-space verification commands", "coverage: integrate M1/M2/K1, update the fixtures README with path convention and all five paths, then replay positive and negative support cases on the frozen tree", "calibration: integrate a combined C9 watch log/note without patch conflict, add the correctly scoped README entry, and replay the pinned probes and path-sensitive census"],
+    "decision": "No candidate is selected before L1's r92 per-axis verdicts arrive."
+  },
+  "write_boundary": [".ufo/waves/round-92/Q1.md", ".ufo/waves/round-92/patches/Q1-r92-debt.json", ".ufo/waves/round-92/patches/Q1-r93-proposal.md"],
+  "no_commit_or_push": true
+}

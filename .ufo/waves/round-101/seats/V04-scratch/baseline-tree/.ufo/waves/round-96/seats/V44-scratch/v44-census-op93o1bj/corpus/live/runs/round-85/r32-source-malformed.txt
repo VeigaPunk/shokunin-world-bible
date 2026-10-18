@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r32-source-malformed
+exit_code=1
+VIOLATION: sources[2].title: required nonempty str
+1 violation(s); no canon changed

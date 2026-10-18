@@ -1,0 +1,86 @@
+{
+  "revision": "4780cf088ab338f42b85739517aa237c968c4aea",
+  "dossier_sha256": "ddac48a1c7690ea31a1871847662fa74d29ef4ed7279338a0af64055524735ef",
+  "table_sha256": "80490adcc8144f0604a4f28ff6008bde037e9a32843530d4c537fa5a2338bb54",
+  "shell_blocks": [
+    {
+      "block": 1,
+      "head": "D2_DOSSIER=corpus/knowledge/r93-r8-worked-example.md python3 - <<'PY'",
+      "exit": 0,
+      "stdout": "gate_result: PASS\ncontrary_evidence: PASS\nseparability_rationale: PASS\nscope: PASS\nnext_action: PASS\nR8 record fields: 5/5\n",
+      "stderr": ""
+    },
+    {
+      "block": 2,
+      "head": "D2_DOSSIER=corpus/knowledge/r93-r8-worked-example.md python3 - <<'PY'",
+      "exit": 0,
+      "stdout": "R8 replay: PASS\ndelivered R8 appendix: VERIFIED\nrecord cells: 12/12\ncanonical record SHA-256: da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05\n",
+      "stderr": ""
+    }
+  ],
+  "digest_check": {
+    "record_rows_found": 13,
+    "missing_or_duplicated": [],
+    "independent_digest": "da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+    "literal_in_dossier": "da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+    "match": true,
+    "assignment_lines": [
+      "'da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05'"
+    ],
+    "payload_preview": "[\"Hypothetical proposed element: the entire element consisting of the same seven threshold names in the same order as *Kesh Hymn* lines 12–19; no live corpus element ID is supplied.\",\"The hypothetical"
+  },
+  "mutations": [
+    {
+      "case": "blank_gate_result",
+      "exit": 1,
+      "stdout": "R8 replay: FAIL\nfinding: R8_RECORD_DRIFT\n",
+      "stderr": ""
+    },
+    {
+      "case": "filler_owner",
+      "exit": 1,
+      "stdout": "R8 replay: FAIL\nfinding: R8_CELL_FILLER\n",
+      "stderr": ""
+    },
+    {
+      "case": "scope_contradiction",
+      "exit": 1,
+      "stdout": "R8 replay: FAIL\nfinding: R8_RECORD_DRIFT\n",
+      "stderr": ""
+    },
+    {
+      "case": "whitespace_only",
+      "exit": 0,
+      "stdout": "R8 replay: PASS\ndelivered R8 appendix: VERIFIED\nrecord cells: 12/12\ncanonical record SHA-256: da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05\n",
+      "stderr": ""
+    }
+  ],
+  "markers": {
+    "### Corrected illustrative R8 review record": 2,
+    "### Corrected replay": 1,
+    "## Illustrative R8 review record": 1,
+    "## Replay instructions": 1,
+    "## Record-to-decision crosswalk": 1,
+    "This dated correction supersedes": 1,
+    "use only this corrected record and replay below": 1,
+    "### R8 appendix": 4,
+    "### R9 appendix": 3
+  },
+  "python_payload_blocks": 2,
+  "appendix_slice_lines": 16,
+  "appendix_checks": {
+    "**Owner:** the lore integration editor records the two-part R2 gate result": true,
+    "**Trigger:** either R2 condition fails or remains unresolved, and the reviewer cannot separate": true,
+    "in the inspiration note and element map": true,
+    "withhold the **whole element from supported canon**": true,
+    "same seven threshold names in the same order as *Kesh Hymn* lines 12–19": true,
+    "creator denies using a source": true,
+    "no independently authored, supportable remainder survives removing that sequence": true,
+    "does not itself prove copying or source use": true
+  },
+  "r2_conjunct_phrases": {
+    "BOTH_creator_account": true,
+    "either_R2_condition_fails": true,
+    "both_R2_conditions_pass": true
+  }
+}

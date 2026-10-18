@@ -1,0 +1,84 @@
+{
+  "content_sha256": "3c922d20a01bbd3f7941ed64f5c8796a619699197ae89fb10fca317cf83abea6",
+  "counts": {
+    "dependency_edges": 5,
+    "entities": 5,
+    "events": 6,
+    "relations": 1,
+    "sources": 6
+  },
+  "events": {
+    "acknowledgment-aru-records": {
+      "depends_on": [
+        "response-evin-salt-court"
+      ],
+      "endpoint": {
+        "entity_id": "aru",
+        "place_id": "chalk-stair",
+        "tick": 13
+      }
+    },
+    "aftermath-missing-evin": {
+      "depends_on": [
+        "paired-crossing-decision"
+      ],
+      "endpoint": {
+        "entity_id": "aru",
+        "place_id": "chalk-stair",
+        "tick": 11
+      }
+    },
+    "aru-ninth-bell": {
+      "depends_on": [],
+      "endpoint": {
+        "entity_id": "aru",
+        "place_id": "quiet-rise",
+        "tick": 9
+      }
+    },
+    "evin-ninth-bell": {
+      "depends_on": [],
+      "endpoint": {
+        "entity_id": "evin",
+        "place_id": "salt-court",
+        "tick": 9
+      }
+    },
+    "paired-crossing-decision": {
+      "depends_on": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ],
+      "endpoint": {
+        "entity_id": "aru",
+        "place_id": "chalk-stair",
+        "tick": 10
+      }
+    },
+    "response-evin-salt-court": {
+      "depends_on": [
+        "aftermath-missing-evin"
+      ],
+      "endpoint": {
+        "entity_id": "evin",
+        "place_id": "salt-court",
+        "tick": 12
+      }
+    }
+  },
+  "files": {
+    "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+    "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "sources.json": "438fb513a62496c41179ead3ea2a55a69ff4ce1fd191c3a7ebccb10651a8dc73",
+    "timeline.json": "73063a863a68fc4feae073ce74cfa9e5fddb4f9cc4060d12b333d495a255895b"
+  },
+  "fixture": "corpus/fixtures/r97-crossing-acknowledgment",
+  "relations": [
+    [
+      "aru",
+      "evin",
+      "agreed_co_stewardship_for_this_crossing"
+    ]
+  ]
+}

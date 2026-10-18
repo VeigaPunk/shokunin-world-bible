@@ -1,0 +1,46 @@
+{
+  "case_id": "contract_pin_content_digest_bad",
+  "expected_exit": 2,
+  "expected_ids": [
+    "CONTRACT-INVALID"
+  ],
+  "mode": "verify",
+  "names_file": null,
+  "runs": [
+    {
+      "repeat": 1,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 2,
+      "finding_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "results": [
+        "RESULT ERROR"
+      ],
+      "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a sha256 content digest\nRESULT ERROR\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    },
+    {
+      "repeat": 2,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 2,
+      "finding_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "results": [
+        "RESULT ERROR"
+      ],
+      "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a sha256 content digest\nRESULT ERROR\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    }
+  ],
+  "ids_stable": true,
+  "output_byte_stable": true,
+  "ok": true
+}

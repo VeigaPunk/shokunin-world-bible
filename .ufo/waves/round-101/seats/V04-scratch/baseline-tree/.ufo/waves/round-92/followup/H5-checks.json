@@ -1,0 +1,61 @@
+{
+  "seat": "H5",
+  "wave": "round-92-followup",
+  "judged_tree": {"head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9", "clean": true},
+  "readme_section_fidelity": {
+    "section_equals_r2_candidate_minus_leading_blank": true,
+    "r88_m3_receipt": {"json_facts": "10/10", "editorial_rows": "2/2", "total_rows": "12/12", "distinct_anchors": "8/8", "result": "PASS", "exit": 0, "warn": false},
+    "r87_receipt": {"total_rows": "22/22", "result": "PASS", "exit": 0},
+    "contract_probes": {
+      "missing_inventory": {"exit": 1, "stdout": "RESULT FAIL"},
+      "two_inventories": {"exit": 1, "stdout": "RESULT FAIL"},
+      "map_path_missing": {"exit": 2, "stdout": "RESULT ERROR"},
+      "cluster_missing": {"exit": 2, "stdout": "RESULT ERROR"},
+      "uneven_table_row": {"exit": 2, "stdout": "RESULT ERROR"}
+    },
+    "argv_sensitive_fixtures": {"count": 5, "names": ["r5-missing-file", "r62-missing", "r67-claim-source-unavailable-control", "r67-claim-source-unavailable-empty", "r67-claim-source-unavailable-whitespace"], "matches_readme": true},
+    "b1_b2_tuples": {"rows": 166, "spelling": "corpus/fixtures/<name>"}
+  },
+  "boundary_doc": {
+    "path": "corpus/knowledge/holder-assessment-boundary.md",
+    "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "replay_receipts": "3/3",
+    "replay_cases": "14/14",
+    "gate_d": {"h1_count": 1, "duplicate_headings": 0, "instruction_markers": 0},
+    "defective_anchor_locations": [
+      {"doc_line": 330, "anchor": ":198-203", "expected": ":200-205 (item-level first-stop tests)"},
+      {"doc_lines": "545-556", "issue": "orphaned r89-era checker inventory fragment, dangling 'lines, sha256 e2bb9639...' lead"}
+    ],
+    "residue_doc_lines": ["3-9 (r90-era header)", "591-596 (duplicated continuation)", "610-619 (duplicated decision-table sentence)"],
+    "certification": {"certify_tool_present": false, "post_integration_t1_artifact": false, "t1_phase1_outcome": "FAIL", "commit_message_t1_numbers_are_baseline_control": true}
+  },
+  "decision_table_landing": {
+    "path": "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+    "doubled_label_line": 40,
+    "r9_gate_block_lines": "42-46 placed at end of R8 appendix, before '### R9 appendix' heading (E1 specified inside R9 appendix)",
+    "r8_worked_example_present": false,
+    "old_r9_worked_example_retained": "lines 79-86",
+    "evidence_cell_append_present": false
+  },
+  "tools_readme": {
+    "path": "corpus/tools/README.md",
+    "changed_by_r92": false,
+    "stale_named_debt_section": "lines 16-21 claim the S2 terminal-status deviations are live; contradicted by delivered support_check.py",
+    "k1_patch_landed": false
+  },
+  "debt_naming": {
+    "tools_readme": "named in wave artifacts (W2.md:132, Q1 ledger Q91-005/COV-D3); unlanded",
+    "boundary_doc_residue": "named at candidate stage (CB.md:244, C7.md:131-138); unlanded",
+    "decision_table_defects": "doubled label also named by the concurrent peer JDEP4 (D-JDEP4r92-2); placement / missing-R8-worked-example / missing-cell-append deviations measured by H5",
+    "round91_readme_closure": "named at CB.md:269; still absent (r91-c1-* fixtures have no README section)"
+  },
+  "peer_convergence": {
+    "JDEP1": "certifier ruling on the same committed tree: (b) FAIL (blocking) for the orphan r89 tail and doc:330 :198-203 (F1/F2/F3)",
+    "JDEP2": "same orphan fragment and stale spans",
+    "JDEP4": "doubled R8 label",
+    "K1_P3_H2": "tools/README unchanged and contradictory; fixtures README vs tools README",
+    "JDEP1_F6_H2": "no Round-91 README section; r91-c1-* absent from the fixtures README"
+  },
+  "poll": {"checks": [60, 120], "head_stable": true, "peer_artifacts_at_check1": 37, "peer_artifacts_at_check2": 42, "new_peer_artifacts": true},
+  "writes": [".ufo/waves/round-92/followup/H5.md", ".ufo/waves/round-92/followup/H5-checks.json"]
+}

@@ -1,0 +1,72 @@
+diff --git a/corpus/fixtures/check_bible.py b/corpus/fixtures/check_bible.py
+--- a/corpus/fixtures/check_bible.py
++++ b/corpus/fixtures/check_bible.py
+@@ -239,23 +239,23 @@
+             valid = True
+             record_holder_ambiguous = False
+             ambiguous_holder_references = []
+-            record_stop_cause = None
++            record_stop_causes = []
+             if type(tick) is not int or tick < 0:
+                 errors.append(f'{record_label}.tick: required nonnegative integer')
+                 valid = False
+-                record_stop_cause = 'malformed record (invalid tick)'
++                record_stop_causes.append('malformed record (invalid tick)')
+             if from_holder is not None and (not isinstance(from_holder, str) or not from_holder.strip()):
+                 errors.append(f'{record_label}.from_holder: required null or nonempty entity id')
+                 valid = False
+-                record_stop_cause = record_stop_cause or 'malformed record (invalid from_holder)'
++                record_stop_causes.append('malformed record (invalid from_holder)')
+             if not isinstance(to_holder, str) or not to_holder.strip():
+                 errors.append(f'{record_label}.to_holder: required nonempty entity id')
+                 valid = False
+-                record_stop_cause = record_stop_cause or 'malformed record (invalid to_holder)'
++                record_stop_causes.append('malformed record (invalid to_holder)')
+             elif entity_id_counts.get(to_holder, 0) == 0:
+                 errors.append(f'{record_label}.to_holder: dangling entity {to_holder!r}')
+                 valid = False
+-                record_stop_cause = record_stop_cause or f'dangling holder to_holder {to_holder!r}'
++                record_stop_causes.append(f'dangling holder to_holder {to_holder!r}')
+             elif entity_id_counts[to_holder] != 1:
+                 errors.append(f'{record_label}.to_holder: ambiguous entity {to_holder!r}')
+                 record_holder_ambiguous = True
+@@ -267,7 +267,7 @@
+                 elif entity_id_counts.get(from_holder, 0) == 0:
+                     errors.append(f'{record_label}.from_holder: dangling entity {from_holder!r}')
+                     valid = False
+-                    record_stop_cause = record_stop_cause or f'dangling holder from_holder {from_holder!r}'
++                    record_stop_causes.append(f'dangling holder from_holder {from_holder!r}')
+                 elif entity_id_counts[from_holder] != 1:
+                     errors.append(f'{record_label}.from_holder: ambiguous entity {from_holder!r}')
+                     record_holder_ambiguous = True
+@@ -278,25 +278,25 @@
+                     f'{field} {holder_id!r}'
+                     for field, holder_id in ambiguous_holder_references
+                 )
+-                record_stop_cause = record_stop_cause or f'ambiguous holder identity {cause}'
++                record_stop_causes.append(f'ambiguous holder identity {cause}')
+             if not isinstance(source_id, str) or not source_id.strip():
+                 errors.append(f'{record_label}.source_id: required nonempty source id')
+                 valid = False
+-                record_stop_cause = record_stop_cause or 'malformed record (invalid source_id)'
++                record_stop_causes.append('malformed record (invalid source_id)')
+             else:
+                 citation_status = source(source_id, record_label + '.source_id')
+                 if citation_status == 'unknown':
+                     valid = False
+-                    record_stop_cause = record_stop_cause or f'unknown source {source_id!r}'
++                    record_stop_causes.append(f'unknown source {source_id!r}')
+                 elif citation_status == 'unavailable':
+                     valid = False
+-                    record_stop_cause = record_stop_cause or 'source table unavailable'
++                    record_stop_causes.append('source table unavailable')
+                 elif citation_status == 'ambiguous':
+                     chain_has_ambiguous_source = True
+             if not valid:
+                 previous_holder = previous_tick = None
+                 if first_stop is None:
+-                    first_stop = (record_stop_cause or 'malformed record', record_label)
++                    first_stop = ('; '.join(record_stop_causes) or 'malformed record', record_label)
+                     if not disclosure_emitted:
+                         report_unassessed(record_label)
+                 continue

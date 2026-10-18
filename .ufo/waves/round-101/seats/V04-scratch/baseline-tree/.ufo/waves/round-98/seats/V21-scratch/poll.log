@@ -1,0 +1,23 @@
+try=1 ts=2026-10-17T20:28:33-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=f87ed42ad4d4 r96note=6db32ca24f5e note98=no fix98=yes toolsREADME=8678abc1abd5
+try=2 ts=2026-10-17T20:28:53-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=f87ed42ad4d4 r96note=6db32ca24f5e note98=no fix98=yes toolsREADME=8678abc1abd5
+try=3 ts=2026-10-17T20:29:13-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=f87ed42ad4d4 r96note=6db32ca24f5e note98=no fix98=yes toolsREADME=8678abc1abd5
+try=4 ts=2026-10-17T20:29:33-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=5 ts=2026-10-17T20:29:53-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=6 ts=2026-10-17T20:30:14-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=7 ts=2026-10-17T20:30:34-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=8 ts=2026-10-17T20:30:54-03:00 reports=0 [] dfp=b06275f3bbde dfc=27273be27d33 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=9 ts=2026-10-17T20:31:14-03:00 reports=1 [S3-fixture-author.md,] dfp=b06275f3bbde dfc=27273be27d33 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=10 ts=2026-10-17T20:31:34-03:00 reports=1 [S3-fixture-author.md,] dfp=1a01fd178f06 dfc=3a940a9f30d5 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=11 ts=2026-10-17T20:31:54-03:00 reports=1 [S3-fixture-author.md,] dfp=03d04365cf00 dfc=3a940a9f30d5 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=12 ts=2026-10-17T20:32:14-03:00 reports=2 [S3-fixture-author.md,S4-fixture-docs.md,] dfp=03d04365cf00 dfc=3a940a9f30d5 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=no fix98=yes toolsREADME=8678abc1abd5
+try=13 ts=2026-10-17T20:32:34-03:00 reports=2 [S3-fixture-author.md,S4-fixture-docs.md,] dfp=03d04365cf00 dfc=3a940a9f30d5 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=8678abc1abd5
+try=14 ts=2026-10-17T20:32:54-03:00 reports=2 [S3-fixture-author.md,S4-fixture-docs.md,] dfp=03d04365cf00 dfc=c435239d94da r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=8678abc1abd5
+try=15 ts=2026-10-17T20:33:14-03:00 reports=2 [S3-fixture-author.md,S4-fixture-docs.md,] dfp=03d04365cf00 dfc=c435239d94da r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=8678abc1abd5
+try=16 ts=2026-10-17T20:33:34-03:00 reports=2 [S3-fixture-author.md,S4-fixture-docs.md,] dfp=03d04365cf00 dfc=c435239d94da r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=8678abc1abd5
+try=17 ts=2026-10-17T20:33:54-03:00 reports=3 [S3-fixture-author.md,S4-fixture-docs.md,S5-knowledge-notes.md,] dfp=03d04365cf00 dfc=153ebc5b2092 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=cefd7452a859
+try=18 ts=2026-10-17T20:34:14-03:00 reports=3 [S3-fixture-author.md,S4-fixture-docs.md,S5-knowledge-notes.md,] dfp=03d04365cf00 dfc=153ebc5b2092 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=1d299c16bf9a
+try=19 ts=2026-10-17T20:34:34-03:00 reports=3 [S3-fixture-author.md,S4-fixture-docs.md,S5-knowledge-notes.md,] dfp=03d04365cf00 dfc=153ebc5b2092 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=1d299c16bf9a
+try=20 ts=2026-10-17T20:34:54-03:00 reports=4 [S2-tools-docs.md,S3-fixture-author.md,S4-fixture-docs.md,S5-knowledge-notes.md,] dfp=03d04365cf00 dfc=153ebc5b2092 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=1d299c16bf9a
+try=21 ts=2026-10-17T20:35:14-03:00 reports=4 [S2-tools-docs.md,S3-fixture-author.md,S4-fixture-docs.md,S5-knowledge-notes.md,] dfp=03d04365cf00 dfc=153ebc5b2092 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=1d299c16bf9a
+try=22 ts=2026-10-17T20:35:34-03:00 reports=5 [S1-freeze-hygiene.md,S2-tools-docs.md,S3-fixture-author.md,S4-fixture-docs.md,S5-knowledge-notes.md,] dfp=03d04365cf00 dfc=153ebc5b2092 r95note=8e9e1774c107 r96note=a9b51f8ccd78 note98=yes fix98=yes toolsREADME=1d299c16bf9a
+try=22 ts=2026-10-17T20:35:34-03:00 ALL-PRESENT

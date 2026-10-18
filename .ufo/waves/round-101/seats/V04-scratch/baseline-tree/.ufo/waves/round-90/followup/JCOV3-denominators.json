@@ -1,0 +1,972 @@
+{
+ "seat": "JCOV3",
+ "head": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+ "clusters": {
+  "r87": {
+   "raw_fact_count": 22,
+   "raw_kind_counts": {
+    "claim": 7,
+    "event": 4,
+    "first_appearance": 7,
+    "relation": 4
+   },
+   "map_row_count": 22,
+   "json_row_count": 14,
+   "nonjson_row_ids": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6",
+    "H7",
+    "H8"
+   ],
+   "unresolved_row_pointers": [],
+   "raw_facts_without_row_pointer": [
+    {
+     "pointer": "entities[2].first_appearance",
+     "kind": "first_appearance",
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[2].claims[0].source_id",
+     "kind": "claim",
+     "in_map_text": true
+    }
+   ],
+   "raw_facts": [
+    {
+     "pointer": "entities[0].first_appearance",
+     "kind": "first_appearance",
+     "value": "gate-witness",
+     "entity_id": "hara",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[0].claims[0].source_id",
+     "kind": "claim",
+     "value": "gate-witness",
+     "entity_id": "hara",
+     "statement": "Hara identifies herself as the keeper of the Mother-Tide Gate in her witness slip.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[1].first_appearance",
+     "kind": "first_appearance",
+     "value": "dune-register",
+     "entity_id": "sen",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[1].claims[0].source_id",
+     "kind": "claim",
+     "value": "dune-register",
+     "entity_id": "sen",
+     "statement": "Sen identifies himself as a recorder at Ash-Dune Sanctuary in the register.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[2].first_appearance",
+     "kind": "first_appearance",
+     "value": "lowwater-hymn",
+     "entity_id": "mother-tide-gate",
+     "row_pointer": false,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[2].claims[0].source_id",
+     "kind": "claim",
+     "value": "lowwater-hymn",
+     "entity_id": "mother-tide-gate",
+     "statement": "The Low-Water Hymn places the shell ring and bowl at the Mother-Tide Gate.",
+     "row_pointer": false,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[3].first_appearance",
+     "kind": "first_appearance",
+     "value": "dune-register",
+     "entity_id": "ash-dune-sanctuary",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[3].claims[0].source_id",
+     "kind": "claim",
+     "value": "dune-register",
+     "entity_id": "ash-dune-sanctuary",
+     "statement": "Sen's register names Ash-Dune Sanctuary as a record-keeping place.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[4].first_appearance",
+     "kind": "first_appearance",
+     "value": "shell-charter",
+     "entity_id": "shellweavers",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[4].claims[0].source_id",
+     "kind": "claim",
+     "value": "shell-charter",
+     "entity_id": "shellweavers",
+     "statement": "The charter names the Shellweavers as one signatory faction.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[5].first_appearance",
+     "kind": "first_appearance",
+     "value": "shell-charter",
+     "entity_id": "reedwardens",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[5].claims[0].source_id",
+     "kind": "claim",
+     "value": "shell-charter",
+     "entity_id": "reedwardens",
+     "statement": "The charter names the Reedwardens as one signatory faction.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[6].first_appearance",
+     "kind": "first_appearance",
+     "value": "tide-bell-tally",
+     "entity_id": "reed-bell",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[6].claims[0].source_id",
+     "kind": "claim",
+     "value": "tide-bell-tally",
+     "entity_id": "reed-bell",
+     "statement": "The watch tally records a reed bell being carried for the low-water signal.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "relations[0].source_id",
+     "kind": "relation",
+     "value": "shell-charter",
+     "fact": {
+      "from": "shellweavers",
+      "to": "reedwardens",
+      "type": "allied_with"
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "relations[1].source_id",
+     "kind": "relation",
+     "value": "shell-charter",
+     "fact": {
+      "from": "reedwardens",
+      "to": "shellweavers",
+      "type": "allied_with"
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "relations[2].source_id",
+     "kind": "relation",
+     "value": "shell-charter",
+     "fact": {
+      "from": "shellweavers",
+      "to": "reed-bell",
+      "type": "keeps_watch_with"
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "relations[3].source_id",
+     "kind": "relation",
+     "value": "dune-register",
+     "fact": {
+      "from": "sen",
+      "to": "ash-dune-sanctuary",
+      "type": "records_at"
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "timeline[0].source_id",
+     "kind": "event",
+     "value": "gate-witness",
+     "fact": {
+      "id": "first-lowwater-signal",
+      "tick": 1
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "timeline[1].source_id",
+     "kind": "event",
+     "value": "tide-bell-tally",
+     "fact": {
+      "id": "bell-tally-return",
+      "tick": 2
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "timeline[2].source_id",
+     "kind": "event",
+     "value": "gate-witness",
+     "fact": {
+      "id": "moon-basin-vow-gate-account",
+      "tick": 3
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "timeline[3].source_id",
+     "kind": "event",
+     "value": "dune-register",
+     "fact": {
+      "id": "moon-basin-vow-dune-account",
+      "tick": 3
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "E1",
+     "locator": "gate-witness-excerpt.md:7",
+     "path": "gate-witness-excerpt.md",
+     "span": [
+      7,
+      7
+     ],
+     "mode": "verbatim",
+     "anchor": "I am Hara, keeper of the Mother-Tide Gate",
+     "source_id": null,
+     "pointers": [
+      "entities[0].claims[0].statement",
+      "entities[0].claims[0].source_id",
+      "entities[0].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[0].claims[0].statement": "ok",
+      "entities[0].claims[0].source_id": "ok",
+      "entities[0].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "E2",
+     "locator": "dune-register-excerpt.md:7",
+     "path": "dune-register-excerpt.md",
+     "span": [
+      7,
+      7
+     ],
+     "mode": "verbatim",
+     "anchor": "I, Sen, serve as recorder at Ash-Dune Sanctuary",
+     "source_id": null,
+     "pointers": [
+      "entities[1].claims[0].statement",
+      "entities[1].claims[0].source_id",
+      "entities[1].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[1].claims[0].statement": "ok",
+      "entities[1].claims[0].source_id": "ok",
+      "entities[1].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "E3",
+     "locator": "dune-register-excerpt.md:8",
+     "path": "dune-register-excerpt.md",
+     "span": [
+      8,
+      8
+     ],
+     "mode": "verbatim",
+     "anchor": "Ash-Dune Sanctuary is a record-keeping place",
+     "source_id": null,
+     "pointers": [
+      "entities[3].claims[0].statement",
+      "entities[3].claims[0].source_id",
+      "entities[3].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[3].claims[0].statement": "ok",
+      "entities[3].claims[0].source_id": "ok",
+      "entities[3].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "E4",
+     "locator": "shell-charter-excerpt.md:9",
+     "path": "shell-charter-excerpt.md",
+     "span": [
+      9,
+      9
+     ],
+     "mode": "verbatim",
+     "anchor": "Shellweavers signed this charter as a signatory faction",
+     "source_id": null,
+     "pointers": [
+      "entities[4].claims[0].statement",
+      "entities[4].claims[0].source_id",
+      "entities[4].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[4].claims[0].statement": "ok",
+      "entities[4].claims[0].source_id": "ok",
+      "entities[4].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "E5",
+     "locator": "shell-charter-excerpt.md:10",
+     "path": "shell-charter-excerpt.md",
+     "span": [
+      10,
+      10
+     ],
+     "mode": "verbatim",
+     "anchor": "Reedwardens signed this charter as a signatory faction",
+     "source_id": null,
+     "pointers": [
+      "entities[5].claims[0].statement",
+      "entities[5].claims[0].source_id",
+      "entities[5].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[5].claims[0].statement": "ok",
+      "entities[5].claims[0].source_id": "ok",
+      "entities[5].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "E6",
+     "locator": "tide-bell-tally-excerpt.md:11",
+     "path": "tide-bell-tally-excerpt.md",
+     "span": [
+      11,
+      11
+     ],
+     "mode": "verbatim",
+     "anchor": "We carried the Reed Bell for the low-water signal",
+     "source_id": null,
+     "pointers": [
+      "entities[6].claims[0].statement",
+      "entities[6].claims[0].source_id",
+      "entities[6].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[6].claims[0].statement": "ok",
+      "entities[6].claims[0].source_id": "ok",
+      "entities[6].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "R1",
+     "locator": "shell-charter-excerpt.md:11",
+     "path": "shell-charter-excerpt.md",
+     "span": [
+      11,
+      11
+     ],
+     "mode": "verbatim",
+     "anchor": "By this charter, Shellweavers stand allied with Reedwardens",
+     "source_id": null,
+     "pointers": [
+      "relations[0].from",
+      "relations[0].to",
+      "relations[0].type",
+      "relations[0].source_id"
+     ],
+     "pointer_status": {
+      "relations[0].from": "ok",
+      "relations[0].to": "ok",
+      "relations[0].type": "ok",
+      "relations[0].source_id": "ok"
+     }
+    },
+    {
+     "id": "R2",
+     "locator": "shell-charter-excerpt.md:12",
+     "path": "shell-charter-excerpt.md",
+     "span": [
+      12,
+      12
+     ],
+     "mode": "verbatim",
+     "anchor": "By this charter, Reedwardens stand allied with Shellweavers",
+     "source_id": null,
+     "pointers": [
+      "relations[1].from",
+      "relations[1].to",
+      "relations[1].type",
+      "relations[1].source_id"
+     ],
+     "pointer_status": {
+      "relations[1].from": "ok",
+      "relations[1].to": "ok",
+      "relations[1].type": "ok",
+      "relations[1].source_id": "ok"
+     }
+    },
+    {
+     "id": "R3",
+     "locator": "shell-charter-excerpt.md:13",
+     "path": "shell-charter-excerpt.md",
+     "span": [
+      13,
+      13
+     ],
+     "mode": "verbatim",
+     "anchor": "Under this charter's pledge, Shellweavers keep watch with the Reed Bell",
+     "source_id": null,
+     "pointers": [
+      "relations[2].from",
+      "relations[2].to",
+      "relations[2].type",
+      "relations[2].source_id"
+     ],
+     "pointer_status": {
+      "relations[2].from": "ok",
+      "relations[2].to": "ok",
+      "relations[2].type": "ok",
+      "relations[2].source_id": "ok"
+     }
+    },
+    {
+     "id": "R4",
+     "locator": "dune-register-excerpt.md:9",
+     "path": "dune-register-excerpt.md",
+     "span": [
+      9,
+      9
+     ],
+     "mode": "verbatim",
+     "anchor": "At Ash-Dune Sanctuary, Sen kept the register",
+     "source_id": null,
+     "pointers": [
+      "relations[3].from",
+      "relations[3].to",
+      "relations[3].type",
+      "relations[3].source_id"
+     ],
+     "pointer_status": {
+      "relations[3].from": "ok",
+      "relations[3].to": "ok",
+      "relations[3].type": "ok",
+      "relations[3].source_id": "ok"
+     }
+    },
+    {
+     "id": "T1",
+     "locator": "gate-witness-excerpt.md:8",
+     "path": "gate-witness-excerpt.md",
+     "span": [
+      8,
+      8
+     ],
+     "mode": "verbatim",
+     "anchor": "I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow",
+     "source_id": null,
+     "pointers": [
+      "timeline[0].description",
+      "timeline[0].source_id"
+     ],
+     "pointer_status": {
+      "timeline[0].description": "ok",
+      "timeline[0].source_id": "ok"
+     }
+    },
+    {
+     "id": "T2",
+     "locator": "tide-bell-tally-excerpt.md:12",
+     "path": "tide-bell-tally-excerpt.md",
+     "span": [
+      12,
+      12
+     ],
+     "mode": "verbatim",
+     "anchor": "At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow",
+     "source_id": null,
+     "pointers": [
+      "timeline[1].description",
+      "timeline[1].source_id"
+     ],
+     "pointer_status": {
+      "timeline[1].description": "ok",
+      "timeline[1].source_id": "ok"
+     }
+    },
+    {
+     "id": "T3",
+     "locator": "gate-witness-excerpt.md:9",
+     "path": "gate-witness-excerpt.md",
+     "span": [
+      9,
+      9
+     ],
+     "mode": "verbatim",
+     "anchor": "I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell",
+     "source_id": null,
+     "pointers": [
+      "timeline[2].description",
+      "timeline[2].source_id"
+     ],
+     "pointer_status": {
+      "timeline[2].description": "ok",
+      "timeline[2].source_id": "ok"
+     }
+    },
+    {
+     "id": "T4",
+     "locator": "dune-register-excerpt.md:10",
+     "path": "dune-register-excerpt.md",
+     "span": [
+      10,
+      10
+     ],
+     "mode": "verbatim",
+     "anchor": "I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell",
+     "source_id": null,
+     "pointers": [
+      "timeline[3].description",
+      "timeline[3].source_id"
+     ],
+     "pointer_status": {
+      "timeline[3].description": "ok",
+      "timeline[3].source_id": "ok"
+     }
+    },
+    {
+     "id": "H1",
+     "locator": "lowwater-hymn-excerpt.md:5",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      5,
+      5
+     ],
+     "mode": "verbatim",
+     "anchor": "At low water",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    },
+    {
+     "id": "H2",
+     "locator": "lowwater-hymn-excerpt.md:5",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      5,
+      5
+     ],
+     "mode": "verbatim",
+     "anchor": "the shell ring",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    },
+    {
+     "id": "H3",
+     "locator": "lowwater-hymn-excerpt.md:5",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      5,
+      5
+     ],
+     "mode": "verbatim",
+     "anchor": "beside the bowl",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    },
+    {
+     "id": "H4",
+     "locator": "lowwater-hymn-excerpt.md:5",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      5,
+      5
+     ],
+     "mode": "verbatim",
+     "anchor": "at the Mother-Tide Gate",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    },
+    {
+     "id": "H5",
+     "locator": "lowwater-hymn-excerpt.md:6",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      6,
+      6
+     ],
+     "mode": "verbatim",
+     "anchor": "The bowl keeps no name",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    },
+    {
+     "id": "H6",
+     "locator": "lowwater-hymn-excerpt.md:6",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      6,
+      6
+     ],
+     "mode": "verbatim",
+     "anchor": "no voice owns the tide",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    },
+    {
+     "id": "H7",
+     "locator": "lowwater-hymn-excerpt.md:7",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      7,
+      7
+     ],
+     "mode": "verbatim",
+     "anchor": "pass the reed-bell hand to hand",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    },
+    {
+     "id": "H8",
+     "locator": "lowwater-hymn-excerpt.md:7",
+     "path": "lowwater-hymn-excerpt.md",
+     "span": [
+      7,
+      7
+     ],
+     "mode": "verbatim",
+     "anchor": "let the water return it",
+     "source_id": null,
+     "pointers": [],
+     "pointer_status": {}
+    }
+   ]
+  },
+  "r88-m3": {
+   "raw_fact_count": 10,
+   "raw_kind_counts": {
+    "claim": 4,
+    "event": 2,
+    "first_appearance": 4
+   },
+   "map_row_count": 10,
+   "json_row_count": 10,
+   "nonjson_row_ids": [],
+   "unresolved_row_pointers": [],
+   "raw_facts_without_row_pointer": [],
+   "raw_facts": [
+    {
+     "pointer": "entities[0].first_appearance",
+     "kind": "first_appearance",
+     "value": "paired-clock",
+     "entity_id": "aru",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[0].claims[0].source_id",
+     "kind": "claim",
+     "value": "paired-clock",
+     "entity_id": "aru",
+     "statement": "The register places Aru carrying the north lantern at Quiet Rise at tick 9.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[1].first_appearance",
+     "kind": "first_appearance",
+     "value": "paired-clock",
+     "entity_id": "evin",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[1].claims[0].source_id",
+     "kind": "claim",
+     "value": "paired-clock",
+     "entity_id": "evin",
+     "statement": "The register places Evin holding the south bell at Salt Court at tick 9.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[2].first_appearance",
+     "kind": "first_appearance",
+     "value": "paired-clock",
+     "entity_id": "quiet-rise",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[2].claims[0].source_id",
+     "kind": "claim",
+     "value": "paired-clock",
+     "entity_id": "quiet-rise",
+     "statement": "The register locates Aru's north-lantern entry at Quiet Rise.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[3].first_appearance",
+     "kind": "first_appearance",
+     "value": "paired-clock",
+     "entity_id": "salt-court",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "entities[3].claims[0].source_id",
+     "kind": "claim",
+     "value": "paired-clock",
+     "entity_id": "salt-court",
+     "statement": "The register locates Evin's south-bell entry at Salt Court.",
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "timeline[0].source_id",
+     "kind": "event",
+     "value": "paired-clock",
+     "fact": {
+      "id": "aru-ninth-bell",
+      "tick": 9
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    },
+    {
+     "pointer": "timeline[1].source_id",
+     "kind": "event",
+     "value": "paired-clock",
+     "fact": {
+      "id": "evin-ninth-bell",
+      "tick": 9
+     },
+     "row_pointer": true,
+     "in_map_text": true
+    }
+   ],
+   "rows": [
+    {
+     "id": "P1",
+     "locator": "fictional-excerpts.md:12",
+     "path": "fictional-excerpts.md",
+     "span": [
+      12,
+      12
+     ],
+     "mode": "verbatim",
+     "anchor": "Aru carried the north lantern at Quiet Rise",
+     "source_id": null,
+     "pointers": [
+      "entities[0].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[0].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "P2",
+     "locator": "fictional-excerpts.md:13",
+     "path": "fictional-excerpts.md",
+     "span": [
+      13,
+      13
+     ],
+     "mode": "verbatim",
+     "anchor": "Evin held the south bell at Salt Court",
+     "source_id": null,
+     "pointers": [
+      "entities[1].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[1].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "P3",
+     "locator": "fictional-excerpts.md:12",
+     "path": "fictional-excerpts.md",
+     "span": [
+      12,
+      12
+     ],
+     "mode": "verbatim",
+     "anchor": "Aru carried the north lantern at Quiet Rise",
+     "source_id": null,
+     "pointers": [
+      "entities[2].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[2].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "P4",
+     "locator": "fictional-excerpts.md:13",
+     "path": "fictional-excerpts.md",
+     "span": [
+      13,
+      13
+     ],
+     "mode": "verbatim",
+     "anchor": "Evin held the south bell at Salt Court",
+     "source_id": null,
+     "pointers": [
+      "entities[3].first_appearance"
+     ],
+     "pointer_status": {
+      "entities[3].first_appearance": "ok"
+     }
+    },
+    {
+     "id": "E1",
+     "locator": "fictional-excerpts.md:12",
+     "path": "fictional-excerpts.md",
+     "span": [
+      12,
+      12
+     ],
+     "mode": "verbatim",
+     "anchor": "Tick 9: Aru carried the north lantern at Quiet Rise.",
+     "source_id": null,
+     "pointers": [
+      "entities[0].claims[0]"
+     ],
+     "pointer_status": {
+      "entities[0].claims[0]": "ok"
+     }
+    },
+    {
+     "id": "E2",
+     "locator": "fictional-excerpts.md:13",
+     "path": "fictional-excerpts.md",
+     "span": [
+      13,
+      13
+     ],
+     "mode": "verbatim",
+     "anchor": "Tick 9: Evin held the south bell at Salt Court.",
+     "source_id": null,
+     "pointers": [
+      "entities[1].claims[0]"
+     ],
+     "pointer_status": {
+      "entities[1].claims[0]": "ok"
+     }
+    },
+    {
+     "id": "E3",
+     "locator": "fictional-excerpts.md:12",
+     "path": "fictional-excerpts.md",
+     "span": [
+      12,
+      12
+     ],
+     "mode": "verbatim",
+     "anchor": "north lantern at Quiet Rise",
+     "source_id": null,
+     "pointers": [
+      "entities[2].claims[0]"
+     ],
+     "pointer_status": {
+      "entities[2].claims[0]": "ok"
+     }
+    },
+    {
+     "id": "E4",
+     "locator": "fictional-excerpts.md:13",
+     "path": "fictional-excerpts.md",
+     "span": [
+      13,
+      13
+     ],
+     "mode": "verbatim",
+     "anchor": "south bell at Salt Court",
+     "source_id": null,
+     "pointers": [
+      "entities[3].claims[0]"
+     ],
+     "pointer_status": {
+      "entities[3].claims[0]": "ok"
+     }
+    },
+    {
+     "id": "T1",
+     "locator": "fictional-excerpts.md:12",
+     "path": "fictional-excerpts.md",
+     "span": [
+      12,
+      12
+     ],
+     "mode": "verbatim",
+     "anchor": "Tick 9: Aru carried the north lantern at Quiet Rise.",
+     "source_id": null,
+     "pointers": [
+      "timeline[0]"
+     ],
+     "pointer_status": {
+      "timeline[0]": "ok"
+     }
+    },
+    {
+     "id": "T2",
+     "locator": "fictional-excerpts.md:13",
+     "path": "fictional-excerpts.md",
+     "span": [
+      13,
+      13
+     ],
+     "mode": "verbatim",
+     "anchor": "Tick 9: Evin held the south bell at Salt Court.",
+     "source_id": null,
+     "pointers": [
+      "timeline[1]"
+     ],
+     "pointer_status": {
+      "timeline[1]": "ok"
+     }
+    }
+   ]
+  }
+ },
+ "receipts": {
+  "support_check_r87": [
+   "SOURCE-SUPPORT 22/22; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22",
+   "RESULT PASS"
+  ],
+  "support_check_r88": [
+   "SOURCE-SUPPORT 10/10; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 10/10",
+   "RESULT PASS"
+  ]
+ }
+}

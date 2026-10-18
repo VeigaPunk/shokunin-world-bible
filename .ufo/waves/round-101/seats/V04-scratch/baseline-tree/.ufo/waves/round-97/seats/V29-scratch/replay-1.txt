@@ -1,0 +1,38 @@
+== tool hashes ==
+2b0ba815  corpus/tools/map_obligations.py
+97b76bb8  corpus/tools/map-obligations-contract.json
+a3b57978  corpus/tools/dependency_freeze.py
+c65ac3bd  corpus/tools/dependency-freeze-contract.json
+ff9fd2aa  corpus/fixtures/check_bible.py
+55a5eb27  corpus/tools/support_check.py
+== file hashes r96 / r97 ==
+entities.json            r96=026af0bc r97=026af0bc
+relations.json           r96=c279254b r97=c279254b
+contradictions.json      r96=37517e5f r97=37517e5f
+timeline.json            r96=ea0225f9 r97=73063a86
+sources.json             r96=9f973f63 r97=438fb513
+inspiration-note.md      r96=58f5390e r97=58f5390e
+source-excerpt.md        r96=b5edc2fd r97=b5edc2fd
+fictional-excerpts.md    r96=06b11bec r97=8ba491cb
+README.md                r96=ff52ced4 r97=ff52ced4
+claim-excerpt-map.md     r96=e851f068 r97=e851f068
+== counts ==
+r97 counts e/r/ev/s/c: 5/1/6/6/0
+r96 counts e/r/ev/s/c: 5/1/5/5/0
+== byte-identity of five copies (r97 vs post-repair r96) ==
+entities.json            byte-identical=True
+relations.json           byte-identical=True
+contradictions.json      byte-identical=True
+inspiration-note.md      byte-identical=True
+source-excerpt.md        byte-identical=True
+== parsed prefix ==
+r97 timeline[:-1] == r96 timeline: True
+r97 sources[:-1] == r96 sources: True
+new timeline entry: {"id": "acknowledgment-aru-records", "tick": 13, "entity_id": "aru", "place_id": "chalk-stair", "depends_on": ["response-evin-salt-court"], "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.", "source_id": "aru-acknowledgment-note"}
+new sources entry: {"id": "aru-acknowledgment-note", "title": "Aru's Chalk Stair Acknowledgment Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of a resolution, a reconciliation, an accusation, a winner between the accounts, a continuing duty, or an external historical fact."}
+r97 contradictions: []
+== excerpts byte-prefix ==
+r96 excerpts is byte-prefix of r97: True
+sizes: r96=2588B r97=3410B delta=822B
+== census ==
+fixture dirs: 171

@@ -1,0 +1,136 @@
+=== BIND 22:32:46 ===
+585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2  corpus/fixtures/r94-paired-crossing/fictional-excerpts.md
+0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282  corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md
+06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3  corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c  corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de  corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d  corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984  corpus/fixtures/r99-window-lapse/entities.json
+c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9  corpus/fixtures/r99-window-lapse/relations.json
+8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15  corpus/fixtures/r99-window-lapse/sources.json
+2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069  corpus/fixtures/r99-window-lapse/timeline.json
+37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570  corpus/fixtures/r99-window-lapse/contradictions.json
+58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37  corpus/fixtures/r99-window-lapse/inspiration-note.md
+b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd  corpus/fixtures/r99-window-lapse/source-excerpt.md
+86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+
+=== Q1 V80 wc -c ===
+ 1116 corpus/fixtures/r94-paired-crossing/fictional-excerpts.md
+ 1845 corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md
+ 2588 corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+ 3410 corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+ 4187 corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+ 5114 corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+18260 total
+rc=0
+
+=== Q2 V80 cmp r98/r99 ===
+cmp_n_rc=0
+cmp_s_rc=1
+
+=== Q3 V80 startswith chain ===
+585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2  1116  r94
+0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282  1845  r95
+06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3  2588  r96
+8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c  3410  r97
+29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de  4187  r98
+fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d  5114  r99
+r94 ⊂ r95  startswith=True strict=True delta=729
+r95 ⊂ r96  startswith=True strict=True delta=743
+r96 ⊂ r97  startswith=True strict=True delta=822
+r97 ⊂ r98  startswith=True strict=True delta=777
+r98 ⊂ r99  startswith=True strict=True delta=927
+delta_head b'\n## Round 99 lapse note (2026-10-17)\n\nNe'
+
+=== Q4 V80 lapse counts ===
+bytes 5114 lines 76
+count '## Round 99 lapse note' = 1
+count 'clerk-lapse-note' = 1
+count 'Tick 15:' = 1
+lapse heading line 66
+headings after the lapse section: []
+file ends with newline: True
+trailing bytes: b' the matter stays open.\n'
+r94-r98 lapse counts:
+r94 lapse 0 clerk-lapse-note 0 Tick 15: 0 Round 99 0
+r95 lapse 0 clerk-lapse-note 0 Tick 15: 0 Round 99 0
+r96 lapse 0 clerk-lapse-note 0 Tick 15: 0 Round 99 0
+r97 lapse 0 clerk-lapse-note 0 Tick 15: 0 Round 99 0
+r98 lapse 0 clerk-lapse-note 0 Tick 15: 0 Round 99 0
+
+=== Q5 V47 five-file cmp ===
+cmp-rc0 contradictions.json
+r99 IDENTICAL-to-4265df5 contradictions.json
+r98-wt IDENTICAL-to-4265df5 contradictions.json
+cmp-rc0 entities.json
+r99 IDENTICAL-to-4265df5 entities.json
+r98-wt IDENTICAL-to-4265df5 entities.json
+cmp-rc0 inspiration-note.md
+r99 IDENTICAL-to-4265df5 inspiration-note.md
+r98-wt IDENTICAL-to-4265df5 inspiration-note.md
+cmp-rc0 relations.json
+r99 IDENTICAL-to-4265df5 relations.json
+r98-wt IDENTICAL-to-4265df5 relations.json
+cmp-rc0 source-excerpt.md
+r99 IDENTICAL-to-4265df5 source-excerpt.md
+r98-wt IDENTICAL-to-4265df5 source-excerpt.md
+
+=== Q6 V86 r98-blob map_obligations ===
+-- r98 blob --
+OBLIGATIONS raw=20 mapped=20
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22
+RESULT PASS
+EXIT:0
+
+=== Q7 V11 parity core ===
+PASS entities len==6 :: got 6 r98=6
+PASS entities parsed-equal :: ids98=['aru', 'evin', 'quiet-rise', 'salt-court', 'chalk-stair', 'clerk-maren'] ids99=['aru', 'evin', 'quiet-rise', 'salt-court', 'chalk-stair', 'clerk-maren']
+PASS relations parsed-equal :: [OrderedDict({'from': 'aru', 'to': 'evin', 'type': 'agreed_co_stewardship_for_this_crossing', 'source_id': 'crossing-minute'})]
+PASS timeline len==8 :: got 8 r98=7
+PASS timeline[:7] parsed-equal :: r98 len 7
+PASS sources len==8 :: got 8 r98=7
+PASS sources[:7] parsed-equal :: r98 len 7
+PASS contradictions parsed-equal ([]) :: []
+PASS no new entity id :: only_new=[]
+PASS only new source id is clerk-lapse-note :: 
+PASS only new timeline id is clerk-lapse-recorded :: 
+FAILS: 0
+
+=== Q8 V105 phrase + clause ===
+corpus/fixtures/r99-window-lapse/timeline.json:84:    "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry.",
+corpus/fixtures/r99-window-lapse/fictional-excerpts.md:73:> The matter stands as a historical open entry.
+corpus/fixtures/r99-window-lapse/fictional-excerpts.md:76:Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation, and it creates no new duty; the crossing-scoped agreement above is unchanged, and the matter stays open.
+grep_rc=0
+--- quotes lines 70-74 ---
+IN_QUOTES=False  'At the Chalk Stair at tick 15'
+IN_QUOTES=False  'the clerk records that'
+IN_QUOTES=False  'the crossing-window named in the original minute has closed'
+IN_QUOTES=False  'the agreement was unfulfilled'
+IN_QUOTES=False  'no claim was lodged'
+IN_QUOTES=False  'the matter stands as a historical open entry'
+--- scope line 76 ---
+IN_SCOPE=False  'At the Chalk Stair at tick 15'
+IN_SCOPE=False  'the clerk records that'
+IN_SCOPE=True  'the crossing-window named in the original minute has closed'
+IN_SCOPE=True  'the agreement was unfulfilled'
+IN_SCOPE=True  'no claim was lodged'
+IN_SCOPE=True  'the matter stands as a historical open entry'
+lapse_section_has_Chalk_Stair False
+lapse_section_has_chalk_stair_ci False
+
+=== Q9 V10 r98 check_bible (held in reserve, not in the 8 if V50 census covers it) ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT-R98=0
+
+=== Q10 V68 sibling logs ===
+c60b17c21a77182a5c1f0251e98b4ea42e563c3e
+2026-10-17 21:23:40 -0300
+round-15: declare GLM-1 claims O/D (handoff v2, uncertainty knowledge)
+kotodama_since=0
+c687a18dee4bc0f32c3d7e663b4667ca9bd1d15c
+2026-10-17 00:29:31 -0300
+game-dev-2d: r99-simplifier evidence + refresh pinned run_battery fixture bytecode
+g2d_since=0
+
+=== END 22:32:46 ===

@@ -1,0 +1,22 @@
+# Round 68 schema scout — required nonempty identifiers
+
+## Scope and result
+
+I inspected `.shokunin/lore/LOG.md` Round 68 declaration, `.shokunin/lore/corpus/fixtures/check_bible.py`, fixture README, and relevant dependency/schema fixtures. The checker is mostly consistent for identifier strings: required string fields in top-level rows get a shared nonempty/whitespace-only check, and several nested identifier fields have explicit equivalent checks. **Timeline `depends_on` entries are the notable inconsistency:** they are required to be strings, but not required to be nonempty or non-whitespace. An empty string therefore passes the structural type test and falls through to an “unknown event” membership finding, conflating malformed identifier input with a nonempty absent ID.
+
+## Concrete checker observations
+
+- `.shokunin/lore/corpus/fixtures/check_bible.py:25-30` declares required fields. At lines 71-73 every required `str` field is checked with `not row[field].strip()`, yielding `required nonempty <type>`. This uniformly covers such IDs as source/entity/relation/timeline/contradiction `id`, relation endpoints and `source_id`, entity `first_appearance`, timeline `entity_id` / `place_id` / `source_id`, and timeline `description` (a non-ID string). It also checks string-valued labels and names as nonempty, not just identifiers.
+- Nested identifier-like values mostly follow the same blank-string policy: contradiction sides’ `event_id` at lines 119-122; claim `statement` and `source_id` at 151; provenance `from_holder`, `to_holder`, `source_id` at 206-225 (`from_holder` uniquely permits `null`); provenance holder strings additionally get entity-membership checks.
+- Dependency contents differ. At lines 296-299, `depends_on` is only checked for members that are not strings. Lines 300-314 skip nonstrings, but for each string immediately check self/repetition and event-index membership; there is no `.strip()` or empty-ID guard. Thus `""` / whitespace strings can be treated as unknown event IDs, while valid nonempty unknown IDs use that same path. The declaration specifically flags this distinction as its hypothesis.
+- Conditional index behavior matters: `events` is built from valid timeline rows, and a dependency string with no indexed match produces `timeline[i].depends_on: unknown event ...` (line 310). This is an input-index membership diagnostic, not a claim about fictional-world absence.
+
+## Relevant fixture evidence
+
+- `.shokunin/lore/corpus/fixtures/r22-self-repeated/timeline.json` includes self/repeat and `null` dependency members; `.shokunin/lore/corpus/fixtures/r22-unknown-mixed/timeline.json` includes a nonempty `"missing"` plus `null`; `.shokunin/lore/corpus/fixtures/r22-multiple-invalid/timeline.json` exercises `null`, object, array, and valid dependency types; `.shokunin/lore/corpus/fixtures/r22-valid-order/timeline.json` provides a valid nonempty dependency. These show prior dependency-type/self/repeat/unknown/order coverage, but none of these inspected r22 fixtures supplies empty or whitespace string dependency controls.
+- `.shokunin/lore/corpus/fixtures/r67-claim-source-unavailable-empty/entities.json` and the corresponding `...-whitespace/entities.json` exercise empty and whitespace nested claim `source_id`; `.shokunin/lore/corpus/fixtures/README.md` Round 67 explains claim IDs are required nonempty even when source index is unavailable. This is consistent nested-ID precedent but a different field/path.
+- `.shokunin/lore/corpus/fixtures/r26-to-malformed/entities.json` has an empty entity `name` alongside duplicate entity ID; the shared required-string check is applicable to the empty name. `.shokunin/lore/corpus/fixtures/r32-source-malformed/sources.json` has an empty title alongside duplicate source ID. These are malformed-record examples, not isolated ID-whitespace controls.
+
+## Assessment / limits
+
+The checker establishes a clear general policy for required string fields and most nested identifier fields. The dependency list is a narrow but concrete exception: string type is enforced, nonemptiness is not. Matched empty, whitespace-only, and nonempty-unknown dependency cases would best test whether a field-local “required nonempty event id” message is independently useful while preserving existing unknown-ID behavior. I did not execute the checker, construct fixtures, edit implementation, or assess user impact. This map does not establish event existence outside supplied input, source-text support, fictional truth, canon, chronology, rights, or game mechanics.

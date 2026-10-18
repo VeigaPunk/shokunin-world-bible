@@ -1,0 +1,58 @@
+{
+  "seat": "F07",
+  "role": "anchor judge (legacy/anchor pin + bounded doc gate + bare-citation support inventory)",
+  "judged_revision": "4780cf088ab338f42b85739517aa237c968c4aea",
+  "pre_round": "87779a00f25bd1855ede479e490123843e5f056e",
+  "original_work": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "routing": "requested opencode-go/deepseek-v4.1-flash; this seat's dispatch is the only routing evidence; no backend serving identity is echoed or invented",
+  "hashes": {
+    "document": {"path": "corpus/knowledge/holder-assessment-boundary.md", "blob": "625148b6f444f0c7c7b0404646c232fca6149a3d", "sha256": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e", "lines": 648, "byte_identical_to_65838f8": true},
+    "delivered_checker": {"path": "corpus/fixtures/check_bible.py", "blob": "20c56dbb90d9f59ca4fb85971154c0774f5ce0d0", "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421", "lines": 428, "byte_identical_to_65838f8": true},
+    "baseline_checker_5eb9451": {"sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81", "lines": 330, "digest_matches_contract": true},
+    "tool": {"path": "corpus/tools/boundary_doc_check.py", "blob": "4daa9998023f247fef7ca07d7cf2723f95cab0be", "sha256": "ebb6a0843e67bfaa3118eda7fbf69bac124aca8f5b87cd0b9721b5e6346b0053", "lines": 792},
+    "contract": {"path": "corpus/tools/boundary-doc-contract.json", "sha256": "e89d2a76d3c8c5c4926c830f6576531d22cf9c18a370cf70ef2657eae1539871", "new_since_65838f8": true}
+  },
+  "commands": [
+    {"cmd": "python3 corpus/tools/boundary_doc_check.py", "exit": 0, "stdout_key": "CERTIFIED (bounded...); pinned inputs PASS; replay_receipts=3/3; replay_cases=14/14; anchors=2/2; h1_count=1; duplicate_headings=0; instruction_markers=0"},
+    {"cmd": "python3 corpus/tools/boundary_doc_check.py --self-test", "exit": 0, "stdout_key": "8/8 PASS; anchor_range_control exit=1 findings=['anchor_range'] anchors=1/2 legacy_anchor=check_bible.py:212-224@5eb9451... baseline_lines=330"},
+    {"cmd": "python3 corpus/tools/boundary_doc_check.py --doc <drifted copy>", "exit": 1, "stdout_key": "FINDING document_drift; CERTIFICATION FAIL"},
+    {"cmd": "read-only probe: imported tool, ran check_anchors on the real doc with the real contract", "exit": 0, "stdout_key": "anchors=2/2, failures=[]"},
+    {"cmd": "read-only probe: legacy mapping stripped (old 65838f8 routing), real doc + 428-line checker", "exit": 0, "stdout_key": "anchors=2/2, failures=[] - demonstrates the pre-repair check was vacuous across revisions"},
+    {"cmd": "read-only probe: routing-regression simulation on control inputs (mapping stripped)", "exit": 0, "stdout_key": "2/0 with findings [212-224 and 221-224 unresolved]; control expectation would fail -> control discriminates baseline routing"},
+    {"cmd": "read-only probe: control mutation matrix", "exit": 0, "stdout_key": "canonical pass=True; delivered_line_count=330 -> False; out_of_range_anchor=212-224 -> False; legacy_revision=HEAD -> legacy_revision_ok=False; legacy_line_count=428 -> False; anchor_resolved=2 -> False"},
+    {"cmd": "git diff --quiet 65838f8 -- <doc>, <checker>; cmp", "exit": 0, "stdout_key": "both byte-identical"},
+    {"cmd": "git status --porcelain", "exit": 0, "stdout_key": "?? .ufo/waves/round-93/deepseek/ only (this seat's own dir)"}
+  ],
+  "citation_census": {
+    "total_colon_refs": 127,
+    "checker_context": 105,
+    "checker_context_baseline_5eb9451": 17,
+    "checker_context_delivered": 88,
+    "other_file_context": 22,
+    "other_file_breakdown": {"corpus/fixtures/README.md": 7, "entities.json": 2, "reports/round-85/r85-author.md": 1, "r87-provenance-chain-decision-table.md": 12},
+    "full_form_machine_checked": 2,
+    "bare_checker_context_unmachine_checked": 103,
+    "matches_R16": true,
+    "matches_JDEP2_119_claim": false
+  },
+  "anchor_facts": {
+    "legacy_anchor": "check_bible.py:212-224",
+    "legacy_revision": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+    "legacy_content": "silent/dangling to_holder and from_holder branches (matches doc lines 78-80 scope)",
+    "delivered_212_224_content": "record-loop top + non-dict branch (different code)",
+    "control_inputs": "synthetic 220-line delivered checker + real digest-pinned 330-line baseline; control doc holds only the two anchor literals",
+    "control_independent_of_doc_pin": true,
+    "expected_detail_from_branch": true
+  },
+  "verdicts": {
+    "C1_depth_scoped_to_anchor_gate": "improved (bounded)",
+    "C2_coverage": "unprovable from this seat (not judged here)",
+    "C3_calibration": "unchanged/unprovable from this seat; no capability inflation found in the tool's self-description",
+    "axis_harmed": "none found within scope"
+  },
+  "limits": [
+    "Machine-checked anchor coverage is 2/127 refs; the other 103 bare checker refs and 22 file refs rely on the whole-document byte pin, not anchor-content checking",
+    "R16/JDEP2 are GLM preliminary same-lane reports = support only, not external non-author verification",
+    "This seat is a dispatched subagent; its verification is not external review and not an admission verdict (L1 owns admission)"
+  ]
+}

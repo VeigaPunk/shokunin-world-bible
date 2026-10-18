@@ -1,0 +1,13 @@
+[
+  {
+    "id": "aru",
+    "kind": "character",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "Aru carried the north lantern.",
+        "source_id": "paired-clock"
+      }
+    ]
+  }
+]

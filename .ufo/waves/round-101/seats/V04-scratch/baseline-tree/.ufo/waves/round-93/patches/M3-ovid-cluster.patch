@@ -1,0 +1,294 @@
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/README.md b/corpus/fixtures/r93-m3-ovid-cluster/README.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/README.md
+@@ -0,0 +1,21 @@
++# Round 93 M3 sourced-mythology cluster
++
++This newly authored fictional cluster concerns an offer roll and a separate close-of-shift note at the Moth-Slate Office. Its distinct external family is classical Roman epic, represented by Ovid's Philemon-and-Baucis episode in *Metamorphoses* VIII.611–724, as rendered in A. S. Kline's English translation (2000). The comparison is limited to a question about hospitality as an offer versus verified uptake; no named figure, scene, wording, sequence, or supernatural outcome is imported. The passage is `external-only / unverified inspiration`; it supplies no in-world claim or canon.
++
++`fictional-excerpts.md` contains the authored in-world records (`verbatim` in R9's delivery-mode sense). `claim-excerpt-map.md` maps every source-attributed in-world JSON fact, with modes and line spans. Its two rows for `parallel-summary.md` use R9 `summary` mode and support only M3's retelling, never Ovid's undelivered words. `inspiration-note.md` separates attribution, rights, and AI-training permission; `symbolism-clause-map.md` records the R8 materiality screen and affected element.
++
++Replay from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r93-m3-ovid-cluster
++python3 corpus/tools/support_check.py corpus/fixtures/r93-m3-ovid-cluster
++```
++
++## R10 comparison outcomes
++
++**Comparison basis:** the delivered baseline clusters `r87-myth-cluster` and `r88-m3-maya-cluster`; IDs are cluster-local, and names/ticks are comparison triggers rather than proof of identity. The incoming cluster's in-world entity IDs/names are `sava`/Sava, `moth-slate-office`/Moth-Slate Office, `orev`/Orev, `ivory-meal-chit`/Ivory Meal Chit, and `thren`/Thren. Its source IDs are `offer-roll` and `closing-slate`; timeline event IDs are `meal-chit-offered` and `shift-four-closed`.
++
++- Against r87: the prior in-world referents are Hara, Sen, Mother-Tide Gate, Ash-Dune Sanctuary, Shellweavers, Reedwardens, and Reed Bell; its occasion is the disputed Moon-Basin Vow / low-water signal. No incoming entity ID or display name matches these, no source ID is shared, and neither incoming event describes that occasion or its field. The Ovid names are reference-work figures, not incoming in-world entities.
++- Against r88: the prior in-world referents are Aru, Evin, Quiet Rise, and Salt Court; the two events are distinct tick-9 lantern/bell entries. No incoming entity ID or display name matches these, no source ID is shared, and neither incoming event identifies those actors, places, or entries. Tick values are cluster-local and do not imply a shared occasion.
++
++**Outcome:** no source-backed shared referent, field, and occasion were identified; no candidate discrepancy or live cross-cluster register entry is warranted. This is a bounded manual comparison, not a corpus-wide identity validator.
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/claim-excerpt-map.md b/corpus/fixtures/r93-m3-ovid-cluster/claim-excerpt-map.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/claim-excerpt-map.md
+@@ -0,0 +1,42 @@
++# r93 M3 cluster: claim-to-excerpt map
++
++Scope: all source-attributed in-world JSON facts: five entity first-appearance pointers, five entity claims, one relation, and two timeline events. The external Ovid parallel is not an in-world source and supplies no JSON claim support.
++
++## Inventory
++
++**Expected inventory:** 13 JSON facts; 2 editorial rows; 15 total mapped rows; 10 distinct excerpt anchors.
++
++## JSON facts (13)
++
++Anchors are lexical preflight only. Review the whole claim and its scope; the external myth is not evidence for these fictional facts.
++
++| ID | JSON fact and fields | `source_id` | Excerpt path:line | R9 mode | Exact anchor |
++|---|---|---|---|---|---|
++| P1 | `entities[0].first_appearance` (Sava) | `offer-roll` | `fictional-excerpts.md:7` | `verbatim` | `I am Sava, clerk of the Moth-Slate Office offer roll.` |
++| E1 | `entities[0].claims[0].statement`, `.source_id` | `offer-roll` | `fictional-excerpts.md:7` | `verbatim` | `I am Sava, clerk of the Moth-Slate Office offer roll.` |
++| P2 | `entities[1].first_appearance` (Moth-Slate Office) | `offer-roll` | `fictional-excerpts.md:8` | `verbatim` | `The Moth-Slate Office is the counting room where meal chits are held.` |
++| E2 | `entities[1].claims[0].statement`, `.source_id` | `offer-roll` | `fictional-excerpts.md:8` | `verbatim` | `The Moth-Slate Office is the counting room where meal chits are held.` |
++| P3 | `entities[2].first_appearance` (Orev) | `offer-roll` | `fictional-excerpts.md:9` | `verbatim` | `The roll names Orev as the intended recipient of the Ivory Meal Chit.` |
++| E3 | `entities[2].claims[0].statement`, `.source_id` | `offer-roll` | `fictional-excerpts.md:9` | `verbatim` | `The roll names Orev as the intended recipient of the Ivory Meal Chit.` |
++| P4 | `entities[3].first_appearance` (Ivory Meal Chit) | `offer-roll` | `fictional-excerpts.md:10` | `verbatim` | `One Ivory Meal Chit is set aside for Orev as an offer, not a receipt.` |
++| E4 | `entities[3].claims[0].statement`, `.source_id` | `offer-roll` | `fictional-excerpts.md:10` | `verbatim` | `One Ivory Meal Chit is set aside for Orev as an offer, not a receipt.` |
++| P5 | `entities[4].first_appearance` (Thren) | `closing-slate` | `fictional-excerpts.md:16` | `verbatim` | `I am Thren, closing clerk for shift 4.` |
++| E5 | `entities[4].claims[0].statement`, `.source_id` | `closing-slate` | `fictional-excerpts.md:16` | `verbatim` | `I am Thren, closing clerk for shift 4.` |
++| R1 | `relations[0].from`, `.to`, `.type`, `.source_id` | `offer-roll` | `fictional-excerpts.md:11` | `verbatim` | `Sava files the offer roll at the Moth-Slate Office.` |
++| T1 | `timeline[0].description`, `.source_id` | `offer-roll` | `fictional-excerpts.md:12` | `verbatim` | `Tick 31: Sava enters the Ivory Meal Chit for Orev as an offer; no receipt is recorded.` |
++| T2 | `timeline[1].description`, `.source_id` | `closing-slate` | `fictional-excerpts.md:17` | `verbatim` | `Tick 32: Thren closes the count with Orev's meal chit marked uncollected; no receipt was recorded.` |
++
++## Editorial rows (2 authored summaries; not source-text evidence or in-world facts)
++
++| ID | External comparison note | Excerpt path:line | R9 mode | Exact anchor |
++|---|---|---|---|---|
++| S1 | The cited edition's section VIII.611–678 is headed as Lelex's account of Philemon and Baucis. | `parallel-summary.md:5` | `summary` | At VIII.611–678, Lelex narrates the hospitality episode of Philemon and Baucis. |
++| S2 | The cited edition's section VIII.679–724 is the transformation episode. | `parallel-summary.md:6` | `summary` | At VIII.679–724, the episode concludes with their transformation. |
++
++These rows anchor M3's own short retelling only. Under R9 they are `retelling-support-only`; the cited Ovid text is not delivered and receives no source-word support from these anchors.
++
++## Scope and review notes
++
++- The five first-appearance pointers are co-mapped with the five entity claims. The relation and both event descriptions each have a separate row. `sources.json` registry rows are not claim-support facts.
++- Each mapped claim's `source_id` is a cluster-local in-world citation to a fictional record. The Ovid reference is external-only and never substitutes for an in-world source.
++- `support_check.py` checks declared modes, fixed-string anchors, spans, and inventory. It does not authenticate a source, prove the record true, or decide canon.
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/contradictions.json b/corpus/fixtures/r93-m3-ovid-cluster/contradictions.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/contradictions.json
+@@ -0,0 +1,1 @@
++[]
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/entities.json b/corpus/fixtures/r93-m3-ovid-cluster/entities.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/entities.json
+@@ -0,0 +1,62 @@
++[
++  {
++    "id": "sava",
++    "kind": "character",
++    "name": "Sava",
++    "first_appearance": "offer-roll",
++    "claims": [
++      {
++        "statement": "Sava identifies herself as clerk of the Moth-Slate Office offer roll.",
++        "source_id": "offer-roll"
++      }
++    ]
++  },
++  {
++    "id": "moth-slate-office",
++    "kind": "place",
++    "name": "Moth-Slate Office",
++    "first_appearance": "offer-roll",
++    "claims": [
++      {
++        "statement": "The offer roll identifies the Moth-Slate Office as the counting room where meal chits are held.",
++        "source_id": "offer-roll"
++      }
++    ]
++  },
++  {
++    "id": "orev",
++    "kind": "character",
++    "name": "Orev",
++    "first_appearance": "offer-roll",
++    "claims": [
++      {
++        "statement": "The offer roll names Orev as the intended recipient of the Ivory Meal Chit.",
++        "source_id": "offer-roll"
++      }
++    ]
++  },
++  {
++    "id": "ivory-meal-chit",
++    "kind": "item",
++    "name": "Ivory Meal Chit",
++    "first_appearance": "offer-roll",
++    "claims": [
++      {
++        "statement": "The offer roll records one Ivory Meal Chit set aside for Orev as an offer, not a receipt.",
++        "source_id": "offer-roll"
++      }
++    ]
++  },
++  {
++    "id": "thren",
++    "kind": "character",
++    "name": "Thren",
++    "first_appearance": "closing-slate",
++    "claims": [
++      {
++        "statement": "Thren identifies himself as the closing clerk for shift 4.",
++        "source_id": "closing-slate"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/fictional-excerpts.md b/corpus/fixtures/r93-m3-ovid-cluster/fictional-excerpts.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/fictional-excerpts.md
+@@ -0,0 +1,19 @@
++# Moth-Slate Office records
++
++**Delivery mode (R9):** `verbatim` — newly authored fictional words; not a historical transcript.
++
++## Offer roll — folio 5, lines 1–6 (`offer-roll`)
++
++> I am Sava, clerk of the Moth-Slate Office offer roll.
++> The Moth-Slate Office is the counting room where meal chits are held.
++> The roll names Orev as the intended recipient of the Ivory Meal Chit.
++> One Ivory Meal Chit is set aside for Orev as an offer, not a receipt.
++> Sava files the offer roll at the Moth-Slate Office.
++> Tick 31: Sava enters the Ivory Meal Chit for Orev as an offer; no receipt is recorded.
++
++## Closing slate — shift 4 (`closing-slate`)
++
++> I am Thren, closing clerk for shift 4.
++> Tick 32: Thren closes the count with Orev's meal chit marked uncollected; no receipt was recorded.
++
++These are newly authored fictional excerpts; the source records are unverified and do not establish that an offer was accepted.
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/inspiration-note.md b/corpus/fixtures/r93-m3-ovid-cluster/inspiration-note.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/inspiration-note.md
+@@ -0,0 +1,23 @@
++# Sourced inspiration note
++
++## Parallel cited
++
++Ovid, *Metamorphoses* VIII.611–724, the episode conventionally titled “Philemon and Baucis,” as rendered in A. S. Kline, trans., “Ovid: The Metamorphoses, Book 8,” *Poetry in Translation* (2000), <https://www.poetryintranslation.com/PITBR/Latin/Metamorph8.php>. The online work identifies VIII.611–678 as Lelex's account and VIII.679–724 as the transformation episode. No source passage is reproduced in this fixture; the cited English representation remains `external-only / unverified` for source-text support.
++
++The design comparison is narrow: distinguish a recorded offer from verified acceptance. This is a general administrative distinction, not a claim that Ovid's wording, plot, order, named objects, or specific cultural practice appears in this fictional setting. It is not an in-world source and supplies no fictional canon.
++
++## Attribution question
++
++The cited literary work is Ovid's *Metamorphoses* as rendered by A. S. Kline in the identified 2000 online translation. This attribution is to that representation; no claim is made here about an underlying individual oral author or a distinct ancient source version. The exact translation/presentation was consulted as a motif-level design comparator, but its text is not delivered in-tree and does not substantiate any fictional JSON fact.
++
++## Rights question
++
++Open question — rights status of Kline's 2000 English translation and the website presentation has not been assessed. No text is reproduced here and no rights grant or legal conclusion is asserted. The status of an ancient work does not determine the status of a modern translation or presentation.
++
++## AI-training-permission question
++
++Open question — AI-training permission for the cited translation and presentation has not been assessed or established. Public accessibility and attribution do not imply permission; no training permission is inferred from any rights status.
++
++## R8 provenance and materiality screen
++
++The design comparison informed the `offer-versus-acceptance` element: the fictional record separates an offered meal chit from a receipt so an entry cannot be mistaken for delivery or uptake. This is recorded as `external-only / unverified inspiration` in `symbolism-clause-map.md`, not as evidence for the fictional event. The element does not depend on an Ovid-specific claim, wording, sequence, or combination of details; if the parallel is removed, the independently authored record and its offer/receipt distinction remain. The two in-world excerpts independently support the mapped JSON facts. This is an editorial materiality screen, not a rights or source-truth conclusion.
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/parallel-summary.md b/corpus/fixtures/r93-m3-ovid-cluster/parallel-summary.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/parallel-summary.md
+@@ -0,0 +1,8 @@
++# Ovid comparison: compact retelling
++
++**Delivery mode (R9):** `summary` — authored by M3; not a quotation or translation.
++
++At VIII.611–678, Lelex narrates the hospitality episode of Philemon and Baucis.
++At VIII.679–724, the episode concludes with their transformation.
++
++This authored summary is a navigation aid only. Ovid's passage itself is not delivered; these lines do not support claims about the source text's wording or any fictional-world fact.
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/relations.json b/corpus/fixtures/r93-m3-ovid-cluster/relations.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/relations.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "from": "sava",
++    "to": "moth-slate-office",
++    "type": "files_at",
++    "source_id": "offer-roll"
++  }
++]
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/sources.json b/corpus/fixtures/r93-m3-ovid-cluster/sources.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/sources.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "id": "offer-roll",
++    "title": "Ivory Meal Chit Offer Roll, folio 5",
++    "kind": "fictional communal allocation register",
++    "reliability_note": "Newly authored fictional register; it records an entry, not acceptance or delivery."
++  },
++  {
++    "id": "closing-slate",
++    "title": "Moth-Slate Office closing slate, shift 4",
++    "kind": "fictional shift-close note",
++    "reliability_note": "Newly authored fictional note; its close-of-shift report is not an authenticated receipt."
++  }
++]
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/symbolism-clause-map.md b/corpus/fixtures/r93-m3-ovid-cluster/symbolism-clause-map.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/symbolism-clause-map.md
+@@ -0,0 +1,11 @@
++# Element-to-source map
++
++## Offer versus acceptance
++
++- **Affected element:** the `Ivory Meal Chit`'s state is recorded as an offer, and the close-of-shift note separately records it as uncollected; an offer is not a receipt or proof of delivery.
++- **External parallel:** Ovid, *Metamorphoses* VIII.611–724, “Philemon and Baucis,” A. S. Kline translation (2000), cited in `inspiration-note.md`.
++- **R8 marker:** `external-only / unverified inspiration`. The source text is not delivered and does not support an in-world claim.
++- **Materiality:** the comparison prompted an offer/uptake distinction, a commonplace recordkeeping concept. No source-specific wording, characters, scene, sequence, combination of details, ritual, or supernatural outcome is carried into the authored record. Without the external parallel, the fictional entries still stand on their own.
++- **Independent in-world basis:** `offer-roll` line 10 states that the chit is an offer, not a receipt; `closing-slate` line 17 reports it uncollected. Those are fictional, unverified records, not authenticated evidence.
++
++The map does not assert Ovidian symbolism, establish direct borrowing, or convert the external reference into canon.
+diff --git a/corpus/fixtures/r93-m3-ovid-cluster/timeline.json b/corpus/fixtures/r93-m3-ovid-cluster/timeline.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m3-ovid-cluster/timeline.json
+@@ -0,0 +1,22 @@
++[
++  {
++    "id": "meal-chit-offered",
++    "tick": 31,
++    "entity_id": "sava",
++    "place_id": "moth-slate-office",
++    "depends_on": [],
++    "description": "Sava enters the Ivory Meal Chit for Orev as an offer; no receipt is recorded.",
++    "source_id": "offer-roll"
++  },
++  {
++    "id": "shift-four-closed",
++    "tick": 32,
++    "entity_id": "thren",
++    "place_id": "moth-slate-office",
++    "depends_on": [
++      "meal-chit-offered"
++    ],
++    "description": "Thren closes the count with Orev's meal chit marked uncollected; no receipt was recorded.",
++    "source_id": "closing-slate"
++  }
++]
+diff --git a/corpus/knowledge/reference-ledger.md b/corpus/knowledge/reference-ledger.md
+--- a/corpus/knowledge/reference-ledger.md
++++ b/corpus/knowledge/reference-ledger.md
+@@ -11,3 +11,4 @@
+ fictional story fact is separately cited to `sources.json` within the bible.
+ No reference work is ingested as fictional canon.
+ | Lewis Spence, *The Myths of Mexico & Peru* (London: George G. Harrap & Co., 1913), Chapter V, “The Maya,” subsection “The Creation-Story,” “The Creation-Story,” printed p. 209, delivered excerpt at `corpus/fixtures/r88-m3-maya-cluster/source-excerpt.md:5`, <https://www.gutenberg.org/ebooks/53080> | Not assessed for the 1913 presentation or the Gutenberg digitization; consult the source's credits and applicable terms before reproducing expression; no rights grant is asserted. | Not assessed; no permission is inferred from public access, attribution, or any rights conclusion. | Parallel-craft comparison only: the cited passage informs the cluster's veil/earth clauses; it is not an in-world source, supplies no fictional canon, and the cluster's clause→element map indexes the delivered excerpt line. Text is delivered in-tree. |
++| Ovid, *Metamorphoses* VIII.611–724, “Philemon and Baucis,” as rendered in A. S. Kline, trans., “Ovid: The Metamorphoses, Book 8,” *Poetry in Translation* (2000), <https://www.poetryintranslation.com/PITBR/Latin/Metamorph8.php> | Open question — rights status of the Kline translation and website presentation not assessed; no rights grant asserted. | Open question — AI-training permission for the cited translation and presentation not assessed; no permission inferred. | external-only / source text not delivered; motif-level design comparison for the offer-versus-acceptance element only. Not an in-world source and supplies no fictional canon. |

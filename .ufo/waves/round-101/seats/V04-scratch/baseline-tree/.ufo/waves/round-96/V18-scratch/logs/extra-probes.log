@@ -1,0 +1,30 @@
+=== A-new-event-with-deps dir=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/V18-scratch/scratch-root/extra-addevent/r96-crossing-response
+--- run1 exit=1
+FREEZE r96-crossing-response: events 6/5; dependency-edges 5/4; relations 1/1
+FINDING ADDITION-DETECTED: unpinned event intruder-tick-13 introduces depends_on ['response-evin-salt-court']
+RESULT FAIL
+--- run2 exit=1
+FREEZE r96-crossing-response: events 6/5; dependency-edges 5/4; relations 1/1
+FINDING ADDITION-DETECTED: unpinned event intruder-tick-13 introduces depends_on ['response-evin-salt-court']
+RESULT FAIL
+=== SUMMARY A-new-event-with-deps exits_identical=True
+=== B-new-event-no-deps dir=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/V18-scratch/scratch-root/extra-addempty/r96-crossing-response
+--- run1 exit=2
+FREEZE r96-crossing-response: events 6/5; dependency-edges 4/4; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 278e3994bb364845577392691f411e3361305d94d52197d3b5a442302be77824 != pin d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6; fixture bytes changed outside the frozen inventory
+RESULT ERROR
+--- run2 exit=2
+FREEZE r96-crossing-response: events 6/5; dependency-edges 4/4; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 278e3994bb364845577392691f411e3361305d94d52197d3b5a442302be77824 != pin d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6; fixture bytes changed outside the frozen inventory
+RESULT ERROR
+=== SUMMARY B-new-event-no-deps exits_identical=True
+=== C-new-relation dir=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/V18-scratch/scratch-root/extra-addrel/r96-crossing-response
+--- run1 exit=1
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 2/1
+FINDING ADDITION-DETECTED: relation edge(s) added: [evin, aru, second_account_same_occasion]
+RESULT FAIL
+--- run2 exit=1
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 2/1
+FINDING ADDITION-DETECTED: relation edge(s) added: [evin, aru, second_account_same_occasion]
+RESULT FAIL
+=== SUMMARY C-new-relation exits_identical=True

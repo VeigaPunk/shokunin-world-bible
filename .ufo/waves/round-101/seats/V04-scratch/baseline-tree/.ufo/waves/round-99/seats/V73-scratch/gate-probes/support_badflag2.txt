@@ -1,0 +1,7 @@
+===== support_badflag2 =====
+EXIT:2
+--- stdout ---
+RESULT ERROR
+--- stderr ---
+usage: support_check.py [-h] [--map MAP] cluster
+support_check.py: error: the following arguments are required: cluster

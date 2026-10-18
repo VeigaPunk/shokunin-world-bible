@@ -1,0 +1,48 @@
+TRY 01 22:01:56 reports=1 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=1 lapse_note=0 blind_table=0 r99_map=1 inv21=0
+0 ns=0
+0
+TRY 02 22:02:16 reports=1 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=1 lapse_note=0 blind_table=0 r99_map=1 inv21=0
+0 ns=0
+0
+TRY 03 22:02:36 reports=1 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=1 lapse_note=0 blind_table=0 r99_map=1 inv21=0
+0 ns=0
+0
+TRY 04 22:02:56 reports=1 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=1 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 05 22:03:16 reports=1 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=1 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 06 22:03:36 reports=1 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=1 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 07 22:03:56 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=1 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 08 22:04:16 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 09 22:04:36 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 10 22:04:56 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 11 22:05:16 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 12 22:05:36 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 13 22:05:56 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 14 22:06:16 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+TRY 15 22:06:36 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1 ns=23
+STALL tool-timeout killed poll.sh after try 15; resumed 22:17:07; gap is the tool cap, not a skipped try
+TRY 16 22:17:07 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 17 22:17:27 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 18 22:17:47 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 19 22:18:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 20 22:18:28 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 21 22:18:48 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 22 22:19:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 23 22:19:28 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 24 22:19:48 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 25 22:20:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 26 22:20:28 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 27 22:20:48 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 28 22:21:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 29 22:21:28 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 30 22:21:48 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 31 22:22:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 32 22:22:28 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 33 22:22:48 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 34 22:23:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 35 22:23:28 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 36 22:23:48 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 37 22:24:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 38 22:24:28 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 39 22:24:48 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+TRY 40 22:25:08 reports=2 tools_readme_mod=0 skill_mod=0 dep_freeze_mod=2 lapse_note=0 blind_table=0 r99_map=1 inv21=1
+POLL_TIMEOUT after 40 tries

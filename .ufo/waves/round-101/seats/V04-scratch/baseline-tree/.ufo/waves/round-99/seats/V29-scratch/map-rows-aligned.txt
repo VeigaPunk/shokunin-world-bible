@@ -1,0 +1,6 @@
+only r99 ['J21']
+only r98 []
+namespace-only equal 22 of 22
+real diffs 0
+line shifts [('S01', 49, 50), ('S02', 50, 51)]
+J21 (42, ['J21', '`timeline.json#/7` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`)', '`clerk-lapse-note`', '`r99-window-lapse:clerk-lapse-note`', '`fictional-excerpts.md`', '66-76', '`verbatim`', '`Tick 15: The crossing-window named in the original minute has closed.`'])

@@ -1,0 +1,4 @@
+OBLIGATIONS raw=17 mapped=17
+INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19
+FINDING dual_pointer: row J17 (line 38) names a second pointer token 'relations.json#/0' alongside timeline.json#/5
+RESULT FAIL

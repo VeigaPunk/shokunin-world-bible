@@ -1,0 +1,45 @@
+r98_json_rows=20 r99_json_rows=21
+cell_diffs 20
+J01 col=namespace
+J02 col=namespace
+J03 col=namespace
+J04 col=namespace
+J05 col=namespace
+J06 col=namespace
+J07 col=namespace
+J08 col=namespace
+J09 col=namespace
+J10 col=namespace
+J11 col=namespace
+J12 col=namespace
+J13 col=namespace
+J14 col=namespace
+J15 col=namespace
+J16 col=namespace
+J17 col=namespace
+J18 col=namespace
+J19 col=namespace
+J20 col=namespace
+r99_only ['J21']
+namespace_only True
+J01_ns `r98-clerk-filing:paired-clock` -> `r99-window-lapse:paired-clock`
+J21 J21 `timeline.json#/7` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) 66-76 `Tick 15: The crossing-window named in the original minute has closed.`
+timeline_len 8
+event7_id clerk-lapse-recorded
+event7_tick 15
+event7_entity clerk-maren
+event7_place chalk-stair
+event7_depends ['clerk-filing-open']
+event7_source clerk-lapse-note
+--- lapse block lines 66-76 ---
+66:## Round 99 lapse note (2026-10-17)
+67:
+68:Newly authored fictional first-person note, attributed to in-world source ID `clerk-lapse-note`, folio 9, lines 1–5. This section is appended after the preserved r98 text above; the inherited wording is unchanged.
+69:
+70:> Tick 15: The crossing-window named in the original minute has closed.
+71:> The agreement was unfulfilled.
+72:> No claim was lodged.
+73:> The matter stands as a historical open entry.
+74:> I record no resolution, assign no blame, and reconcile nothing.
+75:
+76:Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation, and it creates no new duty; the crossing-scoped agreement above is unchanged, and the matter stays open.

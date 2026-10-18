@@ -1,0 +1,30 @@
+CENSUS {"dirs": 172, "clean": 38, "negative": 134, "violation_lines": 421, "odd": []}
+row counts r97/r98: 17 20
+r98 new row ids: ['J18', 'J19', 'J20']
+inherited-row diffs (modulo namespace col 2): NONE
+namespace-column diffs: 17
+ticks: [9, 9, 10, 11, 12, 13, 14]
+ids: ['aru-ninth-bell', 'evin-ninth-bell', 'paired-crossing-decision', 'aftermath-missing-evin', 'response-evin-salt-court', 'acknowledgment-aru-records', 'clerk-filing-open']
+edges: 6 all strictly backward+earlier-tick: True
+last event: {"id": "clerk-filing-open", "tick": 14, "entity_id": "clerk-maren", "place_id": "chalk-stair", "depends_on": ["acknowledgment-aru-records"], "description": "At the Chalk Stair at tick 14, the clerk filed both pending accounts and recorded the matter OPEN, asserting no finding and no resolution.", "source_id": "clerk-filing-note"}
+duplicates: {'entities': [], 'sources': [], 'events': []}
+dangling: []
+source[-1] id/kind: clerk-filing-note / fictional first-person note
+  reliability note contains 'no finding': True
+  reliability note contains 'no verdict': True
+  reliability note contains 'no reconciliation': True
+  reliability note contains 'no resolution': True
+  reliability note contains 'not evidence of a breach': True
+  reliability note contains 'no winner': False
+excerpt tail lines 54-64:
+  54: 
+  55: ## Round 98 clerk filing (2026-10-17)
+  56: 
+  57: Newly authored fictional first-person note, attributed to in-world source ID `clerk-filing-note`, folio 8, lines 1–4. This section is appended after the preserved r97 text above; the inherited wording is unchanged.
+  58: 
+  59: > Tick 14: I filed both pending accounts at the Chalk Stair registry.
+  60: > I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+  61: > I assert no finding.
+  62: > I reach no verdict and reconcile nothing.
+  63: 
+  64: Scope: this appended section is the harbor clerk's first-person filing record. It is an institutional filing only: it asserts no finding and no resolution, reaches no verdict, and reconciles nothing; the two first-person accounts stand unresolved, and the crossing-scoped agreement above is unchanged.

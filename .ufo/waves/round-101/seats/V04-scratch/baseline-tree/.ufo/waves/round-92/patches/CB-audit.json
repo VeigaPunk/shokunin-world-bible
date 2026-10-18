@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "seat": "CB-audit",
+  "selection": {
+    "status": "NOT_SELECTED",
+    "t1_report": ".ufo/waves/round-92/T1.md",
+    "t1_certification": ".ufo/waves/round-92/patches/T1-certification.json",
+    "t1_outcome": "FAIL",
+    "t1_selection_gate": "FAIL",
+    "note": "T1's snapshot recorded D1.md absent; D1.md appeared later. Its no-integrated-document finding still holds: the tracked target remains the r91 baseline, and neither candidate was applied."
+  },
+  "baseline": {
+    "head": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+    "target": "corpus/knowledge/holder-assessment-boundary.md",
+    "target_sha256": "c0c59dafc32c7fdc52f30352359b2c252e7607c76010063231b8f89d223911c9",
+    "target_lines": 549,
+    "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "tracked_worktree_diff_exit": 0,
+    "staged_diff_exit": 0
+  },
+  "poll": {
+    "command": "sh .ufo/waves/poll_wait.sh .ufo/waves/round-92/T1.md 1200",
+    "terminal": "POLL_TERMINAL status=0 reason=deadline elapsed=1200s checks=20",
+    "checks": 20,
+    "result_at_deadline": "T1.md absent"
+  },
+  "candidates": {
+    "D1": {
+      "artifact": ".ufo/waves/round-92/patches/D1-boundary-doc.md",
+      "kind": "complete_document_proposal_not_unified_diff",
+      "sha256": "92c9baf71c70b3fe845c8f2d7309934fe64523e0963072f484f259ef0ac462f9",
+      "in_memory_lines": 524,
+      "status": "PROPOSAL_NOT_SELECTED",
+      "checks": {
+        "h1": 1,
+        "h2": 9,
+        "duplicate_headings": 0,
+        "verified_at": 1,
+        "instruction_markers": 0,
+        "limit_markers": "13/13",
+        "source_fence_hashes_shared": "7/7",
+        "replay_blocks": 3,
+        "replay_cases": 14,
+        "replay_mismatches": 0,
+        "stderr_nonempty": 0,
+        "r91_null_chain_mentions": 0,
+        "r91_tick_unresolved_mentions": 0,
+        "old_delivered_checker_label_mentions": 1,
+        "e2bb9639_mentions": 2,
+        "stale_round90_until_lands_claims": 1
+      },
+      "apply_check": {
+        "status": "NOT_A_PATCH",
+        "observed": "error: No valid patches in input (allow with \"--allow-empty\")",
+        "exit": 128
+      }
+    },
+    "D2": {
+      "artifact": ".ufo/waves/round-92/patches/D2-boundary-doc.md",
+      "kind": "unified_diff_proposal",
+      "patch_sha256": "55495d1002baa2776abf93c8bd0df26bd39493ba8cbe4b2dddac77aaf6c8d428",
+      "in_memory_result_sha256": "8e1fe8774a70f06c31efd783b4313a1639c1da4bcfd830be92134e8964536728",
+      "in_memory_lines": 671,
+      "status": "PROPOSAL_NOT_SELECTED",
+      "checks": {
+        "h1": 1,
+        "h2": 9,
+        "duplicate_headings": 0,
+        "verified_at": 1,
+        "instruction_markers": 0,
+        "limit_markers": "13/13",
+        "source_fence_hashes_shared": "7/7",
+        "replay_blocks": 3,
+        "replay_cases": 14,
+        "replay_mismatches": 0,
+        "stderr_nonempty": 0,
+        "r91_null_chain_mentions": 4,
+        "r91_tick_unresolved_mentions": 4,
+        "old_delivered_checker_label_mentions": 0,
+        "e2bb9639_mentions": 3,
+        "stale_round90_until_lands_claims": 0,
+        "duplicated_r87_table_phrase_mentions": 2
+      },
+      "apply_check": {
+        "status": "PASS_NOT_APPLIED",
+        "exit": 0,
+        "numstat": "290\t168\tcorpus/knowledge/holder-assessment-boundary.md"
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "JAXIS-R1",
+      "requirement": "Anchor-based re-derivation; resolve/name header, D6/D7, D9, D13 and D2 edits; remove seams; restore sections; update D11 for r91 fixtures; add reconstruction receipt; independently verify.",
+      "D1": {
+        "status": "PARTIAL",
+        "evidence": [".ufo/waves/round-92/D1.md:30-66", ".ufo/waves/round-92/patches/D1-boundary-doc.md:3-5", ".ufo/waves/round-92/patches/D1-boundary-doc.md:408", ".ufo/waves/round-92/patches/D1-boundary-doc.md:439", ".ufo/waves/round-92/patches/D1-boundary-doc.md:486", ".ufo/waves/round-92/patches/S1-anchor-plan.json:227-257"],
+        "debt": "D11 still calls the null-chain definite form scratch-only; Round-90 README text still says the section is pending; old e2bb9639/1b09f3f paragraph is explicitly called historical in the header but still labels that checker delivered. D12 also lists a Round-90 README insertion as outside work although Round 90 exists."
+      },
+      "D2": {
+        "status": "PARTIAL",
+        "evidence": [".ufo/waves/round-92/D2.md:284-295", ".ufo/waves/round-92/patches/D2-boundary-doc.md:378-382", ".ufo/waves/round-92/patches/D2-boundary-doc.md:411-423", ".ufo/waves/round-92/patches/D2-boundary-doc.md:478-481", ".ufo/waves/round-92/patches/D2-boundary-doc.md:516-538"],
+        "debt": "D2 corrects r91 fixture and Round-90 context, but the orphan e2bb9639 checker continuation, duplicated r87 README paragraph, and r90 rather than r92 provenance header remain."
+      }
+    },
+    {
+      "id": "JAXIS-R2",
+      "requirement": "Add Round 91 README closure; transplant R8/R10 Owner/Trigger/Worked-example and R8 inseparable branch; re-point R9 receipt-parity probe.",
+      "D1": {
+        "status": "UNADDRESSED",
+        "evidence": [".ufo/waves/round-91/followup/JAXIS.md:301-303", ".ufo/waves/round-92/R2.md:174-184", ".ufo/waves/round-92/patches/E1-edges.md:1-3"],
+        "debt": "Neither candidate changes the tracked README or decision table; R2-readme.patch proposes Round 92, not Round 91. E1 is proposal-only and R10 Trigger/Worked-example remain absent."
+      },
+      "D2": {
+        "status": "UNADDRESSED",
+        "evidence": [".ufo/waves/round-91/followup/JAXIS.md:301-303", ".ufo/waves/round-92/D2.md:284-294", ".ufo/waves/round-92/patches/R2-readme.patch:9-16", ".ufo/waves/round-92/patches/E1-edges.md:7-31"],
+        "debt": "R8/R9 language is not integrated into the tracked decision table; R10 is not supplied. The tracked README still lacks Round 91."
+      }
+    },
+    {
+      "id": "JAXIS-R3",
+      "requirement": "First periodic C9 watch re-check, dated log, drift alarm; path-convention census note; close B3/watch/fixture receipt gaps.",
+      "D1": {
+        "status": "PARTIAL_UNLANDED",
+        "evidence": [".ufo/waves/round-92/X1.md:146-172", ".ufo/waves/round-92/X2.md:90-125", ".ufo/waves/round-92/patches/R2-readme.patch:35-51", ".ufo/waves/round-91/followup/JAXIS.md:304-306"],
+        "debt": "The re-check/path notes exist as proposals only. Tracked watch lacks the e97613c hash, explicit ambiguous-SOURCE wording and successor name; tick fixture README lacks parent/composition note."
+      },
+      "D2": {
+        "status": "PARTIAL_UNLANDED",
+        "evidence": [".ufo/waves/round-92/X1.md:146-172", ".ufo/waves/round-92/X2.md:90-125", ".ufo/waves/round-92/patches/R2-readme.patch:35-51", ".ufo/waves/round-91/followup/JAXIS.md:304-306"],
+        "debt": "Same external proposal-only state as D1; individual patches pass applicability, but compositions R2+E3 and X1+E3 fail."
+      }
+    },
+    {
+      "id": "H5-F1",
+      "requirement": "Name honestly the unapplied D9 second-range/evidence block.",
+      "D1": {"status": "NAMED_DEBT_WITH_CONTRADICTION", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:3-5", ".ufo/waves/round-92/patches/D1-boundary-doc.md:439"], "debt": "Header says the D9 evidence paragraph remains historical, but its body still calls 1b09f3f the delivered checker."},
+      "D2": {"status": "PARTIAL", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:411-423", ".ufo/waves/round-92/patches/S1-anchor-plan.json:227-257"], "debt": "The current ca7f9ef checker block is inserted, but the old e2bb9639 paragraph tail remains orphaned."}
+    },
+    {
+      "id": "H5-F2",
+      "requirement": "Correctly account for the decision-table row-2 anchor skip/edit.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/S1-anchor-plan.json:5-16", ".ufo/waves/round-92/D1.md:57-64"], "debt": "Row-2 citations are re-anchored in the candidate."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:125-160", ".ufo/waves/round-92/D2.md:154-155"], "debt": "Row-2 citations are included in the whole-document reconstruction; candidate remains unselected."}
+    },
+    {
+      "id": "H5-F3",
+      "requirement": "Apply or name the D6/D7 cause-section anchor remap.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/S1-anchor-plan.json:107-148", ".ufo/waves/round-92/D1.md:57-66"], "debt": "None identified for this finding in D1."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/D2.md:154-155", ".ufo/waves/round-92/patches/D2-boundary-doc.md:190-240"], "debt": "None identified for this finding in D2."}
+    },
+    {
+      "id": "H5-F4",
+      "requirement": "Apply D13 labels/status and retain D2's new limits bullet and limits anchors.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/S1-anchor-plan.json:315-370", ".ufo/waves/round-92/patches/D1-boundary-doc.md:195-265", ".ufo/waves/round-92/patches/D1-boundary-doc.md:490-524"], "debt": "Separate stale D11/D9 content is tracked under JAXIS-R1 and H5-F1."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:478-541", ".ufo/waves/round-92/patches/D2-boundary-doc.md:554-598"], "debt": "Separate orphan checker paragraph remains under H5-F1/CB1-F4."}
+    },
+    {
+      "id": "H5-F5",
+      "requirement": "Restore The contract, Commands and Status split headings and dropped limits.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:25-27", ".ufo/waves/round-92/patches/D1-boundary-doc.md:267-268", ".ufo/waves/round-92/patches/D1-boundary-doc.md:490-493"], "debt": "Structure and 13/13 limit-marker scan pass; see JAXIS-R1 for remaining stale prose."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:100-107", ".ufo/waves/round-92/patches/D2-boundary-doc.md:531-545"], "debt": "Structure and 13/13 limit-marker scan pass; see JAXIS-R1 for remaining seams."}
+    },
+    {
+      "id": "H5-F6",
+      "requirement": "Correct stale Round-90 and in-tree provenance-inventory claims.",
+      "D1": {"status": "UNADDRESSED", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:486-493"], "debt": "Still says Round 90 has not landed and does not name either r91 fixture."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:478-481", ".ufo/waves/round-92/patches/D2-boundary-doc.md:524-538"], "debt": "The two claims from H5 F6 are corrected; candidate remains unselected."}
+    },
+    {
+      "id": "H5-F7",
+      "requirement": "Add a Round-91 section to the fixtures README and name both fixtures.",
+      "D1": {"status": "UNADDRESSED", "evidence": [".ufo/waves/round-92/R2.md:20-26", ".ufo/waves/round-92/patches/R2-readme.patch:9-16"], "debt": "Tracked README has Round 90 only; R2 patch adds Round 92, not Round 91."},
+      "D2": {"status": "UNADDRESSED", "evidence": [".ufo/waves/round-92/R2.md:20-26", ".ufo/waves/round-92/patches/R2-readme.patch:9-16"], "debt": "Same; neither boundary candidate addresses the separate README closure."}
+    },
+    {
+      "id": "H5-F8",
+      "requirement": "Preserve verified replay blocks, frozen checker and two r91 fixture README outputs.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/D1.md:45-55", ".ufo/waves/round-91/followup/H5.md:91-94"], "debt": "No replay/freeze harm observed; this is not document certification."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/D2.md:128-155", ".ufo/waves/round-92/patches/D2-boundary-doc.md:156-200"], "debt": "Both fixture README blocks were rechecked under both checker versions; this is not document certification."}
+    },
+    {
+      "id": "CB1-F1",
+      "requirement": "Repair the boundary-document assembly defect, including splices and stale delivery claims.",
+      "D1": {"status": "PARTIAL", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:3-5", ".ufo/waves/round-92/patches/D1-boundary-doc.md:408-409", ".ufo/waves/round-92/patches/D1-boundary-doc.md:486-493"], "debt": "Structural assembly passes, but D11, Round-90 README and e2bb/1b09f3f statements remain contradictory."},
+      "D2": {"status": "PARTIAL", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:411-423", ".ufo/waves/round-92/patches/D2-boundary-doc.md:478-481", ".ufo/waves/round-92/patches/D2-boundary-doc.md:516-538"], "debt": "Residual orphan checker text, duplicated README continuation and non-r92 provenance header remain."}
+    },
+    {
+      "id": "CB1-F2",
+      "requirement": "Remove the duplicate contradictory decision-table row.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:144-157"], "debt": "One current row-3 marker; no duplicate row observed."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:210-260"], "debt": "One current row-3 marker; no duplicate row observed."}
+    },
+    {
+      "id": "CB1-F3",
+      "requirement": "Make skipped-item accounting match the actual applied/skipped reconstruction.",
+      "D1": {"status": "PARTIAL", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:3-5", ".ufo/waves/round-92/patches/S1-anchor-plan.json:151-169", ".ufo/waves/round-92/patches/S1-anchor-plan.json:227-257"], "debt": "D8/D9/D12 are named, but D12's Round-90 README action is already complete and the D9 block body still says delivered 1b09f3f."},
+      "D2": {"status": "UNADDRESSED", "evidence": [".ufo/waves/round-92/D2.md:284-295", ".ufo/waves/round-92/patches/D2-boundary-doc.md:21-27"], "debt": "The candidate retains an r90 landed header and no explicit r92 applied/skipped receipt."}
+    },
+    {
+      "id": "CB1-F4",
+      "requirement": "Do not describe the r89 checker e2bb9639 as the current delivered checker.",
+      "D1": {"status": "PARTIAL", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:439-441"], "debt": "The historical note does not remove the body label 'Checker at delivered 1b09f3f'."},
+      "D2": {"status": "PARTIAL", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:411-423"], "debt": "Current checker detail was added, but an orphan e2bb9639 hash and continuation remains."}
+    },
+    {
+      "id": "CB1-F5",
+      "requirement": "Restore the missing boundary limits and baseline paragraph text.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:25-42", ".ufo/waves/round-92/patches/D1-boundary-doc.md:195-265"], "debt": "13/13 limit-marker scan passes."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:100-150", ".ufo/waves/round-92/patches/D2-boundary-doc.md:275-345"], "debt": "13/13 limit-marker scan passes."}
+    },
+    {
+      "id": "CB1-F6",
+      "requirement": "Correct stale Round-90 README and provenance-inventory state claims.",
+      "D1": {"status": "UNADDRESSED", "evidence": [".ufo/waves/round-92/patches/D1-boundary-doc.md:486-493"], "debt": "Still describes Round 90 as pending and omits the r91 fixtures."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/patches/D2-boundary-doc.md:478-481", ".ufo/waves/round-92/patches/D2-boundary-doc.md:524-538"], "debt": "The historical Round-90 location and r91 inventory are updated."}
+    },
+    {
+      "id": "CB1-F7",
+      "requirement": "Preserve the sound replay blocks, frozen checker and fixture receipts without claiming harm.",
+      "D1": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/D1.md:45-55", ".ufo/waves/round-92/patches/D1-boundary-doc.md:273-406"], "debt": "All embedded cases and source fences passed the recorded checks."},
+      "D2": {"status": "ADDRESSED", "evidence": [".ufo/waves/round-92/D2.md:128-155", ".ufo/waves/round-92/patches/D2-boundary-doc.md:273-406"], "debt": "All embedded cases and source fences passed the recorded checks."}
+    }
+  ],
+  "named_debt": [
+    "No selected/landed candidate; T1 overall remains FAIL.",
+    "D1 retains stale D11 fixture, Round-90 README and delivered-checker statements; D12's Round-90 insertion is obsolete.",
+    "D2 retains the orphan e2bb9639 paragraph, duplicate r87 README continuation and non-r92 document provenance header.",
+    "Round-91 README section and R8/R9/R10 decision-table closure remain unlanded.",
+    "Watch/fixture follow-ups are proposal-only; R2+E3 and X1+E3 patch combinations conflict."
+  ],
+  "safety": {
+    "tracked_files_modified": false,
+    "staged_changes": false,
+    "candidate_patches_applied": false,
+    "committed": false,
+    "pushed": false,
+    "tmp_used": false
+  }
+}

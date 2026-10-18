@@ -1,0 +1,163 @@
+{
+  "seat": "JDEP4",
+  "round": 91,
+  "wave": "followup",
+  "lane": "lore-shokunin",
+  "mission": "Capabilities assessment: recommend for/against a third capabilities row — candidate 'regression-discrimination fixtures' (r91 pair + C9 watch). Evidence must be a runnable command.",
+  "observed_at_local": "2026-10-17T08:33:00-03:00 to 2026-10-17T08:38:00-03:00",
+  "judged_commits": {
+    "delivered_head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+    "work": ["6332115fecb31a170914a98bb9cf7d70a97ce658", "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7"],
+    "baseline": "a7c6a1773d5994246a76e4eff30d645f161920e0"
+  },
+  "tracked_tree_clean_at_judgement": true,
+  "m1_identity": {
+    "commands": [
+      "git rev-parse HEAD",
+      "git status --porcelain --untracked-files=no",
+      "sha256sum corpus/fixtures/check_bible.py",
+      "git show e97613c:corpus/fixtures/check_bible.py | sha256sum"
+    ],
+    "observed": {
+      "head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+      "porcelain_tracked": "",
+      "delivered_checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "e97613c_checker_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556"
+    },
+    "c9_watch": {
+      "path": "corpus/knowledge/r91-c9-watch.md",
+      "tracked": true,
+      "pin_occurrences_of_ff9fd2aa": 1,
+      "pin_matches_measured": true
+    },
+    "fixture_files_tracked": true
+  },
+  "m2_delivered_runs_verbatim_watch_commands": {
+    "commands": [
+      "python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-null-chain",
+      "python3 corpus/fixtures/check_bible.py corpus/fixtures/r91-c1-tick-unresolved"
+    ],
+    "observed": {
+      "r91-c1-null-chain": {
+        "exit": 1,
+        "stdout": "VIOLATION: entities[3].provenance[1]: provenance chain break; expected from_holder 'mira', got None\n1 violation(s); no canon changed\n"
+      },
+      "r91-c1-tick-unresolved": {
+        "exit": 1,
+        "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[4].provenance[1].tick: provenance tick 1 must be greater than previous tick 3\nVIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'\n3 violation(s); no canon changed\n"
+      }
+    }
+  },
+  "m3_old_checker_runs": {
+    "commands": [
+      "git show e97613c:corpus/fixtures/check_bible.py | python3 - corpus/fixtures/r91-c1-null-chain",
+      "git show e97613c:corpus/fixtures/check_bible.py | python3 - corpus/fixtures/r91-c1-tick-unresolved"
+    ],
+    "observed": {
+      "r91-c1-null-chain": {
+        "exit": 1,
+        "stdout": "VIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)\n1 violation(s); no canon changed\n"
+      },
+      "r91-c1-tick-unresolved": {
+        "exit": 1,
+        "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[4].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 1 must be greater than previous tick 3\nVIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'\n3 violation(s); no canon changed\n"
+      }
+    },
+    "changed_line_pairs_per_fixture": 1
+  },
+  "m4_mechanical_regression_check": {
+    "artifact": "followup/JDEP4-check.md (verbatim script; derived from tracked X1.md verifier)",
+    "delivered_mode": {
+      "exit": 0,
+      "stdout": "mode=delivered checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True\nr91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=True changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=PASS\nr91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=True changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=PASS\nRESULT: DISCRIMINATION HELD — silent-revert check would fail on regression"
+    },
+    "revert_simulation_mode": {
+      "exit": 2,
+      "stdout": "mode=e97613c checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True\nr91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=False changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=FAIL\nr91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=False changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=FAIL\nREGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved — pinned delivered semantics not present"
+    }
+  },
+  "m5_census": {
+    "command": "python3 -I corpus/fixtures/check_bible.py corpus/fixtures/<dir> (166 subprocesses, repo-relative args, cwd=repo root); compared against .ufo/waves/round-91/patches/B1-tuples.json",
+    "b1_manifest_sha256": "5433f6af7b7dcee2989eb4354b20e944aab76ea2305af6c06814911f2ae0a6e1",
+    "observed": {
+      "delivered_dirs": 166,
+      "shared_with_b1": 164,
+      "tuple_mismatches": 0,
+      "added": ["r91-c1-null-chain", "r91-c1-tick-unresolved"],
+      "removed": [],
+      "delivered_exits": {"0": 32, "1": 134},
+      "delivered_violations": 421,
+      "stderr_nonempty": 0,
+      "old_vs_new_166_changed": ["r91-c1-null-chain", "r91-c1-tick-unresolved"],
+      "exit_changes": 0,
+      "added_dir_stdout_sha256": {
+        "r91-c1-null-chain": {"delivered": "615dc0564f531352a574ef2f53c48be42f4e53ad1fac4aa88756e4bba2fada5b", "e97613c": "3a337ba4bba9c829f9b2bba9657e61d8838ad491d44c0861fa1d6f9d40e05c89"},
+        "r91-c1-tick-unresolved": {"delivered": "d754e96f7c01e6fb6eff12168a732d5a6125f428a9207bd74fc49bbdcbb25d88", "e97613c": "71b4ea433d85ba52f11482a5d089c564641702989763ced39d61c5eee3748e85"}
+      }
+    }
+  },
+  "m6_census_path_sensitivity": {
+    "command": "same census twice, once repo-relative argument and once absolute-path argument",
+    "observed": {
+      "path_sensitive_fixtures": 5,
+      "paths": ["r5-missing-file", "r62-missing", "r67-claim-source-unavailable-control", "r67-claim-source-unavailable-empty", "r67-claim-source-unavailable-whitespace"],
+      "cause": "missing-file error text embeds the invocation path",
+      "example_rel": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r5-missing-file/contradictions.json'",
+      "example_abs": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r5-missing-file/contradictions.json'",
+      "note": "first census pass with absolute args produced 5 false mismatches (exit and violation counts equal); repo-relative invocation reproduces B1 exactly"
+    }
+  },
+  "m7_dependency_wait_checks": {
+    "checks": [
+      "=== CHECK 1 at 2026-10-17T08:33:12-03:00 ===",
+      "=== CHECK 2 at 2026-10-17T08:34:12-03:00 ==="
+    ],
+    "artifacts_checked": ["JDEP1.md", "JDEP2.md", "JDEP3.md", "JDEP5.md", "P1.md", "P2.md", "Q1.md", "Q2.md", "K1.md", "W2-scorecard-r91.proposal.md"],
+    "found": [],
+    "post_window": "H4.md + H4-*.json (08:33:29-08:34:59) and JCAL5-delta.json (08:35:08) landed in the same directory and were cross-checked; JDEP1-3/P1/P2/Q1/Q2/K1 followup artifacts remained absent at 08:35"
+  },
+  "sibling_cross_checks": {
+    "h4": {
+      "artifact": "followup/H4-census.json / H4.md / H4-c1-discrimination.json",
+      "agreement": "166 dirs, 164 shared vs B1, 2 added, 0 changed, exits {0:32,1:134}, 421 violations — identical to this seat's independent census; discrimination stdout sha256 for the two added dirs identical (615dc056..., d754e96f...)"
+    },
+    "jcal5": {
+      "artifact": "followup/JCAL5-delta.json",
+      "agreement": "cross_check B1/B2: 164 rows, 0 mismatches; changed under old stdout only the two r91-c1 dirs"
+    }
+  },
+  "capabilities_recommendation": {
+    "verdict": "FOR a third row, narrowly phrased and bounded",
+    "proposed_row": {
+      "capability": "checker-regression discrimination",
+      "what_it_can_now_do": "Detect a silent revert of the r90-repaired checker gates: the pinned SHA-256 plus the two durable differential fixtures r91-c1-null-chain and r91-c1-tick-unresolved pin the definite null-chain 'got None' wording and the integer-only tick wording, so a revert reproduces the hedged e97613c lines and diverges from the tracked delivered receipt",
+      "evidence_pointer": "sha256sum corpus/fixtures/check_bible.py -> ff9fd2aa...; python3 corpus/fixtures/check_bible.py corpus/fixtures/{r91-c1-null-chain,r91-c1-tick-unresolved} -> definite lines (both exit 1 by design); differential: git show e97613c:corpus/fixtures/check_bible.py | python3 - corpus/fixtures/r91-c1-null-chain -> hedged line; mechanical companion: followup/JDEP4-check.md -> DISCRIMINATION HELD (exit 0) vs REGRESSION-DETECTED (exit 2)",
+      "first_working_round": "r91"
+    },
+    "bounds": [
+      "Covers the two r90-repaired gates only; other semantic checker changes are visible only by comparing the printed hash against the pin.",
+      "The corpus-resident watch commands are raw-output receipts (both fixtures exit 1 by design); the pass/fail wrapper is wave-resident (X1.md verifier, JDEP4-check.md). A corpus-resident wrapper is optional polish, not recorded as delivered.",
+      "A full-census drift comparison must use repo-relative fixture arguments (5 fixtures embed the invocation path in stdout).",
+      "The C9 falsification trigger remains prospective; the row is about checker semantics, not canon, chronology, or source truth."
+    ],
+    "against_case_noted": "The strictest reading (r90-JDEP4 F4: 'a command returns the decided verdict' with the pointer corpus-resident) is met only if the wave-resident mechanical wrapper counts; if L1 requires a corpus-resident pass/fail command, defer admission. This seat's reading: the round demonstrated the capability running with tracked receipts and the watch's own corpus-resident commands; row 2 was likewise admitted at r89 with a wave-resident pointer."
+  },
+  "kept_out_of_scope": [
+    "C2 support-command hardening (separate axis surface; not assessed here)",
+    "C3 R8/R9/R10 governance (not this row; see r90-JDEP4 reasoning)",
+    "canon/source truth, real-world chronology, story content"
+  ],
+  "writes_by_this_seat": [
+    "followup/JDEP4.md",
+    "followup/JDEP4-evidence.json",
+    "followup/JDEP4-check.md"
+  ],
+  "post_window_cross_checks_20261017": {
+    "wave_complete": true,
+    "amended": "M8/F4 added after the full follow-up roster landed",
+    "jaxis": "followup/JAXIS.md claim-verification note 5 transmits the FOR recommendation with the F2 bounds; JAXIS receipts agree with this seat (census 166 {0:32,1:134} 421 violations, changed only on the two added dirs; per-gate reverts flip only their own fixture; JDEP4-check DISCRIMINATION HELD exit 0 vs REGRESSION-DETECTED exit 2)",
+    "p2": "followup/P2-scorecard-r91.md:185 proposes 'no third row — C1 is regression coverage ... not new repertoire'; conflict recorded for L1 in JDEP4.md F4; P2 also proposes the row-2 pointer update from C2 hardening; P2 does not cite JDEP4.md",
+    "others": "JDEP1/2/3, JCOV1-4, JCAL1-5, H1-H5, Q1/Q2, K1, W1, P3 do not rule the capabilities classification and none disputes the discrimination/census evidence; JAXIS debt CAL-D4 consolidates this seat's M6 path-convention finding"
+  },
+  "no_commit_no_push": true
+}

@@ -1,0 +1,26 @@
+== 1. cmp: pure copied files (r97 vs r98) ==
+  IDENTICAL  contradictions.json  (cmp rc=0) 
+  IDENTICAL  inspiration-note.md  (cmp rc=0) 
+  IDENTICAL  relations.json  (cmp rc=0) 
+  IDENTICAL  source-excerpt.md  (cmp rc=0) 
+
+== 2. json-level diff: r97 rows preserved as exact prefix, extras appended ==
+  entities.json: r97=5 r98=6 prefix-exact=True appended=['clerk-maren']
+     + {"id": "clerk-maren", "kind": "character", "name": "Maren", "first_appearance": "clerk-filing-note", "claims": [{"statement": "The filing note names Maren, the clerk of the Chalk Stair registry, as the officer who filed both pending accounts.", "source_id": "clerk-filing-note"}]}
+  sources.json: r97=6 r98=7 prefix-exact=True appended=['clerk-filing-note']
+     + {"id": "clerk-filing-note", "title": "Maren's Chalk Stair Registry Filing Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; the clerk reports filing both pending accounts at the Chalk Stair registry and recording the matter OPEN. It asserts no finding, no verdict, no reconciliation, and no resolution; it is not evidence of a breach, a continuing duty, a winner between the accounts, or an external historical fact."}
+  timeline.json: r97=6 r98=7 prefix-exact=True appended=['clerk-filing-open']
+     + {"id": "clerk-filing-open", "tick": 14, "entity_id": "clerk-maren", "place_id": "chalk-stair", "depends_on": ["acknowledgment-aru-records"], "description": "At the Chalk Stair at tick 14, the clerk filed both pending accounts and recorded the matter OPEN, asserting no finding and no resolution.", "source_id": "clerk-filing-note"}
+
+== 3. fictional-excerpts.md strict byte-prefix ==
+  r97=3410B r98=4187B strict-prefix=True appended=777B
+  appended tail repr: b'\n## Round 98 clerk filing (2026-10-17)\n\nNewly authored fictional first-person note, attributed to in-world source ID `clerk-filing-note`, folio 8, lines 1\xe2\x80\x934. This section is appended after the preserved r97 text above; the inherited wording is unchanged.\n\n> Tick 14: I filed both pending accounts at the Chalk Stair registry.\n> I am Maren, clerk of the Chalk Stair registry, and I record the matter'
+
+== 4. informational: r98-authored files (README.md, claim-excerpt-map.md) ==
+  README.md: r97=5304B r98=5829B identical=False r97-is-prefix=False
+  claim-excerpt-map.md: r97=12117B r98=15028B identical=False r97-is-prefix=False
+
+== SUMMARY ==
+pure-copies identical: True
+json prefix-exact:     True
+fictional byte-prefix: True

@@ -1,0 +1,9 @@
+NOTE deleted claim-excerpt-map.md row J20; declaration left at 20
+FREEZE_EXIT 0
+--- stdout ---
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+
+--- stderr ---
+

@@ -1,0 +1,27 @@
+== tick3_chain_only baseline_51b286b exit=1
+VIOLATION: entities[1].first_appearance: required nonempty str
+VIOLATION: entities[4].provenance[1]: provenance chain break; expected from_holder 'mira', got None
+2 violation(s); no canon changed
+== tick3_chain_only r89_closure_e97613c exit=1
+VIOLATION: entities[1].first_appearance: required nonempty str
+VIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)
+2 violation(s); no canon changed
+== tick3_chain_only r90_fix_ca7f9ef exit=1
+VIOLATION: entities[1].first_appearance: required nonempty str
+VIOLATION: entities[4].provenance[1]: provenance chain break; expected from_holder 'mira', got None
+2 violation(s); no canon changed
+== tick0_chain_plus_tick baseline_51b286b exit=1
+VIOLATION: entities[1].first_appearance: required nonempty str
+VIOLATION: entities[4].provenance[1].tick: provenance tick 0 must be greater than previous tick 0
+VIOLATION: entities[4].provenance[1]: provenance chain break; expected from_holder 'mira', got None
+3 violation(s); no canon changed
+== tick0_chain_plus_tick r89_closure_e97613c exit=1
+VIOLATION: entities[1].first_appearance: required nonempty str
+VIOLATION: entities[4].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index); provenance tick 0 must be greater than previous tick 0
+VIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)
+3 violation(s); no canon changed
+== tick0_chain_plus_tick r90_fix_ca7f9ef exit=1
+VIOLATION: entities[1].first_appearance: required nonempty str
+VIOLATION: entities[4].provenance[1].tick: provenance tick 0 must be greater than previous tick 0
+VIOLATION: entities[4].provenance[1]: provenance chain break; expected from_holder 'mira', got None
+3 violation(s); no canon changed

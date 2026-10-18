@@ -1,0 +1,64 @@
+diff --git a/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md b/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md
+@@ -0,0 +1,9 @@
++# Gate-witness excerpt
++
++Attributed source ID: `gate-witness` — Hara's Mother-Tide Gate witness slip.
++
++> I am Hara, keeper of the Mother-Tide Gate.
++> I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow, at the first low-water bell.
++> I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.
++
++This is a newly authored fictional excerpt; the source record calls it unverified.
+diff --git a/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md b/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md
+@@ -0,0 +1,10 @@
++# Dune-register excerpt
++
++Attributed source ID: `dune-register` — Sen's Ash-Dune Sanctuary register.
++
++> I, Sen, serve as recorder at Ash-Dune Sanctuary.
++> Place of keeping: Ash-Dune Sanctuary is a record-keeping place.
++> At Ash-Dune Sanctuary, Sen kept the register.
++> I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.
++
++This is a newly authored fictional excerpt; the source record calls it unverified.
+diff --git a/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md b/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md
+@@ -0,0 +1,13 @@
++# Shellweaver–Reedwarden Shore Charter excerpt
++
++Attributed source ID: `shell-charter` — Shellweaver–Reedwarden Shore Charter.
++
++By the seal of both shores, these terms stand:
++
++> Shellweavers signed this charter as a signatory faction.
++> Reedwardens signed this charter as a signatory faction.
++> By this charter, Shellweavers stand allied with Reedwardens.
++> By this charter, Reedwardens stand allied with Shellweavers.
++> Watch clause: Under this charter's pledge, Shellweavers keep watch with the Reed Bell.
++
++This is a newly authored fictional excerpt; the source record says it records a pledge, not its performance.
+diff --git a/corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md b/corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md
+@@ -0,0 +1,12 @@
++# First Low-Water Bell tally excerpt
++
++Attributed source ID: `tide-bell-tally` — First Low-Water Bell tally.
++
++Tally hand: Sen
++
++| Mark | Entry |
++|---|---|
++| 1 | We carried the Reed Bell for the low-water signal. |
++| 2 | At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow. |
++
++This is a newly authored fictional excerpt; the source record says its ordering is fixture-local.

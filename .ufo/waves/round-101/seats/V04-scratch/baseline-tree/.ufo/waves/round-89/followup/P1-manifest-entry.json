@@ -1,0 +1,75 @@
+{
+  "round": 89,
+  "date": "2026-10-17",
+  "type": "craft",
+  "lane": "lore",
+  "claims": {
+    "C1": "calibration — durable fixtures pin the six unexercised first-cause branches (invalid tick, invalid from_holder, invalid to_holder, dangling to_holder, dangling from_holder, invalid source_id), each naming that cause as the first stop; valid-key multi-defect records emit the complete combined cause summary (all simultaneous latching causes named); FN-2 qualifies chain breaks when the holder identity is not uniquely resolvable; FN-1 distinguishes 'absent from the resolved index' from truly absent; prior 149 tuples preserved except enumerable deltas, 0 exit changes",
+    "C2": "coverage — the r87 cluster reaches 22/22 under the D1 support rule via four delivered in-world excerpts (gate-witness, dune-register, shell-charter, tide-bell-tally) covering the 14 previously metadata-only facts; the ETCSL ledger row gains the external-only / text not delivered marker",
+    "C3": "depth — the D1 table gains R8 (rights-blocked element disposition), R9 (excerpt delivery-mode) and R10 (cross-cluster contradiction procedure) rows, plus a durable R9 demo fixture and an R10 worked example"
+  },
+  "verdicts": {
+    "calibration": "PENDING-L1",
+    "coverage": "PENDING-L1",
+    "depth": "PENDING-L1"
+  },
+  "verdict_notes": {
+    "calibration": "judge recommendations: improved (JCAL1.md), improved (bounded) (JCAL2.md adversarial, JCAL3.md, JCAL4.md wording with a named regression, JCAL5.md) + no harm on the checker surface (H3.md, H4.md); candidate harms measured: from_holder:null misclassified as an unresolved identity (this seat's probes, JCAL2 Findings 1-3, JCAL4 F3a, E1 DR-5, C5/C6) and the boundary-doc drift (below)",
+    "coverage": "judge recommendations: improved (bounded) — JCOV1.md, JCOV2.md, JCOV3.md (R9/R10 sub-scope), JCOV4.md, JCOV5.md, JDEP4.md; bound: M4-verify.json's 22/22 is not reproducible from its own recorded command (name the D1 anchor rule)",
+    "depth": "JAXIS.md (axis synthesizer) recommends harmed (bounded) on the documentation-parity + governance sub-case surface, with transition to improved (bounded) if repairs R1-R3 land at closure; admission 'repair-then-admit' (alternative: admit recording depth harmed + R1-R4 as first r90 items). JDEP1/JDEP3/JDEP4 read the artifact surface as improved (bounded); JDEP2 finds one sub-case each of R8/R9/R10 uncovered; H5 leaves harmed-vs-improved to L1. A trade is not an improvement."
+  },
+  "commits": ["lore-shokunin@1b09f3f"],
+  "commit_notes": {
+    "1b09f3f": "work wave (32 luna-max seats), single commit carrying all three claims plus wave evidence. C1: corpus/fixtures/check_bible.py (+54/-14, 435 lines, sha256 e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556; byte-identical to 51b286b + patches/X1-c1.patch per V2.md) + 11 new fixture dirs (5 r89-c1-*, 3 r89-f2-*, 2 r89-fn2-*, r89-inspiration-paraphrase). C2: 4 new excerpts in corpus/fixtures/r87-myth-cluster/ + corpus/knowledge/reference-ledger.md (1 1). C3: corpus/knowledge/r88-sourced-inspiration-decision-table.md (R8/R9/R10 rows + integration boundary) + corpus/knowledge/r89-cross-cluster-contradiction.md (new, 32 lines). Wave evidence: .ufo/waves/round-89/ (32 seat reports + wave-spec.md + 27 patches). git diff --name-only 51b286b..1b09f3f -> 136 files (76 corpus, 60 .ufo), +12330/-15. No push (7 ahead of origin/main)."
+  },
+  "measured_at": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+  "baseline": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94",
+  "measured": {
+    "census_fixture_dirs": "149 -> 160 (+11, 0 removed)",
+    "census_exits": "{0:31, 1:118} -> {0:32, 1:128}",
+    "census_violation_lines": "367 -> 399 (identity: 399-367 = 32 = summed findings of the 11 new dirs)",
+    "tuple_delta": "changed=4 new=11 missing=0 exit_changes=0 violation_count_changes_on_shared_paths=0 stderr_nonempty=0; 145/149 baseline tuples byte-identical; changed dirs kept exact line counts (5/46/6/4)",
+    "changed_tuples": [
+      "r87-probe-multi-invalid (5 -> 5; combined summary now names ambiguous holder + unknown source)",
+      "r87-probe-record-and-chain (46 -> 46; FN-1 wording)",
+      "r88-mixed-stop (6 -> 6; FN-1 wording)",
+      "r88-nonholder-stop (4 -> 4; FN-1 wording)"
+    ],
+    "c1_branch_fixtures": "8 cause-branch fixtures + FN-2 pair replay per READMEs; each names its cause as the first stop with per-record disclosures; valid-key multi-cause fixture emits 'first stop: malformed record (invalid tick); ambiguous holder identity to_holder ...' (JCAL3 9-mutation discrimination matrix: each of the 9 non-control fixtures caught by >=1 mutation; 4 of 8 are not delta-discriminating vs baseline)",
+    "c2_anchors": "14/14 fixed-string anchors hit on the four delivered excerpts (path:line recorded), 7/7 first_appearance pointers resolve, + hymn claim = 22/22 under the D1 grep-anchor rule; baseline 0/14 anchors; r87 cluster replays CLEAN exit 0; contradictions.json untouched",
+    "ledger": "7 table lines = header + separator + 5 data rows, all ncols=4, empty_cells=0; ETCSL row (line 8) carries 'external-only / text not delivered at lore; ...'; diff 1 1; cells 0-2 byte-identical",
+    "c3_rows": "decision table 12 table lines = header + separator + 10 data rows (6 columns each, 0 empty cells, pure append); R8/R9/R10 at lines 22/23/24 with Owner + prospective scoping; JDEP1 D1: the block lacks a header/delimiter row so it renders as pipe text, not a table",
+    "r9_fixture": "corpus/fixtures/r89-inspiration-paraphrase replays CLEAN exit 0; anchor 'moved to the west stair' at ash-ledger-excerpt.md:9 as the map states; delivery mode paraphrase declared in excerpt and map; discrimination is declarative not mechanical (JCOV3)",
+    "r10_demo": "corpus/knowledge/r89-cross-cluster-contradiction.md: 32 lines, 17/17 R10-named elements (JCOV3); pointers resolve to r87 events/sources; live register absent as designed",
+    "boundary_doc_drift": "corpus/knowledge/holder-assessment-boundary.md (blob 1a2f816b) contradicts the delivered checker: cause-table rows 9/10/13 retired strings (:152-153,:156), now-false precedence/combined-clause claim (:169,:219-225), stale r88-fixture 'delivered output' block (:338-348), shifted :NNN anchors, self-contradicting PROPOSAL banner — inventories CB1-R1..R19, E1 DR-1..DR-15; apply-ready replacement delivered unapplied at followup/CB1-boundary-refresh.md",
+    "nullable_holder_probe": "from_holder:null -> 'is not uniquely resolvable (0 raw ... only 0 ...)'; definite chain break downgraded to 'possible ... not a definite identity mismatch'; definite tick violation qualified (this seat's scratch probes; E1 DR-5)"
+  },
+  "delivered_uncommitted": {
+    "l0_questions": "one round-89 operator line appended by follow-up seat K1 (authorized): corrects the r88 kotodama line's obsolete 'absent in both lanes' premise (contract tracked in kotodama-shokunin at 49ac1a5, sha256 e834f503...); UNCOMMITTED (l0-questions.md is M in the working tree)",
+    "followup_dir": ".ufo/waves/round-89/followup/ (36 artifacts, 24 seats) is untracked",
+    "round_record": "LOG.md, SCORECARD.md, SHONEN.md unchanged; drafts at patches/W2-log-r89.proposal.md, patches/W2-scorecard-r89.proposal.md, followup/P3-log-r89.md, followup/P4-shonen.md"
+  },
+  "shonen": "4 boxes: SHONEN.md:5 [ ], :6 [~], :8 [ ], :9 [~]; no [x]; SHONEN.md unchanged this round. Box 6 evidence improved (LOG.md:1699 r87 + LOG.md:1908 r88 records; r89's own LOG entry unlanded). Box 8: P4 proposes [ ] -> [~] (two D1-rule applications demonstrated; r85 replay block reproduces) against H5/CB1/E1/JCAL3/H2 evidence that the current contract doc still contradicts the delivered checker. Box 9 strengthened (PROVINCE byte-identical; all 136 changed paths under corpus/ or .ufo/).",
+  "named_debt": [
+    "D-doc-drift (highest, unrepaired): corpus/knowledge/holder-assessment-boundary.md — retired cause strings, false precedence claim, stale replay block, shifted anchors, PROPOSAL banner contradiction; replacement proposal delivered unapplied (CB1-boundary-refresh.md); E1.md's referenced E1-boundary-update-proposal.md is missing from followup/",
+    "D-null-holder: holder_identity_detail treats from_holder:null as an unresolved identity; downgrades a definite chain break and qualifies a definite tick violation (one-line fix proposed by E1 DR-5)",
+    "D-f2-readmes: r89-f2-dangling-from/-to/-invalid-source-id READMEs quote pre-FN-1 cause strings (JCAL3 Debt 1, V2 finding 2, H5 §1, H2 F3, E1 DR-8)",
+    "D-fn2-readme: both FN-2 READMEs still headed '(integration verification pending)' (V2)",
+    "D-fn1-branch: FN-1's raw-present-but-unindexed half has zero durable fixtures (JCAL1, JCAL3 Debt 3, H2 F6, H5 §5)",
+    "D-no-map: no in-corpus claim-to-excerpt map for r87; 22/22 reproducible only from wave evidence (JCOV4 D1, JCOV1 D1, JDEP4 F5, P4 D1)",
+    "D-r9-prospective: r89 content-touched the r87 cluster with four excerpts that declare no delivery mode (JCOV4 D2, JCOV1 D4, H5 §6, P4 D2)",
+    "D-r9-path: R9 row never names the fixture path (JCOV3 D1)",
+    "D-r8-marker: R8 element marker 'external-only / unverified inspiration' occurs only in the row itself; three external-only variants with no per-surface authority (K1 F2, JCOV2 debts 1-2, JDEP2 D-2/D-3, JDEP4 F6)",
+    "D-jdep2-cases: one uncovered sub-case each in R8/R9/R10; the checker never reads the rows (JDEP2 D-JDEP2-1..6)",
+    "D-jdep1-render: R8-R10 block not in the rendered table; stale column label; R10 evidence-freshness; '(named debt, r89 ledger)' points at a nonexistent LOG entry (JDEP1 D1-D5)",
+    "D-fixtures-readme: corpus/fixtures/README.md has no Round 89 section (11 dirs + 4 excerpts unreferenced); r87 cluster README names none of the four excerpts (JCOV3 D2, JCOV4 D3, H1 F2, H2 F4, H5 §4)",
+    "D-source-prefix-readme: r87-probe-source-prefix/README.md cites stale code lines :306/:308/:310 (delivered :333/:344/:350) (H5 §3)",
+    "D-r10-naming: demo 'r89-cross-cluster-contradiction.md' vs durable register 'cross-cluster-contradictions.md' (JCOV3 D3, E1 DR-15)",
+    "D-capabilities-table: SCORECARD structured table still '— none yet —'; JDEP4's row-2 precondition requires repairing it with row 1 in one edit",
+    "D-spence-row: Spence ledger row sits outside the table (pre-existing, carried)",
+    "D-r8-unexercised: no R8 demo fixture; verbatim/translation/summary modes unexercised (JDEP2, JDEP4 F6)",
+    "D-round-record: LOG/SCORECARD unchanged at 1b09f3f; P3/W2 proposals only",
+    "Process (Q2.md): poll protocol missed widely; one reviewer recommendation overridden without wave-visible record; r88 freeze-then-verify debt held (V2 verified)"
+  ],
+  "notes": "lore r89 (world-bible lane, luna round 3 of 12), 32-seat work wave + follow-up judging wave (62 artifacts at the 2026-10-17T04:37:54-03:00 snapshot cutoff; late arrivals JAXIS/H4/JCAL2/JCAL4/Q1/W1/SE2/P2/P3-final folded in). Single work commit 1b09f3f. C1 lands three amendments to check_bible.py (valid-key combined cause summary, FN-1 raw-vs-index wording, FN-2 qualification) + 11 fixtures; census delta 4 changed + 11 new of 160 with 0 exit/stderr/count changes. C2 lands four in-world excerpts (14/14 grep anchors; 22/22 under the anchor rule) + the ETCSL external-only marker. C3 lands R8/R9/R10 rows + R9 demo fixture + R10 worked example. Candidate harms for L1: the boundary-doc drift (same class r88 repaired; two apply-ready replacements delivered unapplied) and the nullable-holder misclassification. JAXIS recommends calibration improved (bounded), coverage improved (bounded), depth harmed (bounded) with a transition rule, admission repair-then-admit. Q1's 53-row debt ledger derives the r90 lowest axis = depth. Verdicts PENDING-L1. No push, no registry write, no sibling-repo write. Report: .ufo/reports/round-89/lore.md. Seat report: .ufo/waves/round-89/followup/P1.md."
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "alpha",
+    "first_appearance": "reg-source",
+    "claims": [
+      {
+        "statement": "Alpha opens the register.",
+        "source_id": "reg-source"
+      }
+    ],
+    "notes": [
+      {
+        "statement": "Alpha note, claim-shaped.",
+        "source_id": "reg-source"
+      }
+    ]
+  },
+  {
+    "id": "beta",
+    "first_appearance": "reg-source",
+    "claims": [
+      {
+        "statement": "Beta countersigns the register.",
+        "source_id": "reg-source"
+      }
+    ]
+  }
+]

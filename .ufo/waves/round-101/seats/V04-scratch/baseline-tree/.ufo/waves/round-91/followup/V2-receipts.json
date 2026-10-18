@@ -1,0 +1,102 @@
+{
+ "seat": "V2",
+ "round": 91,
+ "phase": "follow-up",
+ "delivered_head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+ "baseline": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+ "checker": {
+  "path": "corpus/fixtures/check_bible.py",
+  "worktree_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "head_blob_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "a7c6a17_blob_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "e97613c_blob_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+  "c9_watch_pin": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "write_paths_in_source": false
+ },
+ "readme_runs": [
+  {
+   "fixture": "r91-c1-null-chain",
+   "checker": "delivered",
+   "exit": 1,
+   "stderr_bytes": 0,
+   "stdout_sha256": "615dc0564f531352a574ef2f53c48be42f4e53ad1fac4aa88756e4bba2fada5b",
+   "block_match": true
+  },
+  {
+   "fixture": "r91-c1-null-chain",
+   "checker": "e97613c",
+   "exit": 1,
+   "stderr_bytes": 0,
+   "stdout_sha256": "3a337ba4bba9c829f9b2bba9657e61d8838ad491d44c0861fa1d6f9d40e05c89",
+   "block_match": true
+  },
+  {
+   "fixture": "r91-c1-tick-unresolved",
+   "checker": "delivered",
+   "exit": 1,
+   "stderr_bytes": 0,
+   "stdout_sha256": "d754e96f7c01e6fb6eff12168a732d5a6125f428a9207bd74fc49bbdcbb25d88",
+   "block_match": true
+  },
+  {
+   "fixture": "r91-c1-tick-unresolved",
+   "checker": "e97613c",
+   "exit": 1,
+   "stderr_bytes": 0,
+   "stdout_sha256": "71b4ea433d85ba52f11482a5d089c564641702989763ced39d61c5eee3748e85",
+   "block_match": true
+  }
+ ],
+ "census": {
+  "delivered_dirs": 166,
+  "baseline_rows": 164,
+  "unchanged": 164,
+  "changed": 0,
+  "new": 2,
+  "removed": 0,
+  "b1_b2_key_sets_identical": true
+ },
+ "discrimination_full_corpus": {
+  "e97613c_vs_delivered_dirs_differing": 2,
+  "dirs": [
+   "corpus/fixtures/r91-c1-null-chain",
+   "corpus/fixtures/r91-c1-tick-unresolved"
+  ]
+ },
+ "single_gate_revert_probes": {
+  "H_tick_sha256": "8a70aae65d71d7a729361dbe84dbe483cda70c1eb12ef8e8edf2b98053a5d57c",
+  "H_null_sha256": "6c0f56a3d3af5c940db221af5bb923213f158231b69bb4313a8118bea72c88c6",
+  "H_tick_dirs_flipped": [
+   "corpus/fixtures/r91-c1-tick-unresolved"
+  ],
+  "H_null_dirs_flipped": [
+   "corpus/fixtures/r91-c1-null-chain"
+  ],
+  "H_tick_output_equals_e97613c_readme_block": true,
+  "H_null_output_equals_e97613c_readme_block": true
+ },
+ "readme_line_check": {
+  "r91-c1-null-chain": {
+   "lines": 33,
+   "claims_verified": 9,
+   "discrepancies": 0
+  },
+  "r91-c1-tick-unresolved": {
+   "lines": 37,
+   "claims_verified": 8,
+   "discrepancies": 0
+  }
+ },
+ "wait_checks": [
+  "2026-10-17T08:34:48-03:00",
+  "2026-10-17T08:35:48-03:00"
+ ],
+ "scratch": {
+  "dir": "/tmp/v2-r91",
+  "swept": true
+ },
+ "writes": [
+  "lore-shokunin/.ufo/waves/round-91/followup/V2.md",
+  "lore-shokunin/.ufo/waves/round-91/followup/V2-receipts.json"
+ ]
+}

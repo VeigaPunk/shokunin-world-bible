@@ -1,0 +1,4 @@
+try=1 ts=2026-10-17 22:01:01 -0300 dir=yes tl=yes ev=0 src=yes note=0 report=no
+try=2 ts=2026-10-17 22:01:21 -0300 dir=yes tl=yes ev=1 src=yes note=1 report=no
+try=3 ts=2026-10-17 22:01:41 -0300 dir=yes tl=yes ev=1 src=yes note=1 report=yes
+HIT try=3 ts=2026-10-17 22:01:41 -0300

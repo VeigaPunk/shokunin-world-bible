@@ -1,0 +1,46 @@
+{
+  "case_id": "digest_newline_entities.json",
+  "expected_exit": 2,
+  "expected_ids": [
+    "DIGEST-MISMATCH"
+  ],
+  "mode": "verify",
+  "names_file": "entities.json",
+  "runs": [
+    {
+      "repeat": 1,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 2,
+      "finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "results": [
+        "RESULT ERROR"
+      ],
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d938eefd5dc106154b3630015c055b3cadb359c251fdb7e4f8fb00ceea2036c5 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457e41d31d3c78cdde591e532dc04083561d223705cb5d334d945885624242c3); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    },
+    {
+      "repeat": 2,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 2,
+      "finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "results": [
+        "RESULT ERROR"
+      ],
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d938eefd5dc106154b3630015c055b3cadb359c251fdb7e4f8fb00ceea2036c5 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457e41d31d3c78cdde591e532dc04083561d223705cb5d334d945885624242c3); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    }
+  ],
+  "ids_stable": true,
+  "output_byte_stable": true,
+  "ok": true
+}

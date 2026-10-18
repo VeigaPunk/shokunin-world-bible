@@ -1,0 +1,21 @@
+--- a/corpus/fixtures/check_bible.py
++++ b/corpus/fixtures/check_bible.py
+@@ -201,6 +201,18 @@
+             expected_keys = {'tick', 'from_holder', 'to_holder', 'source_id'}
+             if set(record) != expected_keys:
+                 errors.append(f'{record_label}: expected exactly tick, from_holder, to_holder, source_id')
++                ambiguous_holder_references = [
++                    (field, record[field])
++                    for field in ('to_holder', 'from_holder')
++                    if isinstance(record.get(field), str)
++                    and entity_id_counts.get(record[field], 0) > 1
++                ]
++                if ambiguous_holder_references:
++                    cause = ', '.join(
++                        f'{field} {holder_id!r}'
++                        for field, holder_id in ambiguous_holder_references
++                    )
++                    errors.append(f'{record_label}: ambiguous holder identity {cause} on a rejected record; provenance continuity and tick-order comparisons unassessed from this record')
+                 previous_holder = previous_tick = None
+                 can_check_chain = False
+                 continue

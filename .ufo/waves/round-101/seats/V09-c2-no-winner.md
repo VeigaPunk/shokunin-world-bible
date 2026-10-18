@@ -1,0 +1,48 @@
+# Seat V09 — c2-no-winner (verifier, C2 language + register conventions)
+
+Round 101, lore-shokunin lane. Seat model: `zai-coding-plan/glm-5.3-flash-low`. Baseline: r100 closure `6f86bf2` (wave tree uncommitted). Verified at: 2026-10-18T00:35-03:00. Mandate: poll for U2; hunt `corpus/knowledge/r101-r10-register-first-entry.md` for winner-selection, world-truth, or chronology-authentication language; confirm the register-convention clauses (cluster-local ids, namespace qualification) are respected. All commands run from `/home/vgpnk/Projects/shokunin/lore-shokunin` with `python3`.
+
+## Poll record
+
+Bounded loop `.ufo/waves/round-101/seats/V09-scratch/poll.sh` (20 s spacing, max 40 tries), log `V09-scratch/poll.log`. Artifact first seen `try=33 ts=00:20:46 artifact=yes`; loop logged `try=34 ts=00:21:06 BOTH_PRESENT` and exited 0. Caveat recorded exactly: the loop's `u2report` probe was `ls …/seats/ | grep -qi '^U2'`, which matched the `U2-scratch/` directory, not a report file — `U2-r10-register.md` landed later (present at my 00:35 check). The verification object (the artifact, delivered bytes at 00:20) was present before any verification; no plan was verified.
+
+## Artifact identity
+
+`corpus/knowledge/r101-r10-register-first-entry.md` — sha256 `19d4b23de0d86a4eaae4d00de1a664b70bf9cabb697e4e7da8480ec8f7aa4dc3`, 20,823 bytes, 122 lines, mtime 00:31:08. First read at 20,565 bytes; the file grew 258 bytes mid-verification (00:31:08) via an edit confined to the **Checker limits** bound (L84): the "a per-cluster `CLEAN` is not cross-cluster evidence" quote was re-attributed from `:110` to `r88 table:26`, and `:110`'s actual integration-boundary sentences are now quoted. Both re-checks on the delivered revision: both quoted phrases byte-present in the r88 table line 26 (`True`/`True` via substring check on the parsed line); the `:110` quote matches line 110 verbatim ("R10's proposed corpus-level register is a manual procedure until a corpus-wide validator exists. Do not mark any of those surfaces mechanically verified solely from a clean fixture replay."). This matches U2's own correction #2 (report `U2-r10-register.md:55`). All other checks re-run on the current bytes with identical results.
+
+## Language hunt — CLEAN
+
+Method: lexical screen `V09-scratch/language_screen.py` (three regex groups: winner-selection, world-truth, chronology-auth), every hit printed with line and adjudicated in context. Current revision: 35 hits total; every one is a negation, a byte-exact quotation of delivered corpus text, or receipt language. Representative adjudications:
+
+- Winner-selection: all `winner` tokens are negations or quotes — "No winner, no world-truth assertion, no register entry, no ledger pair" (L25), the r96 excerpt quote "I select no winner between our two accounts." (L49, byte-verified at `r96 fictional-excerpts.md:39`), "no winner is selected" (L76), the r35 precedent quote "Neither wins." (`corpus/fixtures/README.md:761`, verified). The `## Verdict` header (L74) delivers the R10 gate outcome (COMPATIBLE / register gate not met), explicitly non-adjudicating in its own text; benign.
+- World-truth: explicit negations — "no world truth is asserted about whether Evin came to the Chalk Stair, whether non-performance occurred, or whether either account is accurate" (L76); "Compatibility is a relation between two authored accounts, not corroboration and not a world finding" (L80); "As accounts, both depict…" (L33, L66) stays at attribution level. No assertion that any account is true, false, or corroborated.
+- Chronology-auth: explicit negations — "the integer ticks are editorial encodings, not literal JSON wording" (L58), "Tick equality or adjacency is nowhere used as identity or occasion evidence" (L81); the occasion identification rests on the two notes' shared phrase "the agreed bell", not on ticks.
+
+No hit asserts a winner, a world fact, or an authenticated chronology. The language mandate is satisfied.
+
+## Register conventions — respected
+
+- **Cluster-local ids / namespace qualification:** citation-convention (L4) states "Source IDs are cluster-local: compare path-qualified pairs, never bare IDs" citing `r88 table:99-100`; the Namespace scoping bound (L83) uses the pair form `(r95-crossing-aftermath, aru-aftermath-note)` / `(r96-crossing-response, evin-response-note)`. No bare-ID cross-fixture identity claim exists anywhere in the entry; the shared referent is argued as "one path-qualified record carried unchanged" via the byte-identity receipt, not name equality.
+- **Non-conflict kept out of the register:** the R10 appendix admits only incompatible assertions to `corpus/knowledge/cross-cluster-contradictions.md`; the entry demonstrates compatibility, so it creates no register entry, and I independently confirmed the register file is absent (`test` → false; `ls` → "No such file or directory"). No `contradictions.json` pair added (both remain `[]`, parsed). Status `unresolved` is explicitly not used (L72). The document states it is "a knowledge record of the examination, not an append to that register" (L12).
+- **Recorded, not normalized variance:** the arc READMEs use `## Namespace and occasion comparison` rather than the r90 appendix's `## R10 comparison outcomes` heading; the entry records this variance and edits no README (L118). Heading verified at `:5` in all three READMEs.
+
+## Byte-level verification (independent, this seat)
+
+Harness `V09-scratch/verify_quotes.py` (~35 assertions against delivered files; re-run on the final revision). PASS results include: r95 excerpt quote L26-29 and r96 excerpt quote L37-40 byte-exact; r94 minute sentence at `:19` and the ninth-bell/tick-10 line at `:20` (entry's L58 paraphrase matches); `relations.json#/0` value exact; relation byte-identity 7/7 (`c279254bc7de0636`, 139 bytes each, independently recomputed); claim pointers `r95 timeline.json#/3` and `r96 timeline.json#/4` parsed exactly as recorded; prefix chain r94⊂r95⊂r96 (`startswith` True/True); both notes present in the r100 snapshot at lines 26/37; `contradictions.json` = `[]` in both clusters; source-id line numbers (r95 `:21`, r96 `:27`, r94 `:15`); `r88:26` (both quotes), `:90-92` (comparison-outcomes clause), `:97`, `:110`, `LOG.md:2656-2658` (r93 negative case), `fixtures/README.md:761`, r35 ledger (`bell7-location-reports`, both claim fields `place_id`, `timeline.json#/2-3`), r89 `:5` (explicitly hypothetical), r93 worked-example ranges. Initial-run FAILs were all checker-side needle bugs (hyphenation "tick-10", case, nested `claim_a.field`), re-adjudicated as entry-correct.
+
+## Findings (recorded exactly; none defeats the mandate)
+
+1. **Witnessed self-repair during verification** (00:31:08): the L84 Checker-limits re-attribution described above. Matches U2's declared correction; no hidden rewrite — the correction is dated-append style and the rest of the file is unchanged (headings and all receipts identical).
+2. **`r94 README.md:13` cited twice (L58, L81) for the "editorial encodings" clause; the clause is at line 11.** Verified: `grep -n editorial corpus/fixtures/r94-paired-crossing/README.md` → line 11 ("The integer ticks and event-ID edges in `timeline.json` are editorial encodings of the excerpt's tick labels and stated order/dependence, not literal JSON wording in the minute."); line 13 is the `first_appearance` paragraph. Off-by-2 locator on a paraphrase (not a quote), twice delivered; U2's citation-check harness covers quoted lines only, so it did not catch this, and U2's own report (L13) repeats the `:13` locator. Content is accurate; locator is wrong.
+3. **Range-tail truncations on r88 citations:** the gate quote cited `:93-94` (L18, L68) completes on `:95` (the destination-path + `status unresolved` tail); the namespace clause cited `:99-100` (L18, L83) has its `(cluster-relative path, source_id)` pair form on `:101`. Start lines correct and anchoring unambiguous; range ends short by one line.
+4. U2's correction #1 (r96 README quote) is confirmed fixed in the delivered revision: L54 now cites `README.md:9`, and the phrase "records only Evin's second account of the same occasion" is byte-present at that line.
+
+## Conformance with C2 as declared (LOG.md:3477-3486)
+
+The entry does what the declaration says: applies the R10 procedure to the arc's two occasion-sharing accounts, demonstrates the shared referent (the r94 crossing-scoped agreement relation, byte-identical across r94–r100), identifies field (performance status at the shared occasion) and occasion (the agreed bell), shows the two claims COMPATIBLE, records "examined, shared referent demonstrated, no conflict, both claims preserved" — with no canon, testimony, or chronology inference and no winner chosen. Byte-ownership respected: `git status --porcelain` shows only U1's four owned tool/doc files modified plus the untracked owned entry; no foreign corpus mutation from this seat's observation point.
+
+## Scope and limits
+
+This seat verified U2's artifact only; C1/C3 were not verified (other seats own them). Apart from U2's producer report (read at the end, for cross-reference of the witnessed edit), no other seat report was read or relied on. My scratch files: `V09-scratch/{poll.sh,poll.log,language_screen.py,verify_quotes.py}`. No commits, no pushes, no network, no nested agents.
+
+**Bottom line:** PASS — the delivered entry contains no winner-selection, world-truth, or chronology-authentication language and respects the cluster-local/namespace register conventions and the non-conflict-stays-out-of-the-register rule; recorded findings are locator imprecisions only (`r94 README.md:13`→`:11` twice delivered; two r88 range-tail truncations), none substantively misleading.

@@ -1,0 +1,4 @@
+===== bible-tamper =====
+EXIT=0
+--- stdout ---
+CLEAN: schema, citations, relations, timeline; 0 violations

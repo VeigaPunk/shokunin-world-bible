@@ -1,0 +1,28 @@
+== control exit=0 PASS
+    check ok: unmutated delivered fixture is CLEAN exit 0
+== neg-tick exit=1 PASS
+    VIOLATION: timeline[4].tick: must be nonnegative
+    VIOLATION: timeline[5].tick: must be nonnegative
+    check ok: exactly 2 must-be-nonnegative lines
+    check ok: no double-booked for tick -1 occupancy
+== neg-dep exit=1 PASS
+    VIOLATION: timeline[4].tick: must be nonnegative
+    VIOLATION: timeline[5].tick: must be nonnegative
+    check ok: exactly 2 must-be-nonnegative lines
+    check ok: no timeline inversion across negative ticks
+== missing-actor exit=1 PASS
+    VIOLATION: timeline[4].entity_id: dangling entity 'unlisted'
+    VIOLATION: timeline[5].entity_id: dangling entity 'unlisted'
+    check ok: exactly 2 dangling-actor lines
+    check ok: no double-booked for missing actor
+== missing-place exit=1 PASS
+    VIOLATION: timeline[4].place_id: dangling entity 'unlisted-place'
+    check ok: exactly 1 dangling-place line
+    check ok: no double-booked when a place id is missing
+== wrong-kind exit=1 PASS
+    VIOLATION: timeline[4].place_id: not a place 'evin'
+    VIOLATION: timeline[6]: double-booked 'aru' at tick 13 in timeline[5] ('quiet-rise') and 'salt-court'
+    check ok: one not-a-place line for 'evin'
+    check ok: one double-booked between the two valid places, wrong-kind excluded
+    check ok: exactly 2 violation lines total
+ALL_OK

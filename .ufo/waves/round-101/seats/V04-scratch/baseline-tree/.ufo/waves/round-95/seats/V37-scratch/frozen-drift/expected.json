@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "entities.json": "d607f6df3eab856c7e2960f37c8f0b2ce701f1c99535dcf480632bbb33bf0714",
+    "relations.json": "32b79cd4d02793ce4c1f600522fb3810ffdbbad173b5707975fe9197ebf6e46d",
+    "timeline.json": "69da079eb29104cf4da04942ec3df79155569aa61d64fec00cb4aa7ffe2417e2",
+    "claim-excerpt-map.md": "463e40fce6626bf4bb291d7a6c1600b646fdf99012c6647007f87bf1ae45253a"
+  },
+  "expected": {
+    "exit_code": 1,
+    "result": "FAIL",
+    "finding_ids": [
+      "schema_drift"
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+===== 23:31:57Z round_elapsed_min=4
+reports: total=4 S=1 V=3
+absent_V: V01 V02 V03 V04 V05 V06 V07 V08 V09 V10 V12 V13 V14 V16 V17 V18 V19 V20 V21 V23 V24 V25 V26 V27 V28 V29 V30 V31 V32 V33 V34 V35 V36 V37 V38 V39 V40 V41 V42 V43 V44 V45 V46 V47 V48 V49 V50 V51 V52 V53 V54 V55 V56 V57 V58 V59 
+absent_S: S1 S2 S4 S5 
+live_poll_procs: 77
+[V58] try 7 23:31:38 nonself=4 total=4
+[V30] POLL t=20:31:52 n=11 fixture_files=10 note=0 r95note=1 r96note=1 r95map=1 tool=1 contract=1 tread=0 reports=4 [S3-fixture-author.md,V11-c3-support-map.md,V15-c3-r95-repai
+[V43] try=10 23:31:57 missing: V19-REPORT REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5 corpus/knowledge/r98-clerk-scope-note.md
+[V49] try 7 23:31:46 missing: CONTRACT-PINS REPORT:S1 REPORT:V26
+[V24] T=20:31:43 n=11 reports=4 [S3-fixture-author.md V11-c3-support-map.md V15-c3-r95-repair.md V22-doc-parity.md ] r98fix=10 sig=b362bf37 note=0 tools=1a01fd17:3a940a9f:8678a
+[V40] try=6 t=20:31:52 report=none tool=changed contract=changed
+[V56] try 11 20:31:52 missing: corpus/knowledge/r98-clerk-scope-note.md
+[V36] 20:31:42 try=9 reports=4 producers=1 r98fix=10 know=0 freeze=MOD parent_md=0
+[V59] try=11 t=23:31:46 reports=4 missArtifacts:[ knowledge/r98-clerk-scope-note.md ] missProducerReports:[ S1 S2 S4 S5 ]
+[V27] 20:31:48 FIXTURE_PRESENT try=11
+[V20] try 12 23:31:47 reports=4 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V15-c3-r95-repair.md S3-fixture-author.md V22-doc-parity.md V11-c3-support-map.md 
+===== 23:35:00Z round_elapsed_min=7
+reports: total=20 S=4 V=16
+absent_V: V01 V02 V03 V04 V05 V07 V08 V13 V17 V18 V19 V20 V21 V23 V24 V25 V26 V27 V28 V29 V30 V31 V32 V33 V34 V35 V36 V37 V39 V40 V41 V42 V43 V48 V49 V50 V51 V52 V53 V54 V56 V57 V58 
+absent_S: S1 
+live_poll_procs: 59
+[V58] try 17 23:34:58 nonself=20 total=20
+[V30] POLL2 t=20:34:43 n=1 S1=0 S2=1
+[V43] try=19 23:34:57 missing: V19-REPORT REPORT:S1
+[V49] try 16 23:34:46 missing: REPORT:S1 REPORT:V26
+[V24] T=20:34:44 n=20 reports=18 [S2-tools-docs.md S3-fixture-author.md S4-fixture-docs.md S5-knowledge-notes.md V09-c3-checker.md V10-c3-inherited-equality.md V11-c3-support-m
+[V40] try=15 t=20:34:52 report=none tool=changed contract=changed
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:34:42 try=18 reports=18 producers=4 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] try=20 t=23:34:46 reports=18 missArtifacts:[ ] missProducerReports:[ S1 ]
+[V27] 20:34:48 FIXTURE_PRESENT try=20
+[V20] try 21 23:34:47 reports=18 missing: REPORT:S1
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V22-doc-parity.md V47-support-regression.md V59-late-bookkeeper.md S2-tools-docs.md V06-c2-v46-discharge.md V14-c3-anti-overclaim.md 
+===== 23:37:30Z round_elapsed_min=9
+reports: total=37 S=5 V=32
+absent_V: V08 V17 V18 V19 V20 V21 V24 V25 V28 V29 V30 V31 V32 V33 V34 V35 V36 V37 V40 V41 V43 V48 V49 V51 V52 V57 V58 
+absent_S: 
+live_poll_procs: 19
+[V58] try 24 23:37:18 nonself=36 total=36
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] try=26 23:37:17 missing: V19-REPORT
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] T=20:37:25 n=28 reports=37 [S1-freeze-hygiene.md S2-tools-docs.md S3-fixture-author.md S4-fixture-docs.md S5-knowledge-notes.md V01-c1-mismatch-pin.md V02-c1-legacy-migra
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:37:22 try=26 reports=36 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] try=28 t=23:37:26 reports=37 missArtifacts:[ ] missProducerReports:[ ]
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] PRODUCERS-ALL-PRESENT try 29 23:37:27 reports=37
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V23-operability.md V05-c2-chain-six.md V26-verdict-coverage.md V27-verdict-depth.md V39-whole-claim-replica-2.md V07-c2-refreeze-scope.md 
+===== 23:40:30Z round_elapsed_min=12
+reports: total=53 S=5 V=48
+absent_V: V20 V21 V24 V25 V31 V32 V33 V36 V51 V57 V58 
+absent_S: 
+live_poll_procs: 18
+[V58] try 33 23:40:19 nonself=53 total=53
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] ALL-PRESENT try=28 23:37:57
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] T=20:40:26 n=37 reports=53 [S1-freeze-hygiene.md S2-tools-docs.md S3-fixture-author.md S4-fixture-docs.md S5-knowledge-notes.md V01-c1-mismatch-pin.md V02-c1-legacy-migra
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:40:22 try=35 reports=53 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] try=37 t=23:40:26 reports=53 missArtifacts:[ ] missProducerReports:[ ]
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] PRODUCERS-ALL-PRESENT try 38 23:40:27 reports=53
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V43-pins-c9.md V28-verdict-operability.md V37-census-replica-2.md V48-cross-seat-audit.md V49-crosscheck-coverage.md V41-cross-gates.md 
+===== 23:43:38Z round_elapsed_min=16
+reports: total=57 S=5 V=52
+absent_V: V20 V31 V32 V36 V51 V57 V58 
+absent_S: 
+live_poll_procs: 9
+[V58] try 42 23:43:19 nonself=57 total=57
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] ALL-PRESENT try=28 23:37:57
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] POLL_END 2026-10-17 20:41:46 -0300 tries=40
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:43:22 try=44 reports=57 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] POLL-TERMINAL 23:43:06
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] POLL-TIMEOUT 23:41:27 reports=56
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V33-debt.md V24-adjacency.md V59-late-bookkeeper.md V21-freshness.md V25-verdict-calibration.md V43-pins-c9.md 
+===== 23:46:41Z round_elapsed_min=19
+reports: total=58 S=5 V=53
+absent_V: V20 V31 V36 V51 V57 V58 
+absent_S: 
+live_poll_procs: 7
+[V58] try 52 23:46:39 nonself=58 total=58
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] ALL-PRESENT try=28 23:37:57
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] POLL_END 2026-10-17 20:41:46 -0300 tries=40
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:46:22 try=53 reports=58 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] POLL-TERMINAL 23:43:06
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] POLL-TIMEOUT 23:41:27 reports=56
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V59-late-bookkeeper.md V32-shonen-format.md V33-debt.md V24-adjacency.md V21-freshness.md V25-verdict-calibration.md 
+===== 23:49:40Z round_elapsed_min=22
+reports: total=58 S=5 V=53
+absent_V: V20 V31 V36 V51 V57 V58 
+absent_S: 
+live_poll_procs: 8
+[V58] try 61 23:49:39 nonself=58 total=58
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] ALL-PRESENT try=28 23:37:57
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] POLL_END 2026-10-17 20:41:46 -0300 tries=40
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:49:22 try=62 reports=58 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] POLL-TERMINAL 23:43:06
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] POLL-TIMEOUT 23:41:27 reports=56
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V59-late-bookkeeper.md V32-shonen-format.md V33-debt.md V24-adjacency.md V21-freshness.md V25-verdict-calibration.md 
+===== 23:52:42Z round_elapsed_min=25
+reports: total=58 S=5 V=53
+absent_V: V20 V31 V36 V51 V57 V58 
+absent_S: 
+live_poll_procs: 7
+[V58] try 70 23:52:39 nonself=58 total=58
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] ALL-PRESENT try=28 23:37:57
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] POLL_END 2026-10-17 20:41:46 -0300 tries=40
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:52:22 try=71 reports=58 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] POLL-TERMINAL 23:43:06
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] POLL-TIMEOUT 23:41:27 reports=56
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V59-late-bookkeeper.md V32-shonen-format.md V33-debt.md V24-adjacency.md V21-freshness.md V25-verdict-calibration.md 
+===== 23:55:49Z round_elapsed_min=28
+reports: total=58 S=5 V=53
+absent_V: V20 V31 V36 V51 V57 V58 
+absent_S: 
+live_poll_procs: 8
+[V58] try 79 23:55:39 nonself=58 total=58
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] ALL-PRESENT try=28 23:37:57
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] POLL_END 2026-10-17 20:41:46 -0300 tries=40
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:55:42 try=81 reports=58 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] POLL-TERMINAL 23:43:06
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] POLL-TIMEOUT 23:41:27 reports=56
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V59-late-bookkeeper.md V32-shonen-format.md V33-debt.md V24-adjacency.md V21-freshness.md V25-verdict-calibration.md 
+===== 23:59:17Z round_elapsed_min=31
+reports: total=58 S=5 V=53
+absent_V: V20 V31 V36 V51 V57 V58 
+absent_S: 
+live_poll_procs: 7
+[V58] try 89 23:58:59 nonself=58 total=58
+[V30] S1S2-PRESENT t=20:35:23 n=3
+[V43] ALL-PRESENT try=28 23:37:57
+[V49] ALL-PRESENT at try 24 23:37:26
+[V24] POLL_END 2026-10-17 20:41:46 -0300 tries=40
+[V40] POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+[V56] ALL-PRESENT try=13 20:32:32
+[V36] 20:59:02 try=91 reports=58 producers=5 r98fix=10 know=1 freeze=MOD parent_md=0
+[V59] POLL-TERMINAL 23:43:06
+[V27] 20:36:48 FIXTURE_PRESENT try=26
+[V20] POLL-TIMEOUT 23:41:27 reports=56
+[V45] try 2 20:28:36 ALL-PRESENT
+newest_reports: V59-late-bookkeeper.md V32-shonen-format.md V33-debt.md V24-adjacency.md V21-freshness.md V25-verdict-calibration.md 

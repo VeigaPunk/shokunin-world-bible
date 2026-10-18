@@ -1,0 +1,202 @@
+{
+ "baseline": "87779a00f25bd1855ede479e490123843e5f056e",
+ "candidate": "4780cf088ab338f42b85739517aa237c968c4aea",
+ "raw_pointer_census": {
+  "r87-myth-cluster": {
+   "bijective_row_pointer": false,
+   "covered_by_rows": 20,
+   "missing": [
+    "entities[2].claims[0]",
+    "entities[2].first_appearance"
+   ],
+   "raw_by_source": {
+    "entities[0].claims[0]": "gate-witness",
+    "entities[0].first_appearance": "gate-witness",
+    "entities[1].claims[0]": "dune-register",
+    "entities[1].first_appearance": "dune-register",
+    "entities[2].claims[0]": "lowwater-hymn",
+    "entities[2].first_appearance": "lowwater-hymn",
+    "entities[3].claims[0]": "dune-register",
+    "entities[3].first_appearance": "dune-register",
+    "entities[4].claims[0]": "shell-charter",
+    "entities[4].first_appearance": "shell-charter",
+    "entities[5].claims[0]": "shell-charter",
+    "entities[5].first_appearance": "shell-charter",
+    "entities[6].claims[0]": "tide-bell-tally",
+    "entities[6].first_appearance": "tide-bell-tally",
+    "relations[0]": "shell-charter",
+    "relations[1]": "shell-charter",
+    "relations[2]": "shell-charter",
+    "relations[3]": "dune-register",
+    "timeline[0]": "gate-witness",
+    "timeline[1]": "tide-bell-tally",
+    "timeline[2]": "gate-witness",
+    "timeline[3]": "dune-register"
+   },
+   "raw_count": 22,
+   "row_to_pointer": {
+    "E1": [
+     "entities[0].claims[0]",
+     "entities[0].first_appearance"
+    ],
+    "E2": [
+     "entities[1].claims[0]",
+     "entities[1].first_appearance"
+    ],
+    "E3": [
+     "entities[3].claims[0]",
+     "entities[3].first_appearance"
+    ],
+    "E4": [
+     "entities[4].claims[0]",
+     "entities[4].first_appearance"
+    ],
+    "E5": [
+     "entities[5].claims[0]",
+     "entities[5].first_appearance"
+    ],
+    "E6": [
+     "entities[6].claims[0]",
+     "entities[6].first_appearance"
+    ],
+    "ID": [],
+    "R1": [
+     "relations[0]"
+    ],
+    "R2": [
+     "relations[1]"
+    ],
+    "R3": [
+     "relations[2]"
+    ],
+    "R4": [
+     "relations[3]"
+    ],
+    "T1": [
+     "timeline[0]"
+    ],
+    "T2": [
+     "timeline[1]"
+    ],
+    "T3": [
+     "timeline[2]"
+    ],
+    "T4": [
+     "timeline[3]"
+    ]
+   }
+  },
+  "r88-m3-maya-cluster": {
+   "bijective_row_pointer": true,
+   "covered_by_rows": 10,
+   "missing": [],
+   "raw_by_source": {
+    "entities[0].claims[0]": "paired-clock",
+    "entities[0].first_appearance": "paired-clock",
+    "entities[1].claims[0]": "paired-clock",
+    "entities[1].first_appearance": "paired-clock",
+    "entities[2].claims[0]": "paired-clock",
+    "entities[2].first_appearance": "paired-clock",
+    "entities[3].claims[0]": "paired-clock",
+    "entities[3].first_appearance": "paired-clock",
+    "timeline[0]": "paired-clock",
+    "timeline[1]": "paired-clock"
+   },
+   "raw_count": 10,
+   "row_to_pointer": {
+    "E1": [
+     "entities[0].claims[0]"
+    ],
+    "E2": [
+     "entities[1].claims[0]"
+    ],
+    "E3": [
+     "entities[2].claims[0]"
+    ],
+    "E4": [
+     "entities[3].claims[0]"
+    ],
+    "ID": [],
+    "P1": [
+     "entities[0].first_appearance"
+    ],
+    "P2": [
+     "entities[1].first_appearance"
+    ],
+    "P3": [
+     "entities[2].first_appearance"
+    ],
+    "P4": [
+     "entities[3].first_appearance"
+    ],
+    "T1": [
+     "timeline[0]"
+    ],
+    "T2": [
+     "timeline[1]"
+    ]
+   }
+  },
+  "r93-m2-kojiki-cluster": {
+   "bijective_row_pointer": true,
+   "covered_by_rows": 12,
+   "missing": [],
+   "raw_by_source": {
+    "entities[0].claims[0]": "m2-record-archive",
+    "entities[0].first_appearance": "m2-record-archive",
+    "entities[1].claims[0]": "m2-record-archive",
+    "entities[1].first_appearance": "m2-record-archive",
+    "entities[2].claims[0]": "m2-record-archive",
+    "entities[2].first_appearance": "m2-record-archive",
+    "entities[3].claims[0]": "m2-record-archive",
+    "entities[3].first_appearance": "m2-record-archive",
+    "relations[0]": "m2-record-archive",
+    "relations[1]": "m2-record-archive",
+    "timeline[0]": "m2-record-archive",
+    "timeline[1]": "m2-record-archive"
+   },
+   "raw_count": 12,
+   "row_to_pointer": {
+    "E1": [
+     "entities[0].first_appearance"
+    ],
+    "E10": [
+     "relations[1]"
+    ],
+    "E11": [
+     "timeline[0]"
+    ],
+    "E12": [
+     "timeline[1]"
+    ],
+    "E2": [
+     "entities[0].claims[0]"
+    ],
+    "E3": [
+     "entities[1].first_appearance"
+    ],
+    "E4": [
+     "entities[1].claims[0]"
+    ],
+    "E5": [
+     "entities[2].first_appearance"
+    ],
+    "E6": [
+     "entities[2].claims[0]"
+    ],
+    "E7": [
+     "entities[3].first_appearance"
+    ],
+    "E8": [
+     "entities[3].claims[0]"
+    ],
+    "E9": [
+     "relations[0]"
+    ],
+    "ID": []
+   }
+  }
+ },
+ "seat": "F18",
+ "work": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e"
+}

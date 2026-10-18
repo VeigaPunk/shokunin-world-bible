@@ -1,0 +1,8 @@
+[
+  {
+    "from": "quay-guild",
+    "to": "bell-wardens",
+    "type": "allied_with",
+    "source_id": "harbor-compact"
+  }
+]

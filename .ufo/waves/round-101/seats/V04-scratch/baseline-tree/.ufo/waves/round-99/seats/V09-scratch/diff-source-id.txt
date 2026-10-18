@@ -1,0 +1,10 @@
+--- base/timeline.json
++++ source-id/timeline.json
+@@ -49,6 +49,6 @@
+       "aftermath-missing-evin"
+     ],
+     "description": "Evin reports being at Salt Court through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved.",
+-    "source_id": "evin-response-note"
++    "source_id": "paired-clock"
+   }
+ ]

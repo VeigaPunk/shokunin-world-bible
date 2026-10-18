@@ -1,0 +1,21 @@
+[
+  {
+    "id": "departure",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "arrival",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira reaches the tower.",
+    "source_id": "courier-log"
+  }
+]

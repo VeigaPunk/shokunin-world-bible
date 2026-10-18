@@ -1,0 +1,31 @@
+MIRROR_BASE 0
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+RESULT PASS
+TAMPER entities.json            exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest ad2e89633984b442ec70ce9c9604444c84992be0a1d59920089a17062e8ed33f != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457
+TAMPER relations.json           exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest a7faed8bc46bd23dbd3d6ca409fa02dd0e614e9ee9bcaa7e55e15a589b740f58 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: relations.json (sha256 c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9 -> 81
+TAMPER timeline.json            exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest d8079cd47135901304de8cccd75a347ae22297defc91dbbb9d43b759af149567 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: timeline.json (sha256 eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af -> d31
+TAMPER sources.json             exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest 8c6970fbb9d03fcf3ad230b1e551c9e2c0b334651efeeaa7e124c89681e46535 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: sources.json (sha256 32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3 -> dbc1
+TAMPER contradictions.json      exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest ab3d05303db471923a8a2bdb7fd66223fd9e4356775ec6057f6dd4cf61780272 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: contradictions.json (sha256 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 
+TAMPER README.md                exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest 3322eda76a6885f76f251bb35651ada8dce3f853f344d653c43acf6843416f70 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> d2a1d65
+TAMPER claim-excerpt-map.md     exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest 466c8f7b77cf44090e9b5c81569612a7df16dd0696f81666d23e838dca8d5eb0 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba
+TAMPER fictional-excerpts.md    exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest 3e992626a155faba83490f4810d2aa0b13bd1e51e2153e98e1e7af86c925beab != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666d
+TAMPER inspiration-note.md      exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest 02fc00a950188f1433e2302946b41183c42b95df27dbe25730a579dfa2ffa20c != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 
+TAMPER source-excerpt.md        exit=2 names=True
+  FINDING DIGEST-MISMATCH: content digest b413f00ea52299788617c551091e5fe6514935be43c6cf32967cf629ce22541a != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd ->
+NEEDLE_COUNT 1
+PROSE_STRIP exit 2
+  FINDING DIGEST-MISMATCH: content digest c811669ea2534d48122939e270599376160b8f5936eecb2e766c141464b6808b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79
+  GATE check_bible.py exit=0 ['CLEAN: schema, citations, relations, timeline; 0 violations']
+  GATE support_check.py exit=1 ['FAIL: J14: source-support anchor missing', 'RESULT FAIL']
+  GATE map_obligations.py exit=0 ['INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22', 'RESULT PASS']
+MIRROR_RESTORED 0 ['RESULT PASS']

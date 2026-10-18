@@ -1,0 +1,348 @@
+{
+  "seat": "H3",
+  "delivered_revision": "2ea9ef1",
+  "scratch_tree": "/tmp/r88-H3",
+  "checker_sha256": "dcacffd6981e1af5f60b31bed20c6eccce25970444088e4ee2e30e3249411911",
+  "cases": [
+    {
+      "mutation": "tick-order-inversion",
+      "base_fixture": "r87-masked-break-to-ambiguous",
+      "defect_record": "entities[3].provenance[2]",
+      "fixture": "corpus/fixtures/r88-H3-tick-order-inversion",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-tick-order-inversion",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\n5 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "5 violation(s); no canon changed",
+      "defect_reported": false,
+      "defect_report_matches": [],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity to_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 defect spec verbatim (V4 semantics)"
+    },
+    {
+      "mutation": "holder-swap",
+      "base_fixture": "r87-masked-break-to-ambiguous",
+      "defect_record": "entities[3].provenance[2]",
+      "fixture": "corpus/fixtures/r88-H3-holder-swap",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-holder-swap",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\n5 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "5 violation(s); no canon changed",
+      "defect_reported": false,
+      "defect_report_matches": [],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity to_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 defect spec verbatim"
+    },
+    {
+      "mutation": "source-id-removal",
+      "base_fixture": "r87-masked-break-to-ambiguous",
+      "defect_record": "entities[3].provenance[2]",
+      "fixture": "corpus/fixtures/r88-H3-source-id-removal",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-source-id-removal",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: expected exactly tick, from_holder, to_holder, source_id\n6 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "6 violation(s); no canon changed",
+      "defect_reported": true,
+      "defect_report_matches": [
+        "provenance\\[2\\]: expected exactly tick, from_holder, to_holder, source_id"
+      ],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity to_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 defect spec verbatim"
+    },
+    {
+      "mutation": "duplicate-record",
+      "base_fixture": "r87-masked-break-to-ambiguous",
+      "defect_record": "entities[3].provenance[3]",
+      "fixture": "corpus/fixtures/r88-H3-duplicate-record",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-duplicate-record",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\n6 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "6 violation(s); no canon changed",
+      "defect_reported": false,
+      "defect_report_matches": [],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]",
+        "entities[3].provenance[3]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity to_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 defect spec verbatim"
+    },
+    {
+      "mutation": "unknown-source",
+      "base_fixture": "r87-masked-break-to-ambiguous",
+      "defect_record": "entities[3].provenance[2]",
+      "fixture": "corpus/fixtures/r88-H3-unknown-source",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-unknown-source",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2].source_id: unknown in-world source 'ghost-source'\n6 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "6 violation(s); no canon changed",
+      "defect_reported": true,
+      "defect_report_matches": [
+        "provenance\\[2\\]\\.source_id: unknown in-world source .ghost-source."
+      ],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity to_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 defect spec verbatim"
+    },
+    {
+      "mutation": "post-stop-extra-record",
+      "base_fixture": "r87-masked-break-from-ambiguous",
+      "defect_record": "entities[3].provenance[3]",
+      "fixture": "corpus/fixtures/r88-H3-post-stop-extra-record",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-post-stop-extra-record",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3].to_holder: dangling entity 'rill'\nVIOLATION: entities[3].provenance[3].from_holder: dangling entity 'tala'\nVIOLATION: entities[3].provenance[3].source_id: unknown in-world source 'f2-moon-ledger'\n9 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "9 violation(s); no canon changed",
+      "defect_reported": true,
+      "defect_report_matches": [
+        "provenance\\[3\\]\\.from_holder: dangling entity .tala.",
+        "provenance\\[3\\]\\.to_holder: dangling entity .rill.",
+        "provenance\\[3\\]\\.source_id: unknown in-world source .f2-moon-ledger."
+      ],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]",
+        "entities[3].provenance[3]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity from_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 defect spec verbatim (V4 literal record; cast has no tala/rill/f2-moon-ledger)"
+    },
+    {
+      "mutation": "post-stop-extra-record-cast-adapted",
+      "base_fixture": "r87-masked-break-from-ambiguous",
+      "defect_record": "entities[3].provenance[3]",
+      "fixture": "corpus/fixtures/r88-H3-post-stop-extra-record-cast-adapted",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-post-stop-extra-record-cast-adapted",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\n6 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "6 violation(s); no canon changed",
+      "defect_reported": false,
+      "defect_report_matches": [],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]",
+        "entities[3].provenance[3]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity from_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 cast-adapted twin: appended record individually valid + chain-continuous"
+    },
+    {
+      "mutation": "null-from-holder-mid-chain",
+      "base_fixture": "r87-masked-break-from-ambiguous",
+      "defect_record": "entities[3].provenance[2]",
+      "fixture": "corpus/fixtures/r88-H3-null-from-holder-mid-chain",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-null-from-holder-mid-chain",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'dup' at entities[3].provenance[0]\n5 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "5 violation(s); no canon changed",
+      "defect_reported": false,
+      "defect_report_matches": [],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "disclosure_causes": [
+        "ambiguous holder identity from_holder 'dup'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r87 H3 defect spec verbatim"
+    },
+    {
+      "mutation": "armed-record-tick-inversion",
+      "base_fixture": "r88-shape-ambiguous-armed",
+      "defect_record": "entities[4].provenance[0]",
+      "fixture": "corpus/fixtures/r88-H3-armed-record-tick-inversion",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-armed-record-tick-inversion",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'f1-shape-dup' at entities[4].provenance[0]\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'f1-shape-dup' at entities[4].provenance[0]\n5 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "5 violation(s); no canon changed",
+      "defect_reported": true,
+      "defect_report_matches": [
+        "provenance\\[0\\]: expected exactly tick, from_holder, to_holder, source_id"
+      ],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[4].provenance[0]",
+        "entities[4].provenance[1]"
+      ],
+      "disclosure_causes": [
+        "malformed record (unexpected field set); ambiguous holder identity to_holder 'f1-shape-dup'"
+      ],
+      "disclosure_origins": [
+        "entities[4].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r88 new: armed (shape-invalid+ambiguous) record [0] tick raised to 5 so a naive comparison with [1] (tick 1) would invert; stop must stay armed and disclose"
+    },
+    {
+      "mutation": "armed-record-holder-swap",
+      "base_fixture": "r88-shape-ambiguous-armed",
+      "defect_record": "entities[4].provenance[0]",
+      "fixture": "corpus/fixtures/r88-H3-armed-record-holder-swap",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-armed-record-holder-swap",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[4].provenance[0].from_holder: ambiguous entity 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity from_holder 'f1-shape-dup' at entities[4].provenance[0]\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: malformed record (unexpected field set); ambiguous holder identity from_holder 'f1-shape-dup' at entities[4].provenance[0]\n5 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "5 violation(s); no canon changed",
+      "defect_reported": true,
+      "defect_report_matches": [
+        "provenance\\[0\\]\\.from_holder: ambiguous entity .f1-shape-dup."
+      ],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[4].provenance[0]",
+        "entities[4].provenance[1]"
+      ],
+      "disclosure_causes": [
+        "malformed record (unexpected field set); ambiguous holder identity from_holder 'f1-shape-dup'"
+      ],
+      "disclosure_origins": [
+        "entities[4].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r88 new: armed record [0] holder fields swapped so the ambiguous id moves to from_holder; armed cause must name the correct field"
+    },
+    {
+      "mutation": "nonholder-stop-extra-record",
+      "base_fixture": "r88-nonholder-stop",
+      "defect_record": "entities[3].provenance[3]",
+      "fixture": "corpus/fixtures/r88-H3-nonholder-stop-extra-record",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-nonholder-stop-extra-record",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'f1-nonholder-missing-source'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\n5 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "5 violation(s); no canon changed",
+      "defect_reported": false,
+      "defect_report_matches": [],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]",
+        "entities[3].provenance[3]"
+      ],
+      "disclosure_causes": [
+        "unknown source 'f1-nonholder-missing-source'"
+      ],
+      "disclosure_origins": [
+        "entities[3].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r88 new: append an individually valid, chain-continuous record after a pure non-holder (unknown-source) stop; disclosure is the only possible finding"
+    },
+    {
+      "mutation": "mixed-stop-ambiguity-removal",
+      "base_fixture": "r88-mixed-stop",
+      "defect_record": "entities[5].provenance[None]",
+      "fixture": "corpus/fixtures/r88-H3-mixed-stop-ambiguity-removal",
+      "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-H3-mixed-stop-ambiguity-removal",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[0].source_id: unknown in-world source 'f1-mixed-missing-source'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\n5 violation(s); no canon changed",
+      "stderr": "",
+      "violation_count_line": "5 violation(s); no canon changed",
+      "defect_reported": true,
+      "defect_report_matches": [
+        "provenance\\[0\\]\\.source_id: unknown in-world source .f1-mixed-missing-source."
+      ],
+      "defect_record_disclosed_as_unassessed": true,
+      "disclosure_record_labels": [
+        "entities[5].provenance[0]",
+        "entities[5].provenance[1]",
+        "entities[5].provenance[2]"
+      ],
+      "disclosure_causes": [
+        "unknown source 'f1-mixed-missing-source'"
+      ],
+      "disclosure_origins": [
+        "entities[5].provenance[0]"
+      ],
+      "silent_pass": false,
+      "mutation_note": "r88 new CONTROL: remove the later holder ambiguity; the unknown-source stop at [0] must still be the named first cause and [2] must stay unreported"
+    }
+  ]
+}

@@ -1,0 +1,3413 @@
+{
+  "summary": {
+    "cases": 73,
+    "runs": 146,
+    "matching_cases": 73,
+    "stable_ids": 73,
+    "stable_full_output": 73,
+    "contracts_unchanged": true,
+    "live_inputs_unchanged": true,
+    "exit1_ids": [
+      "ADDITION-DETECTED",
+      "ENDPOINT-CHANGE",
+      "REDUCTION-DETECTED"
+    ],
+    "exit2_ids": [
+      "CONTRACT-INVALID",
+      "DIGEST-MISMATCH",
+      "FILE-MISSING",
+      "FIXTURE-MISSING",
+      "INVALID-ARGUMENTS",
+      "MALFORMED-JSON",
+      "MALFORMED-MODEL",
+      "PATH-MISMATCH",
+      "SCOPE-REFUSED",
+      "SELF-TEST-MISMATCH",
+      "UNPINNED-FIXTURE"
+    ],
+    "failed_case_ids": []
+  },
+  "cases": [
+    {
+      "case_id": "clean_r99",
+      "expected_exit": 0,
+      "expected_ids": [],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 0,
+          "finding_ids": [],
+          "results": [
+            "RESULT PASS"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/clean_r99/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 0,
+          "finding_ids": [],
+          "results": [
+            "RESULT PASS"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_drop_tick15_edge",
+      "expected_exit": 1,
+      "expected_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_drop_tick15_edge/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_drop_tick15_edge/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_drop_tick15_edge/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_drop_tick15_edge/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_add_tick15_edge",
+      "expected_exit": 1,
+      "expected_ids": [
+        "ADDITION-DETECTED"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_tick15_edge/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_tick15_edge/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ADDITION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 8/7; relations 1/1\nFINDING ADDITION-DETECTED: event clerk-lapse-recorded gained depends_on ['v03-phantom']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_tick15_edge/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_tick15_edge/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ADDITION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 8/7; relations 1/1\nFINDING ADDITION-DETECTED: event clerk-lapse-recorded gained depends_on ['v03-phantom']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_remove_tick15_event",
+      "expected_exit": 1,
+      "expected_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_remove_tick15_event/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_remove_tick15_event/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 7/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded is missing; 1 frozen dependency edge(s) gone\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_remove_tick15_event/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_remove_tick15_event/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 7/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded is missing; 1 frozen dependency edge(s) gone\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_add_event_with_dependency",
+      "expected_exit": 1,
+      "expected_ids": [
+        "ADDITION-DETECTED"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_event_with_dependency/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_event_with_dependency/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ADDITION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 9/8; dependency-edges 8/7; relations 1/1\nFINDING ADDITION-DETECTED: unpinned event v03-added-event introduces depends_on ['clerk-lapse-recorded']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_event_with_dependency/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_add_event_with_dependency/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ADDITION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 9/8; dependency-edges 8/7; relations 1/1\nFINDING ADDITION-DETECTED: unpinned event v03-added-event introduces depends_on ['clerk-lapse-recorded']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_event_endpoint_tick",
+      "expected_exit": 1,
+      "expected_ids": [
+        "ENDPOINT-CHANGE"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_tick/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_tick/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: event clerk-lapse-recorded.tick: 15 -> 150\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_tick/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_tick/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: event clerk-lapse-recorded.tick: 15 -> 150\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_event_endpoint_entity_id",
+      "expected_exit": 1,
+      "expected_ids": [
+        "ENDPOINT-CHANGE"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_entity_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_entity_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: event clerk-lapse-recorded.entity_id: 'clerk-maren' -> 'aru'\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_entity_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_entity_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: event clerk-lapse-recorded.entity_id: 'clerk-maren' -> 'aru'\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_event_endpoint_place_id",
+      "expected_exit": 1,
+      "expected_ids": [
+        "ENDPOINT-CHANGE"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_place_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_place_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: event clerk-lapse-recorded.place_id: 'chalk-stair' -> 'salt-court'\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_place_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_event_endpoint_place_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: event clerk-lapse-recorded.place_id: 'chalk-stair' -> 'salt-court'\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_relation_endpoint_flip",
+      "expected_exit": 1,
+      "expected_ids": [
+        "ENDPOINT-CHANGE"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_endpoint_flip/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_endpoint_flip/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: relation endpoints changed: removed [aru, evin, agreed_co_stewardship_for_this_crossing]; added [evin, aru, agreed_co_stewardship_for_this_crossing]\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_endpoint_flip/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_endpoint_flip/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ENDPOINT-CHANGE"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ENDPOINT-CHANGE: relation endpoints changed: removed [aru, evin, agreed_co_stewardship_for_this_crossing]; added [evin, aru, agreed_co_stewardship_for_this_crossing]\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_relation_remove",
+      "expected_exit": 1,
+      "expected_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_remove/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_remove/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 0/1\nFINDING REDUCTION-DETECTED: relation edge(s) removed: [aru, evin, agreed_co_stewardship_for_this_crossing]\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_remove/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_remove/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 0/1\nFINDING REDUCTION-DETECTED: relation edge(s) removed: [aru, evin, agreed_co_stewardship_for_this_crossing]\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_relation_add",
+      "expected_exit": 1,
+      "expected_ids": [
+        "ADDITION-DETECTED"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_add/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_add/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ADDITION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 2/1\nFINDING ADDITION-DETECTED: relation edge(s) added: [aru, clerk-maren, v03-unpinned]\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_add/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_relation_add/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "ADDITION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 2/1\nFINDING ADDITION-DETECTED: relation edge(s) added: [aru, clerk-maren, v03-unpinned]\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "semantic_precedes_digest",
+      "expected_exit": 1,
+      "expected_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_precedes_digest/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_precedes_digest/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_precedes_digest/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/semantic_precedes_digest/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 1,
+          "finding_ids": [
+            "REDUCTION-DETECTED"
+          ],
+          "results": [
+            "RESULT FAIL"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']\nRESULT FAIL\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_entities.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "entities.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d938eefd5dc106154b3630015c055b3cadb359c251fdb7e4f8fb00ceea2036c5 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457e41d31d3c78cdde591e532dc04083561d223705cb5d334d945885624242c3); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_entities.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d938eefd5dc106154b3630015c055b3cadb359c251fdb7e4f8fb00ceea2036c5 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457e41d31d3c78cdde591e532dc04083561d223705cb5d334d945885624242c3); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_relations.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "relations.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_relations.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_relations.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d3d46771bab7eb4a1dd3614b69b4db533f9d3ea211d74f0afba2ad32479d6206 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: relations.json (sha256 c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9 -> 811144128783ee753fa02b1612d4d560318e49685dc68360fd8766f130a9b086); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_relations.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_relations.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d3d46771bab7eb4a1dd3614b69b4db533f9d3ea211d74f0afba2ad32479d6206 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: relations.json (sha256 c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9 -> 811144128783ee753fa02b1612d4d560318e49685dc68360fd8766f130a9b086); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_timeline.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "timeline.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_timeline.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_timeline.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 35b9c67b0a0fbd2d6000d76020e819eb616cdf6150cd3d6c6801c077b88e6d7b != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: timeline.json (sha256 2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069 -> b0fbe75127fe755e10a0db0bf77c29ec8a4bf2e5baa29597f59aafa7a2c0cbbe); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_timeline.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_timeline.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 35b9c67b0a0fbd2d6000d76020e819eb616cdf6150cd3d6c6801c077b88e6d7b != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: timeline.json (sha256 2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069 -> b0fbe75127fe755e10a0db0bf77c29ec8a4bf2e5baa29597f59aafa7a2c0cbbe); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_sources.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "sources.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_sources.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_sources.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c7ef697e9d2e2b221a8b50ebe44cc22376563db5d37a90028d8736dd385597eb != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: sources.json (sha256 8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15 -> 647415129fd5220c873bed4cbb0c44248d1cedca6de0183f499a6db65eb8f494); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_sources.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_sources.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c7ef697e9d2e2b221a8b50ebe44cc22376563db5d37a90028d8736dd385597eb != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: sources.json (sha256 8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15 -> 647415129fd5220c873bed4cbb0c44248d1cedca6de0183f499a6db65eb8f494); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_contradictions.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "contradictions.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_contradictions.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_contradictions.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 2312a9e81c8c3f87261639383317d2efee2b307f17cac7d713a1fb6c75af63fe != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: contradictions.json (sha256 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 -> 5239a7754876b9a70871c45e41f1bd9abbd91ed2de67af926c1cfcc9c9377d51); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_contradictions.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_contradictions.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 2312a9e81c8c3f87261639383317d2efee2b307f17cac7d713a1fb6c75af63fe != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: contradictions.json (sha256 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 -> 5239a7754876b9a70871c45e41f1bd9abbd91ed2de67af926c1cfcc9c9377d51); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_README.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "README.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_README.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_README.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 184fc88016259ee0327d137e9bf15ec95a6a97dfa6bb6e7f6a16b0f26bac9f62 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: README.md (sha256 b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049 -> 01ff4f3710ac03a17d8b35d9adda8504218e033bf89c60920815171e56d45919); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_README.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_README.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 184fc88016259ee0327d137e9bf15ec95a6a97dfa6bb6e7f6a16b0f26bac9f62 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: README.md (sha256 b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049 -> 01ff4f3710ac03a17d8b35d9adda8504218e033bf89c60920815171e56d45919); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_claim-excerpt-map.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "claim-excerpt-map.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_claim-excerpt-map.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_claim-excerpt-map.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d86bb9b4a2ca25d0b7e236f17342230e65297d4fee289d6e71142531a151e3d4 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> 53a10ca3631784e843ed64f4a8aa4042b8d5af3bda09fd6ca45a7cb41b95530c); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_claim-excerpt-map.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_claim-excerpt-map.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d86bb9b4a2ca25d0b7e236f17342230e65297d4fee289d6e71142531a151e3d4 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> 53a10ca3631784e843ed64f4a8aa4042b8d5af3bda09fd6ca45a7cb41b95530c); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_fictional-excerpts.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "fictional-excerpts.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_fictional-excerpts.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_fictional-excerpts.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest cce8f18813ed6fc24ec8032a28b687c4731efdc72d05434c124c89a0dcd1c49f != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: fictional-excerpts.md (sha256 fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d -> ee276abf20eb37adc44e6d5fc8cbf08615851734aad4b5eeec8c333af7f70408); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_fictional-excerpts.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_fictional-excerpts.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest cce8f18813ed6fc24ec8032a28b687c4731efdc72d05434c124c89a0dcd1c49f != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: fictional-excerpts.md (sha256 fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d -> ee276abf20eb37adc44e6d5fc8cbf08615851734aad4b5eeec8c333af7f70408); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_inspiration-note.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "inspiration-note.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_inspiration-note.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_inspiration-note.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 388727aa98aa5bfade009eda67168b2290c6ed9fed61389326e4e5d5d5bc45a0 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> a1be0d5b00e0c695acbebbdee55d1fc00e8956e53f71ec8f6fde1157c055b3af); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_inspiration-note.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_inspiration-note.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 388727aa98aa5bfade009eda67168b2290c6ed9fed61389326e4e5d5d5bc45a0 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> a1be0d5b00e0c695acbebbdee55d1fc00e8956e53f71ec8f6fde1157c055b3af); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "digest_newline_source-excerpt.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "source-excerpt.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_source-excerpt.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_source-excerpt.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 2dd18f5975516792213958a5e7a8d174b481ff64742a6f021756527e6ca07e34 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 5426ef14362d94f3388ec24a3d29973add977e369a368271a3ae50c4f0dfac3e); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_source-excerpt.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/digest_newline_source-excerpt.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 2dd18f5975516792213958a5e7a8d174b481ff64742a6f021756527e6ca07e34 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 5426ef14362d94f3388ec24a3d29973add977e369a368271a3ae50c4f0dfac3e); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_entities.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "entities.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_entities.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_entities.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 779ce0693d3d7faa215f6628549013a773585e85db635343d5617d9d981683f0 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_entities.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_entities.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 779ce0693d3d7faa215f6628549013a773585e85db635343d5617d9d981683f0 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_relations.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "FILE-MISSING"
+      ],
+      "mode": "verify",
+      "names_file": "relations.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_relations.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_relations.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FILE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FILE-MISSING: relations.json is missing from /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_relations.json/corpus/fixtures/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_relations.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_relations.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FILE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FILE-MISSING: relations.json is missing from /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_relations.json/corpus/fixtures/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_timeline.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "FILE-MISSING"
+      ],
+      "mode": "verify",
+      "names_file": "timeline.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_timeline.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_timeline.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FILE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FILE-MISSING: timeline.json is missing from /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_timeline.json/corpus/fixtures/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_timeline.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_timeline.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FILE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FILE-MISSING: timeline.json is missing from /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_timeline.json/corpus/fixtures/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_sources.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "sources.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_sources.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_sources.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest a1f4e5aa6bca1b5278f064653aa58a855272bd9962e6616f7f30af7079e65cba != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: sources.json (sha256 8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_sources.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_sources.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest a1f4e5aa6bca1b5278f064653aa58a855272bd9962e6616f7f30af7079e65cba != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: sources.json (sha256 8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_contradictions.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "contradictions.json",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_contradictions.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_contradictions.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c8d0d6378a4fa19bead036cec3728b9cacec5fc7370b57e2a8124fcb5e228800 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: contradictions.json (sha256 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_contradictions.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_contradictions.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c8d0d6378a4fa19bead036cec3728b9cacec5fc7370b57e2a8124fcb5e228800 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: contradictions.json (sha256 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_README.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "README.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_README.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_README.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest ac32d1dea515cb0d3b20c8c126c5fd74bd7295e9b9276ce487a85537dc5338d4 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: README.md (sha256 b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_README.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_README.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest ac32d1dea515cb0d3b20c8c126c5fd74bd7295e9b9276ce487a85537dc5338d4 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: README.md (sha256 b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_claim-excerpt-map.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "claim-excerpt-map.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_claim-excerpt-map.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_claim-excerpt-map.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest ec89d574487715189204e8b872ae693659963a998e21dfd657fea07a722be023 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_claim-excerpt-map.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_claim-excerpt-map.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest ec89d574487715189204e8b872ae693659963a998e21dfd657fea07a722be023 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_fictional-excerpts.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "fictional-excerpts.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_fictional-excerpts.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_fictional-excerpts.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest b55465905f0bc3aa55c21113438476182480e17b97258fdda6426b9af6df9f56 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: fictional-excerpts.md (sha256 fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_fictional-excerpts.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_fictional-excerpts.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest b55465905f0bc3aa55c21113438476182480e17b97258fdda6426b9af6df9f56 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: fictional-excerpts.md (sha256 fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_inspiration-note.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "inspiration-note.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_inspiration-note.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_inspiration-note.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest e5e0bd6c81c9a536ba10582d93879cda3185b395847601f5b6a64e067ff5fa1f != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_inspiration-note.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_inspiration-note.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest e5e0bd6c81c9a536ba10582d93879cda3185b395847601f5b6a64e067ff5fa1f != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_source-excerpt.md",
+      "expected_exit": 2,
+      "expected_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "mode": "verify",
+      "names_file": "source-excerpt.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_source-excerpt.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_source-excerpt.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 41d1fd53f86a9b5eca8f2170765c8a74fc59d9ec058404b245b6c2eed9454a7c != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_source-excerpt.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_source-excerpt.md/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "DIGEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 41d1fd53f86a9b5eca8f2170765c8a74fc59d9ec058404b245b6c2eed9454a7c != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> None); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_json_syntax",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-JSON"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_syntax/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_syntax/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-JSON"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-JSON: timeline.json: Expecting property name enclosed in double quotes: line 2 column 1 (char 3)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_syntax/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_syntax/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-JSON"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-JSON: timeline.json: Expecting property name enclosed in double quotes: line 2 column 1 (char 3)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_json_utf8",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-JSON"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_utf8/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_utf8/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-JSON"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-JSON: timeline.json is not UTF-8: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_utf8/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_utf8/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-JSON"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-JSON: timeline.json is not UTF-8: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_json_sources",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-JSON"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_sources/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_sources/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-JSON"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-JSON: sources.json: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_sources/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_json_sources/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-JSON"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-JSON: sources.json: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_object_timeline.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_timeline.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_timeline.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline.json and relations.json must be JSON arrays\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_timeline.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_timeline.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline.json and relations.json must be JSON arrays\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_object_relations.json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_relations.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_relations.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline.json and relations.json must be JSON arrays\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_relations.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_object_relations.json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline.json and relations.json must be JSON arrays\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_empty_event_id",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_event_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_event_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7] needs a nonempty string id\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_event_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_event_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7] needs a nonempty string id\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_duplicate_event_id",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_duplicate_event_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_duplicate_event_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7] repeats event id clerk-filing-open\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_duplicate_event_id/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_duplicate_event_id/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7] repeats event id clerk-filing-open\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_dep_not_list",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_dep_not_list/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_dep_not_list/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7].depends_on must be an array of nonempty strings\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_dep_not_list/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_dep_not_list/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7].depends_on must be an array of nonempty strings\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_empty_dep",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_dep/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_dep/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7].depends_on must be an array of nonempty strings\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_dep/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_empty_dep/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7].depends_on must be an array of nonempty strings\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_nonscalar_endpoint",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_nonscalar_endpoint/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_nonscalar_endpoint/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7].tick must be a scalar\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_nonscalar_endpoint/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_nonscalar_endpoint/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: timeline[7].tick must be a scalar\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "malformed_model_relation_from_missing",
+      "expected_exit": 2,
+      "expected_ids": [
+        "MALFORMED-MODEL"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_relation_from_missing/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_relation_from_missing/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: relations[0] needs nonempty string from/to/type\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_relation_from_missing/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/malformed_model_relation_from_missing/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "MALFORMED-MODEL"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING MALFORMED-MODEL: relations[0] needs nonempty string from/to/type\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "unpinned_real_nonchain_r93",
+      "expected_exit": 2,
+      "expected_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "mode": "unpinned",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/unpinned_real_nonchain_r93/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/unpinned_real_nonchain_r93/corpus/fixtures/r93-m2-kojiki-cluster",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "UNPINNED-FIXTURE"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r93-m2-kojiki-cluster' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/unpinned_real_nonchain_r93/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/unpinned_real_nonchain_r93/corpus/fixtures/r93-m2-kojiki-cluster",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "UNPINNED-FIXTURE"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r93-m2-kojiki-cluster' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "missing_known_fixture",
+      "expected_exit": 2,
+      "expected_ids": [
+        "FIXTURE-MISSING"
+      ],
+      "mode": "fixture_missing",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_known_fixture/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_known_fixture/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FIXTURE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FIXTURE-MISSING: fixture directory not found: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_known_fixture/corpus/fixtures/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_known_fixture/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_known_fixture/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FIXTURE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FIXTURE-MISSING: fixture directory not found: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/missing_known_fixture/corpus/fixtures/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "same_name_foreign_path",
+      "expected_exit": 2,
+      "expected_ids": [
+        "PATH-MISMATCH"
+      ],
+      "mode": "foreign",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/foreign/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "PATH-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING PATH-MISMATCH: pin r99-window-lapse names corpus/fixtures/r99-window-lapse (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/corpus/fixtures/r99-window-lapse); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/foreign/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/foreign/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "PATH-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING PATH-MISMATCH: pin r99-window-lapse names corpus/fixtures/r99-window-lapse (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/corpus/fixtures/r99-window-lapse); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/same_name_foreign_path/foreign/r99-window-lapse\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_absent",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "contract_absent",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_absent/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_absent/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: contract not found: corpus/tools/dependency-freeze-contract.json\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_absent/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_absent/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: contract not found: corpus/tools/dependency-freeze-contract.json\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_malformed_json",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "contract_malformed",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_malformed_json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_malformed_json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: corpus/tools/dependency-freeze-contract.json: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_malformed_json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_malformed_json/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: corpus/tools/dependency-freeze-contract.json: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_root_not_object",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "contract_list",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_root_not_object/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_root_not_object/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: contract root must be an object with a pins object\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_root_not_object/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_root_not_object/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: contract root must be an object with a pins object\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_not_object",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_not_object/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_not_object/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse must be an object\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_not_object/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_not_object/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse must be an object\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_fixture_absent",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absent/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absent/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a repo-relative fixture path\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absent/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absent/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a repo-relative fixture path\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_fixture_absolute",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absolute/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absolute/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a repo-relative fixture path\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absolute/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_absolute/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a repo-relative fixture path\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_fixture_outside_scope",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_outside_scope/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_outside_scope/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse names corpus/tools/v03, outside corpus/fixtures/**\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_outside_scope/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_fixture_outside_scope/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse names corpus/tools/v03, outside corpus/fixtures/**\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_payload_schema_1",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_payload_schema_1/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_payload_schema_1/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse payload_schema_version 1 != 2 (full-file pin of 10 files)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_payload_schema_1/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_payload_schema_1/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse payload_schema_version 1 != 2 (full-file pin of 10 files)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_pinned_files_short",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_pinned_files_short/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_pinned_files_short/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse pinned_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md'] != ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_pinned_files_short/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_pinned_files_short/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse pinned_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md'] != ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_content_digest_bad",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a sha256 content digest\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_content_digest_bad/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs a sha256 content digest\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_file_digest_absent",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_file_digest_absent/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_file_digest_absent/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs sha256 digests for all 10 pinned files (entities.json, relations.json, timeline.json, sources.json, contradictions.json, README.md, claim-excerpt-map.md, fictional-excerpts.md, inspiration-note.md, source-excerpt.md)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_file_digest_absent/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_file_digest_absent/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs sha256 digests for all 10 pinned files (entities.json, relations.json, timeline.json, sources.json, contradictions.json, README.md, claim-excerpt-map.md, fictional-excerpts.md, inspiration-note.md, source-excerpt.md)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_events_not_object",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_events_not_object/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_events_not_object/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs an events object\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_events_not_object/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_events_not_object/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs an events object\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_event_entry_invalid",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_event_entry_invalid/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_event_entry_invalid/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse has an invalid event entry for 'v03'\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_event_entry_invalid/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_event_entry_invalid/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse has an invalid event entry for 'v03'\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "contract_pin_relations_invalid",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "verify",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_relations_invalid/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_relations_invalid/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs relation endpoint triples\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_relations_invalid/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/contract_pin_relations_invalid/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: pin r99-window-lapse needs relation endpoint triples\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "freeze_foreign_scope",
+      "expected_exit": 2,
+      "expected_ids": [
+        "SCOPE-REFUSED"
+      ],
+      "mode": "freeze_foreign",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/foreign/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SCOPE-REFUSED"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/foreign/r99-window-lapse (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/foreign/r99-window-lapse); the frozen scope is corpus/fixtures/** (integration-time operation only)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/foreign/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SCOPE-REFUSED"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/foreign/r99-window-lapse (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_foreign_scope/foreign/r99-window-lapse); the frozen scope is corpus/fixtures/** (integration-time operation only)\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "freeze_scope_root",
+      "expected_exit": 2,
+      "expected_ids": [
+        "SCOPE-REFUSED"
+      ],
+      "mode": "freeze_scope_root",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_scope_root/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_scope_root/corpus/fixtures",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SCOPE-REFUSED"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures itself; the frozen scope is corpus/fixtures/**\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_scope_root/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_scope_root/corpus/fixtures",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SCOPE-REFUSED"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures itself; the frozen scope is corpus/fixtures/**\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "freeze_same_name_other_in_scope",
+      "expected_exit": 2,
+      "expected_ids": [
+        "SCOPE-REFUSED"
+      ],
+      "mode": "freeze_collision",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_same_name_other_in_scope/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_same_name_other_in_scope/corpus/fixtures/nested/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SCOPE-REFUSED"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/nested/r99-window-lapse: pin r99-window-lapse already names 'corpus/fixtures/r99-window-lapse'; freezing a same-named path elsewhere would rewrite the delivered pin\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_same_name_other_in_scope/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_same_name_other_in_scope/corpus/fixtures/nested/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SCOPE-REFUSED"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/nested/r99-window-lapse: pin r99-window-lapse already names 'corpus/fixtures/r99-window-lapse'; freezing a same-named path elsewhere would rewrite the delivered pin\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "freeze_missing_pinned_markdown",
+      "expected_exit": 2,
+      "expected_ids": [
+        "FILE-MISSING"
+      ],
+      "mode": "freeze",
+      "names_file": "README.md",
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FILE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FILE-MISSING: --freeze refuses corpus/fixtures/r99-window-lapse: pinned file(s) missing: README.md\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "FILE-MISSING"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING FILE-MISSING: --freeze refuses corpus/fixtures/r99-window-lapse: pinned file(s) missing: README.md\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "args_none",
+      "expected_exit": 2,
+      "expected_ids": [
+        "INVALID-ARGUMENTS"
+      ],
+      "mode": "args_none",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_none/corpus/tools/dependency_freeze.py",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: expected a fixture directory, --freeze DIR, or --self-test\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_none/corpus/tools/dependency_freeze.py",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: expected a fixture directory, --freeze DIR, or --self-test\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "args_combined_verify_freeze",
+      "expected_exit": 2,
+      "expected_ids": [
+        "INVALID-ARGUMENTS"
+      ],
+      "mode": "args_combined_verify_freeze",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_combined_verify_freeze/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_combined_verify_freeze/corpus/fixtures/r99-window-lapse --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_combined_verify_freeze/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_combined_verify_freeze/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_combined_verify_freeze/corpus/fixtures/r99-window-lapse --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_combined_verify_freeze/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "args_selftest_fixture",
+      "expected_exit": 2,
+      "expected_ids": [
+        "INVALID-ARGUMENTS"
+      ],
+      "mode": "args_selftest_fixture",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_fixture/corpus/tools/dependency_freeze.py --self-test /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_fixture/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_fixture/corpus/tools/dependency_freeze.py --self-test /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_fixture/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "args_selftest_freeze",
+      "expected_exit": 2,
+      "expected_ids": [
+        "INVALID-ARGUMENTS"
+      ],
+      "mode": "args_selftest_freeze",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_freeze/corpus/tools/dependency_freeze.py --self-test --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_freeze/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_freeze/corpus/tools/dependency_freeze.py --self-test --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_selftest_freeze/corpus/fixtures/r99-window-lapse",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "args_unknown_flag",
+      "expected_exit": 2,
+      "expected_ids": [
+        "INVALID-ARGUMENTS"
+      ],
+      "mode": "args_unknown_flag",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_unknown_flag/corpus/tools/dependency_freeze.py --v03-unknown-option",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: unrecognized arguments: --v03-unknown-option\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/args_unknown_flag/corpus/tools/dependency_freeze.py --v03-unknown-option",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "INVALID-ARGUMENTS"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING INVALID-ARGUMENTS: unrecognized arguments: --v03-unknown-option\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "selftest_clean_control",
+      "expected_exit": 0,
+      "expected_ids": [],
+      "mode": "selftest",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_clean_control/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 0,
+          "finding_ids": [],
+          "results": [
+            "RESULT PASS"
+          ],
+          "stdout": "CASE clean: exit=0 expected=0 findings=[] ok\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 18/18\nRESULT PASS\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_clean_control/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 0,
+          "finding_ids": [],
+          "results": [
+            "RESULT PASS"
+          ],
+          "stdout": "CASE clean: exit=0 expected=0 findings=[] ok\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 18/18\nRESULT PASS\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "selftest_expectation_flip",
+      "expected_exit": 2,
+      "expected_ids": [
+        "SELF-TEST-MISMATCH"
+      ],
+      "mode": "selftest",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_expectation_flip/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SELF-TEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "CASE clean: exit=0 expected=1 findings=[] MISMATCH\n  observed stdout: ['FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1', 'DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710', 'RESULT PASS']\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 17/18\nFINDING SELF-TEST-MISMATCH: cases failed: ['clean']\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_expectation_flip/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "SELF-TEST-MISMATCH"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "CASE clean: exit=0 expected=1 findings=[] MISMATCH\n  observed stdout: ['FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1', 'DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710', 'RESULT PASS']\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 17/18\nFINDING SELF-TEST-MISMATCH: cases failed: ['clean']\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "selftest_expected_case_missing",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "selftest",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_expected_case_missing/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['markdown_tamper'] extra=[]\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_expected_case_missing/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['markdown_tamper'] extra=[]\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    },
+    {
+      "case_id": "selftest_expected_case_extra",
+      "expected_exit": 2,
+      "expected_ids": [
+        "CONTRACT-INVALID"
+      ],
+      "mode": "selftest",
+      "names_file": null,
+      "runs": [
+        {
+          "repeat": 1,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_expected_case_extra/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=[] extra=['v03-extra']\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        },
+        {
+          "repeat": 2,
+          "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/selftest_expected_case_extra/corpus/tools/dependency_freeze.py --self-test",
+          "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+          "exit": 2,
+          "finding_ids": [
+            "CONTRACT-INVALID"
+          ],
+          "results": [
+            "RESULT ERROR"
+          ],
+          "stdout": "FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=[] extra=['v03-extra']\nRESULT ERROR\n",
+          "stderr": "",
+          "expected_matches": true,
+          "contract_unchanged": true
+        }
+      ],
+      "ids_stable": true,
+      "output_byte_stable": true,
+      "ok": true
+    }
+  ],
+  "live_input_sha256_after": {
+    "corpus/tools/dependency_freeze.py": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+    "corpus/tools/dependency-freeze-contract.json": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+    "corpus/fixtures/r99-window-lapse/entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+    "corpus/fixtures/r99-window-lapse/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r99-window-lapse/timeline.json": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069",
+    "corpus/fixtures/r99-window-lapse/sources.json": "8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15",
+    "corpus/fixtures/r99-window-lapse/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r99-window-lapse/README.md": "b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049",
+    "corpus/fixtures/r99-window-lapse/claim-excerpt-map.md": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
+    "corpus/fixtures/r99-window-lapse/fictional-excerpts.md": "fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d",
+    "corpus/fixtures/r99-window-lapse/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r99-window-lapse/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r95-crossing-aftermath/entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+    "corpus/fixtures/r95-crossing-aftermath/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r95-crossing-aftermath/timeline.json": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177",
+    "corpus/fixtures/r95-crossing-aftermath/sources.json": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+    "corpus/fixtures/r95-crossing-aftermath/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r95-crossing-aftermath/README.md": "9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b",
+    "corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md": "80440d61122488a267a4f0a58a55cb54d89c037d93160f1123e5fb3b2f396f61",
+    "corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md": "0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282",
+    "corpus/fixtures/r95-crossing-aftermath/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r95-crossing-aftermath/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r93-m2-kojiki-cluster/README.md": "ddac89a43f3addcd14eb4044ec3933e80a6a4ddf1893787071486672744df42a",
+    "corpus/fixtures/r93-m2-kojiki-cluster/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r93-m2-kojiki-cluster/entities.json": "19f75678dae1b59e6704d1be903a5cecf1b070dd44165e3047bc47efdb8e2d1d",
+    "corpus/fixtures/r93-m2-kojiki-cluster/relations.json": "32b79cd4d02793ce4c1f600522fb3810ffdbbad173b5707975fe9197ebf6e46d",
+    "corpus/fixtures/r93-m2-kojiki-cluster/sources.json": "658610f15d677616adb758c347d2c0afe53b269d926515de686e1a12ceb7fdbd",
+    "corpus/fixtures/r93-m2-kojiki-cluster/timeline.json": "69da079eb29104cf4da04942ec3df79155569aa61d64fec00cb4aa7ffe2417e2",
+    "corpus/fixtures/r93-m2-kojiki-cluster/archive-record-excerpt.md": "71876794bcdff367c30f64bc1c7c60f2f06dff46c081d3fce52c1c0dc9419287",
+    "corpus/fixtures/r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md": "7a4a671ad46dfa4c4eb38304f5aaf9cf381c024a8e5a16361c264bd335f52912",
+    "corpus/fixtures/r93-m2-kojiki-cluster/claim-excerpt-map.md": "17f0e8123f26e4f7c534c01a6fe843fe0e8e1278858c0b0ce74623cb7291f7d6",
+    "corpus/fixtures/r93-m2-kojiki-cluster/symbolism-clause-map.md": "eeb56880b93f4a239516cd0f38b61097e0d834afee29392713491700f3c10243",
+    "corpus/fixtures/r93-m2-kojiki-cluster/inspiration-note.md": "357820cfa4a8361fd4faeac00d8a81a1b045af1225def3695d9a51c60da78e48"
+  }
+}

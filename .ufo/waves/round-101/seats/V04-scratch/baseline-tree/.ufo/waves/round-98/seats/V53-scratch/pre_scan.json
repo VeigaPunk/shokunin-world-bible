@@ -1,0 +1,104 @@
+{
+ "run_at": "2026-10-17T20:28:35-0300",
+ "files": [
+  {
+   "file": "corpus/knowledge/r95-aftermath-scope-note.md",
+   "exists": true,
+   "sha256": "f87ed42ad4d42143bb84f13539f2db8ca0d5f221aaf4eaffdbd6874b5ef1ab9a",
+   "git_base_sha256": "f87ed42ad4d42143bb84f13539f2db8ca0d5f221aaf4eaffdbd6874b5ef1ab9a",
+   "changed_vs_base": false,
+   "pins": [
+    {
+     "line": 51,
+     "token": "ff9fd2aa",
+     "width": 8,
+     "matches_delivered": [
+      "corpus/fixtures/check_bible.py"
+     ],
+     "line_text": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round: earlier receipts in this pass also passed at the r94 baseline (`map_obligations.py` `cc1df4dc\u2026`), while an intermediate in-flight revision (`ca05159e\u2026`) raised an uncaught `ValueError` on both the r94 and r95 maps \u2014 recorded with timestamps in `.ufo/waves/round-95/seats/P5-knowledge-note.md`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 51,
+     "token": "55a5eb27",
+     "width": 8,
+     "matches_delivered": [
+      "corpus/tools/support_check.py"
+     ],
+     "line_text": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round: earlier receipts in this pass also passed at the r94 baseline (`map_obligations.py` `cc1df4dc\u2026`), while an intermediate in-flight revision (`ca05159e\u2026`) raised an uncaught `ValueError` on both the r94 and r95 maps \u2014 recorded with timestamps in `.ufo/waves/round-95/seats/P5-knowledge-note.md`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 51,
+     "token": "9224a684",
+     "width": 8,
+     "matches_delivered": [],
+     "line_text": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round: earlier receipts in this pass also passed at the r94 baseline (`map_obligations.py` `cc1df4dc\u2026`), while an intermediate in-flight revision (`ca05159e\u2026`) raised an uncaught `ValueError` on both the r94 and r95 maps \u2014 recorded with timestamps in `.ufo/waves/round-95/seats/P5-knowledge-note.md`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 51,
+     "token": "cc1df4dc",
+     "width": 8,
+     "matches_delivered": [],
+     "line_text": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round: earlier receipts in this pass also passed at the r94 baseline (`map_obligations.py` `cc1df4dc\u2026`), while an intermediate in-flight revision (`ca05159e\u2026`) raised an uncaught `ValueError` on both the r94 and r95 maps \u2014 recorded with timestamps in `.ufo/waves/round-95/seats/P5-knowledge-note.md`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 51,
+     "token": "ca05159e",
+     "width": 8,
+     "matches_delivered": [],
+     "line_text": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round: earlier receipts in this pass also passed at the r94 baseline (`map_obligations.py` `cc1df4dc\u2026`), while an intermediate in-flight revision (`ca05159e\u2026`) raised an uncaught `ValueError` on both the r94 and r95 maps \u2014 recorded with timestamps in `.ufo/waves/round-95/seats/P5-knowledge-note.md`. Re-run all three commands against the delivered revision before citing these receipts."
+    }
+   ],
+   "n_pins": 5
+  },
+  {
+   "file": "corpus/knowledge/r96-response-scope-note.md",
+   "exists": true,
+   "sha256": "6db32ca24f5eff5baa3ebe589e8d3bcb6b256fec18dee2468211d7d0fae157c6",
+   "git_base_sha256": "6db32ca24f5eff5baa3ebe589e8d3bcb6b256fec18dee2468211d7d0fae157c6",
+   "changed_vs_base": false,
+   "pins": [
+    {
+     "line": 55,
+     "token": "ff9fd2aa",
+     "width": 8,
+     "matches_delivered": [
+      "corpus/fixtures/check_bible.py"
+     ],
+     "line_text": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the r96 C1 hardening in flight; `--self-test` at that revision printed 22 case lines and the contract file was still `8173bb97\u2026`). The earlier `17:43` run used the r95 delivered revision `d1c239cc\u2026` and gave the same `raw=16 mapped=16` / `RESULT PASS` exit 0. The r95 fixture still reads `raw=15 mapped=15` / `RESULT PASS` exit 0 at `6634e176\u2026`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 55,
+     "token": "55a5eb27",
+     "width": 8,
+     "matches_delivered": [
+      "corpus/tools/support_check.py"
+     ],
+     "line_text": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the r96 C1 hardening in flight; `--self-test` at that revision printed 22 case lines and the contract file was still `8173bb97\u2026`). The earlier `17:43` run used the r95 delivered revision `d1c239cc\u2026` and gave the same `raw=16 mapped=16` / `RESULT PASS` exit 0. The r95 fixture still reads `raw=15 mapped=15` / `RESULT PASS` exit 0 at `6634e176\u2026`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 55,
+     "token": "6634e176",
+     "width": 8,
+     "matches_delivered": [],
+     "line_text": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the r96 C1 hardening in flight; `--self-test` at that revision printed 22 case lines and the contract file was still `8173bb97\u2026`). The earlier `17:43` run used the r95 delivered revision `d1c239cc\u2026` and gave the same `raw=16 mapped=16` / `RESULT PASS` exit 0. The r95 fixture still reads `raw=15 mapped=15` / `RESULT PASS` exit 0 at `6634e176\u2026`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 55,
+     "token": "8173bb97",
+     "width": 8,
+     "matches_delivered": [],
+     "line_text": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the r96 C1 hardening in flight; `--self-test` at that revision printed 22 case lines and the contract file was still `8173bb97\u2026`). The earlier `17:43` run used the r95 delivered revision `d1c239cc\u2026` and gave the same `raw=16 mapped=16` / `RESULT PASS` exit 0. The r95 fixture still reads `raw=15 mapped=15` / `RESULT PASS` exit 0 at `6634e176\u2026`. Re-run all three commands against the delivered revision before citing these receipts."
+    },
+    {
+     "line": 55,
+     "token": "d1c239cc",
+     "width": 8,
+     "matches_delivered": [],
+     "line_text": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the r96 C1 hardening in flight; `--self-test` at that revision printed 22 case lines and the contract file was still `8173bb97\u2026`). The earlier `17:43` run used the r95 delivered revision `d1c239cc\u2026` and gave the same `raw=16 mapped=16` / `RESULT PASS` exit 0. The r95 fixture still reads `raw=15 mapped=15` / `RESULT PASS` exit 0 at `6634e176\u2026`. Re-run all three commands against the delivered revision before citing these receipts."
+    }
+   ],
+   "n_pins": 5
+  }
+ ],
+ "index_size": 1504
+}

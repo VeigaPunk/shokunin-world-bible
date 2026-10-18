@@ -1,0 +1,14 @@
+[
+  {
+    "from": "quay-guild",
+    "to": "bell-wardens",
+    "type": "allied_with",
+    "source_id": "separate-compact"
+  },
+  {
+    "from": "bell-wardens",
+    "to": "quay-guild",
+    "type": "allied_with",
+    "source_id": "harbor-compact"
+  }
+]

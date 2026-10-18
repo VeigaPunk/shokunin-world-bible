@@ -1,0 +1,17 @@
+### LIVE PATH BINDING (same-named copy at a foreign path)
+FINDING PATH-MISMATCH: pin r94-paired-crossing names corpus/fixtures/r94-paired-crossing (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r94-paired-crossing); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V32-scratch/foreign/r94-paired-crossing
+RESULT ERROR
+exit=2
+
+### LIVE SCOPE GUARD (out-of-scope existing fixture; contract hash bracketed)
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V32-scratch/foreign/r95-crossing-aftermath (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V32-scratch/foreign/r95-crossing-aftermath); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+exit=2
+contract before=27273be27d33ad864f06d656f28dca8eabc9d76f6ebe62583372a88c9e64e781
+contract after =27273be27d33ad864f06d656f28dca8eabc9d76f6ebe62583372a88c9e64e781
+CONTRACT-UNCHANGED
+
+### LIVE SCOPE GUARD on corpus/fixtures itself
+FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures itself; the frozen scope is corpus/fixtures/**
+RESULT ERROR
+exit=2

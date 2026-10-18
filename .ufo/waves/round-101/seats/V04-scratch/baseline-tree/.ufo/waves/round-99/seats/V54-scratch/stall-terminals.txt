@@ -1,0 +1,51 @@
+n=50
+V04	POLL_ABSENT tries=40 tool=6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067 contract=8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628 s1_md=0
+V103	STILL-ABSENT after poll 30
+V106	S1 REPORT ABSENT after try 40
+V108	POLL-EXHAUSTED 2026-10-17T22:15:27-03:00
+V110	S1 still absent after poll 12
+V111	ABSENT after 40 tries 22:23:09
+V114	ABSENT-AFTER-40 try=40 t=2026-10-18T01:17:08Z missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md V22-gates-boundary.md]
+V115	POLL-EXHAUSTED
+V122	ABSENT after 40 tries 2026-10-17T22:19:35-03:00
+V123	2026-10-17T22:21:05-03:00 DEADLINE tries=40
+V15	ABSENT after 40 tries 2026-10-17T22:16:37-03:00
+V18	POLL_EXHAUSTED 2026-10-17T22:26:10-03:00
+V19	ABSENT after 40 tries 2026-10-17T22:22:57-03:00
+V20	EXHAUSTED ts=2026-10-17T22:28:51-0300
+V21	POLL_EXHAUSTED try=40 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md] contract_rc=3 map_rc=0
+V22	POLL-EXHAUSTED try=40
+V25	TIMEOUT tries=40 ts=2026-10-17T22:19:02-03:00
+V26	ABSENT-AFTER-40 try=40 ts=2026-10-17T22:25:04-0300 missing=S1-report S2-report S5-report r99-gate-blind-spot-table.md r99-lapse-scope-note.md tools-README-no-Round-99
+V28	POLL-EXHAUSTED 22:19:59
+V29	POLL-EXHAUSTED 2026-10-17T22:15:12-03:00
+V30	ABSENT after 40 tries ts=2026-10-17 22:15:29 -0300
+V32	POLL_EXPIRE try=40 2026-10-17T22:22:20-0300
+V36	ABSENT after 40 tries 2026-10-18T01:15:21Z
+V38	=== CONTINUATION 2026-10-18T01:27:06Z first poller died at tool timeout after try 15 ===
+V39	POLL-EXHAUSTED tries=40; writing receipt from last observation. ABSENT stays ABSENT.
+V44	ABSENT after 40 tries t=2026-10-17T22:22:30-03:00
+V46	POLL-EXHAUSTED 2026-10-18T01:26:29Z
+V49	POLL_TIMEOUT after 40 tries
+V50	TIMEOUT after 40
+V52	try 40 2026-10-17T22:29:30-03:00 ABSENT
+V53	ABSENT after 40
+V55	ABSENT after 40 tries ts=2026-10-17 22:21:52 -0300
+V57	ABSENT after 40 tries 2026-10-17T22:26:16-03:00
+V60	POLL_EXHAUSTED try=40 table_and_or_S5 still absent
+V63	POLL_EXHAUSTED n=40 t=22:29:18
+V64	POLL_EXHAUSTED try=40 2026-10-17T22:25:28-03:00
+V65	TIMEOUT after 40 2026-10-17T22:15:15-03:00
+V67	ABSENT after 40
+V69	ABSENT after 40 tries ts=2026-10-17 22:24:28 -0300
+V71	ABSENT after 40 tries (resume completed budget)
+V73	EXHAUSTED
+V74	ABSENT after 40 tries 2026-10-18T01:25:58Z
+V75	POLL-TIMEOUT ts=2026-10-17T22:29:22-0300
+V82	ABSENT after 40 tries
+V85	22:09:02 poll-end reason=ten-file pins present; S1 report still absent after extra tries
+V91	POLL_EXPIRE try=40 2026-10-17T22:16:32-0300
+V92	TIMEOUT after 40
+V93	EXHAUSTED ts=2026-10-17T22:19:59-0300
+V96	EXHAUSTED try=40 s1=0 s2=0
+V97	ABSENT after 40 tries 2026-10-17T22:23:21-0300

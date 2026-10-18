@@ -1,0 +1,3 @@
+FINDING invalid_arguments: unrecognized arguments: --bogus-flag
+RESULT ERROR
+EXIT=2

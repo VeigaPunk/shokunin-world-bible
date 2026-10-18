@@ -1,0 +1,16 @@
+=== REPLAY1 2026-10-17T22:01:51-03:00 ===
+-- checker pin --
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c  corpus/tools/support_check.py
+2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41  corpus/tools/map-obligations-contract.json
+-- check_bible r99 --
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit=0
+-- check_bible r98 --
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit=0
+-- census --
+173
+-- fixture file count --
+10

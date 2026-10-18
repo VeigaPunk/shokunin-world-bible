@@ -1,0 +1,30 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V65-scratch
+mkdir -p "$SCR"
+LOG="$SCR/poll.log"
+echo "poll-restart $(date -Iseconds) pid=$$" | tee -a "$LOG"
+i=0
+while [ "$i" -lt 40 ]; do
+  i=$((i+1))
+  ts=$(date -Iseconds)
+  found=$(ls -1 .ufo/waves/round-99/seats/S*.md 2>/dev/null | wc -l)
+  names=$(ls -1 .ufo/waves/round-99/seats/S*.md 2>/dev/null | xargs -r -n1 basename | tr '\n' ',' )
+  arts=""
+  [ -f corpus/knowledge/r99-gate-blind-spot-table.md ] && arts="${arts}table "
+  [ -f corpus/knowledge/r99-lapse-scope-note.md ] && arts="${arts}note "
+  [ -d corpus/fixtures/r99-window-lapse ] && arts="${arts}fixture "
+  dfpy=$(stat -c %Y corpus/tools/dependency_freeze.py)
+  dfc=$(stat -c %Y corpus/tools/dependency-freeze-contract.json)
+  readme=$(stat -c %Y corpus/tools/README.md)
+  skill=$(stat -c %Y SKILL.md)
+  echo "try=$i ts=$ts reports_n=$found names=[$names] arts=[$arts] mtime dfpy=$dfpy dfc=$dfc readme=$readme skill=$skill" | tee -a "$LOG"
+  if [ "$found" -ge 5 ] && [ -f corpus/knowledge/r99-gate-blind-spot-table.md ] && [ -f corpus/knowledge/r99-lapse-scope-note.md ]; then
+    echo "ALL-PRESENT try=$i ts=$ts" | tee -a "$LOG"
+    exit 0
+  fi
+  sleep 20
+done
+echo "TIMEOUT after 40 $(date -Iseconds)" | tee -a "$LOG"
+exit 1
+

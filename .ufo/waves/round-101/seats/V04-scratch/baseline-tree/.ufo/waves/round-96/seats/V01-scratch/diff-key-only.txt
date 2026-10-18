@@ -1,0 +1,17 @@
+diff -ru .ufo/waves/round-96/seats/V01-scratch/old/corpus/fixtures/r95-crossing-aftermath/entities.json .ufo/waves/round-96/seats/V01-scratch/mutations/key-only/entities.json
+--- .ufo/waves/round-96/seats/V01-scratch/old/corpus/fixtures/r95-crossing-aftermath/entities.json	2026-10-17 17:31:49.000000000 -0300
++++ .ufo/waves/round-96/seats/V01-scratch/mutations/key-only/entities.json	2026-10-17 17:38:46.009661124 -0300
+@@ -51,12 +51,6 @@
+     "id": "chalk-stair",
+     "kind": "place",
+     "name": "Chalk Stair",
+-    "first_appearance": "crossing-minute",
+-    "claims": [
+-      {
+-        "statement": "The crossing minute places Aru and Evin together at the Chalk Stair after both tick-9 entries.",
+-        "source_id": "crossing-minute"
+-      }
+-    ]
++    "first_appearance": "crossing-minute"
+   }
+ ]

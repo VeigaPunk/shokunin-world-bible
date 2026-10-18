@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-17T23:40:31.910004-03:00",
+  "checks": 211,
+  "expected_exit_mismatches": [],
+  "stderr_cases": [],
+  "census": {
+    "directories": 174,
+    "clean": 40,
+    "intentional_negative": 134,
+    "other_exit": [],
+    "violation_lines": 421
+  },
+  "mirror_byte_identity": {
+    "dependency_freeze.py": true,
+    "dependency-freeze-contract.json": true,
+    "map_obligations.py": true,
+    "map-obligations-contract.json": true
+  }
+}

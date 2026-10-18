@@ -1,0 +1,92 @@
+try=1 ts=2026-10-17 22:04:44 -0300 s1=none
+no
+try=2 ts=2026-10-17 22:05:04 -0300 s1=none
+no
+try=3 ts=2026-10-17 22:05:24 -0300 s1=none
+no
+try=4 ts=2026-10-17 22:05:44 -0300 s1=none
+no
+try=5 ts=2026-10-17 22:06:04 -0300 s1=none
+no
+try=6 ts=2026-10-17 22:06:24 -0300 s1=none
+no
+try=7 ts=2026-10-17 22:06:44 -0300 s1=none
+no
+try=8 ts=2026-10-17 22:07:04 -0300 s1=none
+no
+try=9 ts=2026-10-17 22:07:24 -0300 s1=none
+no
+try=10 ts=2026-10-17 22:07:44 -0300 s1=none
+no
+try=11 ts=2026-10-17 22:08:04 -0300 s1=none
+no
+try=12 ts=2026-10-17 22:08:25 -0300 s1=none
+no
+try=13 ts=2026-10-17 22:08:45 -0300 s1=none
+no
+try=14 ts=2026-10-17 22:09:05 -0300 s1=none
+no
+try=15 ts=2026-10-17 22:09:25 -0300 s1=none
+no
+RESUME 2026-10-17 22:31:44 -0300 prior_tries=15
+try=16 ts=2026-10-17 22:31:44 -0300 s1=none
+no
+try=17 ts=2026-10-17 22:32:04 -0300 s1=none
+no
+try=18 ts=2026-10-17 22:32:24 -0300 s1=none
+no
+try=19 ts=2026-10-17 22:32:44 -0300 s1=none
+no
+try=20 ts=2026-10-17 22:33:04 -0300 s1=none
+no
+try=21 ts=2026-10-17 22:33:24 -0300 s1=none
+no
+try=22 ts=2026-10-17 22:33:44 -0300 s1=none
+no
+try=23 ts=2026-10-17 22:34:04 -0300 s1=none
+no
+try=24 ts=2026-10-17 22:34:24 -0300 s1=none
+no
+try=25 ts=2026-10-17 22:34:44 -0300 s1=none
+no
+try=26 ts=2026-10-17 22:35:04 -0300 s1=none
+no
+try=27 ts=2026-10-17 22:35:24 -0300 s1=none
+no
+try=28 ts=2026-10-17 22:35:44 -0300 s1=none
+no
+try=29 ts=2026-10-17 22:36:04 -0300 s1=none
+no
+try=30 ts=2026-10-17 22:36:24 -0300 s1=none
+no
+try=31 ts=2026-10-17 22:36:44 -0300 s1=none
+no
+try=32 ts=2026-10-17 22:37:04 -0300 s1=none
+no
+try=33 ts=2026-10-17 22:37:24 -0300 s1=none
+no
+try=34 ts=2026-10-17 22:37:44 -0300 s1=none
+no
+try=35 ts=2026-10-17 22:38:04 -0300 s1=none
+no
+try=36 ts=2026-10-17 22:38:24 -0300 s1=none
+no
+try=37 ts=2026-10-17 22:38:44 -0300 s1=none
+no
+try=38 ts=2026-10-17 22:39:04 -0300 s1=none
+no
+try=39 ts=2026-10-17 22:39:24 -0300 s1=none
+no
+try=40 ts=2026-10-17 22:39:44 -0300 s1=none
+no
+PIN_ABSENT after 40 tries ts=2026-10-17 22:39:44 -0300
+STALL-ESCAPE start 2026-10-17 22:51:30 -0300 reason=tool rewritten after try-40 cap
+escape=1 ts=2026-10-17 22:51:30 -0300 pin=no
+escape=2 ts=2026-10-17 22:51:50 -0300 pin=no
+escape=3 ts=2026-10-17 22:52:10 -0300 pin=no
+escape=4 ts=2026-10-17 22:52:30 -0300 pin=no
+escape=5 ts=2026-10-17 22:52:50 -0300 pin=no
+escape=6 ts=2026-10-17 22:53:10 -0300 pin=no
+escape=7 ts=2026-10-17 22:53:30 -0300 pin=no
+escape=8 ts=2026-10-17 22:53:50 -0300 pin=no
+STALL-ESCAPE ABSENT 2026-10-17 22:53:50 -0300

@@ -1,0 +1,41 @@
+POLL t=20 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=40 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=60 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=80 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=100 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=120 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=140 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=160 V02='' V19='' V30='' dep='' q4files=1 q6='' tool=d1c239cc
+POLL t=180 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=1 q6='' tool=d1c239cc
+POLL t=200 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=1 q6='' tool=d1c239cc
+POLL t=220 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='' tool=d1c239cc
+POLL t=240 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='' tool=d1c239cc
+POLL t=260 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='' tool=d1c239cc
+POLL t=280 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=f9231239
+POLL t=300 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=56d322ef
+POLL t=320 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=f97e4b72
+POLL t=340 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=8cbcdb51
+POLL t=360 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=44a6ffd4
+POLL t=380 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=c2c284c0
+POLL t=400 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=c2c284c0
+POLL t=420 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=6634e176
+POLL t=440 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=6634e176
+POLL t=460 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=6634e176
+POLL t=480 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=500 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=520 V02='' V19='' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=540 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=560 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=580 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=600 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=620 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=640 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=660 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=680 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=700 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=720 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=740 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=760 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=780 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL t=800 V02='' V19='.ufo/waves/round-96/seats/V19-c3-selftest.md ' V30='' dep='corpus/tools/dependency_freeze.py' q4files=3 q6='corpus/knowledge/r96-response-scope-note.md' tool=2b0ba815
+POLL_DEADLINE

@@ -1,0 +1,6 @@
+expected cases: 16
+drop scope_refused: exit=2 :: ["FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['scope_refused'] extra=[]", 'RESULT ERROR']
+drop path_mismatch: exit=2 :: ["FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['path_mismatch'] extra=[]", 'RESULT ERROR']
+drop clean: exit=2 :: ["FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['clean'] extra=[]", 'RESULT ERROR']
+extra bogus case: exit= 2 ["FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=[] extra=['bogus_case']", 'RESULT ERROR']
+restored: 0 ['SELF-TEST 16/16', 'RESULT PASS']

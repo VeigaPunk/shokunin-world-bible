@@ -1,0 +1,67 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V97-scratch
+mkdir -p "$SCRATCH"
+{
+  echo "poll-loop start $(date '+%Y-%m-%dT%H:%M:%S%z')"
+  for i in $(seq 1 40); do
+    ts=$(date '+%Y-%m-%dT%H:%M:%S%z')
+    py=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+    cj=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+    seats=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats
+    s1=$(ls -1 "$seats"/S1*.md 2>/dev/null | head -20 | tr '\n' ',' )
+    s1n=$(ls -1 "$seats"/S1*.md 2>/dev/null | wc -l)
+    pyh=$(sha256sum "$py" | awk '{print $1}')
+    cjh=$(sha256sum "$cj" | awk '{print $1}')
+    pair="${pyh:0:16}:${cjh:0:16}"
+    mt=$(python3 -c "
+import json
+from pathlib import Path
+c=json.loads(Path('$cj').read_text())
+exp=(c.get('self_test') or {}).get('expected') or {}
+print('exp', len(exp), 'md', int('markdown_tamper' in exp))
+pins=c.get('pins') or {}
+files=set()
+for p in pins.values():
+    if isinstance(p, dict) and isinstance(p.get('files'), dict):
+        files.update(p['files'])
+print('pin_files', sorted(files))
+print('schema', c.get('schema_version') or c.get('payload_schema') or c.get('pin_schema'))
+" 2>&1 | tr '\n' ' | ')
+    echo "try=$i ts=$ts s1n=$s1n s1=${s1:-NONE} pair=$pair $mt"
+    if [ "$s1n" -ge 1 ]; then
+      # require non-empty report and contract markdown_tamper
+      nonempty=1
+      for f in "$seats"/S1*.md; do
+        if [ ! -s "$f" ]; then nonempty=0; fi
+      done
+      has_md=$(python3 -c "
+import json
+from pathlib import Path
+c=json.loads(Path('$cj').read_text())
+exp=(c.get('self_test') or {}).get('expected') or {}
+print(1 if 'markdown_tamper' in exp else 0)
+")
+      if [ "$nonempty" = 1 ] && [ "$has_md" = 1 ]; then
+        if [ "${prev_pair:-}" = "$pair" ] && [ "${prev_ready:-0}" = 1 ]; then
+          echo "READY stable pair=$pair s1=$s1"
+          echo "$pyh" > "$SCRATCH/ready-py.sha256"
+          echo "$cjh" > "$SCRATCH/ready-contract.sha256"
+          echo "$ts" > "$SCRATCH/ready.ts"
+          exit 0
+        fi
+        prev_ready=1
+      else
+        prev_ready=0
+      fi
+    else
+      prev_ready=0
+    fi
+    prev_pair=$pair
+    sleep 20
+  done
+  echo "ABSENT after 40 tries $(date '+%Y-%m-%dT%H:%M:%S%z')"
+  exit 2
+} >> "$SCRATCH/poll.log" 2>&1
+echo "poll-exit:$?"
+

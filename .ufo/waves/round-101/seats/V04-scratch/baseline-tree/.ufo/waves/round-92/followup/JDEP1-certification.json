@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "seat": "JDEP1",
+  "role": "certifier (boundary-doc, round-92 follow-up)",
+  "wave": "round-92-followup",
+  "judged_tree": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "baseline": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+  "tree_clean_at_judgement": true,
+  "checker": {
+    "path": "corpus/fixtures/check_bible.py",
+    "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "lines": 428,
+    "note": "byte-identical to the r90-delivered checker named in the doc; unchanged through 396c568..c4d4823"
+  },
+  "target": {
+    "path": "corpus/knowledge/holder-assessment-boundary.md",
+    "lines": 672,
+    "sha256": "8e1fe8774a70f06c31efd783b4313a1639c1da4bcfd830be92134e8964536728",
+    "lineage": "ca7f9ef/e97613c contract (sha a4b1b331, 630 lines) + r90 CB1 section instructions + r92 anchor remap; 187 insertions / 146 deletions vs ca7f9ef"
+  },
+  "overall": "FAIL — blocking on gate (b): anchor resolution",
+  "checks": [
+    {
+      "id": "A_pasted_block_replay",
+      "gate": "a",
+      "status": "PASS",
+      "requirement": "every pasted output block replays against the delivered checker (>= 8 blocks/cases)",
+      "blocks_found": 3,
+      "cases_replayed": 14,
+      "stdout_byte_identical": "3/3 blocks, 14/14 cases",
+      "stderr_bytes": 0,
+      "extra_inline_claim_replays": 19,
+      "extra_replays_matching": "19/19",
+      "evidence": "python3 replay driver over the doc's three ```sh blocks; difflib comparison against the following ```text block returned exact equality for doc:355-385, doc:406-452, doc:462-479"
+    },
+    {
+      "id": "B_anchor_resolution",
+      "gate": "b",
+      "status": "FAIL",
+      "requirement": "every check_bible.py:NNN anchor resolves to the claimed content",
+      "sites_total": 140,
+      "delivered_context_sites": 92,
+      "delivered_context_resolving": 91,
+      "delivered_context_stale": 1,
+      "orphaned_r89_tail_sites": 21,
+      "orphaned_r89_tail_mismatching": 14,
+      "baseline_scoped_sites": 13,
+      "baseline_scoped_resolving": 13,
+      "evidence": "stale: doc:330 `:198-203` (item-level first-stop tests; delivered span is :200-205 — the same sentence at doc:331 already gives the correct range); orphan tail doc:545-556 lost its revision head, so 14 of its 21 sites do not resolve against the delivered checker (mapping below)"
+    },
+    {
+      "id": "C_structure",
+      "gate": "c",
+      "status": "PASS",
+      "requirement": "exactly one H1, no duplicate section headings, no instruction markers",
+      "h1_count": 1,
+      "h1_lines": [1],
+      "headings_total": 10,
+      "normalized_heading_duplicates": 0,
+      "instruction_marker_hits": 0,
+      "marker_scan": "grep -nE \"Replace:|proposal only|remap|Re-anchor|New bullet|Conversion rule|Apply order|Full replacement|instruction\" corpus/knowledge/holder-assessment-boundary.md -> rc=1, no output"
+    },
+    {
+      "id": "D_c9_tick_semantics",
+      "gate": "d",
+      "status": "PASS",
+      "requirement": "C9 tick semantics encoded: tick integer-only; null no clause; unresolved non-null qualified",
+      "tick_integer_only": {
+        "text": ["doc:201", "doc:254", "doc:286-289"],
+        "code": "check_bible.py:323-326 compares validated ints only; prefix from chain_has_ambiguous_source (:325); no holder_identity_detail call in the tick branch",
+        "behavior": ["r89-c1-invalid-tick -> `first stop: malformed record (invalid tick)` 4 violations", "r91-c1-tick-unresolved -> definite `provenance tick 1 must be greater than previous tick 3` + separately qualified chain line, 3 violations", "r87-probe-source-prefix -> tick line prefixed from ambiguous source only"]
+      },
+      "null_no_clause": {
+        "text": ["doc:201", "doc:286-287", "doc:295-297"],
+        "code": "holder_identity_detail returns None for a None side (:169-170)",
+        "behavior": ["r91-c1-null-chain -> definite `provenance chain break; expected from_holder 'mira', got None`, 1 violation", "scratch probe /tmp/jdep1/p1 (r89-fn2-unresolved-chain-break with record[1].from_holder=null) -> qualified form with `got None` retained: `...possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (...); got None`, 2 violations"]
+      },
+      "unresolved_non_null_qualified": {
+        "text": ["doc:201", "doc:280-287"],
+        "behavior": ["r89-fn2-unresolved-chain-break (expected side) qualified; r89-fn2-control unqualified definite break"]
+      }
+    },
+    {
+      "id": "E_r91_forensics_worklist",
+      "gate": "e",
+      "status": "PARTIAL",
+      "requirement": "r91 forensics worklist (JAXIS R1/R2/R3 + H5 + CB1 findings) addressed item-by-item",
+      "items": [
+        {"item": "JAXIS R1 — re-derive the boundary doc anchor-based", "status": "ADDRESSED IN SUBSTANCE, RESIDUAL", "evidence": "doc = ca7f9ef contract + remapped anchors; 14/14 replay; 1 H1; 0 markers; headings restored; residual = gate (b) FAIL (3 orphaned tails, 1 stale anchor)"},
+        {"item": "JAXIS R2 — add `## Round 91` to corpus/fixtures/README.md", "status": "NOT ADDRESSED", "evidence": "README sections jump `## Round 90` (:1016) -> `## Round 92` (:1020); `grep -n 'r91-c1' corpus/fixtures/README.md` -> no hits; the r91 fixture pair is documented only in corpus/knowledge/r91-c9-watch.md"},
+        {"item": "JAXIS R3 — tick-receipt byte-exact pair / watch rewording", "status": "ADDRESSED FOR THE RECEIPT PAIR, PARTIAL FOR THE WATCH POINTER", "evidence": "corpus/knowledge/r91-c9-watch.md check-log row 1 (2026-10-17, DISCRIMINATION HELD) plus the pinned pair run verbatim; my own replay of r91-c1-null-chain (1 violation) and r91-c1-tick-unresolved (3 violations) matches that receipt byte-for-byte; gates 1-2 met / gate 3 not / ruling retained; sibling residual (JCAL2.md:159): no next-recheck owner/due pointer and the e97613c hash is not pinned in the watch"},
+        {"item": "H5 F1 — five-gate entries mislabelled 1b09f3f", "status": "ADDRESSED", "evidence": "doc:60-66, doc:517-521, doc:657-658, doc:666 now say `ca7f9ef`; helper absence verified (rc=2, `No such file or directory`, corpus/fixtures/ contains only check_bible.py)"},
+        {"item": "H5 F2 — row-2 skip honesty", "status": "SUPERSEDED", "evidence": "decision row 2 (doc:200) carries correct delivered refs `:337`, `:326`, `:343`; no skip remains owed"},
+        {"item": "H5 F3 — D6/D7 cause/contract anchor remap", "status": "ADDRESSED EXCEPT ONE SITE", "evidence": "contract items 1-4 and all 14 cause-table rows resolve at ca7f9ef line numbers; residual doc:330 `:198-203`"},
+        {"item": "H5 F4 — D13 relabels, D2 bullet, missing limits bullets", "status": "ADDRESSED", "evidence": "status bullets relabelled to ca7f9ef; hedged-shapes bullet at doc:293-297; limits section carries 14 bullets"},
+        {"item": "H5 F5 — three dropped headings + dangling 'Commands' refs", "status": "ADDRESSED", "evidence": "`## The contract` (:68), `## Commands (self-contained, run from the lane root)` (:340), `## Status split` (:623) present; every 'Commands'/'emission-order' cross-reference resolves"},
+        {"item": "H5 F6 — seam cruft", "status": "PARTIAL", "evidence": "duplicate title, second `verified-at:`, scrambled limits section, cut bullets all fixed; three orphaned tails survive (doc:545-556, :591-596, :615-619) plus a pre-existing garbled sentence at doc:656"},
+        {"item": "H5 F7 — README Round-91 section / stale 'no Round 90' sentence", "status": "PARTIAL", "evidence": "the doc's own sentence is updated (doc:610-612: Round 90 landed at a7c6a17); the README Round-91 section is still absent (see R2)"},
+        {"item": "CB1 r91 coherence defects", "status": "MOSTLY ADDRESSED", "evidence": "duplicate H1 fixed; duplicated decision-table state row fixed (single not-uniquely-resolvable row at doc:201); dangling cross-refs, truncated scope bullet, orphaned Commands intro fixed; 12 missing r89 limit bullets restored; still open: duplicated Rules-text paragraph (doc:615-619) and the orphan fragment"}
+      ]
+    }
+  ],
+  "anchor_deviations": {
+    "doc:330": {"anchor": ":198-203", "claimed": "item-level first-stop tests (delivered)", "actual_at_delivered": "spans previous_tick init + 2 of the 3 item-level tests; the delivered span is :200-205", "classification": "stale unlabelled range"},
+    "doc:545-556": {
+      "classification": "orphaned r89-era continuation; lost its revision head and file-path label",
+      "sites": [":38-39", ":72-76", ":82-83", ":85-91", ":93", ":97", ":164-166", ":168-173", ":182", ":185-352", ":191", ":192-194", ":198-203", ":206-208", ":212-214", ":215-221", ":222-248", ":249-312", ":313-319", ":320-352", ":425-435"],
+      "mismatching_at_delivered": {
+        ":168-173": "holder_identity_detail span is :168-175",
+        ":182": "delivered :182 is `dangling entity`; the ambiguity precedent is :184",
+        ":185-352": "provenance loop is :187-345",
+        ":191": "`only valid on item entities` is :193",
+        ":192-194": "`expected array` + continue is :194-196",
+        ":198-203": "item-level first-stop tests are :200-205",
+        ":206-208": "disclosure template is :208-210",
+        ":212-214": "top-of-loop emission is :214-216",
+        ":215-221": "non-dict branch is :217-223",
+        ":222-248": "key-set branch is :224-250",
+        ":249-312": "field validation and cause collection are :251-314",
+        ":313-319": "latch is :315-321",
+        ":320-352": "comparison gate and FN-2 qualification are :322-345",
+        ":425-435": "CLI/exit behavior is :418-428 and :429-435 is past the delivered file's 428 lines"
+      },
+      "coinciding": [":38-39", ":72-76", ":82-83", ":85-91", ":93", ":97", ":164-166"]
+    }
+  },
+  "census_recheck": {
+    "fixture_dirs_at_head": 166,
+    "fixture_dirs_at_ca7f9ef": 164,
+    "provenance_dirs_at_head": 35,
+    "provenance_dirs_at_ca7f9ef": 33,
+    "duplicated_holder_records_at_ca7f9ef": 12,
+    "duplicated_holder_dirs_at_ca7f9ef": 10,
+    "doc_claim": "13 provenance records across ten of them (doc:581-590)",
+    "verdict": "drift of one: the ten named fixtures hold 12 records at ca7f9ef; 13 is the HEAD count including r91-c1-tick-unresolved (non-blocking wording defect)"
+  },
+  "unswept_scratch": ["/tmp/jdep1 (replay.txt, anchors.txt, extra1.txt, extra2.txt, base.py, p1/)"],
+  "writes": [
+    "lore-shokunin/.ufo/waves/round-92/followup/JDEP1-certification.json",
+    "lore-shokunin/.ufo/waves/round-92/followup/JDEP1.md"
+  ]
+}

@@ -1,0 +1,64 @@
+CHECK r99 rc=0
+STDOUT: 'CLEAN: schema, citations, relations, timeline; 0 violations\n'
+STDERR: ''
+CHECK r98 rc=0
+STDOUT: 'CLEAN: schema, citations, relations, timeline; 0 violations\n'
+STDERR: ''
+excerpt_prefix_is_blob True
+appended_bytes 927
+--- APPENDED EXCERPT ---
+
+## Round 99 lapse note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `clerk-lapse-note`, folio 9, lines 1–5. This section is appended after the preserved r98 text above; the inherited wording is unchanged.
+
+> Tick 15: The crossing-window named in the original minute has closed.
+> The agreement was unfulfilled.
+> No claim was lodged.
+> The matter stands as a historical open entry.
+> I record no resolution, assign no blame, and reconcile nothing.
+
+Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation, and it creates no new duty; the crossing-scoped agreement above is unchanged, and the matter stays open.
+
+--- NEEDLE SCAN description ---
+  desc 'resolution': False
+  desc 'blame': False
+  desc 'reconcil': False
+  desc 'verdict': False
+  desc 'winner': False
+  desc 'finding': False
+  desc 'closed': True
+  desc 'unfulfilled': True
+  desc 'no claim': True
+  desc 'open': True
+--- NEEDLE SCAN reliability ---
+  rel 'resolution': True
+  rel 'blame': True
+  rel 'reconcil': True
+  rel 'verdict': False
+  rel 'winner': True
+  rel 'finding': True
+  rel 'closed': True
+  rel 'unfulfilled': True
+  rel 'no claim': True
+  rel 'open': True
+--- NEEDLE SCAN appended excerpt ---
+  excerpt 'resolution': True
+  excerpt 'blame': True
+  excerpt 'reconcil': True
+  excerpt 'verdict': False
+  excerpt 'winner': False
+  excerpt 'finding': False
+  excerpt 'closed': True
+  excerpt 'unfulfilled': True
+  excerpt 'no claim': True
+  excerpt 'open': True
+  excerpt 'resolves': False
+  excerpt 'blames': False
+  excerpt 'reconciles': False
+relation [{"from": "aru", "to": "evin", "type": "agreed_co_stewardship_for_this_crossing", "source_id": "crossing-minute"}]
+entities_count 6
+claims_total 6
+sha256 timeline 2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069
+sha256 sources 8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15
+DONE

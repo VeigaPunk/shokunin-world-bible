@@ -1,0 +1,121 @@
+{
+  "head": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+  "checker": "corpus/fixtures/check_bible.py",
+  "cases": [
+    {
+      "case": "r87-masked-break-from-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-from-ambiguous",
+      "exit_code": 1,
+      "stdout_lines": [
+        "VIOLATION: entities[5].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "6 violation(s); no canon changed"
+      ],
+      "disclosure_lines": [
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[3].provenance[0]"
+      ],
+      "disclosure_line_count": 4,
+      "disclosure_records": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "structural_qualifier_present_in_disclosures": false,
+      "structural_qualifier_lines": []
+    },
+    {
+      "case": "r87-masked-break-to-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-masked-break-to-ambiguous",
+      "exit_code": 1,
+      "stdout_lines": [
+        "VIOLATION: entities[5].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "6 violation(s); no canon changed"
+      ],
+      "disclosure_lines": [
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]"
+      ],
+      "disclosure_line_count": 4,
+      "disclosure_records": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "structural_qualifier_present_in_disclosures": false,
+      "structural_qualifier_lines": []
+    },
+    {
+      "case": "r87-chain-unique-broken",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-chain-unique-broken",
+      "exit_code": 1,
+      "stdout_lines": [
+        "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'",
+        "1 violation(s); no canon changed"
+      ],
+      "disclosure_lines": [],
+      "disclosure_line_count": 0,
+      "disclosure_records": [],
+      "structural_qualifier_present_in_disclosures": false,
+      "structural_qualifier_lines": []
+    },
+    {
+      "case": "r87-chain-unique-valid",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-chain-unique-valid",
+      "exit_code": 0,
+      "stdout_lines": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "disclosure_lines": [],
+      "disclosure_line_count": 0,
+      "disclosure_records": [],
+      "structural_qualifier_present_in_disclosures": false,
+      "structural_qualifier_lines": []
+    },
+    {
+      "case": "E2-scratch-both-holders-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/r87-E2-BXY1we/both-ambiguous",
+      "exit_code": 1,
+      "stdout_lines": [
+        "VIOLATION: entities[5].id: duplicate entities id 'dup'",
+        "VIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0].from_holder: ambiguous entity 'dup'",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "7 violation(s); no canon changed"
+      ],
+      "disclosure_lines": [
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[3].provenance[0]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[3].provenance[0]"
+      ],
+      "disclosure_line_count": 4,
+      "disclosure_records": [
+        "entities[3].provenance[0]",
+        "entities[3].provenance[0]",
+        "entities[3].provenance[1]",
+        "entities[3].provenance[2]"
+      ],
+      "structural_qualifier_present_in_disclosures": false,
+      "structural_qualifier_lines": []
+    }
+  ]
+}

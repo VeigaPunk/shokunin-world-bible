@@ -1,0 +1,9 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V02-scratch/runs/tamper-fictional-excerpts.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V02-scratch/runs/tamper-fictional-excerpts.md/corpus/fixtures/r94-paired-crossing
+(cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V02-scratch/runs/tamper-fictional-excerpts.md)
+exit=2
+--- stdout ---
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+FINDING DIGEST-MISMATCH: content digest c16885525cc07a02e1d477e36c773b9aa8fa4e322be659b0fd69f81fc78a27ba != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: fictional-excerpts.md (sha256 585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2 -> 99b90daf3df4207e3b6fa567a24885d35fcd748bdbfc3c6b7d4e977f26d897a9); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+
+--- stderr ---

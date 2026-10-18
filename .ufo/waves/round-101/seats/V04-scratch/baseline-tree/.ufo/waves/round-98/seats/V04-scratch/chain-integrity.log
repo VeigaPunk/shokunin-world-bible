@@ -1,0 +1,28 @@
+=== I1: four inherited pins semantically identical to 9a3d648? ===
+r88-m3-maya-cluster: pin_equal_to_baseline=True
+r94-paired-crossing: pin_equal_to_baseline=True
+r95-crossing-aftermath: pin_equal_to_baseline=True
+r96-crossing-response: pin_equal_to_baseline=True
+inherited pin set equal: True
+baseline pins: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response'] | current pins: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+contract top-level revision: 2393934237ea076366f3db6dceeff033edb52ab1 -> dd4df1b36a64b513e75b46da04ee2f3f7f3eb6cb
+=== I2: strict loader fails closed when a pinned case is dropped (r97 property) ===
+FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['clean'] extra=[]
+RESULT ERROR
+EXIT=2
+=== I3: r97 pin load-bearing (drop the tick-13 edge in a mirror) ===
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '$S/mirror-r97/corpus/fixtures/r97-crossing-acknowledgment/timeline.json'
+FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1
+DIGEST 3c922d20a01bbd3f7941ed64f5c8796a619699197ae89fb10fca317cf83abea6
+RESULT PASS
+EXIT=0
+=== I4: same for r98 pin ===
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '$S/mirror-r98/corpus/fixtures/r98-clerk-filing/timeline.json'
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+EXIT=0

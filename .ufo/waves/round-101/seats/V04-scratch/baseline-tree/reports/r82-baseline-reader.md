@@ -1,0 +1,25 @@
+# Round 82 baseline reader — sealed initial answer
+
+Read before any Round 82 LOG, scout notes, or proposed table. This is an editorial request for evidence, not a canon finding.
+
+## (a) Do the reports identify the same ringing/occasion?
+
+I would request the original, contemporaneous bell/registry record that uniquely identifies the seventh-watch registry-bell sounding, including its own occasion/entry identifier and the date it records, together with the underlying contemporaneous notes from Tarin and Sella that connect each account to that identifier. The critical result is whether both independently connect their statements to one uniquely identified ringing, rather than merely repeating the label “Bell-7” and an asserted date. Matching independent identifiers (and compatible date entries) would support that they refer to one occasion; distinct identifiers or incompatible recorded dates would discriminate against that reading. A missing or ambiguous record would leave the occasion unresolved. Even a match would not authenticate the fictional sources, prove either account true, establish clock-time/timeline-tick equivalence, or determine canon, rights, or mechanics.
+
+The current excerpts assert the same Bell-7 and seventh day of Embermonth, year 12; the r35 map says those are fictional source claims, not authenticated chronology. The r36 contrast shows why the words “that same Bell-7” alone cannot settle identity when the explicit date differs. These materials do not provide an independent unique ringing record or corroboration.
+
+## (b) Did Tarin observe Sella, and does the Harbor scene locate Sella rather than only Tarin's reported observation?
+
+I would request Tarin's original contemporaneous observation record (not a later paraphrase), with the exact scene/place and occasion identifier, how he identified the person as Sella, and what he directly saw; separately, I would request an independently created, contemporaneous location record or witness account for Sella over that same identified interval, with place explicitly distinguished as Lantern Harbor or North Tower. The observation record could discriminate direct sighting from hearsay, mistaken identification, or a later attribution. The independent location evidence could discriminate Harbor presence from Tower presence if it reliably identifies Sella and covers the same interval. A Harbor record that merely locates Tarin or the observation scene does not locate Sella. Neither record alone proves the source authentic, the report truthful, or the real-world/canonical result; conflicts or gaps remain editorially unresolved.
+
+The existing Tarin excerpt says “I ... saw Sella” at Harbor, while Sella's excerpt reports herself at North Tower throughout that named ringing and absent from Harbor. The pointer map explicitly describes Harbor as Tarin's observation scene, not as Sella's conflicting location. The current materials give no independent evidence that Tarin actually observed her and no independent corroboration of Sella's location. The event/source IDs and tick 3 are authored fixture structure/local sequence, not authentication, chronology, clock time, or an occasion identifier.
+
+## Do the current materials already tell me to take these actions?
+
+No. They identify the unresolved editorial questions, explain the fictional shared-occasion assumption and the observation-scene/location distinction, and list non-claims. They do not direct a request for the specific independent records above. I would not treat their JSON pointers, source IDs, or tick as substitutes for those records.
+
+## Reflection after sealed answer (Round 82 materials)
+
+After sealing the answer above, I read the Round 82 LOG and available scout reports. My proposed occasion request substantially matches the decision/simplifier proposals: a uniquely identifying, provenance-reviewed record plus a linkage from each account. My two-part observation/location request likewise matches the proposed person/place distinction. The scouts and critic also identify the circularity risk: a register repeating the reports or asserting “sole” within an unassessed scope is not independent linkage. My initial wording asks for an independently identified entry and each note's connection to it, but does not specify a register's completeness or how the note-to-entry links are independently established; that remains a limitation, not a proven new action.
+
+The baseline documents already state the key unresolved assumptions and limitations (including Harbor as Tarin's observation scene, and r36's date mismatch), but do not themselves direct these specific conditional evidence requests. After seeing the proposal, I cannot claim a materially different action from it: both seek same-occasion linkage, then independent person/location evidence. This reader therefore supplies a sealed baseline response, not evidence of incremental depth or a verdict that the proposal changes an editor's next step. All IDs, ticks, source labels, and excerpts remain authored fictional material; no authenticity, truth, canon, rights, or mechanics conclusion follows.

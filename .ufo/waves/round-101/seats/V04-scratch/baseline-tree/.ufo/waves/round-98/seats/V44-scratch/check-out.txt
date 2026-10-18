@@ -1,0 +1,13 @@
+NEW corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md
+NEW corpus/fixtures/r98-clerk-filing/contradictions.json
+NEW corpus/fixtures/r98-clerk-filing/entities.json
+NEW corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+NEW corpus/fixtures/r98-clerk-filing/inspiration-note.md
+NEW corpus/fixtures/r98-clerk-filing/README.md
+NEW corpus/fixtures/r98-clerk-filing/relations.json
+NEW corpus/fixtures/r98-clerk-filing/source-excerpt.md
+NEW corpus/fixtures/r98-clerk-filing/sources.json
+NEW corpus/fixtures/r98-clerk-filing/timeline.json
+--- summary ---
+baseline_paths=1029 current_paths=1039
+changed=0 new=10

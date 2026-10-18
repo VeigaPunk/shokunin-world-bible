@@ -1,0 +1,4 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/map_obligations_r97.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/ctrl-legacy-prose
+OBLIGATIONS raw=3 mapped=3
+RESULT PASS
+EXIT=0

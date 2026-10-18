@@ -1,0 +1,4 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/map_obligations_r96.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/case-e
+FINDING malformed_json: cannot parse entities.json: Unterminated string starting at: line 27 column 11 (char 558)
+RESULT ERROR
+EXIT=2

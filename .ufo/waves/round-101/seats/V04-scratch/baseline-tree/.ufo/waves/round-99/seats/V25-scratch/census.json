@@ -1,0 +1,883 @@
+{
+  "dir_list": [
+    "ally-one-way",
+    "ally-reciprocal",
+    "consistent",
+    "contradictions",
+    "contradictions-ledger-malformed",
+    "item-chain-broken",
+    "item-chain-valid",
+    "r10-registry-witness",
+    "r11-character-place",
+    "r11-dangling-place",
+    "r11-place-character",
+    "r11-unique-nonplace",
+    "r12-ambiguous-actor",
+    "r12-unique-actor",
+    "r13-missing-actor",
+    "r13-unique-actor",
+    "r15-carbon-followup",
+    "r16-missing-first",
+    "r16-missing-place",
+    "r16-mixed-three",
+    "r16-valid-places",
+    "r17-valid-places",
+    "r17-wrong-after",
+    "r17-wrong-before",
+    "r17-wrong-first",
+    "r17-wrong-last",
+    "r17-wrong-middle",
+    "r18-duplicate-first-known",
+    "r18-duplicate-pair",
+    "r18-duplicate-reverse",
+    "r18-known-through-ambiguous",
+    "r18-mixed-kind",
+    "r18-unique-pair",
+    "r19-negative-first-valid",
+    "r19-negative-tick",
+    "r19-valid-around-negative",
+    "r19-valid-tick",
+    "r20-both-negative",
+    "r20-mixed-edges",
+    "r20-negative-dependent",
+    "r20-negative-prereq",
+    "r20-valid-equal",
+    "r20-valid-inversion",
+    "r20-valid-order",
+    "r21-ambiguous-actor",
+    "r21-clean",
+    "r21-clean-reverse",
+    "r21-invalid-tick",
+    "r21-malformed",
+    "r21-malformed-reverse",
+    "r21-same-place",
+    "r21-wrong-kind-place",
+    "r22-clean-inversion",
+    "r22-malformed-only",
+    "r22-mixed-first",
+    "r22-mixed-last",
+    "r22-multiple-invalid",
+    "r22-self-repeated",
+    "r22-unknown-mixed",
+    "r22-valid-order",
+    "r23-note-class",
+    "r25-to-ambiguous",
+    "r25-to-unique",
+    "r26-to-malformed",
+    "r27-both-ambiguous",
+    "r27-target-only",
+    "r28-courier-excerpt",
+    "r29-near-miss",
+    "r30-explicit-negation",
+    "r31-source-ambiguous",
+    "r31-source-unique",
+    "r32-source-malformed",
+    "r33-tarin-envelope",
+    "r34-tarin-hearsay",
+    "r35-bell7-conflict",
+    "r36-bell7-wrong-date",
+    "r37-ledger-ambiguous",
+    "r37-ledger-unique",
+    "r39-ledger-source-missing",
+    "r39-ledger-source-unique",
+    "r40-vela-listener",
+    "r41-vela-direct-bell",
+    "r43-jorin-vela-sighting",
+    "r5-invalid-citation",
+    "r5-invalid-json",
+    "r5-missing-file",
+    "r5-row-shape",
+    "r5-wrong-top-level",
+    "r59-duplicate-harbor-tower",
+    "r59-duplicate-tower-harbor",
+    "r59-nested-duplicate",
+    "r59-unique-control",
+    "r60-empty",
+    "r60-partial",
+    "r60-unavailable",
+    "r60-unavailable-independent",
+    "r61-allied-empty",
+    "r61-allied-unavailable",
+    "r61-direct-ambiguous",
+    "r61-direct-duplicate-member",
+    "r61-direct-empty",
+    "r61-direct-malformed",
+    "r61-direct-nonarray",
+    "r61-direct-partial",
+    "r61-direct-unavailable",
+    "r61-independent-empty",
+    "r61-independent-unavailable",
+    "r61-ledger-unavailable",
+    "r62-duplicate",
+    "r62-duplicate-member",
+    "r62-empty",
+    "r62-independent",
+    "r62-loaded",
+    "r62-malformed",
+    "r62-malformed-side",
+    "r62-missing",
+    "r62-nonarray",
+    "r62-partial",
+    "r67-claim-source-loaded-control",
+    "r67-claim-source-loaded-empty",
+    "r67-claim-source-unavailable-control",
+    "r67-claim-source-unavailable-empty",
+    "r67-claim-source-unavailable-whitespace",
+    "r7-ally-reverse-ambiguous",
+    "r7-item-ambiguous",
+    "r72-vela-slate-claim",
+    "r73-jorin-slate-claim",
+    "r8-deps-anomalous",
+    "r8-deps-distinct",
+    "r83-vela-joint-nonsighting",
+    "r87-chain-unique-broken",
+    "r87-chain-unique-valid",
+    "r87-masked-break-from-ambiguous",
+    "r87-masked-break-to-ambiguous",
+    "r87-myth-cluster",
+    "r87-probe-entry-shape",
+    "r87-probe-multi-invalid",
+    "r87-probe-nonitem-kinds",
+    "r87-probe-record-and-chain",
+    "r87-probe-rowshape-rejected",
+    "r87-probe-shape-ambiguous",
+    "r87-probe-source-prefix",
+    "r88-m3-maya-cluster",
+    "r88-mixed-stop",
+    "r88-nonholder-stop",
+    "r88-shape-ambiguous-armed",
+    "r89-c1-invalid-from-holder",
+    "r89-c1-invalid-tick",
+    "r89-c1-invalid-to-holder",
+    "r89-c1-malformed-source-id",
+    "r89-c1-multi-cause-valid",
+    "r89-f2-dangling-from",
+    "r89-f2-dangling-to",
+    "r89-f2-invalid-source-id",
+    "r89-fn2-control",
+    "r89-fn2-unresolved-chain-break",
+    "r89-inspiration-paraphrase",
+    "r9-dup-high-low",
+    "r9-dup-low-high",
+    "r9-unique-control",
+    "r90-c1-rawpresent-from",
+    "r90-c1-rawpresent-source",
+    "r90-c1-rawpresent-to",
+    "r90-c1-three-causes",
+    "r91-c1-null-chain",
+    "r91-c1-tick-unresolved",
+    "r93-m2-kojiki-cluster",
+    "r94-paired-crossing",
+    "r95-crossing-aftermath",
+    "r96-crossing-response",
+    "r97-crossing-acknowledgment",
+    "r98-clerk-filing",
+    "r99-window-lapse"
+  ],
+  "per": {
+    "ally-one-way": {
+      "exit": 1,
+      "violations": 1
+    },
+    "ally-reciprocal": {
+      "exit": 0,
+      "violations": 0
+    },
+    "consistent": {
+      "exit": 0,
+      "violations": 0
+    },
+    "contradictions": {
+      "exit": 1,
+      "violations": 3
+    },
+    "contradictions-ledger-malformed": {
+      "exit": 1,
+      "violations": 4
+    },
+    "item-chain-broken": {
+      "exit": 1,
+      "violations": 1
+    },
+    "item-chain-valid": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r10-registry-witness": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r11-character-place": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r11-dangling-place": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r11-place-character": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r11-unique-nonplace": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r12-ambiguous-actor": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r12-unique-actor": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r13-missing-actor": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r13-unique-actor": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r15-carbon-followup": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r16-missing-first": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r16-missing-place": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r16-mixed-three": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r16-valid-places": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r17-valid-places": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r17-wrong-after": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r17-wrong-before": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r17-wrong-first": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r17-wrong-last": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r17-wrong-middle": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r18-duplicate-first-known": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r18-duplicate-pair": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r18-duplicate-reverse": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r18-known-through-ambiguous": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r18-mixed-kind": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r18-unique-pair": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r19-negative-first-valid": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r19-negative-tick": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r19-valid-around-negative": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r19-valid-tick": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r20-both-negative": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r20-mixed-edges": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r20-negative-dependent": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r20-negative-prereq": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r20-valid-equal": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r20-valid-inversion": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r20-valid-order": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r21-ambiguous-actor": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r21-clean": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r21-clean-reverse": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r21-invalid-tick": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r21-malformed": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r21-malformed-reverse": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r21-same-place": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r21-wrong-kind-place": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r22-clean-inversion": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r22-malformed-only": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r22-mixed-first": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r22-mixed-last": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r22-multiple-invalid": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r22-self-repeated": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r22-unknown-mixed": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r22-valid-order": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r23-note-class": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r25-to-ambiguous": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r25-to-unique": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r26-to-malformed": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r27-both-ambiguous": {
+      "exit": 1,
+      "violations": 6
+    },
+    "r27-target-only": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r28-courier-excerpt": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r29-near-miss": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r30-explicit-negation": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r31-source-ambiguous": {
+      "exit": 1,
+      "violations": 8
+    },
+    "r31-source-unique": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r32-source-malformed": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r33-tarin-envelope": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r34-tarin-hearsay": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r35-bell7-conflict": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r36-bell7-wrong-date": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r37-ledger-ambiguous": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r37-ledger-unique": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r39-ledger-source-missing": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r39-ledger-source-unique": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r40-vela-listener": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r41-vela-direct-bell": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r43-jorin-vela-sighting": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r5-invalid-citation": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r5-invalid-json": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r5-missing-file": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r5-row-shape": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r5-wrong-top-level": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r59-duplicate-harbor-tower": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r59-duplicate-tower-harbor": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r59-nested-duplicate": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r59-unique-control": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r60-empty": {
+      "exit": 1,
+      "violations": 6
+    },
+    "r60-partial": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r60-unavailable": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r60-unavailable-independent": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r61-allied-empty": {
+      "exit": 1,
+      "violations": 6
+    },
+    "r61-allied-unavailable": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r61-direct-ambiguous": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r61-direct-duplicate-member": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r61-direct-empty": {
+      "exit": 1,
+      "violations": 11
+    },
+    "r61-direct-malformed": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r61-direct-nonarray": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r61-direct-partial": {
+      "exit": 1,
+      "violations": 7
+    },
+    "r61-direct-unavailable": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r61-independent-empty": {
+      "exit": 1,
+      "violations": 18
+    },
+    "r61-independent-unavailable": {
+      "exit": 1,
+      "violations": 7
+    },
+    "r61-ledger-unavailable": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r62-duplicate": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r62-duplicate-member": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r62-empty": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r62-independent": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r62-loaded": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r62-malformed": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r62-malformed-side": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r62-missing": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r62-nonarray": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r62-partial": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r67-claim-source-loaded-control": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r67-claim-source-loaded-empty": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r67-claim-source-unavailable-control": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r67-claim-source-unavailable-empty": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r67-claim-source-unavailable-whitespace": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r7-ally-reverse-ambiguous": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r7-item-ambiguous": {
+      "exit": 1,
+      "violations": 7
+    },
+    "r72-vela-slate-claim": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r73-jorin-slate-claim": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r8-deps-anomalous": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r8-deps-distinct": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r83-vela-joint-nonsighting": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r87-chain-unique-broken": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r87-chain-unique-valid": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r87-masked-break-from-ambiguous": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r87-masked-break-to-ambiguous": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r87-myth-cluster": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r87-probe-entry-shape": {
+      "exit": 1,
+      "violations": 8
+    },
+    "r87-probe-multi-invalid": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r87-probe-nonitem-kinds": {
+      "exit": 1,
+      "violations": 9
+    },
+    "r87-probe-record-and-chain": {
+      "exit": 1,
+      "violations": 46
+    },
+    "r87-probe-rowshape-rejected": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r87-probe-shape-ambiguous": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r87-probe-source-prefix": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r88-m3-maya-cluster": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r88-mixed-stop": {
+      "exit": 1,
+      "violations": 6
+    },
+    "r88-nonholder-stop": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r88-shape-ambiguous-armed": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r89-c1-invalid-from-holder": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r89-c1-invalid-tick": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r89-c1-invalid-to-holder": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r89-c1-malformed-source-id": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r89-c1-multi-cause-valid": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r89-f2-dangling-from": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r89-f2-dangling-to": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r89-f2-invalid-source-id": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r89-fn2-control": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r89-fn2-unresolved-chain-break": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r89-inspiration-paraphrase": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r9-dup-high-low": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r9-dup-low-high": {
+      "exit": 1,
+      "violations": 2
+    },
+    "r9-unique-control": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r90-c1-rawpresent-from": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r90-c1-rawpresent-source": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r90-c1-rawpresent-to": {
+      "exit": 1,
+      "violations": 5
+    },
+    "r90-c1-three-causes": {
+      "exit": 1,
+      "violations": 4
+    },
+    "r91-c1-null-chain": {
+      "exit": 1,
+      "violations": 1
+    },
+    "r91-c1-tick-unresolved": {
+      "exit": 1,
+      "violations": 3
+    },
+    "r93-m2-kojiki-cluster": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r94-paired-crossing": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r95-crossing-aftermath": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r96-crossing-response": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r97-crossing-acknowledgment": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r98-clerk-filing": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r99-window-lapse": {
+      "exit": 0,
+      "violations": 0
+    }
+  },
+  "summary": {
+    "clean": 39,
+    "dirs": 173,
+    "negative": 134,
+    "non01": [],
+    "r99": {
+      "exit": 0,
+      "violations": 0
+    },
+    "r99_present": true,
+    "violation_lines": 421
+  }
+}

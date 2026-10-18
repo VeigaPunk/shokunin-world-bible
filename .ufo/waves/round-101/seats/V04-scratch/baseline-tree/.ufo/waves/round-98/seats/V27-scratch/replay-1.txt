@@ -1,0 +1,39 @@
+== tool hashes ==
+ff9fd2aa  corpus/fixtures/check_bible.py
+55a5eb27  corpus/tools/support_check.py
+86b52949  corpus/tools/map_obligations.py
+2142b991  corpus/tools/map-obligations-contract.json
+== file hashes r97 / r98 ==
+entities.json            r97=026af0bc r98=db2d8e5d
+relations.json           r97=c279254b r98=c279254b
+contradictions.json      r97=37517e5f r98=37517e5f
+timeline.json            r97=73063a86 r98=eb24e084
+sources.json             r97=438fb513 r98=32ee15b1
+inspiration-note.md      r97=58f5390e r98=58f5390e
+source-excerpt.md        r97=b5edc2fd r98=b5edc2fd
+fictional-excerpts.md    r97=8ba491cb r98=29e384bf
+README.md                r97=d9387b7d r98=32efc78f
+claim-excerpt-map.md     r97=49d4834e r98=c1099d0e
+== counts ==
+r98 counts e/r/ev/s/c: 6/1/7/7/0
+r97 counts e/r/ev/s/c: 5/1/6/6/0
+== byte-identity of inherited copies (r98 vs r97) ==
+entities.json            byte-identical=False
+relations.json           byte-identical=True
+contradictions.json      byte-identical=True
+inspiration-note.md      byte-identical=True
+source-excerpt.md        byte-identical=True
+== parsed prefix ==
+r98 timeline[:-1] == r97 timeline: True
+r98 sources[:-1] == r97 sources: True
+r98 entities[:-1] == r97 entities: True
+r98 relations == r97 relations: True
+new entities entry: {"id": "clerk-maren", "kind": "character", "name": "Maren", "first_appearance": "clerk-filing-note", "claims": [{"statement": "The filing note names Maren, the clerk of the Chalk Stair registry, as the officer who filed both pending accounts.", "source_id": "clerk-filing-note"}]}
+new timeline entry: {"id": "clerk-filing-open", "tick": 14, "entity_id": "clerk-maren", "place_id": "chalk-stair", "depends_on": ["acknowledgment-aru-records"], "description": "At the Chalk Stair at tick 14, the clerk filed both pending accounts and recorded the matter OPEN, asserting no finding and no resolution.", "source_id": "clerk-filing-note"}
+new sources entry: {"id": "clerk-filing-note", "title": "Maren's Chalk Stair Registry Filing Note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; the clerk reports filing both pending accounts at the Chalk Stair registry and recording the matter OPEN. It asserts no finding, no verdict, no reconciliation, and no resolution; it is not evidence of a breach, a continuing duty, a winner between the accounts, or an external historical fact."}
+r98 contradictions: []
+== excerpts byte-prefix ==
+r97 excerpts is byte-prefix of r98: True
+sizes: r97=3410B r98=4187B delta=777B
+== census ==
+fixture dirs: 172

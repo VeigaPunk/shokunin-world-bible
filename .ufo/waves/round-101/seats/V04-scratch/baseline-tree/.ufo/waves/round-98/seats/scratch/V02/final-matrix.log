@@ -1,0 +1,78 @@
+VERIFIED-AGAINST tool_sha256=03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b
+VERIFIED-AGAINST contract_sha256=153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947
+
+=== legacy_missing_key ===
+cmd: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_missing_key/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_missing_key/corpus/fixtures/r95-crossing-aftermath  (cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_missing_key)
+pin before: fixture_key=False value=None keys=['content_sha256', 'counts', 'events', 'files', 'relations', 'revision']
+  MIGRATED r95-crossing-aftermath: path-less legacy pin now names corpus/fixtures/r95-crossing-aftermath
+  FROZEN r95-crossing-aftermath: events 4; dependency-edges 3; relations 1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  RESULT PASS
+exit=0 contract_hash d91ef9edc6956db0… -> 3315ff3d0091fc4a… unchanged=False
+pin after: fixture_key=True value='corpus/fixtures/r95-crossing-aftermath'
+top-level keys same: True
+other pins identical: True
+self_test block identical: True
+target pin content fields identical: True
+
+=== legacy_null ===
+cmd: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_null/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_null/corpus/fixtures/r95-crossing-aftermath  (cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_null)
+pin before: fixture_key=True value=None keys=['content_sha256', 'counts', 'events', 'files', 'fixture', 'relations', 'revision']
+  MIGRATED r95-crossing-aftermath: path-less legacy pin now names corpus/fixtures/r95-crossing-aftermath
+  FROZEN r95-crossing-aftermath: events 4; dependency-edges 3; relations 1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  RESULT PASS
+exit=0 contract_hash 73be057b60771552… -> 3315ff3d0091fc4a… unchanged=False
+pin after: fixture_key=True value='corpus/fixtures/r95-crossing-aftermath'
+
+=== legacy_nonstring ===
+cmd: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_nonstring/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_nonstring/corpus/fixtures/r95-crossing-aftermath  (cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_nonstring)
+pin before: fixture_key=True value=123 keys=['content_sha256', 'counts', 'events', 'files', 'fixture', 'relations', 'revision']
+  MIGRATED r95-crossing-aftermath: path-less legacy pin now names corpus/fixtures/r95-crossing-aftermath
+  FROZEN r95-crossing-aftermath: events 4; dependency-edges 3; relations 1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  RESULT PASS
+exit=0 contract_hash 4050d9627023ac43… -> 3315ff3d0091fc4a… unchanged=False
+pin after: fixture_key=True value='corpus/fixtures/r95-crossing-aftermath'
+
+=== legacy_empty_string ===
+cmd: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_empty_string/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_empty_string/corpus/fixtures/r95-crossing-aftermath  (cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_empty_string)
+pin before: fixture_key=True value='' keys=['content_sha256', 'counts', 'events', 'files', 'fixture', 'relations', 'revision']
+  MIGRATED r95-crossing-aftermath: path-less legacy pin now names corpus/fixtures/r95-crossing-aftermath
+  FROZEN r95-crossing-aftermath: events 4; dependency-edges 3; relations 1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+  DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+  RESULT PASS
+exit=0 contract_hash 493c2eae2538e639… -> 3315ff3d0091fc4a… unchanged=False
+pin after: fixture_key=True value='corpus/fixtures/r95-crossing-aftermath'
+
+=== legacy_other_path ===
+cmd: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_other_path/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_other_path/corpus/fixtures/r95-crossing-aftermath  (cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_other_path)
+pin before: fixture_key=True value='corpus/fixtures/r96-crossing-response' keys=['content_sha256', 'counts', 'events', 'files', 'fixture', 'relations', 'revision']
+  FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/r95-crossing-aftermath: pin r95-crossing-aftermath already names 'corpus/fixtures/r96-crossing-response'; freezing a same-named path elsewhere would rewrite the delivered pin
+  RESULT ERROR
+exit=2 contract_hash edee9e7d0f6f6bbf… -> edee9e7d0f6f6bbf… unchanged=True
+pin after: fixture_key=True value='corpus/fixtures/r96-crossing-response'
+
+=== legacy_out_of_scope_path ===
+cmd: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_out_of_scope_path/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_out_of_scope_path/corpus/fixtures/r95-crossing-aftermath  (cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/legacy_out_of_scope_path)
+pin before: fixture_key=True value='corpus/knowledge' keys=['content_sha256', 'counts', 'events', 'files', 'fixture', 'relations', 'revision']
+  FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/r95-crossing-aftermath: pin r95-crossing-aftermath already names 'corpus/knowledge'; freezing a same-named path elsewhere would rewrite the delivered pin
+  RESULT ERROR
+exit=2 contract_hash 627487c934668c04… -> 627487c934668c04… unchanged=True
+pin after: fixture_key=True value='corpus/knowledge'
+
+=== garbage_traversal ===
+cmd: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/garbage_traversal/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/garbage_traversal/corpus/fixtures/r95-crossing-aftermath  (cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/scratch/V02/cases/garbage_traversal)
+pin before: fixture_key=True value='../../outside' keys=['content_sha256', 'counts', 'events', 'files', 'fixture', 'relations', 'revision']
+  FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/r95-crossing-aftermath: pin r95-crossing-aftermath already names '../../outside'; freezing a same-named path elsewhere would rewrite the delivered pin
+  RESULT ERROR
+exit=2 contract_hash ef63fc76a4c79e1f… -> ef63fc76a4c79e1f… unchanged=True
+pin after: fixture_key=True value='../../outside'

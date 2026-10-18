@@ -1,0 +1,5 @@
+ LOG.md                                     |  67 ++++++++++++++
+ corpus/tools/README.md                     |  50 +++++++++++
+ corpus/tools/map-obligations-contract.json |   2 +
+ corpus/tools/map_obligations.py            | 139 ++++++++++++++++++++++++-----
+ 4 files changed, 234 insertions(+), 24 deletions(-)

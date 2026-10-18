@@ -1,0 +1,30 @@
+== r99-vs-r98: json=21 editorial=2 distinct=19 tables=3 ==
+declared_inventory=(21, 2, 23, 19) parsed=(21, 2, 23, 19)
+J01 mapline=22 span=12 py=[12] inside=[12] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J02 mapline=23 span=13 py=[13] inside=[13] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J03 mapline=24 span=12 py=[12] inside=[12] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J04 mapline=25 span=13 py=[13] inside=[13] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J05 mapline=26 span=17 py=[17] inside=[17] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J06 mapline=27 span=12 py=[12] inside=[12] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J07 mapline=28 span=13 py=[13] inside=[13] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J08 mapline=29 span=12 py=[12] inside=[12] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J09 mapline=30 span=13 py=[13] inside=[13] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J10 mapline=31 span=18 py=[18] inside=[18] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J11 mapline=32 span=19 py=[19] inside=[19] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J12 mapline=33 span=12 py=[12] inside=[12] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J13 mapline=34 span=13 py=[13] inside=[13] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J14 mapline=35 span=18-20 py=[20] inside=[20] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J15 mapline=36 span=22-31 py=[26] inside=[26] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J16 mapline=37 span=33-42 py=[37] inside=[37] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J17 mapline=38 span=44-53 py=[48] inside=[48] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J18 mapline=39 span=60 py=[60] inside=[60] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J19 mapline=40 span=59-60 py=[59] inside=[59] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J20 mapline=41 span=55-64 py=[59] inside=[59] outside=- IN-SPAN=True mode=verbatim ptr=OK
+J21 mapline=42 span=66-76 py=[70] inside=[70] outside=- IN-SPAN=True mode=verbatim ptr=OK
+S01 mapline=50 span=5 py=[5] inside=[5] outside=- IN-SPAN=True mode=verbatim
+S02 mapline=51 span=5 py=[5] inside=[5] outside=- IN-SPAN=True mode=verbatim
+inherited_ok=20/20 new=['J21'] dropped=[]
+excerpt_byte_prefix=True base_len=4187 new_len=5114
+J21 appended-only=True base_lines=64 hits=[70]
+IN-SPAN 23/23 json_in_span_count_pending
+RESULT PASS failures=0 inherited_ok=20 mismatches=0 new=['J21']

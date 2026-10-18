@@ -1,0 +1,79 @@
+### T0 verify-clean on ws copies
+== T0 r88-m3-maya-cluster ==
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST 15ef230ef806ea7e7431f5afc7d999aee978b024cf47f2a20cbba726fc3fc279
+RESULT PASS
+EXIT=0
+== T0 r94-paired-crossing ==
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+EXIT=0
+== T0 r95-crossing-aftermath ==
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+EXIT=0
+== T0 r96-crossing-response ==
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+RESULT PASS
+EXIT=0
+
+### T1 non-edge byte tamper: r96 sources.json one character (title)
+d436f9550ed9b85409fc66a566ccbd0038f553da19cf69391eeac011071bd3ec  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V22-c3-tamper.scratch/muts/t1/r96-crossing-response/sources.json
+== T1 ==
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+FINDING DIGEST-MISMATCH: content digest f5656e9912583e96a29acf2a7d82d33c6cef862b074a0346c215e6350a36d89a != pin d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6; fixture bytes changed outside the frozen inventory
+RESULT ERROR
+EXIT=2
+
+### T2 non-edge byte tamper: r94 timeline.json description only (inventory-neutral)
+13468f4be22551eac69610414052df63715327ae61f822c89ce5a59829c15770  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V22-c3-tamper.scratch/muts/t2/r94-paired-crossing/timeline.json
+== T2 ==
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+FINDING DIGEST-MISMATCH: content digest af388b771ad67e270279f4a0d943dc707a87106c763eb23fcb203508fd988e3e != pin 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75; fixture bytes changed outside the frozen inventory
+RESULT ERROR
+EXIT=2
+
+### T3 edge tamper (BR-01): r94 drop evin-ninth-bell from tick-10 depends_on
+== T3 ==
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 1/2; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+EXIT=1
+
+### T5b boundary: markdown-only edit (README append) — expect not covered by JSON digest
+== T5b ==
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+EXIT=0
+
+### T4 freeze-on-copy then verify (last: rewrites ws contract)
+== T4 freeze tampered r96 copy ==
+FROZEN r96-crossing-response: events 5; dependency-edges 4; relations 1
+DIGEST f5656e9912583e96a29acf2a7d82d33c6cef862b074a0346c215e6350a36d89a
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST f5656e9912583e96a29acf2a7d82d33c6cef862b074a0346c215e6350a36d89a
+RESULT PASS
+EXIT=0
+== T4 verify after freeze ==
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST f5656e9912583e96a29acf2a7d82d33c6cef862b074a0346c215e6350a36d89a
+RESULT PASS
+EXIT=0
+== T4b freeze pristine r94 copy ==
+FROZEN r94-paired-crossing: events 3; dependency-edges 2; relations 1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+EXIT=0
+== T4b verify after freeze ==
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+EXIT=0
+
+### DONE

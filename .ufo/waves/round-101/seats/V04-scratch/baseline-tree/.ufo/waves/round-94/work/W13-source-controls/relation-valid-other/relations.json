@@ -1,0 +1,8 @@
+[
+  {
+    "from": "control-entity",
+    "to": "control-entity",
+    "type": "control_edge",
+    "source_id": "m2-record-archive"
+  }
+]

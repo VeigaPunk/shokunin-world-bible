@@ -1,0 +1,48 @@
+### V50 final receipts 2026-10-17T21:50:53Z
+
+$ for f in entities.json relations.json contradictions.json inspiration-note.md source-excerpt.md; do cmp corpus/fixtures/r96-crossing-response/$f corpus/fixtures/r97-crossing-acknowledgment/$f && echo "$f IDENTICAL"; done
+entities.json IDENTICAL
+relations.json IDENTICAL
+contradictions.json IDENTICAL
+inspiration-note.md IDENTICAL
+source-excerpt.md IDENTICAL
+
+$ diff <(git show f3e09f9:corpus/fixtures/r96-crossing-response/fictional-excerpts.md) corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+42a43,53
+> 
+> ## Round 97 acknowledgment note (2026-10-17)
+> 
+> Newly authored fictional first-person note, attributed to in-world source ID `aru-acknowledgment-note`, folio 7, lines 1–4. This section is appended after the preserved r96 text above; the inherited wording is unchanged.
+> 
+> > Tick 13: I received Evin's response at the Chalk Stair.
+> > I hold to my own account; both accounts stand unresolved.
+> > I make no accusation against Evin, and I select no winner between us.
+> > I assert no reconciliation, no new duty, and no obligation beyond this crossing.
+> 
+> Scope: this appended section is Aru's first-person acknowledgment that he received Evin's response. It records receipt only; it asserts no accusation, no reconciliation, no winner between the two accounts, and no new duty, and the crossing-scoped agreement above is unchanged.
+(diff rc=1 — 1 = differences exist; single append hunk expected)
+
+$ diff corpus/fixtures/r96-crossing-response/sources.json corpus/fixtures/r97-crossing-acknowledgment/sources.json
+30a31,36
+>   },
+>   {
+>     "id": "aru-acknowledgment-note",
+>     "title": "Aru's Chalk Stair Acknowledgment Note",
+>     "kind": "fictional first-person note",
+>     "reliability_note": "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of a resolution, a reconciliation, an accusation, a winner between the accounts, a continuing duty, or an external historical fact."
+(sources diff rc=1)
+
+$ diff corpus/fixtures/r96-crossing-response/timeline.json corpus/fixtures/r97-crossing-acknowledgment/timeline.json
+52a53,63
+>   },
+>   {
+>     "id": "acknowledgment-aru-records",
+>     "tick": 13,
+>     "entity_id": "aru",
+>     "place_id": "chalk-stair",
+>     "depends_on": [
+>       "response-evin-salt-court"
+>     ],
+>     "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.",
+>     "source_id": "aru-acknowledgment-note"
+(timeline diff rc=1)

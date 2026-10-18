@@ -1,0 +1,18 @@
+diff --git a/corpus/knowledge/r91-c9-watch.md b/corpus/knowledge/r91-c9-watch.md
+--- a/corpus/knowledge/r91-c9-watch.md
++++ b/corpus/knowledge/r91-c9-watch.md
+@@ -41,6 +41,9 @@
+ ## Owner
+ 
+ S1 owns this watch design for round 91 and hands it to the next C1 calibration owner at closure. That owner runs and reviews any qualifying probe; no automatic checker change follows from a trigger report alone.
++
++**Census path convention:** Run from the repository root and pass each fixture as the repository-relative `corpus/fixtures/<name>` argument; the five missing-file fixtures echo that argv path in stdout.
++**B1 tuple assumption:** Replay B1 tuples with the same repository-relative fixture paths and argv spelling; absolute or differently prefixed paths alter the five captured stdout hashes.
+ 
+ ## Check log
+ 
+@@ -201,4 +204,3 @@
+ - Gate 2: met by P2's non-null `f3-dup` reference (2 raw rows, 1 resolved row) and P4's same-tick-pair `mira` control (1 raw and 1 resolved row).
+ - Gate 3: **not met** — these fixture records provide no independently reviewable, source-backed evidence that the compared ticks belong to different sequences; the README describes fixture structure only.
+ - Gate 4: the delivered checker emits a definite inversion in P2, but no evidence establishes that it is indeterminate. The four-gate falsification trigger is therefore not satisfied; retain the ruling. **Alarm: none.**
+-

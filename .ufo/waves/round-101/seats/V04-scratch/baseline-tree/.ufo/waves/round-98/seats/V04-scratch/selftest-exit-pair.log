@@ -1,0 +1,10 @@
+=== G-a BEFORE (9a3d648 bytes): corrupted clean expectation -> exit ? ===
+SELF-TEST 15/16
+FINDING SELF-TEST-MISMATCH: cases failed: ['clean']
+RESULT FAIL
+BASELINE_EXIT=1
+=== G-a AFTER (post-S1 bytes): corrupted clean expectation -> exit ? ===
+SELF-TEST 16/17
+FINDING SELF-TEST-MISMATCH: cases failed: ['clean']
+RESULT ERROR
+POST_EXIT=2

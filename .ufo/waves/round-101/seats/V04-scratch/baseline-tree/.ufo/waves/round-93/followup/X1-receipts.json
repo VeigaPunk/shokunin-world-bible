@@ -1,0 +1,101 @@
+{
+  "seat": "X1",
+  "round": 93,
+  "phase": "followup",
+  "date": "2026-10-17",
+  "head": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "checker": {
+    "path": "corpus/tools/support_check.py",
+    "sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+    "last_changed_commit": "c4d4823 (r92)"
+  },
+  "archive": {
+    "command": "git archive HEAD -- corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster corpus/fixtures/r88-m3-maya-cluster corpus/fixtures/r89-inspiration-paraphrase corpus/fixtures/r93-m2-kojiki-cluster",
+    "tar_sha256": "17888281df6b2c75cdccf9eb58faf4fa0a9049a64246362741498d978a60fc90",
+    "entries": 52,
+    "non_corpus_paths": 0,
+    "extract_contains_knowledge_dir": false,
+    "extract_contains_check_bible": false
+  },
+  "clusters": [
+    {
+      "name": "r87-myth-cluster",
+      "archive_rc": 0,
+      "live_rc": 0,
+      "stderr_empty": true,
+      "stdout_bytes": 3162,
+      "stdout_lines": 27,
+      "archive_vs_live_stdout": "byte-identical",
+      "recorded_block_source": ".ufo/waves/round-92/M4.md lines 235-239 (STACK-r87-positive, exit=0)",
+      "recorded_vs_archive": "byte-identical (5 summary lines)",
+      "summary_lines": [
+        "INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 8/8; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 22/22",
+        "ANCHORS repeated-references=0; DUPLICATE-ROWS 0",
+        "RECEIPT JSON-FACTS 14; EDITORIAL-ROWS 8; TOTAL-ROWS 22",
+        "SOURCE-SUPPORT 14/14; EDITORIAL-ANCHORS 8/8; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 22/22",
+        "RESULT PASS"
+      ]
+    },
+    {
+      "name": "r88-m3-maya-cluster",
+      "archive_rc": 0,
+      "live_rc": 0,
+      "stderr_empty": true,
+      "stdout_bytes": 1946,
+      "stdout_lines": 17,
+      "archive_vs_live_stdout": "byte-identical",
+      "recorded_block_source": ".ufo/waves/round-92/M4.md lines 241-245 (STACK-r88-positive-with-Spence-rows, exit=0)",
+      "recorded_vs_archive": "byte-identical (5 summary lines)",
+      "summary_lines": [
+        "INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12; DISTINCT-ANCHORS 8/8",
+        "ANCHORS repeated-references=4; DUPLICATE-ROWS 0",
+        "RECEIPT JSON-FACTS 10; EDITORIAL-ROWS 2; TOTAL-ROWS 12",
+        "SOURCE-SUPPORT 10/10; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 12/12; VALIDATED-ROWS 12/12",
+        "RESULT PASS"
+      ]
+    },
+    {
+      "name": "r89-inspiration-paraphrase",
+      "archive_rc": 0,
+      "live_rc": 0,
+      "stderr_empty": true,
+      "stdout_bytes": 538,
+      "stdout_lines": 6,
+      "archive_vs_live_stdout": "byte-identical",
+      "recorded_block_source": ".ufo/waves/round-92/M4.md lines 247-251 (STACK-r89-positive, exit=0)",
+      "recorded_vs_archive": "byte-identical (5 summary lines)",
+      "summary_lines": [
+        "INVENTORY JSON-FACTS 1/1; EDITORIAL-ROWS 0/0; TOTAL-ROWS 1/1; DISTINCT-ANCHORS 1/1",
+        "ANCHORS repeated-references=0; DUPLICATE-ROWS 0",
+        "RECEIPT JSON-FACTS 1; EDITORIAL-ROWS 0; TOTAL-ROWS 1",
+        "SOURCE-SUPPORT 0/0; EDITORIAL-ANCHORS 0/0; RETELLING-SUPPORT-ONLY 1 entries (1/1 anchors); MODES 1/1; VALIDATED-ROWS 1/1",
+        "RESULT PASS"
+      ]
+    },
+    {
+      "name": "r93-m2-kojiki-cluster",
+      "archive_rc": 0,
+      "live_rc": 0,
+      "stderr_empty": true,
+      "stdout_bytes": 2517,
+      "stdout_lines": 20,
+      "archive_vs_live_stdout": "byte-identical",
+      "recorded_block_source": ".ufo/waves/round-93/M4.md lines 174-178",
+      "recorded_vs_archive": "byte-identical (5 summary lines)",
+      "summary_lines": [
+        "INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15; DISTINCT-ANCHORS 15/15",
+        "ANCHORS repeated-references=0; DUPLICATE-ROWS 0",
+        "RECEIPT JSON-FACTS 12; EDITORIAL-ROWS 3; TOTAL-ROWS 15",
+        "SOURCE-SUPPORT 12/12; EDITORIAL-ANCHORS 3/3; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 15/15; VALIDATED-ROWS 15/15",
+        "RESULT PASS"
+      ]
+    }
+  ],
+  "divergences": [],
+  "record_debt": [
+    "LOG.md r90-era C2 record (~line 2311) and SCORECARD.md line 78 record pre-r91 checker receipt numbers (r87 'SOURCE-SUPPORT 22/22 ... MODES 22/22'; r88 'MODES 10/10'; SCORECARD '-> 22/22 exit 0'); the delivered (r92-hardened) checker emits SOURCE-SUPPORT/EDITORIAL-ANCHORS split (14/14 + 8/8) and MODES 12/12 for r88. Counts reconcile arithmetically (14+8=22; 10+2=12); the recorded format is stale, not the receipts.",
+    "Commit message of 65838f8 says kojiki 'support receipt 10 JSON + 3 editorial PASS'; the receipt (round-93/M4.md block and this re-run) is 12 JSON + 3 editorial. The round-93 claim block (12 JSON + 3 editorial) matches the receipt; the commit message is the outlier.",
+    "r88 receipt carries ANCHORS repeated-references=4 with no WARN lines and exit 0; by design per corpus/tools/README.md (repeated anchors are reported, not failed)."
+  ],
+  "verdict": "NO RECEIPT DIVERGENCE - all four archive (python3 -I, path-limited) re-runs are byte-identical to live-tree runs and to the recorded wave receipt blocks; exit 0 and empty stderr everywhere."
+}

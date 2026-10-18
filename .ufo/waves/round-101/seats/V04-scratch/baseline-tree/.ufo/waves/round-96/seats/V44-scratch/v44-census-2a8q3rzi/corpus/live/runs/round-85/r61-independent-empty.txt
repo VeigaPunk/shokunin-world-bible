@@ -1,0 +1,20 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-independent-empty
+exit_code=1
+VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'
+VIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'
+VIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'
+VIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'
+VIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'
+VIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'
+VIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: relations[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: entities[0].provenance: only valid on item entities
+VIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'
+VIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'
+VIOLATION: entities[0].provenance[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: timeline[0].tick: must be nonnegative
+VIOLATION: timeline[0].depends_on: unknown event 'missing-event'
+VIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'
+17 violation(s); no canon changed

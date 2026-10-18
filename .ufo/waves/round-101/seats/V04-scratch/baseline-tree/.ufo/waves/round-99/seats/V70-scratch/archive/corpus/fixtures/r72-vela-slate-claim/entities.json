@@ -1,0 +1,102 @@
+[
+  {
+    "id": "mira",
+    "kind": "character",
+    "name": "Mira",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Mira carried the blue seal.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "harbor",
+    "kind": "place",
+    "name": "Lantern Harbor",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "Lantern Harbor has a registry.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "tower",
+    "kind": "place",
+    "name": "North Tower",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "North Tower has a watch bell.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "seal",
+    "kind": "item",
+    "name": "Blue Seal",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "The seal accompanied Mira.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "tarin",
+    "kind": "character",
+    "name": "Tarin",
+    "first_appearance": "tarin-note",
+    "claims": [
+      {
+        "statement": "Tarin reports seeing Sella place an unlabeled paper envelope on the Lantern Harbor registry desk.",
+        "source_id": "tarin-note"
+      }
+    ]
+  },
+  {
+    "id": "sella",
+    "kind": "character",
+    "name": "Sella",
+    "first_appearance": "tarin-note",
+    "claims": [
+      {
+        "statement": "Tarin reports that Sella placed an unlabeled paper envelope on the Lantern Harbor registry desk during Bell-7, the sole seventh-watch registry-bell sounding on the seventh day of Embermonth, year 12.",
+        "source_id": "tarin-note"
+      }
+    ]
+  },
+  {
+    "id": "vela",
+    "kind": "character",
+    "name": "Vela",
+    "first_appearance": "vela-note",
+    "claims": [
+      {
+        "statement": "Vela reports hearing two strokes she took to be the registry bell during Bell-7 and reports not seeing Sella or an envelope.",
+        "source_id": "vela-note"
+      },
+      {
+        "statement": "Vela reports reading “KEEP THE EAST GATE CLEAR” on a slate and tentatively inferring from its cramped letters that its unknown writer might have been hurried; she says she could not tell who wrote it.",
+        "source_id": "vela-slate-note"
+      }
+    ]
+  },
+  {
+    "id": "jorin",
+    "kind": "character",
+    "name": "Jorin",
+    "first_appearance": "jorin-note",
+    "claims": [
+      {
+        "statement": "Jorin, who identifies himself as a registrar, reports seeing Vela standing on the Lantern Harbor east steps during what he called Bell-7; he reports not seeing who, if anyone, struck a bell.",
+        "source_id": "jorin-note"
+      }
+    ]
+  }
+]

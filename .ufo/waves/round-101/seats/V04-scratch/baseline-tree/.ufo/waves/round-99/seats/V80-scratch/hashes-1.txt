@@ -1,0 +1,7 @@
+2026-10-17 22:01:46 -0300
+585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2  1116  corpus/fixtures/r94-paired-crossing/fictional-excerpts.md
+0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282  1845  corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md
+06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3  2588  corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c  3410  corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
+29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de  4187  corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d  5114  corpus/fixtures/r99-window-lapse/fictional-excerpts.md

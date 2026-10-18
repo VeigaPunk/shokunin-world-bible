@@ -1,0 +1,94 @@
+[
+ {
+  "id": "vault",
+  "kind": "character",
+  "name": "Vault A",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Vault A record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "vault",
+  "kind": "character",
+  "name": "Vault B",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Vault B record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "mira",
+  "kind": "character",
+  "name": "Mira",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Mira record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "harbor",
+  "kind": "character",
+  "name": "Harbor",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Harbor record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "tower",
+  "kind": "character",
+  "name": "Tower",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Tower record",
+    "source_id": "courier-log"
+   }
+  ]
+ },
+ {
+  "id": "seal",
+  "kind": "item",
+  "name": "Seal",
+  "first_appearance": "courier-log",
+  "claims": [
+   {
+    "statement": "Seal record",
+    "source_id": "courier-log"
+   }
+  ],
+  "provenance": [
+   {
+    "tick": 0,
+    "from_holder": null,
+    "to_holder": "mira",
+    "source_id": "courier-log"
+   },
+   {
+    "tick": 1,
+    "from_holder": "vault",
+    "to_holder": "harbor",
+    "source_id": "ghost-source"
+   },
+   {
+    "tick": 2,
+    "from_holder": "harbor",
+    "to_holder": "tower",
+    "source_id": "courier-log"
+   }
+  ]
+ }
+]

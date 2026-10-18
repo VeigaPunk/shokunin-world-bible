@@ -1,0 +1,29 @@
+# Round 70 critic — missing event-ID pair gate
+
+## Verdict
+
+**NO-GO, or at minimum not established, for the declared missing-ID-only calibration gate.** It is a more defensible and narrower proposal than Round 69’s broad validity gate: it preserves the concrete R62 malformed-field hint because both sides have the same nonempty event ID, and limits the dropped pair-level warning to cases where at least one event ID is missing/blank/non-string. Still, the declaration’s claim that this pair finding is “unsupported” is not enough to establish material improvement. Equal missing IDs do not identify a usable target event, but a pair-level warning could still serve as a useful instruction to repair the two pointers distinctly. No repair-task/user evidence in the inspected records resolves that tradeoff.
+
+## Evidence examined
+
+- `.shokunin/lore/LOG.md`, Round 70 declaration, sets the one-axis move as calibration and explicitly requires missing/blank-ID cases to lose only the pair finding, while retaining R62, valid-identical and valid-distinct behavior and exact prior fixture tuples. Its stated falsifiers include that the removed finding helps a distinct repair on unusable IDs.
+- `.shokunin/lore/corpus/fixtures/check_bible.py:111–143` validates sides independently and then separately compares raw `.get('event_id')` and `.get('field')` values. Thus `{}`/`{}` can compare equal despite each missing required IDs; but the equality finding is not itself proof that either pointer is valid or refers to an event.
+- A direct baseline replay of `python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r62-malformed-side` produced a malformed-timeline diagnostic, two invalid-field diagnostics, and `claim_a and claim_b references must differ`. The fixture’s two IDs are the same nonempty `tarin-envelope-observation`, while both fields are `bogus`. This reproduces the main R69 objection, but the proposed R70 gate would retain that warning because it gates only on event ID, not field validity.
+- `.shokunin/lore/reports/r69-critic.md` judges the broad gate unsupported because the R62 warning may prevent an incomplete repair (correcting both invalid fields to the same allowed field). That objection does not directly falsify R70: R70 retains the shared valid event-ID case. It does, however, show why a pair warning can be repair guidance rather than a claim of a valid pair.
+- `.shokunin/lore/reports/r62-reviewer.md` and `r62-axis-adjudicator.md` confirm R62 retained the malformed-field pair warning, but did not conduct a repair-task comparison. `.shokunin/lore/corpus/fixtures/README.md`, Round 62, says same-reference checks are independent; it likewise documents behavior, not the usefulness of the missing-ID case.
+
+I could not inspect any R70 scout reports in this checkout at review time; this report therefore treats the declaration and retained records as the evidence available, not as a substitute for the specified matched controls.
+
+## Is pair-level finding useful repair guidance?
+
+**Possibly, but not demonstrated either way.** For `{}`/`{}`, the exact checker message asserts the two references “must differ” despite neither side naming an event ID or field. This is a poor diagnostic of the immediate defect: the local required-ID errors already identify what is missing, and “references must differ” gives no usable pointer. Suppressing that one line is plausibly better calibrated. Conversely, once IDs are repaired, the two sides may still be identical; the pair warning could alert the editor to that second invariant early. A checker need not claim that the event exists in order to flag equality of the attempted raw pointers. The policy question is whether the diagnostic is intended to enforce distinct attempted pointer tuples or only compare references with supplied usable event IDs. The cited README does not settle that contract.
+
+A matched output matrix can establish precisely which line changes and that other checks survive; it cannot by itself establish the repair-utility claim. To test materiality, compare otherwise identical missing-ID pairs where the raw fields are also equal versus distinct, with blank and non-string IDs, against valid identical/different controls. Have independent editors repair each case with and without the pair warning, recording whether it changes or improves the first repair and whether any later pass is needed. The R62 valid-ID/invalid-field case should remain an explicit control. If direct repair-task evidence is out of scope, treat a narrow gate as a plausible policy choice, not a proven material gain.
+
+## Axes, falsifiers, and limits
+
+- **Calibration:** plausible improvement for two absent IDs, but net material gain is unproven absent repair-use evidence. Keep the local required-ID errors; remove no pair warning for equal nonempty IDs, including R62’s invalid fields.
+- **Depth:** unchanged; this is a narrower predicate on existing input diagnostics.
+- **Coverage:** should remain unchanged if all prior raw tuples are preserved and controls verify missing, blank and non-string IDs, valid identical/different IDs, and R62. A baseline-only replay does not validate a candidate.
+
+Falsify the calibration claim if editors use the missing-ID pair line to avoid a distinct later repair; if the candidate removes any local side error or the R62 warning; if valid-identical is lost or valid-different gains a warning; or if the full prior raw-output replay has unexplained deltas. Do not conflate “nonempty string” with event existence: it is only the checker’s local input-shape criterion. No claim is made about source text, actual/fictional event occurrence, truth, canon, chronology, rights, or game mechanics. This is critic analysis only; no checker, fixture, README, corpus, or source data was changed.

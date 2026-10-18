@@ -1,0 +1,22 @@
+POLL_CHECK try=1 t=20s reports=0/5 artifacts=2/3 beat=0 stable=0 sha=b90cce7a24530e3e9c8202001dcc8959bf39d9e430376ce19a75b29bd20f9aaf
+POLL_CHECK try=2 t=40s reports=0/5 artifacts=2/3 beat=0 stable=1 sha=b90cce7a24530e3e9c8202001dcc8959bf39d9e430376ce19a75b29bd20f9aaf
+POLL_CHECK try=3 t=60s reports=0/5 artifacts=2/3 beat=0 stable=2 sha=b90cce7a24530e3e9c8202001dcc8959bf39d9e430376ce19a75b29bd20f9aaf
+POLL_CHECK try=4 t=80s reports=0/5 artifacts=2/3 beat=0 stable=3 sha=b90cce7a24530e3e9c8202001dcc8959bf39d9e430376ce19a75b29bd20f9aaf
+POLL_CHECK try=5 t=100s reports=0/5 artifacts=2/3 beat=0 stable=0 sha=a63b44a3be7408176a7489c11d9f4fb719c486966e06af67d07f4f3ce59a8cbe
+POLL_CHECK try=6 t=120s reports=0/5 artifacts=2/3 beat=0 stable=0 sha=9c30d32cee09be606c356b42931784d90b938bd1b729b4104750b939cb12c483
+POLL_CHECK try=7 t=140s reports=0/5 artifacts=2/3 beat=0 stable=1 sha=9c30d32cee09be606c356b42931784d90b938bd1b729b4104750b939cb12c483
+POLL_CHECK try=8 t=160s reports=1/5 artifacts=2/3 beat=0 stable=0 sha=5c7c4929b24a477e064a234969c5d935fdec3c17958ddfc0cba03464af110a63
+POLL_CHECK try=9 t=180s reports=1/5 artifacts=2/3 beat=0 stable=0 sha=b8a4b593ec908582cfd0c3fea9b63ae4f210e93df162821f60ccfa90aa57f521
+POLL_CHECK try=10 t=200s reports=1/5 artifacts=2/3 beat=0 stable=0 sha=597dc22c15913ab8b175f8fc4d6978b87b0580cd825999f60832afb6f42dc81b
+POLL_CHECK try=11 t=220s reports=2/5 artifacts=2/3 beat=0 stable=1 sha=597dc22c15913ab8b175f8fc4d6978b87b0580cd825999f60832afb6f42dc81b
+POLL_CHECK try=12 t=240s reports=2/5 artifacts=3/3 beat=1 stable=0 sha=091f76aff555257a0f0aaf8bc394ff17b3dd2eee879211b404967c2912f704eb
+POLL_CHECK try=13 t=260s reports=2/5 artifacts=3/3 beat=1 stable=0 sha=049eeef6080286d5d42ff3d7a827334c5230daa910eff97c193bc178feafd996
+POLL_CHECK try=14 t=280s reports=2/5 artifacts=3/3 beat=1 stable=1 sha=049eeef6080286d5d42ff3d7a827334c5230daa910eff97c193bc178feafd996
+POLL_CHECK try=15 t=300s reports=3/5 artifacts=3/3 beat=1 stable=0 sha=f33bd15fcc6d42f99dff7bea6d2236b4ca702584aa0d995bc282c895cdf064f9
+POLL_CHECK try=16 t=320s reports=3/5 artifacts=3/3 beat=1 stable=0 sha=4f8a48a5a0a1024c2ba4fdb5dff7a9835d68218a926d0fc4aa4e936b9b4924f7
+POLL_CHECK try=17 t=340s reports=3/5 artifacts=3/3 beat=1 stable=0 sha=077a4a2820f216ba9d6e87ee485cf0450e20e27b3e5d1ccd4f76735a3aa4a14c
+POLL_CHECK try=18 t=360s reports=4/5 artifacts=3/3 beat=1 stable=1 sha=077a4a2820f216ba9d6e87ee485cf0450e20e27b3e5d1ccd4f76735a3aa4a14c
+POLL_CHECK try=19 t=380s reports=4/5 artifacts=3/3 beat=1 stable=2 sha=077a4a2820f216ba9d6e87ee485cf0450e20e27b3e5d1ccd4f76735a3aa4a14c
+POLL_CHECK try=20 t=400s reports=4/5 artifacts=3/3 beat=1 stable=3 sha=077a4a2820f216ba9d6e87ee485cf0450e20e27b3e5d1ccd4f76735a3aa4a14c
+POLL_CHECK try=21 t=420s reports=5/5 artifacts=3/3 beat=1 stable=4 sha=077a4a2820f216ba9d6e87ee485cf0450e20e27b3e5d1ccd4f76735a3aa4a14c
+POLL_STABLE try=21 sha=077a4a2820f216ba9d6e87ee485cf0450e20e27b3e5d1ccd4f76735a3aa4a14c reports=5 artifacts=3 beat=1

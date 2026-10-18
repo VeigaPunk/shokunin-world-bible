@@ -1,0 +1,20 @@
+[
+  {
+    "id": "r12-harbor",
+    "tick": 7,
+    "entity_id": "mira",
+    "place_id": "unlisted",
+    "depends_on": [],
+    "description": "Fixture input: Mira's place is unspecified at tick 7.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "r12-tower",
+    "tick": 7,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [],
+    "description": "A separate record places Mira at North Tower at tick 7.",
+    "source_id": "courier-log"
+  }
+]

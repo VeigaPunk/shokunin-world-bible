@@ -1,0 +1,19 @@
+try 1 20:29:34 missing: NOTE S1 S2 S3 S4 S5 MAP=R97COPY README=R97COPY
+try 2 20:29:54 missing: NOTE S1 S2 S3 S4 S5 MAP=R97COPY README=R97COPY
+try 3 20:30:14 missing: NOTE S1 S2 S3 S4 S5 MAP=R97COPY README=R97COPY
+try 4 20:30:34 missing: NOTE S1 S2 S3 S4 S5 README=R97COPY
+try 5 20:30:54 missing: NOTE S1 S2 S3 S4 S5
+try 6 20:31:14 missing: NOTE S1 S2 S4 S5
+try 7 20:31:34 missing: NOTE S1 S2 S4 S5
+try 8 20:31:54 missing: NOTE S1 S2 S4 S5
+try 9 20:32:14 missing: NOTE S1 S2 S5
+try 10 20:32:34 missing: S1 S2 S5
+try 11 20:32:54 missing: S1 S2 S5
+try 12 20:33:14 missing: S1 S2 S5
+try 13 20:33:34 missing: S1 S2 S5
+try 14 20:33:54 missing: S1 S2
+try 15 20:34:14 missing: S1 S2
+try 16 20:34:34 missing: S1 S2
+try 17 20:34:54 missing: S1
+try 18 20:35:14 missing: S1
+try 19 20:35:34 missing:NONE

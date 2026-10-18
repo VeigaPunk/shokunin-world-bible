@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r67-claim-source-unavailable-control
+exit_code=1
+VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: '.shokunin/lore/corpus/fixtures/r67-claim-source-unavailable-control/sources.json'
+1 violation(s); no canon changed

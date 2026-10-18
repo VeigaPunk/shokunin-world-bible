@@ -1,0 +1,290 @@
+{
+  "seat": "Q1",
+  "wave": "round-91 follow-up, world-bible lane",
+  "observed_head": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+  "observed_at": "2026-10-17T07:38:00-03:00",
+  "latest_inventory_at": "2026-10-17T07:57:37-03:00",
+  "scope": {
+    "q90_prior_snapshot": "Q90 statuses as represented in .ufo/waves/round-90/followup/Q1-r90-debt.json at ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+    "closure_snapshot": "r90 closure HEAD a7c6a1773d5994246a76e4eff30d645f161920e0",
+    "patch_policy": "No r91 candidate patch was applied; status means tracked/delivered state unless explicitly marked candidate or scratch-tested.",
+    "write_boundary_note": "Debt JSON is in .ufo/waves/round-91/patches/ because followup/Q1-r91-debt.json was outside this seat's permitted paths."
+  },
+  "q90_debt_dispositions": [
+    {
+      "id": "Q90-001",
+      "prior_status_at_ca7f9ef": "open",
+      "status_at_r90_closure_head": "open",
+      "axis": "calibration",
+      "evidence": [
+        "Fresh baseline-versus-delivered census: 164 fixture directories, 0 stdout changes, 0 exit changes.",
+        "git ls-files 'corpus/fixtures/r91-*' returned 0 at the closure tree.",
+        "X1's fixture patch/report are later round-91 candidates and are not integrated."
+      ],
+      "note": "The repaired r90 null-chain and unresolved-holder tick shapes still lack delivered discriminating fixtures, so a silent reversion remains invisible to the current corpus census."
+    },
+    {
+      "id": "Q90-002",
+      "prior_status_at_ca7f9ef": "open",
+      "status_at_r90_closure_head": "closed",
+      "axis": "coverage/documentation parity",
+      "evidence": [
+        "corpus/fixtures/README.md:1016-1018 has a Round 90 section and names all four r90 fixtures, claim-excerpt-map.md, and corpus/tools/support_check.py."
+      ],
+      "note": "Closure repaired the missing top-level fixture/tool index references."
+    },
+    {
+      "id": "Q90-003",
+      "prior_status_at_ca7f9ef": "open",
+      "status_at_r90_closure_head": "closed",
+      "axis": "process/freeze",
+      "evidence": [
+        ".ufo/waves/round-90/followup/P1-manifest-entry.json is tracked at HEAD and records the delivered checker hash ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 plus the X2+X3 freeze receipt.",
+        "The delivered checker hash at HEAD is ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421."
+      ],
+      "note": "The missing historical freeze evidence was added by the r90 closure. This does not substitute for the separate r91 C9 watch required by the r91 C1 claim."
+    },
+    {
+      "id": "Q90-004",
+      "prior_status_at_ca7f9ef": "open",
+      "status_at_r90_closure_head": "closed",
+      "axis": "coverage/provenance",
+      "evidence": [
+        "At ca7f9ef the canonical decision table contained 0 chousa references; at HEAD it contains 3 literal chousa mentions (lines 78-81)."
+      ],
+      "note": "The cross-references now exist in the delivered governance table, rather than only in a wave patch."
+    },
+    {
+      "id": "Q90-005",
+      "prior_status_at_ca7f9ef": "informational",
+      "status_at_r90_closure_head": "informational",
+      "axis": "provenance",
+      "evidence": [
+        ".ufo/waves/round-90/patches/C9-rerun-probes.sh pins X1 candidate hash 12866e734beb0e8fdfb641e9dab7cdaae7518fc0fdb8749a5e086981a0d1ae18 and does not pin delivered hash ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421."
+      ],
+      "note": "The script remains useful for the documented alternative but is not a replay of delivered code; this provenance nuance remains disclosed, not promoted to a blocker."
+    },
+    {
+      "id": "Q90-006",
+      "prior_status_at_ca7f9ef": "open",
+      "status_at_r90_closure_head": "closed",
+      "axis": "coverage/documentation parity",
+      "evidence": [
+        "corpus/fixtures/r87-probe-source-prefix/README.md now cites :343 for first-record wording, :326 for tick wording, and :337 for chain-break wording.",
+        "Those referenced lines in corpus/fixtures/check_bible.py contain the corresponding diagnostics."
+      ],
+      "note": "The stale line references were corrected in the closure commit."
+    },
+    {
+      "id": "Q90-007",
+      "prior_status_at_ca7f9ef": "open",
+      "status_at_r90_closure_head": "closed",
+      "axis": "process/hygiene",
+      "evidence": [
+        ".gitignore:2 contains __pycache__/.",
+        "git check-ignore -v corpus/tools/__pycache__/support_check.cpython-314.pyc reports that the extant bytecode is ignored."
+      ],
+      "note": "The bytecode file remains on disk but the broad-add risk is mitigated by the ignore rule."
+    }
+  ],
+  "JCOV4_attack_vectors": [
+    {
+      "case": "silent row-drop by header rename",
+      "source": ".ufo/waves/round-90/followup/JCOV4.md:120",
+      "mutation": "Rename ID to Row in r87's 14-row JSON fact table while leaving the other rows and tables intact.",
+      "observed": "SOURCE-SUPPORT 8/8; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 8/8; RESULT PASS",
+      "exit": 0,
+      "acceptance_gap": "M4 replayed this against earlier M1/M2 candidate hashes and both failed the header mutation; those results do not verify current patch hashes or an integrated checker."
+    },
+    {
+      "case": "unreferenced excerpt mode flip",
+      "source": ".ufo/waves/round-90/followup/JCOV4.md:98",
+      "mutation": "Change unreferenced r88 Spence source-excerpt.md:5 declaration from verbatim to paraphrase.",
+      "observed": "SOURCE-SUPPORT 10/10; MODES 10/10; RESULT PASS, unchanged",
+      "exit": 0,
+      "acceptance_gap": "M4 found silent PASS on its tested M1 hash and WARN on its tested M2 hash. M1 reports a current-hash rerun; M4 did not test that hash, and neither candidate is integrated."
+    },
+    {
+      "case": "retelling anchor miss",
+      "source": ".ufo/waves/round-90/followup/JCOV4.md:121",
+      "mutation": "Replace one retelling/paraphrase row anchor with a phrase absent from the excerpt.",
+      "observed": "RETELLING-SUPPORT-ONLY 3 entries (2/3 anchors); RESULT PASS",
+      "exit": 0,
+      "acceptance_gap": "M4 reports WARN outputs for the tested candidates; current-hash and integrated acceptance evidence remains incomplete."
+    },
+    {
+      "case": "duplicate row inflation",
+      "source": ".ufo/waves/round-90/followup/JCOV4.md:122",
+      "mutation": "Duplicate one r88 fact row with the same anchor/span.",
+      "observed": "SOURCE-SUPPORT 11/11; MODES 11/11",
+      "exit": 0,
+      "acceptance_gap": "M4 detected the tested duplicate: M1 warned and failed; M2 failed without the requested WARN. S2 also requires the semantic duplicate signature to exclude display ID; M2 includes it. Current hashes are not M4-verified and no candidate is integrated."
+    }
+  ],
+  "r91_claim_evidence": {
+    "C1_calibration": {
+      "disposition": "candidate-tested, not delivered",
+      "candidate": ".ufo/waves/round-91/patches/X1-fixtures.patch",
+      "candidate_report": ".ufo/waves/round-91/X1.md",
+      "patch_check": "git apply --check passed; stat 12 files, 272 insertions; patch SHA-256 61b7dc90740823ffcd6741157cd696b08b564ab213f620cd42eb08433a503c35",
+      "reported_scratch_result": "X1 reports both fixtures valid (five JSON files plus README), both before/after outputs exactly matching README, one changed finding each, and scratch swept.",
+      "delivery_state": "No r91 fixture path and no r91-c9-watch path is tracked at HEAD; Q90-001 remains open.",
+      "watch_quality": "S1-r91-c9-watch.patch is applicable but uses generic <counterexample>/<uniquely-resolved-control> placeholders. E1-r91-wording.md proposes prospective explicit names r91-c9-tick-context-counterexample and r91-c9-tick-context-control; neither watch text is integrated."
+    },
+    "C2_coverage": {
+      "disposition": "pending integration and contract reconciliation",
+      "candidate_patches": [
+        ".ufo/waves/round-91/patches/M1-hardening.patch",
+        ".ufo/waves/round-91/patches/M2-hardening-alt.patch",
+        ".ufo/waves/round-91/patches/M3-mapwording.patch"
+      ],
+      "reports_present_at_07_38_snapshot": [".ufo/waves/round-91/M3.md"],
+      "reports_absent_at_07_38_snapshot": ["M1.md", "M2.md", "M4.md"],
+      "reports_present_at_07_57_snapshot": [
+        ".ufo/waves/round-91/M1.md",
+        ".ufo/waves/round-91/M2.md",
+        ".ufo/waves/round-91/M3.md",
+        ".ufo/waves/round-91/M4.md"
+      ],
+      "m4_tested_patch_sha256": {
+        "M1": "7dcef63374630620b1a59dd7577c6cbf40314e2ecb84a292d9a2954e54f18c56",
+        "M2": "c96cb6312365f6ce2c9eac86c95215a3fa79d7b6f07fbb70fe01ee91f6029c70"
+      },
+      "current_patch_sha256_at_07_57": {
+        "M1": "13471eb4e06eb7563a077cad43e75290406b855efe4e85f0c56e8f338376ba2c",
+        "M2": "3ffcbe7976fdb222ff1fdd3fc79e1ddcd667fbd4de212b78b32c749229838fe0"
+      },
+      "M2_report_claimed_sha256": "3ffcbe797fdb222ff1fdd3fc1ea99657b10423de2aeec38b85b32c749229838fe0",
+      "M2_report_hash_matches_current": false,
+      "m4_findings": [
+        "M1 silently passes the tested unreferenced-mode flip.",
+        "M2 warns on that flip and detects the tested duplicate, but exits 2 when Inventory is absent; S2 requires exit 1.",
+        "M4 tested older M1/M2 hashes, not the current patch hashes above. M1.md claims a current-hash rerun; M2.md's declared digest does not match current bytes, so its run-to-patch linkage is unverified."
+      ],
+      "contract_gaps": [
+        "Both current designs differ from S2's required Support inventory table and per-row Support class.",
+        "M2's duplicate signature includes display ID, contrary to S2's semantic signature."
+      ],
+      "evidence_limit": "M3 reports receipts against the unchanged checker. M4's full runner and outputs are in .ufo/waves/round-91/M4.md:59-243. Candidate patches remain unintegrated; M4 does not verify current patch hashes."
+    },
+    "C3_depth": {
+      "disposition": "D1/D2 candidates present; full claim pending independent review and integration",
+      "candidate_patches": [
+        ".ufo/waves/round-91/patches/D1-edges.patch",
+        ".ufo/waves/round-91/patches/D2-edges.patch"
+      ],
+      "candidate_reports_at_07_57_snapshot": [
+        ".ufo/waves/round-91/D1.md",
+        ".ufo/waves/round-91/D2.md",
+        ".ufo/waves/round-91/T1.md"
+      ],
+      "current_patch_sha256_at_07_57": {
+        "D1": "d5b13abcfd9b9a01991ca7c5ddc004502c66aee33e7c65d46937648e8dcdc7de",
+        "D2": "5d687768bf61013c0e4f7b705fd2551ac642bb2be771c27a1f3282342fefdfc6"
+      },
+      "patch_checks_at_07_57": {
+        "D1": "git apply --check passed; 1 file changed, 8 insertions",
+        "D2": "git apply --check passed; 1 file changed, 42 insertions, 7 deletions"
+      },
+      "reports_absent_at_07_38_snapshot": ["D1.md"],
+      "verification_limit": "T1.md predates D1.md and reviews D2 only; R1.md is absent at the 07:57 inventory. Neither patch is integrated; D1 has no independent T1/R1 verification and the C3 claim remains pending."
+    }
+  },
+  "required_artifact_poll": {
+    "terminal_at": "2026-10-17T07:36:24-03:00",
+    "result": "20-minute deadline",
+    "last_check": {
+      "X1.md": false,
+      "corpus/knowledge/r91-c9-watch.md": false,
+      "M1.md": false,
+      "M3.md": true,
+      "D1.md": false,
+      "D2.md": true
+    },
+    "post_poll_inventory_at": "2026-10-17T07:38:00-03:00",
+    "post_poll_state": {
+      "X1.md": true,
+      "corpus/knowledge/r91-c9-watch.md": false,
+      "M1.md": false,
+      "M2.md": false,
+      "M3.md": true,
+      "M4.md": false,
+      "D1.md": false,
+      "D2.md": true,
+      "tracked_r91_fixture_paths": 0,
+      "tracked_watch_paths": 0,
+      "wave_spec_json_present": false
+    },
+    "later_inventory_at": "2026-10-17T07:53:30-03:00",
+    "later_inventory_state": {
+      "X1.md": true,
+      "M1.md": false,
+      "M2.md": false,
+      "M3.md": true,
+      "M4.md": true,
+      "D1.md": true,
+      "D2.md": true,
+      "T1.md": true,
+      "R1.md": false,
+      "corpus/knowledge/r91-c9-watch.md": false,
+      "tracked_r91_fixture_paths": 0,
+      "tracked_watch_paths": 0,
+      "candidate_patch_sha256": {
+        "M1": "13471eb4e06eb7563a077cad43e75290406b855efe4e85f0c56e8f338376ba2c",
+        "M2": "3ffcbe7976fdb222ff1fdd3fc79e1ddcd667fbd4de212b78b32c749229838fe0",
+        "M3": "015ec65ae59e02b048fe8af638036f29d6a50bf556b5b3f76ea1b78a8640d90a",
+        "D1": "d5b13abcfd9b9a01991ca7c5ddc004502c66aee33e7c65d46937648e8dcdc7de",
+        "D2": "5d687768bf61013c0e4f7b705fd2551ac642bb2be771c27a1f3282342fefdfc6"
+      }
+    },
+    "latest_inventory_at": "2026-10-17T07:57:37-03:00",
+    "latest_inventory_state": {
+      "M1.md": true,
+      "M2.md": true,
+      "M3.md": true,
+      "M4.md": true,
+      "D1.md": true,
+      "D2.md": true,
+      "T1.md": true,
+      "R1.md": false,
+      "corpus/knowledge/r91-c9-watch.md": false,
+      "corpus/fixtures/r91-c1-null-chain/README.md": false,
+      "corpus/fixtures/r91-c1-tick-unresolved/README.md": false,
+      "tracked_r91_fixture_paths": 0,
+      "tracked_watch_paths": 0,
+      "M1_report_mtime": "2026-10-17 07:54:03.849736608 -0300",
+      "M2_report_mtime": "2026-10-17 07:54:06.402735426 -0300",
+      "M2_report_hash_matches_current": false
+    }
+  },
+  "process_findings": {
+    "wave_spec_declared_seats": 32,
+    "unique_roster_identities": 30,
+    "wave_spec_json_present": false,
+    "note": "The Markdown roster and machine-readable companion are not in agreement/complete; do not treat the roster as machine-pinned."
+  },
+  "closure_regression": {
+    "path": "corpus/knowledge/holder-assessment-boundary.md",
+    "baseline_commit": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+    "baseline_lines": 630,
+    "head_lines": 316,
+    "head_equals_proposal_only_file": ".ufo/waves/round-90/followup/CB1-boundary-refresh.md",
+    "byte_identical": true,
+    "current_first_line": "# CB1 — Boundary-doc refresh proposal (for the round-90 closure)",
+    "interpretation": "Contradicts the r90 SCORECARD repair assertion; flagged for L1 review, not changed by Q1."
+  },
+  "r92_proposal": {
+    "path": ".ufo/waves/round-91/patches/Q1-r92-proposal.md",
+    "status": "conditional, not selected",
+    "selection_gate": "Wait for L1's per-axis r91 verdicts. Order severity harmed < unchanged < unprovable-but-better < improved; choose one weakest axis and break ties by more open ledger rows.",
+    "candidate_if_calibration_is_weakest": "Integrate durable C1 fixtures and a corrected, tracked C9 watch; verify both checker revisions and the full fixture census; close Q90-001 only on delivered-tree evidence.",
+    "otherwise": "Do not advance this calibration candidate if another axis is weakest; select no axis before L1 adjudication."
+  },
+  "write_and_integration_state": {
+    "patches_applied": false,
+    "tracked_source_changes": false,
+    "commits_made": false,
+    "pushes_made": false,
+    "only_q1_artifacts_written": true
+  }
+}

@@ -1,0 +1,3 @@
+usage: discriminate_check.py [-h] [--checker {delivered,e97613c}]
+                             [--repo-root REPO_ROOT]
+discriminate_check.py: error: unrecognized arguments: --self-test

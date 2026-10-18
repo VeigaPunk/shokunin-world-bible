@@ -1,0 +1,13 @@
+## PROC V101__1699476.txt hits=4
+  assert len(roster) == 127, len(roster)
+      fh.write(f"START {datetime.now().astimezone().isoformat()} roster_others=127 max_tries={MAX}\n")
+          # ready when 127 others present
+              fh.write(f"READY others=127 at try={n}\n")
+## PROC V39__1698941.txt hits=1
+      line = f"try={i} {now} reports={rec['report_files']} roster_present={len(present)}/128 producer_missing={prod_missing or '-'} artifact_missing={len(art_missing)} unexpected={unexpected or '-'}\n"
+
+## LIVE poll.sh 127/128
+### V123-scratch/poll.sh
+  L30:   # early exit only after try 8 if all 128 reports exist (unlikely; keep polling to deadline unless caller says stop)
+  L31:   if [ "$reports" -ge 128 ]; then
+  L32:     echo "$ts try=$i FULL-128 exiting" >> "$LOG"

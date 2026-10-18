@@ -1,0 +1,295 @@
+{
+  "seat": "Q1",
+  "wave": "round-92 FOLLOW-UP (world-bible lane)",
+  "role": "debt census + r93 planner",
+  "deliverables": [
+    ".ufo/waves/round-92/followup/Q1-r92-debt.json",
+    ".ufo/waves/round-92/followup/Q1-r93-proposal.md",
+    ".ufo/waves/round-92/followup/Q1.md"
+  ],
+  "judged_tree": {
+    "work_commits": ["c4d4823b9a8165a88e8199af136e62d6e961b6b9"],
+    "head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+    "baseline": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+    "tree_state": "clean at seat start and during the run; the only porcelain lines are the untracked .ufo/waves/round-92/followup/ arrivals of sibling seats",
+    "delivered_checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "checker_unchanged_in_range": "git log --oneline 396c568..c4d4823 -- corpus/fixtures/check_bible.py -> empty; git show c4d4823:corpus/fixtures/check_bible.py | sha256sum -> ff9fd2aa...1421 == working tree",
+    "delivered_work_files": [
+      "corpus/fixtures/README.md", "corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md",
+      "corpus/knowledge/holder-assessment-boundary.md", "corpus/knowledge/r88-sourced-inspiration-decision-table.md",
+      "corpus/knowledge/r91-c9-watch.md", "corpus/tools/support_check.py", ".ufo/waves/poll_wait.sh"
+    ]
+  },
+  "counting_rule": "A row enters this ledger if it is (a) an r91-ledger row the r92 work claims or appears to settle, (b) a residual edge of an r92 declared claim C1/C2/C3, or (c) a process/record debt measured at c4d4823. Prior verdict = the r91 follow-up ledger / r92 work-audit status. Delivered verdict = this seat's measured disposition at c4d4823. Statuses are verdict words, never scalars. Sibling follow-up reports are cited as evidence pointers, never as this seat's measurements.",
+  "inputs_read": [
+    ".ufo/waves/round-91/followup/Q1-r91-debt.json (the r91 ledger; 66 carried/verdict rows + Q91-001..Q91-009)",
+    ".ufo/waves/round-92/wave-spec.md, patches/Q1-r92-debt.json, patches/Q1-r93-proposal.md, work reports D2/T1/E1/M1/M2/X1/X2/R2/T1-certification.json",
+    "delivered corpus files listed above, read in full (boundary doc 671 lines, decision table, watch, maps, READMEs, support_check.py diff)",
+    "sibling follow-up arrivals sampled as pointers: P2-verdicts.json/P2.md, Q2.md/Q2-census.json, JDEP1-certification.json/JDEP1.md, SF1-freeze.json"
+  ],
+  "self_measured_receipts": [
+    "census: 166 dirs, changed=0 added=0 removed=0 exit_changes=0 vs .ufo/waves/round-92/patches/B1-tuples.json (python driver: python3 corpus/fixtures/check_bible.py corpus/fixtures/<name> per dir, sha256(stdout)+exit compared) — the commit's '166 dirs, 0 changed' claim reproduces",
+    "boundary doc replay: pasted block 1 (five r85 probes) byte-identical TRUE; block 2 (six durable fixtures) TRUE; block 3 (multi-cause + FN-2) TRUE — 3/3 blocks, 14/14 cases, run from the lane root with the doc's own loops",
+    "boundary doc structure: wc -l 671, splitlines 671, single H1 at :1 (was 2 at r91), verified-at count 1 (was 2), 1b09f3f refs 8 (was 15), e2bb9639 refs 3, stale row text 'is not uniquely resolvable: {details}' count 0, corrected 'Tick findings are NOT qualified' row present once (:201)",
+    "residual fragments: :545-556 orphan bullet tail ('lines, sha256 `e2bb9639...`):' with no head), :591-596 duplicated provenance-census tail (pattern count 1 at r91 -> 2 at r92), :615-619 stranded '`## Round 89` section at `1b09f3f`' rules fragment, :83 'The delivered checker (`1b09f3f`)' pre-existing (r91 :80) and still unqualified at the delivered tree",
+    "support receipts: r87-myth-cluster -> INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 8/8; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 22/22; RESULT PASS rc=0; r88-m3-maya-cluster -> 10/10; 2/2; 12/12; 8/8; RESULT PASS rc=0 (unreferenced-declaration WARN closed); r89-inspiration-paraphrase -> retelling-only 1/1; RESULT PASS rc=0",
+    "contract probes (scratch cluster copies under /tmp/q1m.*, swept): map present with inventory line removed -> 'FAIL: map must contain exactly one expected inventory declaration' + RESULT FAIL, rc=1; missing cluster dir -> RESULT ERROR rc=2; map missing -> RESULT ERROR rc=2",
+    "decision-table scan: ':ufo/waves' occurrences = 1 (:91, R9 appendix verification command reads .ufo/waves/round-91/patches/D2-edges.patch); doubled label at :40 '**Failed-gate disposition (clarified r92):** **Failed-gate disposition (clarified r92):**'; E1 keys: 'Kesh Hymn' 0, 'per-claim R9 manual-review record' 0, 'named lore integration reviewer who is not the submitter' 1, 'R9 manual review' 2, 'lexical preflight' 3; manual-gate block :42-48 sits before '### R9 appendix' :50; old appendix worked example still at :79",
+    "fixtures README: '## Round 90' :1016, '## Round 92' :1020, '### Repo-relative census invocation' :1046 naming all five fixtures (:1055-1058); '## Round 91' count 0; 'r91-c1' count 0",
+    "watch: '## Check log' :45 with row 1 (2026-10-17, pin ff9fd2aa, DISCRIMINATION HELD) and dated re-check :51; census note :205; pinned pair replayed by this seat: r91-c1-null-chain -> 1 definite violation rc=1; r91-c1-tick-unresolved -> definite tick + separately qualified chain, 3 violations rc=1 (matches the recorded receipts); 1 'e97613c' mention (path, not hash)",
+    "carried-row spot checks: r87-probe-record-and-chain README :19 'Expected: 35 findings' unchanged while the run prints 46; r87-myth-cluster README names none of the four witness-excerpt files (gate-witness/dune-register/shell-charter/tide-bell-tally all 0); reference-ledger.md :13 Spence row still after the closing paragraph (:10-12) outside the table; R9 row :25 says 'replay the durable R9 fixture' with no path (r89-inspiration-paraphrase 0 hits); anchor_basis 0 hits",
+    "record: T1-certification.json overall FAIL ('Baseline-only control replay passed 3/3 receipt blocks and 14/14 cases ... this is not a candidate pass'); .ufo/waves/poll_wait.sh tracked 100755 (git ls-files -s, blob 8b368fe2de35)"
+  ],
+  "ledger": [
+    {
+      "id": "Q91-001",
+      "title": "Boundary decision-table stale tick row contradicts the delivered checker",
+      "prior_verdict": "open (r91 ledger)",
+      "delivered_verdict": "settled (repaired)",
+      "evidence": ["grep -c 'is not uniquely resolvable: {details}' corpus/knowledge/holder-assessment-boundary.md -> 0", "single corrected row at :201 ('Tick findings are NOT qualified')", "replay: r91-c1-tick-unresolved prints the definite integer-only tick line + separately qualified chain break", "JDEP1-certification.json gate (d) PASS / legacy tick conflict false"],
+      "note": "the two-row contradiction is gone; the reader-following-:179 hazard is closed"
+    },
+    {
+      "id": "Q91-002",
+      "title": "Boundary reconstruction residue (title/lineage/anchors/status slots)",
+      "prior_verdict": "open (r91 ledger)",
+      "delivered_verdict": "partially repaired; residue narrowed but not closed",
+      "evidence": ["repaired: single H1 (:1), one verified-at (:39), join refs remapped (:274/:287/:308 at :167), CLI block :543-544 at ff9fd2aa, stale decision row removed", "remaining: orphan bullet tail :545-556 (JDEP1 gate (b): 14 of 21 anchor sites mismatch), duplicated census tail :591-596 (pattern count 1 at 396c568 -> 2 at c4d4823), stranded '`## Round 89` section at `1b09f3f`' fragment :615-619, 'The delivered checker (`1b09f3f`)' :83 unqualified (pre-existing at r91 :80), doc header still 'Landed at round-90 closure' with no r92 provenance line", "JDEP1-certification.json gate (b) FAIL with the deviation map; JDEP1.md: 'the r92 work claim ... is accurate as to method and replay, but not as to certification'"],
+      "note": "see new row Q92-001; the repair is documentation-only and checker-free"
+    },
+    {
+      "id": "DEP-H1",
+      "title": "Boundary document not independently certified after anchor-based re-derivation",
+      "prior_verdict": "open (r92 work-audit DEP-H1)",
+      "delivered_verdict": "still open; independent certification FAILS on gate (b) as delivered",
+      "evidence": ["JDEP1-certification.json (c4d4823): overall FAIL; (a) PASS 3/3 blocks 14/14 cases; (b) FAIL: doc:330 ':198-203' stale (delivered :200-205), orphan tail 14/21", "(c) PASS 1 H1 / 0 duplicate headings / 0 instruction markers; (d) PASS", "T1-certification.json overall FAIL (pre-integration, candidate unavailable); its 3/3 + 14/14 are baseline controls", "this seat's independent replay: 3/3 blocks, 14/14 cases byte-identical (corroborates gate (a) only)"],
+      "note": "the r92 work commit's 'certified by T1: 3/3 receipts, 14/14 replay cases' is not a candidate certification; see Q92-008"
+    },
+    {
+      "id": "Q91-003",
+      "title": "Fixtures README lacks Round 91 index; boundary doc README paragraph stale about Round 90",
+      "prior_verdict": "open (r91 ledger)",
+      "delivered_verdict": "partially settled",
+      "evidence": ["landed: '## Round 92' :1020 and '### Repo-relative census invocation' :1046 naming all five fixtures; boundary doc :610-614 now says the Round 90 section landed at a7c6a17", "open: '## Round 91' count 0 (Round 90 :1016 -> Round 92 :1020); r91-c1 fixtures unindexed (grep 0); orphan rules fragment :615-619 remains"],
+      "note": "the r92 claim promised only the path note; the Round-91 index remains CAL-D5 / Q92-005"
+    },
+    {
+      "id": "Q91-004",
+      "title": "Canonical decision-table verification commands inspect wave patches, not delivered text",
+      "prior_verdict": "open (r91 ledger)",
+      "delivered_verdict": "open",
+      "evidence": ["grep 'ufo/waves/round-9' corpus/knowledge/r88-sourced-inspiration-decision-table.md -> 1 hit, :91 (R9 appendix command reads .ufo/waves/round-91/patches/D2-edges.patch)", "the r91 R8-row patch-space command is gone with the replaced paragraph; no round-92 patch command was added"],
+      "note": "Q92-004; the command checks patch text completeness, never the delivered section it sits in"
+    },
+    {
+      "id": "Q91-005",
+      "title": "Support-check terminal-status contract deviations (M2 stack)",
+      "prior_verdict": "open (r91 ledger, README-documented named debt)",
+      "delivered_verdict": "settled on the code; a new documentation drift opened",
+      "evidence": ["support_check.py:374-375, 389-416: InventoryError -> 'RESULT FAIL' rc=1; map/cluster/structural errors -> 'RESULT ERROR' rc=2", "probes: inventory removed -> FAIL rc=1; missing map/cluster -> ERROR rc=2 (this seat, /tmp/q1m.*)", "corpus/tools/README.md unchanged in 396c568..c4d4823 (git diff --stat empty) and :16-21 still states 'Missing inventory exits 2' / 'No terminal failure summaries' as live"],
+      "note": "see Q92-003; K1-tools-readme.patch was delivered in the wave dir but not integrated (Q2 F2 / D-r92-tools-readme-integration)"
+    },
+    {
+      "id": "COV-D3",
+      "title": "Spence S1/S2 editorial comparison rows in the r88-m3 map",
+      "prior_verdict": "open (r92 work-audit; candidate-only)",
+      "delivered_verdict": "settled (integrated and verified)",
+      "evidence": ["claim-excerpt-map.md diff: inventory 10 JSON + 2 editorial rows, 12 total, 8 distinct anchors; '## Editorial rows (2 Spence comparisons; not extra JSON facts)' table with S1/S2", "python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster -> JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12; DISTINCT-ANCHORS 8/8; PASS E1/E2/S1/S2; RESULT PASS rc=0; the unreferenced source-excerpt WARN is closed"],
+      "note": "matches the C2(i) claim exactly"
+    },
+    {
+      "id": "Q91-009/Q89-020",
+      "title": "Carried Spence/reference-ledger residue outside the map-row patch",
+      "prior_verdict": "open (r92 work-audit: 'not addressed by M1 map patch')",
+      "delivered_verdict": "open",
+      "evidence": ["corpus/knowledge/reference-ledger.md:13 Spence row remains after the closing paragraph :10-12, outside the table; total file 13 lines"],
+      "note": "the map rows landed; the reference-ledger placement was not touched"
+    },
+    {
+      "id": "CAL-D4",
+      "title": "Census stdout is path-sensitive for five missing-file fixtures",
+      "prior_verdict": "open (r92 work-audit: note proposal incomplete)",
+      "delivered_verdict": "settled",
+      "evidence": ["corpus/fixtures/README.md:1046-1058 names all five paths: r5-missing-file, r62-missing, r67-claim-source-unavailable-control/-empty/-whitespace", "corpus/knowledge/r91-c9-watch.md:205 carries the same repo-relative rule"],
+      "note": "content landed in the README (where the audit required it) and in the watch"
+    },
+    {
+      "id": "CAL-D5",
+      "title": "Round 91 fixtures README index row",
+      "prior_verdict": "open (r92 work-audit: no README-note report/patch)",
+      "delivered_verdict": "open",
+      "evidence": ["grep '^## Round 91' corpus/fixtures/README.md -> 0; last sections are Round 90 (:1016) then Round 92 (:1020)", "grep 'r91-c1' corpus/fixtures/README.md -> 0"],
+      "note": "Q92-005; the Round 92 section is not a Round 91 index"
+    },
+    {
+      "id": "Q92-C3-WATCH",
+      "title": "First periodic C9 check-log row not in the delivered watch",
+      "prior_verdict": "open (r92 work-audit; X1 patch-only)",
+      "delivered_verdict": "settled",
+      "evidence": ["corpus/knowledge/r91-c9-watch.md:45 '## Check log' row 1 (2026-10-17, pin ff9fd2aa, DISCRIMINATION HELD) + dated entry :51 with pinned-hash run, durable-pair runs, and four reconstructed probes", "this seat replayed the pinned pair: null-chain 1 definite violation rc=1; tick-unresolved definite tick + qualified chain, 3 violations rc=1 (matches)"],
+      "note": "bound: the four C5 probe receipts are scratch reconstructions under /tmp (removed); only the durable pair is re-runnable from the tree"
+    },
+    {
+      "id": "Q92-C3-PATCH-CONFLICT",
+      "title": "X1 check-log and X2 note patches conflict when stacked",
+      "prior_verdict": "open integration risk (r92 work-audit)",
+      "delivered_verdict": "settled by integration (single-file manual merge)",
+      "evidence": ["the delivered watch carries both the check-log (:45-51 and following) and the X2 census note (:205) in one file; no residual patch application remains"],
+      "note": "the conflict was avoided by manual integration rather than stacked application"
+    },
+    {
+      "id": "Q91-006",
+      "title": "Committed poll-helper pattern promised by the spec not in the tree",
+      "prior_verdict": "open (r91 ledger; Q89-038 reopened)",
+      "delivered_verdict": "settled",
+      "evidence": [".ufo/waves/poll_wait.sh landed in c4d4823; git ls-files -s -> 100755 8b368fe2de35...", "spec :7 records it landed and adopted; Q2 A2 counts 27/33 mentions"],
+      "note": "residual hardening debt named by Q2 F5 (path validation, hit-terminal shape, runner margin) -> Q92-006"
+    },
+    {
+      "id": "Q91-007",
+      "title": "Spec/roster parity and landing accounting",
+      "prior_verdict": "open (r91 ledger)",
+      "delivered_verdict": "open (recurred in a milder form)",
+      "evidence": ["wave-spec.md 'Roster (32)': C1-depth declares 10 but names 9 seat ids (D1/D2/T1/R1/E1/E2/C7/CB/H-delta); 31 seat reports delivered (.ufo/waves/round-92/*.md minus wave-spec.md); R2 is unrostered yet delivered; 'README-note' is a role with no report; no wave-spec.json companion (ls -> none)", "Q2 F3 / D-r92-roster records the same class"],
+      "note": "Q92-007"
+    },
+    {
+      "id": "Q91-008",
+      "title": "Unlanded alternatives of the delivered round",
+      "prior_verdict": "open (record-only; r91 ledger)",
+      "delivered_verdict": "record-only (expanded)",
+      "evidence": ["D1-boundary-doc.md unlanded (D2's applied); SF1/SF2 sentinel artifacts unrostered; M1/M2/X1/X2 patches superseded by integration; E2's proposed r92 header line unapplied", "P2 bound: D2 patch applied exactly (git apply --check --reverse clean)"],
+      "note": "recorded so patch-space receipts are not mistaken for delivered evidence"
+    },
+    {
+      "id": "Q91-009",
+      "title": "Carried open documentation rows consolidated for r92",
+      "prior_verdict": "open (r91 ledger)",
+      "delivered_verdict": "open (all sub-rows unchanged at c4d4823)",
+      "evidence": ["Q89-007: r87-probe-record-and-chain README :19 'Expected: 35 findings' unchanged; run prints 46 violation(s)", "Q89-015: decision-table :16 'M4's repoint patch cites `gate-witness` metadata but delivers no witness excerpt' unchanged", "Q89-016: r87-myth-cluster README names none of the four witness-excerpt files (0 hits each)", "Q89-019: reference-ledger :8 ETCSL row still 'external-only / text not delivered at lore'", "Q89-031: decision-table R9 row :25 'replay the durable R9 fixture' names no path (grep 0)", "Q89-041: 'anchor_basis' 0 hits in both maps"],
+      "note": "r92 did not touch these surfaces; they carry as depth/coverage residue into r93"
+    }
+  ],
+  "new_debts": [
+    {
+      "id": "Q92-001",
+      "title": "Boundary-doc certification blockers: orphan tail + one stale anchor + duplicated fragments",
+      "status": "open (blocking for a clean depth verdict)",
+      "class": "documentation-parity / instruction surface",
+      "evidence": ["JDEP1-certification.json gate (b) FAIL: doc:330 ':198-203' vs delivered :200-205; orphan tail doc:545-556 with 14/21 sites mismatch", "this seat: duplicated census tail :591-596 (1->2 vs r91), stranded rules fragment :615-619, ':83 The delivered checker (`1b09f3f`)' pre-existing", "JDEP1 handoff: repair is one bullet head (or tail deletion) plus one range fix; documentation-only, checker-free"],
+      "owner": "next depth/C1 seat; reviewer = a certifier seat not the editor (T1/JDEP1 class)",
+      "trigger": "the r93 depth claim; any reader following :330 or the orphan tail"
+    },
+    {
+      "id": "Q92-002",
+      "title": "Decision-table R8/R9 integration defects",
+      "status": "open",
+      "class": "instruction-surface integrity",
+      "evidence": ["doubled label at :40 '**Failed-gate disposition (clarified r92):** **Failed-gate disposition (clarified r92):**'", "E1 specified the manual-gate block inside the R9 appendix; delivered block sits :42-48 before '### R9 appendix' :50; the appendix's old worked example (:79) is not replaced; E1's R8 worked example ('Kesh Hymn', 0 hits) and the R9 evidence-cell append (0 hits) are absent", "substance (manual gate, required record, receipt boundary) did land"],
+      "owner": "next C1/depth seat",
+      "trigger": "next decision-table touch; C1 claim row"
+    },
+    {
+      "id": "Q92-003",
+      "title": "corpus/tools/README.md named-debt section contradicts the delivered support_check.py",
+      "status": "open",
+      "class": "documentation-parity",
+      "evidence": ["corpus/tools/README.md:16-21 still states 'Missing inventory exits 2' and 'No terminal failure summaries' as live deviations", "delivered code exits 1 with RESULT FAIL / 2 with RESULT ERROR (probes above)", "K1-tools-readme.patch committed in the wave dir, git apply --check clean per Q2, unapplied at c4d4823; Q2 F2 names it D-r92-tools-readme-integration"],
+      "owner": "next C2/coverage seat",
+      "trigger": "any caller reading the README; the fix is a one-file patch integration"
+    },
+    {
+      "id": "Q92-004",
+      "title": "R9 verification command still reads a round-91 wave patch",
+      "status": "open",
+      "class": "instruction-surface integrity (Q91-004 residual)",
+      "evidence": ["decision table :91 reads .ufo/waves/round-91/patches/D2-edges.patch; single ufo/waves occurrence"],
+      "owner": "next C1/depth seat",
+      "trigger": "any wave-artifact prune; the command cannot verify the delivered section"
+    },
+    {
+      "id": "Q92-005",
+      "title": "No Round 91 fixtures README index; r91-c1 fixtures unindexed",
+      "status": "open",
+      "class": "coverage / index parity (CAL-D5 residual)",
+      "evidence": ["grep '^## Round 91' README -> 0; 'r91-c1' -> 0; Round 90 -> Round 92"],
+      "owner": "next record/coverage seat",
+      "trigger": "next README touch"
+    },
+    {
+      "id": "Q92-006",
+      "title": "Poll-helper residuals (path validation, hit-terminal shape, runner margin)",
+      "status": "open",
+      "class": "process debt (named by Q2 F5)",
+      "evidence": ["Q2.md F5 / D-r92-helper-residual; helper landed but lacks repo-root path validation and a POLL_TERMINAL-on-hit line; r92 lost terminals at the shell cap"],
+      "owner": "next process seat / L1",
+      "trigger": "next wave's dependency polls"
+    },
+    {
+      "id": "Q92-007",
+      "title": "Roster/landing accounting gap (declared 32, C1-depth lists 9 ids, 31 reports, R2 unrostered, no JSON companion)",
+      "status": "open",
+      "class": "process/record debt (Q91-007 recurrence; Q2 F3)",
+      "evidence": ["wave-spec.md roster text; ls .ufo/waves/round-92/*.md -> 31 reports; ls *.json -> none"],
+      "owner": "L1 / next clerk seat",
+      "trigger": "r92 closure record"
+    },
+    {
+      "id": "Q92-008",
+      "title": "Work-commit message cites T1's baseline control as a certification ('certified by T1: 3/3 receipts, 14/14 replay cases')",
+      "status": "open",
+      "class": "record integrity",
+      "evidence": ["c4d4823 message; T1-certification.json overall FAIL with 'Baseline-only control replay passed 3/3 receipt blocks and 14/14 cases ... this is not a candidate pass'", "no candidate certification exists at c4d4823; JDEP1 is the follow-up certifier and its overall is FAIL"],
+      "owner": "next record/clerk seat (state the baseline-control attribution at closure)",
+      "trigger": "r92 closure record; any reader citing 'certified'"
+    },
+    {
+      "id": "Q92-009",
+      "title": "Scratch/inode debt (sibling-measured)",
+      "status": "open (carried with number)",
+      "class": "process debt",
+      "evidence": ["Q2 F4: 530,932 files in 283 lore-* /tmp trees; 1.477% free inodes vs the 5% gate; no numeric budget; r92 work-wave residue ~0"],
+      "owner": "next process seat / L1",
+      "trigger": "round closure sweep; dispatch gate"
+    },
+    {
+      "id": "Q92-010",
+      "title": "C9 watch forward-pointer incomplete (no next-re-check owner/due; e97613c hash not pinned)",
+      "status": "open",
+      "class": "calibration residue",
+      "evidence": ["watch :20 mentions e97613c path only (no hash); '## Owner' names the handoff role but no due date/cadence for the next re-check", "JDEP1.md R3 citing JCAL2.md:159 records the same; this seat confirmed the two absences by grep"],
+      "owner": "next C1/calibration seat",
+      "trigger": "next watch re-check"
+    }
+  ],
+  "claims_map": {
+    "C1": {
+      "verdict": "delivered with a blocking certification defect",
+      "evidence": ["anchor-based re-derivation landed (D2 applied exactly per P2); replay 3/3 blocks, 14/14 cases byte-identical (this seat + JDEP1 gate (a)); single H1 and corrected stale row", "JDEP1 gate (b) FAIL (one stale anchor + orphan tail); decision-table integration defects Q92-002; Q91-004 open"],
+      "bound": "the claim phrase 'every code anchor resolves' is false as delivered; the doc is not certifiable until Q92-001/002 are repaired"
+    },
+    "C2": {
+      "verdict": "delivered (bounded)",
+      "evidence": ["Spence rows verified on the delivered tree (10/2/12/8, RESULT PASS rc=0)", "contract exits verified (FAIL rc=1 / ERROR rc=2); r87 22/22 and paraphrase receipts reproduce"],
+      "bound": "tools README named-debt drift Q92-003 (K1 patch unapplied); Round-91 index Q92-005"
+    },
+    "C3": {
+      "verdict": "delivered (bounded)",
+      "evidence": ["check-log row 1 + dated re-check landed; pinned pair replays as recorded; census path note landed in README and watch"],
+      "bound": "the four C5 probe receipts are scratch-only; watch forward-pointer incomplete (Q92-010)"
+    }
+  },
+  "cross_refs": {
+    "P2-verdicts.json": "proposes depth/coverage/calibration 'improved (bounded)' with the same defects as bounds (doubled label :40, R9 placement, tools README, header provenance)",
+    "JDEP1-certification.json/JDEP1.md": "independent follow-up certifier at c4d4823: (a) PASS 3/3+14/14; (b) FAIL; (c) PASS; (d) PASS; overall FAIL",
+    "Q2.md": "F2 tools-README integration gap; F3 roster; F4 scratch; F5 helper residuals; A1 freeze window closed by c4d4823",
+    "SF1-freeze.json": "FAIL at 396c568 (pre-work tree, uncommitted integration caught); resolved by c4d4823 per Q2 A1"
+  },
+  "r93_proposal": {
+    "path": ".ufo/waves/round-92/followup/Q1-r93-proposal.md",
+    "status": "conditional; unselected; not a verdict",
+    "rule": "lowest-axis rule: harmed < unchanged < unprovable-but-better < improved; tie -> more open ledger rows; applied only to L1's actual r92 verdict words"
+  },
+  "write_boundary": [".ufo/waves/round-92/followup/Q1-r92-debt.json", ".ufo/waves/round-92/followup/Q1-r93-proposal.md", ".ufo/waves/round-92/followup/Q1.md"],
+  "no_commit_or_push": true
+}

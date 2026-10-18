@@ -1,0 +1,342 @@
+=== 2026-10-17T22:01:26-03:00 poll 1 ===
+knowledge:
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S reports:
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S*.md': No such file or directory
+seat md:
+
+=== 2026-10-17T22:01:59-03:00 poll 2 ===
+knowledge:
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S reports:
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md 5069
+seat md:
+S3-fixture-author.md 5069
+S scratch:
+S2-scratch
+S4-scratch
+
+=== 2026-10-17T22:02:24-03:00 poll 3 ===
+knowledge:
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S reports:
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20-scratch/archive/SKILL.md 16802
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-87/S1.md 16649
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-87/S2.md 7046
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-87/S3.md 4689
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-87/S4.md 4629
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-87/SE1.md 8093
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-87/followup/SE2.md 2299
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-87/patches/S4-census-extension.md 5262
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-88/S1.md 7979
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-88/S2.md 5920
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-88/S3.md 6758
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-88/SE1.md 6973
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-88/followup/SE2.md 10500
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-89/S1.md 13162
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-89/S2.md 9072
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-89/S3.md 15197
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-89/S4.md 7788
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-89/SE1.md 5047
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-89/followup/SE2.md 25697
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-89/patches/S3-r8-r10-sketches.md 7480
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-90/S1.md 11975
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-90/S2.md 16348
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-90/SE1.md 15679
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-90/SE3.md 6919
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-90/followup/SE2.md 15527
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-91/S1.md 9497
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-91/S2.md 14179
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-91/SE1.md 8796
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-91/SE4.md 3331
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-91/followup/SE2.md 12285
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-92/S1.md 5963
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-92/S2.md 9540
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-92/SE1.md 4650
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-92/followup/SE2.md 17043
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-92/followup/SF1.md 14979
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-92/followup/SF2.md 5359
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-93/S1.md 12889
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-93/S2.md 16899
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-93/SE1.md 8032
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-93/followup/SE2.md 13312
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-96/seats/V39-scratch/negctl/SHONEN.md 1422
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-96/seats/V39-scratch/negctl/SKILL.md 14211
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-97/seats/V36-scratch/negctl/SHONEN.md 1438
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-97/seats/V36-scratch/negctl/SKILL.md 15907
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-98/seats/S1-freeze-hygiene.md 14225
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-98/seats/S2-tools-docs.md 10223
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-98/seats/S3-fixture-author.md 12813
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-98/seats/S4-fixture-docs.md 11594
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-98/seats/S5-knowledge-notes.md 10528
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-98/seats/V32-scratch/negctl/SHONEN.md 1422
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/.ufo/waves/round-98/seats/V32-scratch/negctl/SKILL.md 16947
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/SCORECARD.md 67986
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/SHONEN.md 1422
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch/archive/SKILL.md 16802
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md 5069
+
+=== 2026-10-17T22:02:52-03:00 poll 4 ===
+knowledge:
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+producer reports (seats/*.md matching S):
+S3-fixture-author.md 5069 2026-10-17T22:01:40.6929649330
+any seats md:
+S3-fixture-author.md 5069
+V80-c2-prose-prefix.md 7122
+
+=== 2026-10-17T22:03:15-03:00 poll 5 ===
+knowledge:
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+producer reports:
+S3-fixture-author.md 5069 2026-10-17T22:01:40.6929649330
+
+=== 2026-10-17T22:03:38-03:00 poll 6 ===
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S3-fixture-author.md 5069 2026-10-17T22:01:40.6929649330
+--- S5 scratch ---
+S2-scratch
+S4-scratch
+
+=== 2026-10-17T22:04:01-03:00 poll 7 ===
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+S dirs:
+S2-scratch
+S4-scratch
+
+=== 2026-10-17T22:04:27-03:00 poll 8 ===
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S3-fixture-author.md 5069 22:01:40.6929649330
+S4-fixture-docs.md 9303 22:03:54.7336127620
+S dirs:
+S2-scratch
+S4-scratch
+
+=== 2026-10-17T22:04:49-03:00 poll 9 ===
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S3-fixture-author.md 5069 22:01:40.6929649330
+S4-fixture-docs.md 9303 22:03:54.7336127620
+S dirs:
+S2-scratch
+S4-scratch
+
+=== 2026-10-17T22:05:14-03:00 poll 10 ===
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+S3-fixture-author.md 5069 22:01:40.6929649330
+S4-fixture-docs.md 9303 22:03:54.7336127620
+S dirs:
+S2-scratch
+S4-scratch
+
+=== 2026-10-17T22:07:49-03:00 poll 11 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:08:09-03:00 poll 12 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:08:29-03:00 poll 13 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:08:49-03:00 poll 14 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:09:09-03:00 poll 15 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:09:29-03:00 poll 16 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:09:49-03:00 poll 17 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:10:09-03:00 poll 18 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:10:29-03:00 poll 19 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:10:49-03:00 poll 20 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:11:09-03:00 poll 21 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:11:29-03:00 poll 22 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:11:49-03:00 poll 23 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:12:10-03:00 poll 24 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:12:30-03:00 poll 25 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:12:50-03:00 poll 26 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:13:10-03:00 poll 27 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:13:30-03:00 poll 28 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:13:50-03:00 poll 29 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:14:10-03:00 poll 30 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:14:30-03:00 poll 31 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:14:50-03:00 poll 32 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:15:10-03:00 poll 33 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:15:30-03:00 poll 34 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:15:50-03:00 poll 35 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:16:10-03:00 poll 36 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:16:30-03:00 poll 37 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:16:50-03:00 poll 38 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:17:10-03:00 poll 39 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+
+=== 2026-10-17T22:17:30-03:00 poll 40 ===
+table: ABSENT
+S5: ABSENT
+producer reports:
+S3-fixture-author.md 5069
+S4-fixture-docs.md 9303
+POLL_EXHAUSTED try=40 table_and_or_S5 still absent

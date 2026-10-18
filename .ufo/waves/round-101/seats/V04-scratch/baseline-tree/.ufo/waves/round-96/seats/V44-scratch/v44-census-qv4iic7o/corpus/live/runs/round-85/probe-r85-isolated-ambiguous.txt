@@ -1,0 +1,4 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous
+exit_code=1
+VIOLATION: entities[5].id: duplicate entities id 'vault'
+1 violation(s); no canon changed

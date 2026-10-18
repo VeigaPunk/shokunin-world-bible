@@ -1,0 +1,18 @@
+CHECK try=1 t=20s tool=86b529496214 contract=97b76bb8b1fe cases=24 dual=0 r1=none r2=none v04=none
+CHECK try=2 t=40s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=none r2=none v04=none
+CHECK try=3 t=60s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=none r2=none v04=none
+CHECK try=4 t=80s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=none r2=none v04=none
+CHECK try=5 t=100s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=none r2=none v04=none
+CHECK try=6 t=120s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=none r2=none v04=none
+CHECK try=7 t=140s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=none r2=none v04=none
+CHECK try=8 t=160s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=none r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=9 t=180s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=10 t=200s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=11 t=220s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=12 t=240s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=13 t=260s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=14 t=280s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=15 t=300s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=16 t=320s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=none
+CHECK try=17 t=340s tool=86b529496214 contract=2142b9917694 cases=25 dual=1 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-c1-negative-rerun.md
+READY try=17 r1=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md r2=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R2-contract-docs.md v04=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-c1-negative-rerun.md

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "f1-shape-dup",
+    "kind": "character",
+    "name": "Shape Duplicate A",
+    "first_appearance": "f1-shape-source",
+    "claims": [{"statement": "Fixture duplicate A", "source_id": "f1-shape-source"}]
+  },
+  {
+    "id": "f1-shape-dup",
+    "kind": "character",
+    "name": "Shape Duplicate B",
+    "first_appearance": "f1-shape-source",
+    "claims": [{"statement": "Fixture duplicate B", "source_id": "f1-shape-source"}]
+  },
+  {
+    "id": "f1-shape-mira",
+    "kind": "character",
+    "name": "Shape Mira",
+    "first_appearance": "f1-shape-source",
+    "claims": [{"statement": "Fixture Mira", "source_id": "f1-shape-source"}]
+  },
+  {
+    "id": "f1-shape-harbor",
+    "kind": "character",
+    "name": "Shape Harbor",
+    "first_appearance": "f1-shape-source",
+    "claims": [{"statement": "Fixture Harbor", "source_id": "f1-shape-source"}]
+  },
+  {
+    "id": "f1-shape-seal",
+    "kind": "item",
+    "name": "Shape Seal",
+    "first_appearance": "f1-shape-source",
+    "claims": [{"statement": "Fixture seal", "source_id": "f1-shape-source"}],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "f1-shape-dup",
+        "source_id": "f1-shape-source",
+        "extra": 1
+      },
+      {
+        "tick": 1,
+        "from_holder": "f1-shape-mira",
+        "to_holder": "f1-shape-harbor",
+        "source_id": "f1-shape-source"
+      }
+    ]
+  }
+]

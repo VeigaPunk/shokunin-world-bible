@@ -1,0 +1,7 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/draft-tool-86b52949.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/case-b
+OBLIGATIONS raw=12 mapped=13
+INVENTORY JSON-FACTS 13/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 16/15 MISMATCH
+FINDING duplicate_mapping: entities.json#/0/first_appearance appears 2 times
+FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 12/3/15; observed 13/3/16
+RESULT FAIL
+EXIT=1

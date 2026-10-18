@@ -1,0 +1,125 @@
+2026-10-17T17:39:09-03:00 WATCHER start; existing=0
+2026-10-17T17:39:09-03:00 tick 1 seats=0 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:39:29-03:00 tick 2 seats=0 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:39:49-03:00 tick 3 seats=0 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:40:09-03:00 tick 4 seats=0 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:40:29-03:00 tick 5 seats=0 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:40:49-03:00 NEW V33-verdict-coverage.md
+2026-10-17T17:40:49-03:00 NEW V34-verdict-calibration.md
+2026-10-17T17:40:49-03:00 tick 6 seats=2 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:41:09-03:00 tick 7 seats=2 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:41:29-03:00 tick 8 seats=2 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:41:49-03:00 NEW V26-gates-boundary.md
+2026-10-17T17:41:49-03:00 tick 9 seats=3 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:42:09-03:00 NEW Q4-fixture-json.md
+2026-10-17T17:42:09-03:00 tick 10 seats=4 tool=d1c239cc contract=8173bb97 dfz=no fixture=8 note=no
+2026-10-17T17:42:29-03:00 tick 11 seats=4 tool=d1c239cc contract=8173bb97 dfz=yes fixture=8 note=no
+2026-10-17T17:42:49-03:00 NEW V15-c2-ordering.md
+2026-10-17T17:42:49-03:00 tick 12 seats=5 tool=d1c239cc contract=8173bb97 dfz=yes fixture=8 note=no
+2026-10-17T17:43:09-03:00 NEW V51-pins-c9.md
+2026-10-17T17:43:09-03:00 tick 13 seats=6 tool=d1c239cc contract=8173bb97 dfz=yes fixture=8 note=no
+2026-10-17T17:43:29-03:00 NEW V08-c2-checker.md
+2026-10-17T17:43:29-03:00 NEW V53-byte-prefix-2.md
+2026-10-17T17:43:29-03:00 tick 14 seats=8 tool=d1c239cc contract=8173bb97 dfz=yes fixture=10 note=no
+2026-10-17T17:43:49-03:00 tick 15 seats=8 tool=d1c239cc contract=8173bb97 dfz=yes fixture=10 note=no
+2026-10-17T17:44:09-03:00 NEW V14-c2-dependency-probe.md
+2026-10-17T17:44:09-03:00 tick 16 seats=9 tool=031d990f contract=8173bb97 dfz=yes fixture=10 note=no
+2026-10-17T17:44:29-03:00 NEW V01-c1-deletion-demo.md
+2026-10-17T17:44:29-03:00 NEW V09-c2-inherited-equality.md
+2026-10-17T17:44:29-03:00 tick 17 seats=11 tool=efcdd0ef contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:44:49-03:00 tick 18 seats=11 tool=56d322ef contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:45:09-03:00 tick 19 seats=11 tool=f97e4b72 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:45:29-03:00 tick 20 seats=11 tool=8cbcdb51 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:45:49-03:00 NEW Q5-fixture-docs.md
+2026-10-17T17:45:49-03:00 NEW V49-gates-cross.md
+2026-10-17T17:45:49-03:00 tick 21 seats=13 tool=44a6ffd4 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:46:09-03:00 NEW Q6-knowledge-note.md
+2026-10-17T17:46:09-03:00 tick 22 seats=14 tool=c2c284c0 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:46:29-03:00 tick 23 seats=14 tool=c2c284c0 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:46:49-03:00 tick 24 seats=14 tool=6634e176 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:47:09-03:00 tick 25 seats=14 tool=6634e176 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:47:29-03:00 NEW Q3-dependency-freeze.md
+2026-10-17T17:47:29-03:00 tick 26 seats=15 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:47:49-03:00 NEW V16-c3-gate-clean.md
+2026-10-17T17:47:49-03:00 tick 27 seats=16 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:48:09-03:00 NEW V11-c2-anchors.md
+2026-10-17T17:48:09-03:00 NEW V32-verdict-depth.md
+2026-10-17T17:48:09-03:00 NEW V37-verdict-adjacency.md
+2026-10-17T17:48:09-03:00 NEW V45-anchor-replica-2.md
+2026-10-17T17:48:09-03:00 tick 28 seats=20 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:48:29-03:00 tick 29 seats=20 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:48:49-03:00 NEW V19-c3-selftest.md
+2026-10-17T17:48:49-03:00 NEW V21-c3-fail-closed.md
+2026-10-17T17:48:49-03:00 NEW V46-whole-claim-replica-2.md
+2026-10-17T17:48:49-03:00 tick 30 seats=23 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:49:09-03:00 NEW V12-c2-whole-claim.md
+2026-10-17T17:49:09-03:00 NEW V18-c3-addition-endpoint.md
+2026-10-17T17:49:09-03:00 NEW V48-c3-negative-2.md
+2026-10-17T17:49:09-03:00 NEW V57-crosscheck-coverage.md
+2026-10-17T17:49:09-03:00 tick 31 seats=27 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:49:29-03:00 tick 32 seats=27 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:49:49-03:00 NEW Q1-tool-hardening.md
+2026-10-17T17:49:49-03:00 NEW V17-c3-br01-demo.md
+2026-10-17T17:49:49-03:00 NEW V23-c3-chain-scope.md
+2026-10-17T17:49:49-03:00 NEW V56-crosscheck-depth.md
+2026-10-17T17:49:49-03:00 tick 33 seats=31 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:50:09-03:00 NEW V22-c3-tamper.md
+2026-10-17T17:50:09-03:00 NEW V55-cross-seat-audit.md
+2026-10-17T17:50:09-03:00 tick 34 seats=33 tool=2b0ba815 contract=8173bb97 dfz=yes fixture=10 note=yes
+2026-10-17T17:50:29-03:00 NEW V54-relation-scope-2.md
+2026-10-17T17:50:29-03:00 tick 35 seats=34 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:50:49-03:00 NEW V20-c3-code-review.md
+2026-10-17T17:50:49-03:00 tick 36 seats=35 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:51:09-03:00 tick 37 seats=35 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:51:29-03:00 NEW V04-c1-dual-pointer.md
+2026-10-17T17:51:29-03:00 tick 38 seats=36 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:51:49-03:00 tick 39 seats=36 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:52:09-03:00 NEW V13-c2-anti-overclaim.md
+2026-10-17T17:52:09-03:00 tick 40 seats=37 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:52:29-03:00 NEW Q2-contract-docs.md
+2026-10-17T17:52:29-03:00 NEW V06-c1-negative-rerun.md
+2026-10-17T17:52:29-03:00 NEW V25-preservation-mutations.md
+2026-10-17T17:52:29-03:00 tick 41 seats=40 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:52:49-03:00 tick 42 seats=40 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:53:09-03:00 NEW V05-c1-regression-battery.md
+2026-10-17T17:53:09-03:00 NEW V07-c1-code-review.md
+2026-10-17T17:53:09-03:00 tick 43 seats=42 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:53:29-03:00 NEW V52-inherited-tools.md
+2026-10-17T17:53:29-03:00 tick 44 seats=43 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:53:49-03:00 NEW V10-c2-support-map.md
+2026-10-17T17:53:49-03:00 tick 45 seats=44 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:54:09-03:00 NEW V44-census-replica-2.md
+2026-10-17T17:54:09-03:00 NEW V47-c1-negative-rerun-2.md
+2026-10-17T17:54:09-03:00 tick 46 seats=46 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:54:29-03:00 NEW V29-doc-parity.md
+2026-10-17T17:54:29-03:00 tick 47 seats=47 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:54:49-03:00 NEW V50-receipt-wording.md
+2026-10-17T17:54:49-03:00 tick 48 seats=48 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:55:09-03:00 NEW V31-adjacency.md
+2026-10-17T17:55:09-03:00 NEW V39-shonen-format.md
+2026-10-17T17:55:09-03:00 NEW V41-spec-conformance.md
+2026-10-17T17:55:09-03:00 NEW V42-integration-checklist.md
+2026-10-17T17:55:09-03:00 tick 49 seats=52 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:55:29-03:00 NEW V02-c1-selftest.md
+2026-10-17T17:55:29-03:00 NEW V28-freshness.md
+2026-10-17T17:55:29-03:00 NEW V40-debt.md
+2026-10-17T17:55:29-03:00 tick 50 seats=55 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:55:49-03:00 NEW V03-c1-schema-drift-pinned.md
+2026-10-17T17:55:49-03:00 NEW V24-preservation-census.md
+2026-10-17T17:55:49-03:00 NEW V35-verdict-operability.md
+2026-10-17T17:55:49-03:00 tick 51 seats=58 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:56:09-03:00 tick 52 seats=58 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:56:29-03:00 NEW V30-operability.md
+2026-10-17T17:56:29-03:00 tick 53 seats=59 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:56:50-03:00 tick 54 seats=59 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:57:10-03:00 tick 55 seats=59 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:57:30-03:00 tick 56 seats=59 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:57:50-03:00 tick 57 seats=59 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:58:10-03:00 NEW V36-verdict-freshness.md
+2026-10-17T17:58:10-03:00 tick 58 seats=60 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:58:30-03:00 tick 59 seats=60 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:58:50-03:00 tick 60 seats=60 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:59:10-03:00 tick 61 seats=60 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:59:30-03:00 NEW V27-scope-creep.md
+2026-10-17T17:59:30-03:00 tick 62 seats=61 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes
+2026-10-17T17:59:50-03:00 tick 63 seats=61 tool=2b0ba815 contract=97b76bb8 dfz=yes fixture=10 note=yes

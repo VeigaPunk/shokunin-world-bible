@@ -3503,3 +3503,42 @@ unclosed r101. Producer byte-ownership: U1
 `corpus/tools/README.md` + SKILL.md freeze row; U2
 `corpus/knowledge/r101-r10-register-first-entry.md`. Everything else is
 read-only except seat reports.
+
+## Round 101 — roster erratum and closure (ADMITTED; 2026-10-18)
+
+**Roster erratum (same class as r100, append-only):** the declaration
+above says "28 seats (2 producers + 26 verifiers)" — the verifier count
+was mis-summed again. The dispatched roster was **30 seats** (2 producers
+U1–U2 + 28 verifiers V01–V30); the dispatch returned `completed: 30` and
+all 30 reports landed. V24's "V25 is not a roster seat" note (an artifact
+of the wrong declared count) is resolved by this erratum; V13 filed a
+stub whose preliminaries three seats corroborated — recorded, not
+re-rolled.
+
+**Closure.** V24 adjudication: **ADMITTED with four non-blocking
+conditions**, all discharged here: (AC-1) the R10 entry's two wrong
+citation locators repaired (`r94 README.md:13`→`:11` at entry lines 58/81
+— locator hygiene only; the paraphrase was verified true at line 11);
+(AC-2) the literal blind-spot-table row-2 close appended as a dated
+addendum by the closure integrator (the table was outside r101 producer
+byte-ownership — U1's docs-of-record stood in the wave); (AC-3) corpus
+README freeze bullet refreshed (chain eight, 19 cases, semantic-first,
+repointed-edge note), C9 row 10 appended, this closure commit; (AC-4)
+records: U2's "59/59 no correction open" overbroad (its checker had no
+expectation for the r94 README:13 cite — the AC-1 slip was never
+exercised); V26's disclosed and reverted --freeze probe; the scratch-
+location variants (V04's in-scratch mirror, V02/v26 lane-root .scratch).
+
+Per-axis verdicts: coverage improved (bounded — the eight-fixture chain);
+depth improved (bounded — the R10 register's first worked entry: shared
+referent demonstrated, claims compatible, both preserved; locator defects
+were the only residue); calibration improved (bounded — repointed_edge
+persisted, fail-closed both directions); operability not harmed;
+freshness not harmed (bounded — closure docs landed here); adjacency not
+harmed (charter byte-identical; ownership exactly the declared 4+1
+files). Measurements re-run at closure on the delivered revision: freeze
+self-test 19/19; chain 8/8; boundary CERTIFIED; C9 pair green (re-check
+10 DISCRIMINATION HELD); census 174 unchanged (no new fixture this round);
+checker pin `ff9fd2aa…` reproduced. SHONEN unchanged (four `[~]`, no
+`[x]`). No promotion, no push. r102 — the final round of the operator's
+loop (16–32 seats, zai glm-5.3-flash-low) — may start.

@@ -1,0 +1,28 @@
+=== git diff --name-status f3e09f9 (worktree) ===
+M	LOG.md
+M	SCORECARD.md
+=== untracked (excl. ignored) ===
+.ufo/waves/round-97/seats/V04-scratch/poll-r1.log
+.ufo/waves/round-97/seats/V04-scratch/poll-r1.sh
+.ufo/waves/round-97/seats/V11-scratch/baseline_contract.json
+.ufo/waves/round-97/seats/V11-scratch/baseline_dependency_freeze.py
+.ufo/waves/round-97/seats/V12-scratch/contract-baseline.json
+.ufo/waves/round-97/seats/V12-scratch/r96-contradictions-baseline.json
+.ufo/waves/round-97/seats/V12-scratch/r96-entities-baseline.json
+.ufo/waves/round-97/seats/V12-scratch/r96-map-baseline.md
+.ufo/waves/round-97/seats/V12-scratch/r96-relations-baseline.json
+.ufo/waves/round-97/seats/V12-scratch/r96-sources-baseline.json
+.ufo/waves/round-97/seats/V12-scratch/r96-timeline-baseline.json
+.ufo/waves/round-97/seats/V13-scratch/census_v13.py
+.ufo/waves/round-97/seats/V15-scratch/poll.log
+.ufo/waves/round-97/seats/V15-scratch/poll.sh
+.ufo/waves/round-97/seats/V15-scratch/r96-pre-repair.txt
+.ufo/waves/round-97/seats/V18-scratch/r96-map-pre-repair.md
+.ufo/waves/round-97/seats/V19-scratch/r96-map-baseline.md
+.ufo/waves/round-97/seats/V19-scratch/r96-mapobl-pre.txt
+.ufo/waves/round-97/seats/V19-scratch/r96-support-pre.txt
+.ufo/waves/round-97/seats/V21-scratch/baseline_f3e09f9_manifest.txt
+.ufo/waves/round-97/seats/V21-scratch/current_delta.txt
+.ufo/waves/round-97/seats/V25-scratch/baseline-prefix-shas.txt
+.ufo/waves/round-97/seats/V29-scratch/poll.sh
+.ufo/waves/round-97/seats/V32-scratch/poll.sh

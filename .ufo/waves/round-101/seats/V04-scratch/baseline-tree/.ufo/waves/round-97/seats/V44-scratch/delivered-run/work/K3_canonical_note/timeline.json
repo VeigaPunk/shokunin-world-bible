@@ -1,0 +1,14 @@
+[
+  {
+    "id": "t-open",
+    "tick": 1,
+    "entity_id": "arden",
+    "source_id": "marginalia"
+  },
+  {
+    "id": "t-close",
+    "tick": 2,
+    "entity_id": "borin",
+    "source_id": "marginalia"
+  }
+]

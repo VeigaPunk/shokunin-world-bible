@@ -1,0 +1,6 @@
+=== usage-missing ===
+$ python3 corpus/tools/map_obligations.py corpus/fixtures/does-not-exist-r97
+FINDING cluster_missing: cannot resolve cluster: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/does-not-exist-r97'
+RESULT ERROR
+EXIT=2
+

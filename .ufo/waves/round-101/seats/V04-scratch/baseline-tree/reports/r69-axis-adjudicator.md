@@ -1,0 +1,27 @@
+# Round 69 final axis adjudication — declared broad reference gate
+
+## Decision
+
+**REJECT the declared broad gate before implementation.** The proposed rule requires *both* ledger sides to have a nonempty string `event_id` and an allowed `field` before reporting identical `(event_id, field)` references. It would remove a plainly weak finding when two empty sides compare equal, but it would also remove the existing R62 finding for two sides with the same usable, nonempty event ID and the same invalid field. That finding may warn an editor not to repair both fields to the same allowed value and thereby leave an identical reference for a later run. Its usefulness is not proven, but neither is its loss harmless; the one-axis, no-harm admission condition is unmet. This is a judgment of the **declared broad** rule, not permission to substitute a narrower event-ID-only gate in this round.
+
+| Axis | Judgment | Basis |
+|---|---|---|
+| Depth | **Unchanged** in the no-change tree; no improvement established by the proposal | A guard on an existing input-ledger comparison adds no demonstrated analytical depth. |
+| Coverage | **Unchanged** in the no-change tree; preservation under the proposed candidate **unproved** | Existing structural checks remain present, but suppressing the R62 pair finding risks losing a useful repair warning. There is no candidate replay to measure that change. |
+| Calibration | **Unchanged / material improvement unproved** in the no-change tree; mixed prospect for the broad gate | Empty-both has an unsupported-looking pair conclusion, whereas R62's valid shared ID with invalid fields may carry independent repair guidance. The gain does not establish that the broad suppression harms no axis. |
+
+No measured axis was harmed in this **unchanged** tree. The potential coverage/calibration loss is a reason to withhold admission, not a demonstrated candidate regression or a proved user outcome. The proposed change has neither been implemented nor independently validated.
+
+## Independent evidence and limits
+
+The Round 69 declaration and scout synthesis in `.shokunin/lore/LOG.md` specify the broad predicate and stop before executor dispatch. I read all eight `r69-{ledger,prior,fixture,schema}-scout.md`, `r69-{critic,simplifier,scribe}.md`, and `r69-regression-scout.md`, then the non-author `r69-reviewer.md` and `r69-independent-verifier.md`. Their materiality dispute is real: the schema and simplifier reports describe a coherent structural-only predicate, but the critic and reviewer identify the concrete R62 counterexample. R62 previously kept this line as an independent check under timeline unavailability; that prior retention does not prove the line's utility with invalid fields.
+
+In `.shokunin/lore/corpus/fixtures/check_bible.py:111-143`, the side loop rejects blank event IDs and fields outside `{'place_id', 'tick', 'depends_on'}` independently. The subsequent pair comparison instead requires only two dictionaries and equality of their raw `.get('event_id')` and `.get('field')` values. Two absent values therefore compare equal. Conversely, the committed `r62-malformed-side/contradictions.json` has two equal **nonempty** IDs (`tarin-envelope-observation`) and two equal invalid `bogus` fields. I independently ran the current checker on that fixture: exit 1, the malformed timeline load error, two field errors, the pair warning, and `4 violation(s); no canon changed`. On `r37-ledger-unique`, the current checker exited 0 with `CLEAN: schema, citations, relations, timeline; 0 violations`. These are baseline probes, not candidate results.
+
+The reviewer separately probed empty dictionaries (two required-ID findings plus pair finding), valid identical pointers (pair finding), and valid different pointers (clean), then reproduced R62. The verifier's pinned archive of `583f97e40f0c5d0bcd0c51be1a408e7d3005b9c6` matched **709/709** fixture-tree paths and raw bytes and **130/130** prior fixture exit/raw-stdout/raw-stderr tuples. Its separate baseline probes reproduced empty-both and valid-ID/invalid-field pair warnings and valid-same/different behavior, with unrelated source findings in its chosen base. The reviewer and verifier did **not** measure a candidate delta, a matched malformed-one candidate, or an editor repair study. The 709-file and 130-tuple checks mean no-change preservation only; they cannot establish broad-gate correctness or improvement.
+
+## Falsifier and next proposal boundary
+
+This rejection would be falsified by a newly declared, independently tested broad-gate candidate showing a material reduction of misleading input-ledger findings **without** loss of actionable R62-style repair guidance: matched empty/malformed-both, malformed-one, valid-identical, valid-different and especially shared valid-ID/invalid-field repairs; full raw old/new outcomes for all 130 old fixtures with the R62 delta explicitly reviewed; and independent evidence that suppressing that warning does not defer a necessary repair. A fresh narrower missing/unusable-event-ID proposal is possible, but needs its own declaration and evidence, not retroactive admission here. Neither output wording nor a lower violation count alone proves material benefit.
+
+These are diagnostics on supplied JSON pointers, not proof of a fictional contradiction, an event's occurrence, source-text support, canon, chronology, rights, permission, or game mechanics. No user repair behavior was observed. No checker, fixture, README, LOG, or corpus candidate was changed for this round.

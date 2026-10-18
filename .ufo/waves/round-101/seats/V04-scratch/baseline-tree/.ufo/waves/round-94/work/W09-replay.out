@@ -1,0 +1,30 @@
+BASELINE_COMMIT 9c2eea3b58a090f8820c7a723d2f6a22b46ae52b
+INHERITED_EVENTS aru-ninth-bell@9 evin-ninth-bell@9
+TEMP_SCOPE .ufo/waves/round-94/work (temporary case inputs removed on exit)
+CASE r88-inherited-baseline
+COMMAND /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r88-m3-maya-cluster
+EXIT 0
+CLEAN: schema, citations, relations, timeline; 0 violations
+CASE clean-tick10
+COMMAND /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/work/W09-replay-_q7s04ow/clean-tick10
+EXIT 0
+CLEAN: schema, citations, relations, timeline; 0 violations
+CASE equal-tick
+COMMAND /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/work/W09-replay-_q7s04ow/equal-tick
+EXIT 1
+VIOLATION: timeline[2].depends_on: timeline inversion 'aru-ninth-bell' tick 9 not before 'w09-equal-tick' tick 9
+VIOLATION: timeline[2].depends_on: timeline inversion 'evin-ninth-bell' tick 9 not before 'w09-equal-tick' tick 9
+2 violation(s); no canon changed
+CASE inverted-tick
+COMMAND /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/work/W09-replay-_q7s04ow/inverted-tick
+EXIT 1
+VIOLATION: timeline[2].depends_on: timeline inversion 'aru-ninth-bell' tick 9 not before 'w09-inverted-tick' tick 8
+VIOLATION: timeline[2].depends_on: timeline inversion 'evin-ninth-bell' tick 9 not before 'w09-inverted-tick' tick 8
+2 violation(s); no canon changed
+CASE missing-dependency
+COMMAND /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/work/W09-replay-_q7s04ow/missing-dependency
+EXIT 1
+VIOLATION: timeline[2].depends_on: unknown event 'missing-tick8'
+1 violation(s); no canon changed
+ASSERTIONS PASS: baseline clean; tick10/two dependencies clean; equal and inverted ticks report both inversions; unknown dependency reports unknown event.
+REPLAY_EXIT 0

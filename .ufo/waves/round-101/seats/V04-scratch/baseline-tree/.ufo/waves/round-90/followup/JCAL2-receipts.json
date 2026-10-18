@@ -1,0 +1,157 @@
+{
+ "baseline_commit": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+ "census_164": {
+  "baseline_exit_histogram": {
+   "0": 32,
+   "1": 132
+  },
+  "changed_tuples": [],
+  "delivered_exit_histogram": {
+   "0": 32,
+   "1": 132
+  },
+  "delivered_violation_lines": 417,
+  "dirs": 164,
+  "exit_flips": [],
+  "stderr_nonempty": []
+ },
+ "durable_fn2_pair": {
+  "corpus/fixtures/r89-fn2-control": {
+   "baseline_exit": 1,
+   "delivered_exit": 1,
+   "delivered_stdout": "VIOLATION: entities[3].provenance[1]: provenance chain break; expected from_holder 'f3-dup', got 'mira'\n1 violation(s); no canon changed\n",
+   "delivered_stdout_sha256": "4283f6955f40d49f6036ad61f55ab94e682cdb3c475af73c3d8350920cf06951",
+   "stderr_both_empty": true,
+   "stdout_identical": true
+  },
+  "corpus/fixtures/r89-fn2-unresolved-chain-break": {
+   "baseline_exit": 1,
+   "delivered_exit": 1,
+   "delivered_stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'\n2 violation(s); no canon changed\n",
+   "delivered_stdout_sha256": "66ed1438c6d1af003492d29569492ec0990e5b01b041fba1b4e21147eab4327a",
+   "stderr_both_empty": true,
+   "stdout_identical": true
+  }
+ },
+ "freeze_then_verify": {
+  "baseline_checker_sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+  "byte_identical": true,
+  "composed_from_patches": [
+   ".ufo/waves/round-90/patches/X2-c1-nullonly.patch",
+   ".ufo/waves/round-90/patches/X3-c1-tickonly.patch"
+  ],
+  "composed_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "delivered_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+ },
+ "pinned_160_receipt_check": {
+  "mismatches": [],
+  "new_since_baseline": [
+   "corpus/fixtures/r90-c1-rawpresent-from",
+   "corpus/fixtures/r90-c1-rawpresent-source",
+   "corpus/fixtures/r90-c1-rawpresent-to",
+   "corpus/fixtures/r90-c1-three-causes"
+  ],
+  "shared": 160
+ },
+ "probes": {
+  "C1_null-first-record-clean": {
+   "baseline": {
+    "exit": 0,
+    "stderr": "",
+    "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n"
+   },
+   "delivered": {
+    "exit": 0,
+    "stderr": "",
+    "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n"
+   },
+   "stdout_changed_by_delivered": false
+  },
+  "C2_first-record_nonnull_unresolved": {
+   "baseline": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[0]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); first record must have from_holder null\n2 violation(s); no canon changed\n"
+   },
+   "delivered": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[0]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); first record must have from_holder null\n2 violation(s); no canon changed\n"
+   },
+   "stdout_changed_by_delivered": false
+  },
+  "C3_tick_with_ambiguous-source": {
+   "baseline": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: sources[2].id: duplicate sources id 'ambig-src'\nVIOLATION: entities[2].provenance[0].source_id: ambiguous in-world source 'ambig-src'\nVIOLATION: entities[2].provenance[1].tick: input-structural finding, not sourced-canon; provenance tick 1 must be greater than previous tick 2\n3 violation(s); no canon changed\n"
+   },
+   "delivered": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: sources[2].id: duplicate sources id 'ambig-src'\nVIOLATION: entities[2].provenance[0].source_id: ambiguous in-world source 'ambig-src'\nVIOLATION: entities[2].provenance[1].tick: input-structural finding, not sourced-canon; provenance tick 1 must be greater than previous tick 2\n3 violation(s); no canon changed\n"
+   },
+   "stdout_changed_by_delivered": false
+  },
+  "F1_null-from_with_unresolved-expected": {
+   "baseline": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index); provenance tick 1 must be greater than previous tick 1\nVIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)\n3 violation(s); no canon changed\n"
+   },
+   "delivered": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[1].tick: provenance tick 1 must be greater than previous tick 1\nVIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got None\n3 violation(s); no canon changed\n"
+   },
+   "stdout_changed_by_delivered": true
+  },
+  "F2_unresolved-observed-holder_with_tick": {
+   "baseline": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got 'rdup'; from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index)\n3 violation(s); no canon changed\n"
+   },
+   "delivered": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[1].tick: provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got 'rdup'; from_holder 'rdup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index)\n3 violation(s); no canon changed\n"
+   },
+   "stdout_changed_by_delivered": true
+  },
+  "P1_null-chain": {
+   "baseline": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[2].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index); provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[2].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)\n2 violation(s); no canon changed\n"
+   },
+   "delivered": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[2].provenance[1].tick: provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[2].provenance[1]: provenance chain break; expected from_holder 'mira', got None\n2 violation(s); no canon changed\n"
+   },
+   "stdout_changed_by_delivered": true
+  },
+  "P2_unresolved-compared-holder-tick": {
+   "baseline": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'uncertain-holder' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'uncertain-holder' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'\n3 violation(s); no canon changed\n"
+   },
+   "delivered": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[3].provenance[1].tick: provenance tick 1 must be greater than previous tick 2\nVIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'uncertain-holder' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'\n3 violation(s); no canon changed\n"
+   },
+   "stdout_changed_by_delivered": true
+  }
+ },
+ "seat": "JCAL2",
+ "target_commit": "ca7f9ef1646cf3fcbe58747785a8cb2e9075ae13",
+ "vacuous_clause_sweep": {
+  "null_unresolvable_phrase_outputs": [],
+  "raw_equals_indexed_clauses": [],
+  "total_unresolvable_clauses": 1,
+  "zero_raw_clauses": []
+ }
+}

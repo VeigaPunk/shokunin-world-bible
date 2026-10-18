@@ -1,0 +1,5 @@
+legit-claims-absent                                          rc=2 | FINDING invalid_raw_data: entities.json#/0/first_appearance must contain a non-empty source ID~RESULT ERROR~
+legit-empty-claims                                           rc=0 | OBLIGATIONS raw=1 mapped=1~RESULT PASS~
+legit-provenance                                             rc=0 | OBLIGATIONS raw=14 mapped=14~RESULT PASS~
+legit-unknown-list-nosource                                  rc=0 | OBLIGATIONS raw=14 mapped=14~RESULT PASS~
+mut-claims-renamed                                           rc=0 | OBLIGATIONS raw=13 mapped=13~RESULT PASS~

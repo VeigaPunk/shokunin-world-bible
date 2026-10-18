@@ -1,0 +1,8 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-direct-ambiguous
+exit_code=1
+VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'
+VIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'
+5 violation(s); no canon changed

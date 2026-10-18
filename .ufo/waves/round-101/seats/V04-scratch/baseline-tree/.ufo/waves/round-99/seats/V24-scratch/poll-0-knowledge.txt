@@ -1,0 +1,1 @@
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99-*': No such file or directory

@@ -1,0 +1,336 @@
+{
+  "seat": "JCAL1",
+  "axis": "calibration",
+  "artifact": "census + delta classification",
+  "baseline_commit": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94",
+  "candidate_commit": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+  "checker_command": [
+    "python3",
+    "corpus/fixtures/check_bible.py",
+    "corpus/fixtures/<dir>"
+  ],
+  "scope": "Every direct child of corpus/fixtures/ holding >=1 of contradictions.json, entities.json, relations.json, sources.json, timeline.json.",
+  "baseline_artifact": ".ufo/waves/round-89/patches/B1-tuples.json",
+  "baseline_artifact_replay": {
+    "keys": 149,
+    "key_sets_equal": true,
+    "tuple_mismatches": 0
+  },
+  "census": {
+    "baseline": {
+      "dirs": 149,
+      "exit_counts": {
+        "1": 118,
+        "0": 31
+      },
+      "violations": 367,
+      "stderr_nonempty": 0
+    },
+    "candidate": {
+      "dirs": 160,
+      "exit_counts": {
+        "1": 128,
+        "0": 32
+      },
+      "violations": 399,
+      "stderr_nonempty": 0
+    },
+    "violation_growth": 32,
+    "new_dir_violations": 32,
+    "changed_dir_net_violation_delta": 0
+  },
+  "delta": {
+    "changed_tuples": 4,
+    "unchanged_tuples": 145,
+    "added_dirs": 11,
+    "removed_dirs": 0,
+    "exit_status_changes": []
+  },
+  "changed_dirs": [
+    {
+      "path": "corpus/fixtures/r87-probe-multi-invalid",
+      "exit_before": 1,
+      "exit_after": 1,
+      "violations_before": 5,
+      "violations_after": 5
+    },
+    {
+      "path": "corpus/fixtures/r87-probe-record-and-chain",
+      "exit_before": 1,
+      "exit_after": 1,
+      "violations_before": 46,
+      "violations_after": 46
+    },
+    {
+      "path": "corpus/fixtures/r88-mixed-stop",
+      "exit_before": 1,
+      "exit_after": 1,
+      "violations_before": 6,
+      "violations_after": 6
+    },
+    {
+      "path": "corpus/fixtures/r88-nonholder-stop",
+      "exit_before": 1,
+      "exit_after": 1,
+      "violations_before": 4,
+      "violations_after": 4
+    }
+  ],
+  "added_dirs": [
+    {
+      "path": "corpus/fixtures/r89-c1-invalid-from-holder",
+      "exit": 1,
+      "violations": 3
+    },
+    {
+      "path": "corpus/fixtures/r89-c1-invalid-tick",
+      "exit": 1,
+      "violations": 4
+    },
+    {
+      "path": "corpus/fixtures/r89-c1-invalid-to-holder",
+      "exit": 1,
+      "violations": 3
+    },
+    {
+      "path": "corpus/fixtures/r89-c1-malformed-source-id",
+      "exit": 1,
+      "violations": 3
+    },
+    {
+      "path": "corpus/fixtures/r89-c1-multi-cause-valid",
+      "exit": 1,
+      "violations": 4
+    },
+    {
+      "path": "corpus/fixtures/r89-f2-dangling-from",
+      "exit": 1,
+      "violations": 4
+    },
+    {
+      "path": "corpus/fixtures/r89-f2-dangling-to",
+      "exit": 1,
+      "violations": 4
+    },
+    {
+      "path": "corpus/fixtures/r89-f2-invalid-source-id",
+      "exit": 1,
+      "violations": 4
+    },
+    {
+      "path": "corpus/fixtures/r89-fn2-control",
+      "exit": 1,
+      "violations": 1
+    },
+    {
+      "path": "corpus/fixtures/r89-fn2-unresolved-chain-break",
+      "exit": 1,
+      "violations": 2
+    },
+    {
+      "path": "corpus/fixtures/r89-inspiration-paraphrase",
+      "exit": 0,
+      "violations": 0
+    }
+  ],
+  "changed_lines_added_buckets": {
+    "combined-summary": 2,
+    "FN-1 wording": 10
+  },
+  "changed_lines_all_buckets": {
+    "combined-summary": 2,
+    "qualification": 0,
+    "FN-1 wording": 10,
+    "footer": 0,
+    "OTHER": 12
+  },
+  "changed_lines": [
+    {
+      "dir": "corpus/fixtures/r87-probe-multi-invalid",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-multi-invalid",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault' at entities[5].provenance[1]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-multi-invalid",
+      "kind": "added",
+      "category": "combined-summary",
+      "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault'; source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[5].provenance[1]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-multi-invalid",
+      "kind": "added",
+      "category": "combined-summary",
+      "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity from_holder 'vault'; source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[5].provenance[1]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[4].provenance[7]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[4].provenance[7]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[4].provenance[7]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[4].provenance[8]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[4].provenance[7]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'ghost-source' at entities[6].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[6].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r87-probe-record-and-chain",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'ghost-source' absent from raw sources and absent from the resolved index at entities[6].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-mixed-stop",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-mixed-stop",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-mixed-stop",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-mixed-stop",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-mixed-stop",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-mixed-stop",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-mixed-missing-source' absent from raw sources and absent from the resolved index at entities[5].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-nonholder-stop",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-nonholder-stop",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-nonholder-stop",
+      "kind": "removed",
+      "category": "OTHER",
+      "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-nonholder-stop",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-nonholder-stop",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]"
+    },
+    {
+      "dir": "corpus/fixtures/r88-nonholder-stop",
+      "kind": "added",
+      "category": "FN-1 wording",
+      "text": "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: source reference 'f1-nonholder-missing-source' absent from raw sources and absent from the resolved index at entities[3].provenance[0]"
+    }
+  ],
+  "invariance": {
+    "footer_or_clean_anomalies": 0,
+    "stderr_nonempty": 0,
+    "replay_determinism": true
+  },
+  "patch_reproduction": {
+    "patch": "X1-c1.patch",
+    "applied_to": "51b286b:corpus/fixtures/check_bible.py",
+    "diff_vs_delivered": "IDENTICAL"
+  },
+  "scratch_controls": {
+    "four_cause_valid_key_summary": {
+      "fixture": "/tmp/lore-r89-JCAL1/probe-4cause",
+      "causes_joined": [
+        "malformed record (invalid tick)",
+        "malformed record (invalid to_holder)",
+        "ambiguous holder identity from_holder 'dup'",
+        "malformed record (invalid source_id)"
+      ],
+      "all_four_present": true,
+      "order": "validation order"
+    },
+    "fn1_raw_present_branch": {
+      "fixture": "/tmp/lore-r89-JCAL1/probe-rawpresent",
+      "emitted": "holder reference to_holder 'ghost' present in raw entities but absent from the resolved index",
+      "exercised_by_delivered_fixtures": false,
+      "delivered_occurrences_of_present_in_raw": 0
+    }
+  },
+  "fn2_visibility": {
+    "delivered_files_with_not_uniquely_resolvable": [
+      "corpus/fixtures/r89-fn2-unresolved-chain-break"
+    ],
+    "baseline_manifest_changed_lines": 0
+  },
+  "verdict_recommendation": "improved",
+  "named_debt": [
+    "FN-1 raw-present branch ('present in raw ... but absent from the resolved index') has 0 delivered fixtures; demonstrated only by scratch control.",
+    "FN-2 qualification produces 0 line changes on the 149-dir baseline manifest; only the 2 new r89-fn2-* fixtures exercise it.",
+    "Seat brief's FN-1 phrase 'absent from the raw table and resolved index' occurs nowhere in the tree; delivered form matches E1-r89-wording.md.",
+    "r89-c1-malformed-source-id (5th C1 cause-branch fixture) has no patch artifact; documented in its README and followup/H2-delta.json + V2.md.",
+    "Combined-summary mechanism pre-existed on the unexpected-field-set branch (r87-probe-shape-ambiguous, r88-shape-ambiguous-armed, both unchanged); only the valid-key branch is new."
+  ]
+}

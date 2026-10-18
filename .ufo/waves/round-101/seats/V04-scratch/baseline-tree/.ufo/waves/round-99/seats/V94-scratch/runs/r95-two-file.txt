@@ -1,0 +1,10 @@
+command: /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/fixtures/r95-crossing-aftermath
+cwd: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror
+exit: 2
+--- stdout ---
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 124b8f48687b94f6106731b52c66e1f579b20c6aa5a77fb9671085a3c012ac4c != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: README.md (sha256 9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b -> 168bbd76884e700dc0ec922b9db9c64293619061f3391d37247b3d34295ef098), timeline.json (sha256 3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177 -> bd64e666f77d6981d2871fdab750d5622942c7c18ceca8cfdd8bc82fa6aa6ff2); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+
+--- stderr ---
+

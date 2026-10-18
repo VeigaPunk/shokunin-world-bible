@@ -1,0 +1,96 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V21-scratch
+LOG=$SCRATCH/poll.log
+REPO=/home/vgpnk/Projects/shokunin/lore-shokunin
+SEATS=$REPO/.ufo/waves/round-99/seats
+MAX=40
+i=0
+stable=0
+prev=""
+while [ "$i" -lt "$MAX" ]; do
+  i=$((i+1))
+  ts=$(date +%H:%M:%S)
+  missing=""
+  for n in S1-freeze-hygiene.md S2-tools-docs.md S3-fixture-author.md S4-fixture-docs.md S5-knowledge-notes.md; do
+    if [ ! -f "$SEATS/$n" ]; then missing="$missing $n"; fi
+  done
+  for p in \
+    "$REPO/corpus/knowledge/r99-gate-blind-spot-table.md" \
+    "$REPO/corpus/knowledge/r99-lapse-scope-note.md"; do
+    if [ ! -f "$p" ]; then missing="$missing $(basename "$p")"; fi
+  done
+  # contract readiness: r99 pin + schema 2 + 18 self-test cases
+  contract_ok=$(python3 - << 'PY'
+import json
+from pathlib import Path
+p = Path("/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json")
+try:
+    c = json.loads(p.read_text())
+except Exception as e:
+    print(f"UNREADABLE {e}")
+    raise SystemExit
+pins = c.get("pins") or {}
+st = (c.get("self_test") or {}).get("expected") or {}
+r99 = pins.get("r99-window-lapse") or {}
+files = r99.get("files") or {}
+print(f"schema={c.get('schema_version')} pins={len(pins)} r99={'yes' if 'r99-window-lapse' in pins else 'no'} r99files={len(files)} r99psv={r99.get('payload_schema_version')} cases={len(st)} md_tamper={'markdown_tamper' in st}")
+ok = (
+    "r99-window-lapse" in pins
+    and len(files) == 10
+    and r99.get("payload_schema_version") == 2
+    and "markdown_tamper" in st
+    and len(st) >= 18
+)
+raise SystemExit(0 if ok else 3)
+PY
+)
+  crc=$?
+  # map readiness: inventory line mentions 21
+  map_line=$(python3 - << 'PY'
+from pathlib import Path
+p = Path("/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md")
+if not p.exists():
+    print("MAP-ABSENT")
+    raise SystemExit(3)
+text = p.read_text()
+for line in text.splitlines():
+    if line.startswith("**Expected inventory:**"):
+        print(line)
+        raise SystemExit(0 if "21 JSON" in line else 3)
+print("NO-DECL")
+raise SystemExit(3)
+PY
+)
+  mrc=$?
+  tool_sha=$(sha256sum "$REPO/corpus/tools/dependency_freeze.py" | awk '{print substr($1,1,12)}')
+  con_sha=$(sha256sum "$REPO/corpus/tools/dependency-freeze-contract.json" | awk '{print substr($1,1,12)}')
+  map_sha=$(sha256sum "$REPO/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md" | awk '{print substr($1,1,12)}')
+  readme_sha=$(sha256sum "$REPO/corpus/fixtures/r99-window-lapse/README.md" | awk '{print substr($1,1,12)}')
+  sig="tool=$tool_sha con=$con_sha map=$map_sha readme=$readme_sha contract_rc=$crc map_rc=$mrc missing=[$missing]"
+  echo "POLL try=$i t=$((i*20))s $ts $sig" | tee -a "$LOG"
+  echo "  contract: $contract_ok" | tee -a "$LOG"
+  echo "  map: $map_line" | tee -a "$LOG"
+  if [ -z "$missing" ] && [ "$crc" -eq 0 ] && [ "$mrc" -eq 0 ]; then
+    if [ "$sig" = "$prev" ]; then
+      stable=$((stable+1))
+    else
+      stable=1
+      prev="$sig"
+    fi
+    echo "  STABLE $stable/3" | tee -a "$LOG"
+    if [ "$stable" -ge 3 ]; then
+      echo "POLL_STABLE try=$i t=$((i*20))s $sig" | tee -a "$LOG"
+      exit 0
+    fi
+  else
+    stable=0
+    prev=""
+  fi
+  if [ "$i" -ge "$MAX" ]; then
+    echo "POLL_EXHAUSTED try=$i missing=[$missing] contract_rc=$crc map_rc=$mrc" | tee -a "$LOG"
+    exit 2
+  fi
+  sleep 20
+done
+

@@ -1,0 +1,233 @@
+{
+  "tool_sha256": "d1c239ccb21404490bfe120a8c8de45af89265437d5be53fb712ff27e4212108",
+  "r88-unmutated": {
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nRESULT PASS\n",
+    "stderr": "",
+    "findings": []
+  },
+  "raw-mut/entities-0-first": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/0/first_appearance does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/0/first_appearance does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/entities-0-claim-0": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/0/claims/0 does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/0/claims/0 does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/entities-1-first": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/1/first_appearance does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/1/first_appearance does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/entities-1-claim-0": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/1/claims/0 does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/1/claims/0 does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/entities-2-first": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/2/first_appearance does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/2/first_appearance does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/entities-2-claim-0": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/2/claims/0 does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/2/claims/0 does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/entities-3-first": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/3/first_appearance does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/3/first_appearance does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/entities-3-claim-0": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/3/claims/0 does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/3/claims/0 does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/timeline-0": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: timeline.json#/0 does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: timeline.json#/0 does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut/timeline-1": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: timeline.json#/1 does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: timeline.json#/1 does not bind to 'v39-mutated'"
+    ]
+  },
+  "raw-mut-all": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/0/claims/0 does not bind to 'v39-mutated'\nFINDING source_id_mismatch: entities.json#/0/first_appearance does not bind to 'v39-mutated'\nFINDING source_id_mismatch: entities.json#/1/claims/0 does not bind to 'v39-mutated'\nFINDING source_id_mismatch: entities.json#/1/first_appearance does not bind to 'v39-mutated'\nFINDING source_id_mismatch: entities.json#/2/claims/0 does not bind to 'v39-mutated'\nFINDING source_id_mismatch: entities.json#/2/first_appearance does not bind to 'v39-mutated'\nFINDING source_id_mismatch: entities.json#/3/claims/0 does not bind to 'v39-mutated'\nFINDING source_id_mismatch: entities.json#/3/first_appearance does not bind to 'v39-mutated'\nFINDING source_id_mismatch: timeline.json#/0 does not bind to 'v39-mutated'\nFINDING source_id_mismatch: timeline.json#/1 does not bind to 'v39-mutated'\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "source_id_mismatch: entities.json#/0/claims/0 does not bind to 'v39-mutated'",
+      "source_id_mismatch: entities.json#/0/first_appearance does not bind to 'v39-mutated'",
+      "source_id_mismatch: entities.json#/1/claims/0 does not bind to 'v39-mutated'",
+      "source_id_mismatch: entities.json#/1/first_appearance does not bind to 'v39-mutated'",
+      "source_id_mismatch: entities.json#/2/claims/0 does not bind to 'v39-mutated'",
+      "source_id_mismatch: entities.json#/2/first_appearance does not bind to 'v39-mutated'",
+      "source_id_mismatch: entities.json#/3/claims/0 does not bind to 'v39-mutated'",
+      "source_id_mismatch: entities.json#/3/first_appearance does not bind to 'v39-mutated'",
+      "source_id_mismatch: timeline.json#/0 does not bind to 'v39-mutated'",
+      "source_id_mismatch: timeline.json#/1 does not bind to 'v39-mutated'"
+    ]
+  },
+  "row-drop/p1": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/0/first_appearance has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/0/first_appearance has no map row"
+    ]
+  },
+  "row-drop/p2": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/1/first_appearance has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/1/first_appearance has no map row"
+    ]
+  },
+  "row-drop/p3": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/2/first_appearance has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/2/first_appearance has no map row"
+    ]
+  },
+  "row-drop/p4": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/3/first_appearance has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/3/first_appearance has no map row"
+    ]
+  },
+  "row-drop/e1": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/0/claims/0 has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/0/claims/0 has no map row"
+    ]
+  },
+  "row-drop/e2": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/1/claims/0 has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/1/claims/0 has no map row"
+    ]
+  },
+  "row-drop/e3": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/2/claims/0 has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/2/claims/0 has no map row"
+    ]
+  },
+  "row-drop/e4": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: entities.json#/3/claims/0 has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: entities.json#/3/claims/0 has no map row"
+    ]
+  },
+  "row-drop/t1": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: timeline.json#/0 has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: timeline.json#/0 has no map row"
+    ]
+  },
+  "row-drop/t2": {
+    "exit": 1,
+    "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: timeline.json#/1 has no map row\nRESULT FAIL\n",
+    "stderr": "",
+    "findings": [
+      "missing_obligation: timeline.json#/1 has no map row"
+    ]
+  },
+  "row-drop/s1": {
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 1/2; TOTAL-ROWS 11/12 MISMATCH\nRESULT PASS\n",
+    "stderr": "",
+    "findings": []
+  },
+  "row-drop/s2": {
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 1/2; TOTAL-ROWS 11/12 MISMATCH\nRESULT PASS\n",
+    "stderr": "",
+    "findings": []
+  },
+  "editorial-drop": {
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 0/2; TOTAL-ROWS 10/12 MISMATCH\nRESULT PASS\n",
+    "stderr": "",
+    "findings": []
+  },
+  "control/r87-myth-cluster": {
+    "exit": 2,
+    "stdout": "FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer\nRESULT ERROR\n",
+    "stderr": "",
+    "findings": [
+      "unsupported_map: pointer cells must contain one canonical inline-code pointer"
+    ]
+  },
+  "control/r89-inspiration-paraphrase": {
+    "exit": 2,
+    "stdout": "FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column\nRESULT ERROR\n",
+    "stderr": "",
+    "findings": [
+      "unsupported_map: table needs one JSON fact pointer and one source-ID column"
+    ]
+  },
+  "control/r93-m2-kojiki-cluster": {
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=12 mapped=12\nINVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15\nRESULT PASS\n",
+    "stderr": "",
+    "findings": []
+  },
+  "control/r94-paired-crossing": {
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=14 mapped=14\nINVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16\nRESULT PASS\n",
+    "stderr": "",
+    "findings": []
+  },
+  "tool_sha256_after": "d1c239ccb21404490bfe120a8c8de45af89265437d5be53fb712ff27e4212108"
+}

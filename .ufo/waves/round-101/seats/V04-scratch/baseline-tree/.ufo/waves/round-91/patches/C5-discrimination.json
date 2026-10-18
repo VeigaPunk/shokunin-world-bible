@@ -1,0 +1,267 @@
+{
+  "seat": "C5",
+  "verdict": "PASS",
+  "axes": ["per-checker discrimination fidelity", "non-interference with FN2 and the existing census"],
+  "dependency_poll": {
+    "cwd": "lore-shokunin/",
+    "command_lines": [
+      "set -u",
+      "root=$PWD",
+      "started=$(date +%s)",
+      "deadline=$((started + 1200))",
+      "trap 'printf \"[%s] TERMINAL poll interrupted\\n\" \"$(date -Is)\"' INT TERM",
+      "while :; do",
+      "  now=$(date +%s)",
+      "  printf '[%s] checking for X1 and F2 patch artifacts\\n' \"$(date -Is)\"",
+      "  x1=0; f2=0",
+      "  for pattern in 'patches/X1-*' '.ufo/waves/round-91/patches/X1-*' '.ufo/waves/round-91/X1-*'; do",
+      "    for file in $pattern; do [[ -f \"$file\" ]] && { x1=1; break; }; done",
+      "    (( x1 )) && break",
+      "  done",
+      "  for pattern in 'patches/F2-*' '.ufo/waves/round-91/patches/F2-*' '.ufo/waves/round-91/F2-*'; do",
+      "    for file in $pattern; do [[ -f \"$file\" ]] && { f2=1; break; }; done",
+      "    (( f2 )) && break",
+      "  done",
+      "  if (( x1 && f2 )); then",
+      "    printf '[%s] TERMINAL dependencies available (X1=%s F2=%s)\\n' \"$(date -Is)\" \"$x1\" \"$f2\"",
+      "    exit 0",
+      "  fi",
+      "  if (( now >= deadline )); then",
+      "    printf '[%s] TERMINAL deadline reached (X1=%s F2=%s); proceeding with available artifacts\\n' \"$(date -Is)\" \"$x1\" \"$f2\"",
+      "    exit 0",
+      "  fi",
+      "  printf '[%s] waiting 60s (X1=%s F2=%s)\\n' \"$(date -Is)\" \"$x1\" \"$f2\"",
+      "  sleep 60",
+      "done"
+    ],
+    "check_timestamps": [
+      "2026-10-17T07:16:01-03:00",
+      "2026-10-17T07:17:01-03:00",
+      "2026-10-17T07:18:01-03:00",
+      "2026-10-17T07:19:01-03:00",
+      "2026-10-17T07:20:01-03:00",
+      "2026-10-17T07:21:01-03:00",
+      "2026-10-17T07:22:01-03:00",
+      "2026-10-17T07:23:01-03:00",
+      "2026-10-17T07:24:01-03:00",
+      "2026-10-17T07:25:01-03:00",
+      "2026-10-17T07:26:01-03:00",
+      "2026-10-17T07:27:01-03:00",
+      "2026-10-17T07:28:01-03:00",
+      "2026-10-17T07:29:01-03:00"
+    ],
+    "observed_check_output": [
+      "[2026-10-17T07:16:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:16:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:17:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:17:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:18:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:18:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:19:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:19:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:20:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:20:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:21:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:21:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:22:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:22:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:23:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:23:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:24:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:24:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:25:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:25:01-03:00] waiting 60s (X1=0 F2=0)",
+      "[2026-10-17T07:26:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:26:01-03:00] waiting 60s (X1=0 F2=1)",
+      "[2026-10-17T07:27:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:27:01-03:00] waiting 60s (X1=0 F2=1)",
+      "[2026-10-17T07:28:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:28:01-03:00] waiting 60s (X1=0 F2=1)",
+      "[2026-10-17T07:29:01-03:00] checking for X1 and F2 patch artifacts",
+      "[2026-10-17T07:29:01-03:00] TERMINAL dependencies available (X1=1 F2=1)"
+    ],
+    "observations": {
+      "2026-10-17T07:26:01-03:00": "X1=0 F2=1",
+      "2026-10-17T07:29:01-03:00": "X1=1 F2=1"
+    },
+    "terminal_line": "[2026-10-17T07:29:01-03:00] TERMINAL dependencies available (X1=1 F2=1)",
+    "result": "both inputs available before the 20-minute deadline"
+  },
+  "checkers": {
+    "baseline": {
+      "revision": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+      "sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556"
+    },
+    "delivered": {
+      "revision": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+      "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+    }
+  },
+  "patches": {
+    "X1-fixtures.patch": {
+      "sha256": "61b7dc90740823ffcd6741157cd696b08b564ab213f620cd42eb08433a503c35",
+      "dry_run_exit": 0,
+      "apply_exit": 0,
+      "files_applied": 12
+    },
+    "F2-fixtures.patch": {
+      "sha256": "17748eaf566a493a1d7a0cf6ce5b45238c3dcf7ea346c091fe9102d00bef6c97",
+      "dry_run_exit": 0,
+      "apply_exit": 0,
+      "files_applied": 12
+    }
+  },
+  "replay": {
+    "scratch_protocol": "Path-limited git archives of the two checker scripts; symlinked the 164 baseline fixture directories; applied both fixture patches only under /tmp.",
+    "preflight": {
+      "command": "df -i /tmp",
+      "observed": "Filesystem tmpfs; IUsed=1043007; IFree=5569; IUse%=100%"
+    },
+    "patch_commands": [
+      "patch --dry-run --batch --fuzz=0 -p1 -d \"$scratch/tree\" < .ufo/waves/round-91/patches/X1-fixtures.patch",
+      "patch --batch --fuzz=0 -p1 -d \"$scratch/tree\" < .ufo/waves/round-91/patches/X1-fixtures.patch",
+      "patch --dry-run --batch --fuzz=0 -p1 -d \"$scratch/tree\" < .ufo/waves/round-91/patches/F2-fixtures.patch",
+      "patch --batch --fuzz=0 -p1 -d \"$scratch/tree\" < .ufo/waves/round-91/patches/F2-fixtures.patch"
+    ],
+    "checker_command_template": "python3 <archived-checker> corpus/fixtures/<fixture-dir> (cwd=$scratch/tree)",
+    "fixture_results": [
+      {
+        "fixture": "r91-c1-null-chain",
+        "declared_stdout_blocks": 2,
+        "exact_readme_match": {"e97613c": true, "a7c6a17": true},
+        "e97613c": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 1,
+          "stdout_sha256": "3a337ba4bba9c829f9b2bba9657e61d8838ad491d44c0861fa1d6f9d40e05c89",
+          "stdout": "VIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)\n1 violation(s); no canon changed\n"
+        },
+        "a7c6a17": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 1,
+          "stdout_sha256": "615dc0564f531352a574ef2f53c48be42f4e53ad1fac4aa88756e4bba2fada5b",
+          "stdout": "VIOLATION: entities[3].provenance[1]: provenance chain break; expected from_holder 'mira', got None\n1 violation(s); no canon changed\n"
+        },
+        "delta": {
+          "removed_line": "VIOLATION: entities[3].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'mira'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)",
+          "added_line": "VIOLATION: entities[3].provenance[1]: provenance chain break; expected from_holder 'mira', got None",
+          "changed_line_replacements": 1,
+          "other_lines_unchanged": true
+        }
+      },
+      {
+        "fixture": "r91-c1-tick-unresolved",
+        "declared_stdout_blocks": 2,
+        "exact_readme_match": {"e97613c": true, "a7c6a17": true},
+        "e97613c": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 3,
+          "stdout_sha256": "71b4ea433d85ba52f11482a5d089c564641702989763ced39d61c5eee3748e85",
+          "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[4].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 1 must be greater than previous tick 3\nVIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'\n3 violation(s); no canon changed\n"
+        },
+        "a7c6a17": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 3,
+          "stdout_sha256": "d754e96f7c01e6fb6eff12168a732d5a6125f428a9207bd74fc49bbdcbb25d88",
+          "stdout": "VIOLATION: entities[1].first_appearance: required nonempty str\nVIOLATION: entities[4].provenance[1].tick: provenance tick 1 must be greater than previous tick 3\nVIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'\n3 violation(s); no canon changed\n"
+        },
+        "delta": {
+          "removed_line": "VIOLATION: entities[4].provenance[1].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 1 must be greater than previous tick 3",
+          "added_line": "VIOLATION: entities[4].provenance[1].tick: provenance tick 1 must be greater than previous tick 3",
+          "changed_line_replacements": 1,
+          "other_lines_unchanged": true,
+          "chain_break_line_unchanged": true
+        }
+      },
+      {
+        "fixture": "r91-f2-null-follow-on",
+        "declared_stdout_blocks": 2,
+        "exact_readme_match": {"e97613c": true, "a7c6a17": true},
+        "e97613c": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 1,
+          "stdout_sha256": "9ad2b56144252d78e2bdbae15ec216f02c91fe863e024b6e6a7ef7c05864e207",
+          "stdout": "VIOLATION: entities[0].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f2-ada'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)\n1 violation(s); no canon changed\n"
+        },
+        "a7c6a17": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 1,
+          "stdout_sha256": "7339247acb90b85fb08f0c0f22b3680c0ce7ab5f3829bf5d2fac70ec5038db20",
+          "stdout": "VIOLATION: entities[0].provenance[1]: provenance chain break; expected from_holder 'f2-ada', got None\n1 violation(s); no canon changed\n"
+        },
+        "delta": {
+          "removed_line": "VIOLATION: entities[0].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f2-ada'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)",
+          "added_line": "VIOLATION: entities[0].provenance[1]: provenance chain break; expected from_holder 'f2-ada', got None",
+          "changed_line_replacements": 1,
+          "other_lines_unchanged": true
+        }
+      },
+      {
+        "fixture": "r91-f2-tick-at-2-unresolved-at-1",
+        "declared_stdout_blocks": 2,
+        "exact_readme_match": {"e97613c": true, "a7c6a17": true},
+        "e97613c": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 3,
+          "stdout_sha256": "1034fa65018bcc9859b343f8e1b9b414262e7ffbb75b63b5e382cc458f1b9500",
+          "stdout": "VIOLATION: entities[5].first_appearance: required nonempty str\nVIOLATION: entities[0].provenance[2].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f2-boreal' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 2 must be greater than previous tick 4\nVIOLATION: entities[0].provenance[2]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f2-boreal' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'f2-cass'\n3 violation(s); no canon changed\n"
+        },
+        "a7c6a17": {
+          "exit": 1,
+          "stderr_empty": true,
+          "violation_lines": 3,
+          "stdout_sha256": "ee61c5a454f301be214c26a946fad1abfabfe6424e8ced9234f119c4dfc5f7fb",
+          "stdout": "VIOLATION: entities[5].first_appearance: required nonempty str\nVIOLATION: entities[0].provenance[2].tick: provenance tick 2 must be greater than previous tick 4\nVIOLATION: entities[0].provenance[2]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f2-boreal' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'f2-cass'\n3 violation(s); no canon changed\n"
+        },
+        "delta": {
+          "removed_line": "VIOLATION: entities[0].provenance[2].tick: input-structural finding, not sourced-canon; holder identity is not uniquely resolvable: expected from_holder 'f2-boreal' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); provenance tick 2 must be greater than previous tick 4",
+          "added_line": "VIOLATION: entities[0].provenance[2].tick: provenance tick 2 must be greater than previous tick 4",
+          "changed_line_replacements": 1,
+          "other_lines_unchanged": true,
+          "chain_break_line_unchanged": true
+        }
+      }
+    ]
+  },
+  "non_interference": {
+    "census_command_template": "python3 <archived-checker> corpus/fixtures/<dir> for each of the 164 direct child directories, from repo root before and scratch root after",
+    "existing_164_dirs": {
+      "e97613c": {
+        "before": {"directories": 164, "exit_counts": {"0": 32, "1": 132}, "violation_lines": 417, "stderr_nonempty": 0, "tuple_vector_sha256": "0ddcdbe9abbf323a88522130d695ac62d3994230ea191bcae50f6eec69ebcc5c"},
+        "after": {"directories": 164, "exit_counts": {"0": 32, "1": 132}, "violation_lines": 417, "stderr_nonempty": 0, "tuple_vector_sha256": "0ddcdbe9abbf323a88522130d695ac62d3994230ea191bcae50f6eec69ebcc5c"},
+        "changed_paths": []
+      },
+      "a7c6a17": {
+        "before": {"directories": 164, "exit_counts": {"0": 32, "1": 132}, "violation_lines": 417, "stderr_nonempty": 0, "tuple_vector_sha256": "0ddcdbe9abbf323a88522130d695ac62d3994230ea191bcae50f6eec69ebcc5c"},
+        "after": {"directories": 164, "exit_counts": {"0": 32, "1": 132}, "violation_lines": 417, "stderr_nonempty": 0, "tuple_vector_sha256": "0ddcdbe9abbf323a88522130d695ac62d3994230ea191bcae50f6eec69ebcc5c"},
+        "changed_paths": []
+      },
+      "additional_scratch_fixtures": 4,
+      "scratch_total_fixture_dirs": 168
+    },
+    "fn2_pair": {
+      "tracked_files": 12,
+      "aggregate_content_sha256_before_after": "ed8c5b7d0e55d197531507aac7a51dd1fbea5796b5dc7eceafadb1c9f295f3d0",
+      "content_identical": true,
+      "r89-fn2-unresolved-chain-break": {
+        "e97613c": {"exit": 1, "stdout_sha256": "66ed1438c6d1af003492d29569492ec0990e5b01b041fba1b4e21147eab4327a", "violation_lines": 2, "before_after_identical": true},
+        "a7c6a17": {"exit": 1, "stdout_sha256": "66ed1438c6d1af003492d29569492ec0990e5b01b041fba1b4e21147eab4327a", "violation_lines": 2, "before_after_identical": true}
+      },
+      "r89-fn2-control": {
+        "e97613c": {"exit": 1, "stdout_sha256": "4283f6955f40d49f6036ad61f55ab94e682cdb3c475af73c3d8350920cf06951", "violation_lines": 1, "before_after_identical": true},
+        "a7c6a17": {"exit": 1, "stdout_sha256": "4283f6955f40d49f6036ad61f55ab94e682cdb3c475af73c3d8350920cf06951", "violation_lines": 1, "before_after_identical": true}
+      }
+    }
+  },
+  "cleanup": {
+    "scratch_cleanup": "PASS",
+    "post_cleanup_df_free_inodes": 5569,
+    "scratch_leftovers": 0
+  }
+}

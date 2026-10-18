@@ -1,0 +1,138 @@
+=== poll start 22:01:48 ===
+REPORT S1-freeze-hygiene.md ABSENT
+REPORT S2-tools-docs.md ABSENT
+REPORT S3-fixture-author.md PRESENT 5069
+REPORT S4-fixture-docs.md ABSENT
+REPORT S5-knowledge-notes.md ABSENT
+ART corpus/fixtures/r99-window-lapse/timeline.json 2cdb9fda5baae1a4 2998
+ART corpus/fixtures/r99-window-lapse/claim-excerpt-map.md c1099d0ee9eece24 15028
+ART corpus/fixtures/r99-window-lapse/README.md 32efc78f70e6de4f 5829
+ART corpus/fixtures/r99-window-lapse/fictional-excerpts.md fefebaf93d148dbe 5114
+ART corpus/tools/dependency_freeze.py 03d04365cf00903e 26644
+ART corpus/tools/dependency-freeze-contract.json 153ebc5b2092948e 19291
+ART corpus/knowledge/r99-gate-blind-spot-table.md ABSENT
+ART corpus/knowledge/r99-lapse-scope-note.md ABSENT
+CONTRACT schema=1 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] self_test_n=2
+  self_test keys=['base_fixture', 'expected'] expected={'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}}
+  data_files=['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json'] extra_keys=['provenance_note']
+POLL try=1 t=20s 22:04:05 tool=1728ed892442 con=153ebc5b2092 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=1 pins=6 r99=no r99files=0 r99psv=None cases=17 md_tamper=False
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=2 t=40s 22:04:25 tool=1728ed892442 con=73b28933f148 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=3 t=60s 22:04:45 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=4 t=80s 22:05:05 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=5 t=100s 22:05:25 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=6 t=120s 22:05:45 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=7 t=140s 22:06:05 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=8 t=160s 22:06:25 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=9 t=180s 22:06:45 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=10 t=200s 22:07:05 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=11 t=220s 22:07:25 tool=1728ed892442 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=12 t=240s 22:07:45 tool=6f81f8be1974 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=13 t=260s 22:08:05 tool=6f81f8be1974 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=14 t=280s 22:08:25 tool=6f81f8be1974 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=15 t=300s 22:08:45 tool=6f81f8be1974 con=8f9c1f531614 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=16 t=320s 22:09:05 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=17 t=340s 22:09:25 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=18 t=360s 22:09:45 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=19 t=380s 22:10:05 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=20 t=400s 22:10:25 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=21 t=420s 22:10:45 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=22 t=440s 22:11:05 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=23 t=460s 22:11:25 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=24 t=480s 22:11:45 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=25 t=500s 22:12:05 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=26 t=520s 22:12:25 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=27 t=540s 22:12:45 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=28 t=560s 22:13:05 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=29 t=580s 22:13:25 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=30 t=600s 22:13:46 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=31 t=620s 22:14:06 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=32 t=640s 22:14:26 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=33 t=660s 22:14:46 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=34 t=680s 22:15:06 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=35 t=700s 22:15:26 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=36 t=720s 22:15:46 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=37 t=740s 22:16:06 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=38 t=760s 22:16:26 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=39 t=780s 22:16:46 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL try=40 t=800s 22:17:06 tool=6f81f8be1974 con=8c2561b043c2 map=d2fe20e581d1 readme=b93209417a91 contract_rc=3 map_rc=0 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md]
+  contract: schema=2 pins=6 r99=no r99files=0 r99psv=None cases=18 md_tamper=True
+  map: **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+POLL_EXHAUSTED try=40 missing=[ S1-freeze-hygiene.md S2-tools-docs.md S5-knowledge-notes.md r99-gate-blind-spot-table.md r99-lapse-scope-note.md] contract_rc=3 map_rc=0

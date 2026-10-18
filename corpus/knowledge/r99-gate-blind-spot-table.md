@@ -373,3 +373,13 @@ There was exactly one FINDING, no FREEZE/DIGEST receipt, no semantic or digest f
 ### Dated coverage supersession (2026-10-17, r100)
 
 The old “r99 unpinned / six fixtures” sentences in this file describe the r99 pass, not current coverage. On this pass `python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse` printed `FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1`, `DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`, `RESULT PASS`, exit 0. The other six named pins also passed, for 7/7. This discharges the r99 coverage bound without changing the table's semantic limits; no claim is made that r100 is pinned.
+
+## Dated addendum (2026-10-18, round-101 closure, AC-2)
+
+Row 2 ("wrong-but-earlier dependency edge") is closed by the delivered
+gate: a `depends_on` repointed to a different valid earlier event now
+produces BOTH `REDUCTION-DETECTED` and `ADDITION-DETECTED` in one run,
+exit 1 — pinned as the persisted self-test case `repointed_edge` (contract
+19 cases; replayed by seats V03/V05/V20 and the r101 adjudicator). Prior
+rows unmodified; this record was appended by the closure integrator
+because the table was outside r101 producer byte-ownership.

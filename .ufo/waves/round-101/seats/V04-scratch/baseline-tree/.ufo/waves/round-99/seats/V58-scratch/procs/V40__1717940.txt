@@ -1,0 +1,29 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch
+SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats
+LOG="$SCR/poll.log"
+KN=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge
+ROOT=/home/vgpnk/Projects/shokunin/lore-shokunin
+for i in 7 8 9 10 11 12 13 14; do
+  sleep 20
+  echo "TRY $i $(date -Is)" | tee -a "$LOG"
+  echo "--- S reports ---" | tee -a "$LOG"
+  ls -la --time-style=full-iso "$SEATS"/S*.md 2>&1 | tee -a "$LOG"
+  echo "--- knowledge ---" | tee -a "$LOG"
+  ls -la --time-style=full-iso "$KN"/r99* 2>&1 | tee -a "$LOG"
+  echo "--- V20 ---" | tee -a "$LOG"
+  ls -la --time-style=full-iso "$SEATS"/V20*.md 2>&1 | tee -a "$LOG"
+  echo "--- tools mtimes ---" | tee -a "$LOG"
+  stat -c '%y %n' "$ROOT/corpus/tools/dependency_freeze.py" "$ROOT/corpus/tools/dependency-freeze-contract.json" "$ROOT/corpus/tools/README.md" "$ROOT/SKILL.md" | tee -a "$LOG"
+  echo "--- fixture docs mtimes ---" | tee -a "$LOG"
+  stat -c '%y %n' "$ROOT/corpus/fixtures/r99-window-lapse/README.md" "$ROOT/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md" | tee -a "$LOG"
+  n=$(ls "$SEATS"/S*.md 2>/dev/null | wc -l)
+  k=$(ls "$KN"/r99*.md 2>/dev/null | wc -l)
+  echo "COUNTS s_reports=$n knowledge=$k" | tee -a "$LOG"
+  if [ "$n" -ge 5 ] && [ "$k" -ge 2 ]; then
+    echo "POLL_HIT producers+knowledge at try $i $(date -Is)" | tee -a "$LOG"
+    break
+  fi
+done
+echo "POLL_LOOP2_DONE $(date -Is)" | tee -a "$LOG"

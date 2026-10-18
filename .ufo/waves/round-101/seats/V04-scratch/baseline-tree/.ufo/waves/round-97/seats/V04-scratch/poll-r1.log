@@ -1,0 +1,25 @@
+POLL_CHECK try=1 t=20s report=none tool=yes
+POLL_CHECK try=2 t=40s report=none tool=yes
+POLL_CHECK try=3 t=60s report=none tool=yes
+POLL_CHECK try=4 t=80s report=none tool=yes
+POLL_CHECK try=5 t=100s report=none tool=yes
+POLL_CHECK try=6 t=120s report=none tool=yes
+POLL_CHECK try=7 t=140s report=none tool=yes
+POLL_CHECK try=8 t=160s report=none tool=yes
+POLL_CHECK try=9 t=180s report=none tool=yes
+POLL_CHECK try=10 t=200s report=none tool=yes
+POLL_CHECK try=11 t=220s report=none tool=yes
+POLL_CHECK try=12 t=240s report=none tool=yes
+POLL_CHECK try=13 t=260s report=none tool=yes
+POLL_CHECK try=14 t=280s report=none tool=yes
+POLL_CHECK try=15 t=300s report=none tool=yes
+POLL_CHECK try=16 t=320s report=none tool=yes
+POLL_CHECK try=17 t=340s report=none tool=yes
+POLL_CHECK try=18 t=360s report=none tool=yes
+POLL_CHECK try=19 t=380s report=none tool=yes
+POLL_HIT try=20 report=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/R1-map-pinning.md
+STAB_CHECK i=1 sha=275c2e35b47fc32131be9d5c75c72cc2d353e3eb86169329f14bed185335097c stable=0
+STAB_CHECK i=2 sha=275c2e35b47fc32131be9d5c75c72cc2d353e3eb86169329f14bed185335097c stable=1
+STAB_CHECK i=3 sha=275c2e35b47fc32131be9d5c75c72cc2d353e3eb86169329f14bed185335097c stable=2
+STAB_CHECK i=4 sha=275c2e35b47fc32131be9d5c75c72cc2d353e3eb86169329f14bed185335097c stable=3
+POLL_STABLE sha=275c2e35b47fc32131be9d5c75c72cc2d353e3eb86169329f14bed185335097c

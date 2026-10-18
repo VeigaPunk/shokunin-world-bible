@@ -1,0 +1,233 @@
+{
+  "seat_id": "R2",
+  "mission": "Evidence discipline audit of C2/C3 artifacts",
+  "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+  "axes": [
+    "row and claim traceability",
+    "clean-archive replayability",
+    "integration-path consistency"
+  ],
+  "live_inventory": {
+    "command": "python3 -c 'from pathlib import Path; r=Path(\".ufo/waves/round-87\"); ids=(\"D1\",\"D2\",\"T1\",\"T2\",\"M1\",\"M2\",\"M3\",\"M4\"); print(\"REPORTS=\"+\",\".join(i+\":\"+(\"present\" if (r/(i+\".md\")).is_file() else \"absent\") for i in ids)); print(\"C2_DESTINATIONS=\"+\",\".join(str(p)+\":\"+(\"present\" if p.exists() else \"absent\") for p in (Path(\"corpus/knowledge/provenance-chain-decision-table.md\"),Path(\"corpus/knowledge/r87-provenance-chain-decision-table.md\")))); print(\"C3_FIXTURE=\"+(\"present\" if Path(\"corpus/fixtures/r87-myth-cluster\").is_dir() else \"absent\")); print(\"R2_OUTPUTS=\"+\",\".join(str(p)+\":\"+(\"present\" if p.exists() else \"absent\") for p in (r/\"R2.md\",r/\"patches/R2-evidence-audit.json\")))'",
+    "observed": [
+      "REPORTS=D1:present,D2:present,T1:present,T2:present,M1:present,M2:present,M3:present,M4:present",
+      "C2_DESTINATIONS=corpus/knowledge/provenance-chain-decision-table.md:absent,corpus/knowledge/r87-provenance-chain-decision-table.md:absent",
+      "C3_FIXTURE=absent",
+      "R2_OUTPUTS=.ufo/waves/round-87/R2.md:absent,.ufo/waves/round-87/patches/R2-evidence-audit.json:absent"
+    ]
+  },
+  "C2": {
+    "D1": {
+      "report": ".ufo/waves/round-87/D1.md",
+      "draft": ".ufo/waves/round-87/patches/D1-decision-table.md",
+      "draft_sha256": "64d83525b5a5ab08b53ca88032dc91321d3a31ed76cadd6d2326962a190840ae",
+      "table_data_rows": 23,
+      "unique_replay_commands": 25,
+      "clean_archive_availability": {
+        "command": "python3 -c 'import pathlib,re,shlex; base=pathlib.Path(\"/tmp/r87-R2.qNs3rA\"); d1=pathlib.Path(\".ufo/waves/round-87/patches/D1-decision-table.md\").read_text(); d2=pathlib.Path(\".ufo/waves/round-87/patches/D2-decision-table.md\").read_text(); r1=[x for x in d1.splitlines() if x.startswith(\"|\") and not x.startswith(\"|---\") and not x.startswith(\"| condition\")]; c1=list(dict.fromkeys(re.findall(r\"`(python3 corpus/fixtures/check_bible.py corpus/[^`]+)`\",d1))); c2=re.findall(r\"Replay: `([^`]+)`\\s*```text\\n(.*?)\\n\\s*```\",d2,re.S); a1=sum((base/shlex.split(x)[-1]).exists() for x in c1); a2=sum((base/shlex.split(x[0])[-1]).exists() for x in c2); print(f\"D1_ROWS={len(r1)} D1_UNIQUE_COMMANDS={len(c1)} D1_AVAILABLE={a1} D1_MISSING={len(c1)-a1}\"); print(f\"D2_REPLAY_BLOCKS={len(c2)} D2_AVAILABLE={a2} D2_MISSING={len(c2)-a2}\")'",
+        "observed": "D1_ROWS=23 D1_UNIQUE_COMMANDS=25 D1_AVAILABLE=2 D1_MISSING=23"
+      },
+      "row_evidence_review": {
+        "status": "commands_and_pasted_outputs_present",
+        "evidence": ".ufo/waves/round-87/patches/D1-decision-table.md:12-36",
+        "scratch_only_inputs": ".ufo/waves/round-87/patches/D1-decision-table.md:5-10",
+        "author_reported_replay": ".ufo/waves/round-87/D1.md:23-24",
+        "verified_available_controls": [
+          {
+            "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/item-chain-valid",
+            "observed": "CLEAN: schema, citations, relations, timeline; 0 violations",
+            "exit_code": 0
+          },
+          {
+            "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/item-chain-broken",
+            "observed": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'\n1 violation(s); no canon changed",
+            "exit_code": 1
+          }
+        ]
+      },
+      "assertion_only_or_unobservable_claims": [
+        {
+          "location": ".ufo/waves/round-87/patches/D1-decision-table.md:35",
+          "claim": "A later deliberately broken record exists and is suppressed after an earlier invalid tick.",
+          "reason": "The command's probe input is not delivered; pasted stdout contains only the tick finding and does not itself show a later record was present."
+        },
+        {
+          "location": ".ufo/waves/round-87/patches/D1-decision-table.md:22-24",
+          "claim": "Malformed record/key-set and invalid tick cases latch later chain comparison off.",
+          "reason": "The probes are scratch-only and the pasted outputs show only the local schema/tick error, not a downstream record whose comparison was suppressed."
+        }
+      ],
+      "target_path_proposal": "corpus/knowledge/provenance-chain-decision-table.md"
+    },
+    "D2": {
+      "report": ".ufo/waves/round-87/D2.md",
+      "audit_report": ".ufo/waves/round-87/T2.md",
+      "draft": ".ufo/waves/round-87/patches/D2-decision-table.md",
+      "draft_sha256": "138450a4caa519044124282a577af70d1f6c1fb1681afae710fe9cdb7dc84788",
+      "replay_blocks": 30,
+      "clean_archive_availability": {
+        "observed": "D2_REPLAY_BLOCKS=30 D2_AVAILABLE=4 D2_MISSING=26"
+      },
+      "author_and_second_reviewer_receipts": {
+        "D2_report": ".ufo/waves/round-87/D2.md:11-28",
+        "T2_report": ".ufo/waves/round-87/T2.md:5-7,11-20",
+        "T2_json": ".ufo/waves/round-87/patches/T2-d2-audit.json:8-11",
+        "T2_observed_summary": "REPLAYS: 30/30 exact stdout and empty stderr; exit0=2, exit1=28, other=0",
+        "limitation": "T2 reconstructed inputs matched output but did not establish byte identity with D2's original temporary probes."
+      },
+      "verified_available_replays": [
+        {
+          "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/consistent",
+          "observed": "CLEAN: schema, citations, relations, timeline; 0 violations",
+          "exit_code": 0,
+          "matches_table": true
+        },
+        {
+          "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/item-chain-broken",
+          "observed": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'\n1 violation(s); no canon changed",
+          "exit_code": 1,
+          "matches_table": true
+        },
+        {
+          "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-unique-break-control",
+          "observed": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'\n1 violation(s); no canon changed",
+          "exit_code": 1,
+          "matches_table": true
+        },
+        {
+          "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+          "observed": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed",
+          "exit_code": 1,
+          "matches_table": true
+        }
+      ],
+      "assertion_only_or_unobservable_claims": [
+        {
+          "location": ".ufo/waves/round-87/patches/D2-decision-table.md:207-213",
+          "claim": "The unknown-source record is followed by a deliberately bad tick and broken holder chain whose comparisons are suppressed.",
+          "reason": "The probe input is temporary and absent; the pasted stdout contains only the unknown-source finding and cannot establish the hidden tail."
+        }
+      ],
+      "refinements": [
+        {
+          "location": ".ufo/waves/round-87/patches/D2-decision-table.md:128",
+          "finding": "Qualify 'the chain remains assessable' to say ambiguous source status alone does not invalidate an otherwise-valid record while the comparison gate remains open.",
+          "review_evidence": ".ufo/waves/round-87/T2.md:27; .ufo/waves/round-87/patches/T2-d2-audit.json:69-73"
+        },
+        {
+          "location": ".ufo/waves/round-87/D2.md:38; .ufo/waves/round-87/T2.md:32",
+          "finding": "D2 report and T2 audit propose different destination names; D1 and T2 converge on corpus/knowledge/provenance-chain-decision-table.md."
+        },
+        {
+          "location": ".ufo/waves/round-87/T2.md:26; .ufo/waves/round-87/patches/T2-d2-audit.json:45-51",
+          "finding": "Add item-chain-valid as the clean nonempty provenance-chain positive control."
+        }
+      ],
+      "target_path_proposal_in_D2_report": "corpus/knowledge/r87-provenance-chain-decision-table.md",
+      "target_path_proposal_in_T2_report": "corpus/knowledge/provenance-chain-decision-table.md"
+    },
+    "C1_snapshot_refresh": {
+      "baseline_command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "baseline_cwd": "/tmp/r87-R2.qNs3rA",
+      "baseline_exit_code": 1,
+      "baseline_observed": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed",
+      "after_candidate_patch": "X3-c1-min.patch",
+      "after_command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "after_cwd": "/tmp/r87-R2-M3.CdWxEJ",
+      "after_exit_code": 1,
+      "after_observed": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed because holder identity was ambiguous earlier\n4 violation(s); no canon changed"
+    }
+  },
+  "C3": {
+    "candidate_patches": [
+      {
+        "seat": "M1",
+        "patch": ".ufo/waves/round-87/patches/M1-myth-cluster.patch",
+        "report": ".ufo/waves/round-87/M1.md",
+        "scratch_cwd": "/tmp/r87-R2-M1.Jp4HBa",
+        "replay_command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster",
+        "exit_code": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+        "counts_command": "python3 /tmp/r87-R2.qNs3rA/audit_c3_counts.py",
+        "counts_observed": "entities=5 factions=2 relations=4 reciprocal_alliance=True events=2 dependency_edges=1 clause_map=True sourced_inspiration=True distinct_questions=True",
+        "claim_pointers": [
+          ".ufo/waves/round-87/patches/M1-myth-cluster.patch:25-96",
+          ".ufo/waves/round-87/patches/M1-myth-cluster.patch:97-128",
+          ".ufo/waves/round-87/patches/M1-myth-cluster.patch:129-143",
+          ".ufo/waves/round-87/patches/M1-myth-cluster.patch:254-267",
+          ".ufo/waves/round-87/patches/M1-myth-cluster.patch:268-295",
+          ".ufo/waves/round-87/M1.md:22-52"
+        ]
+      },
+      {
+        "seat": "M2",
+        "patch": ".ufo/waves/round-87/patches/M2-myth-cluster.patch",
+        "report": ".ufo/waves/round-87/M2.md",
+        "scratch_cwd": "/tmp/r87-R2-M2.fixj9V",
+        "replay_command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster",
+        "exit_code": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+        "counts_command": "python3 /tmp/r87-R2.qNs3rA/audit_c3_counts.py",
+        "counts_observed": "entities=7 factions=2 relations=3 reciprocal_alliance=True events=4 dependency_edges=4 clause_map=True sourced_inspiration=True distinct_questions=True",
+        "claim_pointers": [
+          ".ufo/waves/round-87/patches/M2-myth-cluster.patch:8-99",
+          ".ufo/waves/round-87/patches/M2-myth-cluster.patch:100-125",
+          ".ufo/waves/round-87/patches/M2-myth-cluster.patch:209-223",
+          ".ufo/waves/round-87/patches/M2-myth-cluster.patch:224-242",
+          ".ufo/waves/round-87/patches/M2-myth-cluster.patch:158-208",
+          ".ufo/waves/round-87/M2.md:29-86"
+        ],
+        "caveat": "M2's symbolism map explicitly maps a newly written editorial line rather than a source or an item claim."
+      },
+      {
+        "seat": "M3",
+        "patch": ".ufo/waves/round-87/patches/M3-myth-cluster.patch",
+        "report": ".ufo/waves/round-87/M3.md",
+        "scratch_cwd": "/tmp/r87-R2-M3.CdWxEJ",
+        "replay_command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster",
+        "exit_code": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations",
+        "counts_command": "python3 /tmp/r87-R2.qNs3rA/audit_c3_counts.py",
+        "counts_observed": "entities=7 factions=2 relations=4 reciprocal_alliance=True events=4 dependency_edges=3 clause_map=True sourced_inspiration=True distinct_questions=True",
+        "claim_pointers": [
+          ".ufo/waves/round-87/patches/M3-myth-cluster.patch:40-131",
+          ".ufo/waves/round-87/patches/M3-myth-cluster.patch:170-201",
+          ".ufo/waves/round-87/patches/M3-myth-cluster.patch:132-156",
+          ".ufo/waves/round-87/patches/M3-myth-cluster.patch:240-260",
+          ".ufo/waves/round-87/patches/M3-myth-cluster.patch:261-310",
+          ".ufo/waves/round-87/M3.md:16-35"
+        ],
+        "extra": "M3 also supplies an unresolved, two-source place contradiction with a README limitation statement (M3-myth-cluster.patch:20-39)."
+      }
+    ],
+    "collision": "All three alternatives add files under corpus/fixtures/r87-myth-cluster/; do not apply more than one.",
+    "M4_recommendation": ".ufo/waves/round-87/M4.md:73-80 recommends M3 only.",
+    "M4_command_path_finding": {
+      "report_lines": ".ufo/waves/round-87/M4.md:20-35,45-49",
+      "finding": "Patch-application scratch path is /tmp/r87-M4-final/$m but the structural-count command reads /tmp/r87-M4-review/$m. R2's own structural scan on its applied candidates confirms the counts."
+    },
+    "assertion_only_cluster_claims": []
+  },
+  "handoff": {
+    "C2": "Create one corpus/knowledge/provenance-chain-decision-table.md by consolidating D1 and D2; retain commands/outputs, add a durable probe recipe, clean-chain control, precise source-ambiguity wording, and C1 after-state disclosures.",
+    "C3": {
+      "recommended_patch": ".ufo/waves/round-87/patches/M3-myth-cluster.patch",
+      "files": [
+        "corpus/fixtures/r87-myth-cluster/README.md",
+        "corpus/fixtures/r87-myth-cluster/contradictions.json",
+        "corpus/fixtures/r87-myth-cluster/entities.json",
+        "corpus/fixtures/r87-myth-cluster/inspiration-note.md",
+        "corpus/fixtures/r87-myth-cluster/lowwater-hymn-excerpt.md",
+        "corpus/fixtures/r87-myth-cluster/relations.json",
+        "corpus/fixtures/r87-myth-cluster/sources.json",
+        "corpus/fixtures/r87-myth-cluster/symbolism-clause-map.md",
+        "corpus/fixtures/r87-myth-cluster/timeline.json"
+      ]
+    },
+    "R2_files": [
+      ".ufo/waves/round-87/R2.md",
+      ".ufo/waves/round-87/patches/R2-evidence-audit.json"
+    ],
+    "no_tracked_source_changes": true
+  }
+}

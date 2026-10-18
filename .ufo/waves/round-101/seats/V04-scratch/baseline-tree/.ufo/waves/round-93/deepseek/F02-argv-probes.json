@@ -1,0 +1,183 @@
+{
+ "cases": [
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "corpus/fixtures/r5-missing-file"
+   ],
+   "exit": 1,
+   "label": "r5_rel",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+   "stdout_len": 174,
+   "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+   "violations": 1
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "./corpus/fixtures/r5-missing-file"
+   ],
+   "exit": 1,
+   "label": "r5_dotrel",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+   "stdout_len": 174,
+   "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+   "violations": 1
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r5-missing-file"
+   ],
+   "exit": 1,
+   "label": "r5_abspath",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+   "stdout_len": 218,
+   "stdout_sha256": "7a81d5020245c2e6c95b53b8ef6a1ed41e96ea9da638cd57d3226c673a18026b",
+   "violations": 1
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "corpus/fixtures/r5-missing-file/"
+   ],
+   "exit": 1,
+   "label": "r5_trailslash",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+   "stdout_len": 174,
+   "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+   "violations": 1
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "corpus/fixtures/../fixtures/r5-missing-file"
+   ],
+   "exit": 1,
+   "label": "r5_dotdot",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/../fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+   "stdout_len": 186,
+   "stdout_sha256": "473d78006d1aaf11fc2bed1fd1896ee666544764f86c5151857175a0e3ca77b4",
+   "violations": 1
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "corpus/fixtures/F02-no-such-dir"
+   ],
+   "exit": 1,
+   "label": "missing_dir_rel",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/F02-no-such-dir/sources.json'\nVIOLATION: entities.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/F02-no-such-dir/entities.json'\nVIOLATION: relations.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/F02-no-such-dir/relations.json'\nVIOLATION: timeline.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/F02-no-such-dir/timeline.json'\nVIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/F02-no-such-dir/contradictions.json'\n5 violation(s); no canon changed\n",
+   "stdout_len": 690,
+   "stdout_sha256": "deae447850e1cebec7e44d2c501efcdf77b0f3c4923d1a09eb0d4e1279af8411",
+   "violations": 5
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/F02-no-such-dir"
+   ],
+   "exit": 1,
+   "label": "missing_dir_abs",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/F02-no-such-dir/sources.json'\nVIOLATION: entities.json: cannot load JSON: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/F02-no-such-dir/entities.json'\nVIOLATION: relations.json: cannot load JSON: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/F02-no-such-dir/relations.json'\nVIOLATION: timeline.json: cannot load JSON: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/F02-no-such-dir/timeline.json'\nVIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/F02-no-such-dir/contradictions.json'\n5 violation(s); no canon changed\n",
+   "stdout_len": 910,
+   "stdout_sha256": "8345212918647d49b1e75e7db30982d7c83e32c08dddd8967f9bdab5e9a666e7",
+   "violations": 5
+  },
+  {
+   "argv": [
+    "python3",
+    "corpus/fixtures/check_bible.py",
+    "corpus/fixtures/r5-missing-file"
+   ],
+   "exit": 1,
+   "label": "r5_hashseed_random_no_I",
+   "stderr_head": [],
+   "stderr_len": 0,
+   "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+   "stdout_len": 174,
+   "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755",
+   "violations": 1
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py"
+   ],
+   "exit": 2,
+   "label": "argparse_noarg",
+   "stderr_head": [
+    "usage: check_bible.py [-h] bible"
+   ],
+   "stderr_len": 100,
+   "stdout": "",
+   "stdout_len": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "violations": 0
+  },
+  {
+   "argv": [
+    "python3",
+    "-I",
+    "corpus/fixtures/check_bible.py",
+    "corpus/fixtures/r5-missing-file",
+    "extra"
+   ],
+   "exit": 2,
+   "label": "argparse_twoargs",
+   "stderr_head": [
+    "usage: check_bible.py [-h] bible"
+   ],
+   "stderr_len": 86,
+   "stdout": "",
+   "stdout_len": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "violations": 0
+  }
+ ],
+ "checks": {
+  "argparse_noarg_exit2": true,
+  "argparse_twoargs_exit2": true,
+  "missing_dir_5_violations": true,
+  "missing_dir_abs_prefix_transform": true,
+  "missing_dir_exit1": true,
+  "missing_dir_section_order": true,
+  "r5_abs_prefix_transform": true,
+  "r5_behavior_identity_all": true,
+  "r5_dotdot_prefix_transform": true,
+  "r5_dotrel_byte_equal_rel": true,
+  "r5_hashseed_random_byte_equal_rel": true,
+  "r5_trailslash_byte_equal_rel": true
+ },
+ "head": "4780cf088ab338f42b85739517aa237c968c4aea",
+ "note": "absolute paths redacted in report only where identical in evidence file"
+}

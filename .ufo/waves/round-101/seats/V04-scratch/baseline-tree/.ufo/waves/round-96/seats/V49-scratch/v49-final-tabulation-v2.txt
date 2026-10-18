@@ -1,0 +1,11 @@
+# V49 final tabulation @ 2026-10-17T17:48:58-03:00
+dependency_freeze sha256: a3b57978f0cbf314389ee3f9862920a46cf109fca6d1eec488c39be0457f0980
+map_obligations sha256:   2b0ba815326b1cb3f65f7eab1842b85abedb9823228a37adc6a9335edc4a3ba8
+mutated timeline sha256:  dd66ded2d8f690cb3884389ccacde059f2bf9c174907e3c718648027c84ba7fd
+
+## BR-01 mutated copy
+check_bible exit=0 :: CLEAN: schema, citations, relations, timeline; 0 violations
+support_check exit=0 :: RESULT PASS
+map_obligations exit=0 :: OBLIGATIONS raw=14 mapped=14 INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16 RESULT PASS 
+dependency_freeze exit=1 :: FREEZE r94-paired-crossing: events 3/3; dependency-edges 1/2; relations 1/1 FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell'] RESULT FAIL 
+boundary_doc_check exit=0 :: CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)

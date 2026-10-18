@@ -1,0 +1,54 @@
+diff --git c/corpus/tools/dependency_freeze.py w/corpus/tools/dependency_freeze.py
+index 001ad47..6c0d9e0 100644
+--- c/corpus/tools/dependency_freeze.py
++++ w/corpus/tools/dependency_freeze.py
+@@ -15,11 +15,18 @@ Round-97 hardening: `--freeze` is scope-guarded to `corpus/fixtures/**`
+ verification refuses every other path (`PATH-MISMATCH`) so a same-named copy at
+ a foreign path can no longer produce a green receipt, and `DIGEST-MISMATCH`
+ names the changed file.
++
++Round-98 hardening: `SELF-TEST-MISMATCH` exits 2 (the could-not-evaluate class,
++matching `map_obligations.py`) and is pinned as self-test case
++`self_test_mismatch` (16 -> 17 cases); `--freeze` migrates a path-less legacy
++pin in place (the same-named-elsewhere refusal stays); the contract's
++`precedence` text names the full exit-2 check order and finding IDs.
+ """
+ 
+ import argparse
+ import hashlib
+ import json
++import os
+ import re
+ import shutil
+ import subprocess
+@@ -54,8 +61,10 @@ FROZEN_CASES = (
+     "invalid_arguments",
+     "scope_refused",
+     "path_mismatch",
++    "self_test_mismatch",
+ )
+ SELF_TEST_BASE = "r95-crossing-aftermath"
++SELF_TEST_CHILD_ENV = "DEPENDENCY_FREEZE_SELF_TEST_CHILD"
+ 
+ 
+ class ToolError(Exception):
+@@ -356,10 +365,15 @@ def freeze(target, contract):
+     fixture_label = str(label) if label is not None else str(resolved)
+     name = resolved.name
+     existing = contract["pins"].get(name)
+-    if isinstance(existing, dict) and existing.get("fixture") != fixture_label:
+-        fail("SCOPE-REFUSED",
+-             f"--freeze refuses {fixture_label}: pin {name} already names {existing.get('fixture')!r}; "
+-             "freezing a same-named path elsewhere would rewrite the delivered pin")
++    if isinstance(existing, dict):
++        recorded = existing.get("fixture")
++        if isinstance(recorded, str) and recorded:
++            if recorded != fixture_label:
++                fail("SCOPE-REFUSED",
++                     f"--freeze refuses {fixture_label}: pin {name} already names {recorded!r}; "
++                     "freezing a same-named path elsewhere would rewrite the delivered pin")
++        else:
++            print(f"MIGRATED {name}: path-less legacy pin now names {fixture_label}")
+     revision = "unversioned"
+     try:
+         result = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True)

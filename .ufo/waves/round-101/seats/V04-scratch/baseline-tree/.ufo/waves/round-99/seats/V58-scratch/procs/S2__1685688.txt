@@ -1,0 +1,41 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && set -u
+SEATS="/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats"
+README="/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md"
+SKILL="/home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md"
+LOG="/tmp/v102-poll.log"
+: > "$LOG"
+echo "poll-start $(date -Is)" | tee -a "$LOG"
+for i in $(seq 1 40); do
+  echo "=== try $i $(date -Is) ===" | tee -a "$LOG"
+  echo "-- seats md --" | tee -a "$LOG"
+  ls -1 "$SEATS"/*.md 2>/dev/null | tee -a "$LOG" || true
+  echo "-- S2 candidates --" | tee -a "$LOG"
+  ls -la "$SEATS"/S2* 2>/dev/null | tee -a "$LOG" || echo "NO-S2" | tee -a "$LOG"
+  echo "-- README r99 marker --" | tee -a "$LOG"
+  if grep -n -E 'Round-99|round 99|r99' "$README" >/dev/null 2>&1; then
+    echo "README-R99-PRESENT" | tee -a "$LOG"
+    grep -n -E 'Round-99|round 99|r99' "$README" | head -20 | tee -a "$LOG"
+  else
+    echo "README-R99-ABSENT" | tee -a "$LOG"
+  fi
+  echo "-- SKILL freeze row head --" | tee -a "$LOG"
+  # show whether skill still says 17 cases
+  awk 'BEGIN{p=0} /^### Dependency-edge freeze check/{p=1} p&&/^### /&&!/Dependency-edge/{exit} p{print NR":"$0}' "$SKILL" | tee -a "$LOG"
+  # readiness: any S2 report file that is non-empty AND README mentions r99
+  s2_ok=0
+  for f in "$SEATS"/S2*.md; do
+    if [ -f "$f" ] && [ -s "$f" ]; then s2_ok=1; echo "S2-REPORT-READY $f bytes=$(wc -c < "$f")" | tee -a "$LOG"; fi
+  done
+  readme_ok=0
+  if grep -q -E 'Round-99|round 99' "$README" 2>/dev/null; then readme_ok=1; fi
+  if [ "$s2_ok" = 1 ] && [ "$readme_ok" = 1 ]; then
+    echo "READY try=$i" | tee -a "$LOG"
+    exit 0
+  fi
+  if [ "$i" -lt 40 ]; then sleep 20; fi
+done
+echo "NOT-READY after 40" | tee -a "$LOG"
+exit 2
+

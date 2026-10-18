@@ -1,0 +1,29 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && {
+  echo "poll-start $(date +%Y-%m-%dT%H:%M:%S%z)"
+  for i in $(seq 1 40); do
+    ts=$(date +%Y-%m-%dT%H:%M:%S%z)
+    reports=$(ls /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S*.md 2>/dev/null | xargs -n1 basename 2>/dev/null | tr '\n' ',' )
+    cstat=$(stat -c '%y %s' /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json)
+    tstat=$(stat -c '%y %s' /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py)
+    markers=$(rg -c "payload_schema_version|markdown_tamper|pinned_files" /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json || true)
+    echo "try=$i ts=$ts reports=${reports:-NONE} contract=[$cstat] tool=[$tstat] markers=${markers:-0}"
+    if [ -f /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1-full-file-pinning.md ] || [ -f /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1-freeze-hygiene.md ] || ls /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md >/dev/null 2>&1; then
+      if [ "${markers:-0}" != "0" ]; then
+        echo "READY try=$i"
+        break
+      fi
+    fi
+    # also ready if contract itself gained the markers even without report
+    if [ "${markers:-0}" != "0" ] && ls /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md >/dev/null 2>&1; then
+      echo "READY-BOTH try=$i"
+      break
+    fi
+    sleep 20
+  done
+  echo "poll-end $(date +%Y-%m-%dT%H:%M:%S%z)"
+  echo "=== final listing ==="
+  ls -la /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S*.md 2>/dev/null || echo NO-S-REPORTS
+} | tee /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V79-scratch/poll.log
+

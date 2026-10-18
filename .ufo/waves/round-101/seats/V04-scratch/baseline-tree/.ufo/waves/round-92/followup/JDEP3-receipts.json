@@ -1,0 +1,110 @@
+{
+  "seat": "JDEP3",
+  "round": 92,
+  "kind": "follow-up edge-decision verification",
+  "tree": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+  "baseline": "396c568",
+  "date": "2026-10-17",
+  "hashes": {
+    "check_bible.py": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "support_check.py_blob_at_head": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+    "table_r92_diff_hunks": 1
+  },
+  "dependency_checks": [
+    "check-01 2026-10-17T10:26:22-03:00 followup_dir=yes head=c4d4823",
+    "check-02 2026-10-17T10:27:22-03:00 followup_dir=yes head=c4d4823 E1=yes E2=yes E1edges=yes T1cert=yes"
+  ],
+  "r8_chain": {
+    "hops_found": 8,
+    "hops": [
+      ".ufo/waves/round-89/followup/JDEP2.md (seven-stair-descent)",
+      ".ufo/waves/round-89/followup/JDEP2-probes.json (seven thresholds)",
+      ".ufo/waves/round-90/followup/JDEP2.md (seven threshold names)",
+      ".ufo/waves/round-90/followup/JDEP2-probes.json (seven threshold names)",
+      ".ufo/waves/round-91/patches/D1-edges.patch (Kesh Hymn)",
+      ".ufo/waves/round-91/patches/E2-wording.md (Kesh Hymn)",
+      ".ufo/waves/round-92/patches/E1-edges.md (Kesh Hymn)",
+      ".ufo/waves/round-92/patches/E2-wording.md (Kesh Hymn)"
+    ],
+    "delivered_table": "ABSENT (Kesh=0, seven=0; same at 396c568)"
+  },
+  "r8_delivered": {
+    "paragraph_len_delivered": 1677,
+    "paragraph_len_patch": 1632,
+    "equal_raw": false,
+    "equal_after_removing_one_duplicated_opener": true,
+    "opener_count_delivered": 2,
+    "opener_count_patch": 1,
+    "e1_equals_e2_r8_block": true,
+    "clause_coverage_normalized": "10/10",
+    "case_probe": {
+      "path": "/tmp/jdep3-r8/seven-threshold (swept)",
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 corpus/fixtures/check_bible.py /tmp/jdep3-r8/seven-threshold",
+      "observed": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "exit": 0,
+      "note": "editorially held case passes the delivered checker by design (:117 governance rows, not checker changes)"
+    }
+  },
+  "r9": {
+    "paragraphs_byte_equal_vs_E1": {
+      "manual_gate": {"delivered": 1345, "patch": 1345, "equal": true},
+      "required_record": {"delivered": 546, "patch": 546, "equal": true},
+      "receipt_boundary": {"delivered": 651, "patch": 651, "equal": true},
+      "worked_example_new": {"delivered": 884, "patch": 884, "equal": true}
+    },
+    "required_record_fields": [
+      "claim pointer",
+      "excerpt path and span",
+      "delivered printing/edition and year plus stable identifier or copy locator",
+      "translator",
+      "source work and source-text/version field (explicit unknown status)",
+      "evidence citation and inspection method",
+      "reviewer name/role and review date",
+      "disposition PASS/FAIL/OPEN",
+      "exact claim scope permitted"
+    ],
+    "placement_indices": {
+      "R8_appendix": 16733,
+      "r8_failed_gate": 17599,
+      "r9_manual_gate": 19278,
+      "r9_required_record": 20625,
+      "r9_receipt_boundary": 21173,
+      "R9_appendix": 22712,
+      "R10_appendix": 26285
+    },
+    "r9_block_inside": "R8 appendix region (before ### R9 appendix heading)",
+    "r9_appendix_segment_hash_pre_and_delivered": "effe405e92c7895b",
+    "r9_appendix_worked_example_replaced": false,
+    "r9_row_mandated_append_present": false,
+    "t1_scan_replayed": {"score": "2/4", "r9_checks": false, "reason": "T1 scan reads the R9 appendix region; delivered r9 text sits in the R8 region"},
+    "translation_probe": {
+      "path": "/tmp/jdep3-r9/translation-probe (swept)",
+      "checker": {"cmd": "PYTHONDONTWRITEBYTECODE=1 python3 corpus/fixtures/check_bible.py /tmp/jdep3-r9/translation-probe", "observed": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0},
+      "support": {"cmd": "PYTHONDONTWRITEBYTECODE=1 python3 corpus/tools/support_check.py /tmp/jdep3-r9/translation-probe", "observed_summary": "SOURCE-SUPPORT 1/1; VALIDATED-ROWS 1/1; RESULT PASS (map status cell: 'scan + copy locator supplied; no manual review recorded')", "exit": 0}
+    },
+    "static_field_probe_on_delivered_tool": {"Source text/version": 0, "Delivered printing": 0, "translator": 0, "edition/year": 0, "catalogue": 0, "R9 manual review": 0, "reviewer": 0, "copy locator": 0},
+    "contract_probes_delivered_tool": {
+      "missing_inventory": {"stdout": "RESULT FAIL", "exit": 1},
+      "missing_map": {"stdout": "RESULT ERROR", "exit": 2},
+      "missing_cluster": {"stdout": "RESULT ERROR", "exit": 2},
+      "stale_doc": "corpus/tools/README.md:16-21 still describes the pre-fix deviations; file unchanged in r92"
+    }
+  },
+  "r10": {
+    "r10_appendix_seg_hash": {"c2ab3d0": "14ea47d3652171ef", "396c568": "14ea47d3652171ef", "c4d4823": "14ea47d3652171ef"},
+    "namespace_para_hash": {"c2ab3d0": "28b3ce4f2e7b4657", "396c568": "28b3ce4f2e7b4657", "c4d4823": "28b3ce4f2e7b4657"},
+    "register_present": false,
+    "register_file_found": 0,
+    "tracked_cross_cluster_file": "corpus/knowledge/r89-cross-cluster-contradiction.md (demo disclaimers intact)",
+    "landed_cluster_source_id_intersection": [],
+    "two_dir_checker_exit": 2,
+    "r92_corpus_knowledge_changes": ["holder-assessment-boundary.md", "r88-sourced-inspiration-decision-table.md", "r91-c9-watch.md"]
+  },
+  "debts": [
+    "D-JDEP3r92-1: R8 worked example (seven-threshold case) unlanded at c4d4823 (also absent at 396c568)",
+    "D-JDEP3r92-2: doubled R8 opener at :40 (independent receipt; JDEP4 D-JDEP4r92-2)",
+    "D-JDEP3r92-3: R9 r92 block mis-placed (R8 region), appendix worked-example replacement not applied, R9-row append missing",
+    "D-JDEP3r92-4: corpus/tools/README.md stale named-debt section vs delivered support command"
+  ],
+  "scratch_swept": true
+}

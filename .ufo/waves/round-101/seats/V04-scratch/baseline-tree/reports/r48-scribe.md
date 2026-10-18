@@ -1,0 +1,22 @@
+# Round 48 scribe — manual source/map/record audit
+
+Scope: the known stale Vela clause maps in r41 and r43. Line numbers below are fixture-local. “Before” means the active files as inspected for this round; “after” is the declared, proposed repair, not an executed edit. No objective bell fact is inferred.
+
+| Layer | Before (path:line; evidence) | Proposed after | Interpretation / limit |
+|---|---|---|---|
+| Control source | `corpus/fixtures/r40-vela-listener/vela-note-excerpt.md:1`: “heard two strokes I took to be the registry bell” | Unchanged | Tentative, Vela-attributed identification; control must remain byte-identical. |
+| Control map | `corpus/fixtures/r40-vela-listener/vela-clause-map.md:3,9-10`: quotes the tentative excerpt; labels strokes auditory and “I took to be” tentative | Unchanged | Accurate mapping of r40; no repair belongs here. |
+| Direct source | `corpus/fixtures/r41-vela-direct-bell/vela-note-excerpt.md:1`: “heard the registry bell strike twice” | Unchanged | Direct identification by Vela in her report, not independent proof of an objective ringing. |
+| r41 local map | `corpus/fixtures/r41-vela-direct-bell/vela-clause-map.md:1,3,9-10`: heading says r40; quotation and clause rows repeat “heard two strokes” / “I took to be” | Replace map's local quotation and rows with the unchanged direct source wording; identify strong Vela-attributed identification. Explicitly retain non-sighting/date and provenance limits. | Removes false local rendition; does not change excerpt, record, or source attribution. |
+| r41 record | `corpus/fixtures/r41-vela-direct-bell/entities.json:81`; `timeline.json:46`: both say Vela heard strokes she “took to be” the bell | Unchanged | Weaker summary remains logically compatible but under-specific relative to direct excerpt; not false/unsupported. Do not upgrade to objective fact. |
+| r41 strength note | `corpus/fixtures/r41-vela-direct-bell/strength-contrast-map.md:3,5` contrasts r40/r41 and calls fixed JSON under-specific | Unchanged | Already documents the difference but does not make the stale local clause map accurate. |
+| r43 direct source | `corpus/fixtures/r43-jorin-vela-sighting/vela-note-excerpt.md:1`: same direct wording as r41 | Unchanged | Vela's own attributed identification only. |
+| r43 local map | `corpus/fixtures/r43-jorin-vela-sighting/vela-clause-map.md:1,3,9-10`: same stale r40 heading, quotation, and tentative clauses | Same bounded correction as r41, separately in r43 | Required for the local map to describe the local excerpt; do not assume r41's repair changes r43. |
+| r43 record | `corpus/fixtures/r43-jorin-vela-sighting/entities.json:81`; `timeline.json:46`: unchanged tentative summary | Unchanged | Same compatible-but-under-specific relation; no shared Bell-7 occasion established. |
+| r43 strength note | `corpus/fixtures/r43-jorin-vela-sighting/strength-contrast-map.md:3,5` records the contrast | Unchanged | Existing disclosure is relevant but separate from the erroneous clause quotation. |
+
+## Decision criterion and risks
+
+**Go** only if the two local maps are corrected independently and a non-author reader confirms they no longer present r40's tentative wording as r41/r43 source text, while still distinguishing Vela's attributed direct identification from objective bell proof and the JSON's weaker compatible summary. **No-go** if either map remains stale, if the maps promote the report into objective bell fact, if JSON/source artifacts are changed, or if the only effect is redundant restatement without reducing local source-map misdirection. Exact falsifier: compare each repaired map's quoted excerpt and clause rows against its local `vela-note-excerpt.md`; any “I took to be” quotation attributed to either direct excerpt fails.
+
+Risks: this is a Markdown documentation correction, not new evidence or a checker/schema change. It does not establish a shared occasion, chronology, Sella/envelope presence or absence, corroboration, canon, rights, or permission. Correcting the active maps necessarily changes Markdown bytes: precisely two files (`r41.../vela-clause-map.md`, `r43.../vela-clause-map.md`) should differ; r40 map/excerpt remain the exact control, and r41/r43 JSON tables, source excerpts, strength maps, other fixture files, and historical reports remain unchanged. Therefore an inherited-byte identity claim covering *all* inherited Markdown would be false after repair. The r40 control and r41/r43 JSON/excerpts remain unchanged as required. No fixture/checker/README/LOG edits are within this scribe scope.

@@ -1,0 +1,599 @@
+{
+ "record_type": "round-101-receipt",
+ "round": 101,
+ "phase": "single-wave-30-seat",
+ "requested_model": "zai-coding-plan/glm-5.3-flash-low",
+ "dispatch_model_alias_declared": null,
+ "requested_effort": null,
+ "requested_seats": 30,
+ "dispatch_tool_call_id": "tool_NAp5zVfikIfF4sXgTVrnyXzo",
+ "returned_summary": "completed: 30",
+ "served_backend_echo": null,
+ "baseline_commit": "6f86bf26c26abfd76b7f489ad4a5bb447e7cbc5d",
+ "baseline_is_ancestor_of_head": true,
+ "head_at_snapshot": "ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026",
+ "receipt_snapshot_utc": "2026-10-18T03:45:03.094269+00:00",
+ "git_status_short": [
+  "M SKILL.md",
+  " M corpus/tools/README.md",
+  " M corpus/tools/dependency-freeze-contract.json",
+  " M corpus/tools/dependency_freeze.py",
+  "?? .scratch/",
+  "?? .ufo/waves/round-101/",
+  "?? .ufo/waves/round-98/seats/V58-scratch/original-run-resume-note.md",
+  "?? corpus/knowledge/r101-r10-register-first-entry.md"
+ ],
+ "candidate_revision_pinned": {
+  "corpus/tools/dependency_freeze.py": "60a78bc39440917202488e4f6366a26540aeb494a089e5793864c1a4992fe3bf",
+  "corpus/tools/dependency-freeze-contract.json": "b8fc63c3500d626df8d5c34b28327c10716610512a3c72ef56a19f3b46de36ca",
+  "corpus/tools/README.md": "6d17bf0792123dc538286b2f77ccb1c8277e13ffd291804c4766399060630297",
+  "SKILL.md": "040444511f10ac2781191171e4e3cd0dbef7b5c9b89011f51a3d08217969cd9f",
+  "corpus/knowledge/r101-r10-register-first-entry.md": "19d4b23de0d86a4eaae4d00de1a664b70bf9cabb697e4e7da8480ec8f7aa4dc3"
+ },
+ "candidate_revision_meta": {
+  "corpus/tools/dependency_freeze.py": {
+   "sha256": "60a78bc39440917202488e4f6366a26540aeb494a089e5793864c1a4992fe3bf",
+   "bytes": 30142,
+   "mtime_utc": "2026-10-18T03:07:59.867619+00:00"
+  },
+  "corpus/tools/dependency-freeze-contract.json": {
+   "sha256": "b8fc63c3500d626df8d5c34b28327c10716610512a3c72ef56a19f3b46de36ca",
+   "bytes": 34095,
+   "mtime_utc": "2026-10-18T03:08:32.243856+00:00"
+  },
+  "corpus/tools/README.md": {
+   "sha256": "6d17bf0792123dc538286b2f77ccb1c8277e13ffd291804c4766399060630297",
+   "bytes": 49402,
+   "mtime_utc": "2026-10-18T03:20:30.036362+00:00"
+  },
+  "SKILL.md": {
+   "sha256": "040444511f10ac2781191171e4e3cd0dbef7b5c9b89011f51a3d08217969cd9f",
+   "bytes": 18840,
+   "mtime_utc": "2026-10-18T03:20:06.766317+00:00"
+  },
+  "corpus/knowledge/r101-r10-register-first-entry.md": {
+   "sha256": "19d4b23de0d86a4eaae4d00de1a664b70bf9cabb697e4e7da8480ec8f7aa4dc3",
+   "bytes": 20823,
+   "mtime_utc": "2026-10-18T03:31:08.216542+00:00"
+  }
+ },
+ "missing_candidate_paths": [],
+ "fixture_files": [
+  "README.md",
+  "claim-excerpt-map.md",
+  "contradictions.json",
+  "entities.json",
+  "fictional-excerpts.md",
+  "inspiration-note.md",
+  "relations.json",
+  "source-excerpt.md",
+  "sources.json",
+  "timeline.json"
+ ],
+ "pin_inventory": {
+  "count": 8,
+  "names": [
+   "r100-docket-review",
+   "r88-m3-maya-cluster",
+   "r94-paired-crossing",
+   "r95-crossing-aftermath",
+   "r96-crossing-response",
+   "r97-crossing-acknowledgment",
+   "r98-clerk-filing",
+   "r99-window-lapse"
+  ],
+  "new_pins": [
+   "r100-docket-review"
+  ],
+  "removed_pins": [],
+  "inherited_changed": [],
+  "top_level_changed_fields": null,
+  "note": "computed from live contract at receipt time",
+  "top_level_revision": "ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026"
+ },
+ "protected_files": {
+  "PROVINCE.md": {
+   "sha256": "94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa",
+   "baseline_sha256": "94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa",
+   "same_as_baseline": true,
+   "bytes": 802
+  },
+  "SHONEN.md": {
+   "sha256": "03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1",
+   "baseline_sha256": "03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1",
+   "same_as_baseline": true,
+   "bytes": 1422
+  },
+  "README.md": {
+   "sha256": "ad4adb1e6cfbec41c83281aa7dfe1439d453ab5cb4290a9d8c25c1a1b06c2caf",
+   "baseline_sha256": "ad4adb1e6cfbec41c83281aa7dfe1439d453ab5cb4290a9d8c25c1a1b06c2caf",
+   "same_as_baseline": true,
+   "bytes": 1178
+  },
+  "l0-questions.md": {
+   "sha256": "93105c95247bb80e6f2c4df0fca7f8cc31b271ca3f1777aa69302a9ea8d0cfdf",
+   "baseline_sha256": "93105c95247bb80e6f2c4df0fca7f8cc31b271ca3f1777aa69302a9ea8d0cfdf",
+   "same_as_baseline": true,
+   "bytes": 4503
+  },
+  "corpus/fixtures/check_bible.py": {
+   "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+   "baseline_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+   "same_as_baseline": true,
+   "bytes": 22880
+  }
+ },
+ "collection_snapshot": {
+  "reports_expected": 28,
+  "reports_present": 29,
+  "reports_present_excl_self": 28,
+  "reports_missing_count": 0,
+  "reports_excess_count": 1,
+  "producer_count": 2,
+  "verifier_count": 26,
+  "present": [
+   "U1",
+   "U2",
+   "V01",
+   "V02",
+   "V03",
+   "V04",
+   "V05",
+   "V06",
+   "V07",
+   "V08",
+   "V09",
+   "V10",
+   "V11",
+   "V12",
+   "V13",
+   "V14",
+   "V15",
+   "V16",
+   "V17",
+   "V18",
+   "V19",
+   "V20",
+   "V21",
+   "V22",
+   "V23",
+   "V24",
+   "V25",
+   "V26",
+   "V28"
+  ],
+  "expected_roster_provided_by_dispatch": null,
+  "missing_seat_ids_not_inferred": true,
+  "missing_seat_ids": [],
+  "excess_seat_ids": [
+   "V28"
+  ],
+  "producer_present": [
+   "U1",
+   "U2"
+  ],
+  "producer_absent": [],
+  "duplicate_report_prefixes": {},
+  "header_seat_mismatches": [],
+  "header_token_misses_first20": [],
+  "empty_reports": [],
+  "tiny_reports_under_200_bytes": [],
+  "unexpected_md_in_seats_dir": [],
+  "non_report_top_level": [
+   ".V11-scratch",
+   ".v05-scratch",
+   ".v14-scratch",
+   ".v16-scratch",
+   ".v28-scratch",
+   "U1-chain-eight-scratch",
+   "U2-scratch",
+   "V03-scratch",
+   "V04-scratch",
+   "V06-scratch",
+   "V09-scratch",
+   "V13-scratch",
+   "V17-scratch",
+   "V20-scratch",
+   "V21-scratch",
+   "V23-scratch",
+   "V25-scratch"
+  ],
+  "scratch_directories_without_report_not_credited": [
+   ".V11-scratch",
+   ".v05-scratch",
+   ".v14-scratch",
+   ".v16-scratch",
+   ".v28-scratch"
+  ],
+  "self_seat": "V25",
+  "self_subtracted_from_all_reports_polls": true
+ },
+ "known_seat_output_defects": [],
+ "seats": [
+  {
+   "seat": "U1",
+   "agent_id": "agent-592",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/U1-chain-eight.md",
+   "report_sha256": "7f67a3cde48d802033d12a6d1353153d5a4f3665fc67fa2bbcb3d7963d0db20c",
+   "reports": {
+    "U1-chain-eight.md": "7f67a3cde48d802033d12a6d1353153d5a4f3665fc67fa2bbcb3d7963d0db20c"
+   },
+   "bytes": 9758,
+   "mtime_utc": "2026-10-18T03:21:40.982498+00:00"
+  },
+  {
+   "seat": "U2",
+   "agent_id": "agent-593",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/U2-r10-register.md",
+   "report_sha256": "c550a80f64d1fee05ed6e2aee9807255cd0f5bb144c88bb16e03b0f96cb7f32b",
+   "reports": {
+    "U2-r10-register.md": "c550a80f64d1fee05ed6e2aee9807255cd0f5bb144c88bb16e03b0f96cb7f32b"
+   },
+   "bytes": 7933,
+   "mtime_utc": "2026-10-18T03:32:16.976664+00:00"
+  },
+  {
+   "seat": "V01",
+   "agent_id": "agent-594",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V01-c1-chain.md",
+   "report_sha256": "21af1cfb7debaadec121050ce2faefdcf54c29bc3931ea059ea488d11bb5ef18",
+   "reports": {
+    "V01-c1-chain.md": "21af1cfb7debaadec121050ce2faefdcf54c29bc3931ea059ea488d11bb5ef18"
+   },
+   "bytes": 8178,
+   "mtime_utc": "2026-10-18T03:28:20.698249+00:00"
+  },
+  {
+   "seat": "V02",
+   "agent_id": "agent-595",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V02-c1-discharge.md",
+   "report_sha256": "79ddb64d9da33ac088949664ca8f3e231335081e8c474c9234101056183d7f52",
+   "reports": {
+    "V02-c1-discharge.md": "79ddb64d9da33ac088949664ca8f3e231335081e8c474c9234101056183d7f52"
+   },
+   "bytes": 7047,
+   "mtime_utc": "2026-10-18T03:21:36.927490+00:00"
+  },
+  {
+   "seat": "V03",
+   "agent_id": "agent-596",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V03-c1-repointed.md",
+   "report_sha256": "52790db52791245c6ff3a1a329578360677ac4aad9e36a7f0b7de3f315ffd00d",
+   "reports": {
+    "V03-c1-repointed.md": "52790db52791245c6ff3a1a329578360677ac4aad9e36a7f0b7de3f315ffd00d"
+   },
+   "bytes": 7492,
+   "mtime_utc": "2026-10-18T03:23:38.429722+00:00"
+  },
+  {
+   "seat": "V04",
+   "agent_id": "agent-597",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V04-c1-selftest.md",
+   "report_sha256": "dea196fda3d8a8c2054812bdd94fce31880b06ceeef82684ffc904752cefff91",
+   "reports": {
+    "V04-c1-selftest.md": "dea196fda3d8a8c2054812bdd94fce31880b06ceeef82684ffc904752cefff91"
+   },
+   "bytes": 6977,
+   "mtime_utc": "2026-10-18T03:29:07.647331+00:00"
+  },
+  {
+   "seat": "V05",
+   "agent_id": "agent-598",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V05-c1-negative.md",
+   "report_sha256": "8ed1db78ee9d3c573bfc62c6c8758713a664e948f1accaeabb31d840b7febd01",
+   "reports": {
+    "V05-c1-negative.md": "8ed1db78ee9d3c573bfc62c6c8758713a664e948f1accaeabb31d840b7febd01"
+   },
+   "bytes": 12999,
+   "mtime_utc": "2026-10-18T03:34:01.417849+00:00"
+  },
+  {
+   "seat": "V06",
+   "agent_id": "agent-599",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V06-c1-code-review.md",
+   "report_sha256": "a9257395bba52012a7c44d7267790efd2ddffd6ca771f04f564788a8bf2be3ea",
+   "reports": {
+    "V06-c1-code-review.md": "a9257395bba52012a7c44d7267790efd2ddffd6ca771f04f564788a8bf2be3ea"
+   },
+   "bytes": 9142,
+   "mtime_utc": "2026-10-18T03:28:24.028254+00:00"
+  },
+  {
+   "seat": "V07",
+   "agent_id": "agent-600",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V07-c2-procedure.md",
+   "report_sha256": "fe8f548e9fce82bb5513608823c11bfad1ed053c5b455ac25b2db846e353f55b",
+   "reports": {
+    "V07-c2-procedure.md": "fe8f548e9fce82bb5513608823c11bfad1ed053c5b455ac25b2db846e353f55b"
+   },
+   "bytes": 7379,
+   "mtime_utc": "2026-10-18T03:36:37.038127+00:00"
+  },
+  {
+   "seat": "V08",
+   "agent_id": "agent-601",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V08-c2-compatibility.md",
+   "report_sha256": "a07a57dd4a4bf9b5c46d34dd898011918358de9bdeb9afe6977708e25f7230a8",
+   "reports": {
+    "V08-c2-compatibility.md": "a07a57dd4a4bf9b5c46d34dd898011918358de9bdeb9afe6977708e25f7230a8"
+   },
+   "bytes": 9565,
+   "mtime_utc": "2026-10-18T03:28:05.472222+00:00"
+  },
+  {
+   "seat": "V09",
+   "agent_id": "agent-602",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V09-c2-no-winner.md",
+   "report_sha256": "9dec930023d3b5b0ff578a6212db6c27a53984b3ee34614c09a35f2b9fe95137",
+   "reports": {
+    "V09-c2-no-winner.md": "9dec930023d3b5b0ff578a6212db6c27a53984b3ee34614c09a35f2b9fe95137"
+   },
+   "bytes": 9753,
+   "mtime_utc": "2026-10-18T03:36:30.540116+00:00"
+  },
+  {
+   "seat": "V10",
+   "agent_id": "agent-603",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V10-c2-crossrefs.md",
+   "report_sha256": "8ff86a20c6768dc12ec26ffebc4951b517ef655b9df45abd6aaf56cd81bc831e",
+   "reports": {
+    "V10-c2-crossrefs.md": "8ff86a20c6768dc12ec26ffebc4951b517ef655b9df45abd6aaf56cd81bc831e"
+   },
+   "bytes": 7731,
+   "mtime_utc": "2026-10-18T03:30:17.810453+00:00"
+  },
+  {
+   "seat": "V11",
+   "agent_id": "agent-604",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V11-preservation-census.md",
+   "report_sha256": "b466c714a8743136b94deda9a517d7f27b6f0ed72348442fedbc6bdb64540362",
+   "reports": {
+    "V11-preservation-census.md": "b466c714a8743136b94deda9a517d7f27b6f0ed72348442fedbc6bdb64540362"
+   },
+   "bytes": 5366,
+   "mtime_utc": "2026-10-18T03:36:37.608128+00:00"
+  },
+  {
+   "seat": "V12",
+   "agent_id": "agent-605",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V12-gates-boundary.md",
+   "report_sha256": "2295da36a065568f0ec90c8d8a3f89cbdbc7a08bd76b02c0d92f2c03ca52b0dd",
+   "reports": {
+    "V12-gates-boundary.md": "2295da36a065568f0ec90c8d8a3f89cbdbc7a08bd76b02c0d92f2c03ca52b0dd"
+   },
+   "bytes": 5933,
+   "mtime_utc": "2026-10-18T03:23:42.534730+00:00"
+  },
+  {
+   "seat": "V13",
+   "agent_id": "agent-606",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V13-scope-creep.md",
+   "report_sha256": "83b5e8220699bf8941bb6eedcc282ad6714c10bb6a1422fba7c3d06b625565af",
+   "reports": {
+    "V13-scope-creep.md": "83b5e8220699bf8941bb6eedcc282ad6714c10bb6a1422fba7c3d06b625565af"
+   },
+   "bytes": 2450,
+   "mtime_utc": "2026-10-18T03:15:34.935783+00:00"
+  },
+  {
+   "seat": "V14",
+   "agent_id": "agent-607",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V14-freshness.md",
+   "report_sha256": "354d3c8f5b809aa579a1ebb79630bec7624f0089f7984003870082ee04cd400f",
+   "reports": {
+    "V14-freshness.md": "354d3c8f5b809aa579a1ebb79630bec7624f0089f7984003870082ee04cd400f"
+   },
+   "bytes": 11325,
+   "mtime_utc": "2026-10-18T03:31:50.627617+00:00"
+  },
+  {
+   "seat": "V15",
+   "agent_id": "agent-608",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V15-doc-parity.md",
+   "report_sha256": "213c62ded9b181d83ab42fed42911593f96c33512014cdbd39953e6430a7daee",
+   "reports": {
+    "V15-doc-parity.md": "213c62ded9b181d83ab42fed42911593f96c33512014cdbd39953e6430a7daee"
+   },
+   "bytes": 10754,
+   "mtime_utc": "2026-10-18T03:36:09.175077+00:00"
+  },
+  {
+   "seat": "V16",
+   "agent_id": "agent-609",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V16-operability.md",
+   "report_sha256": "ffab8788a342f10b900ec29bf13e884f41129fb5527060feb455167358576384",
+   "reports": {
+    "V16-operability.md": "ffab8788a342f10b900ec29bf13e884f41129fb5527060feb455167358576384"
+   },
+   "bytes": 9845,
+   "mtime_utc": "2026-10-18T03:34:12.968870+00:00"
+  },
+  {
+   "seat": "V17",
+   "agent_id": "agent-610",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V17-adjacency.md",
+   "report_sha256": "22ed5caf29ecadf5c7f4a1c75e8bcc3c817fe3c49f9359baf31450c6dcdc5f9b",
+   "reports": {
+    "V17-adjacency.md": "22ed5caf29ecadf5c7f4a1c75e8bcc3c817fe3c49f9359baf31450c6dcdc5f9b"
+   },
+   "bytes": 7729,
+   "mtime_utc": "2026-10-18T03:34:39.158916+00:00"
+  },
+  {
+   "seat": "V18",
+   "agent_id": "agent-611",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V18-verdict-coverage.md",
+   "report_sha256": "b70097124dbe3c34bf09c271bc7bfc8af2d2ac9fb4b5e6003019894c5c56f686",
+   "reports": {
+    "V18-verdict-coverage.md": "b70097124dbe3c34bf09c271bc7bfc8af2d2ac9fb4b5e6003019894c5c56f686"
+   },
+   "bytes": 8516,
+   "mtime_utc": "2026-10-18T03:25:55.497982+00:00"
+  },
+  {
+   "seat": "V19",
+   "agent_id": "agent-612",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V19-verdict-depth.md",
+   "report_sha256": "4d5f4c471e1ef8c7ab6ad70dd6ca799d46e73c412f6cc208bf46f840da3a3f47",
+   "reports": {
+    "V19-verdict-depth.md": "4d5f4c471e1ef8c7ab6ad70dd6ca799d46e73c412f6cc208bf46f840da3a3f47"
+   },
+   "bytes": 8426,
+   "mtime_utc": "2026-10-18T03:30:40.066493+00:00"
+  },
+  {
+   "seat": "V20",
+   "agent_id": "agent-613",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V20-verdict-calibration.md",
+   "report_sha256": "8cd1ca6c4306971d774bc9b4d7943a5fcc233daa7b895bc1a3f073bb33536a3d",
+   "reports": {
+    "V20-verdict-calibration.md": "8cd1ca6c4306971d774bc9b4d7943a5fcc233daa7b895bc1a3f073bb33536a3d"
+   },
+   "bytes": 12610,
+   "mtime_utc": "2026-10-18T03:40:00.762494+00:00"
+  },
+  {
+   "seat": "V21",
+   "agent_id": "agent-614",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V21-verdict-operability.md",
+   "report_sha256": "833bff22bd2717203a43da8d656d2cb787ec0f3645bef2c9604ea88691ea8443",
+   "reports": {
+    "V21-verdict-operability.md": "833bff22bd2717203a43da8d656d2cb787ec0f3645bef2c9604ea88691ea8443"
+   },
+   "bytes": 9139,
+   "mtime_utc": "2026-10-18T03:31:20.988564+00:00"
+  },
+  {
+   "seat": "V22",
+   "agent_id": "agent-615",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V22-verdict-freshness.md",
+   "report_sha256": "d97653526b54837729a64ae1ab8749d1c5f7b248eb36a61e965d882fdc3b7162",
+   "reports": {
+    "V22-verdict-freshness.md": "d97653526b54837729a64ae1ab8749d1c5f7b248eb36a61e965d882fdc3b7162"
+   },
+   "bytes": 10333,
+   "mtime_utc": "2026-10-18T03:27:09.806121+00:00"
+  },
+  {
+   "seat": "V23",
+   "agent_id": "agent-616",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V23-verdict-adjacency.md",
+   "report_sha256": "d2fc64291613442e031e9ba423e2100ae21d45abaf0165532d8d8c1614da626d",
+   "reports": {
+    "V23-verdict-adjacency.md": "d2fc64291613442e031e9ba423e2100ae21d45abaf0165532d8d8c1614da626d"
+   },
+   "bytes": 14468,
+   "mtime_utc": "2026-10-18T03:38:26.806324+00:00"
+  },
+  {
+   "seat": "V24",
+   "agent_id": "agent-617",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V24-adjudicator.md",
+   "report_sha256": "a076116b72f9e4b489baea54e131fac3b58c8a74b11ae5780e75dd1b1ac50f2d",
+   "reports": {
+    "V24-adjudicator.md": "a076116b72f9e4b489baea54e131fac3b58c8a74b11ae5780e75dd1b1ac50f2d"
+   },
+   "bytes": 14782,
+   "mtime_utc": "2026-10-18T03:42:46.508793+00:00"
+  },
+  {
+   "seat": "V25",
+   "agent_id": "agent-618",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V25-receipt.md",
+   "report_sha256": "14a1747fa3514a0ab43bdea308e0ba79eef8cf66bce77c2a856987aeb305b3f7",
+   "reports": {
+    "V25-receipt.md": "14a1747fa3514a0ab43bdea308e0ba79eef8cf66bce77c2a856987aeb305b3f7"
+   },
+   "bytes": 9600,
+   "mtime_utc": "2026-10-18T03:44:57.415262+00:00"
+  },
+  {
+   "seat": "V26",
+   "agent_id": "agent-619",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V26-cross-seat-audit.md",
+   "report_sha256": "3eaecff898a54e8260fd052f7cc586a87bf8e10bfb69095a7c978932092aaac7",
+   "reports": {
+    "V26-cross-seat-audit.md": "3eaecff898a54e8260fd052f7cc586a87bf8e10bfb69095a7c978932092aaac7"
+   },
+   "bytes": 6126,
+   "mtime_utc": "2026-10-18T03:18:18.502106+00:00"
+  },
+  {
+   "seat": "V28",
+   "agent_id": "agent-621",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-101/seats/V28-late-bookkeeper.md",
+   "report_sha256": "b76fab131b2e206c873342ebf1308f6429443e238b398b5c8d8ffeb1e3d6d647",
+   "reports": {
+    "V28-late-bookkeeper.md": "b76fab131b2e206c873342ebf1308f6429443e238b398b5c8d8ffeb1e3d6d647"
+   },
+   "bytes": 9766,
+   "mtime_utc": "2026-10-18T03:19:15.570218+00:00"
+  }
+ ],
+ "state": "completed \u2014 agent IDs/outcomes filled from the AgentSwarm dispatch result (tool_call_id tool_NAp5zVfikIfF4sXgTVrnyXzo, returned completed: 30). ROSTER ERRATUM: the LOG declaration says 28 seats (2 producers + 26 verifiers); the dispatched roster was 30 (2 producers + 28 verifiers V01-V28). Receipt moved from seats/ to the wave root at closure (placement fix). No IDs invented.",
+ "l1_follow_up": [
+  "Fill agent_id and outcome from the actual dispatch result, never from report existence.",
+  "Fill dispatch_tool_call_id and returned_summary from the real single-wave dispatch.",
+  "Adjudicate C1/C2/C3 from verifier evidence; receipt presence does not admit the round.",
+  "Refresh report and candidate hashes after any final report landings or closure edits.",
+  "Reconcile the declared 28-seat roster with observed report identifiers; explain any deviation without dropping reports."
+ ]
+}

@@ -1,0 +1,35 @@
+corpus/fixtures/r87-chain-unique-broken              rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-chain-unique-valid               rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-masked-break-from-ambiguous      rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-masked-break-to-ambiguous        rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-myth-cluster                     rc=2 | FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column~RESULT ERROR~
+corpus/fixtures/r87-probe-entry-shape                rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-probe-multi-invalid              rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-probe-nonitem-kinds              rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-probe-record-and-chain           rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-probe-rowshape-rejected          rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-probe-shape-ambiguous            rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r87-probe-source-prefix              rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r88-m3-maya-cluster                  rc=2 | FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column~RESULT ERROR~
+corpus/fixtures/r88-mixed-stop                       rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r88-nonholder-stop                   rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r88-shape-ambiguous-armed            rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-c1-invalid-from-holder           rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-c1-invalid-tick                  rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-c1-invalid-to-holder             rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-c1-malformed-source-id           rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-c1-multi-cause-valid             rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-f2-dangling-from                 rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-f2-dangling-to                   rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-f2-invalid-source-id             rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-fn2-control                      rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-fn2-unresolved-chain-break       rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r89-inspiration-paraphrase           rc=2 | FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column~RESULT ERROR~
+corpus/fixtures/r90-c1-rawpresent-from               rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r90-c1-rawpresent-source             rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r90-c1-rawpresent-to                 rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r90-c1-three-causes                  rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r91-c1-null-chain                    rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r91-c1-tick-unresolved               rc=2 | FINDING map_missing: expected exactly one conventional claim-to-excerpt map~RESULT ERROR~
+corpus/fixtures/r93-m2-kojiki-cluster                rc=0 | OBLIGATIONS raw=12 mapped=12~RESULT PASS~
+corpus/fixtures/r94-paired-crossing                  rc=0 | OBLIGATIONS raw=14 mapped=14~RESULT PASS~

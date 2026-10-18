@@ -1,0 +1,7 @@
+M	LOG.md
+M	corpus/fixtures/r96-crossing-response/claim-excerpt-map.md
+M	corpus/tools/README.md
+M	corpus/tools/dependency-freeze-contract.json
+M	corpus/tools/dependency_freeze.py
+M	corpus/tools/map-obligations-contract.json
+M	corpus/tools/map_obligations.py

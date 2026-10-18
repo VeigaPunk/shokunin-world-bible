@@ -1,0 +1,102 @@
+{
+  "record_type": "round-93-f30-dispatch-conformance-audit",
+  "record_owner": "F30",
+  "round": 93,
+  "regimen_round": "7/12",
+  "phase": "required-deepseek-followup",
+  "audit_revision": "4780cf088ab338f42b85739517aa237c968c4aea",
+  "pre_round_baseline": "87779a00f25bd1855ede479e490123843e5f056e",
+  "original_work_revision": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "scope": "Dispatch conformance only: wave-spec.json, validate_wave_spec.py, durable dispatch XMLs, accounting 31+32=63 vs declared range 32-64, closure gate honesty. No axis verdict, admission, promotion, or external-review claim.",
+  "content_hashes_sha256": {
+    ".ufo/waves/round-93/wave-spec.json": "4565936fbdd28b89a37090017d9c7ccd912213306e0cd8c58d1fb34439229020",
+    ".ufo/waves/round-93/validate_wave_spec.py": "b32a70d6b0119370a4d2b42999aa97b3de677d08e25bfd4cbe02cd14227d3388",
+    ".ufo/waves/round-93/recovery/work-dispatch.json": "270f044b5ccce9241196ae51866dc06159da898d4d92a1119eb401f0c001f3b3",
+    ".ufo/waves/round-93/recovery/work-results.xml": "bb03705fc65fdc5a78cfbfa5e641878b4ab72c105797e340a72a74eb75376320",
+    ".ufo/waves/round-93/recovery/original-work-results.xml": "32d3d556af6d09796809315161565dbf90bd9d496752b88dd52c042050fb8770",
+    ".ufo/waves/round-93/recovery/glm-preliminary-results.xml": "0d49a66bf29b62e3ba1647d7b81cb8f85e789bb688094407900a82d7c4a5c19d",
+    ".ufo/waves/round-93/recovery/R09.md": "e982b460c19cbcad9024b31b29d60f0ce8810cfa0b03352018c6e2d803ba3648",
+    ".ufo/waves/round-93/recovery/integration-record.md": "cbfa5b7f1b7c0749d1b65bed56f4961d3cea59cc671a6e5f22947bbe3b49f250",
+    ".ufo/waves/round-93/deepseek/dispatch-declaration.json": "d2cab5e2bb11680b56090d1b13d50c611f3614004d22df01585223cbf3cafe9d",
+    ".ufo/waves/round-93/wave-spec.md": "36ba5f2f9fb064d84672730190f78a2ded2eb7979a622c0a3a2136b49ead1072",
+    ".ufo/waves/round-93/deepseek/F30.md": "b09894aea3c22663ab1b38fb61fa953241d571da9e3d076f0d17bd37d94f6eae"
+  },
+  "checks": [
+    {
+      "id": "selftest",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 .ufo/waves/round-93/validate_wave_spec.py --self-test",
+      "exit": 0,
+      "observed": "9/9 PASS: closure_ready; corrective_result_counts_mismatch; requested_model_mismatch; served_backend_echo_mismatch; duplicate_seat_id:I01; required_report_missing:initial-luna-work:I01; phase_unresolved:fresh-deepseek-followup; failure_reason_missing:fresh-deepseek-followup:F01; unknown_backend_echo_is_warning (closure_findings=closure_ready)."
+    },
+    {
+      "id": "live_gate",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 .ufo/waves/round-93/validate_wave_spec.py",
+      "exit": 1,
+      "observed": "authorized_work_seat_total=63 allowed=32..64; WARN served_backend_echo_unknown:corrective-luna-work; FAIL phase_unresolved:fresh-deepseek-followup; CLOSURE_GATE=FAIL"
+    },
+    {
+      "id": "durable_xml_counts",
+      "observed": {
+        "original-work-results.xml": {"subagent_records": 31, "unique_agent_ids": 31, "completed": 31, "summary": "completed: 31"},
+        "work-results.xml": {"subagent_records": 32, "unique_agent_ids": 32, "completed": 32, "agent_id_sequence": "agent-522..agent-553 in R01..R32 order", "summary": "completed: 32"},
+        "glm-preliminary-results.xml": {"subagent_records": 33, "completed": 32, "failed": 1, "failed_seat": {"seat_id": "V2", "agent_id": "agent-517", "detail": "Agent instance \"agent-517\" is already running and cannot run concurrently"}, "summary": "completed: 32, failed: 1"}
+      }
+    },
+    {
+      "id": "receipt_hash_equality",
+      "observed": "work-results.xml sha256 == saved AgentSwarm tool-result file sha256 == work-dispatch.json actual_result_receipt.saved_result_sha256 == validator CORRECTIVE_RESULT_SHA256 == bb03705fc65fdc5a78cfbfa5e641878b4ab72c105797e340a72a74eb75376320"
+    },
+    {
+      "id": "mapping_equality",
+      "observed": "spec corrective-luna-work seat->agent map == work-results.xml map == work-dispatch.json seat_receipts map; 32/32 identical, no diffs"
+    },
+    {
+      "id": "accounting",
+      "observed": "initial 31 seats (31/31 report files present) + corrective 32 = 63 authorized WORK seats; 63 in declared range {min:32,max:64}; validator pinned absolute check 63 passed; no duplicate seat IDs across phases"
+    },
+    {
+      "id": "pre_round_provenance",
+      "command": "git cat-file -e 87779a0:<path>",
+      "observed": "wave-spec.json, validate_wave_spec.py, recovery/work-dispatch.json all absent at pre-round baseline (exit 128 each)"
+    },
+    {
+      "id": "range_provenance",
+      "observed": "authorized_work_seat_range appears in no other fleet *.json; fleet-visible floor is templates/round-prompt.md section 3 'at least 8 L2 subagents in ONE batched AgentSwarm call' (MISSION.md echo). 32-64 is the lane's own declared range."
+    },
+    {
+      "id": "stdlib_only",
+      "observed": "AST import scan: argparse, copy, json, pathlib, sys, tempfile; all in sys.stdlib_module_names"
+    },
+    {
+      "id": "json_valid",
+      "observed": "wave-spec.json parses (json.load) exit 0"
+    },
+    {
+      "id": "backend_echo",
+      "observed": "corrective phase served_backend_echo null with served_backend_echo_status 'unknown'; validator emits WARN only and self-test pins warning-plus-closure_ready. No served model claimed."
+    },
+    {
+      "id": "followup_state",
+      "observed": "required_followup status pending, dispatch_state awaiting-parent-dispatch, 32/32 F seats pending; report files F01.md/F04.md already present while seats pending (receipts parent-only); deepseek/ untracked (git ls-files -> 0)"
+    }
+  ],
+  "findings": [
+    {"severity": "medium", "id": "r09_stale_implementation_hashes", "detail": "R09.md records wave-spec.json sha256 6e7b86e8... and validate_wave_spec.py sha256 385784c2...; committed bytes at 4780cf0 hash 4565936f... and b32a70d6.... No committed record carries the current hashes. Recommendation: append-only errata in R09.md or the integration record; not a closure blocker."},
+    {"severity": "low", "id": "pending_seat_report_presence_not_flagged", "detail": "Validator does not flag a pending seat whose report file exists; receipt update remains parent-only. Follow-up durability depends on the integrator committing deepseek/ evidence."},
+    {"severity": "low", "id": "opencode_evidence_gap_named", "detail": "Failed opencode attempt has no raw record (parent-declared 31, IDs not invented); GLM failure is observable in its durable XML (V2/agent-517). Both recorded non-qualifying."},
+    {"severity": "info", "id": "backend_echo_unknown_warning", "detail": "Unknown backend echo is a warning, not a closure prerequisite and not an invented requirement or claim."}
+  ],
+  "scoped_verdict": {
+    "claim": "Dispatch conformance accounting is machine-checkable from committed bytes (wave-spec.json + validator + durable receipts).",
+    "before": "87779a0: artifacts absent (r92-Q2 debt)",
+    "after": "4780cf0: artifacts committed and reproducing (selftest green, honest-red live gate, hash/mapping/accounting equality)",
+    "verdict": "improved",
+    "bound": "Accounting and receipt conformance only; no served-model verification, no claim quality or admission judgment."
+  },
+  "axis_recommendation": {
+    "C1_depth": "unprovable from this seat (out of scope)",
+    "C2_coverage": "unprovable from this seat (out of scope)",
+    "C3_calibration": "unprovable from this seat (out of scope); conformance evidence shows no harm in audited artifacts"
+  },
+  "limits": "Measured at read cutoff; peers concurrently writing under deepseek/ and other round-93 paths; no full-tree hash; no external non-author verification claimed; no quota/config/secret/nested-CLI access; stdlib only."
+}

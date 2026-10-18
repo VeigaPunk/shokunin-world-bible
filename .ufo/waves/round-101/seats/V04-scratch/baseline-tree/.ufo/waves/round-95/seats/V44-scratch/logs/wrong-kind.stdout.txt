@@ -1,0 +1,3 @@
+VIOLATION: timeline[4].place_id: not a place 'evin'
+VIOLATION: timeline[6]: double-booked 'aru' at tick 13 in timeline[5] ('quiet-rise') and 'salt-court'
+2 violation(s); no canon changed

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "f1-nonholder-mira",
+    "kind": "character",
+    "name": "Non-holder Mira",
+    "first_appearance": "f1-nonholder-source",
+    "claims": [{"statement": "Fixture Mira", "source_id": "f1-nonholder-source"}]
+  },
+  {
+    "id": "f1-nonholder-harbor",
+    "kind": "character",
+    "name": "Non-holder Harbor",
+    "first_appearance": "f1-nonholder-source",
+    "claims": [{"statement": "Fixture Harbor", "source_id": "f1-nonholder-source"}]
+  },
+  {
+    "id": "f1-nonholder-tower",
+    "kind": "character",
+    "name": "Non-holder Tower",
+    "first_appearance": "f1-nonholder-source",
+    "claims": [{"statement": "Fixture Tower", "source_id": "f1-nonholder-source"}]
+  },
+  {
+    "id": "f1-nonholder-seal",
+    "kind": "item",
+    "name": "Non-holder Seal",
+    "first_appearance": "f1-nonholder-source",
+    "claims": [{"statement": "Fixture seal", "source_id": "f1-nonholder-source"}],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "f1-nonholder-mira",
+        "source_id": "f1-nonholder-missing-source"
+      },
+      {
+        "tick": 1,
+        "from_holder": "f1-nonholder-mira",
+        "to_holder": "f1-nonholder-harbor",
+        "source_id": "f1-nonholder-source"
+      },
+      {
+        "tick": 2,
+        "from_holder": "f1-nonholder-harbor",
+        "to_holder": "f1-nonholder-tower",
+        "source_id": "f1-nonholder-source"
+      }
+    ]
+  }
+]

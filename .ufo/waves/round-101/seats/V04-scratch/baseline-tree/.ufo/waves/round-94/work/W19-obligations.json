@@ -1,0 +1,128 @@
+{
+  "counting_rule": "Entities contribute first_appearance and each claim; relations and timeline contribute each record; only raw source-attributed pointers are counted.",
+  "inventories": [
+    {
+      "expected_count": 12,
+      "observed_count": 12,
+      "pairs": [
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/0/claims/0",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/0/first_appearance",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/1/claims/0",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/1/first_appearance",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/2/claims/0",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/2/first_appearance",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/3/claims/0",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/entities.json#/3/first_appearance",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/relations.json#/0",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/relations.json#/1",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/timeline.json#/0",
+          "source_id": "m2-record-archive"
+        },
+        {
+          "pointer": "corpus/fixtures/r93-m2-kojiki-cluster/timeline.json#/1",
+          "source_id": "m2-record-archive"
+        }
+      ],
+      "snapshot": "r93-m2-kojiki-cluster",
+      "tree_revision": "9c2eea3b58a090f8820c7a723d2f6a22b46ae52b"
+    },
+    {
+      "expected_count": 10,
+      "observed_count": 10,
+      "pairs": [
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/0/claims/0",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/0/first_appearance",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/1/claims/0",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/1/first_appearance",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/2/claims/0",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/2/first_appearance",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/3/claims/0",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/entities.json#/3/first_appearance",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/timeline.json#/0",
+          "source_id": "paired-clock"
+        },
+        {
+          "pointer": "corpus/fixtures/r88-m3-maya-cluster/timeline.json#/1",
+          "source_id": "paired-clock"
+        }
+      ],
+      "snapshot": "r88-m3-maya-cluster",
+      "tree_revision": "9c2eea3b58a090f8820c7a723d2f6a22b46ae52b"
+    }
+  ],
+  "observed_at_utc": "2026-10-17T17:44:45Z",
+  "purpose": "independent raw JSON source-attributed obligation denominator",
+  "r94_declared": {
+    "actual_candidate": {
+      "observed_at_utc": "2026-10-17T17:44:45Z",
+      "path": "corpus/fixtures/r94-paired-crossing",
+      "status": "absent"
+    },
+    "basis": "round-94 wave-spec.md C1 declared continuation",
+    "decomposition": {
+      "entity_claim": 5,
+      "entity_first_appearance": 5,
+      "relation": 1,
+      "timeline_event": 3
+    },
+    "expected_count": 14
+  },
+  "scope_limit": "These are raw source-attributed obligation counts, not universal semantic coverage or entailment findings.",
+  "seat": "W19"
+}

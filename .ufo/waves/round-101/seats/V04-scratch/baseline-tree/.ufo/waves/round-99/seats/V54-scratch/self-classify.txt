@@ -1,0 +1,112 @@
+candidates=12
+
+## V123-scratch/poll.sh class=THRESHOLD-128-NO-SUB ge128=True
+  L9:  reports=$(find "$SEATS" -maxdepth 1 -name '*.md' | wc -l)
+  L10:  srep=$(find "$SEATS" -maxdepth 1 -name 'S*.md' | wc -l)
+  L11:  vrep=$(find "$SEATS" -maxdepth 1 -name 'V*.md' | wc -l)
+  L12:  dirs=$(find "$SEATS" -mindepth 1 -maxdepth 1 -type d | wc -l)
+  L26:  v39=$(find "$SEATS" -maxdepth 1 -name 'V39-*.md' | wc -l)
+  L27:  v99=$(find "$SEATS" -maxdepth 1 -name 'V99-*.md' | wc -l)
+  L28:  v101=$(find "$SEATS" -maxdepth 1 -name 'V101-*.md' | wc -l)
+  L30:  # early exit only after try 8 if all 128 reports exist (unlikely; keep polling to deadline unless caller says stop)
+  L31:  if [ "$reports" -ge 128 ]; then
+  L32:    echo "$ts try=$i FULL-128 exiting" >> "$LOG"
+
+## V23-scratch/poll.sh class=COUNTS-MD ge128=False
+  L31:  srep=$(ls .ufo/waves/round-99/seats/S*.md 2>/dev/null | wc -l)
+  L32:  allrep=$(ls .ufo/waves/round-99/seats/*.md 2>/dev/null | wc -l)
+  L33:  porc=$(git status --porcelain -uall | wc -l)
+
+## V26-scratch/poll.sh class=COUNTS-MD ge128=False
+  L15:    if ! compgen -G "$SEATS/${seat}"'*.md' > /dev/null; then
+  L42:  seats_n=$(find "$SEATS" -maxdepth 1 -name '*.md' 2>/dev/null | wc -l)
+
+## V29-scratch/poll.sh class=COUNTS-MD ge128=False
+  L8:  fx=$(ls corpus/fixtures/r99-window-lapse 2>/dev/null | wc -l)
+  L9:  kn=$(ls corpus/knowledge/r99-*.md 2>/dev/null | wc -l)
+  L12:  s3f=$(ls .ufo/waves/round-99/seats/S3*.md 2>/dev/null | head -1)
+  L13:  s4f=$(ls .ufo/waves/round-99/seats/S4*.md 2>/dev/null | head -1)
+  L14:  s5f=$(ls .ufo/waves/round-99/seats/S5*.md 2>/dev/null | head -1)
+  L15:  md=$(ls .ufo/waves/round-99/seats/*.md 2>/dev/null | wc -l)
+
+## V30-scratch/poll.sh class=EXPLICIT-SELF-WORD ge128=False
+  L42:exp=c.get("self_test", {}).get("expected")
+  L55:  nonempty 'S1-*.md' && s1=yes
+  L56:  nonempty 'S3-*.md' && s3=yes
+  L57:  nonempty 'S4-*.md' && s4=yes
+  L58:  nonempty 'S5-*.md' && s5=yes
+  L61:  seats_n=$(find "$SEATS" -maxdepth 1 -name '*.md' -type f | wc -l)
+
+## V45-scratch/poll.sh class=EXPLICIT-SELF-WORD ge128=False
+  L2:# V45 pins-c9 poll. Subtract SELF. Never verify a plan.
+  L55:  # also accept any seats/V22*.md that is not under scratch
+  L59:    done < <(find "$SEATS" -maxdepth 1 -name 'V22*.md' -type f 2>/dev/null)
+  L65:  # seat reports excluding SELF
+  L66:  nreports=$(find "$SEATS" -maxdepth 1 -name '*.md' ! -name 'V45-pins-c9.md' -type f | wc -l)
+
+## V50-scratch/poll.sh class=COUNTS-MD ge128=False
+  L14:    hit=$(find "$SEATS" -maxdepth 1 -type f -name "${s}*.md" 2>/dev/null | head -1)
+  L34:  nrep=$(find "$SEATS" -maxdepth 1 -type f -name '*.md' | wc -l)
+  L43:echo "TIMEOUT after 40" >> "$LOG"
+  L44:echo "TIMEOUT"
+
+## V51-scratch/poll.sh class=COUNTS-MD ge128=False
+  L11:  fx=$(ls -1 corpus/fixtures/r99-window-lapse 2>/dev/null | wc -l)
+  L12:  kn=$(ls -1 corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md 2>/dev/null | wc -l)
+  L13:  s3=$(ls -1 "$SEATS"/S3-*.md 2>/dev/null | tr '\n' ',')
+  L14:  s4=$(ls -1 "$SEATS"/S4-*.md 2>/dev/null | tr '\n' ',')
+  L15:  s5=$(ls -1 "$SEATS"/S5-*.md 2>/dev/null | tr '\n' ',')
+  L16:  s1=$(ls -1 "$SEATS"/S1-*.md 2>/dev/null | tr '\n' ',')
+  L17:  s2=$(ls -1 "$SEATS"/S2-*.md 2>/dev/null | tr '\n' ',')
+  L18:  v29=$(ls -1 "$SEATS"/V29-*.md 2>/dev/null | tr '\n' ',')
+  L23:  seat_md=$(ls -1 "$SEATS"/*.md 2>/dev/null | wc -l)
+
+## V58-scratch/sampler.py class=EXPLICIT-SELF-WORD ge128=True
+  L7:  TIMEOUT / STALL / CAP / ABSENT / mutual / nonself.
+  L21:# expected report basenames are unknown until they land; we count *.md excluding scratch.
+  L33:    for p in glob.glob(os.path.join(SEATS, "*.md")):
+  L80:    keys = ("TIMEOUT", "STALL", "CAP ", "ABSENT", "mutual", "nonself",
+  L81:            "DEADLINE", "POLL-TIMEOUT", "POLL_HIT", "READY")
+  L152:            # stop early only if 128 reports exist AND no live pollers remain for 2 iters — never, we just sample
+
+## V58-scratch/waitgraph.py class=EXPLICIT-SELF-WORD ge128=False
+  L6:  - SELF subtraction
+  L39:def named_targets(txt, self_seat):
+  L41:    found.discard(self_seat)
+  L52:    # report-counting: ls of seats/*.md or wc of report globs
+  L65:    # self subtraction
+  L66:    selfsub = "n/a"
+  L71:            rf"nonself",
+  L75:            rf"SELF",
+  L79:        # stricter: does the exclusion actually name this seat, or a generic SELF token?
+  L80:        names_self = bool(re.search(rf"grep\s+-v[^\n]*{re.escape(seat)}", txt)) or bool(
+  L84:        generic = bool(re.search(r"\bSELF\b|nonself|subtract.self|exclude.self", txt, re.I))
+  L85:        if names_self:
+  L86:            selfsub = "YES-named"
+  L88:            selfsub = "YES-generic"
+  L90:            selfsub = "NO"
+  L92:            selfsub = "n/a"
+  L111:    for tok in ("TIMEOUT", "DEADLINE", "EXHAUST", "POLL_TERMINAL", "POLL-TIMEOUT",
+  L112:                "CAP", "HARD-CAP", "HARD_CAP", "STALL", "ABSENT", "break", "exit 2",
+  L123:        t in seen for t in ("TIMEOUT", "DEADLINE", "EXHAUST", "POLL_TERMINAL",
+  L124:                            "POLL-TIMEOUT", "CAP", "HARD-CAP", "HARD_CAP", "STALL")
+  L129:        "report" in txt.lower() or "*.md" in txt or "S1" in txt
+  L148:        "subtract_self": selfsub,
+  L207:            "subtract_self\ttries\tbounded\tescape_tokens\ttargets\tkind\n"
+  L212:                r["threshold"], r["subtract_self"], r["tries"], r["bounded"],
+  L228:                        f"all={r['all_reports']} self={r['subtract_self']} "
+
+## V71-scratch/poll.sh class=EXPLICIT-SELF-WORD ge128=False
+  L4:# Never verifies a plan. Subtracts SELF from any all-reports check.
+  L11:# also accept any V39*.md that is a report (not scratch)
+  L21:    # any top-level V39-*.md report
+  L22:    for f in "$SEATS"/V39-*.md; do
+  L51:    for f in "$SEATS"/${s}-*.md; do
+  L56:  mdcount=$(find "$SEATS" -maxdepth 1 -name '*.md' -type f | wc -l)
+
+## V87-scratch/poll.sh class=COUNTS-MD ge128=False
+  L14:      # accept either naming; also any file matching S*-*.md that is a report
+  L15:      if ! compgen -G "$SEATS/${s}*.md" > /dev/null; then
+  L57:  reports=$(find "$SEATS" -maxdepth 1 -name '*.md' -type f 2>/dev/null | wc -l)
+  L58:  s_reports=$(find "$SEATS" -maxdepth 1 -name 'S*.md' -type f 2>/dev/null | wc -l)
+  L62:  fx=$(find "$LANE/corpus/fixtures/r99-window-lapse" -maxdepth 1 -type f 2>/dev/null | wc -l)

@@ -1,0 +1,21 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V103-scratch
+LOG=$SCRATCH/poll.log
+: > "$LOG"
+for i in $(seq 6 15); do
+  sleep 20
+  ts=$(date -Iseconds)
+  t=$(test -f /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99-gate-blind-spot-table.md && echo PRESENT || echo ABSENT)
+  n=$(test -f /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99-lapse-scope-note.md && echo PRESENT || echo ABSENT)
+  s5=$(ls /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md 2>/dev/null | head -1)
+  echo "POLL $i $ts table=$t note=$n s5=${s5:-ABSENT}" | tee -a "$LOG"
+  if [ "$t" = PRESENT ] && [ "$n" = PRESENT ]; then
+    echo "BOTH-PRESENT at poll $i" | tee -a "$LOG"
+    stat -c '%y %s %n' /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99-gate-blind-spot-table.md /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99-lapse-scope-note.md | tee -a "$LOG"
+    exit 0
+  fi
+done
+echo "STILL-ABSENT after poll 15" | tee -a "$LOG"
+exit 0
+

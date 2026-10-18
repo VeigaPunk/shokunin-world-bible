@@ -1,0 +1,19 @@
+# Round 39 citation scout — missing source pointer is not testimony adjudication
+
+## Evidence and scope
+
+- `.shokunin/lore/LOG.md:337-365` records the r35 Bell-7 reports and their bounds: Tarin reports seeing Sella place an unlabeled envelope at Harbor; Sella reports her own Tower presence during the named ringing. They remain attributed fictional reports, not authenticated events, and the ledger's rationale is an editorial claim rather than semantic proof.
+- `.shokunin/lore/corpus/fixtures/r35-bell7-conflict/manual-clause-pointer-map.md:9-17` maps each account to its excerpt and the ledger endpoints. In particular, `:15-17` says the ledger points to the event `place_id` fields and does not establish its assumptions, source support, or contradiction truth. `timeline.json:32-38` identifies Sella's event and its `sella-bell7-note` pointer; `contradictions.json:8-11` identifies it as `claim_b`.
+- `.shokunin/lore/corpus/fixtures/check_bible.py:53-74` counts source IDs among valid source rows and distinguishes unknown from ambiguous. At `:92-100`, a uniquely resolved ledger event with an unknown event source produces the side-local “has no resolvable source_id” diagnostic; this is distinct from an ambiguous source. The event's own ordinary timeline reference is also checked at `:242` (source diagnostic call), so a missing citation can yield both ledger-local and timeline-local findings.
+- Prior-art caution: `.shokunin/lore/reports/r7-reviewer.md:47-53` records a temporary ledger **ambiguous-source** probe, not evidence of this unknown-source branch. `.shokunin/lore/LOG.md` round 39 declaration notes that distinction at its source lines near the end of the log. Do not infer novelty from the different message alone without checking all reports/probes; the parent's prescribed scope is specifically the uniquely identified `claim_b` with an unknown source.
+- Rights boundary: `.shokunin/lore/corpus/knowledge/reference-ledger.md:5-7` leaves reuse rights and training permission unassessed. In-world citation status grants neither.
+
+## Risks
+
+1. A dangling source ID means the checker cannot resolve a local record by that ID. It does **not** show that Sella's fictional testimony is false, that her excerpt is absent from the fixture, or that Tarin is correct. Preserve both accounts and their text; do not resolve the ledger's place/time/identity assumptions.
+2. The ledger diagnostic is a reference-integrity consequence, not independent testimony review. A unique event ID can resolve while its source pointer does not. The two findings may sound like separate evidence failures but arise from one missing pointer; report the complete output without counting them as two independent defects in the story.
+3. The excerpts are authored fictional material. Neither citations nor successful/failed checker output authenticate a speaker, prove text entailment, establish canon truth, or establish real-world rights, consent, or AI-training permission.
+
+## Falsifiable check
+
+Using a byte-identical r35-derived control and a negative differing only in the Sella timeline event's `source_id` (set to a deliberately absent ID such as `missing-sella-note`), run `python3 .shokunin/lore/corpus/fixtures/check_bible.py <fixture-dir>` on each. The control should exit 0. The negative should retain the unique `sella-bell7-presence` event pointer and report both a ledger-local `claim_b` “event ... has no resolvable source_id” finding and the timeline-local unknown-source finding; inventory all stdout/stderr and exit status. The check fails if either expected finding is absent or the mutation changes any other fixture input. Separately, a human reviewer must confirm both attributed excerpts and ledger wording remain unchanged and no text calls either account true/false, picks a canon winner, or infers rights/training permission. This is a falsifiable structural-plus-scope check, not a test of testimony truth or rights.

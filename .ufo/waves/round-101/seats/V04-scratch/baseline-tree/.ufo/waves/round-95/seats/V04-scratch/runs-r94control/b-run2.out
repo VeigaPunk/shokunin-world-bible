@@ -1,0 +1,5 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/map_obligations_r94.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/case-b
+OBLIGATIONS raw=12 mapped=13
+FINDING duplicate_mapping: entities.json#/0/first_appearance appears 2 times
+RESULT FAIL
+EXIT=1

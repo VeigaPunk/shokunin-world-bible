@@ -1,0 +1,40 @@
+[
+  {
+    "id": "departure",
+    "tick": 1,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "Mira departs the harbor.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "arrival",
+    "tick": 2,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [
+      "later"
+    ],
+    "description": "Mira reaches the tower.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "false-sighting",
+    "tick": 2,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "A contradictory sighting at the harbor.",
+    "source_id": "archive-ledger"
+  },
+  {
+    "id": "later",
+    "tick": 3,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [],
+    "description": "Later registry entry.",
+    "source_id": "archive-ledger"
+  }
+]

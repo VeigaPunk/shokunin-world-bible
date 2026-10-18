@@ -1,0 +1,234 @@
+{
+  "at": "2026-10-17T23:47:19.112812-03:00",
+  "expected_other_reports": 31,
+  "self_excluded": "V29",
+  "observed_other_report_files": 32,
+  "observed_other_ids": 32,
+  "with_self_if_written": 33,
+  "reports": [
+    {
+      "id": "T1",
+      "path": ".ufo/waves/round-100/seats/T1-chain-seven.md",
+      "bytes": 18771,
+      "sha256": "0bdb417bdb792fc8f1385c70424a70b06adc5bde472e15238a85987e6076d7b0",
+      "last_nonempty_line": "PASS \u2014 r99 guarded pin added; seven live fixtures clean; six existing pins unchanged; schema-2 ten-file payload and tick-15 reduction detection verified; dated documentation updated; top-level revision refresh disclosed."
+    },
+    {
+      "id": "T2",
+      "path": ".ufo/waves/round-100/seats/T2-fixture-author.md",
+      "bytes": 11564,
+      "sha256": "2ce0a9055e60fd4082bafb5070f7ac9ef426a5f0a32c23cd6173014ab6bf550c",
+      "last_nonempty_line": "PASS \u2014 T2 fixture payload delivered: CLEAN exit 0, 6/1/9 with 9 sources and 22 raw obligations; inherited rows and excerpt byte-prefix preserved, review leaves the entry open and resolves nothing; T3 map/README certification remains outside this seat."
+    },
+    {
+      "id": "T3",
+      "path": ".ufo/waves/round-100/seats/T3-fixture-docs.md",
+      "bytes": 19055,
+      "sha256": "50f29495e995ba9ca3cb06cbd4bef9b80da44d7614e27aefb7d1e179509468d4",
+      "last_nonempty_line": "PASS \u2014 T3 README and canonical map delivered: 22/22 obligations, 22/22 lexical source support, 24/24 validated rows, CLEAN; 21 inherited anchor outputs and line numbers preserved with namespace-only qualification, and the isolated tick-16 review leaves the entry open and resolves nothing."
+    },
+    {
+      "id": "T4",
+      "path": ".ufo/waves/round-100/seats/T4-knowledge-author.md",
+      "bytes": 14319,
+      "sha256": "c21e79918c4f47af16e15d3ed8553b3275556699dd56cc46572db5dc1f73a0d4",
+      "last_nonempty_line": "PASS \u2014 T4's three owned knowledge deliverables landed; seven-record/six-continuation dossier, three freshly replayed dated corrections, all 21 arc gates and 7 chain verifications green, self-tests 18/18 and 25/25, historical table preserved, cited paths checked, and no unresolved seat blocker."
+    },
+    {
+      "id": "V1",
+      "path": ".ufo/waves/round-100/seats/V01-c1-chain.md",
+      "bytes": 19817,
+      "sha256": "f1481c4434a3934b157a0d3662bb54643c8a3003ef0b6bffe1ea3ca2b2e2aff1",
+      "last_nonempty_line": "PASS \u2014 C1 has exactly seven clean live fixtures, all ten independently recomputed r99 digests match, and all six inherited pins are unchanged; guarded-writer top-level revision refresh explicitly qualified."
+    },
+    {
+      "id": "V2",
+      "path": ".ufo/waves/round-100/seats/V02-c1-discharge.md",
+      "bytes": 14058,
+      "sha256": "8382d7f839bb51c92583ed2be3d340ec46adaf9f36dd7482112222ba2d8c5ed8",
+      "last_nonempty_line": "PASS \u2014 r99 is clean; dropping its tick-15 edge produces REDUCTION-DETECTED exit 1, and a fictional-excerpts.md prose edit produces named DIGEST-MISMATCH exit 2 against the delivered schema-2 ten-file pin."
+    },
+    {
+      "id": "V3",
+      "path": ".ufo/waves/round-100/seats/V03-c1-negative.md",
+      "bytes": 13664,
+      "sha256": "fb1025cdbe782ea3d043db258087b0f65629e41b4f83d08a07e292e24140d3a2",
+      "last_nonempty_line": "PASS \u2014 73/73 negative/control scenarios matched twice (146 CLI calls); all three semantic IDs and all eleven documented exit-2 IDs stable, including real non-chain UNPINNED; no delivered bytes changed."
+    },
+    {
+      "id": "V4",
+      "path": ".ufo/waves/round-100/seats/V04-c1-code-review.md",
+      "bytes": 17819,
+      "sha256": "44b94d19b92899c729d7624c822c4292cd4fb2fc368a413a3a8b2b940bb7ea02",
+      "last_nonempty_line": "PASS \u2014 C1's r99 schema-2 ten-file pin and seven clean live receipts verified; all inherited pins and Python tools unchanged; documentation freeze-scoped; expected guarded root-revision refresh explicitly qualified."
+    },
+    {
+      "id": "V5",
+      "path": ".ufo/waves/round-100/seats/V05-c2-checker.md",
+      "bytes": 11952,
+      "sha256": "c4ea99b8f5ffd995633554162ce22d458ef90d3f011e986ce202c9f0a8074c3d",
+      "last_nonempty_line": "PASS \u2014 assigned C2 structural checks: r100 CLEAN, 6/1/9 with 9 sources, exact tick-16 review dependency, no dangling references or duplicates; r99 CLEAN and 10/10 baseline-identical; bounded poll correction and T2 receipt typo recorded above."
+    },
+    {
+      "id": "V6",
+      "path": ".ufo/waves/round-100/seats/V06-c2-inherited-equality.md",
+      "bytes": 18878,
+      "sha256": "58f6defed27e597cb9bfc450ea9b1d9281e0a9bbb00aeaadc9b0a3a314b3bba5",
+      "last_nonempty_line": "PASS \u2014 V06 scope: every inherited JSON row is identical (23/23), all ten r99 baseline files are unchanged, five whole-file copies and the 5,114-byte excerpt prefix pass cmp, and r100 is CLEAN; T3 documentation and other round claims remain outside this verdict."
+    },
+    {
+      "id": "V7",
+      "path": ".ufo/waves/round-100/seats/V07-c2-support-map.md",
+      "bytes": 18817,
+      "sha256": "8d78198a9c86493b8702acaa3836bc7095692a50338d7cce4f26866021a12ee9",
+      "last_nonempty_line": "PASS \u2014 after T3's delivered artifacts and report appeared, r100 support_check returned 22/22 source support and 24/24 validated rows, and map_obligations returned raw=22 mapped=22; both RESULT PASS, exit 0, empty stderr, with byte-identical reruns on unchanged fixture/tool/report snapshots."
+    },
+    {
+      "id": "V8",
+      "path": ".ufo/waves/round-100/seats/V08-c2-anchors.md",
+      "bytes": 14204,
+      "sha256": "c679496c01d39343f6beb6c94394a55c4162f8ee5cb6bee989291f6207b4a916",
+      "last_nonempty_line": "PASS \u2014 22/22 JSON anchors are independently in-span; inherited excerpt/map line numbers and anchor fields are preserved; J22 is the sole new row/anchor and occurs only at review line 82 within section 78\u201388; all three delivered fixture gates pass."
+    },
+    {
+      "id": "V9",
+      "path": ".ufo/waves/round-100/seats/V09-c2-whole-claim.md",
+      "bytes": 17718,
+      "sha256": "391bf3735af17a1b8056cc073652dd5eab9776a34d3b0a6991f29223addd53bc",
+      "last_nonempty_line": "PASS \u2014 C2 review note is whole-proposition supported by excerpt lines 82-86 and JSON/map rows; entry remains open, no new filing or finding is introduced, nothing is resolved, and the description remains explicitly bounded."
+    },
+    {
+      "id": "V10",
+      "path": ".ufo/waves/round-100/seats/V10-c2-anti-overclaim.md",
+      "bytes": 27820,
+      "sha256": "eed824322fa174ca8d3bdce8fbd447c3bcac7be22fb7186d9edb1661e7f7c6e7",
+      "last_nonempty_line": "PASS \u2014 no supported closure/resolution reading found in the delivered new bytes; the crossing-only relation is byte-identical, the dossier preserves non-adjudication bounds, 21/21 arc gates and 7/7 chain checks pass, and all nine correction replays match their bounded outcomes."
+    },
+    {
+      "id": "V11",
+      "path": ".ufo/waves/round-100/seats/V11-c2-synthesis.md",
+      "bytes": 15980,
+      "sha256": "2e82c0a1024960dd96553537b017fbf42e6d675bb061102268adfa1160f4cb55",
+      "last_nonempty_line": "PASS \u2014 the delivered dossier's seven records/six continuation beats match fixture bytes, counts, events, sources, obligations, and preserved maps; unresolved non-adjudication holds throughout, explicit non-establishment bounds are present, all cited paths resolve, and all 21 live gate calls pass."
+    },
+    {
+      "id": "V12",
+      "path": ".ufo/waves/round-100/seats/V12-c3-boundary.md",
+      "bytes": 14327,
+      "sha256": "1e41ef1bba281efecde5bcf2d241ce74d78a8241ee3bd5c13bbfcba8852c62ed",
+      "last_nonempty_line": "PASS \u2014 the delivered semantics-boundary note is artifact-backed, preserves all r99 AC distinctions, reproduces the claimed gate behavior, and makes no byte-identity-to-semantics overclaim."
+    },
+    {
+      "id": "V13",
+      "path": ".ufo/waves/round-100/seats/V13-c3-addenda.md",
+      "bytes": 13860,
+      "sha256": "71459c0951a3f4bf792c5c5bf1bc1d4442776be6d910bf01b7b38c7d2430d7a5",
+      "last_nonempty_line": "PASS \u2014 all three dated C3 addenda independently reproduce, exact commands/stdout/stderr/exits match 9/9, all 20,526 historical table bytes remain unchanged, and delivered table/tool/contract hashes stay stable."
+    },
+    {
+      "id": "V14",
+      "path": ".ufo/waves/round-100/seats/V14-c3-addenda-scope.md",
+      "bytes": 11700,
+      "sha256": "184c6623551e466d10beed6b9ef9d5ec21bbd450cd6aa67b042b0e49079bb19c",
+      "last_nonempty_line": "PASS \u2014 exactly three dated data rows added by git diff; every historical byte preserved; all three new rows carry resolvable r99 AC debt pointers."
+    },
+    {
+      "id": "V15",
+      "path": ".ufo/waves/round-100/seats/V15-preservation-census.md",
+      "bytes": 25669,
+      "sha256": "a33385f09a08ab7aeb6bba07112963da803b36e904c4044161e044f98b70eef5",
+      "last_nonempty_line": "FAIL \u2014 census 174 and inherited fixture preservation pass, but strict comparison with fe1ce46 finds two additional inherited changes, LOG.md and SCORECARD.md, already committed before dispatch; producer-only worktree scope passes."
+    },
+    {
+      "id": "V16",
+      "path": ".ufo/waves/round-100/seats/V16-preservation-mutations.md",
+      "bytes": 17738,
+      "sha256": "08f4202b124e3418d2b32b6fec441980dc8816548145b67ee07458158337f108",
+      "last_nonempty_line": "PASS \u2014 six accumulated mutation classes preserved with 56/56 expected CLI outcomes, pinned-r99 prose edits detected by named-file DIGEST-MISMATCH, r100 explicitly unpinned, regression suites 18/18 and 25/25 green, and 31/31 live inputs unchanged."
+    },
+    {
+      "id": "V17",
+      "path": ".ufo/waves/round-100/seats/V17-gates-boundary.md",
+      "bytes": 13732,
+      "sha256": "9a535a85fb595374d99957e1a41498ee716951f5e8ea0f506cf2118c5481b9dd",
+      "last_nonempty_line": "PASS \u2014 after all four producer reports landed (poll 23), boundary default CERTIFIED rc=0 with receipts 3/3, cases 14/14 and anchors 2/2; self-test 8/8 rc=0; delivered discrimination HELD rc=0 and distinct historical control REGRESSION-DETECTED rc=2; checker pin ff9fd2aa\u2026d1421 reproduced; all 96 boundary/discriminator paths match fe1ce46 and HEAD; both scratch-only byte-drift controls fail closed as expected."
+    },
+    {
+      "id": "V19",
+      "path": ".ufo/waves/round-100/seats/V19-freshness.md",
+      "bytes": 15839,
+      "sha256": "58bc37f9a4e4380160d415e9994ffff3f3d4996a0e5ddfa4d09e8f4bff5b56b4",
+      "last_nonempty_line": "PASS \u2014 delivered new-corpus freshness and 4/4 digest spots pass; seven pins and C9 behavior are fresh, with C9/navigation closure bookkeeping and T2's report-only digest transcription explicitly left for authorized follow-up."
+    },
+    {
+      "id": "V20",
+      "path": ".ufo/waves/round-100/seats/V20-doc-parity.md",
+      "bytes": 20456,
+      "sha256": "b9fc3b0128d9504e2097a87b1de8fde34274a124a01e13c2a817de24a88789dc",
+      "last_nonempty_line": "FAIL \u2014 pre-integration doc parity is not yet landed: missing fixtures Round-100/census section, missing corpus r100/current-seven-chain navigation, and missing C9 r100 row; delivered census 174/40/134/421, seven freeze receipts, and r100 structural/map/lexical gates all pass."
+    },
+    {
+      "id": "V21",
+      "path": ".ufo/waves/round-100/seats/V21-operability.md",
+      "bytes": 18043,
+      "sha256": "0727aeed2b2a01b01cb83ee78750cddd63dede635efb8ab3792719af225d61b3",
+      "last_nonempty_line": "INCONCLUSIVE \u2014 21/21 ownership-safe literal commands matched and both relocated harnesses passed, but the universal literal-command requirement is not fully verified because T4's two logging harness commands would overwrite T4-owned scratch; the explicitly historical guarded freeze was not rerun."
+    },
+    {
+      "id": "V22",
+      "path": ".ufo/waves/round-100/seats/V22-adjacency.md",
+      "bytes": 16592,
+      "sha256": "c955a899850502597d8e88f806716e51baa32e059c4074d07049489f653198af",
+      "last_nonempty_line": "PASS \u2014 bounded adjacency: PROVINCE byte-identical; no observed lore-owned outside-lane delta; authorized production/report/scratch paths only; rights and AI-training refusals preserved, no game-mechanics claim introduced; concurrent independent sibling drift explicitly excluded from any machine-wide no-write guarantee."
+    },
+    {
+      "id": "V23",
+      "path": ".ufo/waves/round-100/seats/V23-verdict-coverage.md",
+      "bytes": 16053,
+      "sha256": "61123e04d4e7f4541652a1bcc89dcbb4d5293014a7db6e171a3cde9aa5cb13c6",
+      "last_nonempty_line": "PASS \u2014 COVERAGE improved from six to seven clean frozen fixtures; r99 tick-15 bound discharged; all six inherited pins preserved; guarded revision refresh, unpinned r100, and semantic/non-establishment bounds explicit."
+    },
+    {
+      "id": "V24",
+      "path": ".ufo/waves/round-100/seats/V24-verdict-depth.md",
+      "bytes": 35631,
+      "sha256": "698fcc54704e9e41faa07f45bdefe60a1f603cc3b61f31f47827a3628a6f7209",
+      "last_nonempty_line": "PASS \u2014 depth improved (bounded): both C2 components verify on the delivered bytes, inherited records and unresolved non-adjudication are preserved, and the two independent replay groups pass; r100 remains unpinned, semantic/truth claims remain unestablished, and global baseline/doc-closure findings are not waived."
+    },
+    {
+      "id": "V25",
+      "path": ".ufo/waves/round-100/seats/V25-verdict-calibration.md",
+      "bytes": 16451,
+      "sha256": "686f67268b16614356ab6a63b5e3c384456e48c001247dfcf2fe074c672e97c2",
+      "last_nonempty_line": "PASS \u2014 CALIBRATION improved, bounded: C3's boundary and three dated corrections independently verify on stable delivered bytes; byte detection is not semantics, and V15's separate strict-baseline FAIL remains for parent adjudication."
+    },
+    {
+      "id": "V26",
+      "path": ".ufo/waves/round-100/seats/V26-verdict-operability.md",
+      "bytes": 17396,
+      "sha256": "1465952ebcd0e61d77bdfe6230a311b067960af13eadf800bd80e59ec21fedc3",
+      "last_nonempty_line": "PASS \u2014 OPERABILITY is not harmed on the delivered revision: new-fixture replay works, frozen chain verifies 7/7, all 24 command expectations match, regression suites pass, scope/path/usage guards retain their contracts, and 94 monitored delivered inputs remain unchanged."
+    },
+    {
+      "id": "V27",
+      "path": ".ufo/waves/round-100/seats/V27-verdict-freshness.md",
+      "bytes": 13658,
+      "sha256": "a9808812670801b1fc89aaff4d5babb7c9748e648a3648c2fef77fe33ad44b74",
+      "last_nonempty_line": "PASS \u2014 FRESHNESS unchanged (bounded): delivered pins and dated replay records are current and stable; carried index/closure debt and the T1/T2 quoted-hash defects are explicitly flagged, not certified or erased."
+    },
+    {
+      "id": "V28",
+      "path": ".ufo/waves/round-100/seats/V28-verdict-adjacency.md",
+      "bytes": 17333,
+      "sha256": "ee897bbab4c3a8d1b8c8bdfb7b97af1b857e91406f199d8f0ca2e861f816e076",
+      "last_nonempty_line": "PASS \u2014 ADJACENCY unchanged / not harmed on the delivered r100 bytes: charter and prior fixtures preserved, changes confined to declared ownership, no lore-attributable parent/sibling breach found, external material remains editorial-only, rights/mechanics/authentication refusals hold, and the full running battery plus negative-boundary controls match their declared bounded outcomes."
+    },
+    {
+      "id": "V30",
+      "path": ".ufo/waves/round-100/seats/V30-receipt-presence.md",
+      "bytes": 9522,
+      "sha256": "8a07416cd52fd034ae57165739d4648a6d8e8bed899feea9485da20e0644f7bf",
+      "last_nonempty_line": "INCONCLUSIVE \u2014 required 30-other-report and producer/artifact gates passed; final 32-report inventory and delivered receipt validation are pending."
+    }
+  ]
+}

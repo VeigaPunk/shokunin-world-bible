@@ -1,0 +1,24 @@
+SNAP 2026-10-17T22:22:03-03:00
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+### bible r88-m3-maya-cluster
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit:0
+### bible r94-paired-crossing
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit:0
+### bible r95-crossing-aftermath
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit:0
+### bible r96-crossing-response
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit:0
+### bible r97-crossing-acknowledgment
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit:0
+### bible r98-clerk-filing
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit:0
+### bible r99-window-lapse
+CLEAN: schema, citations, relations, timeline; 0 violations
+exit:0

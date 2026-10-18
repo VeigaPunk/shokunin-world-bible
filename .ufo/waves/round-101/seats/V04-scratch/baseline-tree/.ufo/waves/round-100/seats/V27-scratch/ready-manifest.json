@@ -1,0 +1,44 @@
+{
+  "ready": {
+    "attempt": 24,
+    "at": "2026-10-17T23:40:19.057362-03:00",
+    "missing_artifacts": [],
+    "missing_producer_reports": [],
+    "producer_reports": {
+      "T1": [
+        ".ufo/waves/round-100/seats/T1-chain-seven.md"
+      ],
+      "T2": [
+        ".ufo/waves/round-100/seats/T2-fixture-author.md"
+      ],
+      "T3": [
+        ".ufo/waves/round-100/seats/T3-fixture-docs.md"
+      ],
+      "T4": [
+        ".ufo/waves/round-100/seats/T4-knowledge-author.md"
+      ]
+    }
+  },
+  "sha256": {
+    "corpus/tools/dependency-freeze-contract.json": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+    "corpus/tools/README.md": "c99217cd0663125214cee7007951a1b9ae98f466f7081344c03ad0f45f87f399",
+    "SKILL.md": "09b2949ae26ec5e257fce0e879749d8abccaf75c888151159ef857597f418ac6",
+    "corpus/knowledge/r100-crossing-arc-synthesis.md": "6fcffc8154a11419adbcaefba6d728ee544af831cb5e1b999429404c3b243acc",
+    "corpus/knowledge/r100-provenance-semantics-boundary.md": "29cc7d856b2600bbb03dec577487bc0f09525ab444a3e3109ef0040ab7edeb36",
+    "corpus/knowledge/r99-gate-blind-spot-table.md": "f1b3719a3954bbae44562f9e01b99434327ff50fba0c3a0755634dc9d76830ff",
+    "corpus/fixtures/r100-docket-review/entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+    "corpus/fixtures/r100-docket-review/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r100-docket-review/timeline.json": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+    "corpus/fixtures/r100-docket-review/sources.json": "effa5160eb7a6b228d52a972bf52beeffc1544d3cb1f6c5edb2850f88bd2d22e",
+    "corpus/fixtures/r100-docket-review/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r100-docket-review/README.md": "a312a364d4d9476e98c0fae3f62b23bf72e73a06c508aac04ffe48cf9cf4c5fa",
+    "corpus/fixtures/r100-docket-review/claim-excerpt-map.md": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
+    "corpus/fixtures/r100-docket-review/fictional-excerpts.md": "d01825a7e3c8f4af549b7acdde7eb8e1b9074a6eccb8ce6d12401cea19745705",
+    "corpus/fixtures/r100-docket-review/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r100-docket-review/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    ".ufo/waves/round-100/seats/T1-chain-seven.md": "0bdb417bdb792fc8f1385c70424a70b06adc5bde472e15238a85987e6076d7b0",
+    ".ufo/waves/round-100/seats/T2-fixture-author.md": "2ce0a9055e60fd4082bafb5070f7ac9ef426a5f0a32c23cd6173014ab6bf550c",
+    ".ufo/waves/round-100/seats/T3-fixture-docs.md": "50f29495e995ba9ca3cb06cbd4bef9b80da44d7614e27aefb7d1e179509468d4",
+    ".ufo/waves/round-100/seats/T4-knowledge-author.md": "c21e79918c4f47af16e15d3ed8553b3275556699dd56cc46572db5dc1f73a0d4"
+  }
+}

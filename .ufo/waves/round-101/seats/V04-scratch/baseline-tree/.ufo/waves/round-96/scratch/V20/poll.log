@@ -1,0 +1,5 @@
+TOOLS_PRESENT try=15 2026-10-17T17:42:48-03:00
+-rw-r--r-- 1 vgpnk vgpnk  8113 Oct 17 17:42 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+-rw-r--r-- 1 vgpnk vgpnk 20457 Oct 17 17:42 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+Q3_REPORT_PRESENT /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/Q3-dependency-freeze.md
+POLL_DONE 2026-10-17T17:47:28-03:00

@@ -1,0 +1,19 @@
+{
+  "ready_at": "00:32:17",
+  "poll": "extension",
+  "artifacts": {
+    "SKILL.md": "040444511f10ac2781191171e4e3cd0dbef7b5c9b89011f51a3d08217969cd9f",
+    "corpus/tools/dependency-freeze-contract.json": "b8fc63c3500d626df8d5c34b28327c10716610512a3c72ef56a19f3b46de36ca",
+    "corpus/tools/README.md": "6d17bf0792123dc538286b2f77ccb1c8277e13ffd291804c4766399060630297",
+    "corpus/tools/dependency_freeze.py": "60a78bc39440917202488e4f6366a26540aeb494a089e5793864c1a4992fe3bf",
+    "corpus/knowledge/r101-r10-register-first-entry.md": "19d4b23de0d86a4eaae4d00de1a664b70bf9cabb697e4e7da8480ec8f7aa4dc3"
+  },
+  "reports": {
+    "U1": {
+      "U1-chain-eight.md": "7f67a3cde48d802033d12a6d1353153d5a4f3665fc67fa2bbcb3d7963d0db20c"
+    },
+    "U2": {
+      "U2-r10-register.md": "c550a80f64d1fee05ed6e2aee9807255cd0f5bb144c88bb16e03b0f96cb7f32b"
+    }
+  }
+}

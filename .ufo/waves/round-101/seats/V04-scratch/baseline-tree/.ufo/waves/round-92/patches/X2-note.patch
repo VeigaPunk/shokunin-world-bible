@@ -1,0 +1,10 @@
+diff --git a/corpus/knowledge/r91-c9-watch.md b/corpus/knowledge/r91-c9-watch.md
+--- a/corpus/knowledge/r91-c9-watch.md
++++ b/corpus/knowledge/r91-c9-watch.md
+@@ -41,3 +41,6 @@
+ ## Owner
+ 
+ S1 owns this watch design for round 91 and hands it to the next C1 calibration owner at closure. That owner runs and reviews any qualifying probe; no automatic checker change follows from a trigger report alone.
++
++**Census path convention:** Run from the repository root and pass each fixture as the repository-relative `corpus/fixtures/<name>` argument; the five missing-file fixtures echo that argv path in stdout.
++**B1 tuple assumption:** Replay B1 tuples with the same repository-relative fixture paths and argv spelling; absolute or differently prefixed paths alter the five captured stdout hashes.

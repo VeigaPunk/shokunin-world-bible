@@ -1,0 +1,3 @@
+FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['markdown_tamper'] extra=[]
+RESULT ERROR
+EXIT:2

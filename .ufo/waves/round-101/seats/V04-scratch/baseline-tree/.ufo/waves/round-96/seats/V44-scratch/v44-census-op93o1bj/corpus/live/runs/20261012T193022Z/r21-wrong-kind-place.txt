@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r21-wrong-kind-place
+exit_code=1
+VIOLATION: timeline[1].place_id: not a place 'mira'
+VIOLATION: timeline[1].depends_on: expected event-id strings
+2 violation(s); no canon changed

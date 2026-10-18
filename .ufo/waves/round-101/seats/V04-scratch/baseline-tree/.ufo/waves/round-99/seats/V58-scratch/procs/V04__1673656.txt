@@ -1,0 +1,27 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V04-scratch
+SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats
+LANE=/home/vgpnk/Projects/shokunin/lore-shokunin
+LOG=$SCR/poll.log
+date -Is | tee -a "$LOG"
+for i in $(seq 1 40); do
+  ts=$(date -Is)
+  tool=$LANE/corpus/tools/dependency_freeze.py
+  contract=$LANE/corpus/tools/dependency-freeze-contract.json
+  if [ -f "$tool" ]; then tsha=$(sha256sum "$tool" | awk '{print $1}'); else tsha=MISSING; fi
+  if [ -f "$contract" ]; then csha=$(sha256sum "$contract" | awk '{print $1}'); else csha=MISSING; fi
+  reports=$(ls -1 "$SEATS" 2>/dev/null | grep -E '^S1' || true)
+  nreports=$(printf '%s\n' "$reports" | grep -c . || true)
+  echo "POLL $i t=$ts tool=$tsha contract=$csha s1_reports=$nreports [$reports]" | tee -a "$LOG"
+  # S1 landed if tool sha moved off r98 baseline AND an S1 report exists
+  if [ "$tsha" != "03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b" ] && [ "$nreports" -ge 1 ]; then
+    echo "POLL_HIT try=$i tool=$tsha contract=$csha reports=$reports" | tee -a "$LOG"
+    exit 0
+  fi
+  if [ "$i" -eq 40 ]; then
+    echo "POLL_ABSENT tries=40 tool=$tsha contract=$csha s1_reports=$nreports" | tee -a "$LOG"
+    exit 3
+  fi
+  sleep 20
+done

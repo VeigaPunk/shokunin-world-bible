@@ -1,0 +1,15 @@
+{
+  "baseline_commit": "fe1ce466e9d7427948c0abe4ecfbf961880b72ff",
+  "observed_head": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
+  "axis": "freshness",
+  "observed_before_producer_reports": {
+    "corpus_README_line_41": "17-case / five JSON tables only; byte-identical to fe1ce46",
+    "fixtures_README_latest": "Round 99; census 173; r99 unpinned candidate; byte-identical to fe1ce46",
+    "C9_watch_latest": "r99 recheck 8; next r100; byte-identical to fe1ce46",
+    "boundary_default": "CERTIFIED exit 0; receipts 3/3; cases 14/14; anchors 2/2",
+    "C9_delivered": "DISCRIMINATION HELD exit 0; checker ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "C9_control": "REGRESSION-DETECTED exit 2 (expected)",
+    "R10_content_pinned_replay": "RESULT ALL CHECKS HELD; checks_failed=0; exit 0"
+  },
+  "scope": "Pre-readiness observations only; no round-100 artifact verdict inferred"
+}

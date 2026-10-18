@@ -1,0 +1,14 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-direct-empty
+exit_code=1
+VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'
+VIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'
+VIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'
+VIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'
+VIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'
+VIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'
+VIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: relations[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'
+VIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'
+11 violation(s); no canon changed

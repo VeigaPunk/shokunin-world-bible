@@ -1,0 +1,23 @@
+{
+  "seat": "CB1",
+  "wave": "round-91-followup",
+  "kind": "boundary-doc reconstruction audit",
+  "delivered_head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+  "artifacts": {
+    "delivered_boundary": {"path": "corpus/knowledge/holder-assessment-boundary.md", "sha256": "c0c59dafc32c7fdc52f30352359b2c252e7607c76010063231b8f89d223911c9", "lines": 549},
+    "r89_landed_contract_ca7f9ef": {"sha256": "a4b1b331ba96ff5d57200517cfe1d9e4c8f6030b4fd9ec2e46f38e7fbb4b3fd2", "lines": 630},
+    "r90_mislanded_copy_a7c6a17": {"sha256": "0d42c9881e1a13351ef865f6940ca6e15a717c1123056fc361ec42e346c3a60c", "lines": 316},
+    "checker": {"path": "corpus/fixtures/check_bible.py", "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421", "lines": 428, "diff_vs_ca7f9ef_exit": 0, "worktree_diff_exit": 0}
+  },
+  "diff_ca7f9ef_to_delivered": {"file": "corpus/knowledge/holder-assessment-boundary.md", "insertions": 91, "deletions": 172},
+  "headings": {"ca7f9ef_h2": 10, "delivered_h2": 7, "lost": ["The contract (round-1 baseline paragraph, kept)", "Commands (self-contained, run from the lane root)", "Status split"], "duplicate_h1_lines": [1, 8]},
+  "r90_sheet_blocks": {"total": 13, "landed_verbatim": 9, "absent": ["D4 header/banner new text", "D2 new bullet (hedged-shapes repair)", "D12 README Round 90 section (satisfied outside r91: README has it since a7c6a17)"], "old_text_still_present": ["D4 old header/banner"]},
+  "sections_unapplied": ["D4 header+banner", "D6/D7 cause-section anchor remap", "D1 decision-table row 2 refs (sole named skip)", "D9 commands/five-gate labels", "D13 status-split + measured-results labels", "D2 new bullet"],
+  "sections_applied_as_append_or_splice": ["D3 revision history (old tail orphaned :40-44)", "D4 verified-at (old head survives :46-50, fragment :61)", "D5 recheck (label edit at :412 not done)", "D11/D12 contract item 5 (inserted mid-sentence :126-134)", "D1/D2 row 3 (appended :184, old row :179 kept)", "D2 limits replacement (:230-242) with 12 bullets lost", "D8/D12 README paragraph (duplicate :485-489 vs :490-498)"],
+  "content_survival_percent": {"precise_limits": 11, "the_contract": 71, "commands": 89, "status_split": 100, "preamble": 78},
+  "stale_checker_anchors": {"unlabeled_total": 35, "labeled_r89_evidence_block": 13, "needle_tests_failed": 14, "needle_tests_run": 26, "offset_lines": 2},
+  "live_receipts": {"r85_five_case_block_replay_matches_pasted": true, "fenced_blocks_identical_to_ca7f9ef": "7/7", "provenance_fixture_dirs_delivered": 35, "provenance_fixture_dirs_claimed_at_ca7f9ef": 33},
+  "coherence_defects": ["duplicate H1", "decision-table state row duplicated and contradictory (:179 retired vs :184 current)", "Rules-text paragraph duplicated (:485-489, :490-498)", "6 dangling cross-references (4 to \"Commands\" :47/:52/:500/:546, 2 to \"The contract\" :19-20/:425-426)", "truncated scope bullet :227-229", "orphaned Commands intro tail :243", "12 of 13 r89 limit bullets absent from the file"],
+  "verdicts": {"checker_freeze_integrity": "unchanged", "doc_state_fidelity_vs_target_ca7f9ef_plus_sheet": "harmed", "doc_state_fidelity_vs_a7c6a17": "improved", "reconstruction_accounting": "harmed", "internal_coherence": "harmed"},
+  "writes": ["lore-shokunin/.ufo/waves/round-91/followup/CB1.md", "lore-shokunin/.ufo/waves/round-91/followup/CB1-docstate.json"]
+}

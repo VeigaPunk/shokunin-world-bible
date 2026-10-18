@@ -1,0 +1,322 @@
+{
+  "seat": "V4",
+  "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+  "scratch_worktree": "/tmp/r87-V4",
+  "final_test_basis": "Applied the actual F1/F2 masked-fixture patches and X1-c1.patch in the scratch worktree only. Five cases derive from F1 r87-masked-break-to-ambiguous; two derive from F2 r87-f2-masked-break-from-ambiguous.",
+  "artifact_discovery": {
+    "initial_probe_note": "The two required spaced checks used the guessed names F1-c1.patch and F2-c1.patch rather than the actual F1-masked-fixtures.patch and F2-masked-fixtures.patch. The later stat found the real paths; F1 was timestamped just before the second check, while F2 and X1 landed later. All actual patches were then applied and tested; the earlier missing-name probe is not treated as proof that the actual F1 file was absent.",
+    "actual_paths": [
+      ".ufo/waves/round-87/patches/F1-masked-fixtures.patch",
+      ".ufo/waves/round-87/patches/F2-masked-fixtures.patch",
+      ".ufo/waves/round-87/patches/X1-c1.patch"
+    ],
+    "stat_command": "stat -c '%n %y' .ufo/waves/round-87/patches/F1-masked-fixtures.patch .ufo/waves/round-87/patches/F2-masked-fixtures.patch .ufo/waves/round-87/patches/X1-c1.patch",
+    "stat_observed_output": ".ufo/waves/round-87/patches/F1-masked-fixtures.patch 2026-10-17 01:08:28.546070694 -0300\n.ufo/waves/round-87/patches/F2-masked-fixtures.patch 2026-10-17 01:12:25.613738899 -0300\n.ufo/waves/round-87/patches/X1-c1.patch 2026-10-17 01:14:08.369865578 -0300",
+    "spaced_wrong_name_probe": {
+      "command": "sleep 60; date -Ins; for f in .ufo/waves/round-87/patches/F1-c1.patch .ufo/waves/round-87/patches/F2-c1.patch .ufo/waves/round-87/patches/X1-c1.patch; do if test -f \"$f\"; then printf 'PRESENT %s\\n' \"$f\"; else printf 'MISSING %s\\n' \"$f\"; fi; done",
+      "observed_output": "2026-10-17T01:08:29,505826563-03:00\nMISSING .ufo/waves/round-87/patches/F1-c1.patch\nMISSING .ufo/waves/round-87/patches/F2-c1.patch\nMISSING .ufo/waves/round-87/patches/X1-c1.patch"
+    }
+  },
+  "patch_checks": [
+    {
+      "cwd": "/tmp/r87-V4",
+      "command": "git apply --check /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/F1-masked-fixtures.patch",
+      "exit_code": 0,
+      "observed_output": "no stdout/stderr"
+    },
+    {
+      "cwd": "/tmp/r87-V4",
+      "command": "git apply --check /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/F2-masked-fixtures.patch",
+      "exit_code": 0,
+      "observed_output": "no stdout/stderr"
+    },
+    {
+      "cwd": "/tmp/r87-V4",
+      "command": "git apply --check /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/X1-c1.patch",
+      "exit_code": 0,
+      "observed_output": "no stdout/stderr"
+    }
+  ],
+  "patch_application": [
+    {
+      "cwd": "/tmp/r87-V4",
+      "command": "git apply /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/F1-masked-fixtures.patch && git apply /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/F2-masked-fixtures.patch && printf 'APPLIED F1-masked-fixtures.patch and F2-masked-fixtures.patch to scratch only\\n'",
+      "observed_output": "APPLIED F1-masked-fixtures.patch and F2-masked-fixtures.patch to scratch only"
+    },
+    {
+      "cwd": "/tmp/r87-V4",
+      "command": "git apply /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/X1-c1.patch && printf 'APPLIED X1-c1.patch to /tmp/r87-V4 only\\n'",
+      "observed_output": "APPLIED X1-c1.patch to /tmp/r87-V4 only"
+    }
+  ],
+  "fixture_build": {
+    "cwd": "/tmp/r87-V4",
+    "command": "python3 mutation_harness.py build",
+    "observed_output": "BUILT 7 mutation fixtures from F1/F2 masked-break patch fixtures"
+  },
+  "baseline_replay": {
+    "cwd": "/tmp/r87-V4",
+    "command": "python3 mutation_harness.py baseline",
+    "results": [
+      {
+        "mutation": "tick-order-inversion",
+        "fixture": "corpus/fixtures/r87-V4-tick-order-inversion",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-tick-order-inversion",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "baseline_chain_or_tick_finding_reported": false,
+        "global_stop_notice_count": 1,
+        "mutation_change": "Set F1 provenance[2].tick from 4 to 2."
+      },
+      {
+        "mutation": "holder-swap",
+        "fixture": "corpus/fixtures/r87-V4-holder-swap",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-holder-swap",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "baseline_chain_or_tick_finding_reported": false,
+        "global_stop_notice_count": 1,
+        "mutation_change": "Swap F1 provenance[2] from_holder/to_holder: harbor -> tower becomes tower -> harbor."
+      },
+      {
+        "mutation": "source-id-removal",
+        "fixture": "corpus/fixtures/r87-V4-source-id-removal",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-source-id-removal",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[2]: expected exactly tick, from_holder, to_holder, source_id\n4 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "baseline_chain_or_tick_finding_reported": false,
+        "global_stop_notice_count": 1,
+        "mutation_change": "Remove source_id from F1 provenance[2]."
+      },
+      {
+        "mutation": "duplicate-record",
+        "fixture": "corpus/fixtures/r87-V4-duplicate-record",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-duplicate-record",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "baseline_chain_or_tick_finding_reported": false,
+        "global_stop_notice_count": 1,
+        "mutation_change": "Append an exact duplicate of F1 provenance[2] as provenance[3]."
+      },
+      {
+        "mutation": "unknown-source",
+        "fixture": "corpus/fixtures/r87-V4-unknown-source",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-unknown-source",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[2].source_id: unknown in-world source 'ghost-source'\n4 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "baseline_chain_or_tick_finding_reported": false,
+        "global_stop_notice_count": 1,
+        "mutation_change": "Set F1 provenance[2].source_id to ghost-source."
+      },
+      {
+        "mutation": "post-stop-extra-record",
+        "fixture": "corpus/fixtures/r87-V4-post-stop-extra-record",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-post-stop-extra-record",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[6].id: duplicate entities id 'aster'\nVIOLATION: entities[4].provenance[1].from_holder: ambiguous entity 'aster'\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-f2-masked-break-from-ambiguous",
+        "baseline_chain_or_tick_finding_reported": false,
+        "global_stop_notice_count": 1,
+        "mutation_change": "Append F2 provenance[4] {tick: 6, from_holder: tala, to_holder: rill, source_id: f2-moon-ledger}."
+      },
+      {
+        "mutation": "null-from-holder-mid-chain",
+        "fixture": "corpus/fixtures/r87-V4-null-from-holder-mid-chain",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-null-from-holder-mid-chain",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[6].id: duplicate entities id 'aster'\nVIOLATION: entities[4].provenance[1].from_holder: ambiguous entity 'aster'\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-f2-masked-break-from-ambiguous",
+        "baseline_chain_or_tick_finding_reported": false,
+        "global_stop_notice_count": 1,
+        "mutation_change": "Set F2 provenance[2].from_holder to null."
+      }
+    ]
+  },
+  "patched_replay": {
+    "cwd": "/tmp/r87-V4",
+    "command": "python3 mutation_harness.py patched",
+    "results": [
+      {
+        "mutation": "tick-order-inversion",
+        "fixture": "corpus/fixtures/r87-V4-tick-order-inversion",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-tick-order-inversion",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\n6 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "expected_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "observed_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "all_tail_records_disclosed": true,
+        "no_chain_comparison_resumed": true,
+        "mutation_change": "Set F1 provenance[2].tick from 4 to 2."
+      },
+      {
+        "mutation": "holder-swap",
+        "fixture": "corpus/fixtures/r87-V4-holder-swap",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-holder-swap",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\n6 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "expected_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "observed_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "all_tail_records_disclosed": true,
+        "no_chain_comparison_resumed": true,
+        "mutation_change": "Swap F1 provenance[2] from_holder/to_holder: harbor -> tower becomes tower -> harbor."
+      },
+      {
+        "mutation": "source-id-removal",
+        "fixture": "corpus/fixtures/r87-V4-source-id-removal",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-source-id-removal",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: expected exactly tick, from_holder, to_holder, source_id\n7 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "expected_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "observed_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "all_tail_records_disclosed": true,
+        "no_chain_comparison_resumed": true,
+        "mutation_change": "Remove source_id from F1 provenance[2]."
+      },
+      {
+        "mutation": "duplicate-record",
+        "fixture": "corpus/fixtures/r87-V4-duplicate-record",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-duplicate-record",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\n7 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "expected_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]",
+          "provenance[3]"
+        ],
+        "observed_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]",
+          "provenance[3]"
+        ],
+        "all_tail_records_disclosed": true,
+        "no_chain_comparison_resumed": true,
+        "mutation_change": "Append an exact duplicate of F1 provenance[2] as provenance[3]."
+      },
+      {
+        "mutation": "unknown-source",
+        "fixture": "corpus/fixtures/r87-V4-unknown-source",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-unknown-source",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2].source_id: unknown in-world source 'ghost-source'\n7 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-masked-break-to-ambiguous",
+        "expected_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "observed_local_disclosure_labels": [
+          "provenance[0]",
+          "provenance[1]",
+          "provenance[2]"
+        ],
+        "all_tail_records_disclosed": true,
+        "no_chain_comparison_resumed": true,
+        "mutation_change": "Set F1 provenance[2].source_id to ghost-source."
+      },
+      {
+        "mutation": "post-stop-extra-record",
+        "fixture": "corpus/fixtures/r87-V4-post-stop-extra-record",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-post-stop-extra-record",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[6].id: duplicate entities id 'aster'\nVIOLATION: entities[4].provenance[1].from_holder: ambiguous entity 'aster'\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'aster' first occurred at entities[4].provenance[1]\nVIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'aster' first occurred at entities[4].provenance[1]\nVIOLATION: entities[4].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'aster' first occurred at entities[4].provenance[1]\nVIOLATION: entities[4].provenance[4]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'aster' first occurred at entities[4].provenance[1]\n7 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-f2-masked-break-from-ambiguous",
+        "expected_local_disclosure_labels": [
+          "provenance[1]",
+          "provenance[2]",
+          "provenance[3]",
+          "provenance[4]"
+        ],
+        "observed_local_disclosure_labels": [
+          "provenance[1]",
+          "provenance[2]",
+          "provenance[3]",
+          "provenance[4]"
+        ],
+        "all_tail_records_disclosed": true,
+        "no_chain_comparison_resumed": true,
+        "mutation_change": "Append F2 provenance[4] {tick: 6, from_holder: tala, to_holder: rill, source_id: f2-moon-ledger}."
+      },
+      {
+        "mutation": "null-from-holder-mid-chain",
+        "fixture": "corpus/fixtures/r87-V4-null-from-holder-mid-chain",
+        "command": "/usr/bin/python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-V4-null-from-holder-mid-chain",
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[6].id: duplicate entities id 'aster'\nVIOLATION: entities[4].provenance[1].from_holder: ambiguous entity 'aster'\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'aster' first occurred at entities[4].provenance[1]\nVIOLATION: entities[4].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'aster' first occurred at entities[4].provenance[1]\nVIOLATION: entities[4].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'aster' first occurred at entities[4].provenance[1]\n6 violation(s); no canon changed",
+        "stderr": "",
+        "source_fixture": "r87-f2-masked-break-from-ambiguous",
+        "expected_local_disclosure_labels": [
+          "provenance[1]",
+          "provenance[2]",
+          "provenance[3]"
+        ],
+        "observed_local_disclosure_labels": [
+          "provenance[1]",
+          "provenance[2]",
+          "provenance[3]"
+        ],
+        "all_tail_records_disclosed": true,
+        "no_chain_comparison_resumed": true,
+        "mutation_change": "Set F2 provenance[2].from_holder to null."
+      }
+    ]
+  },
+  "patched_assertion": {
+    "cwd": "/tmp/r87-V4",
+    "command": "python3 -c 'import json; d=json.load(open(\"V4-mutation-final.json\")); b=d[\"baseline_replay\"][\"results\"]; p=d[\"patched_replay\"][\"results\"]; assert len(b)==len(p)==7; assert all(x[\"global_stop_notice_count\"]==1 and not x[\"baseline_chain_or_tick_finding_reported\"] for x in b); assert all(x[\"all_tail_records_disclosed\"] and x[\"no_chain_comparison_resumed\"] for x in p); print(\"PASS: 7/7 baseline cases mask later chain/tick findings; 7/7 X1 cases disclose every tail record with cause and do not resume checks\")'",
+    "observed_output": "PASS: 7/7 baseline cases mask later chain/tick findings; 7/7 X1 cases disclose every tail record with cause and do not resume checks"
+  },
+  "scratch_diff_check": {
+    "cwd": "/tmp/r87-V4",
+    "command": "git diff --check && git diff --stat -- corpus/fixtures/check_bible.py",
+    "exit_code": 0,
+    "observed_output": "corpus/fixtures/check_bible.py | 17 +++++++++++++++++\n1 file changed, 17 insertions(+)"
+  }
+}

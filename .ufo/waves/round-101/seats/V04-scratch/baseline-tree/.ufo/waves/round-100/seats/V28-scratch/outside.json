@@ -1,0 +1,295 @@
+{
+  "timestamp": "2026-10-17T23:40:33.404015-03:00",
+  "since": "2026-10-17T23:30:55-03:00",
+  "sweep_root": "/home/vgpnk/Projects/shokunin",
+  "parent_git_status": "",
+  "parent_round100_wave_exists": false,
+  "parent_round100_strays": [],
+  "recent_counts": {
+    "kotodama-shokunin": 56
+  },
+  "recent": {
+    "kotodama-shokunin": [
+      {
+        "path": "kotodama-shokunin/tools/harness/packet_links.py",
+        "size": 33643,
+        "mtime": "2026-10-17T23:38:43.506741-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/reports/round-16/scope.md",
+        "size": 6938,
+        "mtime": "2026-10-17T23:37:47.501628-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/reports/round-16/civ/048-059.md",
+        "size": 15199,
+        "mtime": "2026-10-17T23:40:28.830948-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/reports/round-16/fixes/edge-source.md",
+        "size": 4212,
+        "mtime": "2026-10-17T23:37:48.741630-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/outside-secret.txt",
+        "size": 8,
+        "mtime": "2026-10-17T23:39:12.376812-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/c09-poll.log",
+        "size": 421,
+        "mtime": "2026-10-17T23:39:37.517848-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/c09-build-map.py",
+        "size": 5152,
+        "mtime": "2026-10-17T23:36:38.947484-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/civcheck.py",
+        "size": 2240,
+        "mtime": "2026-10-17T23:32:33.656828-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/civcheck2.py",
+        "size": 1461,
+        "mtime": "2026-10-17T23:33:10.835267-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/civcheck3.py",
+        "size": 1361,
+        "mtime": "2026-10-17T23:34:17.610355-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/civcheck4.py",
+        "size": 1242,
+        "mtime": "2026-10-17T23:34:28.237120-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/sample_urls.txt",
+        "size": 2478,
+        "mtime": "2026-10-17T23:34:43.484231-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/sample_start.txt",
+        "size": 21,
+        "mtime": "2026-10-17T23:34:43.487318-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/sample_results.txt",
+        "size": 2610,
+        "mtime": "2026-10-17T23:35:17.189306-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/audit-va-scan.txt",
+        "size": 10252,
+        "mtime": "2026-10-17T23:35:43.646365-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-ol01-after.txt",
+        "size": 2688,
+        "mtime": "2026-10-17T23:35:47.565374-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-ol01-after-nodigest.txt",
+        "size": 2484,
+        "mtime": "2026-10-17T23:36:33.780473-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-f10-1-pk1.yml",
+        "size": 589,
+        "mtime": "2026-10-17T23:36:33.786347-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/audit-va-full.txt",
+        "size": 24094,
+        "mtime": "2026-10-17T23:36:36.238479-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/packet_links_head.py",
+        "size": 28527,
+        "mtime": "2026-10-17T23:39:12.294799-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-o02-e2e.json",
+        "size": 255,
+        "mtime": "2026-10-17T23:39:25.278824-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-o02-e2e-positive.json",
+        "size": 255,
+        "mtime": "2026-10-17T23:39:25.331825-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/audit-derivation.json",
+        "size": 10082,
+        "mtime": "2026-10-17T23:39:38.150966-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-c03-urls.txt",
+        "size": 1663,
+        "mtime": "2026-10-17T23:40:05.503903-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-verify/run-fixtures.py",
+        "size": 3554,
+        "mtime": "2026-10-17T23:38:16.700687-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-verify/fixture-f10-1.json",
+        "size": 863,
+        "mtime": "2026-10-17T23:38:24.827480-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16-verify/fixture-f9-1.json",
+        "size": 535,
+        "mtime": "2026-10-17T23:38:24.827549-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/aegean-minoan-mycenaean.urls",
+        "size": 648,
+        "mtime": "2026-10-17T23:33:11.457016-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/africa-primary-sources.urls",
+        "size": 1082,
+        "mtime": "2026-10-17T23:33:11.460176-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/ainu.urls",
+        "size": 917,
+        "mtime": "2026-10-17T23:33:11.462217-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/akan.urls",
+        "size": 1254,
+        "mtime": "2026-10-17T23:33:11.464174-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/aksum-ethiopia.urls",
+        "size": 982,
+        "mtime": "2026-10-17T23:33:11.466016-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/algonquian.urls",
+        "size": 1187,
+        "mtime": "2026-10-17T23:33:11.468016-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/amazigh-berber.urls",
+        "size": 1448,
+        "mtime": "2026-10-17T23:33:11.470016-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/amazonia-tupi-guarani.urls",
+        "size": 1075,
+        "mtime": "2026-10-17T23:33:11.472016-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/anatolia-hittite.urls",
+        "size": 629,
+        "mtime": "2026-10-17T23:33:11.474016-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/ancestral-puebloan.urls",
+        "size": 1019,
+        "mtime": "2026-10-17T23:33:11.476016-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/arabia-pre-islamic.urls",
+        "size": 975,
+        "mtime": "2026-10-17T23:33:11.478249-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/australia-aboriginal.urls",
+        "size": 832,
+        "mtime": "2026-10-17T23:33:11.479724-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/check_url.sh",
+        "size": 487,
+        "mtime": "2026-10-17T23:33:27.128928-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/all_urls.tsv",
+        "size": 15129,
+        "mtime": "2026-10-17T23:33:27.137053-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/results.tsv",
+        "size": 16838,
+        "mtime": "2026-10-17T23:34:38.599220-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/fetch_all.sh",
+        "size": 1727,
+        "mtime": "2026-10-17T23:35:06.178030-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/dart12.html",
+        "size": 114876,
+        "mtime": "2026-10-17T23:35:07.107284-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/smart-stool.html",
+        "size": 5711,
+        "mtime": "2026-10-17T23:35:06.259762-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/amnh-coat.html",
+        "size": 64267,
+        "mtime": "2026-10-17T23:35:06.272038-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/pib-mbya.html",
+        "size": 143926,
+        "mtime": "2026-10-17T23:35:06.310282-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/quran-106-2.html",
+        "size": 16221,
+        "mtime": "2026-10-17T23:35:06.469283-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/nps-chaco.html",
+        "size": 44213,
+        "mtime": "2026-10-17T23:35:06.689283-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/utexas-hittite.html",
+        "size": 40809,
+        "mtime": "2026-10-17T23:35:06.984284-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/uluru-tjukurpa.html",
+        "size": 800290,
+        "mtime": "2026-10-17T23:35:07.895286-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/mc17-raia.pdf",
+        "size": 1287740,
+        "mtime": "2026-10-17T23:35:12.709297-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/ojibwe-giigoonh.html",
+        "size": 21858,
+        "mtime": "2026-10-17T23:35:07.067284-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/va-O143065.json",
+        "size": 11784,
+        "mtime": "2026-10-17T23:35:06.934125-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/unesco-ahellil.html",
+        "size": 144519,
+        "mtime": "2026-10-17T23:35:07.741286-03:00"
+      },
+      {
+        "path": "kotodama-shokunin/.scratch/r16c01/src/nature-pny.html",
+        "size": 392105,
+        "mtime": "2026-10-17T23:35:08.058286-03:00"
+      }
+    ]
+  }
+}

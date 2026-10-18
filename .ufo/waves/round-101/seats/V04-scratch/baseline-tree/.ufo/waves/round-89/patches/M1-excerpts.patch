@@ -1,0 +1,31 @@
+diff --git a/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md b/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md
+@@ -0,0 +1,10 @@
++# Gate-witness excerpt
++
++Source ID: `gate-witness` — Hara's Mother-Tide Gate witness slip.
++
++> I am Hara, the keeper of the Mother-Tide Gate.
++> I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow.
++> I recorded the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.
++> I leave this as my gate-watch account for Saltmonth 4.
++
++Newly authored fictional, unverified account attributed to Hara; citation does not establish authenticity or truth.
+
+diff --git a/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md b/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md
+@@ -0,0 +1,10 @@
++# Dune-register excerpt
++
++Source ID: `dune-register` — Sen's Ash-Dune Sanctuary register.
++
++> I, Sen, am the recorder at Ash-Dune Sanctuary.
++> Ash-Dune Sanctuary is a record-keeping place; this register is kept here.
++> Recorder's line: Sen kept records at Ash-Dune Sanctuary.
++> For Saltmonth 4, I recorded the same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.
++
++Newly authored fictional, unverified register attributed to Sen; citation does not establish authenticity or truth.

@@ -1,0 +1,69 @@
+{
+  "seat": "JDEP4",
+  "round": "round-92-followup",
+  "judged_tree": {
+    "head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+    "baseline": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+    "tracked_tree_clean": true,
+    "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "support_check_sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c"
+  },
+  "wait_checks": {
+    "method": "one background call; directory listings of .ufo/waves/round-92/followup at t=0/60/120s",
+    "check1": {"t": "2026-10-17T10:26:23-03:00", "present": ["H4-census.json", "H4-probes.json", "JCAL1-delta.json", "SF1-freeze.json", "SF1.md", "SF2.md"], "note": "sibling-seat artifacts only; no JDEP peer artifact"},
+    "check2": {"t": "2026-10-17T10:27:23-03:00", "present_added": ["H4-lineage.json", "H4.md", "JCAL3-evidence.json", "JCAL3.md", "JCAL5-delta.json"]}
+  },
+  "r92_edge_write": {
+    "diff_hunks": 1,
+    "hunk": "@@ -37,14 +37,15 @@ (R8 paragraph + R9 block region)",
+    "r10_touched": false,
+    "r10_receipt": "git diff 396c568 c4d4823 -- <table> | grep -n 'Namespace|source_id' -> rc=1"
+  },
+  "r8": {
+    "label_occurrences_head": 2,
+    "label_occurrences_e1_patch": 1,
+    "label_occurrences_e2_patch": 1,
+    "head_line40_prefix": "**Failed-gate disposition (clarified r92):** **Failed-gate disposition (clarified r92):** **Owner:** the lore integratio",
+    "reviewer_terms_line40": {"named reviewer": 1, "not the submitter": 0, "collaborator": 0, "independent reviewer": 0},
+    "r9_block_independence_terms": {"not the submitter": 1, "second reviewer": 1},
+    "global_independence_rule": "none applies to R8 (only corpus/fixtures/README.md:833 historical)",
+    "tool_blindness": {"check_bible.py": 0, "support_check.py": 0},
+    "certification": "T1.md:255 / CB.md:202 check is substring presence ('inseparable' and 'whole element'), cannot catch the doubled label; E2.md:178/225 verified only 'R9 independent reviewer and trigger'",
+    "classification": "mis-governs (new)"
+  },
+  "r9": {
+    "gate_backing": "delivered :42-48; retention/re-access/expiry/downgrade term grep rc=1 (no hits)",
+    "required_record_fields": "claim pointer; excerpt path/span; printing/edition/year + identifier/copy locator; translator; source work/version; evidence citation and inspection method; reviewer name/role/date; disposition PASS/FAIL/OPEN; scope — no retained-evidence field",
+    "scratch_case": {
+      "path": "/tmp/lore-r92-JDEP4.r9/case-a-lapsed-access",
+      "record": "R9 manual review PASS with explicit post-review access loss ('reviewer cannot access the copy or its copy locator; the scan was not retained; no later party can re-inspect')",
+      "support_check": "INVENTORY JSON-FACTS 1/1; SOURCE-SUPPORT 1/1; RESULT PASS (rc=0)",
+      "check_bible": "CLEAN: schema, citations, relations, timeline; 0 violations (rc=0)"
+    },
+    "r91_probe_replay": "/tmp/lore-r91-JDEP2.9x2k/probes-r9-private -> SOURCE-SUPPORT 1/1; RESULT PASS (rc=0)",
+    "classification": "mis-governs (new; sustainment edge)"
+  },
+  "r10": {
+    "intent_terms_in_r10_blocks_94_109": 0,
+    "whole_file_intent_term_hits": ["line 48: 'declared mode' (R9 worked example)"],
+    "readme_section_landed": false,
+    "live_register_present": false,
+    "register_demo": "corpus/knowledge/r89-cross-cluster-contradiction.md (worked example; live register cross-cluster-contradictions.md absent)",
+    "two_dir_cli": "usage error, rc=2",
+    "checker_cluster_hits": 0,
+    "classification": "mis-governs (carried from r91; D-JDEP2r91-3 unchanged)"
+  },
+  "debt": [
+    "D-JDEP4r92-1: R8 reviewer independence (not the submitter/creator/collaborator; second reviewer if editor in submitter circle) + reviewer identity/date/independence record fields",
+    "D-JDEP4r92-2: remove doubled R8 label at :40",
+    "D-JDEP4r92-3: R9 sustainment clause (PASS valid only while evidence inspectable; retained inspection copy; lapse -> OPEN and withdraw R5 support)",
+    "D-JDEP4r92-4: R10 declared-alias channel or explicit prohibition with migration/recording",
+    "related carry-over: D-JDEP2r91-4 (R9 verification command reads round-91 patch), D-JDEP2r91-5 (translation mode = support regardless of record)"
+  ],
+  "axes": {
+    "decisional_coverage": "improved, bounded (R8 branch + R9 gate decided; three attack cases uncovered)",
+    "traceability": "improved, bounded (R9 structured; R8 reviewer fields absent; R10 no channel; doubled label)",
+    "bounded_verification": "unchanged (tools blind, 0 hits; negative-case probes green)",
+    "retroactivity_non_regression": "unchanged (R10 untouched by the diff; no retro edits)"
+  }
+}

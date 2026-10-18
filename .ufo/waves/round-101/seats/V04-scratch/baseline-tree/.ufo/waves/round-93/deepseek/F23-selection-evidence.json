@@ -1,0 +1,97 @@
+{
+  "seat": "F23",
+  "role": "selection judge (C2 retained candidate)",
+  "phase": "fresh-required-deepseek-followup",
+  "requested_route": "opencode-go/deepseek-v4.1-flash",
+  "requested_route_source": ".ufo/waves/round-93/deepseek/dispatch-declaration.json",
+  "served_model_independently_verified": false,
+  "served_model_note": "No backend/serving echo is available to this seat; the requested route is routing evidence only and is not restated as a served-model fact.",
+  "revisions": {
+    "candidate_under_judgment": "4780cf088ab338f42b85739517aa237c968c4aea",
+    "pre_round_baseline": "87779a00f25bd1855ede479e490123843e5f056e",
+    "original_work_commit": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e"
+  },
+  "hash_verification": {
+    "r10_review_input_sha256_excluding_readme": {
+      "method": "sorted relative path UTF-8 + NUL + file bytes, excluding README.md",
+      "r93-m2-kojiki-cluster": "599d2507c26c57b7b185ecbb644b02880300a099df973501f6be665e832b1e23",
+      "r87-myth-cluster": "997472173c52010858d620626874976759c5a7f82ccc657f0ec8960f67573e31",
+      "r88-m3-maya-cluster": "0bb9084f5945951fee9d9a9c47c34ed808428fafc840a471648c9ef3b9ba8e7f",
+      "live_matches_persisted": true,
+      "matched": "3/3"
+    },
+    "r10_baseline_fixture_tree_sha256_at_65838f8": {
+      "method": "sorted relative path + NUL + file bytes (includes README)",
+      "r93-m2-kojiki-cluster": "2e1faacf7dc26cd6f753c92f6a93f3468ff67acd0dcb345d9bdeb9975b673707",
+      "r87-myth-cluster": "c07d286df828d7c25a1d6304f9bb9abae2670a46287d436764d1b290eb665c39",
+      "r88-m3-maya-cluster": "edc94bc5b7b3e31192892a143602241f1b65d18a7ea3c3b4abba32bcf90dc254",
+      "recomputed_matches_persisted": true,
+      "matched": "3/3"
+    },
+    "r12_fixture_fingerprint_at_65838f8": {
+      "recomputed": "248eeb1a23587e49261520903a3351eb42249ba42e555f36229e90497fa0f6a3",
+      "persisted": "248eeb1a23587e49261520903a3351eb42249ba42e555f36229e90497fa0f6a3",
+      "match": true
+    },
+    "r11_per_file_sha256_at_head": {
+      "kojiki-chamberlain-excerpt.md": "2586c1f2505e948f6aeac02fc8a3db01886396a98e0dccd10e2ab46055edd592",
+      "inspiration-note.md": "fdac1458e88452fd61f04b5756e6a3e5b8793c0ec36fd8491286e5fd12710e09",
+      "symbolism-clause-map.md": "eeb56880b93f4a239516cd0f38b61097e0d834afee29392713491700f3c10243",
+      "corpus/knowledge/reference-ledger.md": "4fafcf9e3f9403347010b6f3801d16ab3a587af59744a90b90126919a439db67",
+      "match": "4/4"
+    },
+    "m17_readme_at_head": "071b8628aa8b5c67eac2ae94a5fa2ae19a47274b75e370afa10560ecd2250856",
+    "readme_matches_r10_recorded_final": true,
+    "fixture_content_drift_65838f8_to_4780cf0": "none; only README.md changed (+12 lines = the R10 addendum)"
+  },
+  "live_commands": [
+    {"cmd": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r93-m2-kojiki-cluster", "exit": 0, "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations", "stderr": ""},
+    {"cmd": "python3 corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster", "exit": 0, "stdout": "SOURCE-SUPPORT 12/12; EDITORIAL-ANCHORS 3/3; MODES 15/15; VALIDATED-ROWS 15/15; RESULT PASS", "stderr": ""},
+    {"cmd": "python3 .ufo/waves/round-93/recovery/R10-key-scan.py", "exit": 0, "note": "live measured_revision 4780cf0; all normalized intersections empty for both prior clusters (2/2 comparisons)"},
+    {"cmd": "FetchURL https://terebess.hu/english/kojiki.html", "note": "header '[B.H. Chamberlain, translator 1882]'; zero 'Basil' matches; three delivered clauses resolve verbatim; heading 'THE DOOR OF THE HEAVENLY ROCK-DWELLING' present"}
+  ],
+  "counts": {
+    "fixture_dirs_87779a0": 166,
+    "fixture_dirs_65838f8": 167,
+    "fixture_dirs_4780cf0": 167,
+    "inspiration_notes_in_tree": 3,
+    "m2_entities": 4,
+    "m2_relations": 2,
+    "m2_timeline_events": 2,
+    "m2_json_fact_rows": 12,
+    "m2_editorial_rows": 3
+  },
+  "seat_separation": {
+    "original_work_batch_agent_ids": {"M1": "agent-438", "M2": "agent-439", "M3": "agent-440", "M4": "agent-441", "M5": "agent-442", "M6": "agent-443", "S2": "agent-428"},
+    "corrective_batch_agent_ids": {"R10": "agent-531", "R11": "agent-532", "R12": "agent-533", "R13": "agent-534", "R14": "agent-535"},
+    "classification": "R10/R12 are distinct dispatched seats from M1 and M2, i.e. same-lane non-author review; not an outside-lane or external verifier",
+    "m6_scope": "M6 reviewed M1's candidate only (receipt candidate.cluster_path = corpus/fixtures/r93-myth-cluster3); its PASS is not transferred to M2"
+  },
+  "selection_history": {
+    "m4": "selected M2 (map/receipt integrator; byte-identical patch; author-side key screening only)",
+    "m5": "recommended M1 only (Kojiki r93-myth-cluster3); M2 named as viable same-family alternative",
+    "m6": "independent referent review of M1's candidate only",
+    "historical_consensus": false,
+    "integration_record_assertion_verified": true
+  },
+  "family_distinctness_as_sourced": {
+    "r87": "Sumerian / ETCSL Inana's descent (external-only; no ETCSL text delivered)",
+    "r88": "Maya-K'iche / Lewis Spence 1913 (Gutenberg 53080; excerpt delivered)",
+    "r93-m2": "Japanese Kojiki / Chamberlain 1882 (Terebess transcription; excerpt delivered)",
+    "distinct_traditions": true
+  },
+  "findings": [
+    {"severity": "low", "id": "F23-1", "finding": "Expanded translator name 'Basil Hall Chamberlain' in kojiki-chamberlain-excerpt.md:3, README.md:1 and reference-ledger.md:14 is not supported by the cited page, which gives only 'B.H. Chamberlain, translator 1882'; inspiration-note.md:15 uses the initials form. R11 flagged this LOW and changed nothing.", "status": "standing, un-repaired"},
+    {"severity": "low", "id": "F23-2", "finding": "The selection's whole-claim and referent evidence is same-lane seat-level only (R10/R12); no outside/external verifier is on record for it. Per PROTOCOL.md a dispatched subagent is still the lane.", "status": "boundary, correctly self-declared by R10"},
+    {"severity": "informational", "id": "F23-3", "finding": "R12's bounded note: timeline tick values and depends_on:[] are normalizations, not verbatim source statements; the integration record carries this correctly.", "status": "recorded"},
+    {"severity": "informational", "id": "F23-4", "finding": "Exact printed edition, translation fidelity, rights and AI-training permission remain open and are stated as open; no R5 support or R9 manual PASS is claimed for the translation.", "status": "recorded"},
+    {"severity": "informational", "id": "F23-5", "finding": "Decision-table rows 12/17 keep r88-era evidence cells; the landed r93 dated correction (lines 126-133 in 4780cf0) explicitly supersedes their current-status reading and disambiguates r88-M1/r88-M2 from r93-M2.", "status": "bounded by dated correction"}
+  ],
+  "axis_recommendation": {
+    "coverage": "improved (bounded)",
+    "depth": "unchanged (not assessed by this seat)",
+    "calibration": "unchanged (not assessed by this seat)",
+    "axes_harmed_in_scope": [],
+    "unprovable": "Any promotion-grade external/non-author-lane verification of the M2 selection is unprovable from this seat's evidence; admission is L1's act, not this seat's."
+  }
+}

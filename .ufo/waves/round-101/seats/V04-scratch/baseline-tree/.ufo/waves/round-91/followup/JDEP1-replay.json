@@ -1,0 +1,65 @@
+{
+  "seat": "JDEP1",
+  "mission": "Edge-decision verification on c2ab3d0: replay every example command the three r91 edge decisions (R8 failed-gate, R9 reprint boundary, R10 namespace) cite; owner/trigger presence; retroactivity; verdict recommendation.",
+  "head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+  "tracked_tree_clean": true,
+  "dependency_checks": [
+    "2026-10-17T08:33:29-03:00 check-01 head=c2ab3d0 clean=0",
+    "2026-10-17T08:34:29-03:00 check-02 head=c2ab3d0 clean=1 (untracked followup siblings appeared; tracked still clean)"
+  ],
+  "delivered_decisions": {
+    "r8_r91_block": {"file": "corpus/knowledge/r88-sourced-inspiration-decision-table.md", "lines": "40-47", "owner_label": false, "trigger_label": false, "worked_example_label": false, "verification_command": false},
+    "r9_appendix": {"lines": "49-90", "owner_label": true, "trigger_label": true, "decision_label": true, "worked_example_label": true, "verification_command": true},
+    "r10_r91_block": {"lines": "105-108", "owner_label": false, "trigger_label": false, "worked_example_label": false, "verification_command": false}
+  },
+  "replays": [
+    {"id": "delivered-R9-verify", "cited_by": "delivered table lines 87-90", "recorded": "11/11", "replayed": "R9 reprint decision completeness: 11/11; rc=0", "match": true},
+    {"id": "D1-R8-text", "cited_by": "D1.md / R1.md", "recorded": "9/9", "replayed": "R8 text completeness: 9/9; rc=0", "match": true},
+    {"id": "D1-R9-text", "cited_by": "D1.md / R1.md", "recorded": "11/11", "replayed": "R9 text completeness: 11/11; rc=0", "match": true},
+    {"id": "D1-R10-text", "cited_by": "R1.md", "recorded": "9/9", "replayed": "R10 text completeness: 9/9; rc=0", "match": true},
+    {"id": "r8-denial-probe", "cited_by": "D1.md", "recorded": "CLEAN; exit=0", "replayed": "CLEAN: schema, citations, relations, timeline; 0 violations; exit=0", "match": true},
+    {"id": "r9-reprint-checker", "cited_by": "D1.md / D2.md / R1.md", "recorded": "CLEAN; checker_exit=0", "replayed": "CLEAN; checker_exit=0", "match": true},
+    {"id": "r9-reprint-support", "cited_by": "D1.md / D2.md / R1.md", "recorded": "RESULT PASS; support_exit=0", "replayed": "FAIL: fact table must be under a JSON facts or Editorial rows heading; support_exit=2", "match": false, "cause": "C2 support_check.py hardening landed in 6332115 (+104/-21); r90 probe lacks expected-inventory declaration and JSON-facts/Editorial-rows heading (support_check.py:114,129-132). Control with a7c6a17 tool via process substitution reproduces recorded PASS/exit 0.", "control": "python3 <(git show a7c6a17:corpus/tools/support_check.py) /tmp/lore-r90-JDEP2.j3q8l6/probes-r9-reprint -> RESULT PASS; old_support_exit=0"},
+    {"id": "r10-probes-A-B-two-dir", "cited_by": "D1.md", "recorded": "A_exit=0; B_exit=0; two_dir_exit=2", "replayed": "A_exit=0; B_exit=0; two_dir_exit=2", "match": true},
+    {"id": "r10-comparison-receipt", "cited_by": "D1.md / R1.md", "recorded": "shared ['registrar-copy','salt-chronicle']; equal True/False; rc=0", "replayed": "identical shared list and equal True/False outputs; rc=0", "match": true},
+    {"id": "D2-baseline-completeness", "cited_by": "D2.md", "recorded": "all four False (pre-landing)", "replayed": "all four True (post-landing flip)", "match": true},
+    {"id": "R1-prospective-boundary", "cited_by": "R1.md", "recorded": "r8_r10_prospective=True; r9_starts_at_r89=True; r87_external_only_marker=True; m3_spence_text_delivered=True; r10_demo_explicitly_hypothetical=True; live_register_present=False", "replayed": "identical six booleans", "match": true},
+    {"id": "R1-duplicate-id", "cited_by": "R1.md", "recorded": "1 row/1 heading per ID; D1 additive repeats IDs; D2 replaces R9 heading", "replayed": "identical", "match": true}
+  ],
+  "tool_works_control": {
+    "r87": "INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 8/8; RESULT PASS; exit=0",
+    "r88_m3": "INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 0/0; WARN unreferenced excerpt declaration: source-excerpt.md (mode=verbatim); RESULT PASS WITH WARNINGS; exit=0"
+  },
+  "merge_fidelity": {
+    "r8_block_key_hits_of_d1_9": 1,
+    "r10_block_key_hits_of_d1_9": 1,
+    "r8_appendix_level_owner": true, "r8_appendix_level_trigger_label": false, "r8_appendix_level_worked_example": false,
+    "r10_appendix_level_owner": true, "r10_appendix_level_trigger_label": false, "r10_appendix_level_worked_example": false,
+    "spec_requirement": "wave-spec.md:35-42 requires each clarification with owner, trigger, and worked example"
+  },
+  "retroactivity": {
+    "r87_etcsl_marker_present": true,
+    "r88_m3_spence_delivered_verbatim": true,
+    "r87_hara_sen_intra_cluster_record_intact": true,
+    "live_register_absent": true,
+    "prospective_boundary_present": true,
+    "check_bible_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "check_bible_changed_in_range": false,
+    "support_check_changed_in_range": true,
+    "c3_retroactive_corpus_edit": false,
+    "r87_r88_map_touches": "C2/M3 wording + inventory headings only; ETCSL external-only line and m3 Spence verbatim declaration preserved"
+  },
+  "verdict_recommendation": {
+    "c3_depth_content_and_replay": "improved",
+    "c3_spec_traceability_element": "unmet for R8/R10 (Owner/Trigger/Worked example labels absent in delivered blocks)",
+    "recommendation": "Rule C3 depth improved (bounded) on decided-rule content + replay fidelity; do not rule an unqualified improvement while the spec's per-decision owner/trigger/worked-example element is unmet for R8/R10; record the two named debts."
+  },
+  "named_debt": [
+    "Transplant R8/R10 Owner/Trigger/Worked example (and optional verification commands) from patches/D1-edges.patch into the two appendix blocks; no new drafting needed.",
+    "Re-point the R9 receipt-parity probe at the hardened support command contract (inventory declaration + JSON facts/Editorial rows heading) and re-test SOURCE-SUPPORT counting; the debt text in D1/D2/R1 no longer describes the delivered tree."
+  ],
+  "limits": "Textual/replay-level verification only; no translation-fidelity, bibliographic, rights, or canon adjudication. CB1 boundary-doc and C1/C2 claims are out of this seat's scope.",
+  "writes": [".ufo/waves/round-91/followup/JDEP1.md", ".ufo/waves/round-91/followup/JDEP1-replay.json"],
+  "tracked_edits": false,
+  "commit_or_push": false
+}

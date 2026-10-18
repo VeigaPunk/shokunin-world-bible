@@ -1,0 +1,3445 @@
+{
+  "schema": "lore-r86-inherited-diagnostic-v1",
+  "baseline_commit": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+  "baseline_checker_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+  "candidate_checker_sha256": "e8f241623aa84eb1dce192a03c9e70b8f4ba386344f0b22a99ba1ac0d4942132",
+  "candidate_status": "dirty inherited unadmitted worktree; not a committed implementation",
+  "summary": {
+    "fixture_count": 133,
+    "same_fixture_tuples": 133,
+    "baseline_exit_counts": {
+      "0": 28,
+      "1": 105
+    },
+    "changed_fixture_cases": [],
+    "inherited_json_count": 705,
+    "changed_inherited_json": [],
+    "probe_count": 5,
+    "scratch_scenarios": 7,
+    "empty_stderr_all": true
+  },
+  "observations": {
+    "inherited_input_json_unchanged": true,
+    "all_inherited_fixture_tuples_unchanged": true,
+    "unique_clean_control_unchanged": true,
+    "unique_break_control_unchanged": true,
+    "baseline_mask_has_no_holder_disclosure": true,
+    "ambiguous-to-with-late-break-and-tick": true,
+    "ambiguous-from-with-late-break-and-tick": true,
+    "notice_after_earlier_invalidity": true,
+    "both_fields_and_one_notice": true,
+    "per_item_reset_and_independent_break": true,
+    "prefix_break_retained": true,
+    "dangling_not_reclassified": true,
+    "checker_unchanged_during_measurement": true
+  },
+  "verdict_lines": [
+    "INHERITED_CANDIDATE_DIAGNOSTIC: PASS",
+    "ROUND_ADMISSION: BLOCKED required_alias_bindings_missing; native_task_batches=0; no_native_judgment",
+    "PROTOCOL_GATE_CONFORMANCE: COULD_NOT_EVALUATE missing_SKILL_registry_and_selftest"
+  ],
+  "fixture_runs": [
+    {
+      "case": "ally-one-way",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/ally-one-way"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/ally-one-way"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "ally-reciprocal",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/ally-reciprocal"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/ally-reciprocal"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "consistent",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/consistent"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/consistent"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "contradictions",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/contradictions"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[1].to: dangling entity 'missing-map'\nVIOLATION: timeline[1].depends_on: timeline inversion 'later' tick 3 not before 'arrival' tick 2\nVIOLATION: timeline[2]: double-booked 'mira' at tick 2 in timeline[1] ('tower') and 'harbor'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/contradictions"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[1].to: dangling entity 'missing-map'\nVIOLATION: timeline[1].depends_on: timeline inversion 'later' tick 3 not before 'arrival' tick 2\nVIOLATION: timeline[2]: double-booked 'mira' at tick 2 in timeline[1] ('tower') and 'harbor'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "contradictions-ledger-malformed",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/contradictions-ledger-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[1].claim_b.event_id: expected exactly one timeline event 'absent-event'\nVIOLATION: relations[1].to: dangling entity 'missing-map'\nVIOLATION: timeline[1].depends_on: timeline inversion 'later' tick 3 not before 'arrival' tick 2\nVIOLATION: timeline[2]: double-booked 'mira' at tick 2 in timeline[1] ('tower') and 'harbor'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/contradictions-ledger-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[1].claim_b.event_id: expected exactly one timeline event 'absent-event'\nVIOLATION: relations[1].to: dangling entity 'missing-map'\nVIOLATION: timeline[1].depends_on: timeline inversion 'later' tick 3 not before 'arrival' tick 2\nVIOLATION: timeline[2]: double-booked 'mira' at tick 2 in timeline[1] ('tower') and 'harbor'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "item-chain-broken",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/item-chain-broken"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/item-chain-broken"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "item-chain-valid",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/item-chain-valid"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/item-chain-valid"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r10-registry-witness",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r10-registry-witness"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r10-registry-witness"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r11-character-place",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-character-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[2].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-character-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[2].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r11-dangling-place",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-dangling-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: dangling entity 'unlisted'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-dangling-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: dangling entity 'unlisted'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r11-place-character",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-place-character"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[2].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-place-character"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[2].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r11-unique-nonplace",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-unique-nonplace"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: not a place 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r11-unique-nonplace"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: not a place 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r12-ambiguous-actor",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r12-ambiguous-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'mira'\nVIOLATION: relations[0].from: ambiguous entity 'mira'\nVIOLATION: timeline[0].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].entity_id: ambiguous actor entity 'mira'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r12-ambiguous-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'mira'\nVIOLATION: relations[0].from: ambiguous entity 'mira'\nVIOLATION: timeline[0].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].entity_id: ambiguous actor entity 'mira'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r12-unique-actor",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r12-unique-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r12-unique-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r13-missing-actor",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r13-missing-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].entity_id: dangling entity 'unlisted'\nVIOLATION: timeline[1].entity_id: dangling entity 'unlisted'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r13-missing-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].entity_id: dangling entity 'unlisted'\nVIOLATION: timeline[1].entity_id: dangling entity 'unlisted'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r13-unique-actor",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r13-unique-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r13-unique-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r15-carbon-followup",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r15-carbon-followup"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r15-carbon-followup"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r16-missing-first",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-missing-first"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: dangling entity 'unlisted'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-missing-first"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: dangling entity 'unlisted'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r16-missing-place",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-missing-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: dangling entity 'unlisted'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-missing-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: dangling entity 'unlisted'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r16-mixed-three",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-mixed-three"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: dangling entity 'unlisted'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-mixed-three"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: dangling entity 'unlisted'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r16-valid-places",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-valid-places"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r16-valid-places"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r17-valid-places",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-valid-places"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-valid-places"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r17-wrong-after",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-after"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: not a place 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-after"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: not a place 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r17-wrong-before",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-before"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: not a place 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-before"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: not a place 'mira'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r17-wrong-first",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-first"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: not a place 'mira'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[1] ('harbor') and 'tower'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-first"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].place_id: not a place 'mira'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[1] ('harbor') and 'tower'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r17-wrong-last",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-last"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\nVIOLATION: timeline[2].place_id: not a place 'mira'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-last"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\nVIOLATION: timeline[2].place_id: not a place 'mira'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r17-wrong-middle",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-middle"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: not a place 'mira'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r17-wrong-middle"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: not a place 'mira'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r18-duplicate-first-known",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-first-known"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[1] ('tower') and 'quay'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-first-known"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[1] ('tower') and 'quay'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r18-duplicate-pair",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-pair"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[1].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-pair"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[1].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r18-duplicate-reverse",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-reverse"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-duplicate-reverse"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r18-known-through-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-known-through-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[1].place_id: ambiguous place entity 'harbor'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'quay'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-known-through-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[1].place_id: ambiguous place entity 'harbor'\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'quay'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r18-mixed-kind",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-mixed-kind"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[1].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-mixed-kind"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[1].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r18-unique-pair",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-unique-pair"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r18-unique-pair"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r19-negative-first-valid",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-negative-first-valid"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[1] ('tower') and 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-negative-first-valid"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[1] ('tower') and 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r19-negative-tick",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-negative-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].tick: must be nonnegative\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-negative-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].tick: must be nonnegative\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r19-valid-around-negative",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-valid-around-negative"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].tick: must be nonnegative\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-valid-around-negative"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].tick: must be nonnegative\nVIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r19-valid-tick",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-valid-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r19-valid-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r20-both-negative",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-both-negative"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].tick: must be nonnegative\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-both-negative"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].tick: must be nonnegative\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r20-mixed-edges",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-mixed-edges"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].tick: must be nonnegative\nVIOLATION: timeline[2].depends_on: timeline inversion 'r20-valid-a' tick 2 not before 'r20-valid-c' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-mixed-edges"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].tick: must be nonnegative\nVIOLATION: timeline[2].depends_on: timeline inversion 'r20-valid-a' tick 2 not before 'r20-valid-c' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r20-negative-dependent",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-negative-dependent"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].tick: must be nonnegative\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-negative-dependent"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].tick: must be nonnegative\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r20-negative-prereq",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-negative-prereq"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-negative-prereq"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r20-valid-equal",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-equal"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 1 in timeline[0] ('tower') and 'harbor'\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 1 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-equal"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 1 in timeline[0] ('tower') and 'harbor'\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 1 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r20-valid-inversion",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-inversion"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-inversion"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r20-valid-order",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-order"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r20-valid-order"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-ambiguous-actor",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-ambiguous-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'mira'\nVIOLATION: relations[0].from: ambiguous entity 'mira'\nVIOLATION: timeline[0].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-ambiguous-actor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'mira'\nVIOLATION: relations[0].from: ambiguous entity 'mira'\nVIOLATION: timeline[0].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-clean",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-clean"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-clean"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-clean-reverse",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-clean-reverse"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-clean-reverse"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-invalid-tick",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-invalid-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].tick: must be nonnegative\nVIOLATION: timeline[1].depends_on: expected event-id strings\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-invalid-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].tick: must be nonnegative\nVIOLATION: timeline[1].depends_on: expected event-id strings\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-malformed",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-malformed-reverse",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-malformed-reverse"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('harbor') and 'tower'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-malformed-reverse"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('harbor') and 'tower'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-same-place",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-same-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-same-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r21-wrong-kind-place",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-wrong-kind-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: not a place 'mira'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r21-wrong-kind-place"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].place_id: not a place 'mira'\nVIOLATION: timeline[1].depends_on: expected event-id strings\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-clean-inversion",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-clean-inversion"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-clean-inversion"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-malformed-only",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-malformed-only"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-malformed-only"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-mixed-first",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-mixed-first"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-mixed-first"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-mixed-last",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-mixed-last"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-mixed-last"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-multiple-invalid",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-multiple-invalid"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-multiple-invalid"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-prereq' tick 2 not before 'r20-dependent' tick 1\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-self-repeated",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-self-repeated"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on[0]: self dependency 'r20-dependent'\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-dependent' tick 1 not before 'r20-dependent' tick 1\nVIOLATION: timeline[1].depends_on[1]: self dependency 'r20-dependent'\nVIOLATION: timeline[1].depends_on[1]: repeated dependency 'r20-dependent'\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-self-repeated"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on[0]: self dependency 'r20-dependent'\nVIOLATION: timeline[1].depends_on: timeline inversion 'r20-dependent' tick 1 not before 'r20-dependent' tick 1\nVIOLATION: timeline[1].depends_on[1]: self dependency 'r20-dependent'\nVIOLATION: timeline[1].depends_on[1]: repeated dependency 'r20-dependent'\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-unknown-mixed",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-unknown-mixed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: unknown event 'missing'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-unknown-mixed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on: expected event-id strings\nVIOLATION: timeline[1].depends_on: unknown event 'missing'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r22-valid-order",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-valid-order"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r22-valid-order"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r23-note-class",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r23-note-class"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r23-note-class"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r25-to-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r25-to-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'seal'\nVIOLATION: relations[0].to: ambiguous entity 'seal'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r25-to-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'seal'\nVIOLATION: relations[0].to: ambiguous entity 'seal'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r25-to-unique",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r25-to-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r25-to-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r26-to-malformed",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r26-to-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].name: required nonempty str\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r26-to-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].name: required nonempty str\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r27-both-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r27-both-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'seal'\nVIOLATION: entities[5].id: duplicate entities id 'mira'\nVIOLATION: relations[0].from: ambiguous entity 'mira'\nVIOLATION: relations[0].to: ambiguous entity 'seal'\nVIOLATION: timeline[0].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].entity_id: ambiguous actor entity 'mira'\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r27-both-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'seal'\nVIOLATION: entities[5].id: duplicate entities id 'mira'\nVIOLATION: relations[0].from: ambiguous entity 'mira'\nVIOLATION: relations[0].to: ambiguous entity 'seal'\nVIOLATION: timeline[0].entity_id: ambiguous actor entity 'mira'\nVIOLATION: timeline[1].entity_id: ambiguous actor entity 'mira'\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r27-target-only",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r27-target-only"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'seal'\nVIOLATION: relations[0].to: ambiguous entity 'seal'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r27-target-only"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'seal'\nVIOLATION: relations[0].to: ambiguous entity 'seal'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r28-courier-excerpt",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r28-courier-excerpt"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r28-courier-excerpt"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r29-near-miss",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r29-near-miss"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r29-near-miss"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r30-explicit-negation",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r30-explicit-negation"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r30-explicit-negation"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r31-source-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r31-source-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'courier-log'\nVIOLATION: entities[0].first_appearance: ambiguous in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: entities[3].first_appearance: ambiguous in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: relations[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: timeline[1].source_id: ambiguous in-world source 'courier-log'\n8 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r31-source-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'courier-log'\nVIOLATION: entities[0].first_appearance: ambiguous in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: entities[3].first_appearance: ambiguous in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: relations[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: ambiguous in-world source 'courier-log'\nVIOLATION: timeline[1].source_id: ambiguous in-world source 'courier-log'\n8 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r31-source-unique",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r31-source-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r31-source-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r32-source-malformed",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r32-source-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].title: required nonempty str\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r32-source-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].title: required nonempty str\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r33-tarin-envelope",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r33-tarin-envelope"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r33-tarin-envelope"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r34-tarin-hearsay",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r34-tarin-hearsay"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r34-tarin-hearsay"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r35-bell7-conflict",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r35-bell7-conflict"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r35-bell7-conflict"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r36-bell7-wrong-date",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r36-bell7-wrong-date"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r36-bell7-wrong-date"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r37-ledger-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r37-ledger-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[4].id: duplicate timeline id 'tarin-envelope-observation'\nVIOLATION: contradictions[0].claim_a.event_id: expected exactly one timeline event 'tarin-envelope-observation'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r37-ledger-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[4].id: duplicate timeline id 'tarin-envelope-observation'\nVIOLATION: contradictions[0].claim_a.event_id: expected exactly one timeline event 'tarin-envelope-observation'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r37-ledger-unique",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r37-ledger-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r37-ledger-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r39-ledger-source-missing",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r39-ledger-source-missing"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id\nVIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r39-ledger-source-missing"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id\nVIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r39-ledger-source-unique",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r39-ledger-source-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r39-ledger-source-unique"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r40-vela-listener",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r40-vela-listener"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r40-vela-listener"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r41-vela-direct-bell",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r41-vela-direct-bell"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r41-vela-direct-bell"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r43-jorin-vela-sighting",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r43-jorin-vela-sighting"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r43-jorin-vela-sighting"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r5-invalid-citation",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-invalid-citation"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0].source_id: unknown in-world source 'absent-source'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-invalid-citation"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0].source_id: unknown in-world source 'absent-source'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r5-invalid-json",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-invalid-json"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions.json: cannot load JSON: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-invalid-json"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions.json: cannot load JSON: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r5-missing-file",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-missing-file"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-missing-file"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r5-missing-file/contradictions.json'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r5-row-shape",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-row-shape"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0]: expected object\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-row-shape"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0]: expected object\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r5-wrong-top-level",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-wrong-top-level"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions.json: expected array\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r5-wrong-top-level"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions.json: expected array\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r59-duplicate-harbor-tower",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-duplicate-harbor-tower"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: duplicate object member 'place_id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-duplicate-harbor-tower"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: duplicate object member 'place_id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r59-duplicate-tower-harbor",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-duplicate-tower-harbor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: duplicate object member 'place_id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-duplicate-tower-harbor"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: duplicate object member 'place_id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r59-nested-duplicate",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-nested-duplicate"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities.json: duplicate object member 'source_id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-nested-duplicate"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities.json: duplicate object member 'source_id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r59-unique-control",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-unique-control"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 1 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r59-unique-control"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1]: double-booked 'mira' at tick 1 in timeline[0] ('harbor') and 'tower'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r60-empty",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0].from: dangling entity 'mira'\nVIOLATION: relations[0].to: dangling entity 'seal'\nVIOLATION: timeline[0].entity_id: dangling entity 'mira'\nVIOLATION: timeline[0].place_id: dangling entity 'harbor'\nVIOLATION: timeline[1].entity_id: dangling entity 'mira'\nVIOLATION: timeline[1].place_id: dangling entity 'tower'\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0].from: dangling entity 'mira'\nVIOLATION: relations[0].to: dangling entity 'seal'\nVIOLATION: timeline[0].entity_id: dangling entity 'mira'\nVIOLATION: timeline[0].place_id: dangling entity 'harbor'\nVIOLATION: timeline[1].entity_id: dangling entity 'mira'\nVIOLATION: timeline[1].place_id: dangling entity 'tower'\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r60-partial",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-partial"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0].to: dangling entity 'seal'\nVIOLATION: timeline[0].place_id: dangling entity 'harbor'\nVIOLATION: timeline[1].place_id: dangling entity 'tower'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-partial"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: relations[0].to: dangling entity 'seal'\nVIOLATION: timeline[0].place_id: dangling entity 'harbor'\nVIOLATION: timeline[1].place_id: dangling entity 'tower'\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r60-unavailable",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r60-unavailable-independent",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-unavailable-independent"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)\nVIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].source_id: unknown in-world source 'absent'\nVIOLATION: timeline[1].depends_on: unknown event 'missing'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r60-unavailable-independent"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)\nVIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[1].source_id: unknown in-world source 'absent'\nVIOLATION: timeline[1].depends_on: unknown event 'missing'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-allied-empty",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-allied-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'harbor-compact'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'harbor-compact'\nVIOLATION: entities[1].first_appearance: unknown in-world source 'harbor-compact'\nVIOLATION: entities[1].claims[0].source_id: unknown in-world source 'harbor-compact'\nVIOLATION: relations[0].source_id: unknown in-world source 'harbor-compact'\nVIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-allied-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'harbor-compact'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'harbor-compact'\nVIOLATION: entities[1].first_appearance: unknown in-world source 'harbor-compact'\nVIOLATION: entities[1].claims[0].source_id: unknown in-world source 'harbor-compact'\nVIOLATION: relations[0].source_id: unknown in-world source 'harbor-compact'\nVIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-allied-unavailable",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-allied-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-allied-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-direct-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'\nVIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'\nVIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-direct-duplicate-member",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-duplicate-member"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: duplicate object member 'id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-duplicate-member"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: duplicate object member 'id'; cannot load JSON\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-direct-empty",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: relations[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'\n11 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: relations[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'\n11 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-direct-malformed",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-direct-nonarray",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-nonarray"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: expected array\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-nonarray"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: expected array\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-direct-partial",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-partial"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: relations[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'\n7 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-partial"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: relations[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'\n7 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-direct-unavailable",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-direct-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-independent-empty",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-independent-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: relations[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[0].provenance: only valid on item entities\nVIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'\nVIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'\nVIOLATION: entities[0].provenance[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[0].depends_on: unknown event 'missing-event'\nVIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'\n17 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-independent-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[0].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[1].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: unknown in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: unknown in-world source 'archive-ledger'\nVIOLATION: entities[3].first_appearance: unknown in-world source 'courier-log'\nVIOLATION: entities[3].claims[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: relations[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: entities[0].provenance: only valid on item entities\nVIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'\nVIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'\nVIOLATION: entities[0].provenance[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].source_id: unknown in-world source 'courier-log'\nVIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[0].depends_on: unknown event 'missing-event'\nVIOLATION: timeline[1].source_id: unknown in-world source 'courier-log'\n17 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-independent-unavailable",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-independent-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: entities[0].provenance: only valid on item entities\nVIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'\nVIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'\nVIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[0].depends_on: unknown event 'missing-event'\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-independent-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: entities[0].provenance: only valid on item entities\nVIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'\nVIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'\nVIOLATION: timeline[0].tick: must be nonnegative\nVIOLATION: timeline[0].depends_on: unknown event 'missing-event'\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r61-ledger-unavailable",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-ledger-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[1].claim_b.event_id: expected exactly one timeline event 'absent-event'\nVIOLATION: relations[1].to: dangling entity 'missing-map'\nVIOLATION: timeline[1].depends_on: timeline inversion 'later' tick 3 not before 'arrival' tick 2\nVIOLATION: timeline[2]: double-booked 'mira' at tick 2 in timeline[1] ('tower') and 'harbor'\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r61-ledger-unavailable"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[1].claim_b.event_id: expected exactly one timeline event 'absent-event'\nVIOLATION: relations[1].to: dangling entity 'missing-map'\nVIOLATION: timeline[1].depends_on: timeline inversion 'later' tick 3 not before 'arrival' tick 2\nVIOLATION: timeline[2]: double-booked 'mira' at tick 2 in timeline[1] ('tower') and 'harbor'\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-duplicate",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-duplicate"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[4].id: duplicate timeline id 'departure'\nVIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id\nVIOLATION: timeline[1].depends_on[0]: ambiguous dependency event 'departure'\nVIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-duplicate"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[4].id: duplicate timeline id 'departure'\nVIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id\nVIOLATION: timeline[1].depends_on[0]: ambiguous dependency event 'departure'\nVIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-duplicate-member",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-duplicate-member"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: duplicate object member 'x'; cannot load JSON\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-duplicate-member"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: duplicate object member 'x'; cannot load JSON\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-empty",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_a.event_id: expected exactly one timeline event 'tarin-envelope-observation'\nVIOLATION: contradictions[0].claim_b.event_id: expected exactly one timeline event 'sella-bell7-presence'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_a.event_id: expected exactly one timeline event 'tarin-envelope-observation'\nVIOLATION: contradictions[0].claim_b.event_id: expected exactly one timeline event 'sella-bell7-presence'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-independent",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-independent"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\nVIOLATION: relations[0].from: dangling entity 'not-an-entity'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-independent"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\nVIOLATION: relations[0].from: dangling entity 'not-an-entity'\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-loaded",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-loaded"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id\nVIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-loaded"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id\nVIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-malformed",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-malformed"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-malformed-side",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-malformed-side"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[0].claim_a.field: expected one of ['depends_on', 'place_id', 'tick']\nVIOLATION: contradictions[0].claim_b.field: expected one of ['depends_on', 'place_id', 'tick']\nVIOLATION: contradictions[0]: claim_a and claim_b references must differ\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-malformed-side"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nVIOLATION: contradictions[0].claim_a.field: expected one of ['depends_on', 'place_id', 'tick']\nVIOLATION: contradictions[0].claim_b.field: expected one of ['depends_on', 'place_id', 'tick']\nVIOLATION: contradictions[0]: claim_a and claim_b references must differ\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-missing",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-missing"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r62-missing/timeline.json'\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-missing"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r62-missing/timeline.json'\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-nonarray",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-nonarray"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: expected array\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-nonarray"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline.json: expected array\nVIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable\nVIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r62-partial",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-partial"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_b.event_id: expected exactly one timeline event 'sella-bell7-presence'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r62-partial"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: contradictions[0].claim_b.event_id: expected exactly one timeline event 'sella-bell7-presence'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r67-claim-source-loaded-control",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-loaded-control"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-loaded-control"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r67-claim-source-loaded-empty",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-loaded-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].claims[0]: expected nonempty statement and source_id\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-loaded-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[0].claims[0]: expected nonempty statement and source_id\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r67-claim-source-unavailable-control",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-control"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r67-claim-source-unavailable-control/sources.json'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-control"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r67-claim-source-unavailable-control/sources.json'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r67-claim-source-unavailable-empty",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r67-claim-source-unavailable-empty/sources.json'\nVIOLATION: entities[0].claims[0]: expected nonempty statement and source_id\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-empty"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r67-claim-source-unavailable-empty/sources.json'\nVIOLATION: entities[0].claims[0]: expected nonempty statement and source_id\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r67-claim-source-unavailable-whitespace",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r67-claim-source-unavailable-whitespace/sources.json'\nVIOLATION: entities[0].claims[0]: expected nonempty statement and source_id\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: 'corpus/fixtures/r67-claim-source-unavailable-whitespace/sources.json'\nVIOLATION: entities[0].claims[0]: expected nonempty statement and source_id\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r7-ally-reverse-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r7-ally-reverse-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'harbor-compact'\nVIOLATION: relations[1].source_id: ambiguous in-world source 'harbor-compact'\nVIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r7-ally-reverse-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'harbor-compact'\nVIOLATION: relations[1].source_id: ambiguous in-world source 'harbor-compact'\nVIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r7-item-ambiguous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r7-item-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'\nVIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[3].provenance[1].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[3].provenance[2].source_id: ambiguous in-world source 'archive-ledger'\n7 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r7-item-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'\nVIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[3].provenance[1].source_id: ambiguous in-world source 'archive-ledger'\nVIOLATION: entities[3].provenance[2].source_id: ambiguous in-world source 'archive-ledger'\n7 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r72-vela-slate-claim",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r72-vela-slate-claim"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r72-vela-slate-claim"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r73-jorin-slate-claim",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r73-jorin-slate-claim"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r73-jorin-slate-claim"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r8-deps-anomalous",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r8-deps-anomalous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on[1]: repeated dependency 'departure'\nVIOLATION: timeline[1].depends_on[2]: self dependency 'arrival'\nVIOLATION: timeline[1].depends_on: timeline inversion 'arrival' tick 2 not before 'arrival' tick 2\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r8-deps-anomalous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].depends_on[1]: repeated dependency 'departure'\nVIOLATION: timeline[1].depends_on[2]: self dependency 'arrival'\nVIOLATION: timeline[1].depends_on: timeline inversion 'arrival' tick 2 not before 'arrival' tick 2\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r8-deps-distinct",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r8-deps-distinct"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r8-deps-distinct"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r83-vela-joint-nonsighting",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r83-vela-joint-nonsighting"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r83-vela-joint-nonsighting"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r9-dup-high-low",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-dup-high-low"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].id: duplicate timeline id 'same'\nVIOLATION: timeline[2].depends_on[0]: ambiguous dependency event 'same'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-dup-high-low"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].id: duplicate timeline id 'same'\nVIOLATION: timeline[2].depends_on[0]: ambiguous dependency event 'same'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r9-dup-low-high",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-dup-low-high"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].id: duplicate timeline id 'same'\nVIOLATION: timeline[2].depends_on[0]: ambiguous dependency event 'same'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-dup-low-high"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: timeline[1].id: duplicate timeline id 'same'\nVIOLATION: timeline[2].depends_on[0]: ambiguous dependency event 'same'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r9-unique-control",
+      "same": true,
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-unique-control"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/fixtures/r9-unique-control"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "probe_runs": [
+    {
+      "case": "r85-control",
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-control"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-control"
+        ],
+        "returncode": 0,
+        "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r85-unique-break-control",
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r85-masked-ambiguous",
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r85-isolated-ambiguous",
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\n1 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[2].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "r85-harbor-repro",
+      "before": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      },
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'harbor'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[2].from_holder: ambiguous entity 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n5 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "scratch_runs": [
+    {
+      "case": "ambiguous-to-with-late-break-and-tick",
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "/tmp/lore-r86-diagnostic-t34tjsui/ambiguous-to-with-late-break-and-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "ambiguous-from-with-late-break-and-tick",
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "/tmp/lore-r86-diagnostic-t34tjsui/ambiguous-from-with-late-break-and-tick"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].from_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "earlier-invalid-then-ambiguity",
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "/tmp/lore-r86-diagnostic-t34tjsui/earlier-invalid-then-ambiguity"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "both-holder-fields-ambiguous",
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "/tmp/lore-r86-diagnostic-t34tjsui/both-holder-fields-ambiguous"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1].from_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "per-item-reset-and-independent-break",
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "/tmp/lore-r86-diagnostic-t34tjsui/per-item-reset-and-independent-break"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[6].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[7].provenance[2]: provenance chain break; expected from_holder 'harbor', got 'mira'\n6 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "definite-prefix-before-ambiguity",
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "/tmp/lore-r86-diagnostic-t34tjsui/definite-prefix-before-ambiguity"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[5].id: duplicate entities id 'vault'\nVIOLATION: entities[3].provenance[0]: provenance chain break; first record must have from_holder null\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n4 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "dangling-both-directions",
+      "candidate": {
+        "command": [
+          "/usr/bin/python3",
+          "corpus/fixtures/check_bible.py",
+          "/tmp/lore-r86-diagnostic-t34tjsui/dangling-both-directions"
+        ],
+        "returncode": 1,
+        "stdout": "VIOLATION: entities[3].provenance[1].to_holder: dangling entity 'missing-to'\nVIOLATION: entities[3].provenance[2].from_holder: dangling entity 'missing-from'\n2 violation(s); no canon changed\n",
+        "stderr": ""
+      }
+    }
+  ]
+}

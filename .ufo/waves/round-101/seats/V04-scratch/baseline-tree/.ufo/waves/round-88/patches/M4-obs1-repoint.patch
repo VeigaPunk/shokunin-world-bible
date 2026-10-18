@@ -1,0 +1,17 @@
+--- a/corpus/fixtures/r87-myth-cluster/entities.json
++++ b/corpus/fixtures/r87-myth-cluster/entities.json
+@@ -27,11 +27,11 @@
+     "id": "mother-tide-gate",
+     "kind": "place",
+     "name": "Mother-Tide Gate",
+-    "first_appearance": "lowwater-hymn",
++    "first_appearance": "gate-witness",
+     "claims": [
+       {
+-        "statement": "The Low-Water Hymn names the Mother-Tide Gate as a shore threshold.",
+-        "source_id": "lowwater-hymn"
++        "statement": "Hara's witness slip places the first low-water signal at the Mother-Tide Gate.",
++        "source_id": "gate-witness"
+       }
+     ]
+   },

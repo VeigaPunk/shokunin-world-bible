@@ -1,0 +1,66 @@
+{
+  "seat": "JDEP3",
+  "round": 91,
+  "phase": "followup",
+  "tree": {
+    "head": "c2ab3d07eaa86ce58f3f9c7fdff702f4b91ea7b7",
+    "work_commits": ["6332115", "c2ab3d0"],
+    "baseline": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+    "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "checker_diff_baseline_to_delivered_lines": 0,
+    "namespace_rule_introduced_by": "c2ab3d0 (git log -S \"NAMESPACE COLLISION\")"
+  },
+  "register": {
+    "path": "corpus/knowledge/cross-cluster-contradictions.md",
+    "present": false,
+    "r89_demo_still_hypothetical": true,
+    "r89_demo_not_an_entry_marker_present": true
+  },
+  "r10_core_screen_r87_r88m3": {
+    "shared_entity_ids": [],
+    "shared_entity_names_casefold": [],
+    "shared_source_ids_bare": [],
+    "shared_timeline_event_ids": [],
+    "shared_place_ids": [],
+    "shared_timeline_place_ids": [],
+    "shared_relation_tuples": [],
+    "shared_timeline_entity_place_tick": [],
+    "verdict": "empty (must stay empty)"
+  },
+  "r91_c1_fixtures_vs_landed_clusters": {
+    "r91-c1-null-chain": {"vs_r87": "empty", "vs_r88m3": "empty"},
+    "r91-c1-tick-unresolved": {"vs_r87": "empty", "vs_r88m3": "empty"},
+    "own_source_ids": ["archive-ledger", "courier-log"],
+    "scope_note": "calibration scaffolding only (README: not sourced story evidence); bare ids reused by 126/131 other fixture dirs"
+  },
+  "corpus_namespace_inventory": {
+    "structured_fixture_dirs": 152,
+    "bare_source_ids_shared_across_dirs": 10,
+    "top_reuse": {"courier-log": 126, "archive-ledger": 121, "tarin-note": 20, "sella-bell7-note": 18, "vela-note": 6, "harbor-compact": 3, "jorin-note": 3, "r89-f2-source": 3},
+    "landed_cluster_source_ids_reused_by_other_dirs": 0,
+    "namespace_scoped_key_duplicates": 0
+  },
+  "scratch_negative_case": {
+    "root": "/tmp/jdep3-ns",
+    "clusters": ["cluster-a", "cluster-b"],
+    "only_overlap": "bare source_id 'shared-marker'",
+    "cluster_a_alone": {"exit": 0, "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations"},
+    "cluster_b_alone": {"exit": 0, "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations"},
+    "two_directory_invocation": {"exit": 2, "stderr": "usage: check_bible.py [-h] bible / check_bible.py: error: unrecognized arguments: /tmp/jdep3-ns/cluster-b"},
+    "bare_source_id_collision": ["shared-marker"],
+    "namespace_scoped_pair_intersection": [],
+    "referent_screen_shared_entity_ids": [],
+    "referent_screen_shared_names": [],
+    "referent_screen_shared_entity_place_tick": [],
+    "shared_field_or_occasion": false,
+    "disposition_applied": "renamed cluster-b source to b-shared-marker",
+    "after_rename": {"checker_exit": 0, "bare_collision": []},
+    "control_intra_cluster_duplicate_source": {"violations": 6, "exit": 1, "first_line": "VIOLATION: sources[1].id: duplicate sources id 'shared-marker'"},
+    "register_entry_created": false
+  },
+  "observations_for_parent": [
+    "Namespace check is a manual integration gate: checker is single-directory and has no cross-cluster registry; two-directory invocation exits 2.",
+    "Delivered boundary-doc header names one skipped item ('Skipped as named debt: D1 — Decision-table row 2 code refs', holder-assessment-boundary.md:1-6); the round brief describes two items named as skipped debt — CB1/JCAL lane should reconcile.",
+    "SCORECARD.md:232 (r90 record) already states 'Register correctly absent (JDEP3, JDEP2)'; r91 delivered tree still matches."
+  ]
+}

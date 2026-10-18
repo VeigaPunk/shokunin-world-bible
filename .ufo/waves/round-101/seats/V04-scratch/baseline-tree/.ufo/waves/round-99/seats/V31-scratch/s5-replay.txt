@@ -1,0 +1,200 @@
+S5-REPLAY 2026-10-17 23:10:41 -0300
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c  corpus/tools/support_check.py
+86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+=== m1 ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19
+RESULT PASS
+EXIT=0
+OBLIGATIONS raw=21 mapped=21
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23
+RESULT PASS
+EXIT=0
+=== m3 ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19
+RESULT PASS
+EXIT=0
+OBLIGATIONS raw=20 mapped=21
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23
+FINDING phantom_obligation: timeline.json#/7 is not a raw source-attributed obligation
+RESULT FAIL
+EXIT=1
+=== boundary ===
+CHECK pinned inputs: PASS
+CHECK receipt replay: PASS
+CHECK explicit anchor ranges: PASS
+CHECK document structure: PASS
+scope=frozen-document drift + receipts + explicit-anchor range + structure; not semantic or AST validation
+replay_receipts=3/3
+replay_cases=14/14
+anchors=2/2
+h1_count=1
+duplicate_headings=0
+instruction_markers=0
+CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)
+EXIT=0
+CHECK pinned inputs: FAIL
+FINDING checker_drift: delivered checker digest differs from the committed pin
+CERTIFICATION FAIL
+EXIT=1
+=== row9 ===
+-- m9-unknown-event
+VIOLATION: timeline[7].depends_on: unknown event 'no-such-event-id'
+1 violation(s); no canon changed
+EXIT=1
+-- m9-dangling-entity
+VIOLATION: timeline[7].entity_id: dangling entity 'no-such-entity'
+1 violation(s); no canon changed
+EXIT=1
+-- m9-unknown-source
+VIOLATION: timeline[7].source_id: unknown in-world source 'no-such-source'
+1 violation(s); no canon changed
+EXIT=1
+-- m9-drop-depends-key
+VIOLATION: timeline[7].depends_on: required nonempty list
+1 violation(s); no canon changed
+EXIT=1
+-- m9-self-dep
+VIOLATION: timeline[7].depends_on[0]: self dependency 'clerk-lapse-recorded'
+VIOLATION: timeline[7].depends_on: timeline inversion 'clerk-lapse-recorded' tick 15 not before 'clerk-lapse-recorded' tick 15
+2 violation(s); no canon changed
+EXIT=1
+-- m9-repeated-dep
+VIOLATION: timeline[7].depends_on[1]: repeated dependency 'clerk-filing-open'
+1 violation(s); no canon changed
+EXIT=1
+-- m9-tick-inversion
+VIOLATION: timeline[7].depends_on: timeline inversion 'clerk-filing-open' tick 14 not before 'clerk-lapse-recorded' tick 14
+1 violation(s); no canon changed
+EXIT=1
+-- m9-delete-predecessor
+VIOLATION: timeline[6].depends_on: unknown event 'clerk-filing-open'
+1 violation(s); no canon changed
+EXIT=1
+=== freeze mirrors if present ===
+-- work3/empty
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL
+EXIT=1
+-- work4/span
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 09858d77de0ecc37b4f7f5cf2c4e4772f01649fc441b9ad1618f69d0e7434a41 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> f5d2c13674cfc5b564efad86140d3e31b05ff99f98f7a20af7d635cdd0e320e6); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT=2
+-- work4/narr
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 07be7de923c6c4353c076189a23a9a32f19ca49c9339a7501542423a0ce8656b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> 85b16b4f7c952fbfa80649edca86cb1a89220653f49c52f51ff8b1017b8352d0); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+EXIT=2
+-- work4/regen
+FREEZE r98-clerk-filing: events 6/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open is missing; 1 frozen dependency edge(s) gone
+RESULT FAIL
+EXIT=1
+-- work2/edge-drop
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+EXIT=1
+-- work2/wrong
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING ADDITION-DETECTED: event clerk-filing-open gained depends_on ['response-evin-salt-court']
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL
+EXIT=1
+-- work2/delete
+FREEZE r98-clerk-filing: events 6/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open is missing; 1 frozen dependency edge(s) gone
+RESULT FAIL
+EXIT=1
+=== lexical twins ===
+-- m2-wrong-earlier bible
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+-- m2-wrong-earlier support
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19
+RESULT PASS
+EXIT=0
+-- m2-wrong-earlier map
+OBLIGATIONS raw=21 mapped=21
+RESULT PASS
+EXIT=0
+-- m4-span-break bible
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+-- m4-span-break support
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19
+FAIL J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.; span=20; outside-span=17
+RESULT FAIL
+EXIT=1
+-- m4-span-break map
+OBLIGATIONS raw=21 mapped=21
+RESULT PASS
+EXIT=0
+-- m5-source-id bible
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+-- m5-source-id support
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19
+RESULT PASS
+EXIT=0
+-- m5-source-id map
+OBLIGATIONS raw=21 mapped=21
+FINDING source_id_mismatch: timeline.json#/7 does not bind to 'clerk-filing-note'
+RESULT FAIL
+EXIT=1
+-- m6-consistent-regen bible
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+-- m6-consistent-regen support
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 18/18
+RESULT PASS
+EXIT=0
+-- m6-consistent-regen map
+OBLIGATIONS raw=20 mapped=20
+RESULT PASS
+EXIT=0
+-- m7-prose-coherent bible
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+-- m7-prose-coherent support
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 18/18
+RESULT PASS
+EXIT=0
+-- m7-prose-coherent map
+OBLIGATIONS raw=20 mapped=20
+RESULT PASS
+EXIT=0
+-- m7b-excerpt-only bible
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+-- m7b-excerpt-only support
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 18/18
+FAIL J14: source-support; mode=verbatim; anchor=not-found
+RESULT FAIL
+EXIT=1
+-- m7b-excerpt-only map
+OBLIGATIONS raw=20 mapped=20
+RESULT PASS
+EXIT=0
+-- m7c-narrative-only bible
+CLEAN: schema, citations, relations, timeline; 0 violations
+EXIT=0
+-- m7c-narrative-only support
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19
+RESULT PASS
+EXIT=0
+-- m7c-narrative-only map
+OBLIGATIONS raw=21 mapped=21
+RESULT PASS
+EXIT=0
+=== census ===
+173
+END

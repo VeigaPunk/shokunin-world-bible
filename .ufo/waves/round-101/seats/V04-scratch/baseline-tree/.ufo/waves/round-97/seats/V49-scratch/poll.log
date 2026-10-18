@@ -1,0 +1,47 @@
+try=1 reports=0/6 r97fixfiles=0 scope_note=0 r96map_changed=0 tools_changed=0
+try=2 reports=0/6 r97fixfiles=0 scope_note=0 r96map_changed=1 tools_changed=0
+try=3 reports=0/6 r97fixfiles=0 scope_note=0 r96map_changed=1 tools_changed=0
+try=4 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=0
+try=5 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=0
+try=6 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=1
+try=7 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=1
+try=8 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=1
+try=9 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=2
+try=10 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=2
+try=11 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=2
+try=12 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=2
+try=13 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=14 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=15 reports=0/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=16 reports=1/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=17 reports=2/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=18 reports=2/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=19 reports=2/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=20 reports=2/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=21 reports=2/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=22 reports=3/6 r97fixfiles=10 scope_note=0 r96map_changed=1 tools_changed=3
+try=23 reports=3/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=3
+try=24 reports=3/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=3
+try=25 reports=4/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=4
+try=26 reports=4/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=4
+try=27 reports=4/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=4
+try=28 reports=4/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=4
+try=29 reports=4/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=4
+try=30 reports=4/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=4
+try=31 reports=4/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=32 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=33 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=34 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=35 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=36 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=37 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=38 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=39 reports=5/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+try=40 reports=6/6 r97fixfiles=10 scope_note=1 r96map_changed=1 tools_changed=5
+ALL_PRODUCER_REPORTS_PRESENT after try=40
+.ufo/waves/round-97/seats/R1-map-pinning.md
+.ufo/waves/round-97/seats/R2-contract-docs.md
+.ufo/waves/round-97/seats/R3-freeze-hardening.md
+.ufo/waves/round-97/seats/R4-fixture-author.md
+.ufo/waves/round-97/seats/R5-fixture-docs.md
+.ufo/waves/round-97/seats/R6-knowledge-note.md

@@ -1,0 +1,14 @@
+S3-fixture-author.md
+S4-fixture-docs.md
+V10-c2-checker.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V11-c2-inherited-equality.md
+V119-c2-anchors-3.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md

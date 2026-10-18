@@ -1,0 +1,12 @@
+[18:49:36] try=1 R3:absent R4:absent R5:absent R6:absent
+[18:49:56] try=2 R3:absent R4:absent R5:absent R6:absent
+[18:50:16] try=3 R3:absent R4 R5:absent R6:absent
+[18:50:36] try=4 R3:absent R4 R5:absent R6:absent
+[18:50:56] try=5 R3:absent R4 R5:absent R6:absent
+[18:51:16] try=6 R3:absent R4 R5:absent R6:absent
+[18:51:36] try=7 R3:absent R4 R5 R6:absent
+[18:51:56] try=8 R3:absent R4 R5 R6:absent
+[18:52:16] try=9 R3:absent R4 R5 R6:absent
+[18:52:36] try=10 R3:absent R4 R5 R6:absent
+[18:52:56] try=11 R3:absent R4 R5 R6:absent
+[18:53:16] try=12 R3:absent R4 R5 R6:absent

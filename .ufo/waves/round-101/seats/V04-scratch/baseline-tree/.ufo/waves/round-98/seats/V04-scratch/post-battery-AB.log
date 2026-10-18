@@ -1,0 +1,15 @@
+=== A2: SCOPE-REFUSED (real tool, --freeze outside scope) ===
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/target (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/target); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+EXIT=2
+=== B2: PATH-MISMATCH r95 (real tool, foreign copy) ===
+FINDING PATH-MISMATCH: pin r95-crossing-aftermath names corpus/fixtures/r95-crossing-aftermath (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/foreign/r95-crossing-aftermath
+RESULT ERROR
+EXIT=2
+=== B3: PATH-MISMATCH r98 (real tool, foreign copy of the new pin) ===
+FINDING PATH-MISMATCH: pin r98-clerk-filing names corpus/fixtures/r98-clerk-filing (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/foreign/r98-clerk-filing
+RESULT ERROR
+EXIT=2
+CONTRACT_BEFORE=c435239d94da54625b447f77e85dc734be241a1a7e9e5d9a63694fc415d47c99
+CONTRACT_AFTER=c435239d94da54625b447f77e85dc734be241a1a7e9e5d9a63694fc415d47c99
+CONTRACT_UNCHANGED=yes

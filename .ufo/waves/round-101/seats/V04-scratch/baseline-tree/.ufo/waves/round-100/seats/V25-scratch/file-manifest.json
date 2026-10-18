@@ -1,0 +1,520 @@
+{
+  "manifest_self_entry": "listed without self-referential hash",
+  "written_paths": [
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/audit-delivered.json",
+      "sha256": "37d57a51709bbc0a7f906ee89b1ffd5b5bca917421843cff1311a5a090d53ad9",
+      "bytes": 11232
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/audit.py",
+      "sha256": "1b91824f6f0811b64699a4cc8be4d046727dd738023b63dc10969cd9a27a2bd4",
+      "bytes": 5077
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/README.md",
+      "sha256": "9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b",
+      "bytes": 4070
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md",
+      "sha256": "80440d61122488a267a4f0a58a55cb54d89c037d93160f1123e5fb3b2f396f61",
+      "bytes": 8641
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/entities.json",
+      "sha256": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+      "bytes": 1449
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md",
+      "sha256": "0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282",
+      "bytes": 1845
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/sources.json",
+      "sha256": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+      "bytes": 1225
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r95-crossing-aftermath/timeline.json",
+      "sha256": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177",
+      "bytes": 1254
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/README.md",
+      "sha256": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+      "bytes": 5829
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md",
+      "sha256": "c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba",
+      "bytes": 15028
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/entities.json",
+      "sha256": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+      "bytes": 1793
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/fictional-excerpts.md",
+      "sha256": "29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de",
+      "bytes": 4187
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/sources.json",
+      "sha256": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+      "bytes": 2725
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/fixtures/r98-clerk-filing/timeline.json",
+      "sha256": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af",
+      "bytes": 2552
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/tools/dependency-freeze-contract.json",
+      "sha256": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+      "bytes": 29815
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/clean/corpus/tools/dependency_freeze.py",
+      "sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+      "bytes": 29110
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/README.md",
+      "sha256": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+      "bytes": 5829
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md",
+      "sha256": "fc4633b90098539deb32566660ad7a6a4bd012595bc7985a7f78b9fd6d43e398",
+      "bytes": 15025
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/entities.json",
+      "sha256": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+      "bytes": 1793
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/fictional-excerpts.md",
+      "sha256": "dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26",
+      "bytes": 4184
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/sources.json",
+      "sha256": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+      "bytes": 2725
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/fixtures/r98-clerk-filing/timeline.json",
+      "sha256": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af",
+      "bytes": 2552
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/tools/dependency-freeze-contract.json",
+      "sha256": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+      "bytes": 29815
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/tools/dependency_freeze.py",
+      "sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+      "bytes": 29110
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/README.md",
+      "sha256": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+      "bytes": 5829
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md",
+      "sha256": "c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba",
+      "bytes": 15028
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/entities.json",
+      "sha256": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+      "bytes": 1793
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/fictional-excerpts.md",
+      "sha256": "29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de",
+      "bytes": 4187
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/sources.json",
+      "sha256": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+      "bytes": 2725
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/fixtures/r98-clerk-filing/timeline.json",
+      "sha256": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af",
+      "bytes": 2552
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/tools/dependency-freeze-contract.json",
+      "sha256": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+      "bytes": 29815
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/tools/dependency_freeze.py",
+      "sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+      "bytes": 29110
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/controls-delivered.json",
+      "sha256": "5aacb37e7d93f051968907c04a510c4747e9e8b4f24d565455143627e5611fe8",
+      "bytes": 8728
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/file-manifest.json",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/README.md",
+      "sha256": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+      "bytes": 5829
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md",
+      "sha256": "c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba",
+      "bytes": 15028
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/entities.json",
+      "sha256": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+      "bytes": 1793
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/fictional-excerpts.md",
+      "sha256": "dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26",
+      "bytes": 4184
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/sources.json",
+      "sha256": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+      "bytes": 2725
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing/timeline.json",
+      "sha256": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af",
+      "bytes": 2552
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/tools/dependency-freeze-contract.json",
+      "sha256": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+      "bytes": 29815
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/tools/dependency_freeze.py",
+      "sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+      "bytes": 29110
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/README.md",
+      "sha256": "9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b",
+      "bytes": 4070
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md",
+      "sha256": "80440d61122488a267a4f0a58a55cb54d89c037d93160f1123e5fb3b2f396f61",
+      "bytes": 8641
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/entities.json",
+      "sha256": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+      "bytes": 1449
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md",
+      "sha256": "b0725e215a8c51bd0dda5b384396913a6d8ea36e58caa928d5b0315d47fc1aae",
+      "bytes": 1842
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/sources.json",
+      "sha256": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+      "bytes": 1225
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/fixtures/r95-crossing-aftermath/timeline.json",
+      "sha256": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177",
+      "bytes": 1254
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/tools/dependency-freeze-contract.json",
+      "sha256": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+      "bytes": 29815
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/tools/dependency_freeze.py",
+      "sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+      "bytes": 29110
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/tools/support_check.py",
+      "sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+      "bytes": 17006
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/README.md",
+      "sha256": "9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b",
+      "bytes": 4070
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md",
+      "sha256": "80440d61122488a267a4f0a58a55cb54d89c037d93160f1123e5fb3b2f396f61",
+      "bytes": 8641
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/entities.json",
+      "sha256": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+      "bytes": 1449
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md",
+      "sha256": "b0725e215a8c51bd0dda5b384396913a6d8ea36e58caa928d5b0315d47fc1aae",
+      "bytes": 1842
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/sources.json",
+      "sha256": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+      "bytes": 1225
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/fixtures/r95-crossing-aftermath/timeline.json",
+      "sha256": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177",
+      "bytes": 1254
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/tools/dependency-freeze-contract.json",
+      "sha256": "153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947",
+      "bytes": 19291
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/tools/dependency_freeze.py",
+      "sha256": "03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b",
+      "bytes": 26644
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/tools/support_check.py",
+      "sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+      "bytes": 17006
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/replay-delivered.json",
+      "sha256": "73de85fc1d401742959e37b5126fb51ecce9976bc27b4e964cde4b3de040c492",
+      "bytes": 35445
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/replay.py",
+      "sha256": "d2a961c737819f102601ba26d74a9820174d600d3e870a7dda9f852f0d322f97",
+      "bytes": 4685
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/README.md",
+      "sha256": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+      "bytes": 5829
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md",
+      "sha256": "c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba",
+      "bytes": 15028
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/contradictions.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/entities.json",
+      "sha256": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+      "bytes": 1793
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/fictional-excerpts.md",
+      "sha256": "dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26",
+      "bytes": 4184
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/inspiration-note.md",
+      "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "bytes": 1956
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/relations.json",
+      "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "bytes": 139
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/source-excerpt.md",
+      "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "bytes": 640
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/sources.json",
+      "sha256": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+      "bytes": 2725
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing/timeline.json",
+      "sha256": "3290cb82c82d772e505de60f98dbd77859c4898ba9012502cbb349e6844a16a3",
+      "bytes": 2527
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/tools/dependency-freeze-contract.json",
+      "sha256": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+      "bytes": 29815
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/tools/dependency_freeze.py",
+      "sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+      "bytes": 29110
+    },
+    {
+      "path": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V25-verdict-calibration.md",
+      "sha256": "686f67268b16614356ab6a63b5e3c384456e48c001247dfcf2fe074c672e97c2",
+      "bytes": 16451
+    }
+  ]
+}

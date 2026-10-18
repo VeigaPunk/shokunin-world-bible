@@ -1,0 +1,1 @@
+CENSUS entities.json dirs=173 clean=39 negative=134 other=0 violation_lines=421 all_dirs=173

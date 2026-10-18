@@ -1,0 +1,56 @@
+{
+  "seat": "JCAL3",
+  "wave": "round-92-followup",
+  "judgment_surface": {
+    "head": "c4d4823b9a8165a88e8199af136e62d6e961b6b9",
+    "tree_status_short": "",
+    "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+    "notes": ["corpus/fixtures/README.md:L1046-1062", "corpus/knowledge/r91-c9-watch.md:L205-206"]
+  },
+  "claims": {
+    "A_exact_five": "confirmed",
+    "B_guidance_accurate": "confirmed_with_precision_note"
+  },
+  "argv_diff_census": {
+    "command_form": "python3 -I corpus/fixtures/check_bible.py <rel|abs> (cwd=lore-shokunin, all 166 direct fixture dirs, stdout+exit+stderr compared)",
+    "dirs": 166,
+    "argv_diff_set_count": 5,
+    "argv_diff_set": [
+      "corpus/fixtures/r5-missing-file",
+      "corpus/fixtures/r62-missing",
+      "corpus/fixtures/r67-claim-source-unavailable-control",
+      "corpus/fixtures/r67-claim-source-unavailable-empty",
+      "corpus/fixtures/r67-claim-source-unavailable-whitespace"
+    ],
+    "b1_replay_sha_mismatches": 0,
+    "diff_cause": "OSError message embeds directory / '<section>.json' (argv-built); exit/stderr unchanged",
+    "missing_section_files": {
+      "r5-missing-file": ["contradictions.json"],
+      "r62-missing": ["timeline.json"],
+      "r67-claim-source-unavailable-control": ["sources.json"],
+      "r67-claim-source-unavailable-empty": ["sources.json"],
+      "r67-claim-source-unavailable-whitespace": ["sources.json"]
+    }
+  },
+  "receipt_vs_spelling": {
+    "B1_eq_B2_parsed": true,
+    "rows": {
+      "r5-missing-file": {"receipt": "430d8efb9e124261", "rel_run": "430d8efb9e124261", "abs_run": "7a81d5020245c2e6", "rel_matches": true},
+      "r62-missing": {"receipt": "f440ca4a0dab465d", "rel_run": "f440ca4a0dab465d", "abs_run": "a96b823cda6825d9", "rel_matches": true},
+      "r67-claim-source-unavailable-control": {"receipt": "0bbc1b1cbade5b48", "rel_run": "0bbc1b1cbade5b48", "abs_run": "b38074b66abe86ed", "rel_matches": true},
+      "r67-claim-source-unavailable-empty": {"receipt": "983af74ff7867c56", "rel_run": "983af74ff7867c56", "abs_run": "f6b3f765522ce373", "rel_matches": true},
+      "r67-claim-source-unavailable-whitespace": {"receipt": "ffc2b180d2945525", "rel_run": "ffc2b180d2945525", "abs_run": "b3235e6483055012", "rel_matches": true}
+    }
+  },
+  "spelling_matrix_r5_missing_file": {
+    "canonical_rel": {"exit": 1, "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755", "matches_canonical": true},
+    "absolute": {"exit": 1, "stdout_sha256": "7a81d5020245c2e6c95b53b8ef6a1ed41e96ea9da638cd57d3226c673a18026b", "matches_canonical": false},
+    "dot_rel": {"exit": 1, "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755", "matches_canonical": true, "note": "pathlib normalization"},
+    "trailing_slash": {"exit": 1, "stdout_sha256": "430d8efb9e124261fbfadb4a2b2a7295bcb9385316e994c012c2f03e3dbf8755", "matches_canonical": true, "note": "pathlib normalization"},
+    "parent_prefixed_cwd_shokunin": {"exit": 1, "stdout_sha256": "c3f3dfe5bdfe7254e98f624fccc357ab4f30ca15bcbad16b35692c4173812c12", "matches_canonical": false}
+  },
+  "live_scope_scan": {"corpus_live_dirs": 32, "fixture_like_missing_section_dirs": 0},
+  "writes": ["followup/JCAL3.md", "followup/JCAL3-evidence.json"],
+  "scratch_files_created": 0,
+  "commit_or_push": false
+}

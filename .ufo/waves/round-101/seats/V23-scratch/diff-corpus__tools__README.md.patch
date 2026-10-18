@@ -1,0 +1,67 @@
+diff --git c/corpus/tools/README.md w/corpus/tools/README.md
+index 309341b..e87573c 100644
+--- c/corpus/tools/README.md
++++ w/corpus/tools/README.md
+@@ -419,3 +419,62 @@ RESULT FAIL
+ ```
+ 
+ The delivered fixture was never changed. The same byte-identical tool and contract mirror's `--self-test` still prints `SELF-TEST 18/18` and `RESULT PASS`, exit 0; the case set and expectations are unchanged. The 0/1/2 contract, semantic-finding precedence, scope guard, path binding, and all semantic/non-establishment bounds remain unchanged. `r100-docket-review` is not part of this seven-fixture frozen chain; the pin addition covers r99, not the new continuation.
++
++### Round-101 addendum: r100 pinned, eight-fixture chain, wrong-but-earlier edge persisted as self-test case (2026-10-18)
++
++#### Dated supersession (prior text kept as delivered history)
++
++The current chain is eight fixtures. Earlier chain-size wording — including Round-100's "seven-fixture chain", "7/7 clean", and its closing sentence that "`r100-docket-review` is not part of this seven-fixture frozen chain" — is superseded as of 2026-10-18 (round 101); those receipts remain historical measurements of their revisions. The blind-spot decision table's row 2 ("wrong-but-earlier dependency edge", `corpus/knowledge/r99-gate-blind-spot-table.md`, demonstrated at r99 by verifier probe V16 P8) is now pinned by a persisted self-test case in the delivered gate (below). The knowledge table itself is unchanged in r101 (outside the round's producer byte ownership); this addendum is the dated record of that row's closure. This is calibration, not a new dependency-semantics or chronology-truth claim.
++
++#### Guarded r100 pin addition
++
++The integration-time operation was run once from the repository root; this is not a verification command and must not be rerun to check a delivery:
++
++```sh
++python3 corpus/tools/dependency_freeze.py --freeze corpus/fixtures/r100-docket-review
++```
++
++Observed output (exit 0):
++
++```
++FROZEN r100-docket-review: events 9; dependency-edges 8; relations 1
++DIGEST 77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19
++FREEZE r100-docket-review: events 9/9; dependency-edges 8/8; relations 1/1
++DIGEST 77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19
++RESULT PASS
++```
++
++The new pin records `corpus/fixtures/r100-docket-review`, revision `ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026` (the r101 round-declaration commit; the tree HEAD at freeze time), payload schema 2, all ten declared filenames and matching per-file SHA-256 values, 9 events / 8 dependency edges / 1 relation / 6 entities / 9 sources, and the tick-16 edge `clerk-review-first-passage` → `clerk-lapse-recorded`. The declared ten-file set is unchanged from r99.
++
++`git diff 6f86bf2 -- corpus/tools/dependency-freeze-contract.json` shows exactly three hunks: the r100-docket-review pin addition, the new `self_test.expected.repointed_edge` case, and the guarded writer's top-level `revision` refresh (`b5fe472957ab1e4e9c90f5613acc14cd24a288ae` → `ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026`). Every field of every inherited pin is unchanged from the r100 closure; none was re-frozen. The Round-100 sentence that the delivered pins record revision `b5fe472…` now applies to the inherited seven only. Aside from the guarded writer, contract bytes were hand-edited only to add the `repointed_edge` expectation.
++
++#### Persisted self-test: 19 cases, `repointed_edge`
++
++The new case copies the self-test base fixture `r95-crossing-aftermath` into an isolated mirror and swaps `aftermath-missing-evin`'s single `depends_on` entry from its correct predecessor `paired-crossing-decision` (tick 10) to a different valid earlier event, `aru-ninth-bell` (tick 9, pinned in the same fixture). Hand-derived expectation: the compare loses `paired-crossing-decision` (`REDUCTION-DETECTED`) and gains `aru-ninth-bell` (`ADDITION-DETECTED`) on the same event in one run; no endpoint or relation change; exit 1. Persisted: `"repointed_edge": {"exit": 1, "finding_ids": ["ADDITION-DETECTED", "REDUCTION-DETECTED"], "forbid_traceback": true}`.
++
++```sh
++python3 corpus/tools/dependency_freeze.py --self-test   # SELF-TEST 19/19 / RESULT PASS, exit 0
++```
++
++The run printed 19 `CASE … ok` lines — the 18 prior case ids with unchanged expectations plus `CASE repointed_edge: exit=1 expected=1 findings=['ADDITION-DETECTED', 'REDUCTION-DETECTED'] ok` — then `SELF-TEST 19/19` and `RESULT PASS`, exit 0. The same class was independently reproduced outside the self-test harness on a seat-scratch mirror (delivered tool + contract copy + r95 fixture; the swap applied by hand), which printed `FINDING ADDITION-DETECTED: event aftermath-missing-evin gained depends_on ['aru-ninth-bell']`, `FINDING REDUCTION-DETECTED: event aftermath-missing-evin lost depends_on ['paired-crossing-decision']`, `RESULT FAIL`, exit 1. `SELF-TEST-MISMATCH` still exits 2.
++
++#### Eight-fixture verification (read-only)
++
++Run from the repository root:
++
++```sh
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r100-docket-review
++```
++
++All eight print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0 (8/8 clean). The seven inherited digests are exactly the earlier values (r88 `acf677a7085be3f6…`, r94 `048b8ff39e4a5232…`, r95 `97cffd7bfe6e0c92…`, r96 `43911900923c110b…`, r97 `a28b9ea0d65ec355…`, r98 `5ecf84e19121ea12…`, r99 `7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`); the r100 digest is `77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19`.
++
++#### Unchanged
++
++The 0/1/2 exit contract, the clean-run `FREEZE` / `DIGEST` / `RESULT` receipt surface, path binding (`PATH-MISMATCH`), the `--freeze` scope guard, and semantic-finding precedence (exit 1) are unchanged. This addendum does not change `map_obligations.py`, `support_check.py`, or `boundary_doc_check.py`.

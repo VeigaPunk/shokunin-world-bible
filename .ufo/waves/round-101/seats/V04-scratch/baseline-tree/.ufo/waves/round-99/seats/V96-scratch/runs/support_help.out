@@ -1,0 +1,10 @@
+usage: support_check.py [-h] [--map MAP] cluster
+
+Check fixed-string anchors and R9 modes in a cluster map
+
+positional arguments:
+  cluster     cluster directory containing the claim-to-excerpt map
+
+options:
+  -h, --help  show this help message and exit
+  --map MAP   map path; defaults to a conventional map in the cluster

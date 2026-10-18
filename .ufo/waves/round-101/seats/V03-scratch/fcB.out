@@ -1,0 +1,2 @@
+FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=[] extra=['repointed_edge']
+RESULT ERROR

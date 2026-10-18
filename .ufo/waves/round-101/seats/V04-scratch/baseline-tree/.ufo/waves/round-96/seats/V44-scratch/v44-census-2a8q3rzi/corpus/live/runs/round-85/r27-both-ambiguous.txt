@@ -1,0 +1,9 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r27-both-ambiguous
+exit_code=1
+VIOLATION: entities[4].id: duplicate entities id 'seal'
+VIOLATION: entities[5].id: duplicate entities id 'mira'
+VIOLATION: relations[0].from: ambiguous entity 'mira'
+VIOLATION: relations[0].to: ambiguous entity 'seal'
+VIOLATION: timeline[0].entity_id: ambiguous actor entity 'mira'
+VIOLATION: timeline[1].entity_id: ambiguous actor entity 'mira'
+6 violation(s); no canon changed

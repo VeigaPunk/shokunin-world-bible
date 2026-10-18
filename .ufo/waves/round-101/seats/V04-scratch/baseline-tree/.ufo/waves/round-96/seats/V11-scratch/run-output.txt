@@ -1,0 +1,41 @@
+== RUN r96 vs r95: parsed 16 json rows, 2 editorial rows ==
+J01  excerpt=fictional-excerpts.md span=12-12 grep=[12] py=[12] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J01): anchor-identical=True span-same=True lines ref=[12] == this=[12] same=True
+J02  excerpt=fictional-excerpts.md span=13-13 grep=[13] py=[13] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J02): anchor-identical=True span-same=True lines ref=[13] == this=[13] same=True
+J03  excerpt=fictional-excerpts.md span=12-12 grep=[12] py=[12] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J03): anchor-identical=True span-same=True lines ref=[12] == this=[12] same=True
+J04  excerpt=fictional-excerpts.md span=13-13 grep=[13] py=[13] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J04): anchor-identical=True span-same=True lines ref=[13] == this=[13] same=True
+J05  excerpt=fictional-excerpts.md span=17-17 grep=[17] py=[17] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J05): anchor-identical=True span-same=True lines ref=[17] == this=[17] same=True
+J06  excerpt=fictional-excerpts.md span=12-12 grep=[12] py=[12] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J06): anchor-identical=True span-same=True lines ref=[12] == this=[12] same=True
+J07  excerpt=fictional-excerpts.md span=13-13 grep=[13] py=[13] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J07): anchor-identical=True span-same=True lines ref=[13] == this=[13] same=True
+J08  excerpt=fictional-excerpts.md span=12-12 grep=[12] py=[12] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J08): anchor-identical=True span-same=True lines ref=[12] == this=[12] same=True
+J09  excerpt=fictional-excerpts.md span=13-13 grep=[13] py=[13] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J09): anchor-identical=True span-same=True lines ref=[13] == this=[13] same=True
+J10  excerpt=fictional-excerpts.md span=18-18 grep=[18] py=[18] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J10): anchor-identical=True span-same=True lines ref=[18] == this=[18] same=True
+J11  excerpt=fictional-excerpts.md span=19-19 grep=[19] py=[19] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J11): anchor-identical=True span-same=True lines ref=[19] == this=[19] same=True
+J12  excerpt=fictional-excerpts.md span=12-12 grep=[12] py=[12] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J12): anchor-identical=True span-same=True lines ref=[12] == this=[12] same=True
+J13  excerpt=fictional-excerpts.md span=13-13 grep=[13] py=[13] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J13): anchor-identical=True span-same=True lines ref=[13] == this=[13] same=True
+J14  excerpt=fictional-excerpts.md span=18-20 grep=[20] py=[20] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J14): anchor-identical=True span-same=True lines ref=[20] == this=[20] same=True
+J15  excerpt=fictional-excerpts.md span=22-31 grep=[26] py=[26] occ=1 IN-SPAN outside-span=[]
+     vs-ref(J15): anchor-identical=True span-same=True lines ref=[26] == this=[26] same=True
+J16  excerpt=fictional-excerpts.md span=33-42 grep=[37] py=[37] occ=1 IN-SPAN outside-span=[] pre95=[] appended-only=True
+S01  excerpt=source-excerpt.md span=5-5 grep=[5] py=[5] occ=1 IN-SPAN outside-span=[]
+     vs-ref(S01): anchor-identical=True span-same=True lines ref=[5] == this=[5] same=True
+S02  excerpt=source-excerpt.md span=5-5 grep=[5] py=[5] occ=1 IN-SPAN outside-span=[]
+     vs-ref(S02): anchor-identical=True span-same=True lines ref=[5] == this=[5] same=True
+new row ids (vs ref): ['J16']
+inventory declared=[16, 2, 18, 14] parsed=[16, 2, 18, 14] match=True
+declared-line: **Expected inventory:** 16 JSON facts; 2 editorial rows; 18 total mapped rows; 14 distinct excerpt anchors.
+fictional-excerpts.md: ref=1845B this=2588B byte-prefix-ok=True
+ALL-ANCHOR-CHECKS-PASS

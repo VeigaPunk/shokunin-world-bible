@@ -1,0 +1,69 @@
+{
+  "seat": "M4",
+  "claim": "C2 coverage",
+  "baseline": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94",
+  "selection": {
+    "M1": "Reviewed gate-witness and dune-register alternatives.",
+    "M2": "No patch found by 25-minute cutoff or final check.",
+    "M3": "Selected the full four-source set; the shell-charter watch wording was synthesized as a pledge to preserve the source reliability boundary and S2's exact R3 anchor."
+  },
+  "before": {
+    "checker": {
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster; echo \"exit=$?\"",
+      "cwd": "/tmp/lore-shokunin-r89-m4/base",
+      "observed_output": "CLEAN: schema, citations, relations, timeline; 0 violations\nexit=0"
+    },
+    "d1_support": {
+      "command": "python3 -c 'import json,pathlib; p=pathlib.Path(\"corpus/fixtures/r87-myth-cluster\"); sources={x[\"id\"] for x in json.loads((p/\"sources.json\").read_text())}; entities=json.loads((p/\"entities.json\").read_text()); relations=json.loads((p/\"relations.json\").read_text()); events=json.loads((p/\"timeline.json\").read_text()); excerpt=(p/\"lowwater-hymn-excerpt.md\").read_text(); prose={x.stem.removesuffix(\"-excerpt\"):x.read_text() for x in p.glob(\"*-excerpt.md\")}; pointers=[e[\"first_appearance\"] for e in entities]; entity_claims=[(c[\"source_id\"],c[\"statement\"]) for e in entities for c in e[\"claims\"]]; supported_claims=sum(source in prose and ((source == \"lowwater-hymn\" and \"Mother-Tide Gate\" in prose[source]) or statement in prose[source]) for source,statement in entity_claims); facts=len(pointers)+len(entity_claims)+len(relations)+len(events); ok=sum(source in sources for source in pointers)+supported_claims; print(f\"D1 r87 baseline: facts={facts} OK={ok} not-OK={facts-ok}; delivered source excerpts={sorted(prose)}\")'",
+      "cwd": "/tmp/lore-shokunin-r89-m4/base",
+      "observed_output": "D1 r87 baseline: facts=22 OK=8 not-OK=14; delivered source excerpts=['lowwater-hymn']"
+    }
+  },
+  "after": {
+    "facts_total": 22,
+    "facts_supported": 22,
+    "baseline_supported": 8,
+    "newly_supported": 14,
+    "excerpt_files": 4,
+    "anchor_passes": "14/14",
+    "checks": [
+      {"fact":"E1","source_id":"gate-witness","excerpt":"corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md","anchor":"I am Hara, keeper of the Mother-Tide Gate","line":5,"command":"Grep(pattern=\"I am Hara, keeper of the Mother-Tide Gate\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md:5:> I am Hara, keeper of the Mother-Tide Gate."},
+      {"fact":"E2","source_id":"dune-register","excerpt":"corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md","anchor":"I, Sen, serve as recorder at Ash-Dune Sanctuary","line":5,"command":"Grep(pattern=\"I, Sen, serve as recorder at Ash-Dune Sanctuary\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md:5:> I, Sen, serve as recorder at Ash-Dune Sanctuary."},
+      {"fact":"E3","source_id":"dune-register","excerpt":"corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md","anchor":"Ash-Dune Sanctuary is a record-keeping place","line":6,"command":"Grep(pattern=\"Ash-Dune Sanctuary is a record-keeping place\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md:6:> Place of keeping: Ash-Dune Sanctuary is a record-keeping place."},
+      {"fact":"E4","source_id":"shell-charter","excerpt":"corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md","anchor":"Shellweavers signed this charter as a signatory faction","line":7,"command":"Grep(pattern=\"Shellweavers signed this charter as a signatory faction\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md:7:> Shellweavers signed this charter as a signatory faction."},
+      {"fact":"E5","source_id":"shell-charter","excerpt":"corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md","anchor":"Reedwardens signed this charter as a signatory faction","line":8,"command":"Grep(pattern=\"Reedwardens signed this charter as a signatory faction\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md:8:> Reedwardens signed this charter as a signatory faction."},
+      {"fact":"E6","source_id":"tide-bell-tally","excerpt":"corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md","anchor":"We carried the Reed Bell for the low-water signal","line":9,"command":"Grep(pattern=\"We carried the Reed Bell for the low-water signal\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md:9:| 1 | We carried the Reed Bell for the low-water signal. |"},
+      {"fact":"R1","source_id":"shell-charter","excerpt":"corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md","anchor":"By this charter, Shellweavers stand allied with Reedwardens","line":9,"command":"Grep(pattern=\"By this charter, Shellweavers stand allied with Reedwardens\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md:9:> By this charter, Shellweavers stand allied with Reedwardens."},
+      {"fact":"R2","source_id":"shell-charter","excerpt":"corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md","anchor":"By this charter, Reedwardens stand allied with Shellweavers","line":10,"command":"Grep(pattern=\"By this charter, Reedwardens stand allied with Shellweavers\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md:10:> By this charter, Reedwardens stand allied with Shellweavers."},
+      {"fact":"R3","source_id":"shell-charter","excerpt":"corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md","anchor":"Shellweavers keep watch with the Reed Bell","line":11,"command":"Grep(pattern=\"Shellweavers keep watch with the Reed Bell\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md:11:> Watch clause: Under this charter's pledge, Shellweavers keep watch with the Reed Bell."},
+      {"fact":"R4","source_id":"dune-register","excerpt":"corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md","anchor":"At Ash-Dune Sanctuary, Sen kept the register","line":7,"command":"Grep(pattern=\"At Ash-Dune Sanctuary, Sen kept the register\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md:7:> At Ash-Dune Sanctuary, Sen kept the register."},
+      {"fact":"T1","source_id":"gate-witness","excerpt":"corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md","anchor":"I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow","line":6,"command":"Grep(pattern=\"I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md:6:> I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow, at the first low-water bell."},
+      {"fact":"T2","source_id":"tide-bell-tally","excerpt":"corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md","anchor":"At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow","line":10,"command":"Grep(pattern=\"At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md:10:| 2 | At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow. |"},
+      {"fact":"T3","source_id":"gate-witness","excerpt":"corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md","anchor":"I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell","line":7,"command":"Grep(pattern=\"I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md:7:> I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell."},
+      {"fact":"T4","source_id":"dune-register","excerpt":"corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md","anchor":"I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell","line":8,"command":"Grep(pattern=\"I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell\", path=\"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md\", output_mode=\"content\", head_limit=20)","observed_output":"/tmp/lore-shokunin-r89-m4/finaltree/corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md:8:> I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell."}
+    ],
+    "patch_replay": {
+      "command": "mkdir -p finaltree && cp -a base/. finaltree/ && patch --dry-run --batch -p1 -d finaltree < /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-89/patches/M4-excerpts-final.patch && patch --batch -p1 -d finaltree < /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-89/patches/M4-excerpts-final.patch",
+      "cwd": "/tmp/lore-shokunin-r89-m4",
+      "observed_output": "checking file corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md\nchecking file corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md\nchecking file corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md\nchecking file corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md\npatching file corpus/fixtures/r87-myth-cluster/gate-witness-excerpt.md\npatching file corpus/fixtures/r87-myth-cluster/dune-register-excerpt.md\npatching file corpus/fixtures/r87-myth-cluster/shell-charter-excerpt.md\npatching file corpus/fixtures/r87-myth-cluster/tide-bell-tally-excerpt.md"
+    },
+    "checker": {
+      "command": "python3 finaltree/corpus/fixtures/check_bible.py finaltree/corpus/fixtures/r87-myth-cluster; echo \"exit=$?\"",
+      "cwd": "/tmp/lore-shokunin-r89-m4",
+      "observed_output": "CLEAN: schema, citations, relations, timeline; 0 violations\nexit=0"
+    }
+  },
+  "review": {
+    "result": "No anchor explicitly negates a different fact. T3 and T4 report incompatible placements for the same single vow, the pre-existing contradiction recorded in contradictions.json; neither excerpt declares the other account false, and no canon is selected.",
+    "R3_boundary": "The shell-charter watch clause is framed as a pledge, not as proof of performance, matching the source reliability note.",
+    "scope": "The baseline's 8/22 includes the seven resolvable first_appearance pointers and one text-supported claim; the 14 new claim/relation/timeline facts each have a delivered anchor. The structural checker does not read prose."
+  },
+  "poll": {
+    "command": "background Bash loop; exact command and 25 timestamped observations are transcribed in M4.md",
+    "deadline": "2026-10-17T03:52:27-03:00",
+    "checks": 25,
+    "M1": "patches/M1-excerpts.patch available at check 10 onward",
+    "M2": "missing at all 25 checks; final Glob at 2026-10-17T03:52:48-03:00 returned No matches found",
+    "M3": "patches/M3-excerpts.patch available at check 5 onward"
+  }
+}

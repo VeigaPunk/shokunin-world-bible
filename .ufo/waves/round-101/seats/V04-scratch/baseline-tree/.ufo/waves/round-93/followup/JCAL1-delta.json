@@ -1,0 +1,55 @@
+{
+  "seat": "JCAL1",
+  "role": "census judge #1 (full census + delta vs B1 baseline)",
+  "head": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+  "baseline_head": "87779a00f25bd1855ede479e490123843e5f056e",
+  "tree_clean": true,
+  "checker_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+  "checker_pin_match": true,
+  "baseline_receipt": {
+    "path": ".ufo/waves/round-93/patches/B1-tuples.json",
+    "rows": 166,
+    "sha256": "185ce02d2e2bf80e2846dada9e864fc533d58cfd229be9e2596d4b1f2a21baaf"
+  },
+  "census": {
+    "direct_fixture_dirs": 167,
+    "head_direct_fixture_dirs": 167,
+    "tracked_fixtures_match_HEAD": true,
+    "first_dir": "ally-one-way",
+    "last_dir": "r93-m2-kojiki-cluster",
+    "exit_counts": {
+      "0": 33,
+      "1": 134
+    },
+    "violation_lines_total": 421,
+    "stderr_nonempty_count": 0,
+    "unexpected_exit_count": 0,
+    "census_exit": 0,
+    "receipt_path": "/tmp/lore-JCAL1/JCAL1-tuples.json",
+    "receipt_bytes": 29586,
+    "receipt_sha256": "6cc12f7fefb8c37f15f9a52b1fd1ee8e75d1174215eef11c78a9e3be5402888d"
+  },
+  "delta": {
+    "baseline_rows": 166,
+    "census_rows": 167,
+    "common_rows": 166,
+    "missing_from_census": [],
+    "new_in_census": [
+      "corpus/fixtures/r93-m2-kojiki-cluster"
+    ],
+    "new_tuple": {
+      "exit": 0,
+      "stdout_sha256": "afe570fcebf45fe3913b8b87c65a2e0408e99e9c69854757a2498d5be420c07e",
+      "violation_count": 0
+    },
+    "changed_tuples": [],
+    "exit_flips": 0,
+    "common_violation_lines": 421
+  },
+  "verdict_recommendation": {
+    "census_completeness": "improved",
+    "preexisting_fixture_behavior": "unchanged (no drift; desired no-regression property)",
+    "checker_pin_integrity": "unchanged (ff9fd2aa matches)",
+    "overall_r93_census_axis": "improved"
+  }
+}

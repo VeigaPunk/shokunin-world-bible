@@ -1,0 +1,283 @@
+{
+  "seat": "C6",
+  "mission": "Critic: causal separability and additions-only admission audit",
+  "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+  "subject_patch": ".ufo/waves/round-87/patches/X1-c1.patch",
+  "subject_patch_scope_artifact": ".ufo/waves/round-87/patches/X1-tuple-delta.json",
+  "measurement": {
+    "scratch_worktree": "/tmp/r87-C6-X1",
+    "patch_application": "git -C /tmp/r87-C6-X1 apply --check /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/X1-c1.patch && git -C /tmp/r87-C6-X1 apply /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-87/patches/X1-c1.patch",
+    "patch_application_observed": "success; census captured 142 tuples",
+    "baseline_checker_sha256": "e8f241623aa84eb1dce192a03c9e70b8f4ba386344f0b22a99ba1ac0d4942132",
+    "x1_candidate_checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+    "census_command_scope": "Every directory under corpus containing at least one of sources.json, entities.json, relations.json, timeline.json, contradictions.json; direct corpus/fixtures plus corpus/live probes.",
+    "census_counts": {
+      "total_directories": 142,
+      "direct_corpus_fixtures": 133,
+      "other_corpus_directories": 9,
+      "changed_output_tuples": 3,
+      "unchanged_output_tuples": 139,
+      "added_finding_lines": 5,
+      "altered_finding_lines": 0,
+      "removed_finding_lines": 0,
+      "preexisting_findings_byte_preserved_in_order": true,
+      "input_hash_differences": 0,
+      "exit_counts_before": {
+        "0": 32,
+        "1": 110
+      },
+      "exit_counts_after": {
+        "0": 32,
+        "1": 110
+      },
+      "stderr_nonempty_after": 0
+    },
+    "direct_fixture_scope": {
+      "changed_output_tuples": 0,
+      "exit_counts": {
+        "0": 28,
+        "1": 105
+      },
+      "x1_tuple_delta_json_agrees_with_this_scope": true
+    },
+    "additional_existing_corpus_directories": [
+      "corpus/live/rejected-r38/r38-ledger-source-ambiguous",
+      "corpus/live/rejected-r38/r38-ledger-source-unique",
+      "corpus/live/rejected-r4/name-duplicate",
+      "corpus/live/rejected-r4/name-unique",
+      "corpus/live/runs/round-85/probe-inputs/r85-control",
+      "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro",
+      "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+      "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "corpus/live/runs/round-85/probe-inputs/r85-unique-break-control"
+    ],
+    "measurement_commands": [
+      "python3 /tmp/r87-C6-X1/census_all.py --root /tmp/r87-C6-X1 --checker /tmp/r87-C6/baseline-check_bible.py --out /tmp/r87-C6-X1/before-all.json --revision 28706dc",
+      "python3 /tmp/r87-C6-X1/census_all.py --root /tmp/r87-C6-X1 --checker /tmp/r87-C6-X1/corpus/fixtures/check_bible.py --out /tmp/r87-C6-X1/after-all.json --revision X1-candidate",
+      "python3 /tmp/r87-C6-X1/compare_all.py /tmp/r87-C6-X1/before-all.json /tmp/r87-C6-X1/after-all.json"
+    ],
+    "comparison_command_observed_output": [
+      "fixtures=142 unchanged=139 changed=3 added_findings=5 removed_findings=0 input_hash_differences=0 exits_before={'0':32,'1':110} exits_after={'0':32,'1':110} stderr_nonempty=0",
+      "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro: old_findings_preserved_in_order=True; summary='5 violation(s); no canon changed'->'7 violation(s); no canon changed'",
+      "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous: old_findings_preserved_in_order=True; summary='3 violation(s); no canon changed'->'4 violation(s); no canon changed'",
+      "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous: old_findings_preserved_in_order=True; summary='3 violation(s); no canon changed'->'5 violation(s); no canon changed'"
+    ]
+  },
+  "changed_output_tuples": [
+    {
+      "path": "corpus/live/runs/round-85/probe-inputs/r85-harbor-repro",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-harbor-repro",
+      "exit_before": 1,
+      "exit_after": 1,
+      "stderr_before": [],
+      "stderr_after": [],
+      "before_stdout": [
+        "VIOLATION: entities[4].id: duplicate entities id 'harbor'",
+        "VIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'harbor'",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[2].from_holder: ambiguous entity 'harbor'",
+        "VIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'",
+        "5 violation(s); no canon changed"
+      ],
+      "after_stdout": [
+        "VIOLATION: entities[4].id: duplicate entities id 'harbor'",
+        "VIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'harbor'",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+        "VIOLATION: entities[3].provenance[2].from_holder: ambiguous entity 'harbor'",
+        "VIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'",
+        "7 violation(s); no canon changed"
+      ],
+      "finding_changes": {
+        "additions": [
+          "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+          "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+        ],
+        "alterations": [],
+        "removals": []
+      },
+      "aggregate_footer_change": {
+        "classification": "alteration, not a finding change",
+        "before": "5 violation(s); no canon changed",
+        "after": "7 violation(s); no canon changed"
+      },
+      "preexisting_findings_byte_preserved_in_order": true
+    },
+    {
+      "path": "corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous",
+      "exit_before": 1,
+      "exit_after": 1,
+      "stderr_before": [],
+      "stderr_after": [],
+      "before_stdout": [
+        "VIOLATION: entities[5].id: duplicate entities id 'vault'",
+        "VIOLATION: entities[3].provenance[2].to_holder: ambiguous entity 'vault'",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "3 violation(s); no canon changed"
+      ],
+      "after_stdout": [
+        "VIOLATION: entities[5].id: duplicate entities id 'vault'",
+        "VIOLATION: entities[3].provenance[2].to_holder: ambiguous entity 'vault'",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[2]",
+        "4 violation(s); no canon changed"
+      ],
+      "finding_changes": {
+        "additions": [
+          "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[2]"
+        ],
+        "alterations": [],
+        "removals": []
+      },
+      "aggregate_footer_change": {
+        "classification": "alteration, not a finding change",
+        "before": "3 violation(s); no canon changed",
+        "after": "4 violation(s); no canon changed"
+      },
+      "preexisting_findings_byte_preserved_in_order": true
+    },
+    {
+      "path": "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "exit_before": 1,
+      "exit_after": 1,
+      "stderr_before": [],
+      "stderr_after": [],
+      "before_stdout": [
+        "VIOLATION: entities[5].id: duplicate entities id 'vault'",
+        "VIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "3 violation(s); no canon changed"
+      ],
+      "after_stdout": [
+        "VIOLATION: entities[5].id: duplicate entities id 'vault'",
+        "VIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'vault'",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous",
+        "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+        "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+        "5 violation(s); no canon changed"
+      ],
+      "finding_changes": {
+        "additions": [
+          "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+          "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]"
+        ],
+        "alterations": [],
+        "removals": []
+      },
+      "aggregate_footer_change": {
+        "classification": "alteration, not a finding change",
+        "before": "3 violation(s); no canon changed",
+        "after": "5 violation(s); no canon changed"
+      },
+      "preexisting_findings_byte_preserved_in_order": true
+    }
+  ],
+  "addition_only_policy": {
+    "preexisting_finding_lines_only": "honored: all old finding strings are byte-identical and preserve relative order; 5 additions, 0 finding alterations, 0 removals",
+    "strict_stdout_line_policy": "not literally additions-only: the aggregate violation-count footer is altered in each of the 3 changed tuples",
+    "classification_rule": "Treat the footer as a derived aggregate, not a finding; retain its alteration in the tuple audit rather than claiming byte-identical stdout."
+  },
+  "causal_separability": {
+    "C1": {
+      "verifiable_without_C2_or_C3": true,
+      "evidence": "X1 patch was applied to a fresh 28706dc scratch worktree; 142-input census and named r85 probes replay without either other claim."
+    },
+    "C2": {
+      "verifiable_without_C3": true,
+      "fully_verifiable_as_the_C1_after_state_without_C1": false,
+      "reason": "D1 and D2 decision tables describe the 28706dc baseline. D2 explicitly marks the C1 integration debt at lines 251-263; its r85-masked table output at lines 243-249 is stale after X1 adds two findings and changes the footer 3 to 5. D1 also states it documents baseline behavior, not C1."
+    },
+    "C3": {
+      "verifiable_without_C1_or_C2": true,
+      "evidence": "M1, M2, and M3 patches were independently applied to separate 28706dc archives; each exited CLEAN under both the baseline checker and X1-patched checker. Each cluster has zero entity provenance records, so C1 does not affect its checker tuple."
+    }
+  },
+  "collisions_and_debt": [
+    {
+      "kind": "same runtime file; mutually exclusive C1 alternatives",
+      "paths": ["corpus/fixtures/check_bible.py"],
+      "artifacts": ["X1-c1.patch", "X2-c1-alt.patch", "X3-c1-min.patch"],
+      "action": "Apply at most one patch; do not stack these alternatives."
+    },
+    {
+      "kind": "C1/C2 evidence-tuple overlap, not a file collision",
+      "path": "corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous",
+      "action": "Update the D2 decision-table replay at lines 243-249 to show the two X1 additions and 3-to-5 footer; likewise refresh all ambiguous-holder rows."
+    },
+    {
+      "kind": "two alternative C2 documents for one decision-table claim",
+      "artifacts": ["D1-decision-table.md", "D2-decision-table.md"],
+      "destinations": ["corpus/knowledge/provenance-chain-decision-table.md", "corpus/knowledge/r87-provenance-chain-decision-table.md"],
+      "action": "Choose one, update it to the selected C1 patch's output, and make its named probe inputs replayable; D1/D2 synthetic r87-* inputs are scratch-only and are not in either table patch."
+    },
+    {
+      "kind": "same new fixture paths; mutually exclusive C3 alternatives",
+      "shared_paths": [
+        "corpus/fixtures/r87-myth-cluster/contradictions.json",
+        "corpus/fixtures/r87-myth-cluster/entities.json",
+        "corpus/fixtures/r87-myth-cluster/relations.json",
+        "corpus/fixtures/r87-myth-cluster/sources.json",
+        "corpus/fixtures/r87-myth-cluster/symbolism-clause-map.md",
+        "corpus/fixtures/r87-myth-cluster/timeline.json"
+      ],
+      "artifacts": ["M1-myth-cluster.patch", "M2-myth-cluster.patch", "M3-myth-cluster.patch"],
+      "action": "Choose one whole cluster patch; do not combine alternatives."
+    },
+    {
+      "kind": "stale behavior guide",
+      "path": "corpus/knowledge/holder-assessment-boundary.md",
+      "lines": "46-61,73-75,107-120",
+      "issue": "The current guide specifies one notice at the first ambiguous record and does not describe per-record tail disclosures; reconcile it if any C1 patch lands."
+    },
+    {
+      "kind": "stop-cause attribution edge in X1",
+      "paths": ["corpus/fixtures/check_bible.py", "D2-decision-table.md:215-224"],
+      "issue": "X1 latches holder_ambiguity_stop at the first ambiguous holder even if can_check_chain was already stopped by an earlier invalid record. Its subsequent wording says the comparison is unassessed because of that ambiguity. The C2 table should distinguish the original stop cause from a later ambiguity, or the candidate should clarify that the holder ambiguity is an additional blocker."
+    }
+  ],
+  "c3_candidate_replays": [
+    {
+      "patch": "M1-myth-cluster.patch",
+      "files": 8,
+      "entities": 5,
+      "factions": 2,
+      "relations": 4,
+      "allied_with_edges": 2,
+      "timeline_events": 2,
+      "depends_on_edges": 1,
+      "entities_with_provenance": 0,
+      "baseline_checker": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "x1_checker": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "patch": "M2-myth-cluster.patch",
+      "files": 7,
+      "entities": 7,
+      "factions": 2,
+      "relations": 3,
+      "allied_with_edges": 2,
+      "timeline_events": 4,
+      "depends_on_edges": 4,
+      "entities_with_provenance": 0,
+      "baseline_checker": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "x1_checker": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    {
+      "patch": "M3-myth-cluster.patch",
+      "files": 9,
+      "entities": 7,
+      "factions": 2,
+      "relations": 4,
+      "allied_with_edges": 2,
+      "timeline_events": 4,
+      "depends_on_edges": 3,
+      "entities_with_provenance": 0,
+      "baseline_checker": "CLEAN: schema, citations, relations, timeline; 0 violations",
+      "x1_checker": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    }
+  ],
+  "c6_changes_to_runtime_or_fixture_inputs": []
+}

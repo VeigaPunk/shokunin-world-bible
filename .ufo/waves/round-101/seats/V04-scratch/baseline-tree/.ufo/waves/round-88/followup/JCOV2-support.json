@@ -1,0 +1,565 @@
+{
+  "seat": "JCOV2",
+  "tree": "2ea9ef13a928475b13fd578740ea521bed4bd649",
+  "baseline": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+  "checks": {
+    "a_passage_locators": {
+      "r87_clause_map": {
+        "clauses": 8,
+        "matched": 8,
+        "rows": [
+          {
+            "clause": "At low water",
+            "exact_match": true,
+            "excerpt_line": 3
+          },
+          {
+            "clause": "the shell ring",
+            "exact_match": true,
+            "excerpt_line": 3
+          },
+          {
+            "clause": "beside the bowl",
+            "exact_match": true,
+            "excerpt_line": 3
+          },
+          {
+            "clause": "at the Mother-Tide Gate",
+            "exact_match": true,
+            "excerpt_line": 3
+          },
+          {
+            "clause": "The bowl keeps no name",
+            "exact_match": true,
+            "excerpt_line": 4
+          },
+          {
+            "clause": "no voice owns the tide",
+            "exact_match": true,
+            "excerpt_line": 4
+          },
+          {
+            "clause": "pass the reed-bell hand to hand",
+            "exact_match": true,
+            "excerpt_line": 5
+          },
+          {
+            "clause": "let the water return it",
+            "exact_match": true,
+            "excerpt_line": 5
+          }
+        ],
+        "gate_named_in_excerpt": true,
+        "baseline_clauses": 7,
+        "baseline_matched": 7,
+        "baseline_gate_named": false
+      },
+      "r88_clause_map": {
+        "rows": 2,
+        "cited_matched": 1,
+        "element_matched": 2,
+        "detail": [
+          {
+            "cited_clause": "He called out ‘Earth,’",
+            "cited_exact_match": false,
+            "cited_excerpt_line": null,
+            "fictional_element": "We leave its name unowned in the rain.",
+            "element_exact_match": true,
+            "element_excerpt_line": 6
+          },
+          {
+            "cited_clause": "and the solid land appeared.",
+            "cited_exact_match": true,
+            "cited_excerpt_line": 5,
+            "fictional_element": "The chalk stair stays a crossing, never a map.",
+            "element_exact_match": true,
+            "element_excerpt_line": 5
+          }
+        ],
+        "delivered_cited_form": "He called out “Earth,”"
+      },
+      "file_refs": {
+        "r87_all_resolve": true,
+        "r88_all_resolve": true
+      },
+      "external": {
+        "r88_spence_p209": {
+          "url": "https://www.gutenberg.org/files/53080/53080-h/53080-h.htm",
+          "fetched_bytes": 1035633,
+          "rendered_marker_present": true,
+          "literal_bracket_string_in_raw_html": false,
+          "passage_follows_marker": true,
+          "source_quote_form": "&ldquo;Earth,&rdquo;"
+        },
+        "r87_etcsl_122_163": {
+          "url": "https://etcsl.orinst.ox.ac.uk/section1/tr141.htm",
+          "fetched_bytes": 34853,
+          "line_122": "seven gates of the underworld be bolted",
+          "line_163": "seventh gate, the pala dress ... removed from her body",
+          "claim_accurate": true
+        }
+      }
+    },
+    "c_d1_support_rule": {
+      "r87-myth-cluster": {
+        "facts_total": 22,
+        "ok": 8,
+        "not_ok": 14,
+        "ok_claim_bearing": 1,
+        "unsupported_claim_bearing": 14,
+        "unsupported": [
+          {
+            "locator": "hara.claims[0]",
+            "kind": "entity.claim",
+            "source_id": "gate-witness",
+            "claim": "Hara identifies herself as the keeper of the Mother-Tide Gate in her witness slip."
+          },
+          {
+            "locator": "sen.claims[0]",
+            "kind": "entity.claim",
+            "source_id": "dune-register",
+            "claim": "Sen identifies himself as a recorder at Ash-Dune Sanctuary in the register."
+          },
+          {
+            "locator": "ash-dune-sanctuary.claims[0]",
+            "kind": "entity.claim",
+            "source_id": "dune-register",
+            "claim": "Sen's register names Ash-Dune Sanctuary as a record-keeping place."
+          },
+          {
+            "locator": "shellweavers.claims[0]",
+            "kind": "entity.claim",
+            "source_id": "shell-charter",
+            "claim": "The charter names the Shellweavers as one signatory faction."
+          },
+          {
+            "locator": "reedwardens.claims[0]",
+            "kind": "entity.claim",
+            "source_id": "shell-charter",
+            "claim": "The charter names the Reedwardens as one signatory faction."
+          },
+          {
+            "locator": "reed-bell.claims[0]",
+            "kind": "entity.claim",
+            "source_id": "tide-bell-tally",
+            "claim": "The watch tally records a reed bell being carried for the low-water signal."
+          },
+          {
+            "locator": "relations[0]",
+            "kind": "relation",
+            "source_id": "shell-charter",
+            "claim": "shellweavers allied_with reedwardens"
+          },
+          {
+            "locator": "relations[1]",
+            "kind": "relation",
+            "source_id": "shell-charter",
+            "claim": "reedwardens allied_with shellweavers"
+          },
+          {
+            "locator": "relations[2]",
+            "kind": "relation",
+            "source_id": "shell-charter",
+            "claim": "shellweavers keeps_watch_with reed-bell"
+          },
+          {
+            "locator": "relations[3]",
+            "kind": "relation",
+            "source_id": "dune-register",
+            "claim": "sen records_at ash-dune-sanctuary"
+          },
+          {
+            "locator": "timeline[first-lowwater-signal]",
+            "kind": "timeline",
+            "source_id": "gate-witness",
+            "claim": "Hara's witness slip reports that she sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow."
+          },
+          {
+            "locator": "timeline[bell-tally-return]",
+            "kind": "timeline",
+            "source_id": "tide-bell-tally",
+            "claim": "Sen's tally records the return of the first low-water signal before the Moon-Basin Vow."
+          },
+          {
+            "locator": "timeline[moon-basin-vow-gate-account]",
+            "kind": "timeline",
+            "source_id": "gate-witness",
+            "claim": "Hara's slip places the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell."
+          },
+          {
+            "locator": "timeline[moon-basin-vow-dune-account]",
+            "kind": "timeline",
+            "source_id": "dune-register",
+            "claim": "Sen's register places that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell."
+          }
+        ],
+        "facts": [
+          {
+            "kind": "entity.claim",
+            "locator": "hara.claims[0]",
+            "claim": "Hara identifies herself as the keeper of the Mother-Tide Gate in her witness slip.",
+            "source_id": "gate-witness",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source gate-witness has no delivered prose file"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "sen.claims[0]",
+            "claim": "Sen identifies himself as a recorder at Ash-Dune Sanctuary in the register.",
+            "source_id": "dune-register",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source dune-register has no delivered prose file"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "mother-tide-gate.claims[0]",
+            "claim": "The Low-Water Hymn places the shell ring and bowl at the Mother-Tide Gate.",
+            "source_id": "lowwater-hymn",
+            "verdict": "OK",
+            "anchor_detail": "Mother-Tide Gate->lowwater-hymn-excerpt.md:3"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "ash-dune-sanctuary.claims[0]",
+            "claim": "Sen's register names Ash-Dune Sanctuary as a record-keeping place.",
+            "source_id": "dune-register",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source dune-register has no delivered prose file"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "shellweavers.claims[0]",
+            "claim": "The charter names the Shellweavers as one signatory faction.",
+            "source_id": "shell-charter",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source shell-charter has no delivered prose file"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "reedwardens.claims[0]",
+            "claim": "The charter names the Reedwardens as one signatory faction.",
+            "source_id": "shell-charter",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source shell-charter has no delivered prose file"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "reed-bell.claims[0]",
+            "claim": "The watch tally records a reed bell being carried for the low-water signal.",
+            "source_id": "tide-bell-tally",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source tide-bell-tally has no delivered prose file"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "hara.first_appearance",
+            "claim": "hara first appears in gate-witness",
+            "source_id": "gate-witness",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "no delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "sen.first_appearance",
+            "claim": "sen first appears in dune-register",
+            "source_id": "dune-register",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "no delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "mother-tide-gate.first_appearance",
+            "claim": "mother-tide-gate first appears in lowwater-hymn",
+            "source_id": "lowwater-hymn",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "ash-dune-sanctuary.first_appearance",
+            "claim": "ash-dune-sanctuary first appears in dune-register",
+            "source_id": "dune-register",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "no delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "shellweavers.first_appearance",
+            "claim": "shellweavers first appears in shell-charter",
+            "source_id": "shell-charter",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "no delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "reedwardens.first_appearance",
+            "claim": "reedwardens first appears in shell-charter",
+            "source_id": "shell-charter",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "no delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "reed-bell.first_appearance",
+            "claim": "reed-bell first appears in tide-bell-tally",
+            "source_id": "tide-bell-tally",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "no delivered prose for source"
+          },
+          {
+            "kind": "relation",
+            "locator": "relations[0]",
+            "claim": "shellweavers allied_with reedwardens",
+            "source_id": "shell-charter",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source shell-charter has no delivered prose file"
+          },
+          {
+            "kind": "relation",
+            "locator": "relations[1]",
+            "claim": "reedwardens allied_with shellweavers",
+            "source_id": "shell-charter",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source shell-charter has no delivered prose file"
+          },
+          {
+            "kind": "relation",
+            "locator": "relations[2]",
+            "claim": "shellweavers keeps_watch_with reed-bell",
+            "source_id": "shell-charter",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source shell-charter has no delivered prose file"
+          },
+          {
+            "kind": "relation",
+            "locator": "relations[3]",
+            "claim": "sen records_at ash-dune-sanctuary",
+            "source_id": "dune-register",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source dune-register has no delivered prose file"
+          },
+          {
+            "kind": "timeline",
+            "locator": "timeline[first-lowwater-signal]",
+            "claim": "Hara's witness slip reports that she sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow.",
+            "source_id": "gate-witness",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source gate-witness has no delivered prose file"
+          },
+          {
+            "kind": "timeline",
+            "locator": "timeline[bell-tally-return]",
+            "claim": "Sen's tally records the return of the first low-water signal before the Moon-Basin Vow.",
+            "source_id": "tide-bell-tally",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source tide-bell-tally has no delivered prose file"
+          },
+          {
+            "kind": "timeline",
+            "locator": "timeline[moon-basin-vow-gate-account]",
+            "claim": "Hara's slip places the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.",
+            "source_id": "gate-witness",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source gate-witness has no delivered prose file"
+          },
+          {
+            "kind": "timeline",
+            "locator": "timeline[moon-basin-vow-dune-account]",
+            "claim": "Sen's register places that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.",
+            "source_id": "dune-register",
+            "verdict": "UNSUPPORTED: no delivered excerpt for source",
+            "anchor_detail": "source dune-register has no delivered prose file"
+          }
+        ],
+        "first_appearance_pointers": [
+          {
+            "entity": "hara",
+            "first_appearance": "gate-witness",
+            "resolves": true
+          },
+          {
+            "entity": "sen",
+            "first_appearance": "dune-register",
+            "resolves": true
+          },
+          {
+            "entity": "mother-tide-gate",
+            "first_appearance": "lowwater-hymn",
+            "resolves": true
+          },
+          {
+            "entity": "ash-dune-sanctuary",
+            "first_appearance": "dune-register",
+            "resolves": true
+          },
+          {
+            "entity": "shellweavers",
+            "first_appearance": "shell-charter",
+            "resolves": true
+          },
+          {
+            "entity": "reedwardens",
+            "first_appearance": "shell-charter",
+            "resolves": true
+          },
+          {
+            "entity": "reed-bell",
+            "first_appearance": "tide-bell-tally",
+            "resolves": true
+          }
+        ],
+        "baseline_ok": 7,
+        "baseline_facts": 22
+      },
+      "r88-m3-maya-cluster": {
+        "facts_total": 10,
+        "ok": 10,
+        "not_ok": 0,
+        "ok_claim_bearing": 6,
+        "unsupported_claim_bearing": 0,
+        "unsupported": [],
+        "facts": [
+          {
+            "kind": "entity.claim",
+            "locator": "aru.claims[0]",
+            "claim": "The register places Aru carrying the north lantern at Quiet Rise at tick 9.",
+            "source_id": "paired-clock",
+            "verdict": "OK",
+            "anchor_detail": "Aru->fictional-excerpts.md:10; Quiet Rise->fictional-excerpts.md:10"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "evin.claims[0]",
+            "claim": "The register places Evin holding the south bell at Salt Court at tick 9.",
+            "source_id": "paired-clock",
+            "verdict": "OK",
+            "anchor_detail": "Evin->fictional-excerpts.md:11; Salt Court->fictional-excerpts.md:11"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "quiet-rise.claims[0]",
+            "claim": "The register locates Aru's north-lantern entry at Quiet Rise.",
+            "source_id": "paired-clock",
+            "verdict": "OK",
+            "anchor_detail": "Quiet Rise->fictional-excerpts.md:10; Aru->fictional-excerpts.md:10"
+          },
+          {
+            "kind": "entity.claim",
+            "locator": "salt-court.claims[0]",
+            "claim": "The register locates Evin's south-bell entry at Salt Court.",
+            "source_id": "paired-clock",
+            "verdict": "OK",
+            "anchor_detail": "Salt Court->fictional-excerpts.md:11; Evin->fictional-excerpts.md:11"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "aru.first_appearance",
+            "claim": "aru first appears in paired-clock",
+            "source_id": "paired-clock",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "evin.first_appearance",
+            "claim": "evin first appears in paired-clock",
+            "source_id": "paired-clock",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "quiet-rise.first_appearance",
+            "claim": "quiet-rise first appears in paired-clock",
+            "source_id": "paired-clock",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "delivered prose for source"
+          },
+          {
+            "kind": "entity.first_appearance",
+            "locator": "salt-court.first_appearance",
+            "claim": "salt-court first appears in paired-clock",
+            "source_id": "paired-clock",
+            "verdict": "OK: source record exists",
+            "anchor_detail": "delivered prose for source"
+          },
+          {
+            "kind": "timeline",
+            "locator": "timeline[aru-ninth-bell]",
+            "claim": "Aru carries the north lantern at Quiet Rise.",
+            "source_id": "paired-clock",
+            "verdict": "OK",
+            "anchor_detail": "Aru->fictional-excerpts.md:10; Quiet Rise->fictional-excerpts.md:10"
+          },
+          {
+            "kind": "timeline",
+            "locator": "timeline[evin-ninth-bell]",
+            "claim": "Evin holds the south bell at Salt Court.",
+            "source_id": "paired-clock",
+            "verdict": "OK",
+            "anchor_detail": "Evin->fictional-excerpts.md:11; Salt Court->fictional-excerpts.md:11"
+          }
+        ],
+        "first_appearance_pointers": [
+          {
+            "entity": "aru",
+            "first_appearance": "paired-clock",
+            "resolves": true
+          },
+          {
+            "entity": "evin",
+            "first_appearance": "paired-clock",
+            "resolves": true
+          },
+          {
+            "entity": "quiet-rise",
+            "first_appearance": "paired-clock",
+            "resolves": true
+          },
+          {
+            "entity": "salt-court",
+            "first_appearance": "paired-clock",
+            "resolves": true
+          }
+        ],
+        "baseline_ok": null,
+        "baseline_facts": null
+      }
+    },
+    "d_obs1": {
+      "gate_named_in_excerpt": true,
+      "clause_matches": "8/8",
+      "checker_exit": 0,
+      "checker_output": "CLEAN: schema, citations, relations, timeline; 0 violations"
+    },
+    "b_index_id_targets": {
+      "dangling_ids": [],
+      "ids_referenced": {
+        "r87": [
+          "lowwater-hymn"
+        ],
+        "r88": [
+          "veil-verse",
+          "paired-clock"
+        ]
+      },
+      "note": "both indexes are phrase-level; no id target is dangling"
+    },
+    "slot_near_miss": {
+      "r88_ticks": [
+        9,
+        9
+      ],
+      "slots": {
+        "aru@t9": [
+          "quiet-rise"
+        ],
+        "evin@t9": [
+          "salt-court"
+        ]
+      },
+      "collisions": [],
+      "control_same_entity_same_tick_diff_place": "VIOLATION: timeline[1]: double-booked 'aru' at tick 9 in timeline[0] ('quiet-rise') and 'salt-court'"
+    }
+  }
+}

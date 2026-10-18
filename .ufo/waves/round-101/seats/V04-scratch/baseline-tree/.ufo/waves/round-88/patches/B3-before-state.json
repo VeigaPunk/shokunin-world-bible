@@ -1,0 +1,56 @@
+{
+  "seat": "B3",
+  "wave": "round-88 WORK",
+  "baseline_revision": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+  "scratch_root": "/tmp/lore-shokunin-B3-dA1HBJ",
+  "measurement_method": "git archive of the declared baseline unpacked under /tmp; checker invocations run from that scratch copy",
+  "runs": [
+    {
+      "case": "shape-ambiguous",
+      "source_fixture": "corpus/fixtures/r87-probe-shape-ambiguous",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-probe-shape-ambiguous",
+      "working_directory": "/tmp/lore-shokunin-B3-dA1HBJ",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[1].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\n2 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "979ff05fffd6f10f097163bcb3b9d6d2c5b0a2e6565ea687c66202cf6ee0c6c5",
+      "measurement": {
+        "finding_count": 2,
+        "unassessed_line_count": 0
+      }
+    },
+    {
+      "case": "mixed-stop",
+      "constructed_from": "corpus/fixtures/item-chain-valid in scratch, following .ufo/waves/round-87/followup/JCAL4.md:19-25",
+      "input_shape": "[0] unknown source; [1] ambiguous to_holder 'dup'; [2] hidden chain break; [3] decreasing tick",
+      "command": "python3 corpus/fixtures/check_bible.py probes/mixed-stop",
+      "working_directory": "/tmp/lore-shokunin-B3-dA1HBJ",
+      "exit_code": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\n7 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "2d0be64509d09dd675ef388b88d9a5b24a0e2a9723c1e0761a850e186cab7252",
+      "measurement": {
+        "finding_count": 7,
+        "unassessed_line_count": 4,
+        "per_record_disclosure_indexes": [1, 2, 3],
+        "global_notice_index": 1,
+        "first_stop": "unknown source at record [0]",
+        "later_disclosed_cause": "ambiguous to_holder 'dup' at record [1]"
+      }
+    },
+    {
+      "case": "unknown-source-only",
+      "constructed_from": "corpus/fixtures/item-chain-valid in scratch, with sources.json removed per .ufo/waves/round-87/followup/JDEP3.md P5",
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/lore-shokunin-B3-dA1HBJ/probes/unknown-source-only",
+      "working_directory": "/tmp/lore-shokunin-B3-dA1HBJ",
+      "exit_code": 1,
+      "stdout": "VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: '/tmp/lore-shokunin-B3-dA1HBJ/probes/unknown-source-only/sources.json'\n1 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "3eaa09ffd160cd742bcb5356b2b485639c2611353fae9bcc7c2dc013c24e8c2b",
+      "measurement": {
+        "finding_count": 1,
+        "disclosure_line_count": 0
+      }
+    }
+  ]
+}

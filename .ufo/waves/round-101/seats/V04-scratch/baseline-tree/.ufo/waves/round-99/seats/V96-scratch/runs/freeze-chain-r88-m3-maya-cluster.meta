@@ -1,0 +1,4 @@
+CMD: python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
+START: 2026-10-17T22:14:28-03:00
+EXIT:0
+END: 2026-10-17T22:14:28-03:00

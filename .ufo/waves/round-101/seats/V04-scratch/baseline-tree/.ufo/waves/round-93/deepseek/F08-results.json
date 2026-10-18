@@ -1,0 +1,74 @@
+{
+  "dossier_sha256": "ddac48a1c7690ea31a1871847662fa74d29ef4ed7279338a0af64055524735ef",
+  "table_sha256": "80490adcc8144f0604a4f28ff6008bde037e9a32843530d4c537fa5a2338bb54",
+  "active_block_lines": 96,
+  "digest_route_a": "da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+  "digest_route_b": "da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+  "digest_literal": "da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+  "results": {
+    "baseline": {
+      "exit": 0,
+      "finding": ""
+    },
+    "blank_gate": {
+      "exit": 1,
+      "finding": "R8_CELL_EMPTY"
+    },
+    "filler_owner": {
+      "exit": 1,
+      "finding": "R8_CELL_FILLER"
+    },
+    "duplicate_field": {
+      "exit": 1,
+      "finding": "R8_RECORD_FIELDS"
+    },
+    "append_gate_contradiction": {
+      "exit": 1,
+      "finding": "R8_RECORD_DRIFT"
+    },
+    "hold_inversion": {
+      "exit": 1,
+      "finding": "R8_RECORD_DRIFT"
+    },
+    "map_note_collapse": {
+      "exit": 1,
+      "finding": "R8_RECORD_DRIFT"
+    },
+    "map_row_deleted": {
+      "exit": 1,
+      "finding": "R8_RECORD_FIELDS"
+    },
+    "ws_internal_gate": {
+      "exit": 0,
+      "finding": ""
+    },
+    "ws_edges_gate": {
+      "exit": 0,
+      "finding": ""
+    },
+    "nonws_control_gate": {
+      "exit": 1,
+      "finding": "R8_RECORD_DRIFT"
+    },
+    "historical_table_edit": {
+      "exit": 0,
+      "finding": ""
+    },
+    "limits_sentence_removed": {
+      "exit": 0,
+      "finding": ""
+    },
+    "source_content_drop": {
+      "exit": 1,
+      "finding": "R8_SOURCE_CONTENT"
+    },
+    "historical_on_mutation": {
+      "exit": 1,
+      "finding": "-"
+    },
+    "historical_baseline": {
+      "exit": 1,
+      "finding": "-"
+    }
+  }
+}

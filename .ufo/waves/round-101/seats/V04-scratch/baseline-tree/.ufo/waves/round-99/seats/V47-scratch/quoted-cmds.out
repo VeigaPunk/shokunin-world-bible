@@ -1,0 +1,41 @@
+===== CMP pure copies r98 vs r99 =====
+cmp-rc0 contradictions.json
+cmp-rc0 entities.json
+cmp-rc0 inspiration-note.md
+cmp-rc0 relations.json
+cmp-rc0 source-excerpt.md
+===== CMP vs git show 4265df5 =====
+r98-wt IDENTICAL-to-4265df5 contradictions.json
+r99 IDENTICAL-to-4265df5 contradictions.json
+r98-wt IDENTICAL-to-4265df5 entities.json
+r99 IDENTICAL-to-4265df5 entities.json
+r98-wt IDENTICAL-to-4265df5 inspiration-note.md
+r99 IDENTICAL-to-4265df5 inspiration-note.md
+r98-wt IDENTICAL-to-4265df5 relations.json
+r99 IDENTICAL-to-4265df5 relations.json
+r98-wt IDENTICAL-to-4265df5 source-excerpt.md
+r99 IDENTICAL-to-4265df5 source-excerpt.md
+r98-wt IDENTICAL-to-4265df5 sources.json
+r99 DIFF-from-4265df5 sources.json
+r98-wt IDENTICAL-to-4265df5 timeline.json
+r99 DIFF-from-4265df5 timeline.json
+r98-wt IDENTICAL-to-4265df5 fictional-excerpts.md
+r99 DIFF-from-4265df5 fictional-excerpts.md
+r98-wt IDENTICAL-to-4265df5 README.md
+r99 DIFF-from-4265df5 README.md
+r98-wt IDENTICAL-to-4265df5 claim-excerpt-map.md
+r99 DIFF-from-4265df5 claim-excerpt-map.md
+===== fictional prefix =====
+4187 5114 True
+b'\n## Round 99 lapse note (2026-10-17)\n\nNewly authored fictional first-person note, attributed to in-world source ID `clerk-lapse-note`, folio 9, lines 1\xe2\x80\x935. This section is appende'
+===== wc -l =====
+  64 corpus/fixtures/r98-clerk-filing/fictional-excerpts.md
+  76 corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+ 140 total
+===== junction =====
+sources.json: r98=2725B r99=3293B raw-shared-prefix=2722B of r98-pre-bracket=2723B next-r99-bytes=b',\n  {\n    "id": "clerk-lapse-note",\n    '
+  startswith-through-newline-before-bracket=True
+timeline.json: r98=2552B r99=2998B raw-shared-prefix=2549B of r98-pre-bracket=2550B next-r99-bytes=b',\n  {\n    "id": "clerk-lapse-recorded",\n'
+  startswith-through-newline-before-bracket=True
+===== git diff stat =====
+END-DIFFSTAT

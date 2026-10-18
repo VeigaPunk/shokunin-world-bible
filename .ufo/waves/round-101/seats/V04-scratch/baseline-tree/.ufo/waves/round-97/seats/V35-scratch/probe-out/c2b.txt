@@ -1,0 +1,2 @@
+FINDING SCOPE-REFUSED: --freeze refuses .ufo/waves/round-97/seats/V35-scratch/probe/foreign-r95 (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V35-scratch/probe/foreign-r95); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR

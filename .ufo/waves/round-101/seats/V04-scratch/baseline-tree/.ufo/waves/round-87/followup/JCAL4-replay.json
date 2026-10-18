@@ -1,0 +1,141 @@
+{
+  "seat": "JCAL4",
+  "wave": "round-87 follow-up (world-bible lane)",
+  "measured_tree": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+  "tree_status_at_seat_start": [],
+  "tree_status_when_json_generated": [
+    " M corpus/knowledge/holder-assessment-boundary.md",
+    " M l0-questions.md",
+    "?? .ufo/waves/round-87/followup/",
+    "?? corpus/fixtures/r87-probe-entry-shape/",
+    "?? corpus/fixtures/r87-probe-record-and-chain/"
+  ],
+  "tree_status_note": "clean at seat start (first command, 2b48ca7); the entries above are concurrent sibling follow-up seats (I2 boundary refresh, K2 l0-questions append, I1 r87-probe-* fixtures) landing while this seat ran. None of them is a file this seat wrote, and none affects the checker runs, which used the HEAD blob plus /tmp fixtures.",
+  "delivered_checker_sha256": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+  "preC1_checker": {
+    "extracted_from_commit": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+    "equals": "03c6746~1 (pre-C1 baseline)",
+    "sha256": "e8f241623aa84eb1dce192a03c9e70b8f4ba386344f0b22a99ba1ac0d4942132"
+  },
+  "literal_HEAD_minus_1": {
+    "commit": "e4708cbcd956998237c31acb77124d8dc5056538",
+    "note": "2b48ca7~1 is the C3 commit and already contains C1; its checker is byte-identical to the delivered one (md5 e088ac108b7f1e2dda8f1630d72cc161), so 'pre-existing global notice' was measured at the pre-C1 baseline 28706dc.",
+    "checker_md5_equal_delivered": true
+  },
+  "fixtures": {
+    "jcal4-earlier-stop-only": {
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "c489243987d2e461336317174ccd31c7b6796c9d379d42ef12b4e1ecaddb26b2",
+      "relations.json": "d983a04cfa8d51dab5a2fc92032ab29696d80c3dc6d5384d724e6225b6fd0b4f",
+      "sources.json": "be3c7af9ffc511951dbb77d4da0f79a267cebc665ad3151d25f023e9aa3c05d6",
+      "timeline.json": "2ba4a9d51a20d2a76387c25cee9e064f9440fd45984d07d5e5f8ec05666b3968"
+    },
+    "jcal4-mixed-noambiguity": {
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "e4bccf5eaeb4796d165665fa7fbe3aa5b3d481189a46b6341a55c64c124e06ff",
+      "relations.json": "d983a04cfa8d51dab5a2fc92032ab29696d80c3dc6d5384d724e6225b6fd0b4f",
+      "sources.json": "be3c7af9ffc511951dbb77d4da0f79a267cebc665ad3151d25f023e9aa3c05d6",
+      "timeline.json": "2ba4a9d51a20d2a76387c25cee9e064f9440fd45984d07d5e5f8ec05666b3968"
+    },
+    "jcal4-mixed-stop": {
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "23f0e560a76d1fe38925355bcfd488b91ee376f5514360e663eb28e618d69a16",
+      "relations.json": "d983a04cfa8d51dab5a2fc92032ab29696d80c3dc6d5384d724e6225b6fd0b4f",
+      "sources.json": "be3c7af9ffc511951dbb77d4da0f79a267cebc665ad3151d25f023e9aa3c05d6",
+      "timeline.json": "2ba4a9d51a20d2a76387c25cee9e064f9440fd45984d07d5e5f8ec05666b3968"
+    },
+    "jcal4-mixed-stop-control": {
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "bce7fc86b599a42ff493364bd066da64c0b2979b7a7d4ae219204ad1f06723b9",
+      "relations.json": "d983a04cfa8d51dab5a2fc92032ab29696d80c3dc6d5384d724e6225b6fd0b4f",
+      "sources.json": "be3c7af9ffc511951dbb77d4da0f79a267cebc665ad3151d25f023e9aa3c05d6",
+      "timeline.json": "2ba4a9d51a20d2a76387c25cee9e064f9440fd45984d07d5e5f8ec05666b3968"
+    }
+  },
+  "runs": {
+    "delivered:jcal4-earlier-stop-only": {
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/jcal4/fixtures/jcal4-earlier-stop-only",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\n2 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "e26fdddec4699fd2ba49521ddb31933ab5691641d7af90437db40c15671399d6"
+    },
+    "preC1:jcal4-earlier-stop-only": {
+      "command": "python3 /tmp/jcal4/check_bible_prec1.py /tmp/jcal4/fixtures/jcal4-earlier-stop-only",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\n2 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "e26fdddec4699fd2ba49521ddb31933ab5691641d7af90437db40c15671399d6"
+    },
+    "delivered:jcal4-mixed-noambiguity": {
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/jcal4/fixtures/jcal4-mixed-noambiguity",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\n2 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "e26fdddec4699fd2ba49521ddb31933ab5691641d7af90437db40c15671399d6"
+    },
+    "preC1:jcal4-mixed-noambiguity": {
+      "command": "python3 /tmp/jcal4/check_bible_prec1.py /tmp/jcal4/fixtures/jcal4-mixed-noambiguity",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\n2 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "e26fdddec4699fd2ba49521ddb31933ab5691641d7af90437db40c15671399d6"
+    },
+    "delivered:jcal4-mixed-stop": {
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/jcal4/fixtures/jcal4-mixed-stop",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\n7 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "2d0be64509d09dd675ef388b88d9a5b24a0e2a9723c1e0761a850e186cab7252"
+    },
+    "preC1:jcal4-mixed-stop": {
+      "command": "python3 /tmp/jcal4/check_bible_prec1.py /tmp/jcal4/fixtures/jcal4-mixed-stop",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'missing-source'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n4 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "5145e68176235efe9debdfcf291a1dd4cd13ca116de585029725721efdd019de"
+    },
+    "delivered:jcal4-mixed-stop-control": {
+      "command": "python3 corpus/fixtures/check_bible.py /tmp/jcal4/fixtures/jcal4-mixed-stop-control",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\nVIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]\n6 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "1d4270f5d4b992b8a8d85612ab12a35dc3920d25a6c44155e896864bf3874512"
+    },
+    "preC1:jcal4-mixed-stop-control": {
+      "command": "python3 /tmp/jcal4/check_bible_prec1.py /tmp/jcal4/fixtures/jcal4-mixed-stop-control",
+      "exit": 1,
+      "stdout": "VIOLATION: entities[5].id: duplicate entities id 'dup'\nVIOLATION: entities[3].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\n3 violation(s); no canon changed\n",
+      "stderr": "",
+      "stdout_sha256": "ae96dc39ebb8fa38b11581c132f9c4cec4ad1750a1008faaa7530eaee84eb418"
+    }
+  },
+  "invariance": {
+    "delivered_per_record_disclosure_mixed": [
+      "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]",
+      "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]",
+      "VIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]"
+    ],
+    "delivered_per_record_disclosure_control": [
+      "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]",
+      "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]",
+      "VIOLATION: entities[3].provenance[3]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[1]"
+    ],
+    "delivered_sets_identical": true,
+    "delivered_sets_sha256": [
+      "c36f239397efd0fe0684571a1e5eba9053e1d325d8b5834a3f2c86af5022fc27",
+      "c36f239397efd0fe0684571a1e5eba9053e1d325d8b5834a3f2c86af5022fc27"
+    ],
+    "preC1_global_notice_mixed": [
+      "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+    ],
+    "preC1_global_notice_control": [
+      "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous"
+    ],
+    "preC1_sets_identical": true,
+    "preC1_sets_sha256": [
+      "f3bea7ad3b6ebda74ec2c6a6df87ef1c59b6d3b61b9b6ecba44551df5a48a648",
+      "f3bea7ad3b6ebda74ec2c6a6df87ef1c59b6d3b61b9b6ecba44551df5a48a648"
+    ]
+  }
+}

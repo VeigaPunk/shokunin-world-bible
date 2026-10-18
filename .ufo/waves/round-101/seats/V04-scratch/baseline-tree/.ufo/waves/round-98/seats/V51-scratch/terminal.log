@@ -1,0 +1,99 @@
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V11-scratch/poll.log: READY try=3 t=20:28:25 report=inherited-rows-draft.txt
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V45-scratch/poll.log: try 2 20:28:36 ALL-PRESENT
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 0 20:28:52 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=88646ef8 s5a=ABSENT s5b=f87ed42a s5c=6db32ca2 prods=0 seats=0 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 1 20:29:12 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=b3f2cb10 s5a=ABSENT s5b=f87ed42a s5c=6db32ca2 prods=0 seats=0 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 2 20:29:32 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=b3f2cb10 s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=0 seats=0 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 3 20:29:52 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=b3f2cb10 s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=0 seats=1 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 4 20:30:12 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=b3f2cb10 s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=0 seats=1 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 5 20:30:32 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=dcb7c9c0 s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=0 seats=2 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 6 20:30:52 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=0 seats=2 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V32-scratch/poll.log] last=5 20:30:32 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=dcb7c9c0 s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=0 seats=2 fleet=no
+2026-10-17T20:31:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V45-scratch/poll.log] last=try 2 20:28:36 ALL-PRESENT
+2026-10-17T20:31:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 7 20:31:12 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=1 seats=3 fleet=no
+2026-10-17T20:31:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V32-scratch/poll.log] last=6 20:30:52 s1t=b06275f3 s1c=27273be2 s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=0 seats=2 fleet=no
+2026-10-17T20:31:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 8 20:31:32 s1t=1a01fd17 s1c=3a940a9f s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=1 seats=4 fleet=no
+2026-10-17T20:31:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V22-scratch/poll.log: ALL-READY try=6 20:31:25
+2026-10-17T20:31:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V32-scratch/poll.log] last=8 20:31:32 s1t=1a01fd17 s1c=3a940a9f s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=1 seats=4 fleet=no
+2026-10-17T20:32:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 9 20:31:52 s1t=03d04365 s1c=3a940a9f s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=1 seats=4 fleet=no
+2026-10-17T20:32:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V32-scratch/poll.log] last=9 20:31:52 s1t=03d04365 s1c=3a940a9f s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=1 seats=4 fleet=no
+2026-10-17T20:32:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/checks.log: [V45] try 2 20:28:36 ALL-PRESENT
+2026-10-17T20:32:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V11-scratch/poll.log: READY try=10 t=20:32:08 S3report=S3-fixture-author.md S4report=S4-fixture-docs.md
+2026-10-17T20:32:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V32-scratch/poll.log: 10 20:32:12 s1t=03d04365 s1c=3a940a9f s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=2 seats=5 fleet=no
+2026-10-17T20:32:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V46-scratch/poll.log: 20:32:08 ALL-PRESENT
+2026-10-17T20:32:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V32-scratch/poll.log] last=10 20:32:12 s1t=03d04365 s1c=3a940a9f s2=8678abc1 s3m=80440d61 fx=10 fxh=a2f0f34b s5a=ABSENT s5b=8e9e1774 s5c=a9b51f8c prods=2 seats=5 fleet=no
+2026-10-17T20:32:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V46-scratch/poll.log] last=20:32:08 ALL-PRESENT
+2026-10-17T20:32:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V29-scratch/poll.log: POLL_HIT elapsed=260s checks=13
+2026-10-17T20:32:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V38-scratch/poll.log: READY-STABLE try=13 23:32:28 md5set=88fccff017399b64a122fcc64f9385d8
+2026-10-17T20:32:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V11-scratch/poll.log] last=READY try=10 t=20:32:08 S3report=S3-fixture-author.md S4report=S4-fixture-docs.md
+2026-10-17T20:32:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V38-scratch/poll.log] last=READY-STABLE try=13 23:32:28 md5set=88fccff017399b64a122fcc64f9385d8
+2026-10-17T20:33:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V29-scratch/poll.log] last=POLL_HIT elapsed=260s checks=13
+2026-10-17T20:33:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [root-scratch/v05-self-test-scratch/poll.log] last=POLL_HIT_ALL n=16 t=20:32:53
+2026-10-17T20:33:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [root-scratch/v05-self-test-scratch/poll.out] last=POLL_HIT_ALL n=16
+2026-10-17T20:33:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/V14-poll2.log: ALL-PRESENT at try 15 23:33:39
+2026-10-17T20:34:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V30-scratch/poll.log: ALL-PRESENT t=20:33:52 n=17
+2026-10-17T20:34:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V22-scratch/poll3.log: READY p4
+2026-10-17T20:34:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/V14-poll2.log: ALL-PRESENT at try 15 23:33:52
+2026-10-17T20:34:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V22-scratch/poll2.log: READY p7
+2026-10-17T20:34:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V22-scratch/poll2.log] last=READY p7
+2026-10-17T20:34:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V30-scratch/poll.log] last=ALL-PRESENT t=20:33:52 n=17
+2026-10-17T20:35:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/checks.log: [V56] ALL-PRESENT try=13 20:32:32
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 23 23:35:27 reports=22
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V23-scratch/poll2.log: ALL-PRESENT try=20 23:35:27
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/poll-s1-report.log: POLL_HIT t=20s report=S1-freeze-hygiene.md sha=03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b:153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947:
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V28-scratch/poll.log: ALL-PRESENT at try 23 23:35:38
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V21-scratch/poll.log: try=22 ts=2026-10-17T20:35:34-03:00 ALL-PRESENT
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V48-scratch/poll.log: ALL-PRESENT try 21 23:35:33
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V07-scratch/poll.log: 20:35:30 READY
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V33-scratch/poll.log: ALL-PRESENT at try 21 23:35:25
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V33-scratch/poll2.log: ALL-PRESENT at try 19 23:35:28
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V23-scratch/poll2.log] last=ALL-PRESENT try=20 23:35:27
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V33-scratch/poll.log] last=ALL-PRESENT at try 21 23:35:25
+2026-10-17T20:35:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V33-scratch/poll2.log] last=ALL-PRESENT at try 19 23:35:28
+2026-10-17T20:36:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 24 23:35:47 reports=24
+2026-10-17T20:36:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 24 23:35:47 reports=24
+2026-10-17T20:36:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V21-scratch/poll.log] last=try=22 ts=2026-10-17T20:35:34-03:00 ALL-PRESENT
+2026-10-17T20:36:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V28-scratch/poll.log] last=ALL-PRESENT at try 23 23:35:38
+2026-10-17T20:36:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V48-scratch/poll.log] last=ALL-PRESENT try 21 23:35:33
+2026-10-17T20:36:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 25 23:36:07 reports=25
+2026-10-17T20:36:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 25 23:36:07 reports=25
+2026-10-17T20:36:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 26 23:36:27 reports=26
+2026-10-17T20:36:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 26 23:36:27 reports=26
+2026-10-17T20:37:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 27 23:36:47 reports=30
+2026-10-17T20:37:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 27 23:36:47 reports=30
+2026-10-17T20:37:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 28 23:37:07 reports=34
+2026-10-17T20:37:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 29 23:37:27 reports=37
+2026-10-17T20:37:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/checks.log: [V49] ALL-PRESENT at try 24 23:37:26
+2026-10-17T20:37:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/checks.log: [V20] PRODUCERS-ALL-PRESENT try 29 23:37:27 reports=37
+2026-10-17T20:38:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 30 23:37:47 reports=42
+2026-10-17T20:38:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V43-scratch/poll.log: ALL-PRESENT try=28 23:37:57
+2026-10-17T20:38:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 30 23:37:47 reports=42
+2026-10-17T20:38:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 31 23:38:07 reports=42
+2026-10-17T20:38:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 31 23:38:07 reports=42
+2026-10-17T20:38:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V43-scratch/poll.log] last=ALL-PRESENT try=28 23:37:57
+2026-10-17T20:38:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 32 23:38:27 reports=45
+2026-10-17T20:38:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 32 23:38:27 reports=45
+2026-10-17T20:39:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 33 23:38:47 reports=47
+2026-10-17T20:39:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 33 23:38:47 reports=47
+2026-10-17T20:39:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 34 23:39:07 reports=48
+2026-10-17T20:39:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 34 23:39:07 reports=48
+2026-10-17T20:39:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 35 23:39:27 reports=50
+2026-10-17T20:39:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 35 23:39:27 reports=50
+2026-10-17T20:40:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 36 23:39:47 reports=52
+2026-10-17T20:40:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 36 23:39:47 reports=52
+2026-10-17T20:40:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 37 23:40:07 reports=52
+2026-10-17T20:40:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 37 23:40:07 reports=52
+2026-10-17T20:40:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 38 23:40:27 reports=53
+2026-10-17T20:40:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 38 23:40:27 reports=53
+2026-10-17T20:40:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/checks.log: [V43] ALL-PRESENT try=28 23:37:57
+2026-10-17T20:40:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/checks.log: [V20] PRODUCERS-ALL-PRESENT try 38 23:40:27 reports=53
+2026-10-17T20:41:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 39 23:40:47 reports=54
+2026-10-17T20:41:00-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 39 23:40:47 reports=54
+2026-10-17T20:41:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: PRODUCERS-ALL-PRESENT try 40 23:41:07 reports=56
+2026-10-17T20:41:20-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=PRODUCERS-ALL-PRESENT try 40 23:41:07 reports=56
+2026-10-17T20:41:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V20-scratch/poll.log: POLL-TIMEOUT 23:41:27 reports=56
+2026-10-17T20:41:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V20-scratch/poll.log] last=POLL-TIMEOUT 23:41:27 reports=56
+2026-10-17T20:43:40-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/checks.log: [V20] POLL-TIMEOUT 23:41:27 reports=56
+2026-10-17T20:59:41-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V58-scratch/poll.log: POLL-TIMEOUT nonself=58 23:59:39
+2026-10-17T21:00:01-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V58-scratch/poll.log] last=POLL-TIMEOUT nonself=58 23:59:39
+2026-10-17T21:05:01-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V36-scratch/V36-poll.log: 21:04:43 STALL READY held, reports=58 unchanged for 60 tries; exiting
+2026-10-17T21:05:01-0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V57-scratch/watch.log: [V36-scratch/V36-poll.log] last=21:04:43 STALL READY held, reports=58 unchanged for 60 tries; exiting

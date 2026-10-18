@@ -1,0 +1,8 @@
+try=1 20:29:42 tools=[] knowledge=[corpus/knowledge/r95-aftermath-scope-note.md,corpus/knowledge/r96-response-scope-note.md,] map_Jrows=17 df_selftest_exit=0 reports=[]
+try=2 20:30:03 tools=[] knowledge=[corpus/knowledge/r95-aftermath-scope-note.md,corpus/knowledge/r96-response-scope-note.md,] map_Jrows=17 df_selftest_exit=0 reports=[V15-c3-r95-repair.md,]
+try=3 20:30:23 tools=[] knowledge=[corpus/knowledge/r95-aftermath-scope-note.md,corpus/knowledge/r96-response-scope-note.md,] map_Jrows=20 df_selftest_exit=0 reports=[V15-c3-r95-repair.md,]
+try=4 20:30:44 tools=[] knowledge=[corpus/knowledge/r95-aftermath-scope-note.md,corpus/knowledge/r96-response-scope-note.md,] map_Jrows=20 df_selftest_exit=0 reports=[V11-c3-support-map.md,V15-c3-r95-repair.md,]
+try=5 20:31:04 tools=[] knowledge=[corpus/knowledge/r95-aftermath-scope-note.md,corpus/knowledge/r96-response-scope-note.md,] map_Jrows=20 df_selftest_exit=0 reports=[S3-fixture-author.md,V11-c3-support-map.md,V15-c3-r95-repair.md,]
+try=6 20:31:25 tools=[corpus/tools/dependency-freeze-contract.json,corpus/tools/dependency_freeze.py,] knowledge=[corpus/knowledge/r95-aftermath-scope-note.md,corpus/knowledge/r96-response-scope-note.md,] map_Jrows=20 df_selftest_exit=1 reports=[S3-fixture-author.md,V11-c3-support-map.md,V15-c3-r95-repair.md,V22-doc-parity.md,]
+ALL-READY try=6 20:31:25
+POLL-DONE 20:31:25

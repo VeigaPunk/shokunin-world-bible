@@ -1,0 +1,27 @@
+[
+  {
+    "id": "teva",
+    "kind": "character",
+    "name": "Teva",
+    "first_appearance": "m2-record-archive",
+    "claims": [
+      {
+        "statement": "Teva says she opened the Lorn Index for the check.",
+        "source_id": "m2-record-archive"
+      }
+    ]
+  },
+  {
+    "id": "orni",
+    "kind": "character",
+    "name": "Orni",
+    "first_appearance": "m2-record-archive",
+    "claims": [
+      {
+        "statement": "The folio names Orni as one of its two annotators.",
+        "source_id": "m2-record-archive"
+      }
+    ]
+  },
+  {
+    "id": "slate

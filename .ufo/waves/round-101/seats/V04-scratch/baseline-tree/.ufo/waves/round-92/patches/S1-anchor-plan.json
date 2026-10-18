@@ -1,0 +1,373 @@
+{
+  "contract_source": "git show e97613c:corpus/knowledge/holder-assessment-boundary.md",
+  "instruction_source": ".ufo/waves/round-90/followup/CB1-boundary-refresh.md (cross-checked against .ufo/waves/round-90/followup/CB1.md)",
+  "replacement_digest_definition": "SHA-256 of exact UTF-8 proposal section body after the matching ## heading; for multiple source sections, their bodies are joined with LF---LF. This digests the source replacement instruction payload, not an applied document.",
+  "sections": [
+    {
+      "section": "D1",
+      "anchor": "| Holder IDs each uniquely resolvable in the raw table and the resolved index; real discontinuity",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:a8fc144b71273b14595112048b04661de5bd4605e333d1885f19da280f2c0541",
+      "digest_basis": [
+        "D1 — Decision-table row 2"
+      ]
+    },
+    {
+      "section": "D1/D2",
+      "anchor": "| A referenced holder ID is **not uniquely resolvable**: ≥ 2 raw entity rows carry it but exactly one survives the field check",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:8442a02b5a569219bea6b7c4792b644c4a67e9cc77d8ac6b39c01cbd7adb42b4",
+      "digest_basis": [
+        "D1/D2 — Decision-table row 3"
+      ]
+    },
+    {
+      "section": "D2",
+      "anchor": "| A referenced holder ID is **not uniquely resolvable**: ≥ 2 raw entity rows carry it but exactly one survives the field check",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:8442a02b5a569219bea6b7c4792b644c4a67e9cc77d8ac6b39c01cbd7adb42b4",
+      "digest_basis": [
+        "D1/D2 — Decision-table row 3"
+      ],
+      "note": "Shared whole-row replacement with D1/D2."
+    },
+    {
+      "section": "D2",
+      "anchor": "- Comparison findings can be non-definite. When a holder id involved in a",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:98a76c4bcce60c23a935dbc305fa544b21694c304a3d33ed765061e50e12bad7",
+      "digest_basis": [
+        "D2 — Limits bullets"
+      ]
+    },
+    {
+      "section": "D3",
+      "anchor": "round-89 seat X1 added",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "paragraph-tail",
+      "replacement_digest": "sha256:e6c2a0fcf05dba0d7173178c71c274ce6c246caa9b5dac1b55cb1a24de27a84f",
+      "digest_basis": [
+        "D3 — Revision history"
+      ]
+    },
+    {
+      "section": "D4",
+      "anchor": "<!-- Refreshed at round-89 closure from seat CB1's verified proposal",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:603cf0161cde54290377c81bd4d821000cdb7ea12a3975f20c20dafe08fec8d6",
+      "digest_basis": [
+        "D4 — Header + banner"
+      ]
+    },
+    {
+      "section": "D4",
+      "anchor": "verified-at: RUNTIME REPLAYED on the delivered tree at `1b09f3f`",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:d196bb74680ed09aec2c0da53a2936dd19342156aa65111eeefd1b440c54a673",
+      "digest_basis": [
+        "D4 — verified-at"
+      ]
+    },
+    {
+      "section": "D5",
+      "anchor": "Re-verify whenever the provenance",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "paragraph-tail",
+      "replacement_digest": "sha256:39d645acca5dc5c36f67e7edc5c44c2936a55e6dab190baa72ea693ab0dd466d",
+      "digest_basis": [
+        "D5 — recheck"
+      ]
+    },
+    {
+      "section": "D5",
+      "anchor": "contract does not exist at `1b09f3f`",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:39d645acca5dc5c36f67e7edc5c44c2936a55e6dab190baa72ea693ab0dd466d",
+      "digest_basis": [
+        "D5 — recheck"
+      ]
+    },
+    {
+      "section": "D6",
+      "anchor": "## First-stop causes (delivered `1b09f3f`)",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:c6a9ba1c7fd33d95f5bf93f5813f56af651a64500627628174e1742a7a6a37bf",
+      "digest_basis": [
+        "D6/D7 — Cause section anchors"
+      ]
+    },
+    {
+      "section": "D6",
+      "anchor": "(`:272`, `:285`); the source form uses `raw sources` (`:306`).",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:c6a9ba1c7fd33d95f5bf93f5813f56af651a64500627628174e1742a7a6a37bf",
+      "digest_basis": [
+        "D6/D7 — Cause section anchors"
+      ]
+    },
+    {
+      "section": "D7",
+      "anchor": "| # | Cause string | Trigger | Code |",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:c6a9ba1c7fd33d95f5bf93f5813f56af651a64500627628174e1742a7a6a37bf",
+      "digest_basis": [
+        "D6/D7 — Cause section anchors"
+      ]
+    },
+    {
+      "section": "D7",
+      "anchor": "**Several causes can be named at once.**",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:c6a9ba1c7fd33d95f5bf93f5813f56af651a64500627628174e1742a7a6a37bf",
+      "digest_basis": [
+        "D6/D7 — Cause section anchors"
+      ]
+    },
+    {
+      "section": "D8",
+      "anchor": "| Holder IDs each uniquely resolvable in the raw table and the resolved index; real discontinuity",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:a8fc144b71273b14595112048b04661de5bd4605e333d1885f19da280f2c0541",
+      "digest_basis": [
+        "D1 — Decision-table row 2"
+      ],
+      "note": "Same row-2 citation edit also satisfies D1."
+    },
+    {
+      "section": "D8",
+      "anchor": "| Ambiguity on a record that also fails the key-set check |",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "skip-with-reason",
+      "replacement_digest": null,
+      "note": "Unique table-row anchor is included in the CB1 D8 location range, but this row contains no checker line citation or stale revision label; the proposal supplies no row edit."
+    },
+    {
+      "section": "D8",
+      "anchor": "- Scope: exactly two assessments stop",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:98a76c4bcce60c23a935dbc305fa544b21694c304a3d33ed765061e50e12bad7",
+      "digest_basis": [
+        "D2 — Limits bullets"
+      ]
+    },
+    {
+      "section": "D8",
+      "anchor": "- Causes are collected, not selected.",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:98a76c4bcce60c23a935dbc305fa544b21694c304a3d33ed765061e50e12bad7",
+      "digest_basis": [
+        "D2 — Limits bullets"
+      ]
+    },
+    {
+      "section": "D8",
+      "anchor": "- Emission order is asymmetric:",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:98a76c4bcce60c23a935dbc305fa544b21694c304a3d33ed765061e50e12bad7",
+      "digest_basis": [
+        "D2 — Limits bullets"
+      ]
+    },
+    {
+      "section": "D8",
+      "anchor": "- Ambiguous SOURCE is not a stop cause.",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:98a76c4bcce60c23a935dbc305fa544b21694c304a3d33ed765061e50e12bad7",
+      "digest_basis": [
+        "D2 — Limits bullets"
+      ]
+    },
+    {
+      "section": "D8",
+      "anchor": "- Chain eligibility is no longer orthogonal to the disclosure:",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:98a76c4bcce60c23a935dbc305fa544b21694c304a3d33ed765061e50e12bad7",
+      "digest_basis": [
+        "D2 — Limits bullets"
+      ]
+    },
+    {
+      "section": "D9",
+      "anchor": "Delivered replay — the five recorded r85 probe inputs against the checker at",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:5a0ae008e90f3c032ae65c421f18118ffcf0e394be21e90225e1702aac57ea84",
+      "digest_basis": [
+        "D9 — Commands header + five-gate entry"
+      ],
+      "note": "This is the proposal’s D9 target."
+    },
+    {
+      "section": "D9",
+      "anchor": "That helper does not exist at `1b09f3f`",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:5a0ae008e90f3c032ae65c421f18118ffcf0e394be21e90225e1702aac57ea84",
+      "digest_basis": [
+        "D9 — Commands header + five-gate entry"
+      ]
+    },
+    {
+      "section": "D9",
+      "anchor": "- Checker at delivered `1b09f3f` (`corpus/fixtures/check_bible.py`, 435",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "skip-with-reason",
+      "replacement_digest": null,
+      "note": "CB1.md identifies the delivered-checker evidence block as D9, but the refresh proposal labels the Commands/five-gate text D9 and gives no replacement for this evidence block’s delivered-revision/hash paragraph. The remap table covers code references only."
+    },
+    {
+      "section": "D10",
+      "anchor": "In-tree provenance fixtures at `1b09f3f`:",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:53297ffc6a1d59a8f0e0e70871c5b461920cbf9d517aa51bc003d5c7c154e6a8",
+      "digest_basis": [
+        "D10 — In-tree inventory"
+      ]
+    },
+    {
+      "section": "D11/D12",
+      "anchor": "Verified by CB1 for the 160 fixture directories at `1b09f3f`:",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "paragraph-tail",
+      "replacement_digest": "sha256:5c6a3ec09c5dc5532b073b971ea63dea392d8700185fc61fe0d0e3d6f7cde892",
+      "digest_basis": [
+        "D11/D12 — Contract item 5"
+      ]
+    },
+    {
+      "section": "D11",
+      "anchor": "The remaining branches are verified by CB1's round-89 scratch probes only",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:13425652c0d66b252f5f0b7d916bd06009386896548c1efd45290ad6fd7c8a18",
+      "digest_basis": [
+        "D11 — Remaining-branches paragraph"
+      ]
+    },
+    {
+      "section": "D12",
+      "anchor": "- Rules text: `corpus/fixtures/README.md:110-119`",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:d680ed5d2881298f0ef5103206502e0f7971cbeb9e02c4c44c84b10d7564b89c",
+      "digest_basis": [
+        "D8/D12 — README/citations paragraph"
+      ]
+    },
+    {
+      "section": "D12",
+      "anchor": "## Round 90: definite null chains, integer-only ticks, raw-present fixtures",
+      "anchor_matches": 0,
+      "anchor_status": "missing",
+      "operation": "skip-with-reason",
+      "replacement_digest": "sha256:81b1ec954b84dd0e45661bd40329d02b61cafe6dd565a70ac0c25ca1ed13bfba",
+      "digest_basis": [
+        "D12 — Closure-adjacent actions"
+      ],
+      "note": "This proposed insertion belongs in corpus/fixtures/README.md, not the target boundary contract; no matching heading exists in the contract."
+    },
+    {
+      "section": "D13",
+      "anchor": "- OBSERVED on the delivered tree (round-89 seat CB1, `1b09f3f`; exact",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:1cb3b86c9867f1633d8e1a576b5d33448d9a2526b8ef618c52f583d814bf486e",
+      "digest_basis": [
+        "D13 — Status split"
+      ]
+    },
+    {
+      "section": "D13",
+      "anchor": "- OBSERVED only in scratch probes at `1b09f3f` (no durable fixture):",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "whole-region",
+      "replacement_digest": "sha256:d2ae7ec5d286942ea9e98b0dfc87a8ed774cf68328733c8344186d097a489bb6",
+      "digest_basis": [
+        "D11 — Remaining-branches paragraph",
+        "D13 — Status split"
+      ]
+    },
+    {
+      "section": "D13",
+      "anchor": "- REPLAYED, not scored: no five-gate `passed` count exists for `1b09f3f`;",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:1cb3b86c9867f1633d8e1a576b5d33448d9a2526b8ef618c52f583d814bf486e",
+      "digest_basis": [
+        "D13 — Status split"
+      ]
+    },
+    {
+      "section": "D14",
+      "anchor": "- Measurement ceiling: `score = 2 × passed` on the five-gate disclosure",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:98a76c4bcce60c23a935dbc305fa544b21694c304a3d33ed765061e50e12bad7",
+      "digest_basis": [
+        "D2 — Limits bullets"
+      ],
+      "note": "Proposal places this D14-related hash update in its D2 limits instructions."
+    },
+    {
+      "section": "D14",
+      "anchor": "No five-gate score is recorded for the delivered tree `1b09f3f`:",
+      "anchor_matches": 1,
+      "anchor_status": "unique",
+      "operation": "inline-substitution",
+      "replacement_digest": "sha256:1cb3b86c9867f1633d8e1a576b5d33448d9a2526b8ef618c52f583d814bf486e",
+      "digest_basis": [
+        "D13 — Status split"
+      ],
+      "note": "D14 payload is nested in the proposal’s D13 section; no standalone D14 heading."
+    }
+  ]
+}

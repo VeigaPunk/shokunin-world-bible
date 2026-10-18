@@ -1,0 +1,20 @@
+[
+  {
+    "id": "r12-harbor",
+    "tick": 7,
+    "entity_id": "mira",
+    "place_id": "harbor",
+    "depends_on": [],
+    "description": "A record places Mira at Lantern Harbor at tick 7.",
+    "source_id": "courier-log"
+  },
+  {
+    "id": "r12-tower",
+    "tick": 7,
+    "entity_id": "mira",
+    "place_id": "tower",
+    "depends_on": [],
+    "description": "A separate record places Mira at North Tower at tick 7.",
+    "source_id": "courier-log"
+  }
+]

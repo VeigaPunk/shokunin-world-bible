@@ -1,0 +1,6 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r8-deps-anomalous
+exit_code=1
+VIOLATION: timeline[1].depends_on[1]: repeated dependency 'departure'
+VIOLATION: timeline[1].depends_on[2]: self dependency 'arrival'
+VIOLATION: timeline[1].depends_on: timeline inversion 'arrival' tick 2 not before 'arrival' tick 2
+3 violation(s); no canon changed

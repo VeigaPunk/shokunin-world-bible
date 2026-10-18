@@ -1,0 +1,11 @@
+usage: dependency_freeze.py [-h] [--freeze DIR] [--self-test] [fixture]
+
+Freeze or verify per-fixture dependency inventories.
+
+positional arguments:
+  fixture       fixture directory to verify against its pin
+
+options:
+  -h, --help    show this help message and exit
+  --freeze DIR  (re)build the pin for DIR (delivery-time only)
+  --self-test   run isolated cases against persisted expectations

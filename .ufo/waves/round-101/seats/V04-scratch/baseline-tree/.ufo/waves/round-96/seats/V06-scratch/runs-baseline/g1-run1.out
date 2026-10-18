@@ -1,0 +1,6 @@
+$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/map_obligations_r95.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/case-g1
+OBLIGATIONS raw=11 mapped=11
+INVENTORY JSON-FACTS 11/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 14/15 MISMATCH
+FINDING schema_drift: entities.json#/0: 1 sourced-claim-shaped record(s) under unexpected key 'claim_records'
+RESULT FAIL
+EXIT=1

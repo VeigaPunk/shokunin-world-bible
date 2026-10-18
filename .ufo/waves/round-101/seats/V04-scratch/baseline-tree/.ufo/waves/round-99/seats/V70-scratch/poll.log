@@ -1,0 +1,43 @@
+2026-10-18T01:02:48Z
+try=1 ts=2026-10-18T01:05:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=2 ts=2026-10-18T01:06:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=3 ts=2026-10-18T01:06:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=4 ts=2026-10-18T01:06:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=5 ts=2026-10-18T01:07:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=6 ts=2026-10-18T01:07:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=7 ts=2026-10-18T01:07:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=8 ts=2026-10-18T01:08:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=9 ts=2026-10-18T01:08:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=10 ts=2026-10-18T01:08:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=11 ts=2026-10-18T01:09:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=12 ts=2026-10-18T01:09:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=13 ts=2026-10-18T01:09:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=14 ts=2026-10-18T01:10:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=15 ts=2026-10-18T01:10:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=16 ts=2026-10-18T01:10:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=17 ts=2026-10-18T01:11:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=18 ts=2026-10-18T01:11:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=19 ts=2026-10-18T01:11:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=20 ts=2026-10-18T01:12:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=21 ts=2026-10-18T01:12:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=22 ts=2026-10-18T01:12:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=23 ts=2026-10-18T01:13:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=24 ts=2026-10-18T01:13:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=25 ts=2026-10-18T01:13:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=26 ts=2026-10-18T01:14:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=27 ts=2026-10-18T01:14:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=28 ts=2026-10-18T01:14:56Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=29 ts=2026-10-18T01:15:16Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=30 ts=2026-10-18T01:15:36Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+RESUME after 600s cap killed pid 1722687 at try 30; continuing tries 31-40 2026-10-18T01:30:18Z
+try=31 ts=2026-10-18T01:30:18Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=32 ts=2026-10-18T01:30:38Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=33 ts=2026-10-18T01:30:58Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=34 ts=2026-10-18T01:31:18Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=35 ts=2026-10-18T01:31:38Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=36 ts=2026-10-18T01:31:58Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=37 ts=2026-10-18T01:32:18Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=38 ts=2026-10-18T01:32:38Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=39 ts=2026-10-18T01:32:58Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+try=40 ts=2026-10-18T01:33:18Z reports=2 s1=0 s2=0 s3=1 s4=1 s5=0 fixfiles=10 ktable=0 knote=0
+EXHAUSTED try=40 ts=2026-10-18T01:33:18Z

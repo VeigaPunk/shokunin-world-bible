@@ -1,0 +1,32 @@
+CASE clean: exit=2 expected=0 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE reduction_edge_drop: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE addition_edge_phantom: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE event_removed: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE event_endpoint_change: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE relation_endpoint_flip: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE relation_removed: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE relation_added: exit=2 expected=1 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE digest_tamper: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE malformed_json: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE missing_timeline: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['CONTRACT-INVALID'] MISMATCH
+  observed stdout: ['FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path', 'RESULT ERROR']
+SELF-TEST 3/16
+FINDING SELF-TEST-MISMATCH: cases failed: ['addition_edge_phantom', 'clean', 'digest_tamper', 'event_endpoint_change', 'event_removed', 'malformed_json', 'missing_fixture', 'missing_timeline', 'path_mismatch', 'reduction_edge_drop', 'relation_added', 'relation_endpoint_flip', 'relation_removed']
+RESULT FAIL

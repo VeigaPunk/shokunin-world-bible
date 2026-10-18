@@ -1,0 +1,122 @@
+{
+  "seat": "JCOV1",
+  "role": "Coverage judge #1 (cluster structure + checker)",
+  "wave": "round-88 follow-up",
+  "judged_commit": "2ea9ef1",
+  "judged_tree": "2ea9ef1 (working tree clean; `git diff 2ea9ef1 --stat` empty)",
+  "baseline_commit": "dfd1fbc",
+  "repo": "lore-shokunin",
+
+  "checklist": {
+    "entity_kinds_at_least_1_faction": {
+      "status": "FAIL",
+      "command": "python3 -c \"import json;print(sorted(set(e['kind'] for e in json.load(open('corpus/fixtures/r88-m3-maya-cluster/entities.json')))))\"",
+      "observed": "['character', 'place']",
+      "detail": "4 entities: aru=character, evin=character, quiet-rise=place, salt-court=place. 0 factions.",
+      "checker_kinds_allowed": ["character", "place", "faction", "item"]
+    },
+    "relations_at_least_3_one_reciprocal_alliance": {
+      "status": "FAIL",
+      "command": "python3 -c \"import json;print(len(json.load(open('corpus/fixtures/r88-m3-maya-cluster/relations.json'))))\"",
+      "observed": "0",
+      "detail": "relations.json is the empty array []. No allied_with edges, therefore no reciprocal faction pair. Reciprocal-pair probe over the delivered file returned []."
+    },
+    "timeline_at_least_2_events": {
+      "status": "PASS",
+      "command": "python3 -c \"import json;print(len(json.load(open('corpus/fixtures/r88-m3-maya-cluster/timeline.json'))))\"",
+      "observed": "2",
+      "ids": ["aru-ninth-bell", "evin-ninth-bell"]
+    },
+    "timeline_at_least_1_depends_on_edge": {
+      "status": "FAIL",
+      "command": "python3 -c \"import json;print([(e['id'],e['depends_on']) for e in json.load(open('corpus/fixtures/r88-m3-maya-cluster/timeline.json'))])\"",
+      "observed": "[('aru-ninth-bell', []), ('evin-ninth-bell', [])]",
+      "detail": "0 non-empty depends_on edges."
+    },
+    "occupied_slot_near_miss_two_entities_same_tick_different_places": {
+      "status": "PASS_AS_DEFINED_BY_SEAT",
+      "named_entities": [
+        {"entity": "aru", "name": "Aru", "tick": 9, "place": "quiet-rise", "place_name": "Quiet Rise"},
+        {"entity": "evin", "name": "Evin", "tick": 9, "place": "salt-court", "place_name": "Salt Court"}
+      ],
+      "command": "python3 -c \"import json;print([(e['id'],e['tick'],e['entity_id'],e['place_id']) for e in json.load(open('corpus/fixtures/r88-m3-maya-cluster/timeline.json'))])\"",
+      "observed": "[('aru-ninth-bell', 9, 'aru', 'quiet-rise'), ('evin-ninth-bell', 9, 'evin', 'salt-court')]",
+      "caveat": "check_bible.py's occupied-slot guard is keyed on (entity_id, tick), so two DIFFERENT entities sharing tick 9 never approach that guard. The pair is a shared-tick near-miss, not an occupied-slot near-miss in the guard's sense. Control probe ctrl-doublebook (same entity, same tick, two places) proves the guard is live and does fire."
+    },
+    "every_citation_resolves_uniquely": {
+      "status": "PASS",
+      "command": "python3 /tmp/jcov1_probe.py",
+      "observed": "source ids: ['veil-verse', 'paired-clock'] unique: True; citation refs total: 10 non-uniquely-resolving: []; refs per source: Counter({'paired-clock': 10})",
+      "detail": "10 references (4 first_appearance + 4 entity claims + 0 relations + 2 timeline). All 10 resolve to the single source id paired-clock. veil-verse is declared in sources.json but never referenced by any JSON record."
+    },
+    "checker_exit_0": {
+      "status": "PASS",
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-m3-maya-cluster; echo EXIT=$?",
+      "observed": "CLEAN: schema, citations, relations, timeline; 0 violations / EXIT=0",
+      "r87_sibling": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r87-myth-cluster -> CLEAN: schema, citations, relations, timeline; 0 violations / EXIT=0"
+    }
+  },
+
+  "census": {
+    "command": "python3 /tmp/jcov1/census.py <tree> <out.json>  (runs check_bible.py over every dir in corpus/fixtures)",
+    "baseline_dirs": 145,
+    "delivered_dirs": 149,
+    "new_dirs": ["r88-m3-maya-cluster", "r88-mixed-stop", "r88-nonholder-stop", "r88-shape-ambiguous-armed"],
+    "removed_dirs": [],
+    "exit_code_changes": [],
+    "changed_fixtures_count": 9,
+    "changed_fixtures": [
+      {"fixture": "r61-independent-empty", "baseline_lines": 18, "delivered_lines": 19},
+      {"fixture": "r61-independent-unavailable", "baseline_lines": 7, "delivered_lines": 8},
+      {"fixture": "r87-masked-break-from-ambiguous", "baseline_lines": 7, "delivered_lines": 6},
+      {"fixture": "r87-masked-break-to-ambiguous", "baseline_lines": 7, "delivered_lines": 6},
+      {"fixture": "r87-probe-entry-shape", "baseline_lines": 3, "delivered_lines": 9},
+      {"fixture": "r87-probe-multi-invalid", "baseline_lines": 7, "delivered_lines": 6},
+      {"fixture": "r87-probe-nonitem-kinds", "baseline_lines": 9, "delivered_lines": 10},
+      {"fixture": "r87-probe-record-and-chain", "baseline_lines": 35, "delivered_lines": 47},
+      {"fixture": "r87-probe-shape-ambiguous", "baseline_lines": 3, "delivered_lines": 6}
+    ],
+    "path_only_differences_excluded_from_count": 5,
+    "note": "The 9 changed fixtures match the C1 claim '9 changed + 4 new of 149 dirs, 0 exit changes' exactly. 5 further diffs are artifacts of running the baseline from /tmp (absolute fixture path appears in the message); they are not behavioural changes.",
+    "inspiration_note_count": {"baseline": 1, "delivered": 2}
+  },
+
+  "new_fixture_signatures_at_head": [
+    {"fixture": "r88-m3-maya-cluster", "exit": 0, "first_line": "CLEAN: schema, citations, relations, timeline; 0 violations"},
+    {"fixture": "r88-mixed-stop", "exit": 1, "first_line": "VIOLATION: entities[1].id: duplicate entities id 'f1-mixed-dup'", "lines": 7},
+    {"fixture": "r88-nonholder-stop", "exit": 1, "first_line": "VIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'f1-nonholder-missing-source'", "lines": 5},
+    {"fixture": "r88-shape-ambiguous-armed", "exit": 1, "first_line": "VIOLATION: entities[1].id: duplicate entities id 'f1-shape-dup'", "lines": 6}
+  ],
+
+  "control_probes": {
+    "scratch": "/tmp/jcov1/",
+    "ctrl-doublebook": {"mutate": "timeline[1].entity_id := 'aru', place_id := 'salt-court'", "observed": "VIOLATION: timeline[1]: double-booked 'aru' at tick 9 in timeline[0] ('quiet-rise') and 'salt-court'", "exit": 1},
+    "ctrl-faction-recip": {"mutate": "add factions pact-a/pact-b with reciprocal allied_with + one records_at", "observed": "CLEAN: schema, citations, relations, timeline; 0 violations", "exit": 0},
+    "ctrl-faction-oneway": {"mutate": "add factions pact-a/pact-b with a one-way allied_with + two records_at", "observed": "VIOLATION: relations[0]: allied_with faction relation 'pact-a' -> 'pact-b' lacks a sourced reciprocal relation", "exit": 1},
+    "ctrl-depends": {"mutate": "timeline[1].depends_on := ['aru-ninth-bell']", "observed": "VIOLATION: timeline[1].depends_on: timeline inversion 'aru-ninth-bell' tick 9 not before 'evin-ninth-bell' tick 9", "exit": 1}
+  },
+
+  "obs1_repair": {
+    "variant_delivered": "M4-obs1-excerpt.patch (M4 recommended repoint; the excerpt variant was integrated instead)",
+    "command": "python3 -c 'import json,re,pathlib; ... gate_named; first_appearance; claim_source; clause_matches'",
+    "observed": "gate_named=True; first_appearance=lowwater-hymn; claim_source=lowwater-hymn; clause_matches=8/8",
+    "detail": "r87-myth-cluster lowwater-hymn-excerpt.md line 1 now reads '... beside the bowl at the Mother-Tide Gate.'; the Gate's entity claim was narrowed to match; the map gained the 'at the Mother-Tide Gate' row (8 rows)."
+  },
+
+  "clause_map_fidelity_r88": {
+    "command": "strict substring of each map clause against source-excerpt.md",
+    "mapped_clauses": 2,
+    "strict_matches": 1,
+    "observed": "'He called out ‘Earth,’' in excerpt: False; 'and the solid land appeared.' in excerpt: True",
+    "detail": "Row 1 uses curly SINGLE quotes (‘Earth,’) while the delivered excerpt uses curly DOUBLE quotes (“Earth,”). Resolves only after quote normalization; matches M5's 'pass_with_punctuation_note'."
+  },
+
+  "structural_coverage_elsewhere": {
+    "fixtures_with_faction_entities": 6,
+    "faction_fixtures": ["ally-one-way", "ally-reciprocal", "r61-allied-empty", "r61-allied-unavailable", "r7-ally-reverse-ambiguous", "r87-myth-cluster"],
+    "fixtures_exercising_reciprocal_guard": ["ally-one-way"],
+    "fixtures_exercising_double_book_guard": 13,
+    "fixtures_with_nonempty_depends_on": 99,
+    "note": "The checker paths that the r88 cluster does not exercise remain covered elsewhere (r87-myth-cluster carries 2 factions + reciprocal allied_with + depends_on chain; ally-one-way/ally-reciprocal cover reciprocity; 99 fixtures carry depends_on edges)."
+  }
+}

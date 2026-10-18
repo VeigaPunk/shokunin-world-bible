@@ -1,0 +1,24 @@
+# Round 74 schema scout — note-only addition and checker boundary
+
+## Scope and declaration
+
+The r74 declaration in `.shokunin/lore/LOG.md` (Round 74, 2026-10-13T11:09:18.358433+00:00) sets the delivered r73 fixture at baseline `fb63f9a` and proposes one depth move: add a decision table under `corpus/knowledge/`, with two source/claim/excerpt pointers and three explanations explicitly treated as hypotheses, each paired with an evidence need and “not established” status. It bars adding a fictional fact or choosing canon, and requires 132 prior fixture CLI tuples preserved. This report is limited to schema and checker involvement; it does not attest a candidate or its depth.
+
+## Relevant delivered evidence and pointers
+
+- `.shokunin/lore/corpus/fixtures/r72-vela-slate-claim/vela-slate-note-excerpt.md` reports Vela reading “KEEP THE EAST GATE CLEAR,” wondering whether the writer was hurried, and not knowing who wrote it. Its `vela-slate-clause-map.md` maps the reported reading/inference/limit to `entities.json` `/6/claims/1` and source `sources.json` `/6` (`vela-slate-note`). It explicitly says the map is editorial and does not authenticate the slate, text, writer, provenance, or chronology.
+- `.shokunin/lore/corpus/fixtures/r73-jorin-slate-claim/jorin-slate-note-excerpt.md` reports Jorin was sent to copy a notice and read “KEEP THE EAST GATE OPEN” on a slate at the east steps; he did not see who put it there. `jorin-slate-clause-map.md` maps those clauses to `entities.json` `/7/claims/1` and `sources.json` `/7` (`jorin-slate-note`), and limits the report: sender, placer and reading time are unspecified; the text and slate are not authenticated.
+- `.shokunin/lore/corpus/fixtures/r73-jorin-slate-claim/editorial-comparison.md` already states that the reports differ in wording and leaves slate/inscription identity, reading time and source relationship unresolved. It says neither account establishes an inscription change or direct contradiction.
+- In the r73 clone, `sources.json` `/6` and `/7` resolve the respective fictional source IDs; `entities.json` `/6` and `/7` hold the respective attributed claims. These are pointers within the delivered clone, not validation of the reports against an underlying world.
+
+## Schema and checker boundary
+
+A new Markdown knowledge note is structurally separate from the five fixture tables (`sources.json`, `entities.json`, `relations.json`, `timeline.json`, `contradictions.json`). The existing `.shokunin/lore/corpus/knowledge/2026-10-12-lore-decision-table.md` is itself a Markdown editorial table, illustrating that this directory holds guidance rather than a sixth fixture table. The declared addition therefore can be note-only: no source or claim row, event, relation, contradiction, schema or checker change is required merely to write an editorial decision aid.
+
+The checker source `.shokunin/lore/corpus/fixtures/check_bible.py` has no references to “editorial,” “comparison,” “knowledge,” or “notes”; the r73 README explicitly says the checker cannot verify prose support or slate truth. A knowledge note is not among the fixture JSON inputs described by the fixture README, so adding prose there is not itself checker-covered. A clean checker run would establish structural/input checks on the fixture tables only; it would not verify the note’s wording, its citations as rendered prose, the evidence sufficiency of its proposed tests, or any hypothesis. The 132-tuple preservation condition is a separate regression requirement from whether the note parses or is useful.
+
+## Risks and limits
+
+The main canonization risk is editorial language turning a possible explanation into a settled narrative: e.g. implying two surfaces existed, asserting the same slate persisted or changed, privileging one account, or treating inaccurate reporting as fact. Keep all three possibilities grammatically conditional, identify each as not established, and state a discriminating evidence need as a future question—not as an existing document, observation or source. Avoid a table heading or summary that labels the wording difference as a proven contradiction or inscription change. A second risk is pointer drift or ambiguous citation: preserve the distinct Vela/Jorin claim and excerpt paths above, and do not imply either source corroborates the other. A third is false assurance from the checker: because it does not inspect Markdown editorial material or assess source-text semantics, its clean result cannot certify the table or make its hypotheses canon.
+
+This is a schema-oriented scout assessment, not a content adjudication, checker execution, regression replay, source authentication, canon finding, rights assessment or game-mechanics inference. No conclusion is made about whether any slate, inscription, assignment, or other in-world artifact exists.

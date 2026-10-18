@@ -1,0 +1,99 @@
+=== REBUILD FAKE ROOT (delivered tool + delivered contract) ===
+8015e1f9dd84ccfa28518771439eb3cd43f1255bd0d36cb27461a02ff53226c2  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/corpus/tools/dependency-freeze-contract.json
+FAKE ROOT READY at /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2
+
+=== P1 SCOPE GUARD: out-of-scope targets must exit 2 ===
+--- P1a freeze foreign/ (relative, out of scope)
+$ corpus/tools/dependency_freeze.py --freeze foreign/r96-crossing-response
+FINDING SCOPE-REFUSED: --freeze refuses foreign/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/foreign/r96-crossing-response); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+exit=2
+--- P1b freeze /abs out-of-scope
+$ corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/outofscope/r96-crossing-response
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/outofscope/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/outofscope/r96-crossing-response); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+exit=2
+--- P1c freeze traversal escaping scope
+$ corpus/tools/dependency_freeze.py --freeze corpus/fixtures/../../foreign/r96-crossing-response
+FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/../../foreign/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/foreign/r96-crossing-response); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+exit=2
+--- P1d freeze corpus/knowledge-style dir (out of scope)
+$ corpus/tools/dependency_freeze.py --freeze corpus/tools
+FINDING SCOPE-REFUSED: --freeze refuses corpus/tools (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/corpus/tools); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+exit=2
+--- contract bytes after out-of-scope attempts (must be unchanged):
+8015e1f9dd84ccfa28518771439eb3cd43f1255bd0d36cb27461a02ff53226c2  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/corpus/tools/dependency-freeze-contract.json
+
+=== P2 SCOPE GUARD: in-scope target accepted (fake root only) ===
+--- P2a freeze corpus/fixtures/r96-crossing-response (in scope)
+$ corpus/tools/dependency_freeze.py --freeze corpus/fixtures/r96-crossing-response
+FROZEN r96-crossing-response: events 5; dependency-edges 4; relations 1
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+RESULT PASS
+exit=0
+--- pin path recorded:
+corpus/fixtures/r96-crossing-response
+
+=== P3 PATH BINDING ===
+--- P3a verify foreign-path same-named copy (expect PATH-MISMATCH exit 2)
+$ corpus/tools/dependency_freeze.py foreign/r96-crossing-response
+FINDING PATH-MISMATCH: pin r96-crossing-response names corpus/fixtures/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/corpus/fixtures/r96-crossing-response); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/foreign/r96-crossing-response
+RESULT ERROR
+exit=2
+--- P3b verify in-scope-but-different-path copy (expect PATH-MISMATCH exit 2)
+$ corpus/tools/dependency_freeze.py corpus/fixtures/nested/r96-crossing-response
+FINDING PATH-MISMATCH: pin r96-crossing-response names corpus/fixtures/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/corpus/fixtures/r96-crossing-response); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/corpus/fixtures/nested/r96-crossing-response
+RESULT ERROR
+exit=2
+--- P3c verify correct path (expect 0)
+$ corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+RESULT PASS
+exit=0
+
+=== P4 DIGEST-MISMATCH NAMES THE CHANGED FILE ===
+tampered foreign copy timeline.json (case change, non-inventory-modeled)
+--- P4a verify tampered copy (expect DIGEST-MISMATCH naming timeline.json)
+$ corpus/tools/dependency_freeze.py foreign/r96-crossing-response
+FINDING PATH-MISMATCH: pin r96-crossing-response names corpus/fixtures/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/corpus/fixtures/r96-crossing-response); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V55-scratch/fakeroot2/foreign/r96-crossing-response
+RESULT ERROR
+exit=2
+
+=== P5 SELF-TEST (real delivered tool, real contract) ===
+CASE clean: exit=0 expected=0 findings=[] ok
+CASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+CASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok
+CASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+SELF-TEST 16/16
+RESULT PASS
+exit=0
+--- contract expected case count:
+16 ['addition_edge_phantom', 'clean', 'digest_tamper', 'event_endpoint_change', 'event_removed', 'invalid_arguments', 'malformed_json', 'missing_fixture', 'missing_timeline', 'path_mismatch', 'reduction_edge_drop', 'relation_added', 'relation_endpoint_flip', 'relation_removed', 'scope_refused', 'unpinned_fixture']
+
+=== P6 CHAIN 4/4 (real repo, read-only verify) ===
+r88-m3-maya-cluster exit=0
+r94-paired-crossing exit=0
+r95-crossing-aftermath exit=0
+r96-crossing-response exit=0
+
+=== P7 r97 (new fixture) verify status ===
+FINDING UNPINNED-FIXTURE: no pin for 'r97-crossing-acknowledgment' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response'])
+RESULT ERROR
+exit=2

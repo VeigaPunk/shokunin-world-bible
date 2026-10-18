@@ -1,0 +1,23 @@
+{
+  "round": 1,
+  "axis": "calibration",
+  "substrate": "OMP native task",
+  "observed_batch_calls_this_session": 1,
+  "members_spawned": 9,
+  "integration_owner": "lore L1",
+  "route_authority": "~/.omp/agent/config.yml:318-332; taxonomy roles only, unchanged operator configuration",
+  "shape": "heterogeneous shared-writer craft delegation permitted by swarm host binding; not a validated generic UFO same-shape wave",
+  "inherited_artifacts": "dispatch.json, critic.md and baseline-probes.json predated this session; inherited dispatch not independently recoverable and not counted as this session's dispatch",
+  "members": [
+    {"id":"R1Plan","role":"planner","artifact":"reports/round-1/r1-current-planner.md"},
+    {"id":"R1Connect","role":"connector","artifact":"reports/round-1/r1-current-connector.md"},
+    {"id":"R1Checker","role":"executor","artifact":"reports/round-1/r1-current-checker.md","write_scope":"corpus/fixtures/check_bible.py"},
+    {"id":"R1Measure","role":"executor","artifact":"reports/round-1/r1-current-measurement.md","write_scope":"corpus/fixtures/measure_holder_disclosure.py"},
+    {"id":"R1Guide","role":"executor","artifact":"reports/round-1/r1-current-guide.md","write_scope":"corpus/knowledge/holder-assessment-boundary.md"},
+    {"id":"R1Scribe","role":"scribe","artifact":"reports/round-1/r1-current-scribe.md"},
+    {"id":"R1Surface","role":"scout","artifact":"reports/round-1/r1-current-surface.md"},
+    {"id":"R1Review","role":"reviewer","artifact":"reports/round-1/r1-current-reviewer.md"},
+    {"id":"R1Critic","role":"critic","artifact":"reports/round-1/r1-current-critic.md"}
+  ],
+  "promotion_verifiers": "none: dispatched reviewers remain lane-internal under PROTOCOL.md promotion rules"
+}

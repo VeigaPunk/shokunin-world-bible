@@ -1,0 +1,103 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && python3 - << 'PY'
+import hashlib, json, os, time
+from pathlib import Path
+root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin")
+seats_dir = root/".ufo/waves/round-99/seats"
+scratch = seats_dir/"V39-scratch"
+log = scratch/"poll.log"
+expected = json.loads((scratch/"expected.json").read_text())
+roster = expected["seats_expected"]
+producers = ["S1","S2","S3","S4","S5"]
+artifacts = expected["producer_paths"]
+
+def sha(p):
+    h=hashlib.sha256()
+    with open(p,"rb") as f:
+        for chunk in iter(lambda: f.read(1<<20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+def present_reports():
+    found = {}
+    if not seats_dir.exists():
+        return found
+    for p in seats_dir.glob("*.md"):
+        name = p.name
+        # seat prefix is token before first hyphen
+        seat = name.split("-", 1)[0]
+        found.setdefault(seat, []).append(name)
+    return found
+
+def artifact_state():
+    st = {}
+    for rel in artifacts:
+        p = root/rel
+        if p.is_file():
+            st[rel] = {"exists": True, "bytes": p.stat().st_size, "sha256": sha(p), "mtime": time.strftime("%Y-%m-%dT%H:%M:%S%z", time.localtime(p.stat().st_mtime))}
+        elif p.exists():
+            st[rel] = {"exists": True, "kind": "dir"}
+        else:
+            st[rel] = {"exists": False}
+    return st
+
+MAX = 40
+SLEEP = 20
+history = []
+stable = None
+stable_count = 0
+# bounded stall-escape: if producer reports + all artifacts present and the
+# report set is unchanged for 3 consecutive tries (60s), stop early so the
+# receipt can be written while the wave is still landing verifiers. Absence
+# of any producer report or artifact never triggers early stop.
+for i in range(1, MAX+1):
+    now = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+    found = present_reports()
+    present = sorted([s for s in roster if s in found])
+    missing = [s for s in roster if s not in found]
+    prod_missing = [s for s in producers if s not in found]
+    arts = artifact_state()
+    art_missing = [k for k,v in arts.items() if not v.get("exists")]
+    unexpected = sorted(set(found) - set(roster))
+    rec = {
+        "try": i,
+        "utc": now,
+        "present": len(present),
+        "missing": len(missing),
+        "producer_missing": prod_missing,
+        "artifact_missing": art_missing,
+        "unexpected_prefixes": unexpected,
+        "report_files": sum(len(v) for v in found.values()),
+    }
+    history.append(rec)
+    line = f"try={i} {now} reports={rec['report_files']} roster_present={len(present)}/128 producer_missing={prod_missing or '-'} artifact_missing={len(art_missing)} unexpected={unexpected or '-'}\n"
+    with log.open("a") as f:
+        f.write(line)
+    print(line, end="", flush=True)
+    key = (tuple(sorted(sum(found.values(), []))), tuple(art_missing), tuple(prod_missing))
+    if key == stable and not prod_missing and not art_missing:
+        stable_count += 1
+    else:
+        stable = key
+        stable_count = 0
+    if not prod_missing and not art_missing and stable_count >= 2:
+        with log.open("a") as f:
+            f.write(f"STALL-ESCAPE try={i} producers+artifacts stable for {stable_count+1} tries; stopping poll to write receipt. Verifier absence is recorded, not inferred.\n")
+        print("STALL-ESCAPE", flush=True)
+        break
+    if i < MAX:
+        time.sleep(SLEEP)
+else:
+    with log.open("a") as f:
+        f.write(f"POLL-EXHAUSTED tries={MAX}; writing receipt from last observation. ABSENT stays ABSENT.\n")
+    print("POLL-EXHAUSTED", flush=True)
+
+final = {
+    "history_tail": history[-5:],
+    "tries": history[-1]["try"] if history else 0,
+    "stopped": "stall-escape" if (not history[-1]["producer_missing"] and not history[-1]["artifact_missing"] and history[-1]["try"] < MAX) else "exhausted",
+}
+(scratch/"poll-meta.json").write_text(json.dumps({"n": len(history), "last": history[-1], "stopped_reason": final["stopped"]}, indent=1)+"\n")
+print("DONE tries", history[-1]["try"], "reason", final["stopped"])
+PY

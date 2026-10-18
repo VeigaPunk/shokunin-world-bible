@@ -32,7 +32,7 @@
     "1": "FAIL",
     "2": "ERROR"
   },
-  "revision": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
+  "revision": "ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026",
   "pins": {
     "r88-m3-maya-cluster": {
       "fixture": "corpus/fixtures/r88-m3-maya-cluster",
@@ -677,6 +677,139 @@
         "entities": 6,
         "sources": 8
       }
+    },
+    "r100-docket-review": {
+      "fixture": "corpus/fixtures/r100-docket-review",
+      "revision": "ebec6bbdeb1d919c9eb19e7fdd5b9c6dd14db026",
+      "payload_schema_version": 2,
+      "pinned_files": [
+        "entities.json",
+        "relations.json",
+        "timeline.json",
+        "sources.json",
+        "contradictions.json",
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "content_sha256": "77debadf5c0f6e2c27f18902f0710278eb4305c633ff73158df7082936325c19",
+      "files": {
+        "README.md": "a312a364d4d9476e98c0fae3f62b23bf72e73a06c508aac04ffe48cf9cf4c5fa",
+        "claim-excerpt-map.md": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
+        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+        "fictional-excerpts.md": "d01825a7e3c8f4af549b7acdde7eb8e1b9074a6eccb8ce6d12401cea19745705",
+        "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+        "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+        "sources.json": "effa5160eb7a6b228d52a972bf52beeffc1544d3cb1f6c5edb2850f88bd2d22e",
+        "timeline.json": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8"
+      },
+      "events": {
+        "aru-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "aru",
+            "place_id": "quiet-rise"
+          }
+        },
+        "evin-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "paired-crossing-decision": {
+          "depends_on": [
+            "aru-ninth-bell",
+            "evin-ninth-bell"
+          ],
+          "endpoint": {
+            "tick": 10,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "aftermath-missing-evin": {
+          "depends_on": [
+            "paired-crossing-decision"
+          ],
+          "endpoint": {
+            "tick": 11,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "response-evin-salt-court": {
+          "depends_on": [
+            "aftermath-missing-evin"
+          ],
+          "endpoint": {
+            "tick": 12,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "acknowledgment-aru-records": {
+          "depends_on": [
+            "response-evin-salt-court"
+          ],
+          "endpoint": {
+            "tick": 13,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "clerk-filing-open": {
+          "depends_on": [
+            "acknowledgment-aru-records"
+          ],
+          "endpoint": {
+            "tick": 14,
+            "entity_id": "clerk-maren",
+            "place_id": "chalk-stair"
+          }
+        },
+        "clerk-lapse-recorded": {
+          "depends_on": [
+            "clerk-filing-open"
+          ],
+          "endpoint": {
+            "tick": 15,
+            "entity_id": "clerk-maren",
+            "place_id": "chalk-stair"
+          }
+        },
+        "clerk-review-first-passage": {
+          "depends_on": [
+            "clerk-lapse-recorded"
+          ],
+          "endpoint": {
+            "tick": 16,
+            "entity_id": "clerk-maren",
+            "place_id": "chalk-stair"
+          }
+        }
+      },
+      "relations": [
+        [
+          "aru",
+          "evin",
+          "agreed_co_stewardship_for_this_crossing"
+        ]
+      ],
+      "counts": {
+        "events": 9,
+        "dependency_edges": 8,
+        "relations": 1,
+        "entities": 6,
+        "sources": 9
+      }
     }
   },
   "self_test": {
@@ -805,6 +938,14 @@
           "DIGEST-MISMATCH"
         ],
         "names_file": "fictional-excerpts.md",
+        "forbid_traceback": true
+      },
+      "repointed_edge": {
+        "exit": 1,
+        "finding_ids": [
+          "ADDITION-DETECTED",
+          "REDUCTION-DETECTED"
+        ],
         "forbid_traceback": true
       }
     }

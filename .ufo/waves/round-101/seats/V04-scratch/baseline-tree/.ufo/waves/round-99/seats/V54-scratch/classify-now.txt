@@ -1,0 +1,21 @@
+# classify 2026-10-17T22:12:03-0300 rows=77
+ALL_REPORTS n=1
+  V123 thr=[128] named=False generic=False tries=None stall=['DEADLINE'] src=poll.sh
+PRODUCER_SET n=21
+COUNTS_MD_NOT_GATED n=13
+  V117 named=False generic=False src=poll.sh
+  V23 named=False generic=False src=poll.sh
+  V26 named=False generic=False src=poll.sh
+  V29 named=False generic=False src=poll.sh
+  V30 named=False generic=False src=poll.sh
+  V35 named=True generic=False src=poll.sh
+  V45 named=True generic=True src=poll.sh
+  V50 named=False generic=False src=poll.sh
+  V51 named=False generic=False src=poll.sh
+  V71 named=False generic=True src=poll.sh
+  V87 named=False generic=False src=poll.sh
+  V92 named=False generic=False src=poll.sh
+  V83 named=False generic=False src=proc:1733667
+SELF_INCLUSIVE_128:
+  RISK V123 src=poll.sh
+SELF_SUB_127:

@@ -1,0 +1,116 @@
+{
+  "r88-m3-maya-cluster": {
+    "edges": {
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": []
+    },
+    "endpoints": [],
+    "exists": true,
+    "files": {
+      "README.md": "55c9ba57ad7af5db0320fdc09142588c363c8b726d5ae1023dc01264f29b857c",
+      "claim-excerpt-map.md": "b3b79fe5b5b9272b898b5714291739503c4250c415b3959032fcdba84a73fd43",
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "042b6cc0d70c4d747121d9b277ac031cf21e66822d3c9a3e5ffe0282bba2bddc",
+      "fictional-excerpts.md": "e456bb1204b88792d4fe6396e9e8b0deb9ff6f47e1821b0e875738431b9bda89",
+      "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "relations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "sources.json": "aa252416abc2c863ec4ae86cf25bd4f6e6e841d89e8586255b53362897282d63",
+      "symbolism-clause-map.md": "4bfe975967844bc6edaeb0375c22784de5c1295d3e1ae8606e0e3390a5f4783d",
+      "timeline.json": "f74c664b17fd8d575235ab59432a0ce6f938380e9b5a8d07640aae1d38773493"
+    },
+    "n_events": 2,
+    "n_relations": 0
+  },
+  "r94-paired-crossing": {
+    "edges": {
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": [],
+      "paired-crossing-decision": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ]
+    },
+    "endpoints": [
+      "aru->evin:agreed_co_stewardship_for_this_crossing"
+    ],
+    "exists": true,
+    "files": {
+      "README.md": "36796479658cc4eaa95ac50cd38713a934df56d3c430f10b1bab6211ff2a360a",
+      "claim-excerpt-map.md": "ed9527c551049a6964adc872fbff722b4bdd6a53aa8713fbb6a5d92254e89a47",
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+      "fictional-excerpts.md": "585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2",
+      "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "sources.json": "2b627c4c166edf44e1e54bb006964a00e267ab4a4ce0b7b7c0681a0d9f0355d5",
+      "timeline.json": "f0209f90a6ce795211369bd900ac1d333d16eb0af123f1b170831e192660533c"
+    },
+    "n_events": 3,
+    "n_relations": 1
+  },
+  "r95-crossing-aftermath": {
+    "edges": {
+      "aftermath-missing-evin": [
+        "paired-crossing-decision"
+      ],
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": [],
+      "paired-crossing-decision": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ]
+    },
+    "endpoints": [
+      "aru->evin:agreed_co_stewardship_for_this_crossing"
+    ],
+    "exists": true,
+    "files": {
+      "README.md": "9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b",
+      "claim-excerpt-map.md": "30281ff1a497bbe66f23cbd8a49befb3319595f20990718a0ffe8050741a874a",
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+      "fictional-excerpts.md": "0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282",
+      "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "sources.json": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+      "timeline.json": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177"
+    },
+    "n_events": 4,
+    "n_relations": 1
+  },
+  "r96-crossing-response": {
+    "edges": {
+      "aftermath-missing-evin": [
+        "paired-crossing-decision"
+      ],
+      "aru-ninth-bell": [],
+      "evin-ninth-bell": [],
+      "paired-crossing-decision": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ],
+      "response-evin-salt-court": [
+        "aftermath-missing-evin"
+      ]
+    },
+    "endpoints": [
+      "aru->evin:agreed_co_stewardship_for_this_crossing"
+    ],
+    "exists": true,
+    "files": {
+      "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+      "fictional-excerpts.md": "06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3",
+      "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "sources.json": "10da97eea95d0e81559e2455226617ec983d9410362547dd8f93accc4901b561",
+      "timeline.json": "50e3d2b6433a7f96a182f510081c945ffc729603b3118203fb60e5827188cd37"
+    },
+    "n_events": 5,
+    "n_relations": 1
+  }
+}

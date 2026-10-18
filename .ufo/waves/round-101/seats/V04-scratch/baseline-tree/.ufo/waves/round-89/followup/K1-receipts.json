@@ -1,0 +1,82 @@
+{
+  "seat": "K1",
+  "wave": "lore round-89 follow-up, world-bible lane",
+  "judged_tree": {
+    "repo": "lore-shokunin",
+    "head": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+    "baseline": "51b286b5a1e503e6e6ace1f8da0bd606a3c10d94"
+  },
+  "tree_state_at_run": {
+    "porcelain": [" M l0-questions.md", "?? .ufo/waves/round-89/followup/"],
+    "diff_stat": "l0-questions.md | 1 + (1 insertion)",
+    "tracked_tree_otherwise_clean": true
+  },
+  "l0_questions": {
+    "lines_at_run_start": 5,
+    "lines_at_run_end": 5,
+    "r89_append_present": true,
+    "append_mtime": "2026-10-17T04:21:16.891687495-03:00",
+    "second_append_by_this_run": false,
+    "last_commit_touching_file": "51b286b",
+    "r89_work_commit_touched_file": false,
+    "appended_line_head": "lore | round-89 | Update to the round-88 kotodama line: the named handoff contract now exists and is git-tracked in kotodama-shokunin"
+  },
+  "kotodama": {
+    "head": "49ac1a538f994a92ffea7ac48a4ec5bde2a08e8a",
+    "status_short": "(clean)",
+    "synthesis_tracked_files": 24,
+    "contract": {
+      "path": "corpus/knowledge/synthesis/worldbible-integration-contract.md",
+      "added_by_commit": "49ac1a5",
+      "commit_date": "2026-10-17 04:00:57 -0300",
+      "sha256": "e834f50309bd93b11894e7f96d03f7000fc224a3a3ea4d654fd4d1aaaa0831f7",
+      "lines": 206,
+      "tracked": true,
+      "in_HEAD": true,
+      "contract_id": "kotodama-lore-adjacency",
+      "revision": "1.0.0",
+      "verification_date": "2026-10-17"
+    }
+  },
+  "ack_record_grep": {
+    "command": "grep -rn \"kotodama-lore-adjacency\" --exclude-dir=.git --exclude-dir=.ufo .",
+    "hits": ["l0-questions.md:5"],
+    "lore_acknowledgement_record_present": false
+  },
+  "r8_marker_probe": {
+    "cluster_external_only_hits": 0,
+    "cluster_unverified_inspiration_hits": 0,
+    "ledger_marker_present": true,
+    "ledger_line": 8,
+    "note_map_half_landed": false
+  },
+  "delta_sweep": {
+    "non_ufo_files_in_1b09f3f": 76,
+    "operator_l0_escalat_hits": [
+      "corpus/knowledge/r88-sourced-inspiration-decision-table.md:22",
+      "corpus/knowledge/r88-sourced-inspiration-decision-table.md:23",
+      "corpus/knowledge/r88-sourced-inspiration-decision-table.md:24"
+    ],
+    "unresolved_rights_blocked_dispute_present": false
+  },
+  "wait_checks": [
+    {"n": 1, "t": "2026-10-17T04:29:30-03:00", "files": 36, "md5": "71abf123a67d4fe67bad6f5cdd84ee40"},
+    {"n": 2, "t": "2026-10-17T04:31:05-03:00", "files": 37, "md5": "a94a89ef6b54841258dc53c7aa0c5b03", "written_since_prev": ["JCAL5-delta.json", "H3.md", "H4-replay.json"]},
+    {"n": 3, "t": "2026-10-17T04:32:04-03:00", "files": 40, "md5": "ff9a76295ee1c59cbde6c2950303f816", "written_since_prev": ["JDEP1.md", "H3.md", "SE2.md", "JCAL5.md", "P3.md"]}
+  ],
+  "sibling_corroboration": {
+    "SE2.md:101-104": "l0-questions.md +1 line only, matching the authorized K1 append; line count 4 -> 5",
+    "JDEP1.md:44": "the only tracked deviation is the follow-up wave's own l0-questions.md line (uncommitted; kotodama handoff contract, not R8-R10)",
+    "P3-log-r89.md finalization addendum (04:32:20)": "the one authorized l0-questions.md append lands as line 5, correcting the r88 kotodama line's obsolete premise"
+  },
+  "verdict": {
+    "new_l0_line_needed": false,
+    "reason": "the required r89 line is already present and verified; no other escalation trigger exists in the r89 delta"
+  },
+  "files_written_by_this_run": [
+    ".ufo/waves/round-89/followup/K1.md",
+    ".ufo/waves/round-89/followup/K1-receipts.json"
+  ],
+  "no_commit": true,
+  "no_push": true
+}

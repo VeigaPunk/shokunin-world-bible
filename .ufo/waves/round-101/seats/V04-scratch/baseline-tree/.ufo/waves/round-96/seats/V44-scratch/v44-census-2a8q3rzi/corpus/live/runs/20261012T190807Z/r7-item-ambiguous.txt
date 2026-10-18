@@ -1,0 +1,10 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r7-item-ambiguous
+exit_code=1
+VIOLATION: sources[2].id: duplicate sources id 'archive-ledger'
+VIOLATION: entities[1].first_appearance: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[1].claims[0].source_id: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[2].first_appearance: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[2].claims[0].source_id: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[3].provenance[1].source_id: ambiguous in-world source 'archive-ledger'
+VIOLATION: entities[3].provenance[2].source_id: ambiguous in-world source 'archive-ledger'
+7 violation(s); no canon changed

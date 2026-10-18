@@ -1,0 +1,3 @@
+CHECK pinned inputs: FAIL
+FINDING checker_drift: delivered checker digest differs from the committed pin
+CERTIFICATION FAIL

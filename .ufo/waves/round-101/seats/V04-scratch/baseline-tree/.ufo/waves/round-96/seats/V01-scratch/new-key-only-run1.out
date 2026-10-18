@@ -1,0 +1,4 @@
+OBLIGATIONS raw=14 mapped=15
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17
+FINDING phantom_obligation: entities.json#/4/claims/0 is not a raw source-attributed obligation
+RESULT FAIL

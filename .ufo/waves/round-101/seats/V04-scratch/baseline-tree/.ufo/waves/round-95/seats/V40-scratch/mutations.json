@@ -1,0 +1,143 @@
+{
+  "baseline": {
+    "cluster": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/baseline",
+    "runs": [
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/baseline",
+        "exit": 0,
+        "findings": [],
+        "result_lines": [
+          "RESULT PASS"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nRESULT PASS\n",
+        "stderr": ""
+      },
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/baseline",
+        "exit": 0,
+        "findings": [],
+        "result_lines": [
+          "RESULT PASS"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nRESULT PASS\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "missing_row": {
+    "cluster": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/missing_row",
+    "runs": [
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/missing_row",
+        "exit": 1,
+        "findings": [
+          "missing_obligation"
+        ],
+        "result_lines": [
+          "RESULT FAIL"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: timeline.json#/1 has no map row\nRESULT FAIL\n",
+        "stderr": ""
+      },
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/missing_row",
+        "exit": 1,
+        "findings": [
+          "missing_obligation"
+        ],
+        "result_lines": [
+          "RESULT FAIL"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=9\nINVENTORY JSON-FACTS 9/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 11/12 MISMATCH\nFINDING missing_obligation: timeline.json#/1 has no map row\nRESULT FAIL\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "source_id_mismatch": {
+    "cluster": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/source_id_mismatch",
+    "runs": [
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/source_id_mismatch",
+        "exit": 1,
+        "findings": [
+          "source_id_mismatch"
+        ],
+        "result_lines": [
+          "RESULT FAIL"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/0/first_appearance does not bind to 'paired-clock'\nRESULT FAIL\n",
+        "stderr": ""
+      },
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/source_id_mismatch",
+        "exit": 1,
+        "findings": [
+          "source_id_mismatch"
+        ],
+        "result_lines": [
+          "RESULT FAIL"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=10\nINVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12\nFINDING source_id_mismatch: entities.json#/0/first_appearance does not bind to 'paired-clock'\nRESULT FAIL\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "duplicate_row": {
+    "cluster": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/duplicate_row",
+    "runs": [
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/duplicate_row",
+        "exit": 1,
+        "findings": [
+          "duplicate_mapping"
+        ],
+        "result_lines": [
+          "RESULT FAIL"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=11\nINVENTORY JSON-FACTS 11/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 13/12 MISMATCH\nFINDING duplicate_mapping: entities.json#/0/first_appearance appears 2 times\nRESULT FAIL\n",
+        "stderr": ""
+      },
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/duplicate_row",
+        "exit": 1,
+        "findings": [
+          "duplicate_mapping"
+        ],
+        "result_lines": [
+          "RESULT FAIL"
+        ],
+        "stdout": "OBLIGATIONS raw=10 mapped=11\nINVENTORY JSON-FACTS 11/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 13/12 MISMATCH\nFINDING duplicate_mapping: entities.json#/0/first_appearance appears 2 times\nRESULT FAIL\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "malformed_json": {
+    "cluster": "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/malformed_json",
+    "runs": [
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/malformed_json",
+        "exit": 2,
+        "findings": [
+          "malformed_json"
+        ],
+        "result_lines": [
+          "RESULT ERROR"
+        ],
+        "stdout": "FINDING malformed_json: cannot parse entities.json: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nRESULT ERROR\n",
+        "stderr": ""
+      },
+      {
+        "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V40-scratch/dialect/malformed_json",
+        "exit": 2,
+        "findings": [
+          "malformed_json"
+        ],
+        "result_lines": [
+          "RESULT ERROR"
+        ],
+        "stdout": "FINDING malformed_json: cannot parse entities.json: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nRESULT ERROR\n",
+        "stderr": ""
+      }
+    ]
+  }
+}

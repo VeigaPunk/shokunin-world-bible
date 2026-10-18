@@ -1,0 +1,18 @@
+=== 2026-10-18T01:03:24Z interim self-test ===
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947  corpus/tools/dependency-freeze-contract.json
+FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=['markdown_tamper'] extra=[]
+RESULT ERROR
+EXIT:2
+=== verify r95 (pinned, schema v1) ===
+FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+=== verify r98 ===
+FINDING CONTRACT-INVALID: pin r98-clerk-filing payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+EXIT:2
+=== verify r99 ===
+FINDING UNPINNED-FIXTURE: no pin for 'r99-window-lapse' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'])
+RESULT ERROR
+EXIT:2

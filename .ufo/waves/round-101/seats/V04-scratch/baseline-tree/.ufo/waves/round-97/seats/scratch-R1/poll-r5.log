@@ -1,0 +1,16 @@
+try=1 map_rows=23 newrow=0
+0 mapsha=e851f068cfd7ed02 inv=[Expected inventory:** 16 JSON facts; 2 editorial rows; 18 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:47:54Z
+try=2 map_rows=23 newrow=0
+0 mapsha=e851f068cfd7ed02 inv=[Expected inventory:** 16 JSON facts; 2 editorial rows; 18 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:48:14Z
+try=3 map_rows=23 newrow=0
+0 mapsha=e851f068cfd7ed02 inv=[Expected inventory:** 16 JSON facts; 2 editorial rows; 18 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:48:34Z
+try=4 map_rows=23 newrow=0
+0 mapsha=e851f068cfd7ed02 inv=[Expected inventory:** 16 JSON facts; 2 editorial rows; 18 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:48:54Z
+try=5 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:49:14Z
+try=6 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:49:34Z
+try=7 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:49:54Z
+try=8 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:50:14Z
+try=9 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:50:34Z
+try=10 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:50:54Z
+try=11 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=absent 21:51:14Z
+try=12 map_rows=24 newrow=1 mapsha=49d4834e124fa6cf inv=[Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows] tl_mtime=1792273470 r5_report=.ufo/waves/round-97/seats/R5-fixture-docs.md 21:51:34Z

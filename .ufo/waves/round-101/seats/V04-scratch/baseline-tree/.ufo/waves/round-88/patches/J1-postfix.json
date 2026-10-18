@@ -1,0 +1,90 @@
+{
+  "seat": "J1",
+  "purpose": "Post-fix verification of the three F1 round-88 provenance-stop fixtures",
+  "baseline_commit": "dfd1fbc3711f2b28597d74444819aca91fe6bc31",
+  "scratch_archives": {
+    "baseline_unpatched_checker": "/tmp/lore-shokunin-J1-before.dpO8j5",
+    "patched_checker_and_fixtures": "/tmp/lore-shokunin-J1.JzYJzw"
+  },
+  "patches_applied_to_patched_archive_in_order": [
+    "lore-shokunin/.ufo/waves/round-88/patches/X1-c1.patch",
+    "lore-shokunin/.ufo/waves/round-88/patches/F1-r88-fixtures.patch"
+  ],
+  "cases": [
+    {
+      "fixture": "r88-shape-ambiguous-armed",
+      "expected_readme_lines": [
+        "Checker exit: 1; intentional duplicate entity id and provenance shape violation remain findings.",
+        "entities[4].provenance[0] reports exact-key violation and ambiguous to_holder f1-shape-dup.",
+        "Disclosures at records [0] and [1] name to_holder f1-shape-dup first present at [0].",
+        "Record [1] remains unassessed; its first-record chain break is not reported."
+      ],
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-shape-ambiguous-armed",
+      "baseline": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\n2 violation(s); no canon changed\n"
+      },
+      "post_fix": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[4].provenance[0].to_holder: ambiguous entity 'f1-shape-dup'\nVIOLATION: entities[4].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'f1-shape-dup' at entities[4].provenance[0]\nVIOLATION: entities[4].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: ambiguous holder identity to_holder 'f1-shape-dup' at entities[4].provenance[0]\n5 violation(s); no canon changed\n",
+        "expectations": {
+          "exit_1": true,
+          "shape_error_preserved": true,
+          "ambiguous_holder_finding_present": true,
+          "cause_named_at_record_0_and_record_1": true,
+          "record_1_chain_break_not_reported": true
+        }
+      }
+    },
+    {
+      "fixture": "r88-mixed-stop",
+      "expected_readme_lines": [
+        "Checker exit: 1; intentional duplicate entity id, unknown source, and ambiguous holder remain findings.",
+        "First stop is unknown source f1-mixed-missing-source at entities[5].provenance[0].",
+        "Disclosures at records [0], [1], and [2] name that cause, not the later ambiguous holder at [1].",
+        "Record [2] chain break and decreasing tick remain unreported."
+      ],
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-mixed-stop",
+      "baseline": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[0].source_id: unknown in-world source 'f1-mixed-missing-source'\nVIOLATION: entities[5].provenance[1].to_holder: ambiguous entity 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'f1-mixed-dup' first occurred at entities[5].provenance[1]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'f1-mixed-dup' first occurred at entities[5].provenance[1]\n6 violation(s); no canon changed\n"
+      },
+      "post_fix": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[1].id: duplicate entities id 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[0].source_id: unknown in-world source 'f1-mixed-missing-source'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].to_holder: ambiguous entity 'f1-mixed-dup'\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-mixed-missing-source' at entities[5].provenance[0]\n6 violation(s); no canon changed\n",
+        "expectations": {
+          "exit_1": true,
+          "first_cause_is_unknown_source_at_record_0": true,
+          "cause_named_at_records_0_1_2": true,
+          "later_ambiguity_not_attributed_as_first_cause": true,
+          "record_2_chain_break_and_decreasing_tick_not_reported": true
+        }
+      }
+    },
+    {
+      "fixture": "r88-nonholder-stop",
+      "expected_readme_lines": [
+        "Checker exit: 1; intentional unknown source remains a finding.",
+        "Disclosures at records [0], [1], and [2] name f1-nonholder-missing-source first encountered at entities[3].provenance[0].",
+        "No holder ambiguity, chain break, or decreasing-tick finding is expected."
+      ],
+      "command": "python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-nonholder-stop",
+      "baseline": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'f1-nonholder-missing-source'\n1 violation(s); no canon changed\n"
+      },
+      "post_fix": {
+        "exit_code": 1,
+        "stdout": "VIOLATION: entities[3].provenance[0].source_id: unknown in-world source 'f1-nonholder-missing-source'\nVIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\nVIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed (input-structural finding, not sourced-canon); first stop: unknown source 'f1-nonholder-missing-source' at entities[3].provenance[0]\n4 violation(s); no canon changed\n",
+        "expectations": {
+          "exit_1": true,
+          "unknown_source_cause_named_at_records_0_1_2": true,
+          "no_holder_ambiguity_finding": true,
+          "no_chain_break_finding": true,
+          "no_decreasing_tick_finding": true
+        }
+      }
+    }
+  ],
+  "overall": "PASS: all README-declared after-state expectations were met line-by-line."
+}

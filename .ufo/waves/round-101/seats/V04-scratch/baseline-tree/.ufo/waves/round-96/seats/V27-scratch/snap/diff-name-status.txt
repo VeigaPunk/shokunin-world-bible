@@ -1,0 +1,4 @@
+M	LOG.md
+M	corpus/tools/README.md
+M	corpus/tools/map-obligations-contract.json
+M	corpus/tools/map_obligations.py

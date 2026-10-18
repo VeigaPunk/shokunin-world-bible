@@ -1,0 +1,105 @@
+{
+  "r87-jcal1-both-fields-invalid": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[1]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[1]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[1].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[1]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[5].provenance[1]\n6 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-dangling-controls": {
+    "added_vs_baseline": [],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[3].provenance[1].from_holder: dangling entity 'missing-a'\nVIOLATION: entities[3].provenance[2].from_holder: dangling entity 'missing-b'\n2 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-direction-from": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]\n6 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-direction-from-clean": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[0]\n6 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-direction-to": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\n7 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-direction-to-clean": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\n6 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-per-item-reset": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[6].provenance[1]: provenance chain break; expected from_holder 'mira', got 'tower'\n8 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-post-stop-nondict": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: expected object\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\n7 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-post-stop-null-from": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\n6 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-post-stop-wrongkeys": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\nVIOLATION: entities[5].provenance[1]: expected exactly tick, from_holder, to_holder, source_id\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[5].provenance[0]\n7 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-prefix-findings": {
+    "added_vs_baseline": [
+      "VIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[1]",
+      "VIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[1]"
+    ],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[0].to_holder: dangling entity 'missing-holder'\nVIOLATION: entities[5].provenance[1].from_holder: ambiguous entity 'dup'\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed at this and all later records because holder identity is ambiguous\nVIOLATION: entities[5].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[1]\nVIOLATION: entities[5].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity from_holder 'dup' first occurred at entities[5].provenance[1]\n6 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-residual-extrac-ambiguous": {
+    "added_vs_baseline": [],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[1]: expected exactly tick, from_holder, to_holder, source_id\n2 violation(s); no canon changed\n"
+  },
+  "r87-jcal1-residual-wrongkeys-ambiguous": {
+    "added_vs_baseline": [],
+    "exit": 1,
+    "stdout": "VIOLATION: entities[4].id: duplicate entities id 'dup'\nVIOLATION: entities[5].provenance[1]: expected exactly tick, from_holder, to_holder, source_id\n2 violation(s); no canon changed\n"
+  }
+}

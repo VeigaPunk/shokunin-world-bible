@@ -1,0 +1,114 @@
+r97 map sha: 49d4834e124fa6cfaa1a73cd5d1a7bc2cb59711c6233b418fe7485a17eedc94f  /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r97-crossing-acknowledgment/claim-excerpt-map.md
+r97 map == r96 map: False
+
+-- declaration / headings --
+  Scope: all 17 source-attributed JSON obligations in this continuation (five first-appearance pointers, five entity claims, one relation, and six timeline events), plus two separately labeled editorial comparisons. JSON pointers are relative to this fixture. `source_id` values remain cluster-local in JSON and are qualified in the map as `(cluster path, source ID)` pairs.
+  **Expected inventory:** 17 JSON facts; 2 editorial rows; 19 total mapped rows; 15 distinct excerpt anchors.
+  ## R9 excerpt declarations
+  ## JSON facts (17 canonical pointers)
+  ## Editorial rows (2 bounded Spence comparisons; not JSON facts)
+  ## Timeline normalization and scope
+
+-- delimiter rows --
+  line 10: 4 cells
+  line 21: 8 cells
+  line 45: 7 cells
+
+rows r96=23 r97=24
+  `fictional-excerpts.md:12-51`: NEW row at line 11:
+    col0: '`fictional-excerpts.md:12-51`'
+    col1: '`r97-crossing-acknowledgment:paired-clock`; `r97-crossing-acknowledgment:crossing-minute`; `r97-crossing-acknowledgment:'
+    col2: '`verbatim`'
+    col3: 'Newly authored fictional register, minute, aftermath note, response note, and acknowledgment note; JSON sources in this '
+  ID: differs from r96 row (line 43) in 6 cell(s):
+    col1: r96='Bounded editorial comparison'
+          r97='JSON fact pointer and fields'
+    col2: r96='Source citation'
+          r97='In-world source ID'
+    col3: r96='Excerpt path'
+          r97='Path-qualified source namespace'
+    col4: r96='Line span'
+          r97='Excerpt path'
+    col5: r96='R9 delivery mode'
+          r97='Line span'
+    col6: r96='Exact anchor'
+          r97='R9 delivery mode'
+  J01: differs from r96 row (line 22) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J02: differs from r96 row (line 23) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J03: differs from r96 row (line 24) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J04: differs from r96 row (line 25) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J05: differs from r96 row (line 26) in 1 cell(s):
+    col3: r96='`r96-crossing-response:crossing-minute`'
+          r97='`r97-crossing-acknowledgment:crossing-minute`'
+  J06: differs from r96 row (line 27) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J07: differs from r96 row (line 28) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J08: differs from r96 row (line 29) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J09: differs from r96 row (line 30) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J10: differs from r96 row (line 31) in 1 cell(s):
+    col3: r96='`r96-crossing-response:crossing-minute`'
+          r97='`r97-crossing-acknowledgment:crossing-minute`'
+  J11: differs from r96 row (line 32) in 1 cell(s):
+    col3: r96='`r96-crossing-response:crossing-minute`'
+          r97='`r97-crossing-acknowledgment:crossing-minute`'
+  J12: differs from r96 row (line 33) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J13: differs from r96 row (line 34) in 1 cell(s):
+    col3: r96='`r96-crossing-response:paired-clock`'
+          r97='`r97-crossing-acknowledgment:paired-clock`'
+  J14: differs from r96 row (line 35) in 1 cell(s):
+    col3: r96='`r96-crossing-response:crossing-minute`'
+          r97='`r97-crossing-acknowledgment:crossing-minute`'
+  J15: differs from r96 row (line 36) in 1 cell(s):
+    col3: r96='`r96-crossing-response:aru-aftermath-note`'
+          r97='`r97-crossing-acknowledgment:aru-aftermath-note`'
+  J16: differs from r96 row (line 37) in 1 cell(s):
+    col3: r96='`r96-crossing-response:evin-response-note`'
+          r97='`r97-crossing-acknowledgment:evin-response-note`'
+  J17: NEW row at line 38:
+    col0: 'J17'
+    col1: '`timeline.json#/5` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`)'
+    col2: '`aru-acknowledgment-note`'
+    col3: '`r97-crossing-acknowledgment:aru-acknowledgment-note`'
+    col4: '`fictional-excerpts.md`'
+    col5: '44-53'
+    col6: '`verbatim`'
+    col7: "`Tick 13: I received Evin's response at the Chalk Stair.`"
+  IDs only in r96: ['`fictional-excerpts.md:12-40`']
+
+-- new event/map alignment --
+  timeline.json#/0 (aru-ninth-bell) -> map line(s) [33]
+  timeline.json#/1 (evin-ninth-bell) -> map line(s) [34]
+  timeline.json#/2 (paired-crossing-decision) -> map line(s) [35]
+  timeline.json#/3 (aftermath-missing-evin) -> map line(s) [36]
+  timeline.json#/4 (response-evin-salt-court) -> map line(s) [37]
+  timeline.json#/5 (acknowledgment-aru-records) -> map line(s) [38]
+
+-- tool runs --
+  map_obligations: exit=0
+   OBLIGATIONS raw=17 mapped=17
+   INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19
+   RESULT PASS
+  support_check: exit=0
+   INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19; DISTINCT-ANCHORS 15/15
+   RECEIPT JSON-FACTS 17; EDITORIAL-ROWS 2; TOTAL-ROWS 19
+   SOURCE-SUPPORT 17/17; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 19/19; VALIDATED-ROWS 19/19
+   RESULT PASS
+  check_bible: exit=0
+   CLEAN: schema, citations, relations, timeline; 0 violations

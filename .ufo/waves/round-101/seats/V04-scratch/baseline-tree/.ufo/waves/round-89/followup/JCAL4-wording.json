@@ -1,0 +1,93 @@
+{
+  "seat": "JCAL4",
+  "round": 89,
+  "phase": "follow-up",
+  "kind": "wording-overclaim-audit",
+  "judged_tree": "1b09f3f",
+  "judged_tree_full": "1b09f3ff8016b26a2259e086f673d0112f4f54e5",
+  "baseline_tree": "51b286b",
+  "checker": {
+    "path": "corpus/fixtures/check_bible.py",
+    "sha256": "e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556",
+    "lines": 435
+  },
+  "spec": ".ufo/waves/round-89/patches/E1-r89-wording.md",
+  "repo_writes": [
+    ".ufo/waves/round-89/followup/JCAL4.md",
+    ".ufo/waves/round-89/followup/JCAL4-wording.json"
+  ],
+  "wait_checks": [
+    {"start": "2026-10-17T04:29:55-03:00", "end": "2026-10-17T04:30:55-03:00", "outstanding": []},
+    {"start": "2026-10-17T04:30:55-03:00", "end": "2026-10-17T04:31:55-03:00", "outstanding": []}
+  ],
+  "spec_conformance": {
+    "method": "python3 comparison of delivered emitted strings / code templates against patches/E1-r89-wording.md lines",
+    "items": [
+      {"spec_line": 15, "spec_text": "'; '.join(causes)", "delivered": "check_bible.py:316 first_stop = ('; '.join(record_stop_causes) or 'malformed record', record_label)", "verdict": "verbatim"},
+      {"spec_line": 26, "spec_text": "input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'", "delivered": "check_bible.py:342/348; byte-identical template for the covered (2 raw, 1 indexed) case; receipt corpus/fixtures/r89-fn2-unresolved-chain-break", "verdict": "verbatim"},
+      {"spec_line": 40, "spec_text": "holder reference {field} {id!r} absent from raw entities and absent from the resolved index", "delivered": "check_bible.py:272-273 / :285-286 (raw_presence='absent from raw entities and')", "verdict": "verbatim"},
+      {"spec_line": 41, "spec_text": "holder reference {field} {id!r} present in raw entities but absent from the resolved index", "delivered": "check_bible.py:272 / :285 (raw_presence='present in raw entities but'); receipt probe p1", "verdict": "verbatim"},
+      {"spec_line": 42, "spec_text": "source reference {id!r} absent from raw sources and absent from the resolved index", "delivered": "check_bible.py:306-307; receipt corpus/fixtures/r89-f2-invalid-source-id", "verdict": "verbatim"},
+      {"spec_line": 43, "spec_text": "source reference {id!r} present in raw sources but absent from the resolved index", "delivered": "check_bible.py:306; receipt probe p2", "verdict": "verbatim"}
+    ]
+  },
+  "qualifier_census_160_dirs": {
+    "command": "python3 census over /tmp/lore-r89-JCAL4/out/*.txt (delivered stdout of all 160 fixture dirs)",
+    "remain_unassessed_total": 66,
+    "remain_unassessed_missing_qualifier": 0,
+    "identity_clause_total": 1,
+    "identity_clause_missing_qualifier": 0,
+    "chain_break_total": 11,
+    "chain_break_unqualified": 7,
+    "tick_line_total": 4,
+    "tick_line_unqualified": 3,
+    "first_stop_clauses_containing_hedge": 0,
+    "present_in_raw_occurrences": 0,
+    "distinct_first_stop_cause_strings": 21
+  },
+  "probe_suite": {
+    "script": "/tmp/lore-r89-JCAL4/probes.py",
+    "captures": "/tmp/lore-r89-JCAL4/probe-outputs.txt",
+    "checks_over_all_probes": {"hedged_in_first_stop": 0, "unqualified_identity_lines": 0},
+    "matrix": [
+      {"id": "p1", "state": "raw entity row present but schema-rejected, referenced as to_holder", "baseline": "first stop: dangling holder to_holder 'ghost'; local line 'dangling entity'", "delivered": "first stop: holder reference to_holder 'ghost' present in raw entities but absent from the resolved index; local line unchanged 'dangling entity 'ghost''", "note": "cause improved; local line still claims absence -> F1"},
+      {"id": "p2", "state": "raw source row present but schema-rejected, cited from a record", "baseline": "first stop: unknown source 'ghost-src'; local line 'unknown in-world source'", "delivered": "first stop: source reference 'ghost-src' present in raw sources but absent from the resolved index; local line unchanged 'unknown in-world source 'ghost-src''", "note": "F1"},
+      {"id": "p3", "state": "later provenance record with from_holder: null", "baseline": "provenance chain break; expected from_holder 'j4-holder', got None", "delivered": "input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'j4-holder'; got None; from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)", "note": "F3a regression, reproduces E1 DR-5"},
+      {"id": "p4", "state": "first record with a non-null raw-duplicated from_holder (check_bible.py:348 branch)", "baseline": "provenance chain break; first record must have from_holder null", "delivered": "possible provenance chain break, not a definite identity mismatch: from_holder 'dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); first record must have from_holder null", "note": "F3b category mix"},
+      {"id": "p5", "state": "arriving from_holder raw-duplicated, expected holder unique", "baseline": "provenance chain break; expected from_holder 'j4-holder', got 'dup'", "delivered": "possible provenance chain break ...: expected from_holder 'j4-holder'; got 'dup'; from_holder 'dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index)", "note": "F3c separator overload"},
+      {"id": "p6", "state": "both sides unresolved, no mismatch (control)", "baseline": "no provenance finding", "delivered": "no provenance finding", "note": "hedge correctly withheld"},
+      {"id": "p6b", "state": "same unresolved id both sides + tick inversion", "baseline": "provenance tick 0 must be greater than previous tick 0 (unqualified)", "delivered": "qualified tick line with 'holder identity is not uniquely resolvable: expected from_holder 'dup' is ... ; from_holder 'dup' is ...' (clause duplicated with two labels)", "note": "F3c, reproduces E1 DR-6"},
+      {"id": "p7", "state": "holder id containing '; ' plus a second latching cause", "baseline": "first stop: malformed record (invalid from_holder) (measured; the second cause was masked)", "delivered": "first stop: malformed record (invalid from_holder); holder reference to_holder 'a; b' absent from raw entities and absent from the resolved index", "note": "repr quoting keeps the join parseable"},
+      {"id": "p8", "state": "three simultaneous latching causes (tick, to_holder, source) + source defect", "baseline": "first stop: malformed record (invalid tick) (masked)", "delivered": "first stop: malformed record (invalid tick); holder reference to_holder 'missing-holder' absent from raw entities and absent from the resolved index; source reference 'missing-src' absent from raw sources and absent from the resolved index", "note": "complete, validation order, no drops"},
+      {"id": "p9", "state": "shape-invalid record with raw-only duplicate holder", "baseline": "first stop: malformed record (unexpected field set)", "delivered": "identical", "note": "shape branch does not evaluate holder ambiguity beyond indexed counts"},
+      {"id": "p10", "state": "sources.json missing", "baseline": "first stop: source table unavailable (measured on base-check_bible.py)", "delivered": "first stop: source table unavailable", "note": "unloaded table is never reported as raw absence"},
+      {"id": "p11", "state": "shape-invalid record whose to_holder is absent from raw", "baseline": "first stop: malformed record (unexpected field set)", "delivered": "identical (dangling condition not evaluated on this branch)", "note": "F2 over-read risk, pre-existing surface"},
+      {"id": "p12", "state": "shape-invalid record with an indexed duplicate holder", "baseline": "first stop: malformed record (unexpected field set); ambiguous holder identity to_holder 'dup'", "delivered": "identical (same '; ' join as the valid-key branch)", "note": "F2"},
+      {"id": "p13", "state": "different unresolved id on each side", "baseline": "provenance chain break; expected from_holder 'dup', got 'dup2'", "delivered": "both sides named with their own clause; no duplication", "note": "improved"},
+      {"id": "p14", "state": "raw entity row whose id is the integer 5, referenced as '5'", "baseline": "first stop: dangling holder to_holder '5' (measured)", "delivered": "first stop: holder reference to_holder '5' absent from raw entities and absent from the resolved index", "note": "raw counts are string-id keyed (check_bible.py:72-76); micro-bound"},
+      {"id": "p15", "state": "clean control (no provenance)", "baseline": "exit 0 CLEAN (measured)", "delivered": "exit 0 CLEAN", "note": "control only"}
+    ]
+  },
+  "findings": [
+    {"id": "F1", "severity": "M", "axis": "wording accuracy / overclaim", "state": "raw-present-but-schema-rejected id", "text": "FN-1's rule ('do not use dangling/unknown as though an ID were absent from the input when it is present there', spec :37, bound at :48) is applied to the first-stop cause only; the adjacent local diagnostics check_bible.py:270/:283 and :113 still say 'dangling entity' / 'unknown in-world source', producing an internal contradiction with the cause on the same output (probes p1, p2).", "latent_because": "0 occurrences of 'present in raw' across all 160 delivered dirs (JCAL3 Debt 3)", "action": "r90: align the local wording or state the local-vs-cause split in the contract doc (E1 DR-1/DR-2 proposed_action)"},
+    {"id": "F2", "severity": "L", "axis": "overclaim (reader inference)", "state": "early-exit branches under the uniform first stop label", "text": "the valid-key branch now emits a complete latching-cause list while the unexpected-field-set branch emits a partial one under the same envelope; a shape-invalid record with a fully absent to_holder reports only 'malformed record (unexpected field set)' (probe p11). No output asserts completeness, so nothing emitted is false; this is the risk E1 recorded at spec :19.", "action": "documentation-level: E1's proposed doc update states the bound; no code change needed"},
+    {"id": "F3a", "severity": "M", "axis": "wording regression", "state": "later record with from_holder null (probe p3)", "text": "baseline definite 'provenance chain break; expected from_holder 'j4-holder', got None' becomes a hedged clause with a nonsense identity statement ('from_holder None is not uniquely resolvable (0 raw entity rows carry this id, but only 0 is in the resolved index)'). Hedge premise per spec :23 (raw multiplicity) does not hold for None.", "action": "r90 one-line fix: holder_identity_detail returns None when holder_id is None; add a durable fixture (E1 DR-5 independently reproduced)"},
+    {"id": "F3b", "severity": "L", "axis": "voice/consistency", "state": "first record with a raw-duplicated from_holder (probe p4)", "text": "clause opens 'possible provenance chain break ...' and ends with the definite 'first record must have from_holder null' - no predecessor link exists, so the hedge frames the wrong finding class", "action": "r90 rephrase"},
+    {"id": "F3c", "severity": "L", "axis": "voice/consistency", "state": "observed-side detail and same-id-both-sides (probes p5, p6b)", "text": "within one finding '; ' separates expected/observed, identity sub-clauses and (p6b) a duplicated pair naming the same id twice", "action": "r90 dedupe (E1 DR-6 independently reproduced)"},
+    {"id": "F3d", "severity": "L", "axis": "grammar latency", "state": "identity template counts", "text": "'{n} raw entity rows carry this id, but only {m} is in the resolved index' is exercised only with (2,1) in correct states; (0,0) becomes reachable only through F3a ('0 raw entity rows ... only 0 is'); (1,0)/(2,2) unreachable (index is a subset of raw; comparison path requires indexed-unique holders on both sides). Static path-enumeration argument, labelled as such.", "action": "r90: fix together with F3a"},
+    {"id": "F4", "severity": "-", "axis": "clean results", "state": "delivered fixture-covered surface", "text": "all six templates verbatim-conformant to the spec; 0 of 66 disclosure lines missing the qualifier; 0 hedged causes inside first-stop clauses (160 dirs + 16 probes); '; ' join unambiguous (no cause contains ';'; ids repr-quoted, probe p7); FIN-1 two-sided distinction accurate for schema-rejected rows (p1/p2) and raw-absent ids (r89-f2-*); FN-2 control pair still splits; delivered checker byte-identical to the X1 patch on 51b286b (V2)", "action": "none"},
+    {"id": "F5", "severity": "L", "axis": "brief/tree mismatch + latent refactor risk", "state": "judging reference and code guards", "text": "the seat brief's FN-1 phrase 'absent from the raw table and resolved index' occurs nowhere in the tree (only quoted in followup/H2.md:223, JCAL1.md:210-211, JCAL1-delta.json); the delivered text matches spec :40-43 and is accurate. The raw-absence claims rely on structural unreachability (a failed entities load yields no provenance records; an unavailable sources table is caught at :198-199) rather than explicit availability guards.", "action": "r90: optional one-line comment/guard for entities_available"}
+  ],
+  "verdict_recommendation": {
+    "axis": "calibration (wording sub-axis)",
+    "verdict": "improved (bounded)",
+    "bound": "one harmed state vs baseline (F3a null from_holder, probe p3) and one half-applied rule (F1 local lines). Under the round's 'a trade anywhere is not an improvement' rule this must be carried explicitly: record improved (bounded) with F3a's one-line fix + F1 alignment as closure conditions; otherwise improved-with-a-named-regression.",
+    "no_trade_on_delivered_surface": "0 exit changes, 0 violation-count changes and no wording regressions across the 160 delivered dirs (JCAL1, JCAL3 independently; corrobated here by the qualifier/cause census)"
+  },
+  "cited_siblings": [
+    "followup/JCAL1.md (delta enumeration; brief FN-1 paraphrase mismatch)",
+    "followup/JCAL3.md (fixture discrimination; READMEs Debt 1; contract doc Debt 2; raw-present half Debt 3)",
+    "followup/V2.md (delivered checker == X1 patch on 51b286b; README replay)",
+    "followup/E1.md + E1-drift.json (DR-1..DR-15; DR-5/DR-6 reproduced here, DR-7 confirmed statically)"
+  ]
+}

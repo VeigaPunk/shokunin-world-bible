@@ -1,0 +1,271 @@
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/README.md b/corpus/fixtures/r93-m2-kojiki-cluster/README.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/README.md
+@@ -0,0 +1,16 @@
++# R93 M2 — M-17 margin-register cluster
++
++This is a newly authored fictional record cluster with a narrow editorial comparison to three clauses in Basil Hall Chamberlain's 1882 English translation of *The Kojiki*, Part III, “The Door of the Heavenly Rock-Dwelling.” The source excerpt and the separate attribution, rights, and AI-training-permission questions are in `kojiki-chamberlain-excerpt.md` and `inspiration-note.md`. The translation remains external: no named deity, place, object, plot, or ritual is an in-world referent or canon.
++
++`archive-record-excerpt.md` delivers prose for the sole fictional source ID. `claim-excerpt-map.md` maps all 12 source-attributed JSON facts and all three external editorial comparison rows, with line spans, R9 modes, and exact anchors. The Kojiki comparison rows are editorial only; no fictional JSON fact relies on the English translation as R5 support, and no R9 manual-review PASS is asserted. `support_check.py` is a lexical preflight, not review of whole-claim fidelity or rights.
++
++Replay from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r93-m2-kojiki-cluster
++python3 corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster
++```
++
++## R10 comparison outcomes
++
++Compared separately with `corpus/fixtures/r87-myth-cluster` and `corpus/fixtures/r88-m3-maya-cluster`. This cluster's only in-world entities are `teva` (Teva), `orni` (Orni), `slate-table` (Slate Table), and `lorn-index` (Lorn Index); its events are `teva-files-index` and `orni-marks-index`. The author-side normalized-key preflight covers entity IDs, display names, declared aliases/epithets, event IDs, and relation/timeline endpoints; it found no exact key shared with either existing cluster. No alias, epithet, translated name, or disguised identity is adopted. The historical/mythic names in the delivered Kojiki translation remain external and are not entities or aliases in this bible. Its translated term `Central Land of Reed-Plains` (`kojiki-chamberlain-excerpt.md:8,10`) is a lexical lookalike only to r87's `Reed Bell` and `Reedwardens` at the generic word `Reed`; M-17 adopts neither as a name or referent. Other prior-cluster names in this paragraph are explicit contrast references, not M-17 identities. Source IDs are compared only as path-qualified namespace pairs (`r93-m2-kojiki-cluster:m2-record-archive` versus each prior cluster's path and ID); bare source IDs are not referent identity evidence. Author-side semantic review found no shared identity/occasion candidate. M6's current report reviews M1's distinct `r93-myth-cluster3` candidate, not this M-17 cluster; an independent M2-specific scan and semantic review remain pending before any integrated zero-referent conclusion. No cross-cluster contradiction is asserted.
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/contradictions.json b/corpus/fixtures/r93-m2-kojiki-cluster/contradictions.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/contradictions.json
+@@ -0,0 +1 @@
++[]
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/entities.json b/corpus/fixtures/r93-m2-kojiki-cluster/entities.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/entities.json
+@@ -0,0 +1,50 @@
++[
++  {
++    "id": "teva",
++    "kind": "character",
++    "name": "Teva",
++    "first_appearance": "m2-record-archive",
++    "claims": [
++      {
++        "statement": "Teva says she opened the Lorn Index for the check.",
++        "source_id": "m2-record-archive"
++      }
++    ]
++  },
++  {
++    "id": "orni",
++    "kind": "character",
++    "name": "Orni",
++    "first_appearance": "m2-record-archive",
++    "claims": [
++      {
++        "statement": "The folio names Orni as one of its two annotators.",
++        "source_id": "m2-record-archive"
++      }
++    ]
++  },
++  {
++    "id": "slate-table",
++    "kind": "place",
++    "name": "Slate Table",
++    "first_appearance": "m2-record-archive",
++    "claims": [
++      {
++        "statement": "The inventory lists the Slate Table as the place holding the folio.",
++        "source_id": "m2-record-archive"
++      }
++    ]
++  },
++  {
++    "id": "lorn-index",
++    "kind": "item",
++    "name": "Lorn Index",
++    "first_appearance": "m2-record-archive",
++    "claims": [
++      {
++        "statement": "The register gives no measured weight for the Lorn Index.",
++        "source_id": "m2-record-archive"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/relations.json b/corpus/fixtures/r93-m2-kojiki-cluster/relations.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/relations.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "from": "lorn-index",
++    "to": "slate-table",
++    "type": "filed_at",
++    "source_id": "m2-record-archive"
++  },
++  {
++    "from": "orni",
++    "to": "lorn-index",
++    "type": "annotates",
++    "source_id": "m2-record-archive"
++  }
++]
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/sources.json b/corpus/fixtures/r93-m2-kojiki-cluster/sources.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/sources.json
+@@ -0,0 +1,8 @@
++[
++  {
++    "id": "m2-record-archive",
++    "title": "M-17 Margin Register",
++    "kind": "fictional archive register",
++    "reliability_note": "Newly authored fictional record; it attributes two annotations and records an unmeasured field, but does not establish a real measurement or an external historical fact."
++  }
++]
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/timeline.json b/corpus/fixtures/r93-m2-kojiki-cluster/timeline.json
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/timeline.json
+@@ -0,0 +1,20 @@
++[
++  {
++    "id": "teva-files-index",
++    "tick": 1,
++    "entity_id": "teva",
++    "place_id": "slate-table",
++    "depends_on": [],
++    "description": "Teva files the Lorn Index on the Slate Table.",
++    "source_id": "m2-record-archive"
++  },
++  {
++    "id": "orni-marks-index",
++    "tick": 2,
++    "entity_id": "orni",
++    "place_id": "slate-table",
++    "depends_on": ["teva-files-index"],
++    "description": "After Entry A, Orni adds 'not weighed; mark unmeasured' to the Lorn Index at the Slate Table.",
++    "source_id": "m2-record-archive"
++  }
++]
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/archive-record-excerpt.md b/corpus/fixtures/r93-m2-kojiki-cluster/archive-record-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/archive-record-excerpt.md
+@@ -0,0 +1,12 @@
++# Fictional in-world source excerpt — M-17 Margin Register
++
++Delivery mode (R9): verbatim
++
++M-17 identifies Teva as the initial recorder and names the Slate Table as its filing place.
++Teva names the paper folio "Lorn Index" as the sheet she opened for the check.
++Orni writes on the margin: "not weighed; mark unmeasured."
++The folio identifies Teva and Orni as its two annotators.
++The inventory lists the Slate Table as the place holding the folio.
++Entry A: Teva files the Lorn Index on the Slate Table.
++Entry B: after Entry A, Orni adds "not weighed; mark unmeasured" to the Lorn Index at the Slate Table.
++The register gives no measured weight for the Lorn Index.
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md b/corpus/fixtures/r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md
+@@ -0,0 +1,12 @@
++# Delivered external source excerpt — *The Kojiki*
++
++Work: *The Kojiki*, English translation attributed by the source page to Basil Hall Chamberlain (1882), transcription at <https://terebess.hu/english/kojiki.html>.
++Passage-level locator: Part III, “The Door of the Heavenly Rock-Dwelling”.
++Source-version limit: the source page identifies the translator and year; its specific printed copy was not independently identified.
++Delivery mode (R9): translation
++
++> Then the whole Plain of High Heaven was obscured and all the Central Land of Reed-Plains darkened. Owing to this, eternal night prevailed.
++> Therefore did the eight hundred myriad deities assemble in a divine assembly in the bed of the Tranquil River of Heaven, […]
++> So when the Heaven-Shining-Great-August deity had come forth, both the Plain of High Heaven and the Central-Land-of-Reed-Plains of course again became light.
++
++This short translation excerpt supports only the editorial comparison rows. It is not an in-world source, not fictional canon, and does not establish the original-language wording or a general Japanese/Shinto meaning.
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/claim-excerpt-map.md b/corpus/fixtures/r93-m2-kojiki-cluster/claim-excerpt-map.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/claim-excerpt-map.md
+@@ -0,0 +1,41 @@
++# R93 M2 claim-to-excerpt map
++
++Scope: all source-attributed JSON pointers in this cluster plus the three bounded Kojiki comparison clauses. Each row repeats the R9 delivery mode and an exact anchor. The translation rows are editorial comparisons only, not source support for fictional canon.
++
++**Expected inventory:** 12 JSON facts; 3 editorial rows; 15 total mapped rows; 15 distinct excerpt anchors.
++
++## R9 excerpt declarations
++
++| Excerpt path and lines | Source | Delivery mode | Status |
++|---|---|---|---|
++| `archive-record-excerpt.md:5-12` | `m2-record-archive` | `verbatim` | Newly authored fictional in-world register. |
++| `kojiki-chamberlain-excerpt.md:8-10` | Chamberlain translation of *The Kojiki* | `translation` | External editorial comparison only; no R5 JSON support is claimed. |
++
++`verbatim` describes the delivered wording of the invented in-world register. `translation` describes Chamberlain's English rendering, not the source-language text. Fixed-string matches are lexical preflight only.
++
++## JSON facts (12 source-attributed pointers)
++
++| ID | JSON fact pointer and fields | In-world source ID | Excerpt path | R9 delivery mode | Exact anchor |
++|---|---|---|---|---|---|
++| E1 | `entities.json#/0/first_appearance` (`teva`) | `m2-record-archive` | `archive-record-excerpt.md:5` | `verbatim` | `M-17 identifies Teva as the initial recorder` |
++| E2 | `entities.json#/0/claims/0` (`statement`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:6` | `verbatim` | `Teva names the paper folio "Lorn Index" as the sheet she opened for the check.` |
++| E3 | `entities.json#/1/first_appearance` (`orni`) | `m2-record-archive` | `archive-record-excerpt.md:7` | `verbatim` | `Orni writes on the margin: "not weighed; mark unmeasured."` |
++| E4 | `entities.json#/1/claims/0` (`statement`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:8` | `verbatim` | `The folio identifies Teva and Orni as its two annotators.` |
++| E5 | `entities.json#/2/first_appearance` (`slate-table`) | `m2-record-archive` | `archive-record-excerpt.md:5` | `verbatim` | `Slate Table as its filing place` |
++| E6 | `entities.json#/2/claims/0` (`statement`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:9` | `verbatim` | `The inventory lists the Slate Table as the place holding the folio.` |
++| E7 | `entities.json#/3/first_appearance` (`lorn-index`) | `m2-record-archive` | `archive-record-excerpt.md:6` | `verbatim` | `paper folio "Lorn Index"` |
++| E8 | `entities.json#/3/claims/0` (`statement`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:12` | `verbatim` | `The register gives no measured weight for the Lorn Index.` |
++| E9 | `relations.json#/0` (`from`, `to`, `type`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:10` | `verbatim` | `Teva files the Lorn Index on the Slate Table.` |
++| E10 | `relations.json#/1` (`from`, `to`, `type`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:11` | `verbatim` | `Orni adds "not weighed; mark unmeasured" to the Lorn Index at the Slate Table.` |
++| E11 | `timeline.json#/0` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:10` | `verbatim` | `Entry A: Teva files the Lorn Index on the Slate Table.` |
++| E12 | `timeline.json#/1` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `m2-record-archive` | `archive-record-excerpt.md:11` | `verbatim` | `Entry B: after Entry A, Orni adds "not weighed; mark unmeasured" to the Lorn Index at the Slate Table.` |
++
++## Editorial rows (3 external comparisons; not JSON facts)
++
++| ID | Bounded source clause / editorial comparison | Source excerpt path | R9 delivery mode | Exact anchor |
++|---|---|---|---|---|
++| S1 | The named passage says eternal night prevails; the comparison asks how a record marks an unknown field. | `kojiki-chamberlain-excerpt.md:8` | `translation` | `eternal night prevailed` |
++| S2 | The named passage says the deities assemble; the comparison is only to separately attributed marks on one fictional folio. | `kojiki-chamberlain-excerpt.md:9` | `translation` | `eight hundred myriad deities assemble in a divine assembly` |
++| S3 | The named passage says the lands again become light; the comparison is only to making the record's unknown measurement explicit. | `kojiki-chamberlain-excerpt.md:10` | `translation` | `again became light` |
++
++These editorial rows do not make the Kojiki translation an in-world source, establish cultural meaning, or support any fictional JSON fact. The checker reports their lexical anchors separately as `EDITORIAL-ANCHORS`; its result is not a non-submitter R9 manual review.
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/symbolism-clause-map.md b/corpus/fixtures/r93-m2-kojiki-cluster/symbolism-clause-map.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/symbolism-clause-map.md
+@@ -0,0 +1,11 @@
++# External-clause to fictional-element map — M-17
++
++The source clauses below are from the delivered Chamberlain English translation excerpt, Part III, “The Door of the Heavenly Rock-Dwelling.” The mapping is an authorial, motif-level design comparison only; it does not claim a cultural meaning, retelling, historical practice, or fictional canon.
++
++| Source clause / locator | Newly authored fictional element | Limited editorial reading | Limit |
++|---|---|---|---|
++| `kojiki-chamberlain-excerpt.md:8`, “eternal night prevailed” | `archive-record-excerpt.md:7,12`, “not weighed; mark unmeasured” | A record can name what it cannot see or establish. | This is not a claim that the folio causes or ends darkness, nor an imported event. |
++| `kojiki-chamberlain-excerpt.md:9`, “eight hundred myriad deities assemble in a divine assembly” | `archive-record-excerpt.md:8,11`, two named annotators and a second entry | More than one attributed mark can coexist on a record. | Teva and Orni are fictional clerks, not deities, aliases, or a ritual assembly. |
++| `kojiki-chamberlain-excerpt.md:10`, “again became light” | `archive-record-excerpt.md:11-12`, the second mark and explicit unmeasured field | Clarity can mean stating an evidence limit rather than supplying a missing value. | The fictional folio does not restore light, enact a myth, or make a claim about the translation's tradition. |
++
++No names, characters, places, objects, plot sequence, or ritual from the external passage is imported into the in-world entity index. These are bounded editorial comparisons, not JSON facts.
+diff --git a/corpus/fixtures/r93-m2-kojiki-cluster/inspiration-note.md b/corpus/fixtures/r93-m2-kojiki-cluster/inspiration-note.md
+new file mode 100644
+--- /dev/null
++++ b/corpus/fixtures/r93-m2-kojiki-cluster/inspiration-note.md
+@@ -0,0 +1,23 @@
++# Sourced inspiration note
++
++## Parallel cited
++
++A narrow comparison uses only three clauses in *The Kojiki*, Part III, “The Door of the Heavenly Rock-Dwelling”: the page's account says the lands darken and eternal night prevails, the deities assemble, and the lands again become light after the Heaven-Shining-Great-August deity comes forth. The delivered English excerpt is `kojiki-chamberlain-excerpt.md:8-10`. It is a translation attributed on the source page to Basil Hall Chamberlain (1882), not the original-language text. The associated fiction is a newly authored paper register about two marginal annotations and an explicitly unmeasured field. No external person, place, object, plot, or ritual becomes an in-world referent. This is not a retelling or a claim about all Japanese or Shinto traditions.
++
++The translation is cited for an editorial comparison only. No JSON fact cites it, and this note does not claim R5 source support or an R9 manual-review PASS for the translation. `claim-excerpt-map.md` records the three editorial rows separately from the in-world source claims.
++
++## Materiality / design dependence
++
++The comparison shaped only the editorial framing: an unknown field is stated, more than one mark is attributed, and legibility is treated as naming an evidence limit. If this parallel is removed, the fictional Teva/Orni register, the unmeasured field, all JSON claims, and the two-event sequence remain a self-contained invented archive record supported solely by the M-17 excerpt. No external name, plot event, or causal mechanism is required for the in-world canon.
++
++## Attribution question
++
++The Terebess page identifies the work as *The Kojiki* and labels “B.H. Chamberlain, translator 1882”; its section heading is “The Door of the Heavenly Rock-Dwelling.” The comparison is attributed to that named English translation and the accessible transcription at <https://terebess.hu/english/kojiki.html>. The exact printed copy or edition underlying the transcription has not been independently identified; no ancient individual author or translation from the source language is asserted beyond the page's attribution.
++
++## Rights question
++
++Open question — not assessed; no rights grant asserted. This covers Chamberlain's translation, the Terebess transcription/presentation, and the short delivered excerpt. Public access and age do not establish reuse terms; consult the applicable source terms before reuse.
++
++## AI-training-permission question
++
++Open question — not assessed; no permission inferred. Public access, attribution, and any rights conclusion do not establish AI-training permission; no explicit permission evidence was found or inferred.
+diff --git a/corpus/knowledge/reference-ledger.md b/corpus/knowledge/reference-ledger.md
+--- a/corpus/knowledge/reference-ledger.md
++++ b/corpus/knowledge/reference-ledger.md
+@@ -11,3 +11,4 @@
+ fictional story fact is separately cited to `sources.json` within the bible.
+ No reference work is ingested as fictional canon.
+ | Lewis Spence, *The Myths of Mexico & Peru* (London: George G. Harrap & Co., 1913), Chapter V, “The Maya,” subsection “The Creation-Story,” “The Creation-Story,” printed p. 209, delivered excerpt at `corpus/fixtures/r88-m3-maya-cluster/source-excerpt.md:5`, <https://www.gutenberg.org/ebooks/53080> | Not assessed for the 1913 presentation or the Gutenberg digitization; consult the source's credits and applicable terms before reproducing expression; no rights grant is asserted. | Not assessed; no permission is inferred from public access, attribution, or any rights conclusion. | Parallel-craft comparison only: the cited passage informs the cluster's veil/earth clauses; it is not an in-world source, supplies no fictional canon, and the cluster's clause→element map indexes the delivered excerpt line. Text is delivered in-tree. |
++| Basil Hall Chamberlain, translator as attributed by Terebess, *The Kojiki*, 1882, Part III, “The Door of the Heavenly Rock-Dwelling,” delivered excerpt at `corpus/fixtures/r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md:8-10`, <https://terebess.hu/english/kojiki.html> | Open question — not assessed; no rights grant asserted for the translation, transcription/presentation, or delivered excerpt; consult applicable terms before reuse. | Open question — not assessed; no permission inferred; public access, age, or attribution does not establish AI-training permission. | Narrow editorial comparison only; three named passage clauses are mapped to a newly authored fictional margin-register motif; translation text is delivered in the named fixture but is not an in-world source, canon, or R5 support. |

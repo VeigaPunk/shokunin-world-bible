@@ -1,0 +1,99 @@
+--- a/corpus/tools/support_check.py
++++ b/corpus/tools/support_check.py
+@@ -25,6 +25,10 @@
+     r"(\d+) distinct excerpt anchor(?:s)?\.\s*$",
+     re.IGNORECASE,
+ )
++
++
++class InventoryError(ValueError):
++    pass
+ 
+ 
+ def cells(line):
+@@ -82,9 +86,11 @@
+             else:
+                 current_section = None
+         inventory_match = EXPECTED_INVENTORY.fullmatch(line)
++        if line.lstrip().startswith("**Expected inventory:**") and not inventory_match:
++            raise InventoryError("expected inventory declaration is malformed")
+         if inventory_match:
+             if expected_inventory is not None:
+-                raise ValueError("map must contain exactly one expected inventory declaration")
++                raise InventoryError("map must contain exactly one expected inventory declaration")
+             expected_inventory = tuple(int(value) for value in inventory_match.groups())
+         if not line.lstrip().startswith("|"):
+             index += 1
+@@ -127,9 +133,9 @@
+             row_index += 1
+         index = row_index
+     if expected_inventory is None:
+-        raise ValueError("map must contain exactly one expected inventory declaration")
++        raise InventoryError("map must contain exactly one expected inventory declaration")
+     if expected_inventory[2] != expected_inventory[0] + expected_inventory[1]:
+-        raise ValueError("expected JSON facts and editorial rows must sum to total mapped rows")
++        raise InventoryError("expected JSON facts and editorial rows must sum to total mapped rows")
+     return facts, excerpt_modes, expected_inventory
+ 
+ 
+@@ -365,6 +371,7 @@
+     if failures:
+         for failure in failures:
+             print(f"FAIL: {failure}")
++        print("RESULT FAIL")
+         return 1
+     print("RESULT PASS WITH WARNINGS" if warnings else "RESULT PASS")
+     return 0
+@@ -374,24 +381,38 @@
+     parser = argparse.ArgumentParser(description="Check fixed-string anchors and R9 modes in a cluster map")
+     parser.add_argument("cluster", type=Path, help="cluster directory containing the claim-to-excerpt map")
+     parser.add_argument("--map", type=Path, help="map path; defaults to a conventional map in the cluster")
+-    args = parser.parse_args()
+-    cluster = args.cluster.resolve()
+-    if not cluster.is_dir():
+-        print(f"FAIL: cluster directory not found: {args.cluster}", file=sys.stderr)
+-        return 2
+-    map_path = args.map
+-    if map_path is None:
+-        candidates = [cluster / "claim-to-excerpt-map.md", cluster / "claim-excerpt-map.md"]
+-        map_path = next((candidate for candidate in candidates if candidate.is_file()), None)
+-    elif not map_path.is_absolute():
+-        map_path = Path.cwd() / map_path
+-    if map_path is None or not map_path.is_file():
+-        print("FAIL: claim-to-excerpt map not found", file=sys.stderr)
+-        return 2
+     try:
++        args = parser.parse_args()
++    except SystemExit as error:
++        exit_code = error.code if isinstance(error.code, int) else 1 if error.code else 0
++        if exit_code:
++            print("RESULT ERROR")
++        return exit_code
++
++    try:
++        cluster = args.cluster.resolve()
++        if not cluster.is_dir():
++            print(f"FAIL: cluster directory not found: {args.cluster}", file=sys.stderr)
++            print("RESULT ERROR")
++            return 2
++        map_path = args.map
++        if map_path is None:
++            candidates = [cluster / "claim-to-excerpt-map.md", cluster / "claim-excerpt-map.md"]
++            map_path = next((candidate for candidate in candidates if candidate.is_file()), None)
++        elif not map_path.is_absolute():
++            map_path = Path.cwd() / map_path
++        if map_path is None or not map_path.is_file():
++            print("FAIL: claim-to-excerpt map not found", file=sys.stderr)
++            print("RESULT ERROR")
++            return 2
+         return run(cluster, map_path)
++    except InventoryError as error:
++        print(f"FAIL: {error}", file=sys.stderr)
++        print("RESULT FAIL")
++        return 1
+     except (OSError, UnicodeError, ValueError) as error:
+         print(f"FAIL: {error}", file=sys.stderr)
++        print("RESULT ERROR")
+         return 2
+ 
+ 

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "shell-charter",
+    "title": "Shellweaver–Reedwarden Shore Charter",
+    "kind": "fictional treaty copy",
+    "reliability_note": "Newly authored fictional charter copy; it records a reciprocal pledge, not whether either faction kept it."
+  },
+  {
+    "id": "lowwater-hymn",
+    "title": "Low-Water Hymn of the Basin",
+    "kind": "fictional ritual song",
+    "reliability_note": "Newly authored fictional song; its imagery is not an objective account of supernatural events."
+  },
+  {
+    "id": "gate-witness",
+    "title": "Hara's Mother-Tide Gate witness slip",
+    "kind": "fictional first-person note",
+    "reliability_note": "Newly authored fictional, unverified account attributed to Hara; citation does not establish authenticity or truth."
+  },
+  {
+    "id": "dune-register",
+    "title": "Sen's Ash-Dune Sanctuary register",
+    "kind": "fictional local register",
+    "reliability_note": "Newly authored fictional, unverified register attributed to Sen; citation does not establish authenticity or truth."
+  },
+  {
+    "id": "tide-bell-tally",
+    "title": "First Low-Water Bell tally",
+    "kind": "fictional watch tally",
+    "reliability_note": "Newly authored fictional tally; its ordering is fixture-local and not independently authenticated chronology."
+  }
+]

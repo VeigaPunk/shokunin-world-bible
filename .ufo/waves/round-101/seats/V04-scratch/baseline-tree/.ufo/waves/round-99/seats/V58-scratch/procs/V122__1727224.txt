@@ -1,0 +1,40 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && set -u
+LANE=/home/vgpnk/Projects/shokunin/lore-shokunin
+SCRATCH="$LANE/.ufo/waves/round-99/seats/V122-scratch"
+LOG="$SCRATCH/poll.log"
+TABLE="$LANE/corpus/knowledge/r99-gate-blind-spot-table.md"
+NOTE="$LANE/corpus/knowledge/r99-lapse-scope-note.md"
+SEATS="$LANE/.ufo/waves/round-99/seats"
+mkdir -p "$SCRATCH"
+: > "$LOG"
+for i in $(seq 1 40); do
+  ts=$(date -Iseconds)
+  table_ok=0
+  s5_ok=0
+  s2_ok=0
+  note_ok=0
+  if [ -f "$TABLE" ] && [ -s "$TABLE" ]; then table_ok=1; fi
+  if [ -f "$NOTE" ] && [ -s "$NOTE" ]; then note_ok=1; fi
+  s5=$(ls -1 "$SEATS"/S5*.md 2>/dev/null | grep -v scratch || true)
+  s2=$(ls -1 "$SEATS"/S2*.md 2>/dev/null | grep -v scratch || true)
+  if [ -n "$s5" ]; then s5_ok=1; fi
+  if [ -n "$s2" ]; then s2_ok=1; fi
+  skill_sha=$(sha256sum "$LANE/SKILL.md" | awk '{print $1}')
+  echo "try=$i ts=$ts table=$table_ok note=$note_ok s5=$s5_ok s2=$s2_ok skill=$skill_sha s5files=[$s5] s2files=[$s2]" >> "$LOG"
+  if [ "$table_ok" = 1 ] && [ "$s5_ok" = 1 ]; then
+    echo "READY try=$i ts=$ts" >> "$LOG"
+    # copy snapshots
+    cp -a "$TABLE" "$SCRATCH/table.md"
+    [ "$note_ok" = 1 ] && cp -a "$NOTE" "$SCRATCH/note.md" || true
+    cp -a "$LANE/SKILL.md" "$SCRATCH/SKILL.md"
+    printf '%s\n' "$s5" > "$SCRATCH/s5-paths.txt"
+    printf '%s\n' "$s2" > "$SCRATCH/s2-paths.txt"
+    exit 0
+  fi
+  sleep 20
+done
+echo "ABSENT after 40 tries $(date -Iseconds)" >> "$LOG"
+exit 2
+

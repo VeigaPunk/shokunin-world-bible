@@ -1,0 +1,44 @@
+=== near-miss keys (Levenshtein 1-2), M2 vs priors ===
+r87-myth-cluster near_miss_pairs: []
+r88-m3-maya-cluster near_miss_pairs: []
+
+=== prior display-name mentions inside M2, by file ===
+-- r87-myth-cluster: ['Hara', 'Sen', 'Mother-Tide Gate', 'Ash-Dune Sanctuary', 'Shellweavers', 'Reedwardens', 'Reed Bell']
+   README.md:24 name='Hara'
+   README.md:24 name='Sen'
+   README.md:24 name='Sen'
+   README.md:16 name='Reedwardens'
+   README.md:24 name='Reedwardens'
+   README.md:16 name='Reed Bell'
+   README.md:24 name='Reed Bell'
+-- r88-m3-maya-cluster: ['Aru', 'Evin', 'Quiet Rise', 'Salt Court']
+   README.md:26 name='Aru'
+   README.md:26 name='Evin'
+   README.md:26 name='Quiet Rise'
+   README.md:26 name='Salt Court'
+
+=== M2 non-README content probe (r87/r88 occasion words) ===
+   archive-record-excerpt.md: none
+   claim-excerpt-map.md: none
+   contradictions.json: none
+   entities.json: none
+   inspiration-note.md: none
+   kojiki-chamberlain-excerpt.md: ['reed']
+   relations.json: none
+   sources.json: none
+   symbolism-clause-map.md: none
+   timeline.json: none
+
+=== alias/epithet field census ===
+   r93-m2-kojiki-cluster: []
+   r87-myth-cluster: []
+   r88-m3-maya-cluster: []
+
+=== r89 demo disclaimer (corrected substring) ===
+   disclaims_register: True
+   names_live_register_destination: True
+
+=== M2 vs r88 near-miss lexical pair check ===
+   slatetable vs saltcourt: distance=8
+   slatetable vs saltmonth: distance=8
+   lornindex vs lantern: distance=7

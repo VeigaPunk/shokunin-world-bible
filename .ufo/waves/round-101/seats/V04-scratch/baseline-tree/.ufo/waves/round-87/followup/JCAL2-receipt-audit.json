@@ -1,0 +1,93 @@
+{
+ "seat": "JCAL2",
+ "revision_judged": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+ "jcals_pinned_measurement": {
+  "scope": "147 dirs under corpus/ at 2b48ca7 with >=1 checker table",
+  "before_findings": 281,
+  "after_findings": 292,
+  "added": 11,
+  "removed": 0,
+  "exit_code_flips": 0,
+  "changed_dirs": 5
+ },
+ "artifacts": {
+  "X2-tuple-delta.json": {
+   "scalars": {
+    "seat": "X2",
+    "claim": "C1 CALIBRATION",
+    "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+    "measurement_command": "python3 /tmp/r87-X2-census.py",
+    "census_scope": "Every directory recursively under corpus containing any of the five checker JSON tables."
+   },
+   "quoted_added_lines": [
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed for this record because holder identity 'harbor' is ambiguous at entities[3].provenance[1]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed for this record because holder identity 'harbor' is ambiguous at entities[3].provenance[1]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed for this record because holder identity 'vault' is ambiguous at entities[3].provenance[2]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed for this record because holder identity 'vault' is ambiguous at entities[3].provenance[1]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed for this record because holder identity 'vault' is ambiguous at entities[3].provenance[1]"
+   ],
+   "quoted_matches_delivered_wording": false
+  },
+  "X3-tuple-delta.json": {
+   "scalars": {
+    "seat": "X3",
+    "claim": "C1 CALIBRATION",
+    "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+    "candidate": "scratch worktree uncommitted change to corpus/fixtures/check_bible.py",
+    "measurement_command_template": "python3 corpus/fixtures/check_bible.py <fixture-directory>",
+    "census_scope": "All directories anywhere under corpus containing at least one of sources.json, entities.json, relations.json, timeline.json, contradictions.json; includes active fixtures, round-85 probes and archived/rejected probes.",
+    "fixture_count": 142,
+    "unchanged_stdout_count": 140,
+    "changed_stdout_count": 2,
+    "baseline_exit0_count": 32,
+    "baseline_nonzero_count": 110,
+    "candidate_exit0_count": 32,
+    "candidate_nonzero_count": 110,
+    "fixtures_with_added_findings": 2,
+    "exit_statuses_unchanged": true,
+    "all_preexisting_findings_byte_preserved_in_order": true
+   },
+   "quoted_added_lines": [
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed because holder identity was ambiguous earlier",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons remain unassessed because holder identity was ambiguous earlier"
+   ],
+   "quoted_matches_delivered_wording": false
+  },
+  "X4-tuple-delta.json": {
+   "scalars": {
+    "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+    "scope": "all directories under corpus containing at least one checker section JSON file",
+    "fixture_count": 142,
+    "before_finding_count": 274,
+    "after_finding_count": 279,
+    "all_preexisting_finding_bytes_preserved_in_order": true
+   },
+   "quoted_added_lines": [
+    "entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+    "entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+    "entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[2]",
+    "entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]",
+    "entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'vault' first occurred at entities[3].provenance[1]"
+   ],
+   "quoted_matches_delivered_wording": true
+  },
+  "C6-delta-audit.json": {
+   "scalars": {
+    "seat": "C6",
+    "mission": "Critic: causal separability and additions-only admission audit",
+    "baseline_revision": "28706dc73a9b7667851fd82adb71e905ae5eb896",
+    "subject_patch": ".ufo/waves/round-87/patches/X1-c1.patch",
+    "subject_patch_scope_artifact": ".ufo/waves/round-87/patches/X1-tuple-delta.json"
+   },
+   "quoted_added_lines": [],
+   "quoted_matches_delivered_wording": null
+  }
+ },
+ "delivered_wording_signature": "unassessed because ambiguous holder identity {field} {id!r} first occurred at {origin_label}",
+ "reconciliation": {
+  "x2": "142 dirs, 3 changed dirs, quoted candidate wording (\"unassessed for this record because holder identity ... is ambiguous at ...\") - wording not the delivered text; dir count is the 133 fixtures + 9 live baseline scope",
+  "x3": "142 dirs, 2 changed dirs, misses live/runs/round-85/probe-inputs/r85-isolated-ambiguous entirely and quotes 1 added line for r85-harbor-repro where the delivered tree adds 2; quoted wording (\"remain unassessed because holder identity was ambiguous earlier\") is not the delivered text",
+  "x4": "142 dirs, 274 -> 279 (+5); quoted lines DO match the delivered wording, but the scope excludes the 4 r87 fixture dirs added by C1 itself, so +5 omits the 6 disclosure lines in fixtures/r87-masked-break-from-ambiguous and -to-ambiguous; delivered delta over the same 142-dir baseline scope plus C1's own 4 dirs is +11",
+  "jcals_numbers": "147 dirs / 281 -> 292 / +11 / 0 removed / 0 exit flips / 5 changed dirs"
+ }
+}

@@ -1,0 +1,4 @@
+VIOLATION: entities[1].first_appearance: required nonempty str
+VIOLATION: entities[4].provenance[1].tick: provenance tick 1 must be greater than previous tick 3
+VIOLATION: entities[4].provenance[1]: input-structural finding, not sourced-canon; possible provenance chain break, not a definite identity mismatch: expected from_holder 'f3-dup' is not uniquely resolvable (2 raw entity rows carry this id, but only 1 is in the resolved index); got 'mira'
+3 violation(s); no canon changed

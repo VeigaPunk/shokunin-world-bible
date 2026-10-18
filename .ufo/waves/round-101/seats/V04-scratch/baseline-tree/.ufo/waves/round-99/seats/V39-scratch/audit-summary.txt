@@ -1,0 +1,33 @@
+{
+ "snapshot": "2026-10-17T22:22:17-0300",
+ "present_incl_self": 15,
+ "present_excl_self": 15,
+ "absent": 113,
+ "producer_absent": [
+  "S1",
+  "S2",
+  "S5"
+ ],
+ "missing_candidates": [
+  "corpus/knowledge/r99-gate-blind-spot-table.md",
+  "corpus/knowledge/r99-lapse-scope-note.md"
+ ],
+ "duplicates": {},
+ "header_mismatches": 0,
+ "unexpected_md": [],
+ "parent_tree_md": [],
+ "fixture_files": [
+  "README.md",
+  "claim-excerpt-map.md",
+  "contradictions.json",
+  "entities.json",
+  "fictional-excerpts.md",
+  "inspiration-note.md",
+  "relations.json",
+  "source-excerpt.md",
+  "sources.json",
+  "timeline.json"
+ ],
+ "head": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+ "baseline_ancestor": true
+}

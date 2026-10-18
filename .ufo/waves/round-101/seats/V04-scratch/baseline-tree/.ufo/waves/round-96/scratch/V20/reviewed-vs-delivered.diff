@@ -1,0 +1,112 @@
+--- .ufo/waves/round-96/scratch/V20/frozen/dependency_freeze_reviewed.py	2026-10-17 17:42:49.932545511 -0300
++++ corpus/tools/dependency_freeze.py	2026-10-17 17:44:37.812881330 -0300
+@@ -322,18 +322,18 @@
+     cases = {}
+ 
+     def copy_case(name):
+-        target = workdir / name
++        target = workdir / name / base.name
+         shutil.copytree(base, target)
+         return target
+ 
+-    cases["clean"] = (lambda: [base], 0)
++    cases["clean"] = (lambda p=base: [p], 0)
+     scratch = copy_case("reduction_edge_drop")
+     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
+     for record in timeline:
+         if record["id"] == "paired-crossing-decision":
+             record["depends_on"] = [dep for dep in record["depends_on"] if dep != "evin-ninth-bell"]
+     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
+-    cases["reduction_edge_drop"] = (lambda: [scratch], 1)
++    cases["reduction_edge_drop"] = (lambda p=scratch: [p], 1)
+ 
+     scratch = copy_case("addition_edge_phantom")
+     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
+@@ -341,13 +341,13 @@
+         if record["id"] == "aftermath-missing-evin":
+             record["depends_on"] = record["depends_on"] + ["phantom-ninth-bell"]
+     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
+-    cases["addition_edge_phantom"] = (lambda: [scratch], 1)
++    cases["addition_edge_phantom"] = (lambda p=scratch: [p], 1)
+ 
+     scratch = copy_case("event_removed")
+     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
+     timeline = [record for record in timeline if record["id"] != "aftermath-missing-evin"]
+     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
+-    cases["event_removed"] = (lambda: [scratch], 1)
++    cases["event_removed"] = (lambda p=scratch: [p], 1)
+ 
+     scratch = copy_case("event_endpoint_change")
+     timeline = json.loads((scratch / "timeline.json").read_text(encoding="utf-8"))
+@@ -355,43 +355,43 @@
+         if record["id"] == "paired-crossing-decision":
+             record["place_id"] = "salt-court"
+     (scratch / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
+-    cases["event_endpoint_change"] = (lambda: [scratch], 1)
++    cases["event_endpoint_change"] = (lambda p=scratch: [p], 1)
+ 
+     scratch = copy_case("relation_endpoint_flip")
+     relations = json.loads((scratch / "relations.json").read_text(encoding="utf-8"))
+     relations[0]["from"], relations[0]["to"] = relations[0]["to"], relations[0]["from"]
+     (scratch / "relations.json").write_text(json.dumps(relations, indent=2) + "\n", encoding="utf-8")
+-    cases["relation_endpoint_flip"] = (lambda: [scratch], 1)
++    cases["relation_endpoint_flip"] = (lambda p=scratch: [p], 1)
+ 
+     scratch = copy_case("relation_removed")
+     (scratch / "relations.json").write_text("[]\n", encoding="utf-8")
+-    cases["relation_removed"] = (lambda: [scratch], 1)
++    cases["relation_removed"] = (lambda p=scratch: [p], 1)
+ 
+     scratch = copy_case("relation_added")
+     relations = json.loads((scratch / "relations.json").read_text(encoding="utf-8"))
+     relations.append({"from": "aru", "to": "jorin", "type": "unpinned_relation"})
+     (scratch / "relations.json").write_text(json.dumps(relations, indent=2) + "\n", encoding="utf-8")
+-    cases["relation_added"] = (lambda: [scratch], 1)
++    cases["relation_added"] = (lambda p=scratch: [p], 1)
+ 
+     scratch = copy_case("digest_tamper")
+     timeline_text = (scratch / "timeline.json").read_text(encoding="utf-8")
+     (scratch / "timeline.json").write_text(
+         timeline_text.replace("south bell at Salt Court", "South bell at Salt Court", 1), encoding="utf-8")
+-    cases["digest_tamper"] = (lambda: [scratch], 2)
++    cases["digest_tamper"] = (lambda p=scratch: [p], 2)
+ 
+     scratch = copy_case("malformed_json")
+     (scratch / "timeline.json").write_text("[{\n", encoding="utf-8")
+-    cases["malformed_json"] = (lambda: [scratch], 2)
++    cases["malformed_json"] = (lambda p=scratch: [p], 2)
+ 
+     scratch = copy_case("missing_timeline")
+     (scratch / "timeline.json").unlink()
+-    cases["missing_timeline"] = (lambda: [scratch], 2)
++    cases["missing_timeline"] = (lambda p=scratch: [p], 2)
+ 
+     unpinned = workdir / "unpinned_fixture"
+     shutil.copytree(base, unpinned)
+-    cases["unpinned_fixture"] = (lambda: [unpinned], 2)
+-    cases["missing_fixture"] = (lambda: [workdir / "absent-fixture"], 2)
+-    cases["invalid_arguments"] = (lambda: [base, "--freeze", str(base)], 2)
++    cases["unpinned_fixture"] = (lambda p=unpinned: [p], 2)
++    cases["missing_fixture"] = (lambda p=workdir / "missing_case" / base.name: [p], 2)
++    cases["invalid_arguments"] = (lambda p=base: [p, "--freeze", str(p)], 2)
+     return cases
+ 
+ 
+@@ -448,12 +448,12 @@
+     parser.add_argument("fixture", nargs="?", help="fixture directory to verify against its pin")
+     parser.add_argument("--freeze", metavar="DIR", help="(re)build the pin for DIR (delivery-time only)")
+     parser.add_argument("--self-test", action="store_true", help="run isolated cases against persisted expectations")
+-    args = parser.parse_args(argv)
+-    if args.self_test and (args.fixture or args.freeze):
+-        fail("INVALID-ARGUMENTS", "--self-test cannot be combined with a fixture or --freeze")
+-    if args.freeze and args.fixture:
+-        fail("INVALID-ARGUMENTS", "pass either a fixture (verify) or --freeze DIR, not both")
+     try:
++        args = parser.parse_args(argv)
++        if args.self_test and (args.fixture or args.freeze):
++            fail("INVALID-ARGUMENTS", "--self-test cannot be combined with a fixture or --freeze")
++        if args.freeze and args.fixture:
++            fail("INVALID-ARGUMENTS", "pass either a fixture (verify) or --freeze DIR, not both")
+         if args.self_test:
+             return run_self_test()
+         if args.freeze:

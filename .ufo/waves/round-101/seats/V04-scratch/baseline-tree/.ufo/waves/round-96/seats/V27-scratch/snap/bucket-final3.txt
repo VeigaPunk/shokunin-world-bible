@@ -1,0 +1,28 @@
+total porcelain entries: 18146
+B1 producer-modified (tracked): 3
+B2a fixture-new: 10
+B2b tools-new: 2
+B2c knowledge-note-new: 1
+B3 seat reports/scratch (.ufo/waves/round-96/): 18129
+B4 orchestrator LOG.md: 1
+OTHER: 0
+---OTHER (each line = finding)---
+(none)
+---B1 detail---
+ M corpus/tools/README.md
+ M corpus/tools/map-obligations-contract.json
+ M corpus/tools/map_obligations.py
+---B2 detail---
+?? corpus/fixtures/r96-crossing-response/README.md
+?? corpus/fixtures/r96-crossing-response/claim-excerpt-map.md
+?? corpus/fixtures/r96-crossing-response/contradictions.json
+?? corpus/fixtures/r96-crossing-response/entities.json
+?? corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+?? corpus/fixtures/r96-crossing-response/inspiration-note.md
+?? corpus/fixtures/r96-crossing-response/relations.json
+?? corpus/fixtures/r96-crossing-response/source-excerpt.md
+?? corpus/fixtures/r96-crossing-response/sources.json
+?? corpus/fixtures/r96-crossing-response/timeline.json
+?? corpus/tools/dependency-freeze-contract.json
+?? corpus/tools/dependency_freeze.py
+?? corpus/knowledge/r96-response-scope-note.md

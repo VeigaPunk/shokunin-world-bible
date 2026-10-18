@@ -1,0 +1,13 @@
+diff --git i/corpus/fixtures/check_bible.py w/corpus/fixtures/check_bible.py
+index c31b2fdcafd72df2e8c81ea9a0b1dcc2d3e4cf12..ad61dc9ccd4edc09c5a86c9eda4938971812cb6d 100644
+--- i/corpus/fixtures/check_bible.py
++++ w/corpus/fixtures/check_bible.py
+@@ -185,6 +185,8 @@ def check(directory):
+         holder_ambiguity_notice_emitted = False
+         for i, record in enumerate(records):
+             record_label = f'{label}[{i}]'
++            if holder_ambiguity_notice_emitted:
++                errors.append(f'{record_label}: provenance continuity and tick-order comparisons remain unassessed because holder identity was ambiguous earlier')
+             if not isinstance(record, dict):
+                 errors.append(f'{record_label}: expected object')
+                 previous_holder = previous_tick = None

@@ -1,0 +1,6 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r62-duplicate-member
+exit_code=1
+VIOLATION: timeline.json: duplicate object member 'x'; cannot load JSON
+VIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable
+VIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable
+3 violation(s); no canon changed

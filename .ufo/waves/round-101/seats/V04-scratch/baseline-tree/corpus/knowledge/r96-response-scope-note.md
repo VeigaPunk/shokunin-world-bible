@@ -1,0 +1,75 @@
+source: `corpus/fixtures/r96-crossing-response/{sources.json,timeline.json,fictional-excerpts.md,README.md,claim-excerpt-map.md,entities.json,relations.json,contradictions.json,inspiration-note.md,source-excerpt.md}`; `corpus/fixtures/r95-crossing-aftermath/{sources.json,timeline.json,fictional-excerpts.md,README.md,claim-excerpt-map.md,relations.json}`; `corpus/knowledge/r95-aftermath-scope-note.md`; `corpus/fixtures/r35-bell7-conflict/{contradictions.json,timeline.json,manual-clause-pointer-map.md,sella-bell7-note-excerpt.md,tarin-note-excerpt.md}`; `corpus/fixtures/README.md` (Round 35 and Round 95 sections); `corpus/knowledge/2026-10-12-lore-decision-table.md` (Round 23 row)
+verified-at: 2026-10-17 — read every cited local record and excerpt in the delivered r96 fixture and its r95/r35 counterparts; every cited path and line was checked to exist this pass; no external URL was fetched.
+recheck: before integrating any r96 response claim, and whenever the response note, the tick-12 event, the inherited r95 rows, the map rows, or the checker receipts change; independently inspect the note's whole proposition before making any breach, duty, performance, identity, or canon claim.
+
+# A second first-person account of one occasion, left unresolved — round 96
+
+This is a bounded knowledge record, not merged canon, not a contradiction finding, and not a verdict on any character. It names one new observation class and the exact records that carry it. The checker does not read prose; a clean run is structural only.
+
+## The observation class
+
+**Second first-person account, same occasion, unresolved** — a second named speaker's own first-person report of the same agreed crossing occasion, added beside the first account, where the record explicitly asserts no accusation, selects no winner, and states that both first-person accounts stand unresolved. The class is defined by what the record says, not by what happened in the fiction: two first-person reports are preserved side by side and neither is declared true, false, or superseded.
+
+This is distinct from the r95 reported-non-performance class in who speaks and what is claimed. r95 records one speaker's report that an agreed action did not occur (`corpus/knowledge/r95-aftermath-scope-note.md`); r96 adds the *other* participant's own account of that same occasion with no counter-accusation and no winner. It is also distinct from the r35 Bell-7 class, where a two-sided ledger pair encodes an apparent incompatibility between two reports about one named ringing: r96 asserts no contradiction at all, and its `contradictions.json` stays empty (`[]`).
+
+## Records that carry the class (exact)
+
+| Element | Record | Delivered content |
+|---|---|---|
+| Response source | `corpus/fixtures/r96-crossing-response/sources.json#/4` (`evin-response-note`, id at `sources.json:27`) | Newly authored fictional first-person note; reliability note (`sources.json:30`): "Evin reports being at Salt Court through the same agreed bell. It asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved. It records one crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an external historical fact." |
+| Note text | `corpus/fixtures/r96-crossing-response/fictional-excerpts.md:33-42` (quoted lines 37-40) | "Tick 12: I was at Salt Court through the same agreed bell. / I make no accusation against Aru. / I select no winner between our two accounts. / Both accounts stand unresolved." |
+| Event | `corpus/fixtures/r96-crossing-response/timeline.json#/4` (`response-evin-salt-court`, id at `timeline.json:44`) | tick 12, `entity_id: evin`, `place_id: salt-court`, `depends_on: ["aftermath-missing-evin"]`, `source_id: evin-response-note` |
+| Prior account (inherited, unchanged) | `corpus/fixtures/r96-crossing-response/timeline.json#/3` (`aftermath-missing-evin`), parsed-equal to `corpus/fixtures/r95-crossing-aftermath/timeline.json#/3` | tick 11, `entity_id: aru`, `place_id: chalk-stair`, `depends_on: ["paired-crossing-decision"]`, `source_id: aru-aftermath-note` |
+| Scope bound (inherited, unchanged) | `corpus/fixtures/r96-crossing-response/relations.json#/0`, byte-identical to `corpus/fixtures/r95-crossing-aftermath/relations.json#/0` | `agreed_co_stewardship_for_this_crossing`, source `crossing-minute`; excerpt `fictional-excerpts.md:19`: "for this crossing only" |
+| Map row | `corpus/fixtures/r96-crossing-response/claim-excerpt-map.md:37` (J16) | 16th canonical pointer with anchor `Tick 12: I was at Salt Court through the same agreed bell.` (line 37), span 33-42, mode `verbatim`; bounded reading at `claim-excerpt-map.md:54` |
+
+No entity, relation, or inherited event row changed: `entities.json`, `relations.json`, `contradictions.json`, `inspiration-note.md`, and `source-excerpt.md` are byte-identical to `r95-crossing-aftermath` (verified this pass with `cmp`), `r96 timeline.json[:4] == r95 timeline.json` parsed-equal (`True`), and `r96 sources.json[:4] == r95 sources.json` parsed-equal (`True`). The fixture declares 5 entities / 1 relation / 5 events / 5 sources (`README.md:3`) and 16 map obligations — the 15 inherited rows unchanged plus the new tick-12 row (`README.md:21`).
+
+## Bounds (explicit)
+
+- **Two reports only.** The class rests on two named speakers' authored notes: Aru's inherited tick-11 note (`aru-aftermath-note`, `corpus/fixtures/r95-crossing-aftermath/sources.json#/3`) and Evin's added tick-12 response note (`evin-response-note`). Neither corroborates the other; neither is proof of any world fact.
+- **No contradiction asserted — different actors and places.** The tick-11 report records Aru's own reported waiting at the Chalk Stair (actor `aru`, place `chalk-stair`); the tick-12 report records Evin's own reported presence at Salt Court (actor `evin`, place `salt-court`). The two records name different actors at different places, so they are not two sides of one field comparison; no ledger pair is added and `contradictions.json` remains empty (`[]`) in both r95 and r96 (`README.md:11`; `claim-excerpt-map.md:54`).
+- **No testimony truth.** The record does not establish that Evin was at Salt Court as world fact, does not establish whether Evin came to the Chalk Stair, and does not authenticate either source text. Per its reliability note (`sources.json:30`) and `fictional-excerpts.md:42`, the response note records one crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an external historical fact. Do not infer fault, guilt, an alliance failure, or a standing duty from either account.
+- **No winner selected.** The note's own lines (`fictional-excerpts.md:38-40`) assert no accusation against Aru, select no winner between the two accounts, and state that both stand unresolved; neither account is treated as overturning, confirming, or adjudicating the other.
+- **Editorial tick/ID alignments.** The tick integer `12`, the event ID `response-evin-salt-court`, and the `depends_on: ["aftermath-missing-evin"]` edge are editorial encodings of the excerpt's tick label and stated order/dependence, not literal JSON wording in the note (`README.md:13`; `claim-excerpt-map.md:50`). The event's `entity_id: evin` is the schema's single actor slot and does not remove Aru's account (`README.md:11`; `claim-excerpt-map.md:54`).
+- **Checker validates structure, not testimony.** `check_bible.py` validates schema, citations, relations, and timeline structure; `support_check.py` is a lexical/span/mode receipt; `map_obligations.py` covers raw-JSON↔map completeness and source-ID agreement only. None reads either note as testimony or decides truth, breach, chronology, rights, permission, or canon.
+
+## Precedent cross-reference
+
+- **r95 aftermath scope note (the first account, immediate predecessor).** `corpus/knowledge/r95-aftermath-scope-note.md` records the reported-non-performance class carried by `aru-aftermath-note` and the tick-11 event `aftermath-missing-evin` (`corpus/fixtures/r95-crossing-aftermath/sources.json#/3`; `corpus/fixtures/r95-crossing-aftermath/timeline.json#/3`; map row J15 at `corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md:36`), bounded by the crossing-only relation and the note's explicit no-other-duty/no-breach assertion (`corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md:28-29`). The r96 response note answers exactly that record: same occasion, the second participant's own account, with the unresolved status now stated in the record itself rather than left to the reader. The r96 fixture inherits the r95 rows unchanged and adds one source and one event (`corpus/fixtures/r96-crossing-response/README.md:3`, `:7`).
+- **r35 two-sided-preservation precedent (the earlier discipline for two reports).** `corpus/fixtures/r35-bell7-conflict/` preserves Tarin's report and Sella's separate first-person account side by side and records the apparent Bell-7 location conflict as an *editorial* ledger pair (`corpus/fixtures/r35-bell7-conflict/contradictions.json#/0`, `bell7-location-reports`; `corpus/fixtures/r35-bell7-conflict/timeline.json#/2-3`), with both accounts retained unresolved and neither declared true or false (`corpus/fixtures/r35-bell7-conflict/manual-clause-pointer-map.md:3`, `:21`; `corpus/fixtures/README.md:746-771`, including "Neither wins." at `:761`). The r96 record applies the same preservation discipline to a different shape: two first-person accounts of one bounded crossing are kept side by side, but no conflict is asserted at all — the accounts name different actors at different places, so no ledger row exists and the unresolved status is asserted by the note itself (`corpus/fixtures/r96-crossing-response/fictional-excerpts.md:39-40`). The r35 ledger's `why` states its incompatibility conditionally on identity/place/occasion assumptions; r96 makes no such assertion, so the two fixtures must not be read as the same class.
+- **r23 witnessed-absence class (report-not-proof discipline).** Decision-table row `corpus/knowledge/2026-10-12-lore-decision-table.md:226-230`: record a report as a note class, map each clause by hand, "do not delete entities, clear occupancy, or treat the report as proof"; the checker does not read the excerpt. Both r96 accounts are held to that discipline.
+
+## Receipts (measured this pass, from the lane root)
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r96-crossing-response
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/support_check.py corpus/fixtures/r96-crossing-response
+# INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18; DISTINCT-ANCHORS 14/14
+# SOURCE-SUPPORT 16/16; MODES 18/18; VALIDATED-ROWS 18/18 / RESULT PASS   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r96-crossing-response
+# OBLIGATIONS raw=16 mapped=16 / INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18 / RESULT PASS   exit 0
+```
+
+Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa…` and `support_check.py` `55a5eb27…` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176…` (the r96 C1 hardening in flight; `--self-test` at that revision printed 22 case lines and the contract file was still `8173bb97…`). The earlier `17:43` run used the r95 delivered revision `d1c239cc…` and gave the same `raw=16 mapped=16` / `RESULT PASS` exit 0. The r95 fixture still reads `raw=15 mapped=15` / `RESULT PASS` exit 0 at `6634e176…`. Re-run all three commands against the delivered revision before citing these receipts.
+
+Path and line checks (python3, this pass): every path named in this record exists; the five inherited tables/notes are byte-identical between r95 and r96 (`cmp`); `r96 timeline.json[:4] == r95 timeline.json` and `r96 sources.json[:4] == r95 sources.json` → `True`; `r96 timeline.json[4]` = `response-evin-salt-court` (tick 12, evin, salt-court, `["aftermath-missing-evin"]`); census `ls -d corpus/fixtures/*/ | wc -l` = **170** (169 at the r95 closure). No other corpus file is claimed to have changed.
+
+## Limits of this record
+
+This is an author-seat knowledge note, not independent verification, admission, or a non-author review. It does not authenticate the fictional sources, does not adjudicate either character, and does not extend to any record outside the cited paths. The r96 fixture is a declared continuation of `r95-crossing-aftermath`, itself a continuation of `r94-paired-crossing` and `r88-m3-maya-cluster`; source IDs remain cluster-local and path-qualified comparisons are not identity evidence. Rights and AI-training permission remain unassessed here.
+
+## Correction addendum (2026-10-17, round 98, S5 knowledge-notes seat)
+
+The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176…` was an in-flight intermediate revision during round 96 and never entered the file's committed history (the committed revisions are `cc1df4dc…` r94, `d1c239cc…` r95, `2b0ba815…` r96, `86b52949…` r97); the r96 closure delivered `2b0ba815…`. The contract file named above as `8173bb97…` is `corpus/tools/map-obligations-contract.json` at its r95 revision (`8173bb97…`, commit `dcb2d92`); the r96 closure delivered `97b76bb8…`. The `d1c239cc…` revision named above is the r95 delivered revision — accurate as history, not current. Current delivered revisions measured at this addendum's run time (2026-10-17T20:28:35-03:00, from the lane root):
+
+```sh
+sha256sum corpus/tools/map_obligations.py corpus/tools/map-obligations-contract.json
+# 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+# 2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41  corpus/tools/map-obligations-contract.json
+```
+
+`check_bible.py` `ff9fd2aa…` and `support_check.py` `55a5eb27…` named above are still current (re-measured the same pass). The three receipts above were re-derived at this current revision this pass and are unchanged: `check_bible` CLEAN exit 0; `support_check` `JSON-FACTS 16/16` / `EDITORIAL-ROWS 2/2` / `TOTAL-ROWS 18/18` / `RESULT PASS` exit 0; `map_obligations` `raw=16 mapped=16` / `RESULT PASS` exit 0. The r95 fixture cited above still reads `raw=15 mapped=15` / `RESULT PASS` exit 0 at this revision.
+
+Instruction: on the next touch of this note, re-derive all three receipts and re-measure the tool revisions before citing them; do not cite `6634e176…` or `8173bb97…` as current. Round 98's C1 work owns `corpus/tools/dependency_freeze.py` and `corpus/tools/dependency-freeze-contract.json`, not `map_obligations.py` or its contract. The historical text above stays unrewritten; this addendum is the correction of record.

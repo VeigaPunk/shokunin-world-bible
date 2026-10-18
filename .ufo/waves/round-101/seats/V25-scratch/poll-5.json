@@ -1,0 +1,107 @@
+{
+ "census_utc": "2026-10-18T03:07:35.195589+00:00",
+ "expected_roster": [
+  "U1",
+  "U2",
+  "V01",
+  "V02",
+  "V03",
+  "V04",
+  "V05",
+  "V06",
+  "V07",
+  "V08",
+  "V09",
+  "V10",
+  "V11",
+  "V12",
+  "V13",
+  "V14",
+  "V15",
+  "V16",
+  "V17",
+  "V18",
+  "V19",
+  "V20",
+  "V21",
+  "V22",
+  "V23",
+  "V24",
+  "V25",
+  "V26"
+ ],
+ "expected_count": 28,
+ "present": [
+  "V22"
+ ],
+ "present_count": 1,
+ "present_excl_self": [
+  "V22"
+ ],
+ "present_excl_self_count": 1,
+ "self_seat": "V25",
+ "self_report_files": [],
+ "missing_seat_ids": [
+  "U1",
+  "U2",
+  "V01",
+  "V02",
+  "V03",
+  "V04",
+  "V05",
+  "V06",
+  "V07",
+  "V08",
+  "V09",
+  "V10",
+  "V11",
+  "V12",
+  "V13",
+  "V14",
+  "V15",
+  "V16",
+  "V17",
+  "V18",
+  "V19",
+  "V20",
+  "V21",
+  "V23",
+  "V24",
+  "V25",
+  "V26"
+ ],
+ "excess_seat_ids": [],
+ "duplicate_report_prefixes": {},
+ "scratch_dirs": [
+  ".v05-scratch",
+  ".v16-scratch",
+  "V06-scratch",
+  "V23-scratch",
+  "V25-scratch"
+ ],
+ "scratch_dirs_without_report": [
+  ".v05-scratch",
+  ".v16-scratch",
+  "V06-scratch",
+  "V23-scratch",
+  "V25-scratch"
+ ],
+ "header_token_misses_first20": [],
+ "empty_reports": [],
+ "tiny_reports_under_200_bytes": [],
+ "unexpected_md_in_seats_dir": [],
+ "seat_reports": {
+  "V22": [
+   {
+    "file": "V22-verdict-freshness.md",
+    "sha256": "1e6edc5f8ca6d458a55ede315c6b3b437cac8ea3d1b4824a2ec34f98ffbee88d",
+    "bytes": 2196,
+    "mtime_utc": "2026-10-18T03:05:42.008510+00:00",
+    "header_has_seat_token": true,
+    "empty": false,
+    "tiny_under_200": false
+   }
+  ]
+ },
+ "complete_excl_self": false
+}

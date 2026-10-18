@@ -1,0 +1,31 @@
+2026-10-17T22:01:36-03:00
+try=0 artifacts-missing: knowledge notes + S1-S5 reports
+try=2026-10-17T22:02:50-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99-*': No such file or directory
+---- 2026-10-17T22:06:23-03:00 ----
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+2026-10-17 22:04:28.205774480 -0300 21007 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 22:02:39.612249741 -0300 17119 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+---- 2026-10-17T22:21:05-03:00 ----
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+2026-10-17 22:08:46.248249589 -0300 25987 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+---- 2026-10-17T22:44:26-03:00 ----
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+---- 2026-10-17T22:53:48-03:00 ----
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1-full-file-pins.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+---- 2026-10-17T23:11:03-03:00 ----
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1-full-file-pins.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2-tools-docs.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5-knowledge-author.md

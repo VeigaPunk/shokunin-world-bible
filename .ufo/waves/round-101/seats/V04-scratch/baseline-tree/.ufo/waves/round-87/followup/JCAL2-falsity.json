@@ -1,0 +1,99 @@
+{
+ "seat": "JCAL2",
+ "revision": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+ "vectors": {
+  "v1_nonitem": {
+   "description": "provenance moved to a non-item entity; one holder id duplicated",
+   "named_cause": "ambiguous holder identity",
+   "actual_cause": "entity kind is not item -> chain comparisons out of scope",
+   "disclosure_case_exit": 1,
+   "disclosure_lines": [
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+   ],
+   "control_lines": [
+    "VIOLATION: entities[3].provenance: only valid on item entities",
+    "1 violation(s); no canon changed"
+   ],
+   "control_has_disclosure": false,
+   "pre_c1_checker_exit": 1,
+   "pre_c1_checker_adds_disclosure": false,
+   "verdict": "disclosure text emitted; its \"because ambiguous holder identity ...\" clause names a cause that the paired control disproves (control: identical non-assessment with unique holders, no disclosure)"
+  },
+  "v2_badsources": {
+   "description": "sources.json unloadable; one holder id duplicated",
+   "named_cause": "ambiguous holder identity",
+   "actual_cause": "sources_available false -> chain comparisons suppressed globally",
+   "disclosure_case_exit": 1,
+   "disclosure_lines": [
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+   ],
+   "control_lines": [
+    "VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+    "1 violation(s); no canon changed"
+   ],
+   "control_has_disclosure": false,
+   "pre_c1_checker_exit": 1,
+   "pre_c1_checker_adds_disclosure": false,
+   "verdict": "disclosure text emitted; its \"because ambiguous holder identity ...\" clause names a cause that the paired control disproves (control: identical non-assessment with unique holders, no disclosure)"
+  },
+  "v3_malformed_earlier": {
+   "description": "record[0] has the wrong key set; holder duplicated at record[1]",
+   "named_cause": "ambiguous holder identity",
+   "actual_cause": "record[0] malformed already latched the gate off",
+   "disclosure_case_exit": 1,
+   "disclosure_lines": [
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'harbor' first occurred at entities[3].provenance[1]"
+   ],
+   "control_lines": [
+    "VIOLATION: entities[3].provenance[0]: expected exactly tick, from_holder, to_holder, source_id",
+    "1 violation(s); no canon changed"
+   ],
+   "control_has_disclosure": false,
+   "pre_c1_checker_exit": 1,
+   "pre_c1_checker_adds_disclosure": false,
+   "verdict": "disclosure text emitted; its \"because ambiguous holder identity ...\" clause names a cause that the paired control disproves (control: identical non-assessment with unique holders, no disclosure)"
+  },
+  "v4_duplicate_item_id": {
+   "description": "the item entity's OWN id is duplicated (no holder ambiguity introduced)",
+   "named_cause": null,
+   "actual_cause": "entity_id_counts[item['id']] != 1 -> gate off before any holder is examined",
+   "disclosure_case_exit": 1,
+   "disclosure_lines": [],
+   "control_lines": [
+    "CLEAN: schema, citations, relations, timeline; 0 violations"
+   ],
+   "control_has_disclosure": false,
+   "pre_c1_checker_exit": 1,
+   "pre_c1_checker_adds_disclosure": false,
+   "disclosure_case_stdout": [
+    "VIOLATION: entities[4].id: duplicate entities id 'seal'",
+    "VIOLATION: relations[0].to: ambiguous entity 'seal'",
+    "2 violation(s); no canon changed"
+   ],
+   "verdict": "silent-unassessed gap: gate is off and NO notice or disclosure is emitted at all (contrast v1-v3, where the text names a cause that does not hold)"
+  },
+  "v5_first_occurred_scope": {
+   "description": "two item chains both hit the duplicate id; the second chain's disclosure claims it \"first occurred at\" its own record 0",
+   "named_cause": "\"first occurred at entities[6].provenance[0]\"",
+   "actual_cause": "the same ambiguity first occurred earlier in the document, at entities[3].provenance[0]",
+   "disclosure_case_exit": 1,
+   "disclosure_lines": [
+    "VIOLATION: entities[3].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[3].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup' first occurred at entities[3].provenance[0]",
+    "VIOLATION: entities[6].provenance[0]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[6].provenance[0]",
+    "VIOLATION: entities[6].provenance[1]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[6].provenance[0]",
+    "VIOLATION: entities[6].provenance[2]: provenance continuity and tick-order comparisons unassessed because ambiguous holder identity to_holder 'dup', from_holder 'dup' first occurred at entities[6].provenance[0]"
+   ],
+   "control_lines": null,
+   "control_has_disclosure": false,
+   "pre_c1_checker_exit": 1,
+   "pre_c1_checker_adds_disclosure": false,
+   "verdict": "disclosure text scope-ambiguous; \"first occurred at <chain-local record>\" is false under a document-wide reading (the same id is ambiguous earlier, in another item's chain)"
+  }
+ },
+ "note": "Every vector was run with the pre-C1 checker too: none of the five is a pre-C1/C1 behavior difference in the sense of a removed or reworded finding; v1-v3 and v5 are additions-only, v4 is unchanged pre/post."
+}

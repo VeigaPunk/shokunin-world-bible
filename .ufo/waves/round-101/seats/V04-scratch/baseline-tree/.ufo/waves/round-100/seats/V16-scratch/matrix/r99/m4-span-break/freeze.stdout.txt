@@ -1,0 +1,3 @@
+FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1
+FINDING DIGEST-MISMATCH: content digest a9718342a70863ffa0a71ef82b5df5b428b9f45f2d15d91b9465434fa3306b4b != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> eb0f223ba9e6da300576cd3e23fd31df6625a27287ba0c7b2ad6f1062b3b0022); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR

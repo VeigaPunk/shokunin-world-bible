@@ -1,0 +1,75 @@
+=== T0 digests of delivered r96 artifacts ===
+2b0ba815326b1cb3f65f7eab1842b85abedb9823228a37adc6a9335edc4a3ba8  corpus/tools/map_obligations.py
+97b76bb8b1fea97f166ef7586eba69c427ec15bbe7b34eb5345ec65c936493b6  corpus/tools/map-obligations-contract.json
+a3b57978f0cbf314389ee3f9862920a46cf109fca6d1eec488c39be0457f0980  corpus/tools/dependency_freeze.py
+7d568cc422cda42297b7506a1a3e083e8798866efd16d58617bf4ea468576975  corpus/tools/dependency-freeze-contract.json
+=== M1 map_obligations on r96-crossing-response ===
+OBLIGATIONS raw=16 mapped=16
+INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18
+RESULT PASS
+EXIT=0
+=== M2 self-test ===
+EXIT=0
+24
+RESULT PASS
+=== M3 contract case count ===
+cases: 24
+ids: ['complete', 'missing', 'duplicate', 'phantom', 'source_id_mismatch', 'schema_drift', 'inventory_mismatch', 'malformed_json', 'co_mapped_grammar', 'legacy_grammar', 'invalid_pointer', 'empty_segment', 'noncanonical_index', 'noncanonical_claim_index', 'foreign_path', 'traversal_path', 'symlink_path', 'frozen_complete', 'frozen_tampered', 'frozen_missing_digests', 'frozen_expected_failure', 'frozen_verdict_mismatch', 'map_missing', 'invalid_arguments']
+=== M4 dependency_freeze chain ===
+r88-m3-maya-cluster EXIT=0 :: RESULT PASS
+r94-paired-crossing EXIT=0 :: RESULT PASS
+r95-crossing-aftermath EXIT=0 :: RESULT PASS
+r96-crossing-response EXIT=0 :: RESULT PASS
+=== M5 dependency_freeze self-test ===
+EXIT=0
+SELF-TEST 14/14
+RESULT PASS
+=== M6 r96 map rows vs r95 (parsed-value) ===
+r95 rows=15 r96 rows=16
+ROW J01 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J02 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J03 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J04 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J05 differs:
+  col3: r95='`r95-crossing-aftermath:crossing-minute`'
+  col3: r96='`r96-crossing-response:crossing-minute`'
+ROW J06 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J07 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J08 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J09 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J10 differs:
+  col3: r95='`r95-crossing-aftermath:crossing-minute`'
+  col3: r96='`r96-crossing-response:crossing-minute`'
+ROW J11 differs:
+  col3: r95='`r95-crossing-aftermath:crossing-minute`'
+  col3: r96='`r96-crossing-response:crossing-minute`'
+ROW J12 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J13 differs:
+  col3: r95='`r95-crossing-aftermath:paired-clock`'
+  col3: r96='`r96-crossing-response:paired-clock`'
+ROW J14 differs:
+  col3: r95='`r95-crossing-aftermath:crossing-minute`'
+  col3: r96='`r96-crossing-response:crossing-minute`'
+ROW J15 differs:
+  col3: r95='`r95-crossing-aftermath:aru-aftermath-note`'
+  col3: r96='`r96-crossing-response:aru-aftermath-note`'
+identical inherited rows: 0/15
+new row: J16 :: `timeline.json#/4` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`)

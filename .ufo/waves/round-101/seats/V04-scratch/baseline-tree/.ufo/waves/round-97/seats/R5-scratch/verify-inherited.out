@@ -1,0 +1,33 @@
+== inherited anchor line numbers in r97 fictional-excerpts.md ==
+J01: span=12 hits=[12] -> OK
+J02: span=13 hits=[13] -> OK
+J03: span=12 hits=[12] -> OK
+J04: span=13 hits=[13] -> OK
+J05: span=17 hits=[17] -> OK
+J06: span=12 hits=[12] -> OK
+J07: span=13 hits=[13] -> OK
+J08: span=12 hits=[12] -> OK
+J09: span=13 hits=[13] -> OK
+J10: span=18 hits=[18] -> OK
+J11: span=19 hits=[19] -> OK
+J12: span=12 hits=[12] -> OK
+J13: span=13 hits=[13] -> OK
+J14: span=18-20 hits=[20] -> OK
+J15: span=22-31 hits=[26] -> OK
+J16: span=33-42 hits=[37] -> OK
+INHERITED ANCHORS ALL-OK
+
+== byte-prefix: r96 excerpt is a prefix of r97 excerpt ==
+r96 bytes: 2588 r97 bytes: 3410 prefix: True
+append starts at line: 43
+
+== parsed-value identity of inherited JSON rows ==
+sources.json: r96 rows=5 r97 rows=6 inherited-identical=True new=[{'id': 'aru-acknowledgment-note', 'title': "Aru's Chalk Stair Acknowledgment Note", 'kind': 'fictional first-person note', 'reliability_note': "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of a resolution, a reconciliation, an accusation, a winner between the accounts, a continuing duty, or an external historical fact."}]
+timeline.json: r96 rows=5 r97 rows=6 inherited-identical=True new=[{'id': 'acknowledgment-aru-records', 'tick': 13, 'entity_id': 'aru', 'place_id': 'chalk-stair', 'depends_on': ['response-evin-salt-court'], 'description': "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.", 'source_id': 'aru-acknowledgment-note'}]
+
+== r97 structural checks ==
+counts entities/relations/events/sources: 5 1 6 6 contradictions: 0
+last event: {"depends_on": ["response-evin-salt-court"], "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.", "entity_id": "aru", "id": "acknowledgment-aru-records", "place_id": "chalk-stair", "source_id": "aru-acknowledgment-note", "tick": 13}
+last source: {"id": "aru-acknowledgment-note", "kind": "fictional first-person note", "reliability_note": "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of a resolution, a reconciliation, an accusation, a winner between the accounts, a continuing duty, or an external historical fact.", "title": "Aru's Chalk Stair Acknowledgment Note"}
+event field checks: {'id': True, 'tick': True, 'entity_id': True, 'place_id': True, 'depends_on': True, 'source_id': True}
+ALL STRUCTURAL OK

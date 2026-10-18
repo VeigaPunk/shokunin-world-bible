@@ -1,0 +1,15 @@
+{"attempt": 1, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:32:36-03:00"}
+{"attempt": 2, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:32:56-03:00"}
+{"attempt": 3, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:33:16-03:00"}
+{"attempt": 4, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:33:36-03:00"}
+{"attempt": 5, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:33:56-03:00"}
+{"attempt": 6, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:34:16-03:00"}
+{"attempt": 7, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:34:36-03:00"}
+{"attempt": 8, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:34:56-03:00"}
+{"attempt": 9, "docs": {"README.md": "same-as-r99", "claim-excerpt-map.md": "same-as-r99"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:35:16-03:00"}
+{"attempt": 10, "docs": {"README.md": "moved", "claim-excerpt-map.md": "moved"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:35:36-03:00"}
+{"attempt": 11, "docs": {"README.md": "moved", "claim-excerpt-map.md": "moved"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:35:56-03:00"}
+{"attempt": 12, "docs": {"README.md": "moved", "claim-excerpt-map.md": "moved"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:36:16-03:00"}
+{"attempt": 13, "docs": {"README.md": "moved", "claim-excerpt-map.md": "moved"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:36:36-03:00"}
+{"attempt": 14, "docs": {"README.md": "moved", "claim-excerpt-map.md": "moved"}, "missing": [], "producer_reports": [], "status": "WAIT", "time": "2026-10-17T23:36:56-03:00"}
+{"attempt": 15, "docs": {"README.md": "moved", "claim-excerpt-map.md": "moved"}, "missing": [], "producer_reports": ["T3-fixture-docs.md"], "status": "READY", "time": "2026-10-17T23:37:16-03:00"}

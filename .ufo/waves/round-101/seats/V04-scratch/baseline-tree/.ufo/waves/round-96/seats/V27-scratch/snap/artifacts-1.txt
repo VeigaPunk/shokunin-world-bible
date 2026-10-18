@@ -1,0 +1,17 @@
+1792269506.9087041690 1449 corpus/fixtures/r96-crossing-response/entities.json
+1792269506.9097041720 139 corpus/fixtures/r96-crossing-response/relations.json
+1792269506.9107041750 1956 corpus/fixtures/r96-crossing-response/inspiration-note.md
+1792269506.9107041750 3 corpus/fixtures/r96-crossing-response/contradictions.json
+1792269506.9117041790 640 corpus/fixtures/r96-crossing-response/source-excerpt.md
+1792269523.9877161570 2588 corpus/fixtures/r96-crossing-response/fictional-excerpts.md
+1792269616.5200593900 1741 corpus/fixtures/r96-crossing-response/sources.json
+1792269616.5204882800 1677 corpus/fixtures/r96-crossing-response/timeline.json
+1792269789.4236065080 10172 corpus/fixtures/r96-crossing-response/claim-excerpt-map.md
+1792269797.5016317430 314 corpus/fixtures/r96-crossing-response
+1792269797.5026317460 4858 corpus/fixtures/r96-crossing-response/README.md
+1792269867.3059982650 12032 corpus/tools/dependency-freeze-contract.json
+1792269877.8128813300 20552 corpus/tools/dependency_freeze.py
+1792270022.0103243070 12768 corpus/knowledge/r96-response-scope-note.md
+1792270044.2703921740 37739 corpus/tools/map_obligations.py
+1792270217.0409153100 3115 corpus/tools/map-obligations-contract.json
+1792270286.9881255240 18342 corpus/tools/README.md

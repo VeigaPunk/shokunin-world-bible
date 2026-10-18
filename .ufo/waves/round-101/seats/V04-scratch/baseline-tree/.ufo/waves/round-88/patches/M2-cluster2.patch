@@ -1,0 +1,313 @@
+diff --git a/corpus/fixtures/r88-norse-cluster/README.md b/corpus/fixtures/r88-norse-cluster/README.md
+new file mode 100644
+index 0000000..d1ef3f5
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/README.md
+@@ -0,0 +1,11 @@
++# Round 88 — Hush-Lantern cluster
++
++This newly authored fictional cluster records the Quiet Light Compact, two conflicting accounts of the Hush Lantern's first lighting, and an invented song excerpt. Its only real-world comparison is a narrow image-level reference to *Völuspá* stanza 19; the delivered passage, exact locator, and separate attribution, rights, and AI-training-permission questions are in `inspiration-note.md` and `voluspa-19-excerpt.md`. The external poem is not an in-world source and supplies no fictional canon.
++
++`contradictions.json` reports the two first-lighting accounts at different places without selecting either as true. The checker validates the references, not witness reliability or canon. `symbolism-clause-map.md` indexes each exact clause of the invented excerpt against its local image and states limits on interpretation.
++
++Replay from the repository root:
++
++```sh
++python3 corpus/fixtures/check_bible.py corpus/fixtures/r88-norse-cluster
++```
+diff --git a/corpus/fixtures/r88-norse-cluster/contradictions.json b/corpus/fixtures/r88-norse-cluster/contradictions.json
+new file mode 100644
+index 0000000..ba1bfe3
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/contradictions.json
+@@ -0,0 +1,14 @@
++[
++  {
++    "id": "hush-lantern-first-light-location",
++    "claim_a": {
++      "event_id": "first-light-root-vault-account",
++      "field": "place_id"
++    },
++    "claim_b": {
++      "event_id": "first-light-salt-window-account",
++      "field": "place_id"
++    },
++    "why": "Ayven's wick slip and Neral's register both report the same single first lighting of the Hush Lantern on First Frost, but assign different place_id values. Both event IDs and both distinct source IDs resolve in this fixture. The contradiction is reported, not resolved; the checker validates references, not which account is true."
++  }
++]
+diff --git a/corpus/fixtures/r88-norse-cluster/entities.json b/corpus/fixtures/r88-norse-cluster/entities.json
+new file mode 100644
+index 0000000..18f0b72
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/entities.json
+@@ -0,0 +1,86 @@
++[
++  {
++    "id": "ayven",
++    "kind": "character",
++    "name": "Ayven",
++    "first_appearance": "lantern-compact",
++    "claims": [
++      {
++        "statement": "The Quiet Light Compact names Ayven as a witness for the Grey Chime Guild.",
++        "source_id": "lantern-compact"
++      }
++    ]
++  },
++  {
++    "id": "neral",
++    "kind": "character",
++    "name": "Neral",
++    "first_appearance": "salt-window-record",
++    "claims": [
++      {
++        "statement": "The Salt Window register is attributed to Neral.",
++        "source_id": "salt-window-record"
++      }
++    ]
++  },
++  {
++    "id": "grey-chime-guild",
++    "kind": "faction",
++    "name": "Grey Chime Guild",
++    "first_appearance": "lantern-compact",
++    "claims": [
++      {
++        "statement": "The Quiet Light Compact names the Grey Chime Guild as a signatory.",
++        "source_id": "lantern-compact"
++      }
++    ]
++  },
++  {
++    "id": "rainwrights",
++    "kind": "faction",
++    "name": "Rainwrights",
++    "first_appearance": "lantern-compact",
++    "claims": [
++      {
++        "statement": "The Quiet Light Compact names the Rainwrights as a signatory.",
++        "source_id": "lantern-compact"
++      }
++    ]
++  },
++  {
++    "id": "root-vault",
++    "kind": "place",
++    "name": "Root Vault",
++    "first_appearance": "root-wick-slip",
++    "claims": [
++      {
++        "statement": "Ayven's wick slip names the Root Vault as the reported site of the first lighting.",
++        "source_id": "root-wick-slip"
++      }
++    ]
++  },
++  {
++    "id": "salt-window",
++    "kind": "place",
++    "name": "Salt Window",
++    "first_appearance": "salt-window-record",
++    "claims": [
++      {
++        "statement": "Neral's register names the Salt Window as the reported site of the first lighting.",
++        "source_id": "salt-window-record"
++      }
++    ]
++  },
++  {
++    "id": "hush-lantern",
++    "kind": "item",
++    "name": "Hush Lantern",
++    "first_appearance": "lantern-compact",
++    "claims": [
++      {
++        "statement": "The Quiet Light Compact lists the Hush Lantern as a shared object.",
++        "source_id": "lantern-compact"
++      }
++    ]
++  }
++]
+diff --git a/corpus/fixtures/r88-norse-cluster/hush-lantern-excerpt.md b/corpus/fixtures/r88-norse-cluster/hush-lantern-excerpt.md
+new file mode 100644
+index 0000000..6dc1eec
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/hush-lantern-excerpt.md
+@@ -0,0 +1,8 @@
++Newly authored fictional verse attributed to the in-world source `hush-song`:
++
++> At frostbreak, we set a dish of pale grit.
++> A green-glass root holds one drop.
++> We pass the hush-lantern without a name.
++> Rain carries its small light down the low path.
++
++This invented excerpt is not an authenticated ritual or objective world account.
+diff --git a/corpus/fixtures/r88-norse-cluster/inspiration-note.md b/corpus/fixtures/r88-norse-cluster/inspiration-note.md
+new file mode 100644
+index 0000000..27151ee
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/inspiration-note.md
+@@ -0,0 +1,19 @@
++# Sourced inspiration note
++
++## Parallel cited
++
++A deliberately narrow image-level parallel is *Völuspá* stanza 19 in the Elder Eddas, which names an ash as Yggdrasil and describes water, dew, and greenness around it. The exact stanza locator and delivered excerpt are in `voluspa-19-excerpt.md`. Those are the only factual claims this note makes about the cited passage; it does not assert a traditional symbolic meaning or broader religious practice.
++
++The newly authored `hush-lantern-excerpt.md` uses its own green-glass root and a drop of water as original imagery. This is a visual prompt only: it does not retell the poem, use its characters or settings, or make the Hush Lantern an analogue of Yggdrasil. The external poem is not fictional canon or an in-world source.
++
++## Attribution question
++
++The cited work is *The Elder Eddas of Saemund Sigfusson & The Younger Eddas of Snorre Sturleson*, Benjamin Thorpe's translation of the Elder Eddas (including *Völuspá*), I. A. Blackwell's translation of the Younger Eddas, edited by Rasmus B. Anderson, 1906 edition, Project Gutenberg eBook 14726: <https://www.gutenberg.org/files/14726/14726-h/14726-h.htm>. The cited passage is *Völuspá* stanza 19. This attributes the comparison to that text and translation; no individual ancient author is asserted.
++
++## Rights question
++
++The rights status and applicable reuse terms for this edition and translation have not been independently determined here. Public availability or attribution is not a rights grant; consult the applicable source terms before further reproduction.
++
++## AI-training-permission question
++
++AI-training permission has not been assessed or established. Public accessibility, attribution, and any conclusion about rights do not imply permission for AI training; that question remains separate and unanswered.
+diff --git a/corpus/fixtures/r88-norse-cluster/relations.json b/corpus/fixtures/r88-norse-cluster/relations.json
+new file mode 100644
+index 0000000..1a037d4
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/relations.json
+@@ -0,0 +1,32 @@
++[
++  {
++    "from": "grey-chime-guild",
++    "to": "rainwrights",
++    "type": "allied_with",
++    "source_id": "lantern-compact"
++  },
++  {
++    "from": "rainwrights",
++    "to": "grey-chime-guild",
++    "type": "allied_with",
++    "source_id": "lantern-compact"
++  },
++  {
++    "from": "grey-chime-guild",
++    "to": "hush-lantern",
++    "type": "shares_watch_of",
++    "source_id": "lantern-compact"
++  },
++  {
++    "from": "ayven",
++    "to": "root-vault",
++    "type": "reports_at",
++    "source_id": "root-wick-slip"
++  },
++  {
++    "from": "neral",
++    "to": "salt-window",
++    "type": "records_at",
++    "source_id": "salt-window-record"
++  }
++]
+diff --git a/corpus/fixtures/r88-norse-cluster/sources.json b/corpus/fixtures/r88-norse-cluster/sources.json
+new file mode 100644
+index 0000000..386a0df
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/sources.json
+@@ -0,0 +1,26 @@
++[
++  {
++    "id": "lantern-compact",
++    "title": "Quiet Light Compact",
++    "kind": "fictional mutual-aid agreement",
++    "reliability_note": "Newly authored fictional agreement; it names the Grey Chime Guild, the Rainwrights, Ayven, Neral, and the shared Hush Lantern, but does not verify later observance."
++  },
++  {
++    "id": "root-wick-slip",
++    "title": "Ayven's Root Vault wick slip",
++    "kind": "fictional first-person report",
++    "reliability_note": "Newly authored, unverified account attributed to Ayven; the citation does not establish the report's truth."
++  },
++  {
++    "id": "salt-window-record",
++    "title": "Neral's Salt Window register",
++    "kind": "fictional local register",
++    "reliability_note": "Newly authored, unverified account attributed to Neral; its disagreement with the wick slip is preserved, not adjudicated."
++  },
++  {
++    "id": "hush-song",
++    "title": "Hush-Lantern song",
++    "kind": "fictional song",
++    "reliability_note": "Newly authored verse; its imagery is not an objective account of supernatural events."
++  }
++]
+diff --git a/corpus/fixtures/r88-norse-cluster/symbolism-clause-map.md b/corpus/fixtures/r88-norse-cluster/symbolism-clause-map.md
+new file mode 100644
+index 0000000..d8f3696
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/symbolism-clause-map.md
+@@ -0,0 +1,12 @@
++# Symbolism clause map — Hush-Lantern song
++
++Source text: the newly authored fictional `hush-lantern-excerpt.md`, attributed to in-world source ID `hush-song`. For the limited external image comparison, see `inspiration-note.md`, locator *Völuspá* stanza 19, and the delivered source excerpt in `voluspa-19-excerpt.md`.
++
++| Exact clause | Fictional element | Editorial symbolism reading | Limit |
++|---|---|---|---|
++| “At frostbreak, we set a dish of pale grit.” | Dish of pale grit | A prepared surface or beginning in this poem. | Does not establish a calendar, ceremony, or geological fact. |
++| “A green-glass root holds one drop.” | Green-glass root | A local image of continuity holding a small trace of water; its tree-and-water imagery is only a narrow visual echo of the cited passage. | Does not depict Yggdrasil or assert a Norse meaning for the image. |
++| “We pass the hush-lantern without a name.” | Hush Lantern | A possible image of shared attention without naming an owner. | Does not establish a naming taboo, faction rule, or custom. |
++| “Rain carries its small light down the low path.” | Low path | A possible image of light spreading or moving downward. | Does not assert literal rain, supernatural causation, or an objective event. |
++
++These readings interpret authored words; they add no canon. The checker does not read this map or the excerpt.
+diff --git a/corpus/fixtures/r88-norse-cluster/timeline.json b/corpus/fixtures/r88-norse-cluster/timeline.json
+new file mode 100644
+index 0000000..859bdd4
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/timeline.json
+@@ -0,0 +1,32 @@
++[
++  {
++    "id": "first-light-root-vault-account",
++    "tick": 1,
++    "entity_id": "ayven",
++    "place_id": "root-vault",
++    "depends_on": [],
++    "description": "Ayven's wick slip reports that the single Hush Lantern was first lit at Root Vault on First Frost.",
++    "source_id": "root-wick-slip"
++  },
++  {
++    "id": "first-light-salt-window-account",
++    "tick": 1,
++    "entity_id": "neral",
++    "place_id": "salt-window",
++    "depends_on": [],
++    "description": "Neral's register reports that the same single Hush Lantern was first lit at Salt Window on First Frost.",
++    "source_id": "salt-window-record"
++  },
++  {
++    "id": "compact-countersigned",
++    "tick": 2,
++    "entity_id": "ayven",
++    "place_id": "root-vault",
++    "depends_on": [
++      "first-light-root-vault-account",
++      "first-light-salt-window-account"
++    ],
++    "description": "The Quiet Light Compact is countersigned at Root Vault after the two first-light accounts are filed.",
++    "source_id": "lantern-compact"
++  }
++]
+diff --git a/corpus/fixtures/r88-norse-cluster/voluspa-19-excerpt.md b/corpus/fixtures/r88-norse-cluster/voluspa-19-excerpt.md
+new file mode 100644
+index 0000000..7f95b8c
+--- /dev/null
++++ b/corpus/fixtures/r88-norse-cluster/voluspa-19-excerpt.md
+@@ -0,0 +1,13 @@
++# Delivered source excerpt — *Völuspá* 19
++
++Work: *The Elder Eddas of Saemund Sigfusson & The Younger Eddas of Snorre Sturleson*, Benjamin Thorpe (Elder Eddas translation) and I. A. Blackwell (Younger Eddas translation), Rasmus B. Anderson, editor in chief, 1906 edition, Project Gutenberg eBook 14726: <https://www.gutenberg.org/files/14726/14726-h/14726-h.htm>.
++
++Passage-level locator: “THE ELDER EDDAS OF SAEMUND” → “VOLUSPA” → stanza 19 (the stanza number as printed in the translation).
++
++> 19. I know an ash standing\
++> Yggdrasil hight,
++> a lofty tree, laved with limpid water:\
++> thence come the dews into the dales that fall;\
++> ever stands it green over Urd's fountain.
++
++This excerpt is supplied to make the cited image-level comparison inspectable. It is not an in-world source.

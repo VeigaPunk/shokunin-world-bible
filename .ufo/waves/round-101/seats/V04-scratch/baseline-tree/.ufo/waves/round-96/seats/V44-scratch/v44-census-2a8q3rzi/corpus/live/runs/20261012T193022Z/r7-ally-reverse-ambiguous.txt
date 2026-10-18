@@ -1,0 +1,6 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r7-ally-reverse-ambiguous
+exit_code=1
+VIOLATION: sources[2].id: duplicate sources id 'harbor-compact'
+VIOLATION: relations[1].source_id: ambiguous in-world source 'harbor-compact'
+VIOLATION: relations[0]: allied_with faction relation 'quay-guild' -> 'bell-wardens' lacks a sourced reciprocal relation
+3 violation(s); no canon changed

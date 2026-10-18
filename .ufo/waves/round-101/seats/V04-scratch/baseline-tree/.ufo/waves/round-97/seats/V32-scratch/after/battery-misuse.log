@@ -1,0 +1,16 @@
+### MISUSE PATHS
+FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze
+RESULT ERROR
+dep_selftest+fixture_exit=2
+FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both
+RESULT ERROR
+dep_freeze+fixture_exit=2
+FINDING invalid_arguments: --self-test cannot be combined with cluster, --map, or --frozen
+RESULT ERROR
+map_selftest+cluster_exit=2
+FINDING invalid_arguments: unrecognized arguments: --bogus
+RESULT ERROR
+map_bogus_exit=2
+FINDING INVALID-ARGUMENTS: unrecognized arguments: --bogus
+RESULT ERROR
+dep_bogus_exit=2

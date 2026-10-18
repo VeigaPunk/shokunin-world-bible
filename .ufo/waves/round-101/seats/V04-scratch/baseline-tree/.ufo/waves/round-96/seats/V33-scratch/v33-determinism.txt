@@ -1,0 +1,20 @@
+--- PYTHONHASHSEED=0
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 1/2; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+exit=1
+--- PYTHONHASHSEED=1
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 1/2; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+exit=1
+--- PYTHONHASHSEED=42
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 1/2; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+exit=1
+--- PYTHONHASHSEED=12345
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 1/2; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+exit=1

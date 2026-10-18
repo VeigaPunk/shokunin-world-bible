@@ -1,0 +1,212 @@
+START 2026-10-17T22:03:29.576299-03:00 roster_others=127 max_tries=90
+try=1 ts=22:03:29 others=3 missing=124 dups=0 extra=[] prod_missing=['S1', 'S2', 'S4', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=2 ts=22:03:49 others=3 missing=124 dups=0 extra=[] prod_missing=['S1', 'S2', 'S4', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=3 ts=22:04:09 others=4 missing=123 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=4 ts=22:04:29 others=4 missing=123 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=5 ts=22:04:49 others=5 missing=122 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=6 ts=22:05:09 others=5 missing=122 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=7 ts=22:05:29 others=5 missing=122 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=8 ts=22:05:49 others=6 missing=121 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=9 ts=22:06:09 others=6 missing=121 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=10 ts=22:06:29 others=6 missing=121 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=11 ts=22:06:49 others=6 missing=121 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=12 ts=22:07:09 others=6 missing=121 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=13 ts=22:07:29 others=6 missing=121 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=14 ts=22:07:49 others=6 missing=121 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=15 ts=22:08:09 others=7 missing=120 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+RESUME 2026-10-17T22:34:27.455359-03:00 deadline=2026-10-17T22:35:27.455359-03:00 reason=tool-timeout-killed-first-poll-at-try15
+try=16 ts=22:34:27 others=41 missing=86 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=17 ts=22:34:47 others=41 missing=86 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=18 ts=22:35:07 others=41 missing=86 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try=19 ts=22:35:27 others=42 missing=85 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+STALL_ESCAPE try=19 ts=2026-10-17T22:35:27.456975-03:00 others=42 missing=85 deadline=2026-10-17T22:35:27.455359-03:00 — bound reached, audit will record ABSENT
+MISSING=S1,S2,S5,V01,V02,V03,V04,V05,V06,V08,V09,V15,V16,V17,V20,V21,V22,V23,V24,V25,V26,V27,V28,V30,V31,V34,V35,V36,V37,V38,V40,V42,V43,V45,V46,V49,V50,V51,V52,V53,V54,V55,V57,V58,V59,V61,V62,V63,V65,V66,V67,V69,V70,V71,V72,V73,V74,V75,V76,V78,V79,V81,V82,V83,V85,V87,V88,V92,V93,V96,V99,V100,V103,V104,V106,V107,V110,V111,V112,V114,V117,V118,V120,V121,V123
+RESUME2 2026-10-17T22:44:04.982605-03:00 max_tries=90 reason=prior-resume-deadline-math-fired-60s-not-a-stall; count still rising; continuing the 30-min bound as real tries
+try2=1 ts=22:44:04 others=71 missing=56 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=2 ts=22:44:24 others=71 missing=56 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=3 ts=22:44:44 others=71 missing=56 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=4 ts=22:45:04 others=71 missing=56 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=5 ts=22:45:24 others=71 missing=56 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=6 ts=22:45:44 others=71 missing=56 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=7 ts=22:46:04 others=71 missing=56 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=8 ts=22:46:24 others=73 missing=54 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=2
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=9 ts=22:46:44 others=76 missing=51 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=3
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=10 ts=22:47:04 others=78 missing=49 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=2
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=11 ts=22:47:24 others=78 missing=49 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=12 ts=22:47:44 others=79 missing=48 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=13 ts=22:48:04 others=80 missing=47 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=14 ts=22:48:24 others=80 missing=47 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=15 ts=22:48:44 others=80 missing=47 dups=0 extra=[] prod_missing=['S1', 'S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=16 ts=22:49:04 others=81 missing=46 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=17 ts=22:49:24 others=81 missing=46 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=18 ts=22:49:44 others=81 missing=46 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=19 ts=22:50:04 others=82 missing=45 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=20 ts=22:50:24 others=82 missing=45 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=21 ts=22:50:44 others=83 missing=44 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=22 ts=22:51:04 others=85 missing=42 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=2
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=23 ts=22:51:24 others=85 missing=42 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=24 ts=22:51:44 others=85 missing=42 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=25 ts=22:52:04 others=85 missing=42 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=26 ts=22:52:24 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=27 ts=22:52:44 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=28 ts=22:53:05 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=29 ts=22:53:25 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=30 ts=22:53:45 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=31 ts=22:54:05 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=32 ts=22:54:25 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=33 ts=22:54:45 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=34 ts=22:55:05 others=86 missing=41 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=35 ts=22:55:25 others=87 missing=40 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=36 ts=22:55:45 others=87 missing=40 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=37 ts=22:56:05 others=87 missing=40 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=38 ts=22:56:25 others=89 missing=38 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=2
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=39 ts=22:56:45 others=90 missing=37 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=1
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=40 ts=22:57:05 others=90 missing=37 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=41 ts=22:57:25 others=90 missing=37 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=42 ts=22:57:45 others=90 missing=37 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=2 receipt=1 delta=0
+  art_missing=corpus/knowledge/r99-gate-blind-spot-table.md,corpus/knowledge/r99-lapse-scope-note.md
+try2=43 ts=22:58:05 others=90 missing=37 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=44 ts=22:58:25 others=91 missing=36 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+try2=45 ts=22:58:45 others=91 missing=36 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=46 ts=22:59:05 others=91 missing=36 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=47 ts=22:59:25 others=91 missing=36 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=48 ts=22:59:45 others=93 missing=34 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=2
+try2=49 ts=23:00:05 others=93 missing=34 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=50 ts=23:00:25 others=94 missing=33 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+try2=51 ts=23:00:45 others=94 missing=33 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=52 ts=23:01:05 others=94 missing=33 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=53 ts=23:01:25 others=94 missing=33 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=54 ts=23:01:45 others=95 missing=32 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+try2=55 ts=23:02:05 others=95 missing=32 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+try2=56 ts=23:02:25 others=97 missing=30 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=2
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V16,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=57 ts=23:02:45 others=97 missing=30 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V16,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=58 ts=23:03:05 others=98 missing=29 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=59 ts=23:03:25 others=98 missing=29 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=60 ts=23:03:45 others=98 missing=29 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=61 ts=23:04:05 others=98 missing=29 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=62 ts=23:04:25 others=98 missing=29 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=63 ts=23:04:45 others=98 missing=29 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V01,V02,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=64 ts=23:05:05 others=100 missing=27 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=2
+  missing_seats=S2,S5,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=65 ts=23:05:25 others=100 missing=27 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=66 ts=23:05:45 others=100 missing=27 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=67 ts=23:06:05 others=100 missing=27 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=68 ts=23:06:25 others=100 missing=27 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V117,V118,V120,V121
+try2=69 ts=23:06:45 others=101 missing=26 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+  missing_seats=S2,S5,V04,V08,V09,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V69,V71,V72,V74,V75,V99,V107,V118,V120,V121
+try2=70 ts=23:07:05 others=103 missing=24 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=2
+  missing_seats=S2,S5,V04,V08,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V99,V107,V118,V120,V121
+try2=71 ts=23:07:25 others=103 missing=24 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V04,V08,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V99,V107,V118,V120,V121
+try2=72 ts=23:07:45 others=103 missing=24 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V04,V08,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V99,V107,V118,V120,V121
+try2=73 ts=23:08:05 others=104 missing=23 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+  missing_seats=S2,S5,V04,V08,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V99,V107,V120,V121
+try2=74 ts=23:08:25 others=105 missing=22 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+  missing_seats=S2,S5,V04,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V99,V107,V120,V121
+try2=75 ts=23:08:45 others=107 missing=20 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=2
+  missing_seats=S2,S5,V30,V34,V37,V38,V42,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V99,V107,V120
+try2=76 ts=23:09:05 others=108 missing=19 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+  missing_seats=S2,S5,V30,V34,V37,V38,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V99,V107,V120
+try2=77 ts=23:09:25 others=109 missing=18 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+  missing_seats=S2,S5,V30,V34,V37,V38,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V107,V120
+try2=78 ts=23:09:45 others=109 missing=18 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V30,V34,V37,V38,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V107,V120
+try2=79 ts=23:10:05 others=109 missing=18 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=0
+  missing_seats=S2,S5,V30,V34,V37,V38,V43,V50,V53,V54,V55,V67,V71,V72,V74,V75,V107,V120
+try2=80 ts=23:10:25 others=111 missing=16 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=2
+  missing_seats=S2,S5,V30,V34,V37,V38,V43,V50,V53,V54,V67,V71,V72,V74,V75,V107
+try2=81 ts=23:10:45 others=112 missing=15 dups=0 extra=[] prod_missing=['S2', 'S5'] art_missing=0 receipt=1 delta=1
+  missing_seats=S2,S5,V30,V34,V37,V38,V43,V50,V54,V67,V71,V72,V74,V75,V107
+try2=82 ts=23:11:05 others=114 missing=13 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=2
+  missing_seats=V30,V34,V37,V38,V43,V50,V54,V67,V71,V72,V74,V75,V107
+try2=83 ts=23:11:25 others=117 missing=10 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=3
+  missing_seats=V34,V37,V38,V43,V50,V67,V72,V74,V75,V107
+try2=84 ts=23:11:45 others=119 missing=8 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=2
+  missing_seats=V34,V37,V38,V67,V72,V74,V75,V107
+try2=85 ts=23:12:05 others=120 missing=7 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=1
+  missing_seats=V34,V37,V38,V72,V74,V75,V107
+try2=86 ts=23:12:25 others=121 missing=6 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=1
+  missing_seats=V34,V37,V72,V74,V75,V107
+try2=87 ts=23:12:45 others=124 missing=3 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=3
+  missing_seats=V34,V37,V107
+try2=88 ts=23:13:05 others=125 missing=2 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=1
+  missing_seats=V34,V107
+try2=89 ts=23:13:25 others=126 missing=1 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=1
+  missing_seats=V34
+try2=90 ts=23:13:45 others=126 missing=1 dups=0 extra=[] prod_missing=[] art_missing=0 receipt=1 delta=0
+  missing_seats=V34
+STALL_ESCAPE try2=90 ts=2026-10-17T23:13:45.045403-03:00 others=126 missing=1 — 90 tries / 30 min bound, ABSENT recorded not inferred
+MISSING=V34

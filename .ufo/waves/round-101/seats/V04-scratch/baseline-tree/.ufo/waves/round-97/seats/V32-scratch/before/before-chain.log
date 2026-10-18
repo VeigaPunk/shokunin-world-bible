@@ -1,0 +1,51 @@
+=== baseline chain verify (live tool, read-only) ===
+DIGEST 15ef230ef806ea7e7431f5afc7d999aee978b024cf47f2a20cbba726fc3fc279
+RESULT PASS
+  exit=0
+DIGEST 2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75
+RESULT PASS
+  exit=0
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+  exit=0
+DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
+RESULT PASS
+  exit=0
+
+=== baseline map_obligations corpus paths ===
+-- r88-m3-maya-cluster
+OBLIGATIONS raw=10 mapped=10
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12
+RESULT PASS
+  exit=0
+-- r93-m2-kojiki-cluster
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+RESULT PASS
+  exit=0
+-- r94-paired-crossing
+OBLIGATIONS raw=14 mapped=14
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
+RESULT PASS
+  exit=0
+-- r95-crossing-aftermath
+OBLIGATIONS raw=15 mapped=15
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17
+RESULT PASS
+  exit=0
+-- r96-crossing-response
+OBLIGATIONS raw=16 mapped=16
+INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18
+RESULT PASS
+  exit=0
+
+=== baseline self-tests ===
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+RESULT PASS
+map exit=0
+SELF-TEST 14/14
+RESULT PASS
+dep exit=0
+
+=== census ===
+171
