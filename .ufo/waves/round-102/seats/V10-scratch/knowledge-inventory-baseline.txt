@@ -1,0 +1,25 @@
+total 416
+drwxr-xr-x 1 vgpnk vgpnk  1292 Oct 18 06:10 .
+drwxr-xr-x 1 vgpnk vgpnk    70 Oct 17 06:50 ..
+-rw-r--r-- 1 vgpnk vgpnk   515 Oct 13 16:40 2026-10-12-lore-consistency-checklist.md
+-rw-r--r-- 1 vgpnk vgpnk 26630 Oct 13 16:40 2026-10-12-lore-decision-table.md
+-rw-r--r-- 1 vgpnk vgpnk  2729 Oct 13 16:40 2026-10-12-malformed-error-patterns.md
+-rw-r--r-- 1 vgpnk vgpnk 54377 Oct 17 10:53 holder-assessment-boundary.md
+-rw-r--r-- 1 vgpnk vgpnk 17698 Oct 17 23:38 r100-crossing-arc-synthesis.md
+-rw-r--r-- 1 vgpnk vgpnk 10815 Oct 17 23:35 r100-provenance-semantics-boundary.md
+-rw-r--r-- 1 vgpnk vgpnk 20823 Oct 18 06:10 r101-r10-register-first-entry.md
+-rw-r--r-- 1 vgpnk vgpnk  4279 Oct 13 16:40 r74-slate-wording-decision-table.md
+-rw-r--r-- 1 vgpnk vgpnk 31149 Oct 17 03:21 r87-provenance-chain-decision-table.md
+-rw-r--r-- 1 vgpnk vgpnk 40706 Oct 17 13:59 r88-sourced-inspiration-decision-table.md
+-rw-r--r-- 1 vgpnk vgpnk  4339 Oct 17 04:13 r89-cross-cluster-contradiction.md
+-rw-r--r-- 1 vgpnk vgpnk 22016 Oct 18 06:10 r91-c9-watch.md
+-rw-r--r-- 1 vgpnk vgpnk 16582 Oct 17 13:38 r93-r8-worked-example.md
+-rw-r--r-- 1 vgpnk vgpnk 11890 Oct 17 15:04 r94-cross-myth-design-comparison.md
+-rw-r--r-- 1 vgpnk vgpnk 11441 Oct 17 20:29 r95-aftermath-scope-note.md
+-rw-r--r-- 1 vgpnk vgpnk 14886 Oct 17 20:29 r96-response-scope-note.md
+-rw-r--r-- 1 vgpnk vgpnk 15033 Oct 17 18:52 r97-acknowledgment-scope-note.md
+-rw-r--r-- 1 vgpnk vgpnk 16438 Oct 17 21:32 r98-clerk-scope-note.md
+-rw-r--r-- 1 vgpnk vgpnk 29981 Oct 18 06:10 r99-gate-blind-spot-table.md
+-rw-r--r-- 1 vgpnk vgpnk 14990 Oct 17 22:57 r99-lapse-scope-note.md
+-rw-r--r-- 1 vgpnk vgpnk  4555 Oct 17 14:17 reference-ledger.md
+-rw-r--r-- 1 vgpnk vgpnk  1456 Oct 13 16:40 seed.md

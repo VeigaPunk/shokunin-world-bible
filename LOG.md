@@ -3586,3 +3586,49 @@ round of the operator's loop: closure brings the ledger to
 `corpus/knowledge/r102-debt-ledger.json`; U2 dated correction addenda in
 any knowledge file plus `corpus/knowledge/r102-freshness-sweep.md`.
 Everything else is read-only except seat reports.
+
+## Round 102 — roster erratum and closure (ADMITTED; 2026-10-18) — FINAL ROUND OF THE LOOP
+
+**Roster erratum (third of the push, append-only):** the declaration above
+says "20 seats (2 producers + 18 verifiers), roster-verified: U1–U2,
+V01–V18" — but the dispatch brief and the dispatched roster were
+**21 seats** (U1–U2 + V01–V19). The dispatch returned `completed: 21` and
+all 21 reports landed (V19 filed after the adjudicator's final recount —
+the same late-landing class as r101's V57). V18's "filed set = declared
+20" note is a cutoff artifact of this erratum. The declared-vs-dispatched
+count correction class (r100 32→34, r101 28→30, r102 20→21) is now a
+standing L1 convention: the receipt and the ledger name the ACTUAL count.
+
+**Declaration slip (recorded by U1/V18):** the C2 source citation "r100
+V33" was a phantom — no V33 seat exists in round-100; U1 correctly
+substituted V29's admission-condition surface and flagged it in the
+ledger's `anomalies`.
+
+**Closure.** V18 final adjudication: **PASS — ADMIT**; C1/C2/C3 all verify
+on the delivered revision; seven recorded defects are wording/counting-
+basis class, none overclaims capability; AC-1…AC-4 all discharged here:
+roster erratum (above); corpus README r102 bullets; the ledger's D5/D6/D7
+structured corrections + the synthesis's D1/D2/D4 dated addendum (AC-4 —
+the lane closes, so the fixes land now); the receipt filled with the 21
+real agent IDs and refreshed hashes. Per-axis verdicts: depth improved
+(bounded — the capstone synthesis consolidates eight rounds with every
+cited commit existing and every delta matching its SCORECARD section);
+calibration improved (bounded — the 361-entry debt consolidation is
+zero-drop with machine-verified dispositions); freshness improved (bounded
+— the final sweep dispositioned 25 surfaces, one stale pin corrected by
+dated addendum, the C9 cadence closed with re-check 11); coverage,
+operability unchanged (not harmed); adjacency not harmed. Final battery on
+the committed revision: freeze self-test 19/19; map self-test 25/25; chain
+8/8; boundary CERTIFIED; C9 pair green; census 174/40/134/421; checker pin
+`ff9fd2aa…` reproduced. SHONEN unchanged (four `[~]`, no `[x]` — the
+promotion question remains the operator's). No promotion, no push.
+
+**The operator's loop closes at lane_round 102.** The eight-round push
+(r95–r102) took the lane from 94 admitted rounds to 102: four deepseek-
+flash 64-seat rounds (one with a hyper completion wave), one 128-seat
+grok-4.7 xhigh round, one 34-seat sol-max round (roster erratum recorded),
+and two GLM closing rounds — 43 admitted rounds across the lane's
+history, six registry gates, an eight-fixture frozen chain, and a
+consolidated, machine-checkable debt ledger. Scores remain unmeasured; no
+rubric was invented; every round's harms and errata stand in the
+append-only record.

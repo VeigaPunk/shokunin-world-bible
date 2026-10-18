@@ -1,0 +1,4 @@
+?? .scratch/
+?? .ufo/waves/round-102/
+?? .ufo/waves/round-98/seats/V58-scratch/original-run-resume-note.md
+8fa2e87b40b74f8f78864b7044ed0345712af605

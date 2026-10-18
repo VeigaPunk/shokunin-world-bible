@@ -1,0 +1,196 @@
+## Round 95 — closed, ADMITTED (2026-10-17)
+
+Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash` (5 producer
+seats with exclusive byte-ownership + 59 verifier/judge seats on a poll-wait
+protocol; dispatch returned `completed: 64`, receipt 64/64 with three
+late landings). Baseline `fb118c4`; closure `dcb2d92`. V29 all-axis
+adjudication: ADMIT with seven conditions, all landed at closure. Scores
+remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: `schema_drift` class closed — the r94 BR-02 mutation (renamed claims key + removed map row) now exits 1 with a stable FINDING (V29 variants A/B + V01/V16 reproductions; old tool PASSes — the blind spot is real and now closed); self-test 20→22 persisted cases (`map_missing`, `invalid_arguments`, both load-bearing per V02/V38); zero fixture regressions (r93 12/12, r94 14/14, frozen r93 replay, r87/r89 exit 2 fail-closed all unchanged). Bounds: drift scope = claim-shaped records under unexpected entity keys (relations/timeline/nested variants silent — r96 debt); `schema_drift` not pinned by a persisted self-test case; deletion class still exits 0 (non-gating INVENTORY MISMATCH only). |
+| depth | improved (bounded) | C2: `corpus/fixtures/r95-crossing-aftermath/` — first reported non-performance against a crossing-scoped agreement: Aru's aftermath note + tick-11 event depending on the tick-10 decision; 5/1/3 → 5/1/4, sources 3→4, 15 map obligations (14 inherited parsed-value identical + 1 new event row), check_bible CLEAN, census 168→169, r94 fixture byte-untouched (V09 12/12 inherited rows equal; V50 byte-prefix). Two adversarial whole-claim reviews (V12/V36) confirm the crossing-only scope — no other-duty/breach assertion constructible. Bounds: Aru's report only; checker validates structure not testimony. |
+| coverage | improved (bounded) | C3: `map_obligations` covers the r88-m3 legacy map dialect — r88 from exit 2 `unsupported_map` to `raw=10 mapped=10` + `TOTAL-ROWS 12/12` (declaration denominator corrected: 12/12 names total rows, not obligations) with ZERO corpus modification; r87/r89 stay exit 2 fail-closed (all 23 fixture dirs swept); all five support_check receipts unchanged. Bounds: exactly one dialect added; V37-D1 hidden-second-pointer soundness gap in the legacy acceptance path (MEDIUM, r96 debt); `map_obligations` reads pointer/source-ID columns only — anchor/span/mode coverage remains `support_check`'s. |
+| operability | improved (bounded) | 22-case self-test replayable; documented commands run as written (V21/V42); exit contract 0/1/2 preserved (V03/V35). Bounds: BR-05 self-test scratch under repo root; `--help` RESULT-less exit 0. |
+| freshness | unchanged (no improvement; no material harm) | Live pins fresh (checker `ff9fd2aa…` reproduced; C9 row 4 appended — DISCRIMINATION HELD + expected control); P5 note's stale tool-revision pin (`9224a684…` vs delivered `d1c239cc…`) self-caveated in place, correctable next touch; corpus/README stale "20 persisted cases" line fixed at closure. |
+| adjacency | unchanged (PASS) | PROVINCE byte-identical; no sibling writes (V18/V22/V28); rights/mechanics refused; mythology stays editorial. |
+
+Learning trends: expansion improved (169 dirs; aftermath class; r88 dialect
+under the gate); quality improved (schema_drift closure demonstrated
+before/against the old tool; 15/15 obligations with adversarial scope review);
+discernment improved (V29 reconciled 15 conflict classes — denominator slips
+corrected not netted; late landings distinguished from failures; the
+session-cwd stray-write defect now recorded as a harness property).
+
+planned (r96): second 64-seat deepseek-flash round. Debt head items:
+deletion class (silent PASS, MISMATCH-receipt-only); `schema_drift`
+self-test pinning; drift scope widening decision; V37-D1 legacy-dialect
+hidden-second-pointer; BR-01 dependency-reduction detection (carried since
+r94); BR-05 scratch relocation; poll-helper/process debts. saturation: not
+declared. retired: none.
+
+## Round 96 — closed, ADMITTED (2026-10-17)
+
+Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash` (6 producer
+seats, exclusive byte-ownership; 58 verifiers; two late landings V43/V58
+from a mutual poll-wait, self-recorded). Baseline `dcb2d92`; closure
+`f3e09f9`. V38 all-axis adjudication: ADMIT with eight conditions, all
+discharged at closure. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: the r95 deletion class now exits 1 with stable `inventory_mismatch` (adjudicator's old-tool exit 0 vs delivered exit 1 on identical mutation copies); `dual_pointer` closes V37-D1 — all three hidden-pointer forms exit 1, false-positive controls clean (legitimate prose and r88's real cells still PASS); self-test 24/24 with both new pins proven load-bearing by neutralization and expectation-flip perturbations. Bounds: a consistently regenerated declaration still exits 0; the two added pins are droppable (23/24 passes — subset-tolerant loader); `dual_pointer` has no persisted pin. |
+| depth | improved (bounded) | C2: `corpus/fixtures/r96-crossing-response/` — second first-person account, same occasion, unresolved: Evin's tick-12 response at Salt Court; 5/1/4→5/1/5, sources 4→5, 16/16 obligations (15 inherited rows diff-free outside the namespace column), check_bible CLEAN, support 16/16 + TOTAL 18/18, census 169→170 with zero inherited changes. Two adversarial reviews confirm no accusation/winner/contradiction is constructible (`contradictions.json` stays `[]` — genuinely distinct from the r35 class). Bounds: cosmetic map delimiter cell + one stale "new relation" sentence left frozen as adjudicated (r97 candidates). |
+| coverage | improved (bounded) | C3: `corpus/tools/dependency_freeze.py` + contract — the sixth registry gate; closes BR-01's JSON-edge half (the r94 reduction invisible to every prior gate now exits 1 `REDUCTION-DETECTED`); chain 4/4 clean; ADDITION/ENDPOINT exit 1; exit-2 surface complete; 14/14 persisted self-test; zero corpus modification. Bounds: V23's confirmed FAIL discharged at closure (foreign `c3red` scratch pin written by verifier V41's `--freeze` probe — removed, contract `c65ac3bd…`); no path binding; BR-01 prose half open; `--freeze` unguarded (integration-time only). |
+| operability | improved (bounded) | Both self-tests replay; documented commands run as written; 0/1/2 contracts hold. Bounds: BR-05 scratch; `--freeze` write hazard recorded. |
+| freshness | unchanged (no improvement; no material harm) | All artifacts green at closure; no stale pins; closure-side doc gaps landed (C-8). |
+| adjacency | unchanged (not harmed) | PROVINCE byte-identical; zero parent-tree strays this round; V37's unfinished adjacency battery recorded — verdict rests on V31 + L1 checks. |
+
+Learning trends: expansion improved (170 dirs; response class; sixth gate);
+quality improved (gating inventory; freeze gate with three detection
+classes; pins proven load-bearing); discernment improved (V38 reconciled
+fifteen conflicts; V23's FAIL recorded and discharged by removal, not
+re-rolled; the mutual poll-wait liveness class documented; a verifier's
+byte-ownership breach self-disclosed and corrected).
+
+planned (r97): third 64-seat deepseek-flash round. Debt head items:
+`--freeze` scope guard or delivery-time-only marking; path binding for
+freeze receipts; BR-01 prose half; `dual_pointer` self-test pin; droppable-pin
+loader tightening; cosmetic r96 map fixes; BR-05 scratch relocation;
+poll-helper hardening (mutual-wait escape); process: host `/tmp` inode
+exhaustion workaround. saturation: not declared. retired: none.
+
+## Round 97 — closed, ADMITTED (2026-10-17)
+
+Single-wave 64-seat swarm on `opencode-go/deepseek-v4.1-flash` (6 producers
++ 58 verifiers; three late landings from the endgame mutual-poll class,
+characterized by V56; one embedded scratch clone dropped from the wave tree
+at closure). Baseline `f3e09f9`; closure `9d25df9` + `9a3d648`. V35
+all-axis adjudication: ADMIT with six conditions, all discharged. Scores
+remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: `dual_pointer` persisted as self-test case 25 (25/25 PASS); the contract loader now fails closed on ANY dropped pinned case — the r96 subset tolerance (23/24 passes) demonstrated on the old tool as the closed pre-state; the pin proven load-bearing by emission-neutralization (self-test FAIL / exit 2); full r87–r97 battery + frozen-r93 replay + r87/r89 fail-closed byte-stable vs r96. Bounds: self-test binds consistency, not truth; `dual_pointer` detection is legacy-dialect-scoped (canonical variants stay fail-closed exit 2). |
+| depth | improved (bounded) | C3: `corpus/fixtures/r97-crossing-acknowledgment/` — acknowledgment-without-reconciliation, the arc's third beat: Aru's tick-13 record of receipt; 5/1/5→5/1/6, sources 5→6, 17/17 obligations (16 inherited rows unchanged outside the namespace column), CLEAN, support 17/17 + TOTAL 19/19, census 170→171 (+1 clean, zero inherited changes). Two constructibility probes (V17/V43) failed to build any resolution/blame/reconciliation reading. The r96 map cosmetic repair is exactly two lines with data rows byte-unchanged and both r96 receipts identical pre/post. Bounds: structural/lexical evidence; editorial tick encodings; the r95 map's carried sentence remains (r98 candidate). |
+| coverage | improved (bounded) | C2: `dependency_freeze` hardened — `--freeze` scope-guarded to `corpus/fixtures/**` (SCOPE-REFUSED, no write), path binding (foreign-path byte-identical copy exits 2 PATH-MISMATCH), `DIGEST-MISMATCH` names the changed file, self-test 14→16 with both new classes pinned, r96 re-frozen through the guarded path (revision-only refresh, reproducible), chain 4/4 clean. **V12 and V46 FAILs stand recorded** (map digest unpinned; r97 edge unfrozen — both brief-stricter-than-declaration; discharged by erratum/bound at closure). |
+| operability | improved (bounded) | Both self-tests 25/25 + 16/16 replay; documented commands run as written; one terminal RESULT line. Bound: BR-05 now on both tools (repo-root scratch, gitignored at closure). |
+| freshness | unchanged (no improvement; no material harm) | Live pins fresh (checker pin, C9 pair, frozen r93, chain pins); one bounded README staleness landed at closure; two carried stale knowledge-note tool pins unrepaired (correctable next touch). |
+| adjacency | unchanged (not harmed) | PROVINCE byte-identical; change set exactly the declared ownership; zero parent-tree strays (the r94-F01 class did not recur); no commits by seats; kotodama-shokunin's concurrent activity attributed by path ownership. |
+
+Learning trends: expansion improved (171 dirs; acknowledgment class; both
+tools hardened); quality improved (strict loader; guarded re-freeze; repair
+byte-minimal with receipts unchanged); discernment improved (V35 reconciled
+sixteen conflicts; two seat FAILs recorded and discharged without re-roll;
+the endgame mutual-poll class characterized — all-reports polls must
+subtract SELF; an embedded scratch clone caught and dropped at closure).
+
+planned (r98): fourth and final 64-seat deepseek-flash round; then r99
+(128-seat grok-4.7-fast xhigh) and r100 (32-seat sol-max). Debt head items:
+pin r97-crossing-acknowledgment into the freeze chain; repair the r95 map
+carried sentence; stale knowledge-note tool pins; BR-01 prose half;
+`SELF-TEST-MISMATCH` exit-code alignment between tools; path-less legacy pin
+migration; the endgame poll-escape as a standing seat convention.
+saturation: not declared. retired: none.
+
+## Round 98 — closed, ADMITTED (2026-10-17)
+
+Two-wave round per operator directive: main 64-seat swarm on
+`opencode-go/deepseek-v4.1-flash` (6 seats host-aborted at the endgame) +
+6-seat completion wave on `hyper/deepseek-v4.1-flash` (the hyper-varied
+round). 64/64 reports; receipt rebuilt from both dispatches. Baseline
+`9a3d648`; closure `4265df5`. V31 (completion-wave adjudicator): ADMIT
+with six conditions, all discharged. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: `SELF-TEST-MISMATCH` exits 2 (pinned as case 17; the r97 exit-1 form demonstrated as the before on `git show 9a3d648` bytes); path-less legacy pins migrated in place by `--freeze` (SCOPE-REFUSED→MIGRATED, before/after quoted); contract precedence names the full exit-2 order; self-test 17/17 with all inherited cases unchanged. Bounds: self-test binds consistency, not truth. |
+| coverage | improved (bounded) | C2: the frozen chain extends to six fixtures (r88/r94/r95/r96/r97/r98) pinned through the guarded `--freeze`, verifying 6/6 clean; r97's recorded V46 FAIL discharged — the exact r97 mutation bytes now exit 1 `REDUCTION-DETECTED` while companion gates stay green; path binding holds (foreign copy exit 2). Bounds: pin payload covers the five JSON tables only; BR-01 prose half open. |
+| depth | improved (bounded) | C3: `corpus/fixtures/r98-clerk-filing/` — the institutional-no-finding class: clerk-maren files both accounts, matter OPEN, no finding asserted; 5/1/6→6/1/7, sources 6→7, 20/20 obligations (17 inherited unchanged + first_appearance + claim + event), CLEAN, census 171→172, zero inherited changes. The r95 map's carried sentence repaired — exactly one line, data rows byte-unchanged, r95 receipts identical pre/post. Bounds: the clerk's record asserts no world truth; editorial alignments. |
+| operability | improved (bounded) | Self-tests 17/17 + 25/25 replay; every documented command runs as written; migration path demonstrated. Bounds: self-test scratch at repo root (gitignored); path-less pins outside `--freeze` still need the migration run. |
+| freshness | improved (bounded) | First freshness improvement on record: the two stale r95/r96 knowledge-note tool pins corrected by dated append-only addenda with current hashes; the r98 note's in-flight contract pin corrected the same way; C9 row 7 appended. Bounds: historical note text unrewritten by design. |
+| adjacency | unchanged (not harmed) | PROVINCE byte-identical; change set exactly the declared ownership; the single parent stray was an aborted session's stderr file (removed, attributed); zero seat-intentional strays; no commits by seats. |
+
+Learning trends: expansion improved (172 dirs; institutional class; six
+fixture chain); quality improved (pinned mismatch class; guarded chain
+extension; byte-minimal repair discipline); discernment improved (V31
+reconciled the two-wave evidence including a superseded skeleton receipt;
+V57 proved the abort was host fault not deadlock; the subtract-SELF
+convention held; a 243 MB mirror and an orphaned-process class caught at
+closure).
+
+planned (r99): 128-seat `xai-oauth/grok-4.7-fast` [xhigh] — the largest
+wave; candidates: BR-01 prose half scoping, checker blind-spot
+documentation as decision-table rows, arc beat five. Then r100 (32-seat
+sol-max), then r101–r102 (16–32-seat zai glm-5.3-flash each, operator-added).
+saturation: not declared. retired: none.
+
+## Round 99 — closed, ADMITTED (2026-10-17)
+
+128-seat swarm on `xai-oauth/grok-4.7-fast` [xhigh] after a provider-lane
+repair (the blocked attempt above): the operator's `~/.grok` OAuth session
+restored the missing `~/.hermes/auth.json` pool, and the alias was
+repointed at the existing wire model `grok-4.7` (`-fast` unavailable for
+this team — recorded deviation). 128/128 reports; receipt rebuilt from the
+dispatch. Baseline `4265df5` + blocked-record `337f0fa`; closure `fe1ce46`.
+V34 all-axis adjudication: ADMIT (bounded) with nine conditions, all
+discharged. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: pin payload extended to all ten declared files per chain fixture (schema version 2); 18/18 self-test with the persisted `markdown_tamper` case; non-anchor/coherent prose edits — the class every prior gate missed — now exit 2 `DIGEST-MISMATCH` naming the file (before/after reproduced with matching digests); chain re-frozen 6/6 clean. Corrections (AC-1/2/3): semantic findings decide first (exit 1, no DIGEST-MISMATCH); mapped-verbatim-anchor removal was already support_check-visible pre-r99; combined-invocation precedence documented. Bounds: r99-window-lapse unpinned (r100 candidate); r88 `symbolism-clause-map.md` outside the declared ten. |
+| depth | improved (bounded) | C2 component 1: `r99-window-lapse` — the lapse beat; 6/1/7→6/1/8, sources 7→8, 21/21 obligations, CLEAN, census 172→173, no resolution/blame/reconciliation positively asserted (wording bounds AC-6 recorded). Component 2: `r99-gate-blind-spot-table.md` — consolidated blind-spot decision table; the adjudicator replayed every row with quote-identical digests. |
+| coverage | unchanged (not harmed) | The chain remains the declared six, 6/6 clean; ten-file pinning is the calibration move, not a new lore-rule class. |
+| operability | improved (bounded) | Documented commands replay as written; the false universal at README:310/SKILL:100 qualified in place. |
+| freshness | improved (bounded) | The carried "five JSON tables / prose half open / 17 cases" sentences superseded by dated Round-99 text; C9 row 8 appended. |
+| adjacency | unchanged (not harmed) | Charter byte-identical; the parent strays were out-of-lane seat scratch (cleaned); eleven standing FAILs recorded, none re-rolled. |
+
+Learning trends: expansion unchanged in count classes but qualitatively
+new (the blind-spot table is the lane's first consolidated limit-record);
+quality improved (schema-2 pins; row-replayed table); discernment improved
+(V34 reconciled an 11-FAIL census without re-rolling any; three declaration
+overclaims corrected in place; the wave landed 128/128 after a genuine
+provider outage repaired from the operator's own session).
+
+planned (r100): 32-seat `openai-codex/gpt-6.1-sol` [max] — the flagship
+round; candidates: pin r99-window-lapse into the chain (seven fixtures),
+the arc's sixth beat or a synthesis record, BR-01 semantics boundary
+documentation. Then r101–r102 (16–32-seat zai glm-5.3-flash each).
+saturation: not declared. retired: none.
+
+## Round 100 — closed, ADMITTED (2026-10-17)
+
+Flagship round on `openai-codex/gpt-6.1-sol` [max effort, pool variant
+`gpt-6.1-sol-max`]. ROSTER ERRATUM (recorded append-only in LOG): the
+declaration said 32 seats; the dispatched roster was 34 (4 producers +
+30 verifiers); 34/34 reports; receipt filled from the real dispatch.
+Baseline `fe1ce46` (+ legitimate pre-dispatch `b5fe472`, `ae67105`);
+closure `6f86bf2`. V29 adjudication: all substantive claims verify on the
+delivered bytes; admission was conditioned on L1 items only (roster,
+baseline qualification, docs, report-only errata) — all discharged at
+closure. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| coverage | improved (bounded) | C1: `r99-window-lapse` pinned into the chain through the guarded `--freeze` (the sole non-addition delta is the writer-managed top-level `revision` refresh, disclosed); seven fixtures verify 7/7 clean; all six inherited pins byte-identical; r99's recorded bound (tick-15 edge unfrozen) discharged — a scratch REDUCTION-DETECTED on that exact edge reproduced by the adjudicator. Bounds: r100-docket-review unpinned; r88 symbolism file outside the pins. |
+| depth | improved (bounded) | C2 component 1: `r100-docket-review` — beat six (first-passage review; entry open; nothing resolved); 6/1/8→6/1/9, sources 8→9, 22/22 obligations, CLEAN, census 173→174, zero inherited changes. Component 2: `r100-crossing-arc-synthesis.md` — the six-continuation dossier; adjudicator-verified 6/6 preservation steps, seven snapshot counts, unresolved-throughout invariant with the temporal qualification (OPEN first appears at r98); non-establishment bounds explicit. |
+| calibration | improved (bounded) | C3: `r100-provenance-semantics-boundary.md` separates byte-detectability from semantics; three dated addenda rows (10–12) in the blind-spot table replay 9/9 (anchor-removal visibility bound, semantic-first precedence, combined-invocation INVALID-ARGUMENTS); the original 20,526 table bytes preserved as an exact prefix. |
+| operability | unchanged (not harmed) | Documented commands replay; V21's literal-harness limit retained (two T4 harnesses not independently re-runnable — bounded, recorded). |
+| freshness | unchanged (bounded) | Closure docs landed (fixtures README Round-100, corpus README freeze bullet repaired, C9 row 9); historical receipts preserved. |
+| adjacency | unchanged (not harmed) | Charter byte-identical; the parent probes were read-only; V15/V18/V20 FAILs discharged or bounded, none re-rolled. |
+
+Learning trends: expansion improved (174 dirs; seven-fixture chain; the
+arc dossier); quality improved (guarded pin reproduction byte-identical;
+6/6 arc preservation); discernment improved (V29 withheld admission on
+process grounds alone — roster arithmetic, baseline attribution, report-only
+digests — and every condition was discharged without re-rolling a single
+FAIL; the guarded writer's revision-refresh delta disclosed rather than
+hidden).
+
+planned (r101–r102): two rounds of 16–32 seats on
+`zai-coding-plan/glm-5.3-flash-low`, closing the operator's loop at 102.
+Candidates: pin r100 into the chain (eight fixtures), SHONEN/promotion
+assessment as a named question for the operator, BR-01 semantics follow-ups.
+saturation: not declared. retired: none.
+

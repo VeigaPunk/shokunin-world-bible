@@ -1,0 +1,3 @@
+06:44:47 try=1 synth=corpus/knowledge/r102-push-synthesis-r95-r102.md reports(non-self)=8 | V13-doc.md V11-gates.md V17-verdict-freshness.md U2-freshness.md V09-c3-addenda.md U1-synthesis.md V07-c2-json.md V08-c3-sweep.md 
+06:44:47 U1-LANDED
+06:45:27 audit-now

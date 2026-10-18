@@ -1,0 +1,9 @@
+ff9fd2aa corpus/fixtures/check_bible.py
+ebb6a084 corpus/tools/boundary_doc_check.py
+e89d2a76 corpus/tools/boundary-doc-contract.json
+b8fc63c3 corpus/tools/dependency-freeze-contract.json
+60a78bc3 corpus/tools/dependency_freeze.py
+6c7b7cd8 corpus/tools/discriminate_check.py
+2142b991 corpus/tools/map-obligations-contract.json
+86b52949 corpus/tools/map_obligations.py
+55a5eb27 corpus/tools/support_check.py

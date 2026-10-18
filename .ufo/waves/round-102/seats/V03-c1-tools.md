@@ -1,0 +1,41 @@
+# V03 — c1-tool-suite (round 102, capstone)
+
+- lane: lore-shokunin; round 102; seat V03 (verifier, C1 tool-suite); model zai-coding-plan/glm-5.3-flash-low; date 2026-10-18
+- measured revision: HEAD `8fa2e87` (r102 declaration). At battery time `git status --porcelain` showed no tracked modifications; the later in-flight edits (U2's two knowledge-file addenda) do not touch `corpus/tools/`, `SKILL.md`, or fixtures, so the tool suite measured here is the delivered r101-closure state, identical to what U1's synthesis describes. No commits, no pushes, no network, no nested agents. Self-test scratch dirs were created and cleaned by the tools at repo root (gitignored `*-self-test-*/`; no residue — only pre-existing `v05-self-test-scratch/` remains, untouched).
+- poll-wait: U1 artifacts landed late. Poll budget was exhausted and extended (~46 effective tries vs the 40 cap) — recorded as a bounded stall-escape, not fatal. One false positive (`U1-scratch` matched a loose `^U1` grep) corrected with a stricter pattern. Final state on landing: `r102-push-synthesis-r95-r102.md`, `r102-debt-ledger.json`, `r102-freshness-sweep.md`, producer reports `U1-synthesis.md`, `U2-freshness.md` all present.
+
+## What the seat claim said, and what the tree holds
+
+Seat claim: "six SKILL.md registry rows, each entry command runs with the stated exits; case counts (25 map / 19 freeze / boundary 14) match the contracts."
+
+**Registry row count: SKILL.md's Gate registry carries FIVE `###` rows** — `boundary_doc_check`, `discriminate_check`, `support_check`, `map_obligations`, `dependency_freeze` (SKILL.md:48–101; `grep -c '^### '` over the registry section = 5). Git history: 4 rows at r95 closure `dcb2d92`, 5 rows from r98 closure `4265df5` onward. The suite's SIXTH tool is `corpus/fixtures/check_bible.py`, which has no registry row (the PROTOCOL gate standard puts a lane's registry home in SKILL.md; check_bible is the byte-frozen fixtures checker). U1's synthesis states exactly this and reconciles the count explicitly: "SKILL.md's **Gate registry** carries five rows; the sixth gate of the suite is `corpus/fixtures/check_bible.py` (this is the counting r96 used when it called `dependency_freeze` 'the sixth registry gate')" (synthesis §3, lines 74–77). Verdict on this sub-claim: the artifact is honest and internally consistent; a literal reading of "six SKILL.md registry rows" would be false, and the artifact itself never makes that literal claim.
+
+## Entry commands — every one run, exits as stated
+
+| Row | Command (from lane root) | Observed | Stated | Match |
+|---|---|---|---|---|
+| check_bible | `python3 corpus/fixtures/check_bible.py corpus/fixtures/r100-docket-review` | `CLEAN: schema, citations, relations, timeline; 0 violations`, EXIT:0 | exit 0 clean (synthesis table) | ✓ |
+| boundary default | `python3 corpus/tools/boundary_doc_check.py` | 4× CHECK PASS, `replay_receipts=3/3`, `replay_cases=14/14`, `anchors=2/2`, `CERTIFIED (bounded: …)`, EXIT:0 | 0 → clean | ✓ |
+| discriminate default | `python3 corpus/tools/discriminate_check.py` | `DISCRIMINATION HELD`, both fixtures `pinned_semantic_gate=PASS`, EXIT:0 | 0 → clean | ✓ |
+| discriminate negative control | `python3 corpus/tools/discriminate_check.py --checker e97613c` | both `pinned_semantic_gate=FAIL`, `REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved`, EXIT:2 | 2 with REGRESSION-DETECTED (expected) | ✓ |
+| support_check | `python3 corpus/tools/support_check.py corpus/fixtures/{r87-myth-cluster,r89-inspiration-paraphrase,r93-m2-kojiki-cluster}` | 3× `RESULT PASS`, EXIT:0 (22/22, retelling 1/1 paraphrase mode, 15/15) | 0 → clean incl. warnings | ✓ |
+| map_obligations | `python3 corpus/tools/map_obligations.py corpus/fixtures/{r93-m2-kojiki-cluster,r88-m3-maya-cluster}` + `--frozen .ufo/waves/round-94/frozen/map-obligations-r93` | r93 `raw=12 mapped=12` PASS; r88-m3 legacy dialect `raw=10 mapped=10`, `TOTAL-ROWS 12/12` PASS (byte-identical to the registry's quoted numbers, SKILL.md:89); `FROZEN expected=PASS/0 findings=none matched`, all EXIT:0 | 0 → clean | ✓ |
+| dependency_freeze | over all eight chain fixtures `r88-m3-maya-cluster r94-paired-crossing r95-crossing-aftermath r96-crossing-response r97-crossing-acknowledgment r98-clerk-filing r99-window-lapse r100-docket-review` | 8× `RESULT PASS`, EXIT:0 — chain 8/8 clean | 0 → clean | ✓ |
+
+## Self-tests and case counts vs contracts
+
+- **map_obligations `--self-test`** → `SELF-TEST CASES 25/25 pinned`, 25 `SELF-TEST PASS` lines, `RESULT PASS`, EXIT:0. Contract `corpus/tools/map-obligations-contract.json` `self_test.cases` length = **25**. Seat claim "25 map": **matches**.
+- **dependency_freeze `--self-test`** → `SELF-TEST 19/19`, `RESULT PASS`, EXIT:0, including `CASE repointed_edge: exit=1 expected=1 findings=['ADDITION-DETECTED','REDUCTION-DETECTED'] ok`. Contract `dependency-freeze-contract.json` `self_test.expected` = **19** keys. Seat claim "19 freeze": **matches**.
+- **boundary `--self-test`** → `SELF-TEST PASS` ×8, EXIT:0. Contract `boundary-doc-contract.json` `self_test.expected` = **8** expectation groups, names exactly as the synthesis lists them (`committed_default`, `comment_parked_c9`, `wrong_bare_anchor`, `checker_drift`, `missing_document`, `missing_checker`, `receipt_drift`, `anchor_range_control`); exits and finding IDs observed live match the contract values. Seat claim "boundary 14": the boundary self-test has **8** cases, not 14 — the 14 is `replay_cases=14/14` inside the `committed_default` group and in the default run's receipt, which I reproduced. No artifact claims "14 boundary cases"; the synthesis correctly states 8 expectation groups. Count claim satisfied only under the replay-cases reading.
+- **Self-test absence (conformance debt as registered):** `grep -c "self.test|selftest"` over `discriminate_check.py` and `support_check.py` → 0 and 0; `discriminate_check.py --selftest` → `error: unrecognized arguments: --selftest`. Matches both registry rows and the synthesis's "**no self-test — recorded conformance debt**" entries.
+- **Checker pin:** `sha256sum corpus/fixtures/check_bible.py` → `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421` — reproduces the synthesis pin and the `matches_pin=True` line from my discriminate run, and is byte-identical to the sha quoted in U2's C9 r102 addendum.
+
+## Cross-check of U1's synthesis §3 (the C1 artifact) against this battery
+
+Every claim in the synthesis's tool-suite section reproduced on my runs: five-rows/sixth-tool framing (true, see above); check_bible receipt verbatim; boundary 8 groups + CERTIFIED receipt; discriminate/support debt rows; map 25/25 with the r94:20→r97:25 history (consistent with SCORECARD r95 "20→22" and r96 "24/24" and r97 pinning); freeze 19/19 with r96:14→r101:19 history (README addenda document 14→17→18; r101 supersession 18→19); eight-fixture chain 8× PASS; census 174. One wording note, not a state error: the synthesis's `verified-at` preamble says "every command below was run … this pass" while the discriminate and support rows say "not re-run this pass" — the per-row disclosure is the accurate one. U2's C9 r102 re-check (eleventh, in `r91-c9-watch.md`, U2-owned) does quote this-pass discriminate pair runs, both green, byte-identical to my outputs — so the discriminate state is freshly evidenced this round even though U1's table row disclaims a re-run.
+
+## Polling record
+
+Artifacts appeared in this order across polls: r102-freshness-sweep.md → r102-debt-ledger.json → r102-push-synthesis-r95-r102.md + U1-synthesis.md. All gates in this report were run BEFORE U1's artifacts landed (independent measurement, not confirmation bias) and the synthesis cross-check came after.
+
+**Bottom line:** PASS — tool-suite state verified end-to-end on the delivered revision: all six tools' entry commands run with their stated exits, self-tests green at 25 (map) / 19 (freeze) / 8 groups + 14/14 replays (boundary) exactly matching the contracts, pin `ff9fd2aa…` reproduced; the only nuance is that the suite's "six gates" = five SKILL.md registry rows + the unregistered byte-frozen `check_bible.py`, which U1's artifact states and reconciles honestly, and "boundary 14" holds only as the replay-cases count, not a self-test case count.

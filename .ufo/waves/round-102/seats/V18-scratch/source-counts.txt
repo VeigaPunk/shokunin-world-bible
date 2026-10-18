@@ -1,0 +1,6 @@
+r94-F29 {'items': 51, 'compile_time_notes': 10}
+r95-V31 {'items': 51, 'compile_time_notes': 4}
+r96-V40 {'items': 63, 'compile_time_notes': 5}
+r97-V37 {'items': 70, 'compile_time_notes': 5}
+r98-V33 {'bounds_new': 12, 'closure_items': 10, 'process_observations': 13, 'supersessions': 7}
+r99-V36 {'not_run_by_this_seat': 5, 'bounds_new': 16, 'closure_items': 10}

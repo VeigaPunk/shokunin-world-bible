@@ -367,3 +367,49 @@ Discriminator pair from the repository root: `python3 corpus/tools/discriminate_
 | 2026-10-18 (r101) | `ff9fd2aa…d1421` | **DISCRIMINATION HELD** — re-check 10 (r101 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r102. |
 
 Gate 3 remains **not met**; the four-gate falsification trigger remains unsatisfied; nothing in r101 changes the sequence-scope evidence state.
+
+## 2026-10-18 — r102 re-check (eleventh)
+
+Eleventh periodic re-check, executed at the r102 closure by the round-102 freshness seat U2 (2026-10-18). Checker byte pin verified fresh at the delivered revision (baseline r101 closure `542021a`, wave tree uncommitted):
+
+```text
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+```
+
+Discriminator pair from the repository root, run verbatim this pass:
+
+```sh
+python3 corpus/tools/discriminate_check.py
+```
+
+```text
+mode=delivered checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+```
+
+(exit 0)
+
+```sh
+python3 corpus/tools/discriminate_check.py --checker e97613c
+```
+
+```text
+mode=e97613c checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved — pinned delivered semantics not present
+```
+
+(exit 2, expected control)
+
+| Date | Checker SHA-256 | Discrimination re-check |
+|---|---|---|
+| 2026-10-18 (r102) | `ff9fd2aa…d1421` | **DISCRIMINATION HELD** — re-check 11 (r102 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r103 — **no round scheduled**: r102 is the final round of the operator's loop, so this cadence ends here unless the lane resumes; ownership stays with the lore-shokunin calibration lane. |
+
+Gate 3 remains **not met**; the four-gate falsification trigger remains unsatisfied; nothing in r102 changes the sequence-scope evidence state.

@@ -1,0 +1,272 @@
+{
+ "snapshot_utc": "2026-10-18T10:02:27.648299Z",
+ "head": "8fa2e87b40b74f8f78864b7044ed0345712af605",
+ "baseline_542021a_ancestor": true,
+ "git_status_short": [
+  " M corpus/knowledge/2026-10-12-malformed-error-patterns.md",
+  " M corpus/knowledge/r91-c9-watch.md",
+  "?? .scratch/",
+  "?? .ufo/waves/round-102/",
+  "?? .ufo/waves/round-98/seats/V58-scratch/original-run-resume-note.md",
+  "?? corpus/knowledge/r102-debt-ledger.json",
+  "?? corpus/knowledge/r102-freshness-sweep.md",
+  "?? corpus/knowledge/r102-push-synthesis-r95-r102.md"
+ ],
+ "all_reports_incl_self": 21,
+ "others_excl_self": 20,
+ "seat_ids_excl_self": [
+  "U1",
+  "U2",
+  "V01",
+  "V02",
+  "V03",
+  "V04",
+  "V05",
+  "V06",
+  "V07",
+  "V08",
+  "V09",
+  "V10",
+  "V11",
+  "V12",
+  "V13",
+  "V14",
+  "V15",
+  "V16",
+  "V17",
+  "V18"
+ ],
+ "self_file": [
+  "V19-presence.md"
+ ],
+ "duplicate_prefixes_excl_self": [],
+ "empty_reports": [],
+ "tiny_reports_under_200_bytes": [],
+ "header_token_misses": [],
+ "non_report_files_in_seats": [],
+ "scratch_dirs": [
+  "U1-scratch",
+  "V06-scratch",
+  "V08-scratch",
+  "V09-scratch",
+  "V10-scratch",
+  "V12-scratch",
+  "V13-scratch",
+  "V14-scratch",
+  "V16-scratch",
+  "V18-scratch",
+  "V19-scratch"
+ ],
+ "reports": [
+  {
+   "file": "U1-synthesis.md",
+   "seat": "U1",
+   "is_self": false,
+   "bytes": 4918,
+   "sha16": "e9af8120b3b3410b",
+   "mtime_utc": "2026-10-18T09:42:30.802830Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "U2-freshness.md",
+   "seat": "U2",
+   "is_self": false,
+   "bytes": 5019,
+   "sha16": "fb4b94259ae2de4b",
+   "mtime_utc": "2026-10-18T09:36:08.462300Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V01-c1-commits.md",
+   "seat": "V01",
+   "is_self": false,
+   "bytes": 6231,
+   "sha16": "e431a4126f2d0c51",
+   "mtime_utc": "2026-10-18T09:48:36.237683Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V02-c1-deltas.md",
+   "seat": "V02",
+   "is_self": false,
+   "bytes": 8262,
+   "sha16": "7e7b2fb195c78274",
+   "mtime_utc": "2026-10-18T09:47:47.448575Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V03-c1-tools.md",
+   "seat": "V03",
+   "is_self": false,
+   "bytes": 8355,
+   "sha16": "2a5f38a49e565fdd",
+   "mtime_utc": "2026-10-18T09:46:19.066371Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V04-c1-honesty.md",
+   "seat": "V04",
+   "is_self": false,
+   "bytes": 9107,
+   "sha16": "f506ba085f631907",
+   "mtime_utc": "2026-10-18T09:50:59.307981Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V05-c2-ledger.md",
+   "seat": "V05",
+   "is_self": false,
+   "bytes": 7915,
+   "sha16": "76f980760eede0fb",
+   "mtime_utc": "2026-10-18T09:50:39.384941Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V06-c2-dispositions.md",
+   "seat": "V06",
+   "is_self": false,
+   "bytes": 11227,
+   "sha16": "25b83c4e33afd92f",
+   "mtime_utc": "2026-10-18T09:47:55.694594Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V07-c2-json.md",
+   "seat": "V07",
+   "is_self": false,
+   "bytes": 5736,
+   "sha16": "e49d271f31f62efe",
+   "mtime_utc": "2026-10-18T09:44:05.440035Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V08-c3-sweep.md",
+   "seat": "V08",
+   "is_self": false,
+   "bytes": 9799,
+   "sha16": "dbcfd3d66c65a83b",
+   "mtime_utc": "2026-10-18T09:44:37.598119Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V09-c3-addenda.md",
+   "seat": "V09",
+   "is_self": false,
+   "bytes": 5830,
+   "sha16": "7e97eaa0537ff307",
+   "mtime_utc": "2026-10-18T09:38:03.395461Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V10-preservation.md",
+   "seat": "V10",
+   "is_self": false,
+   "bytes": 7149,
+   "sha16": "702545ab3704cf09",
+   "mtime_utc": "2026-10-18T09:46:30.097397Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V11-gates.md",
+   "seat": "V11",
+   "is_self": false,
+   "bytes": 8399,
+   "sha16": "18278babef7fe88a",
+   "mtime_utc": "2026-10-18T09:27:25.944533Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V12-scope.md",
+   "seat": "V12",
+   "is_self": false,
+   "bytes": 8677,
+   "sha16": "87f95e777fcc889c",
+   "mtime_utc": "2026-10-18T09:53:18.560252Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V13-doc.md",
+   "seat": "V13",
+   "is_self": false,
+   "bytes": 17177,
+   "sha16": "544a71fd0f412dd7",
+   "mtime_utc": "2026-10-18T09:50:25.631913Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V14-adjacency.md",
+   "seat": "V14",
+   "is_self": false,
+   "bytes": 8891,
+   "sha16": "7d984bb4397db9ac",
+   "mtime_utc": "2026-10-18T09:48:54.646723Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V15-verdict-depth.md",
+   "seat": "V15",
+   "is_self": false,
+   "bytes": 11574,
+   "sha16": "6bdc559586c69096",
+   "mtime_utc": "2026-10-18T09:47:03.874476Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V16-verdict-calibration.md",
+   "seat": "V16",
+   "is_self": false,
+   "bytes": 11009,
+   "sha16": "28ea0eeb5fa1a094",
+   "mtime_utc": "2026-10-18T09:47:48.001576Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V17-verdict-freshness.md",
+   "seat": "V17",
+   "is_self": false,
+   "bytes": 6393,
+   "sha16": "47c0dba0f0f0ec71",
+   "mtime_utc": "2026-10-18T09:35:47.691271Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V18-adjudicator.md",
+   "seat": "V18",
+   "is_self": false,
+   "bytes": 12200,
+   "sha16": "be17c7259c96b7e4",
+   "mtime_utc": "2026-10-18T09:57:57.023751Z",
+   "header_token_first20": true
+  },
+  {
+   "file": "V19-presence.md",
+   "seat": "V19",
+   "is_self": true,
+   "bytes": 12376,
+   "sha16": "85c5d8e7a27d3b4e",
+   "mtime_utc": "2026-10-18T10:02:03.993164Z",
+   "header_token_first20": true
+  }
+ ],
+ "producer_artifacts": {
+  "corpus/knowledge/r102-push-synthesis-r95-r102.md": {
+   "present": true,
+   "bytes": 15804,
+   "sha16": "426ed8262115903f",
+   "mtime_utc": "2026-10-18T09:41:42.330764Z"
+  },
+  "corpus/knowledge/r102-debt-ledger.json": {
+   "present": true,
+   "bytes": 122763,
+   "sha16": "70fbed21d45ecf2e",
+   "mtime_utc": "2026-10-18T09:39:33.060586Z"
+  },
+  "corpus/knowledge/r102-freshness-sweep.md": {
+   "present": true,
+   "bytes": 12093,
+   "sha16": "816a4522ec5a4219",
+   "mtime_utc": "2026-10-18T09:35:28.394244Z"
+  }
+ },
+ "receipt_json_present": true
+}

@@ -1,0 +1,4255 @@
+{
+ "artifact": "corpus/knowledge/r102-debt-ledger.json",
+ "lane": "lore-shokunin",
+ "round": 102,
+ "compiled_at": "2026-10-18",
+ "compiled_by": "U1 (synthesis producer), round-102 capstone wave, zai-coding-plan/glm-5.3-flash-low",
+ "baseline": "542021a (r101 closure)",
+ "scope": "every debt item raised across r94-r101 with final disposition closed / addressed / carried:<owner>, each with an evidence pointer",
+ "disposition_vocabulary": {
+  "closed": "resolved with verification in the delivered tree (commit, pinned case, landed doc, or rebuilt receipt)",
+  "addressed": "action taken that retires or bounds the debt without a full gate-level close (dated addendum, recorded bound, convention, host resolution, erratum); residual named in disposition_detail where partial",
+  "carried": "still open in the delivered r102 tree; carried_owner names the holder"
+ },
+ "counting_rules": [
+  "an entry that restates or disposes of an earlier round's item is a carry_record (mirrored into the tracked item's trail), not a new item",
+  "ST (supersession) and PR (process observation) entries that only record intra-round bookkeeping are items with disposition addressed; they are kept so no source id is dropped",
+  "r100 has no debt-ledger file: its surface is the adjudicator's six conditions plus recorded FAILs/qualifications (see sources[6] anomaly)",
+  "totals.source_entries = own_items + carry_records and equals the sum of items_in_source across the eight sources"
+ ],
+ "totals": {
+  "items": 264,
+  "carry_records": 97,
+  "source_entries": 361,
+  "dispositions": {
+   "closed": 111,
+   "addressed": 108,
+   "carried": 45
+  }
+ },
+ "sources": [
+  {
+   "round": 94,
+   "file": ".ufo/waves/round-94/followup/F29-debt.json",
+   "seat": "F29",
+   "items_in_source": 51,
+   "own_items": 51,
+   "carry_records": 0
+  },
+  {
+   "round": 95,
+   "file": ".ufo/waves/round-95/seats/V31-debt.json",
+   "seat": "V31",
+   "items_in_source": 51,
+   "own_items": 24,
+   "carry_records": 27,
+   "note": "item_counts {NB:14, CO:23, CL:10, PR:3, ST:1}; the 23 CO + 4 restating NBs (NB-05/06/10/11) are carries; own = 10 NB + 10 CL + 3 PR + 1 ST"
+  },
+  {
+   "round": 96,
+   "file": ".ufo/waves/round-96/seats/V40-debt.json",
+   "seat": "V40",
+   "items_in_source": 63,
+   "own_items": 51,
+   "carry_records": 12,
+   "note": "item_counts {NB:27, CO:10, CL:12, PR:8, ST:6}; the 10 CO + NB-07 + NB-18 are carries; own = 26 NB + 12 CL + 8 PR + 6 ST - 1 (NB-07 carry)"
+  },
+  {
+   "round": 97,
+   "file": ".ufo/waves/round-97/seats/V37-debt.json",
+   "seat": "V37",
+   "items_in_source": 70,
+   "own_items": 50,
+   "carry_records": 20,
+   "note": "item_counts {NB:20, CO:18, CL:12, PR:13, ST:7}; the 18 CO + NB-10/NB-11 are carries"
+  },
+  {
+   "round": 98,
+   "file": ".ufo/waves/round-98/seats/V33-debt.json",
+   "seat": "V33",
+   "items_in_source": 63,
+   "own_items": 42,
+   "carry_records": 21,
+   "note": "sections: bounds_new 12, closure_items 10, process_observations 13, supersessions 7 (=42); bounds_carried buckets dispose 21 carry-list entries"
+  },
+  {
+   "round": 99,
+   "file": ".ufo/waves/round-99/seats/V36-debt.json",
+   "seat": "V36",
+   "items_in_source": 42,
+   "own_items": 25,
+   "carry_records": 17,
+   "note": "sections: bounds_new 16, closure_items 10; NB-07 (BR-01 prose restatement) is a carry, so own = 15 NB + 10 CL; bounds_carried buckets dispose 16 carry-list entries; supplementary extraction .ufo/waves/round-99/seats/V74-debt-2.md merged into trails"
+  },
+  {
+   "round": 100,
+   "file": ".ufo/waves/round-100/seats/V29-adjudicator.md + LOG.md r100 closure",
+   "seat": "V29/L1",
+   "items_in_source": 11,
+   "own_items": 11,
+   "carry_records": 0,
+   "note": "ANOMALY: the r102 declaration cites 'r100 V33' but round-100's roster was T1-T4 + V01-V30 (34 seats) and no V33 seat or V33-debt file exists; the r100 debt surface used is V29's six admission conditions plus the recorded FAILs (V15/V18/V20) and qualifications (V21/V30)"
+  },
+  {
+   "round": 101,
+   "file": ".ufo/waves/round-101/seats/V24-adjudicator.md + LOG.md r101 closure",
+   "seat": "V24/L1",
+   "items_in_source": 10,
+   "own_items": 10,
+   "carry_records": 0,
+   "note": "the 'carried notes': V24 defects 1-6 plus conditions AC-1..AC-4; all discharged at closure per LOG"
+  }
+ ],
+ "items": [
+  {
+   "id": "r94-CC-01",
+   "origin_round": 94,
+   "source_id": "CC-01",
+   "group": "CC",
+   "title": "wave-spec followup field stale vs actual dispatch",
+   "disposition": "closed",
+   "disposition_detail": "FOLLOW-UP executed and reconciled at r94 closure; records landed",
+   "evidence": [
+    "commit ac69044 (closure conditions C-1..C-6)",
+    "LOG.md r94 closure section"
+   ]
+  },
+  {
+   "id": "r94-CC-02",
+   "origin_round": 94,
+   "source_id": "CC-02",
+   "group": "CC",
+   "title": "capability admission + registry row pending",
+   "disposition": "closed",
+   "disposition_detail": "map_obligations admitted as registry row at closure",
+   "evidence": [
+    "commit ac69044",
+    "SCORECARD.md r94 Capabilities (fifth row)"
+   ]
+  },
+  {
+   "id": "r94-CC-03",
+   "origin_round": 94,
+   "source_id": "CC-03",
+   "group": "CC",
+   "title": "new tool unregistered in tools README / SKILL",
+   "disposition": "closed",
+   "disposition_detail": "tools README + SKILL registration landed at closure",
+   "evidence": [
+    "commit ac69044",
+    "corpus/tools/README.md (map_obligations sections)"
+   ]
+  },
+  {
+   "id": "r94-CC-04",
+   "origin_round": 94,
+   "source_id": "CC-04",
+   "group": "CC",
+   "title": "fixtures README missing r94 entry, census 167 stale",
+   "disposition": "closed",
+   "disposition_detail": "Round-94 section + census landed at closure",
+   "evidence": [
+    "commit ac69044",
+    "corpus/fixtures/README.md '## Round 94'"
+   ]
+  },
+  {
+   "id": "r94-CC-05",
+   "origin_round": 94,
+   "source_id": "CC-05",
+   "group": "CC",
+   "title": "corpus README index omits r94 fixture + tool",
+   "disposition": "closed",
+   "disposition_detail": "index bullets landed at closure",
+   "evidence": [
+    "commit ac69044"
+   ]
+  },
+  {
+   "id": "r94-CC-06",
+   "origin_round": 94,
+   "source_id": "CC-06",
+   "group": "CC",
+   "title": "r91-c9-watch.md:54 stale HEAD assertion",
+   "disposition": "closed",
+   "disposition_detail": "erratared in ac69044",
+   "evidence": [
+    "commit ac69044",
+    "SCORECARD.md r94 freshness row"
+   ]
+  },
+  {
+   "id": "r94-CC-07",
+   "origin_round": 94,
+   "source_id": "CC-07",
+   "group": "CC",
+   "title": "LOG r87/r88 receipt counts stale (LOG.md:2312-2314)",
+   "disposition": "closed",
+   "disposition_detail": "corrected append-only at r94 closure",
+   "evidence": [
+    "LOG.md r94 closure ('corrected append-only below')",
+    "commit ac69044"
+   ]
+  },
+  {
+   "id": "r94-CC-08",
+   "origin_round": 94,
+   "source_id": "CC-08",
+   "group": "CC",
+   "title": "W25 docs/registry proposals unimplemented",
+   "disposition": "closed",
+   "disposition_detail": "integrated as r94 closure conditions",
+   "evidence": [
+    "commit ac69044",
+    "SCORECARD.md r94 planned->closed"
+   ]
+  },
+  {
+   "id": "r94-CC-09",
+   "origin_round": 94,
+   "source_id": "CC-09",
+   "group": "CC",
+   "title": "W20 failed-output gap (31/32 reports)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded, not smoothed; requirement independently satisfied at r94 README:13",
+   "evidence": [
+    "SCORECARD.md r94 'Failed-output gaps'",
+    "corpus/fixtures/r94-paired-crossing/README.md:13"
+   ]
+  },
+  {
+   "id": "r94-CC-10",
+   "origin_round": 94,
+   "source_id": "CC-10",
+   "group": "CC",
+   "title": "fleet round-94 report / MANIFEST closure / promotion pending",
+   "disposition": "closed",
+   "disposition_detail": "fleet report exists; promotion correctly withheld (lane policy, SHONEN 4 [~]); MANIFEST is integrator-level and updated at each closure",
+   "evidence": [
+    "/home/vgpnk/Projects/shokunin/.ufo/reports/round-94/",
+    "SHONEN.md (4 [~], 0 [x], verified 2026-10-18)",
+    "/home/vgpnk/Projects/shokunin/MANIFEST.json (lane_rounds.lore updated by integrator at closure)"
+   ]
+  },
+  {
+   "id": "r94-CC-11",
+   "origin_round": 94,
+   "source_id": "CC-11",
+   "group": "CC",
+   "title": "F02 report duplicated at fleet repo root",
+   "disposition": "addressed",
+   "disposition_detail": "lane copy authoritative and byte-identical; hygiene recorded",
+   "evidence": [
+    ".ufo/waves/round-94/followup/F29-debt.json items[CC-11]"
+   ]
+  },
+  {
+   "id": "r94-CC-12",
+   "origin_round": 94,
+   "source_id": "CC-12",
+   "group": "CC",
+   "title": "W30 full-gate negative result only in seat report",
+   "disposition": "addressed",
+   "disposition_detail": "negative result preserved in wave tree and ledger record",
+   "evidence": [
+    ".ufo/waves/round-94/followup/ (W30 + F29 record)"
+   ]
+  },
+  {
+   "id": "r94-CC-13",
+   "origin_round": 94,
+   "source_id": "CC-13",
+   "group": "CC",
+   "title": "no r94-shape spec validator",
+   "disposition": "carried",
+   "disposition_detail": "explicitly accepted as process debt at r94; never built",
+   "evidence": [
+    "SCORECARD.md r94 planned ('r94-shape spec validator (CC-13 accepted)')"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-CC-15",
+   "origin_round": 94,
+   "source_id": "CC-15",
+   "group": "CC",
+   "title": "F40 report defective; receipt landed late",
+   "disposition": "addressed",
+   "disposition_detail": "defect stands recorded (CC-15); late skeleton usable as followup-receipt.json",
+   "evidence": [
+    "SCORECARD.md r94 'Failed-output gaps'"
+   ]
+  },
+  {
+   "id": "r94-CC-14",
+   "origin_round": 94,
+   "source_id": "CC-14",
+   "group": "CC",
+   "title": "ledger v1 superseded by later versions",
+   "disposition": "addressed",
+   "disposition_detail": "v1 no-depth-verdict superseded by v4 with F21 depth IMPROVED",
+   "evidence": [
+    ".ufo/waves/round-94/followup/F29-debt.json version/compile_time_notes"
+   ]
+  },
+  {
+   "id": "r94-BR-01",
+   "origin_round": 94,
+   "source_id": "BR-01",
+   "group": "BR",
+   "title": "dependency-reduction undetectable (JSON + prose halves)",
+   "disposition": "addressed",
+   "disposition_detail": "JSON half closed r96 (dependency_freeze REDUCTION-DETECTED); prose half rendered edit-detectable r99 (ten-file pins, DIGEST-MISMATCH) and bounded r100 (byte-detectability != semantics); prose entailment never provable",
+   "evidence": [
+    "commit f3e09f9 (sixth gate)",
+    "commit fe1ce46 (ten-file schema-2 pins)",
+    "corpus/knowledge/r99-gate-blind-spot-table.md rows 1b/6",
+    "corpus/knowledge/r100-provenance-semantics-boundary.md"
+   ],
+   "trail": [
+    "r95:NB-05",
+    "r95:CO via NB items",
+    "r96:NB-07",
+    "r96:CO-04",
+    "r97:CO-07",
+    "r98:CO-02",
+    "r98:CO-19",
+    "r99:NB-07",
+    "r99:CO-01",
+    "r98:CO-19"
+   ]
+  },
+  {
+   "id": "r94-BR-02",
+   "origin_round": 94,
+   "source_id": "BR-02",
+   "group": "BR",
+   "title": "renamed claims key + removed map row = silent PASS",
+   "disposition": "closed",
+   "disposition_detail": "schema_drift FINDING delivered r95, exit 1, old tool PASSes",
+   "evidence": [
+    "commit dcb2d92",
+    "SCORECARD.md r95 calibration row",
+    "corpus/tools/README.md Round-95 addendum"
+   ],
+   "trail": [
+    "r96:CO-02 (pin persisted)"
+   ]
+  },
+  {
+   "id": "r94-BR-03",
+   "origin_round": 94,
+   "source_id": "BR-03",
+   "group": "BR",
+   "title": "self-test coverage gap (map_missing, invalid_arguments unpinned)",
+   "disposition": "closed",
+   "disposition_detail": "22-case contract at r95 (both added, load-bearing per V02/V38); later 24 (r96) and 25 (r97)",
+   "evidence": [
+    "commit dcb2d92",
+    "corpus/tools/map-obligations-contract.json (25 cases)",
+    "SCORECARD.md r95 calibration"
+   ],
+   "trail": [
+    "r95:NB-07",
+    "r96:CO-02",
+    "r97:CO-01"
+   ]
+  },
+  {
+   "id": "r94-BR-04",
+   "origin_round": 94,
+   "source_id": "BR-04",
+   "group": "BR",
+   "title": "phantom_obligation is set-membership, not document resolution",
+   "disposition": "carried",
+   "disposition_detail": "bound restated r95, never changed; documented in tools README scope",
+   "evidence": [
+    "r95:CO-01",
+    "corpus/tools/README.md (map scope)"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-05",
+   "origin_round": 94,
+   "source_id": "BR-05",
+   "group": "BR",
+   "title": "self-test scratch under repo root, not gitignored",
+   "disposition": "closed",
+   "disposition_detail": "gitignored at r97 closure (both tools, .gitignore *-self-test-*/); r98 NB-01 found the tools-README 'not gitignored' wording false and the erratum closed the residual at r98 closure",
+   "evidence": [
+    "commit 9d25df9 (SCORECARD r97 operability bound)",
+    "commit 4265df5 (r98 CL-05 errata; V33 NB-01)",
+    ".gitignore (*-self-test-*/)"
+   ],
+   "trail": [
+    "r95:NB-06",
+    "r96:NB-18",
+    "r96:CO-05",
+    "r97:NB-10",
+    "r97:CO-12",
+    "r98:CO-10"
+   ]
+  },
+  {
+   "id": "r94-BR-06",
+   "origin_round": 94,
+   "source_id": "BR-06",
+   "group": "BR",
+   "title": "--help exits 0 with zero RESULT lines",
+   "disposition": "carried",
+   "disposition_detail": "accepted exit-contract bound; registry verdict maps document it",
+   "evidence": [
+    "r95:CO-02",
+    "SKILL.md gate registry (code->class maps)"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-07",
+   "origin_round": 94,
+   "source_id": "BR-07",
+   "group": "BR",
+   "title": "r94 map J14 span 18-20 wider than anchor line",
+   "disposition": "carried",
+   "disposition_detail": "cosmetic; fixture bytes frozen as adjudicated (changing would break pins)",
+   "evidence": [
+    "r95:CO-03"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-08",
+   "origin_round": 94,
+   "source_id": "BR-08",
+   "group": "BR",
+   "title": "r94 R9 map omits retained r88 veil-verse declarations",
+   "disposition": "carried",
+   "disposition_detail": "never repaired; r88 map still declares them",
+   "evidence": [
+    "r95:CO-04"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-09",
+   "origin_round": 94,
+   "source_id": "BR-09",
+   "group": "BR",
+   "title": "relations.json#/0 lacks stewardship-object field",
+   "disposition": "carried",
+   "disposition_detail": "JSON alone cannot recover co-stewardship object; editorial limit",
+   "evidence": [
+    "r95:CO-05"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-10",
+   "origin_round": 94,
+   "source_id": "BR-10",
+   "group": "BR",
+   "title": "veil-verse zero obligations; no symbolism map in r94",
+   "disposition": "carried",
+   "disposition_detail": "r88 symbolism-clause-map.md named bound (r99 AC-5) and stays unpinned",
+   "evidence": [
+    "r95:CO-06",
+    "LOG.md r99 closure AC-5"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-11",
+   "origin_round": 94,
+   "source_id": "BR-11",
+   "group": "BR",
+   "title": "comparison-record precision items (O1-O5)",
+   "disposition": "carried",
+   "disposition_detail": "editorial precision debt, never repaired",
+   "evidence": [
+    "r95:CO-07"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-12",
+   "origin_round": 94,
+   "source_id": "BR-12",
+   "group": "BR",
+   "title": "knowledge-record metadata completeness (r94 note)",
+   "disposition": "carried",
+   "disposition_detail": "source list/span mismatches never repaired",
+   "evidence": [
+    "r95:CO-08"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-13",
+   "origin_round": 94,
+   "source_id": "BR-13",
+   "group": "BR",
+   "title": "external editorial rows carry R9 mode in-map only",
+   "disposition": "carried",
+   "disposition_detail": "inherited editorial convention",
+   "evidence": [
+    "r95:CO-09"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-14",
+   "origin_round": 94,
+   "source_id": "BR-14",
+   "group": "BR",
+   "title": "legacy maps exit 2 unsupported_map",
+   "disposition": "addressed",
+   "disposition_detail": "scope decision: r88 dialect accepted r95 (zero corpus change); r87/r89 remain exit 2 fail-closed by design",
+   "evidence": [
+    "commit dcb2d92",
+    "SCORECARD.md r95 coverage row",
+    "corpus/tools/README.md Round-95 addendum"
+   ],
+   "trail": [
+    "r95:CO-10"
+   ]
+  },
+  {
+   "id": "r94-BR-15",
+   "origin_round": 94,
+   "source_id": "BR-15",
+   "group": "BR",
+   "title": "relation type free-text, not gate-enforced",
+   "disposition": "carried",
+   "disposition_detail": "only allied_with has type-specific rules; bound retained",
+   "evidence": [
+    "r95:CO-11"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-16",
+   "origin_round": 94,
+   "source_id": "BR-16",
+   "group": "BR",
+   "title": "pointer identity array-positional, not event-id-based",
+   "disposition": "carried",
+   "disposition_detail": "deletion re-binds indices; bound re-observed r95, never changed",
+   "evidence": [
+    "r95:NB-10",
+    "r95:CO-09"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-17",
+   "origin_round": 94,
+   "source_id": "BR-17",
+   "group": "BR",
+   "title": "fixture README replay blocks without recorded observed exits",
+   "disposition": "carried",
+   "disposition_detail": "recurring convention debt: recurrences r95 (NB-11), r96 (CL), r97 (NB-20), r98 (NB-08, fifth), r99 (NB-09, sixth); class never systematically fixed; r98 closure item CL-10 NOT landed (grep of r98 README finds no exit receipts, verified 2026-10-18)",
+   "evidence": [
+    "r95:NB-11",
+    "r97:NB-20",
+    "r98:NB-08",
+    "r99:NB-09",
+    "grep -n -i exit corpus/fixtures/r98-clerk-filing/README.md -> no matches (2026-10-18)"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-18",
+   "origin_round": 94,
+   "source_id": "BR-18",
+   "group": "BR",
+   "title": "boundary certification explicitly bounded (no semantic/AST)",
+   "disposition": "addressed",
+   "disposition_detail": "documented permanent boundary: registry scope text, blind-spot row 8, r100 semantics boundary note; CERTIFIED reproduced at every closure battery including this pass",
+   "evidence": [
+    "SKILL.md boundary row scope",
+    "corpus/knowledge/r99-gate-blind-spot-table.md row 8",
+    "corpus/knowledge/r100-provenance-semantics-boundary.md"
+   ],
+   "trail": [
+    "r95:CO-14 (with CR-01)"
+   ]
+  },
+  {
+   "id": "r94-BR-19",
+   "origin_round": 94,
+   "source_id": "BR-19",
+   "group": "BR",
+   "title": "r94 README unbounded 'their near-miss' wording",
+   "disposition": "carried",
+   "disposition_detail": "frozen adjudicated bytes; qualifier lives in dated addendum only",
+   "evidence": [
+    "r95:CO-12"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-20",
+   "origin_round": 94,
+   "source_id": "BR-20",
+   "group": "BR",
+   "title": "r94 README ambiguous identity clause",
+   "disposition": "carried",
+   "disposition_detail": "under-claim/ambiguity direction; frozen bytes",
+   "evidence": [
+    "r95:CO-12"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-21",
+   "origin_round": 94,
+   "source_id": "BR-21",
+   "group": "BR",
+   "title": "stale prospective prose in r94 knowledge record",
+   "disposition": "carried",
+   "disposition_detail": "overridden only by dated addendum, by design (append-only)",
+   "evidence": [
+    "r95:CO-13"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-22",
+   "origin_round": 94,
+   "source_id": "BR-22",
+   "group": "BR",
+   "title": "W02 says '12 self-test cases' (delivered 20)",
+   "disposition": "carried",
+   "disposition_detail": "historical wave-artifact transcription slip, frozen by convention",
+   "evidence": [
+    "r95:CO-23"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-23",
+   "origin_round": 94,
+   "source_id": "BR-23",
+   "group": "BR",
+   "title": "F19 transcribes self-test as 21 cases (actual 20)",
+   "disposition": "carried",
+   "disposition_detail": "typo-level artifact slip, frozen by convention",
+   "evidence": [
+    "r95:CO-23"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-24",
+   "origin_round": 94,
+   "source_id": "BR-24",
+   "group": "BR",
+   "title": "tool and contract committed together (colocated trust)",
+   "disposition": "carried",
+   "disposition_detail": "documented trust bound in SKILL registry pinned-values note and boundary contract limits",
+   "evidence": [
+    "SKILL.md boundary row pinned-values note"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-25",
+   "origin_round": 94,
+   "source_id": "BR-25",
+   "group": "BR",
+   "title": "wave reports not mutually current (F39 vs F04/F05)",
+   "disposition": "addressed",
+   "disposition_detail": "supersession tracking became a standing ledger convention (ST groups in every later debt ledger)",
+   "evidence": [
+    "r95:ST-01",
+    "V31/V40/V37/V33/V36 ST groups"
+   ]
+  },
+  {
+   "id": "r94-BR-26",
+   "origin_round": 94,
+   "source_id": "BR-26",
+   "group": "BR",
+   "title": "W07 network fetch not reproducible offline",
+   "disposition": "carried",
+   "disposition_detail": "bounded in place; cited by no product/LOG/SCORECARD claim",
+   "evidence": [
+    "r95:CO-22"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-27",
+   "origin_round": 94,
+   "source_id": "BR-27",
+   "group": "BR",
+   "title": "35 legacy fixtures covered only by JSON receipts",
+   "disposition": "carried",
+   "disposition_detail": "never resolved; receipt-only coverage stands",
+   "evidence": [
+    "r95:CO-21"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-BR-28",
+   "origin_round": 94,
+   "source_id": "BR-28",
+   "group": "BR",
+   "title": "F01 says 11 files where r94 fixture has 10",
+   "disposition": "carried",
+   "disposition_detail": "transcription slip, frozen by convention",
+   "evidence": [
+    "r95:CO-23"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-CR-01",
+   "origin_round": 94,
+   "source_id": "CR-01",
+   "group": "CR",
+   "title": "AST anchor validation absent (boundary_doc_check)",
+   "disposition": "addressed",
+   "disposition_detail": "documented permanent boundary, not implemented: blind-spot row 8 (checker byte-frozen), r100 provenance-semantics boundary separates byte-detectability from meaning",
+   "evidence": [
+    "corpus/knowledge/r99-gate-blind-spot-table.md row 8",
+    "corpus/knowledge/r100-provenance-semantics-boundary.md"
+   ],
+   "trail": [
+    "r95:CO-14"
+   ]
+  },
+  {
+   "id": "r94-CR-02",
+   "origin_round": 94,
+   "source_id": "CR-02",
+   "group": "CR",
+   "title": "Q92-004: R9 verification command inspects r91 patch",
+   "disposition": "carried",
+   "disposition_detail": "open since r93, untouched through r101",
+   "evidence": [
+    "r95:CO-15"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-CR-03",
+   "origin_round": 94,
+   "source_id": "CR-03",
+   "group": "CR",
+   "title": "fixtures README lacks Round-91/93 sections",
+   "disposition": "closed",
+   "disposition_detail": "Round-91 and Round-93 sections exist in the delivered README (lines 1064/1099, verified 2026-10-18); Round-94/95 sections followed",
+   "evidence": [
+    "corpus/fixtures/README.md:1064",
+    "corpus/fixtures/README.md:1099"
+   ],
+   "trail": [
+    "r95:CO-16"
+   ]
+  },
+  {
+   "id": "r94-CR-04",
+   "origin_round": 94,
+   "source_id": "CR-04",
+   "group": "CR",
+   "title": "C9 watch forward-pointer incomplete",
+   "disposition": "closed",
+   "disposition_detail": "watch continued: due re-checks appended rows 3 (r94) through 10 (r101)",
+   "evidence": [
+    "commit ac69044 (C9 r94 re-check)",
+    "corpus/knowledge/r91-c9-watch.md",
+    "LOG.md r101 closure (C9 row 10)"
+   ]
+  },
+  {
+   "id": "r94-CR-05",
+   "origin_round": 94,
+   "source_id": "CR-05",
+   "group": "CR",
+   "title": "decision-table R8/R9 integration defects",
+   "disposition": "carried",
+   "disposition_detail": "open since r93, untouched through r101",
+   "evidence": [
+    "r95:CO-17"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r94-CR-06",
+   "origin_round": 94,
+   "source_id": "CR-06",
+   "group": "CR",
+   "title": "independent certification of boundary document (B3 unmet r93)",
+   "disposition": "addressed",
+   "disposition_detail": "boundary gate + self-test + closure-battery CERTIFIED reproductions (r99/r100/r101 and this pass)",
+   "evidence": [
+    "corpus/tools/boundary-doc-contract.json",
+    "this pass: python3 corpus/tools/boundary_doc_check.py -> CERTIFIED (2026-10-18)"
+   ],
+   "trail": [
+    "r95:CO-18"
+   ]
+  },
+  {
+   "id": "r94-CR-07",
+   "origin_round": 94,
+   "source_id": "CR-07",
+   "group": "CR",
+   "title": "poll-helper residual hardening + scratch/inode budget",
+   "disposition": "addressed",
+   "disposition_detail": "endgame subtract-SELF convention adopted r97 and held r98; bounded stall-escapes recorded; poll_wait.sh in wave tree",
+   "evidence": [
+    ".ufo/waves/poll_wait.sh",
+    "SCORECARD.md r97/r98 discernment rows"
+   ],
+   "trail": [
+    "r95:CO-19"
+   ]
+  },
+  {
+   "id": "r94-CR-08",
+   "origin_round": 94,
+   "source_id": "CR-08",
+   "group": "CR",
+   "title": "roster/landing accounting class",
+   "disposition": "addressed",
+   "disposition_detail": "receipts rebuilt from real dispatch r95-r101; roster-arithmetic errata recorded append-only (r100, r101) as a standing convention",
+   "evidence": [
+    "LOG.md r100/r101 roster errata",
+    ".ufo/waves/round-95..101/receipt.json"
+   ],
+   "trail": [
+    "r95:CO-20"
+   ]
+  },
+  {
+   "id": "r95-NB-01",
+   "origin_round": 95,
+   "source_id": "NB-01",
+   "group": "NB",
+   "title": "schema_drift entity-claim-container-bounded",
+   "disposition": "carried",
+   "disposition_detail": "bound retained; documented in Round-96 addendum bounds",
+   "evidence": [
+    "corpus/tools/README.md Round-96 addendum"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r95-NB-02",
+   "origin_round": 95,
+   "source_id": "NB-02",
+   "group": "NB",
+   "title": "INVENTORY receipt non-gating (deletion class silent PASS)",
+   "disposition": "closed",
+   "disposition_detail": "inventory_mismatch gating delivered r96 (old exit 0 vs new exit 1 on identical mutations)",
+   "evidence": [
+    "commit f3e09f9",
+    "corpus/tools/README.md Round-96 addendum"
+   ],
+   "trail": [
+    "r96:CO-01"
+   ]
+  },
+  {
+   "id": "r95-NB-03",
+   "origin_round": 95,
+   "source_id": "NB-03",
+   "group": "NB",
+   "title": "r88 dialect header-gated acceptance",
+   "disposition": "carried",
+   "disposition_detail": "bound retained (normalized header token required)",
+   "evidence": [
+    "corpus/tools/README.md Round-95 addendum"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r95-NB-04",
+   "origin_round": 95,
+   "source_id": "NB-04",
+   "group": "NB",
+   "title": "12/12 is total-rows denominator, not obligations",
+   "disposition": "closed",
+   "disposition_detail": "declaration denominator corrected at r95 closure (correction 4)",
+   "evidence": [
+    "LOG.md r95 closure corrections (1)-(7)"
+   ]
+  },
+  {
+   "id": "r95-NB-07",
+   "origin_round": 95,
+   "source_id": "NB-07",
+   "group": "NB",
+   "title": "schema_drift not pinned by persisted case",
+   "disposition": "closed",
+   "disposition_detail": "pinned r96 as 24-case contract; loader strict from r97",
+   "evidence": [
+    "commit f3e09f9",
+    "commit 9d25df9"
+   ],
+   "trail": [
+    "r96:CO-02"
+   ]
+  },
+  {
+   "id": "r95-NB-08",
+   "origin_round": 95,
+   "source_id": "NB-08",
+   "group": "NB",
+   "title": "r95 note pins mid-flight tool revision 9224a684",
+   "disposition": "closed",
+   "disposition_detail": "corrected by dated append-only addendum at r98 closure",
+   "evidence": [
+    "commit 4265df5",
+    "corpus/knowledge/r95-aftermath-scope-note.md (dated addendum)",
+    "SCORECARD.md r98 freshness row"
+   ]
+  },
+  {
+   "id": "r95-NB-09",
+   "origin_round": 95,
+   "source_id": "NB-09",
+   "group": "NB",
+   "title": "tool-revision flux within rounds",
+   "disposition": "addressed",
+   "disposition_detail": "recorded each round as a harness property (PR groups); never eliminated, always disclosed",
+   "evidence": [
+    "r96:NB-19",
+    "r97:NB-19",
+    "r98:NB-06",
+    "r99:NB-11"
+   ]
+  },
+  {
+   "id": "r95-NB-12",
+   "origin_round": 95,
+   "source_id": "NB-12",
+   "group": "NB",
+   "title": "V37-D1 legacy-dialect hidden-second-pointer (MEDIUM)",
+   "disposition": "closed",
+   "disposition_detail": "dual_pointer FINDING r96; pinned r97 as case 25",
+   "evidence": [
+    "commit f3e09f9",
+    "commit 9d25df9"
+   ],
+   "trail": [
+    "r96:CO-03"
+   ]
+  },
+  {
+   "id": "r95-NB-13",
+   "origin_round": 95,
+   "source_id": "NB-13",
+   "group": "NB",
+   "title": "D2: schema-drift rule shape-specific, evadable",
+   "disposition": "carried",
+   "disposition_detail": "bound retained",
+   "evidence": [
+    "corpus/tools/README.md Round-96 addendum bounds"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r95-NB-14",
+   "origin_round": 95,
+   "source_id": "NB-14",
+   "group": "NB",
+   "title": "D3: hypothetical false-positive class, no suppression",
+   "disposition": "carried",
+   "disposition_detail": "bound retained",
+   "evidence": [
+    "r95 V31 item text"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r95-CL-01",
+   "origin_round": 95,
+   "source_id": "CL-01",
+   "group": "CL",
+   "title": "fixtures README Round-95 section due",
+   "disposition": "closed",
+   "disposition_detail": "landed at r95 closure (census 169)",
+   "evidence": [
+    "commit dcb2d92",
+    "corpus/fixtures/README.md '## Round 95'"
+   ]
+  },
+  {
+   "id": "r95-CL-02",
+   "origin_round": 95,
+   "source_id": "CL-02",
+   "group": "CL",
+   "title": "corpus README '20 persisted cases' stale",
+   "disposition": "closed",
+   "disposition_detail": "fixed at r95 closure",
+   "evidence": [
+    "commit dcb2d92"
+   ]
+  },
+  {
+   "id": "r95-CL-03",
+   "origin_round": 95,
+   "source_id": "CL-03",
+   "group": "CL",
+   "title": "SKILL.md registry row stale",
+   "disposition": "closed",
+   "disposition_detail": "updated at r95 closure",
+   "evidence": [
+    "commit dcb2d92"
+   ]
+  },
+  {
+   "id": "r95-CL-04",
+   "origin_round": 95,
+   "source_id": "CL-04",
+   "group": "CL",
+   "title": "C9 watch 'Next re-check: r95' due",
+   "disposition": "closed",
+   "disposition_detail": "row 4 appended at closure (DISCRIMINATION HELD)",
+   "evidence": [
+    "commit dcb2d92",
+    "corpus/knowledge/r91-c9-watch.md"
+   ]
+  },
+  {
+   "id": "r95-CL-05",
+   "origin_round": 95,
+   "source_id": "CL-05",
+   "group": "CL",
+   "title": "LOG/SCORECARD r95 entries due",
+   "disposition": "closed",
+   "disposition_detail": "landed (closure 60dba0c + dcb2d92)",
+   "evidence": [
+    "commit 60dba0c",
+    "commit dcb2d92"
+   ]
+  },
+  {
+   "id": "r95-CL-06",
+   "origin_round": 95,
+   "source_id": "CL-06",
+   "group": "CL",
+   "title": "stranded reports in parent repo",
+   "disposition": "addressed",
+   "disposition_detail": "parent-tree strays collected at closure; cwd-stray class recorded as harness property",
+   "evidence": [
+    "LOG.md r95 closure (V09/V18 strays collected)"
+   ]
+  },
+  {
+   "id": "r95-CL-07",
+   "origin_round": 95,
+   "source_id": "CL-07",
+   "group": "CL",
+   "title": "no wave-spec.json and no receipt.json for r95",
+   "disposition": "addressed",
+   "disposition_detail": "receipt rebuilt from dispatch (exists); wave-spec absence became the standing wave convention",
+   "evidence": [
+    ".ufo/waves/round-95/receipt.json",
+    "LOG.md r95 closure"
+   ]
+  },
+  {
+   "id": "r95-CL-08",
+   "origin_round": 95,
+   "source_id": "CL-08",
+   "group": "CL",
+   "title": "roster accounting 60/64 at compile",
+   "disposition": "addressed",
+   "disposition_detail": "receipt rebuilt 64/64; three late landings recorded, not failures",
+   "evidence": [
+    "LOG.md r95 closure (receipt 64/64)"
+   ]
+  },
+  {
+   "id": "r95-CL-09",
+   "origin_round": 95,
+   "source_id": "CL-09",
+   "group": "CL",
+   "title": "fleet round-95 report ABSENT",
+   "disposition": "closed",
+   "disposition_detail": "fleet report exists at the integrator surface",
+   "evidence": [
+    "/home/vgpnk/Projects/shokunin/.ufo/reports/round-95/lore.md"
+   ]
+  },
+  {
+   "id": "r95-CL-10",
+   "origin_round": 95,
+   "source_id": "CL-10",
+   "group": "CL",
+   "title": "round receipt fill due",
+   "disposition": "closed",
+   "disposition_detail": "receipt.json filled from real dispatch result",
+   "evidence": [
+    ".ufo/waves/round-95/receipt.json"
+   ]
+  },
+  {
+   "id": "r95-PR-01",
+   "origin_round": 95,
+   "source_id": "PR-01",
+   "group": "PR",
+   "title": "mid-round producer hand-off gap (22-case tool / 20-case contract)",
+   "disposition": "addressed",
+   "disposition_detail": "disclosed; recorded as adjudication condition",
+   "evidence": [
+    "LOG.md r95 closure",
+    ".ufo/waves/round-95/seats/V31-debt.json PR-01"
+   ]
+  },
+  {
+   "id": "r95-PR-02",
+   "origin_round": 95,
+   "source_id": "PR-02",
+   "group": "PR",
+   "title": "stale seat outputs (mid-round INCONCLUSIVE etc.)",
+   "disposition": "addressed",
+   "disposition_detail": "superseded by finals; ST-01 records the supersession",
+   "evidence": [
+    ".ufo/waves/round-95/seats/V31-debt.json ST-01"
+   ]
+  },
+  {
+   "id": "r95-PR-03",
+   "origin_round": 95,
+   "source_id": "PR-03",
+   "group": "PR",
+   "title": "artifact hygiene (two reports outside lane + transient scratch)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; strays collected",
+   "evidence": [
+    "LOG.md r95 closure"
+   ]
+  },
+  {
+   "id": "r95-ST-01",
+   "origin_round": 95,
+   "source_id": "ST-01",
+   "group": "ST",
+   "title": "v1->v4 supersession of this ledger",
+   "disposition": "addressed",
+   "disposition_detail": "final v4 is the compiled record",
+   "evidence": [
+    ".ufo/waves/round-95/seats/V31-debt.json version"
+   ]
+  },
+  {
+   "id": "r96-NB-01",
+   "origin_round": 96,
+   "source_id": "NB-01",
+   "group": "NB",
+   "title": "dual_pointer confined to legacy dialect",
+   "disposition": "carried",
+   "disposition_detail": "canonical two-pointer cells stay exit 2 unsupported_map (fail-closed); permanent scope bound",
+   "evidence": [
+    "SKILL.md map row code->class",
+    "r99:CO-05 open_accepted"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-02",
+   "origin_round": 96,
+   "source_id": "NB-02",
+   "group": "NB",
+   "title": "inventory gating scope: anchor count receipt-only",
+   "disposition": "carried",
+   "disposition_detail": "off-form declarations compared positionally; bound retained",
+   "evidence": [
+    "corpus/tools/README.md Round-96 addendum"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-03",
+   "origin_round": 96,
+   "source_id": "NB-03",
+   "group": "NB",
+   "title": "pinned inventory case is over-declaration, not deletion form",
+   "disposition": "carried",
+   "disposition_detail": "bound retained; deletion class covered by gating, not by that pin",
+   "evidence": [
+    "corpus/tools/map-obligations-contract.json"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-04",
+   "origin_round": 96,
+   "source_id": "NB-04",
+   "group": "NB",
+   "title": "--freeze has no scope guard (foreign c3red pin)",
+   "disposition": "closed",
+   "disposition_detail": "SCOPE-REFUSED no-write delivered r97; c3red removed at r96 closure",
+   "evidence": [
+    "commit 9d25df9",
+    "commit f3e09f9 (C-1)"
+   ],
+   "trail": [
+    "r97:CO-02"
+   ]
+  },
+  {
+   "id": "r96-NB-05",
+   "origin_round": 96,
+   "source_id": "NB-05",
+   "group": "NB",
+   "title": "nothing validates the pin set (bogus 6th pin passes)",
+   "disposition": "closed",
+   "disposition_detail": "16-case exact-set loader r97; dropped pins fail closed",
+   "evidence": [
+    "commit 9d25df9"
+   ],
+   "trail": [
+    "r97:CO-05"
+   ]
+  },
+  {
+   "id": "r96-NB-06",
+   "origin_round": 96,
+   "source_id": "NB-06",
+   "group": "NB",
+   "title": "pins bind by basename only",
+   "disposition": "closed",
+   "disposition_detail": "PATH-MISMATCH path binding r97",
+   "evidence": [
+    "commit 9d25df9"
+   ],
+   "trail": [
+    "r97:CO-03"
+   ]
+  },
+  {
+   "id": "r96-NB-08",
+   "origin_round": 96,
+   "source_id": "NB-08",
+   "group": "NB",
+   "title": "DIGEST-MISMATCH cannot name the changed file",
+   "disposition": "closed",
+   "disposition_detail": "names changed file(s) with before/after sha256 since r97",
+   "evidence": [
+    "commit 9d25df9"
+   ],
+   "trail": [
+    "r97:CO-04"
+   ]
+  },
+  {
+   "id": "r96-NB-09",
+   "origin_round": 96,
+   "source_id": "NB-09",
+   "group": "NB",
+   "title": "SELF-TEST-MISMATCH exit convention diverges",
+   "disposition": "closed",
+   "disposition_detail": "exit 2 (pinned as case 17) at r98; r97 exit-1 form the demonstrated before",
+   "evidence": [
+    "commit 4265df5",
+    "SCORECARD.md r98 calibration row"
+   ],
+   "trail": [
+    "r97:CO-08",
+    "r97:NB-18",
+    "r98:CO-16"
+   ]
+  },
+  {
+   "id": "r96-NB-10",
+   "origin_round": 96,
+   "source_id": "NB-10",
+   "group": "NB",
+   "title": "freeze() discards its verify result; MALFORMED-MODEL/CONTRACT-INVALID unpinned",
+   "disposition": "addressed",
+   "disposition_detail": "split disposition: verify propagation closed r97; the MALFORMED-MODEL/CONTRACT-INVALID pin half remains carried (r96-NB-10's second half, tracked in detail)",
+   "evidence": [
+    "commit 9d25df9",
+    "r99:CO-06 (open_accepted)"
+   ],
+   "trail": [
+    "r97:CO-06"
+   ]
+  },
+  {
+   "id": "r96-NB-11",
+   "origin_round": 96,
+   "source_id": "NB-11",
+   "group": "NB",
+   "title": "chain-scoped byte-sensitive gate unregistered",
+   "disposition": "addressed",
+   "disposition_detail": "registered at r96 closure (C-8: tools README addendum + SKILL row); reformat-sensitivity remains a documented bound",
+   "evidence": [
+    "commit f3e09f9",
+    "SKILL.md dependency row"
+   ]
+  },
+  {
+   "id": "r96-NB-12",
+   "origin_round": 96,
+   "source_id": "NB-12",
+   "group": "NB",
+   "title": "gate-invisibility of contradiction/accusation/winner classes",
+   "disposition": "addressed",
+   "disposition_detail": "consolidated as documented manual-review limit (blind-spot table + registry scope); no gate reads testimony by design",
+   "evidence": [
+    "corpus/knowledge/r99-gate-blind-spot-table.md Limits",
+    "SCORECARD.md r96 depth bounds"
+   ]
+  },
+  {
+   "id": "r96-NB-13",
+   "origin_round": 96,
+   "source_id": "NB-13",
+   "group": "NB",
+   "title": "'first two-account fixture with empty ledger' corpus-bounded",
+   "disposition": "carried",
+   "disposition_detail": "bound statement (23 scanned, 22 non-empty), accepted",
+   "evidence": [
+    "SCORECARD.md r96 depth bounds"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-14",
+   "origin_round": 96,
+   "source_id": "NB-14",
+   "group": "NB",
+   "title": "Q6 note receipts pinned to r95/in-flight revisions",
+   "disposition": "closed",
+   "disposition_detail": "re-pinned by dated addendum at r98 closure",
+   "evidence": [
+    "commit 4265df5",
+    "corpus/knowledge/r96-response-scope-note.md (dated addendum)"
+   ],
+   "trail": [
+    "r97:CO-11"
+   ]
+  },
+  {
+   "id": "r96-NB-15",
+   "origin_round": 96,
+   "source_id": "NB-15",
+   "group": "NB",
+   "title": "map doc-fidelity nits (3 items)",
+   "disposition": "addressed",
+   "disposition_detail": "2/3 closed r97 (delimiter cell, stale 'new relation' sentence; receipts unchanged); :18 'r94 JSON pointers' imprecision carried",
+   "evidence": [
+    "commit 9d25df9",
+    "SCORECARD.md r97 depth row"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-16",
+   "origin_round": 96,
+   "source_id": "NB-16",
+   "group": "NB",
+   "title": "carried presupposition ('the same agreed bell') doubled",
+   "disposition": "carried",
+   "disposition_detail": "not re-raised r97; whole-claim reviews found no constructible overclaim",
+   "evidence": [
+    "r97:CO-15"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-17",
+   "origin_round": 96,
+   "source_id": "NB-17",
+   "group": "NB",
+   "title": "/tmp inode exhaustion on host",
+   "disposition": "addressed",
+   "disposition_detail": "cleared by r98 (df -i 2%, no Errno 28); TMPDIR workarounds recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-13 (not_recurring CO-11)"
+   ],
+   "trail": [
+    "r97:CO-13"
+   ]
+  },
+  {
+   "id": "r96-NB-19",
+   "origin_round": 96,
+   "source_id": "NB-19",
+   "group": "NB",
+   "title": "tool-revision flux (map >=8 sha256s incl. NameError window)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded harness property; final revisions measured and pinned",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json NB-19"
+   ],
+   "trail": [
+    "r95:NB-09"
+   ]
+  },
+  {
+   "id": "r96-NB-20",
+   "origin_round": 96,
+   "source_id": "NB-20",
+   "group": "NB",
+   "title": "drift scope unchanged (entities-only, claim-shaped-only)",
+   "disposition": "carried",
+   "disposition_detail": "bound retained (see r95-NB-01)",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json NB-20"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-21",
+   "origin_round": 96,
+   "source_id": "NB-21",
+   "group": "NB",
+   "title": "consistent regeneration still exits 0",
+   "disposition": "carried",
+   "disposition_detail": "permanent declared-vs-observed bound; blind-spot row 7",
+   "evidence": [
+    "corpus/knowledge/r99-gate-blind-spot-table.md row 7"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-NB-22",
+   "origin_round": 96,
+   "source_id": "NB-22",
+   "group": "NB",
+   "title": "dependency_freeze undocumented in delivered docs",
+   "disposition": "closed",
+   "disposition_detail": "tools README Round-96 addendum + SKILL row at closure",
+   "evidence": [
+    "commit f3e09f9"
+   ]
+  },
+  {
+   "id": "r96-NB-23",
+   "origin_round": 96,
+   "source_id": "NB-23",
+   "group": "NB",
+   "title": "freeze revision label semantics undocumented",
+   "disposition": "addressed",
+   "disposition_detail": "writer-managed revision refresh disclosed at r100 (additive-only delta)",
+   "evidence": [
+    "SCORECARD.md r100 coverage row",
+    "LOG.md r100 closure"
+   ]
+  },
+  {
+   "id": "r96-NB-24",
+   "origin_round": 96,
+   "source_id": "NB-24",
+   "group": "NB",
+   "title": "V50 WC corrections: before-clause '5 sources' must be 4",
+   "disposition": "closed",
+   "disposition_detail": "declaration erratum (1) at r96 closure",
+   "evidence": [
+    "LOG.md r96 closure errata"
+   ]
+  },
+  {
+   "id": "r96-NB-25",
+   "origin_round": 96,
+   "source_id": "NB-25",
+   "group": "NB",
+   "title": "dual_pointer unpinned + droppable pins",
+   "disposition": "closed",
+   "disposition_detail": "case 25 persisted; loader fails closed on ANY dropped pin (r97)",
+   "evidence": [
+    "commit 9d25df9",
+    "corpus/tools/map-obligations-contract.json"
+   ],
+   "trail": [
+    "r97:CO-01"
+   ]
+  },
+  {
+   "id": "r96-NB-26",
+   "origin_round": 96,
+   "source_id": "NB-26",
+   "group": "NB",
+   "title": "r95 F-1 stale pin unrepaired by r96",
+   "disposition": "addressed",
+   "disposition_detail": "carried to r98 where the addendum closed it (see r95-NB-08)",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json NB-26"
+   ],
+   "trail": [
+    "r95:NB-08"
+   ]
+  },
+  {
+   "id": "r96-NB-27",
+   "origin_round": 96,
+   "source_id": "NB-27",
+   "group": "NB",
+   "title": "V29 proposed fixtures-README text cites tools addendum",
+   "disposition": "closed",
+   "disposition_detail": "correct text landed at r96 closure (C-8)",
+   "evidence": [
+    "commit f3e09f9"
+   ]
+  },
+  {
+   "id": "r96-CL-01",
+   "origin_round": 96,
+   "source_id": "CL-01",
+   "group": "CL",
+   "title": "resolve foreign c3red pin + re-verify chain",
+   "disposition": "closed",
+   "disposition_detail": "removed at closure; freeze 14/14 + chain 4/4 green on corrected contract c65ac3bd",
+   "evidence": [
+    "commit f3e09f9 (C-1)"
+   ]
+  },
+  {
+   "id": "r96-CL-02",
+   "origin_round": 96,
+   "source_id": "CL-02",
+   "group": "CL",
+   "title": "fixtures README Round-96 + census 170",
+   "disposition": "closed",
+   "disposition_detail": "landed at closure",
+   "evidence": [
+    "commit f3e09f9"
+   ]
+  },
+  {
+   "id": "r96-CL-03",
+   "origin_round": 96,
+   "source_id": "CL-03",
+   "group": "CL",
+   "title": "corpus README :36 + SKILL rows stale",
+   "disposition": "closed",
+   "disposition_detail": "landed at closure",
+   "evidence": [
+    "commit f3e09f9"
+   ]
+  },
+  {
+   "id": "r96-CL-04",
+   "origin_round": 96,
+   "source_id": "CL-04",
+   "group": "CL",
+   "title": "C9 watch row-5 append due",
+   "disposition": "closed",
+   "disposition_detail": "row 5 appended at closure",
+   "evidence": [
+    "commit f3e09f9"
+   ]
+  },
+  {
+   "id": "r96-CL-05",
+   "origin_round": 96,
+   "source_id": "CL-05",
+   "group": "CL",
+   "title": "LOG/SCORECARD r96 entries due",
+   "disposition": "closed",
+   "disposition_detail": "landed (2393934 + f3e09f9)",
+   "evidence": [
+    "commit 2393934",
+    "commit f3e09f9"
+   ]
+  },
+  {
+   "id": "r96-CL-06",
+   "origin_round": 96,
+   "source_id": "CL-06",
+   "group": "CL",
+   "title": "roster 58/64 at compile",
+   "disposition": "addressed",
+   "disposition_detail": "receipt rebuilt 64/64; V43/V58 mutual poll-wait self-recorded",
+   "evidence": [
+    "LOG.md r96 closure"
+   ]
+  },
+  {
+   "id": "r96-CL-07",
+   "origin_round": 96,
+   "source_id": "CL-07",
+   "group": "CL",
+   "title": "no wave-spec/receipt artifacts in round-96",
+   "disposition": "addressed",
+   "disposition_detail": "receipt rebuilt from dispatch (standing convention)",
+   "evidence": [
+    "LOG.md r96 closure"
+   ]
+  },
+  {
+   "id": "r96-CL-08",
+   "origin_round": 96,
+   "source_id": "CL-08",
+   "group": "CL",
+   "title": "fleet report + SHONEN state",
+   "disposition": "closed",
+   "disposition_detail": "SHONEN verified four [~] zero [x] (V39); fleet round-96 report exists",
+   "evidence": [
+    "/home/vgpnk/Projects/shokunin/.ufo/reports/round-96/",
+    "SHONEN.md"
+   ]
+  },
+  {
+   "id": "r96-CL-09",
+   "origin_round": 96,
+   "source_id": "CL-09",
+   "group": "CL",
+   "title": "Q6 stale tool pin re-run",
+   "disposition": "closed",
+   "disposition_detail": "re-run receipts at delivered revision; note addendum r98",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r96-CL-10",
+   "origin_round": 96,
+   "source_id": "CL-10",
+   "group": "CL",
+   "title": "/tmp inode exhaustion operator decision",
+   "disposition": "addressed",
+   "disposition_detail": "host condition cleared by r98",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-13"
+   ]
+  },
+  {
+   "id": "r96-CL-11",
+   "origin_round": 96,
+   "source_id": "CL-11",
+   "group": "CL",
+   "title": "record V37 adjacency-verdict status",
+   "disposition": "closed",
+   "disposition_detail": "recorded at closure (C-7): verdict rests on V31 + L1 checks",
+   "evidence": [
+    "LOG.md r96 closure (C-7)"
+   ]
+  },
+  {
+   "id": "r96-CL-12",
+   "origin_round": 96,
+   "source_id": "CL-12",
+   "group": "CL",
+   "title": "V36's five closure conditions for L1",
+   "disposition": "closed",
+   "disposition_detail": "C-F1/C-NOTE closed by r98 addenda; remainder landed at closure",
+   "evidence": [
+    "commit f3e09f9",
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r96-PR-01",
+   "origin_round": 96,
+   "source_id": "PR-01",
+   "group": "PR",
+   "title": "Q4 disclosed mid-seat comma rewrite",
+   "disposition": "addressed",
+   "disposition_detail": "disclosed; all later verifiers re-ran on delivered bytes",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json PR-01"
+   ]
+  },
+  {
+   "id": "r96-PR-02",
+   "origin_round": 96,
+   "source_id": "PR-02",
+   "group": "PR",
+   "title": "V15 comma observation stale",
+   "disposition": "addressed",
+   "disposition_detail": "superseded by delivered bytes (ST-03)",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json ST-03"
+   ]
+  },
+  {
+   "id": "r96-PR-03",
+   "origin_round": 96,
+   "source_id": "PR-03",
+   "group": "PR",
+   "title": "V33 in-flight attribution inaccurate",
+   "disposition": "addressed",
+   "disposition_detail": "recorded, not material",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json PR-03"
+   ]
+  },
+  {
+   "id": "r96-PR-04",
+   "origin_round": 96,
+   "source_id": "PR-04",
+   "group": "PR",
+   "title": "unattributed transient in fixture dir",
+   "disposition": "carried",
+   "disposition_detail": "never attributed; hygiene record stands",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json PR-04"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r96-PR-05",
+   "origin_round": 96,
+   "source_id": "PR-05",
+   "group": "PR",
+   "title": "minor cross-report slips",
+   "disposition": "addressed",
+   "disposition_detail": "caught and corrected (V56 et al.)",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json PR-05"
+   ]
+  },
+  {
+   "id": "r96-PR-06",
+   "origin_round": 96,
+   "source_id": "PR-06",
+   "group": "PR",
+   "title": "mid-flight producer defects before delivery",
+   "disposition": "addressed",
+   "disposition_detail": "persisted as recorded defects; fixed before delivery",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json PR-06"
+   ]
+  },
+  {
+   "id": "r96-PR-07",
+   "origin_round": 96,
+   "source_id": "PR-07",
+   "group": "PR",
+   "title": "V41 --freeze probe wrote c3red pin (breach)",
+   "disposition": "closed",
+   "disposition_detail": "self-disclosed; pin removed at closure; breach recorded, not re-rolled",
+   "evidence": [
+    "commit f3e09f9 (C-1/C-2)",
+    "LOG.md r96 closure"
+   ]
+  },
+  {
+   "id": "r96-PR-08",
+   "origin_round": 96,
+   "source_id": "PR-08",
+   "group": "PR",
+   "title": "V50 in-flight transients",
+   "disposition": "addressed",
+   "disposition_detail": "recorded with hashes",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json PR-08"
+   ]
+  },
+  {
+   "id": "r96-ST-01",
+   "origin_round": 96,
+   "source_id": "ST-01",
+   "group": "ST",
+   "title": "V34 interim INCONCLUSIVE -> final PASS",
+   "disposition": "addressed",
+   "disposition_detail": "supersession recorded",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json ST-01"
+   ]
+  },
+  {
+   "id": "r96-ST-02",
+   "origin_round": 96,
+   "source_id": "ST-02",
+   "group": "ST",
+   "title": "V33 interim 'blocking defect' -> residual",
+   "disposition": "addressed",
+   "disposition_detail": "supersession recorded",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json ST-02"
+   ]
+  },
+  {
+   "id": "r96-ST-03",
+   "origin_round": 96,
+   "source_id": "ST-03",
+   "group": "ST",
+   "title": "V15 paragraph superseded by delivered bytes",
+   "disposition": "addressed",
+   "disposition_detail": "supersession recorded",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json ST-03"
+   ]
+  },
+  {
+   "id": "r96-ST-04",
+   "origin_round": 96,
+   "source_id": "ST-04",
+   "group": "ST",
+   "title": "Q6 note first revision superseded",
+   "disposition": "addressed",
+   "disposition_detail": "final 6db32ca2 recorded",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json ST-04"
+   ]
+  },
+  {
+   "id": "r96-ST-05",
+   "origin_round": 96,
+   "source_id": "ST-05",
+   "group": "ST",
+   "title": "V34 baseline table remains current",
+   "disposition": "addressed",
+   "disposition_detail": "no action owed",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json ST-05"
+   ]
+  },
+  {
+   "id": "r96-ST-06",
+   "origin_round": 96,
+   "source_id": "ST-06",
+   "group": "ST",
+   "title": "v2->v3 corrections of this ledger",
+   "disposition": "addressed",
+   "disposition_detail": "final v3 is compiled record",
+   "evidence": [
+    ".ufo/waves/round-96/seats/V40-debt.json version"
+   ]
+  },
+  {
+   "id": "r97-NB-01",
+   "origin_round": 97,
+   "source_id": "NB-01",
+   "group": "NB",
+   "title": "r97 fixture not in freeze chain",
+   "disposition": "closed",
+   "disposition_detail": "pinned at r98 (chain six); edge drop REDUCTION-DETECTED; V46 FAIL discharged",
+   "evidence": [
+    "commit 4265df5",
+    "SCORECARD.md r98 coverage row"
+   ],
+   "trail": [
+    "r98:CO-01 (closed)"
+   ]
+  },
+  {
+   "id": "r97-NB-02",
+   "origin_round": 97,
+   "source_id": "NB-02",
+   "group": "NB",
+   "title": "refreshed r96 pin misses repaired map",
+   "disposition": "closed",
+   "disposition_detail": "r96 re-frozen through guarded path at r97 (revision-only refresh, digest unchanged)",
+   "evidence": [
+    "commit 9d25df9",
+    "SCORECARD.md r97 coverage row"
+   ]
+  },
+  {
+   "id": "r97-NB-03",
+   "origin_round": 97,
+   "source_id": "NB-03",
+   "group": "NB",
+   "title": "tools README :175 describes pre-r97 freeze",
+   "disposition": "closed",
+   "disposition_detail": "S2 supersession block landed at r98 closure",
+   "evidence": [
+    "commit 4265df5"
+   ],
+   "trail": [
+    "r98:CO-03 (closed)"
+   ]
+  },
+  {
+   "id": "r97-NB-04",
+   "origin_round": 97,
+   "source_id": "NB-04",
+   "group": "NB",
+   "title": "SKILL :87 / corpus README :37 stale (24 cases)",
+   "disposition": "closed",
+   "disposition_detail": "refreshed at r98 closure (17 cases / six fixtures wording of the time)",
+   "evidence": [
+    "commit 4265df5 (r98 CL-02/03)"
+   ]
+  },
+  {
+   "id": "r97-NB-05",
+   "origin_round": 97,
+   "source_id": "NB-05",
+   "group": "NB",
+   "title": "fixtures README Round-97 absent, census 170 stale",
+   "disposition": "closed",
+   "disposition_detail": "landed at r97 closure (census 171 + dated :1213 correction)",
+   "evidence": [
+    "commit 9d25df9"
+   ]
+  },
+  {
+   "id": "r97-NB-06",
+   "origin_round": 97,
+   "source_id": "NB-06",
+   "group": "NB",
+   "title": "r95/r96 note stale pins carried",
+   "disposition": "closed",
+   "disposition_detail": "both corrected by dated addenda at r98 closure",
+   "evidence": [
+    "commit 4265df5",
+    "SCORECARD.md r98 freshness row (first freshness improvement)"
+   ],
+   "trail": [
+    "r98:CO-06 (closed)"
+   ]
+  },
+  {
+   "id": "r97-NB-07",
+   "origin_round": 97,
+   "source_id": "NB-07",
+   "group": "NB",
+   "title": "r97 note receipt cites in-flight run as history",
+   "disposition": "carried",
+   "disposition_detail": "standing caveat accepted (r98 CO-07 open_or_accepted)",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json bounds_carried.open_or_accepted"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r97-NB-08",
+   "origin_round": 97,
+   "source_id": "NB-08",
+   "group": "NB",
+   "title": "dual_pointer legacy-dialect-scoped",
+   "disposition": "carried",
+   "disposition_detail": "canonical variants stay fail-closed exit 2; permanent bound",
+   "evidence": [
+    "SCORECARD.md r97 calibration bounds"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r97-NB-09",
+   "origin_round": 97,
+   "source_id": "NB-09",
+   "group": "NB",
+   "title": "consistent regeneration still exits 0",
+   "disposition": "carried",
+   "disposition_detail": "declared-vs-observed gate bound; blind-spot row 7",
+   "evidence": [
+    "corpus/knowledge/r99-gate-blind-spot-table.md row 7"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r97-NB-12",
+   "origin_round": 97,
+   "source_id": "NB-12",
+   "group": "NB",
+   "title": "R1 report quote slip (exit=1 findings=[] vs actual)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded as PR-04; facts elsewhere correct",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-04"
+   ]
+  },
+  {
+   "id": "r97-NB-13",
+   "origin_round": 97,
+   "source_id": "NB-13",
+   "group": "NB",
+   "title": "R3 paraphrase rebuts wording absent from LOG",
+   "disposition": "addressed",
+   "disposition_detail": "recorded as PR-05; measured facts correct",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-05"
+   ]
+  },
+  {
+   "id": "r97-NB-14",
+   "origin_round": 97,
+   "source_id": "NB-14",
+   "group": "NB",
+   "title": "repaired r96 map lost standalone relation-bound sentence",
+   "disposition": "carried",
+   "disposition_detail": "bound survives in J11 anchor/README/sources; not re-raised r98",
+   "evidence": [
+    "r98:CO-12"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r97-NB-15",
+   "origin_round": 97,
+   "source_id": "NB-15",
+   "group": "NB",
+   "title": "check_bible dependency blind spots (empty/earlier/terminal)",
+   "disposition": "closed",
+   "disposition_detail": "documented r99 (blind-spot rows 1-3 with replays); wrong-but-earlier persisted as repointed_edge r101 (19/19); detection live since r96 freeze",
+   "evidence": [
+    "commit fe1ce46",
+    "commit ceeef43",
+    "corpus/knowledge/r99-gate-blind-spot-table.md rows 1-3",
+    "this pass: SELF-TEST 19/19 incl CASE repointed_edge (2026-10-18)"
+   ],
+   "trail": [
+    "r98:NB-05",
+    "r98:CO-13"
+   ]
+  },
+  {
+   "id": "r97-NB-16",
+   "origin_round": 97,
+   "source_id": "NB-16",
+   "group": "NB",
+   "title": "poll-wait/endgame hazards (mutual windows)",
+   "disposition": "addressed",
+   "disposition_detail": "subtract-SELF convention adopted r98 and held; mutual-wait class documented",
+   "evidence": [
+    "SCORECARD.md r98 discernment",
+    "V37 PR-03"
+   ]
+  },
+  {
+   "id": "r97-NB-17",
+   "origin_round": 97,
+   "source_id": "NB-17",
+   "group": "NB",
+   "title": "freeze verify-side bounds (name-gated lookup, symlinks, JSON-only payload)",
+   "disposition": "carried",
+   "disposition_detail": "accepted bounds, documented in registry scope",
+   "evidence": [
+    "SKILL.md dependency row scope",
+    "r98:CO-15"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r97-NB-18",
+   "origin_round": 97,
+   "source_id": "NB-18",
+   "group": "NB",
+   "title": "SELF-TEST-MISMATCH exit divergence carried",
+   "disposition": "addressed",
+   "disposition_detail": "closed at r98 (see r96-NB-09)",
+   "evidence": [
+    "commit 4265df5"
+   ],
+   "trail": [
+    "r96:NB-09"
+   ]
+  },
+  {
+   "id": "r97-NB-19",
+   "origin_round": 97,
+   "source_id": "NB-19",
+   "group": "NB",
+   "title": "tool-revision flux r97",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; final revisions pinned",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json NB-19"
+   ],
+   "trail": [
+    "r95:NB-09"
+   ]
+  },
+  {
+   "id": "r97-NB-20",
+   "origin_round": 97,
+   "source_id": "NB-20",
+   "group": "NB",
+   "title": "r97 fixture README replay without exits",
+   "disposition": "carried",
+   "disposition_detail": "recurrence of r94-BR-17 class (see that item)",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json NB-20"
+   ],
+   "trail": [
+    "r94:BR-17"
+   ],
+   "carried_owner": "r103+ (operator)"
+  },
+  {
+   "id": "r97-CL-01",
+   "origin_round": 97,
+   "source_id": "CL-01",
+   "group": "CL",
+   "title": "fixtures README Round-97 append + census",
+   "disposition": "closed",
+   "disposition_detail": "landed at r97 closure",
+   "evidence": [
+    "commit 9d25df9"
+   ]
+  },
+  {
+   "id": "r97-CL-02",
+   "origin_round": 97,
+   "source_id": "CL-02",
+   "group": "CL",
+   "title": "corpus README bullets (25 cases; 16 freeze cases)",
+   "disposition": "closed",
+   "disposition_detail": "landed at r97 closure",
+   "evidence": [
+    "commit 9d25df9"
+   ]
+  },
+  {
+   "id": "r97-CL-03",
+   "origin_round": 97,
+   "source_id": "CL-03",
+   "group": "CL",
+   "title": "C9 watch row-6 append",
+   "disposition": "closed",
+   "disposition_detail": "row 6 appended at closure (V48 block verbatim)",
+   "evidence": [
+    "commit 9d25df9"
+   ]
+  },
+  {
+   "id": "r97-CL-04",
+   "origin_round": 97,
+   "source_id": "CL-04",
+   "group": "CL",
+   "title": "SKILL.md registry rows refresh",
+   "disposition": "closed",
+   "disposition_detail": "landed at r97 closure",
+   "evidence": [
+    "commit 9d25df9"
+   ]
+  },
+  {
+   "id": "r97-CL-05",
+   "origin_round": 97,
+   "source_id": "CL-05",
+   "group": "CL",
+   "title": "tools README Round-97 C2 addendum",
+   "disposition": "closed",
+   "disposition_detail": "landed at r97 closure (supersedes :175)",
+   "evidence": [
+    "commit 9d25df9"
+   ]
+  },
+  {
+   "id": "r97-CL-06",
+   "origin_round": 97,
+   "source_id": "CL-06",
+   "group": "CL",
+   "title": "re-freeze record + V12/V46 errata",
+   "disposition": "closed",
+   "disposition_detail": "landed at r97 closure",
+   "evidence": [
+    "commit 9d25df9"
+   ]
+  },
+  {
+   "id": "r97-CL-07",
+   "origin_round": 97,
+   "source_id": "CL-07",
+   "group": "CL",
+   "title": "receipt fill / bookkeeping / commit split",
+   "disposition": "closed",
+   "disposition_detail": "landed (9d25df9 + 9a3d648)",
+   "evidence": [
+    "commit 9d25df9",
+    "commit 9a3d648"
+   ]
+  },
+  {
+   "id": "r97-CL-08",
+   "origin_round": 97,
+   "source_id": "CL-08",
+   "group": "CL",
+   "title": "do-not-touch constraints honored",
+   "disposition": "closed",
+   "disposition_detail": "verified at closure (charter set byte-identical)",
+   "evidence": [
+    "SCORECARD.md r97 adjacency row"
+   ]
+  },
+  {
+   "id": "r97-CL-09",
+   "origin_round": 97,
+   "source_id": "CL-09",
+   "group": "CL",
+   "title": "adjudicator/roster accounting",
+   "disposition": "addressed",
+   "disposition_detail": "receipt 64/64; absences resolved at closure",
+   "evidence": [
+    "LOG.md r97 closure"
+   ]
+  },
+  {
+   "id": "r97-CL-10",
+   "origin_round": 97,
+   "source_id": "CL-10",
+   "group": "CL",
+   "title": "r95/r96 note stale-pin decision",
+   "disposition": "closed",
+   "disposition_detail": "repaired r98 via dated addenda",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r97-CL-11",
+   "origin_round": 97,
+   "source_id": "CL-11",
+   "group": "CL",
+   "title": "SHONEN state + fleet report + receipt",
+   "disposition": "closed",
+   "disposition_detail": "four [~] verified; fleet round-97 report exists",
+   "evidence": [
+    "/home/vgpnk/Projects/shokunin/.ufo/reports/round-97/"
+   ]
+  },
+  {
+   "id": "r97-CL-12",
+   "origin_round": 97,
+   "source_id": "CL-12",
+   "group": "CL",
+   "title": "r97 fixture freeze-pin decision",
+   "disposition": "closed",
+   "disposition_detail": "pinned r98 (chain six)",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r97-PR-01",
+   "origin_round": 97,
+   "source_id": "PR-01",
+   "group": "PR",
+   "title": "V12 FAIL recorded (map digest unpinned claim)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded, discharged by erratum at closure; not re-rolled",
+   "evidence": [
+    "commit 9d25df9",
+    "SCORECARD.md r97 coverage"
+   ]
+  },
+  {
+   "id": "r97-PR-02",
+   "origin_round": 97,
+   "source_id": "PR-02",
+   "group": "PR",
+   "title": "V46 FAIL recorded (r97 edge unfrozen)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; discharged r98 (exact mutation bytes exit 1 REDUCTION-DETECTED)",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r97-PR-03",
+   "origin_round": 97,
+   "source_id": "PR-03",
+   "group": "PR",
+   "title": "mutual poll-wait windows (R4<->R5, R1<->R2)",
+   "disposition": "addressed",
+   "disposition_detail": "characterized; no trapped pair; convention followed",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-03"
+   ]
+  },
+  {
+   "id": "r97-PR-04",
+   "origin_round": 97,
+   "source_id": "PR-04",
+   "group": "PR",
+   "title": "R1 quote-slip process record (same finding as NB-12)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; facts elsewhere correct",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-04"
+   ]
+  },
+  {
+   "id": "r97-PR-05",
+   "origin_round": 97,
+   "source_id": "PR-05",
+   "group": "PR",
+   "title": "R3 paraphrase process record (same finding as NB-13)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; measured facts correct",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-05"
+   ]
+  },
+  {
+   "id": "r97-PR-06",
+   "origin_round": 97,
+   "source_id": "PR-06",
+   "group": "PR",
+   "title": "/tmp ENOSPC during wave; TMPDIR redirections",
+   "disposition": "addressed",
+   "disposition_detail": "host condition cleared r98",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-06"
+   ]
+  },
+  {
+   "id": "r97-PR-07",
+   "origin_round": 97,
+   "source_id": "PR-07",
+   "group": "PR",
+   "title": "revision flux incl. incomplete freeze revision",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; final revision verified",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-07"
+   ]
+  },
+  {
+   "id": "r97-PR-08",
+   "origin_round": 97,
+   "source_id": "PR-08",
+   "group": "PR",
+   "title": "interim->final verdict updates",
+   "disposition": "addressed",
+   "disposition_detail": "supersessions recorded (ST group)",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-08"
+   ]
+  },
+  {
+   "id": "r97-PR-09",
+   "origin_round": 97,
+   "source_id": "PR-09",
+   "group": "PR",
+   "title": "mid-flight README/map were r96 copies",
+   "disposition": "addressed",
+   "disposition_detail": "map_obligations correctly failed missing_obligation; superseded by rewrites",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-09"
+   ]
+  },
+  {
+   "id": "r97-PR-10",
+   "origin_round": 97,
+   "source_id": "PR-10",
+   "group": "PR",
+   "title": "seats absent at compile",
+   "disposition": "addressed",
+   "disposition_detail": "receipt 64/64 at closure",
+   "evidence": [
+    "LOG.md r97 closure"
+   ]
+  },
+  {
+   "id": "r97-PR-11",
+   "origin_round": 97,
+   "source_id": "PR-11",
+   "group": "PR",
+   "title": "poll-glob hazard (scratch dirs matched as reports)",
+   "disposition": "addressed",
+   "disposition_detail": "naming mismatch recorded; convention noted",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-11"
+   ]
+  },
+  {
+   "id": "r97-PR-12",
+   "origin_round": 97,
+   "source_id": "PR-12",
+   "group": "PR",
+   "title": "V39 integration checklist P0-P9",
+   "disposition": "addressed",
+   "disposition_detail": "produced for L1; executed at closure",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-12"
+   ]
+  },
+  {
+   "id": "r97-PR-13",
+   "origin_round": 97,
+   "source_id": "PR-13",
+   "group": "PR",
+   "title": "cross-seat audits (V53 5/5; V47 corrections)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json PR-13"
+   ]
+  },
+  {
+   "id": "r97-ST-01",
+   "origin_round": 97,
+   "source_id": "ST-01",
+   "group": "ST",
+   "title": "V30/V45 PENDING superseded by PASS",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json ST-01"
+   ]
+  },
+  {
+   "id": "r97-ST-02",
+   "origin_round": 97,
+   "source_id": "ST-02",
+   "group": "ST",
+   "title": "V09/V26 interim superseded",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json ST-02"
+   ]
+  },
+  {
+   "id": "r97-ST-03",
+   "origin_round": 97,
+   "source_id": "ST-03",
+   "group": "ST",
+   "title": "mid-flight README/map superseded",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json ST-03"
+   ]
+  },
+  {
+   "id": "r97-ST-04",
+   "origin_round": 97,
+   "source_id": "ST-04",
+   "group": "ST",
+   "title": "R6 note first revision superseded",
+   "disposition": "addressed",
+   "disposition_detail": "final 5e3b4225 recorded",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json ST-04"
+   ]
+  },
+  {
+   "id": "r97-ST-05",
+   "origin_round": 97,
+   "source_id": "ST-05",
+   "group": "ST",
+   "title": "V36 placeholder superseded",
+   "disposition": "addressed",
+   "disposition_detail": "final PASS recorded",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json ST-05"
+   ]
+  },
+  {
+   "id": "r97-ST-06",
+   "origin_round": 97,
+   "source_id": "ST-06",
+   "group": "ST",
+   "title": "V14 preliminary superseded",
+   "disposition": "addressed",
+   "disposition_detail": "final PASS recorded",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json ST-06"
+   ]
+  },
+  {
+   "id": "r97-ST-07",
+   "origin_round": 97,
+   "source_id": "ST-07",
+   "group": "ST",
+   "title": "fixtures README :1213 sentence superseded",
+   "disposition": "addressed",
+   "disposition_detail": "dated correction queued and landed at closure (CL-01)",
+   "evidence": [
+    ".ufo/waves/round-97/seats/V37-debt.json ST-07"
+   ]
+  },
+  {
+   "id": "r98-NB-01",
+   "origin_round": 98,
+   "source_id": "NB-01",
+   "group": "NB",
+   "title": "tools README 'not gitignored' claim false",
+   "disposition": "closed",
+   "disposition_detail": "erratum at r98 closure (CL-05); .gitignore covered *-self-test-*/ since r97",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-NB-02",
+   "origin_round": 98,
+   "source_id": "NB-02",
+   "group": "NB",
+   "title": "tools README :283 git-diff claim wrong",
+   "disposition": "closed",
+   "disposition_detail": "erratum at r98 closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-NB-03",
+   "origin_round": 98,
+   "source_id": "NB-03",
+   "group": "NB",
+   "title": "placeholder-poll hazard (r98 README/map were r97 copies)",
+   "disposition": "addressed",
+   "disposition_detail": "content-gated poll convention recorded; recurred r99 (NB-10) and was again recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-01",
+    "r99:NB-10"
+   ]
+  },
+  {
+   "id": "r98-NB-04",
+   "origin_round": 98,
+   "source_id": "NB-04",
+   "group": "NB",
+   "title": "declaration 'byte copies of other 7 files' arithmetic imprecision",
+   "disposition": "addressed",
+   "disposition_detail": "erratum convention; same class as r100/r101 roster errata",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-05",
+    "LOG.md r100/r101 errata"
+   ]
+  },
+  {
+   "id": "r98-NB-05",
+   "origin_round": 98,
+   "source_id": "NB-05",
+   "group": "NB",
+   "title": "checker blind spots recur on r98 event",
+   "disposition": "addressed",
+   "disposition_detail": "consolidated and closed via r99 blind-spot table + r101 repointed_edge pin (see r97-NB-15)",
+   "evidence": [
+    "commit fe1ce46",
+    "commit ceeef43"
+   ],
+   "trail": [
+    "r97:NB-15"
+   ]
+  },
+  {
+   "id": "r98-NB-06",
+   "origin_round": 98,
+   "source_id": "NB-06",
+   "group": "NB",
+   "title": "r98 note cites in-flight contract c435239d",
+   "disposition": "closed",
+   "disposition_detail": "V53 F1 erratum at r98 closure (delivered 153ebc5b)",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-NB-07",
+   "origin_round": 98,
+   "source_id": "NB-07",
+   "group": "NB",
+   "title": "parent-tree stray baseline-analyze.txt",
+   "disposition": "closed",
+   "disposition_detail": "removed at closure (stray sweep); r98 adjacency: single parent stray removed, attributed",
+   "evidence": [
+    "commit 4265df5",
+    "SCORECARD.md r98 adjacency row"
+   ]
+  },
+  {
+   "id": "r98-NB-08",
+   "origin_round": 98,
+   "source_id": "NB-08",
+   "group": "NB",
+   "title": "r98 fixture README replay without exits (fifth recurrence)",
+   "disposition": "carried",
+   "disposition_detail": "instance stands; class tracked under r94-BR-17 (grep verified 2026-10-18: no exit receipts in r98 README)",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json NB-08"
+   ],
+   "trail": [
+    "r94:BR-17"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r98-NB-09",
+   "origin_round": 98,
+   "source_id": "NB-09",
+   "group": "NB",
+   "title": "r98 note 'still read their r97-closure bytes' stale",
+   "disposition": "closed",
+   "disposition_detail": "erratum at r98 closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-NB-10",
+   "origin_round": 98,
+   "source_id": "NB-10",
+   "group": "NB",
+   "title": "V14 bottom-line scope wording",
+   "disposition": "addressed",
+   "disposition_detail": "recorded as PR-11; bounds stated",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-11"
+   ]
+  },
+  {
+   "id": "r98-NB-11",
+   "origin_round": 98,
+   "source_id": "NB-11",
+   "group": "NB",
+   "title": "migration broader than 'path-less' (empty/non-string values)",
+   "disposition": "addressed",
+   "disposition_detail": "migration behavior documented in tools README Round-98 addendum (MIGRATED before/after quoted)",
+   "evidence": [
+    "SCORECARD.md r98 calibration row",
+    "corpus/tools/README.md Round-98 addendum"
+   ]
+  },
+  {
+   "id": "r98-NB-12",
+   "origin_round": 98,
+   "source_id": "NB-12",
+   "group": "NB",
+   "title": "one-way blocked waiter V43->V19; V58 mid-flight",
+   "disposition": "addressed",
+   "disposition_detail": "presence-ledger recorded; convention held",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-09"
+   ]
+  },
+  {
+   "id": "r98-CL-01",
+   "origin_round": 98,
+   "source_id": "CL-01",
+   "group": "CL",
+   "title": "fixtures README Round-98 + census 172",
+   "disposition": "closed",
+   "disposition_detail": "landed at r98 closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-CL-02",
+   "origin_round": 98,
+   "source_id": "CL-02",
+   "group": "CL",
+   "title": "corpus README :38 freeze row -> 17 cases/six fixtures",
+   "disposition": "closed",
+   "disposition_detail": "landed at r98 closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-CL-03",
+   "origin_round": 98,
+   "source_id": "CL-03",
+   "group": "CL",
+   "title": "SKILL rows :96/:98/:99 refresh",
+   "disposition": "closed",
+   "disposition_detail": "landed at r98 closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-CL-04",
+   "origin_round": 98,
+   "source_id": "CL-04",
+   "group": "CL",
+   "title": "C9 watch row-7 append",
+   "disposition": "closed",
+   "disposition_detail": "row 7 appended at closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-CL-05",
+   "origin_round": 98,
+   "source_id": "CL-05",
+   "group": "CL",
+   "title": "errata for NB-01/NB-02/NB-09 and V53 F1",
+   "disposition": "closed",
+   "disposition_detail": "landed at r98 closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-CL-06",
+   "origin_round": 98,
+   "source_id": "CL-06",
+   "group": "CL",
+   "title": "parent-tree stray sweep/record",
+   "disposition": "closed",
+   "disposition_detail": "stray removed, attributed at closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-CL-07",
+   "origin_round": 98,
+   "source_id": "CL-07",
+   "group": "CL",
+   "title": "receipt/bookkeeping/commit split",
+   "disposition": "closed",
+   "disposition_detail": "landed (4265df5 + 111b9a3)",
+   "evidence": [
+    "commit 4265df5",
+    "commit 111b9a3"
+   ]
+  },
+  {
+   "id": "r98-CL-08",
+   "origin_round": 98,
+   "source_id": "CL-08",
+   "group": "CL",
+   "title": "do-not-touch constraints",
+   "disposition": "closed",
+   "disposition_detail": "verified at closure",
+   "evidence": [
+    "SCORECARD.md r98 adjacency row"
+   ]
+  },
+  {
+   "id": "r98-CL-09",
+   "origin_round": 98,
+   "source_id": "CL-09",
+   "group": "CL",
+   "title": "roster accounting (16 absent verifier reports)",
+   "disposition": "closed",
+   "disposition_detail": "receipt rebuilt from both dispatches 64/64",
+   "evidence": [
+    "LOG.md r98 closure (SCORECARD r98 header)"
+   ]
+  },
+  {
+   "id": "r98-CL-10",
+   "origin_round": 98,
+   "source_id": "CL-10",
+   "group": "CL",
+   "title": "r98 fixture README replay exits",
+   "disposition": "carried",
+   "disposition_detail": "NOT landed: r98 README still has no recorded exits (grep 2026-10-18); class carried under r94-BR-17",
+   "evidence": [
+    "grep -n -i exit corpus/fixtures/r98-clerk-filing/README.md -> no matches (2026-10-18)"
+   ],
+   "trail": [
+    "r94:BR-17"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r98-PR-01",
+   "origin_round": 98,
+   "source_id": "PR-01",
+   "group": "PR",
+   "title": "placeholder-poll hazard recorded live",
+   "disposition": "addressed",
+   "disposition_detail": "convention recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-01"
+   ]
+  },
+  {
+   "id": "r98-PR-02",
+   "origin_round": 98,
+   "source_id": "PR-02",
+   "group": "PR",
+   "title": "contract/tool hash flux recorded",
+   "disposition": "addressed",
+   "disposition_detail": "final hashes measured and pinned",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-02"
+   ]
+  },
+  {
+   "id": "r98-PR-03",
+   "origin_round": 98,
+   "source_id": "PR-03",
+   "group": "PR",
+   "title": "V53 narrow FAIL recorded",
+   "disposition": "addressed",
+   "disposition_detail": "stands recorded, discharged by erratum",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-PR-04",
+   "origin_round": 98,
+   "source_id": "PR-04",
+   "group": "PR",
+   "title": "parent-tree stray recorded by 12+ seats",
+   "disposition": "closed",
+   "disposition_detail": "removed at closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-PR-05",
+   "origin_round": 98,
+   "source_id": "PR-05",
+   "group": "PR",
+   "title": "declaration '7 files' imprecision",
+   "disposition": "addressed",
+   "disposition_detail": "recorded (S3 A; V14)",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-05"
+   ]
+  },
+  {
+   "id": "r98-PR-06",
+   "origin_round": 98,
+   "source_id": "PR-06",
+   "group": "PR",
+   "title": "S3 D1 stale clause superseded",
+   "disposition": "addressed",
+   "disposition_detail": "superseded by S4 rewrite",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-06"
+   ]
+  },
+  {
+   "id": "r98-PR-07",
+   "origin_round": 98,
+   "source_id": "PR-07",
+   "group": "PR",
+   "title": "S2 declared S1 ABSENT at hand-off",
+   "disposition": "addressed",
+   "disposition_detail": "bounded stall-escape; S1 landed 20:35-20:36",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-07"
+   ]
+  },
+  {
+   "id": "r98-PR-08",
+   "origin_round": 98,
+   "source_id": "PR-08",
+   "group": "PR",
+   "title": "47 seat files at compile; 16 absent",
+   "disposition": "closed",
+   "disposition_detail": "receipt rebuilt 64/64",
+   "evidence": [
+    "LOG.md r98 closure"
+   ]
+  },
+  {
+   "id": "r98-PR-09",
+   "origin_round": 98,
+   "source_id": "PR-09",
+   "group": "PR",
+   "title": "V59 presence ledger (no mutual-wait pair)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-09"
+   ]
+  },
+  {
+   "id": "r98-PR-10",
+   "origin_round": 98,
+   "source_id": "PR-10",
+   "group": "PR",
+   "title": "v05-self-test-scratch gitignore-covered",
+   "disposition": "addressed",
+   "disposition_detail": "not a stray; recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-10"
+   ]
+  },
+  {
+   "id": "r98-PR-11",
+   "origin_round": 98,
+   "source_id": "PR-11",
+   "group": "PR",
+   "title": "V14 bottom-line scope wording",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-11"
+   ]
+  },
+  {
+   "id": "r98-PR-12",
+   "origin_round": 98,
+   "source_id": "PR-12",
+   "group": "PR",
+   "title": "NB-01/NB-02 independently corroborated",
+   "disposition": "addressed",
+   "disposition_detail": "corroboration recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-12"
+   ]
+  },
+  {
+   "id": "r98-PR-13",
+   "origin_round": 98,
+   "source_id": "PR-13",
+   "group": "PR",
+   "title": "/tmp condition cleared",
+   "disposition": "closed",
+   "disposition_detail": "df -i 2%, no Errno 28",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json PR-13"
+   ]
+  },
+  {
+   "id": "r98-ST-01",
+   "origin_round": 98,
+   "source_id": "ST-01",
+   "group": "ST",
+   "title": "interim battery superseded by re-run",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json ST-01"
+   ]
+  },
+  {
+   "id": "r98-ST-02",
+   "origin_round": 98,
+   "source_id": "ST-02",
+   "group": "ST",
+   "title": "placeholder bytes superseded by S4 rewrites",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json ST-02"
+   ]
+  },
+  {
+   "id": "r98-ST-03",
+   "origin_round": 98,
+   "source_id": "ST-03",
+   "group": "ST",
+   "title": "S3 D1 clause superseded",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json ST-03"
+   ]
+  },
+  {
+   "id": "r98-ST-04",
+   "origin_round": 98,
+   "source_id": "ST-04",
+   "group": "ST",
+   "title": "S5 contract pin superseded (V53 F1)",
+   "disposition": "closed",
+   "disposition_detail": "erratum at closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-ST-05",
+   "origin_round": 98,
+   "source_id": "ST-05",
+   "group": "ST",
+   "title": "interim IN-PROGRESS states superseded",
+   "disposition": "addressed",
+   "disposition_detail": "recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json ST-05"
+   ]
+  },
+  {
+   "id": "r98-ST-06",
+   "origin_round": 98,
+   "source_id": "ST-06",
+   "group": "ST",
+   "title": "'not gitignored' superseded-by-fact",
+   "disposition": "closed",
+   "disposition_detail": "erratum at closure",
+   "evidence": [
+    "commit 4265df5"
+   ]
+  },
+  {
+   "id": "r98-ST-07",
+   "origin_round": 98,
+   "source_id": "ST-07",
+   "group": "ST",
+   "title": "mid-flight map raw=20 mapped=17 superseded",
+   "disposition": "addressed",
+   "disposition_detail": "final 20/20 PASS recorded",
+   "evidence": [
+    ".ufo/waves/round-98/seats/V33-debt.json ST-07"
+   ]
+  },
+  {
+   "id": "r99-NB-01",
+   "origin_round": 99,
+   "source_id": "NB-01",
+   "group": "NB",
+   "title": "S2/S5 and knowledge files absent at poll cap",
+   "disposition": "addressed",
+   "disposition_detail": "window-correct ABSENTs; all landed 02:07-02:11Z (V74 post-escape reads; V36 post_write)",
+   "evidence": [
+    ".ufo/waves/round-99/seats/V74-debt-2.md (poll record)",
+    ".ufo/waves/round-99/seats/V36-debt.json post_write_02_06Z"
+   ]
+  },
+  {
+   "id": "r99-NB-02",
+   "origin_round": 99,
+   "source_id": "NB-02",
+   "group": "NB",
+   "title": "'At the Chalk Stair' locative not in lapse note",
+   "disposition": "addressed",
+   "disposition_detail": "bounded by AC-6 dated record: locative is README/description wording, not a quoted note clause",
+   "evidence": [
+    "LOG.md r99 closure (AC-6)",
+    "SCORECARD.md r99 depth bounds"
+   ]
+  },
+  {
+   "id": "r99-NB-03",
+   "origin_round": 99,
+   "source_id": "NB-03",
+   "group": "NB",
+   "title": "minute-terms gloss not in lapse quotes",
+   "disposition": "addressed",
+   "disposition_detail": "bounded by AC-6 ('per the original minute's terms' is README:11/map:69 wording)",
+   "evidence": [
+    "LOG.md r99 closure (AC-6)"
+   ]
+  },
+  {
+   "id": "r99-NB-04",
+   "origin_round": 99,
+   "source_id": "NB-04",
+   "group": "NB",
+   "title": "V95: lines 70-73 world-assertions vs line 74 clerk-record",
+   "disposition": "addressed",
+   "disposition_detail": "bounded by AC-6: 70-73 impersonal framing, 74 first-person denial; no resolution/blame/reconciliation asserted",
+   "evidence": [
+    "LOG.md r99 closure (AC-6)"
+   ]
+  },
+  {
+   "id": "r99-NB-05",
+   "origin_round": 99,
+   "source_id": "NB-05",
+   "group": "NB",
+   "title": "V14 vs V105 divergence on historical-open-entry clause",
+   "disposition": "addressed",
+   "disposition_detail": "recorded, not smoothed (AC-6 keeps both readings visible)",
+   "evidence": [
+    "LOG.md r99 closure (AC-6)",
+    ".ufo/waves/round-99/seats/V36-debt.json NB-05"
+   ]
+  },
+  {
+   "id": "r99-NB-06",
+   "origin_round": 99,
+   "source_id": "NB-06",
+   "group": "NB",
+   "title": "r99-window-lapse unpinned (UNPINNED-FIXTURE exit 2)",
+   "disposition": "closed",
+   "disposition_detail": "pinned at r100 through guarded --freeze (chain seven); r99 tick-15 removal detected",
+   "evidence": [
+    "commit 6f86bf2",
+    "SCORECARD.md r100 coverage row"
+   ]
+  },
+  {
+   "id": "r99-NB-08",
+   "origin_round": 99,
+   "source_id": "NB-08",
+   "group": "NB",
+   "title": "SKILL/tools README still say 17 cases and five JSON tables",
+   "disposition": "closed",
+   "disposition_detail": "superseded by dated Round-99 text at closure (freshness improved)",
+   "evidence": [
+    "commit fe1ce46",
+    "SCORECARD.md r99 freshness row"
+   ]
+  },
+  {
+   "id": "r99-NB-09",
+   "origin_round": 99,
+   "source_id": "NB-09",
+   "group": "NB",
+   "title": "r99 README replay block records no exits (sixth recurrence)",
+   "disposition": "carried",
+   "disposition_detail": "class tracked under r94-BR-17",
+   "evidence": [
+    ".ufo/waves/round-99/seats/V36-debt.json NB-09"
+   ],
+   "trail": [
+    "r94:BR-17"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r99-NB-10",
+   "origin_round": 99,
+   "source_id": "NB-10",
+   "group": "NB",
+   "title": "placeholder-poll hazard recurred on r99 README/map",
+   "disposition": "addressed",
+   "disposition_detail": "recurrence recorded (see r98-NB-03); convention held",
+   "evidence": [
+    ".ufo/waves/round-99/seats/V36-debt.json NB-10"
+   ],
+   "trail": [
+    "r98:NB-03"
+   ]
+  },
+  {
+   "id": "r99-NB-11",
+   "origin_round": 99,
+   "source_id": "NB-11",
+   "group": "NB",
+   "title": "tool hash flux 1728ed89->6f81f8be->fb9bb9ff",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; delivered fb9bb9ff verified by V34/V74 and at r99 closure",
+   "evidence": [
+    ".ufo/waves/round-99/seats/V74-debt-2.md (hash table)"
+   ],
+   "trail": [
+    "r95:NB-09"
+   ]
+  },
+  {
+   "id": "r99-NB-12",
+   "origin_round": 99,
+   "source_id": "NB-12",
+   "group": "NB",
+   "title": "8 parent-repo files under round-99/seats (V69, V73)",
+   "disposition": "closed",
+   "disposition_detail": "parent strays removed at closure (AC-7: V69 0-byte copies, V73 wrong-cwd stderr; archives dropped)",
+   "evidence": [
+    "commit fe1ce46",
+    "LOG.md r99 closure (AC-7)"
+   ]
+  },
+  {
+   "id": "r99-NB-13",
+   "origin_round": 99,
+   "source_id": "NB-13",
+   "group": "NB",
+   "title": "S3 README/map-still-r98 clause stale",
+   "disposition": "addressed",
+   "disposition_detail": "superseded by S4 rewrite",
+   "evidence": [
+    ".ufo/waves/round-99/seats/V36-debt.json NB-13"
+   ]
+  },
+  {
+   "id": "r99-NB-14",
+   "origin_round": 99,
+   "source_id": "NB-14",
+   "group": "NB",
+   "title": "markdown_tamper is a newline append; symbolism file unpinned (11th file)",
+   "disposition": "addressed",
+   "disposition_detail": "mapped-anchor visibility corrected (AC-2 + blind-spot row 10 at r100); r88 symbolism-clause-map.md remains a named unpinned bound (AC-5)",
+   "evidence": [
+    "LOG.md r99 closure (AC-2, AC-5)",
+    "corpus/knowledge/r99-gate-blind-spot-table.md row 10 (r100 addendum)"
+   ],
+   "carried_owner": "r103+ (operator; lane closes at r102)"
+  },
+  {
+   "id": "r99-NB-15",
+   "origin_round": 99,
+   "source_id": "NB-15",
+   "group": "NB",
+   "title": "V92 quote mismatch on V105 fence",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; does not reverse the locative FAIL",
+   "evidence": [
+    ".ufo/waves/round-99/seats/V36-debt.json NB-15"
+   ]
+  },
+  {
+   "id": "r99-NB-16",
+   "origin_round": 99,
+   "source_id": "NB-16",
+   "group": "NB",
+   "title": "closure docs still at 4265df5; census 173 on disk",
+   "disposition": "closed",
+   "disposition_detail": "closure docs landed at fe1ce46 (AC-8; census 173/39/134/421)",
+   "evidence": [
+    "commit fe1ce46"
+   ]
+  },
+  {
+   "id": "r99-CL-01",
+   "origin_round": 99,
+   "source_id": "CL-01",
+   "group": "CL",
+   "title": "do not admit C2 component 2 (pre-landing)",
+   "disposition": "addressed",
+   "disposition_detail": "superseded by delivery: V34 replayed every table row post-landing with quote-identical digests",
+   "evidence": [
+    "SCORECARD.md r99 depth row (component 2)",
+    ".ufo/waves/round-99/seats/V34-adjudicator.md"
+   ]
+  },
+  {
+   "id": "r99-CL-02",
+   "origin_round": 99,
+   "source_id": "CL-02",
+   "group": "CL",
+   "title": "re-measure C1 on fb9bb9ff, not 6f81f8be",
+   "disposition": "closed",
+   "disposition_detail": "V34 measured C1 on fb9bb9ff/8c2561b0",
+   "evidence": [
+    ".ufo/waves/round-99/seats/V34-adjudicator.md section 1.1"
+   ]
+  },
+  {
+   "id": "r99-CL-03",
+   "origin_round": 99,
+   "source_id": "CL-03",
+   "group": "CL",
+   "title": "SKILL and tools README 17/five-JSON staleness",
+   "disposition": "closed",
+   "disposition_detail": "dated Round-99 text at closure",
+   "evidence": [
+    "commit fe1ce46"
+   ]
+  },
+  {
+   "id": "r99-CL-04",
+   "origin_round": 99,
+   "source_id": "CL-04",
+   "group": "CL",
+   "title": "fixtures README Round-99 + census 173",
+   "disposition": "closed",
+   "disposition_detail": "landed at closure (AC-8)",
+   "evidence": [
+    "commit fe1ce46"
+   ]
+  },
+  {
+   "id": "r99-CL-05",
+   "origin_round": 99,
+   "source_id": "CL-05",
+   "group": "CL",
+   "title": "corpus README bullets",
+   "disposition": "closed",
+   "disposition_detail": "landed at closure (AC-8)",
+   "evidence": [
+    "commit fe1ce46"
+   ]
+  },
+  {
+   "id": "r99-CL-06",
+   "origin_round": 99,
+   "source_id": "CL-06",
+   "group": "CL",
+   "title": "C9 row-8 append",
+   "disposition": "closed",
+   "disposition_detail": "row 8 appended at closure",
+   "evidence": [
+    "commit fe1ce46"
+   ]
+  },
+  {
+   "id": "r99-CL-07",
+   "origin_round": 99,
+   "source_id": "CL-07",
+   "group": "CL",
+   "title": "repair or bound NB-02..NB-05 without smoothing",
+   "disposition": "closed",
+   "disposition_detail": "bounded via AC-6 dated record; nothing smoothed",
+   "evidence": [
+    "LOG.md r99 closure (AC-6)"
+   ]
+  },
+  {
+   "id": "r99-CL-08",
+   "origin_round": 99,
+   "source_id": "CL-08",
+   "group": "CL",
+   "title": "parent stray sweep",
+   "disposition": "closed",
+   "disposition_detail": "AC-7 executed at closure",
+   "evidence": [
+    "commit fe1ce46"
+   ]
+  },
+  {
+   "id": "r99-CL-09",
+   "origin_round": 99,
+   "source_id": "CL-09",
+   "group": "CL",
+   "title": "roster reconcile; V39/V123 censuses stale",
+   "disposition": "closed",
+   "disposition_detail": "receipt 128/128 rebuilt from dispatch (AC-9)",
+   "evidence": [
+    "LOG.md r99 closure (AC-9)"
+   ]
+  },
+  {
+   "id": "r99-CL-10",
+   "origin_round": 99,
+   "source_id": "CL-10",
+   "group": "CL",
+   "title": "do not silently pin r99",
+   "disposition": "closed",
+   "disposition_detail": "honored at r99; pinned openly at r100 through the guarded writer with disclosed additive refresh",
+   "evidence": [
+    "commit 6f86bf2",
+    "SCORECARD.md r100 coverage row"
+   ]
+  },
+  {
+   "id": "r100-AC-ROSTER",
+   "origin_round": 100,
+   "source_id": "AC-ROSTER",
+   "group": "AC",
+   "title": "32 declared vs 34 dispatched identifiers; receipt absent at cutoff",
+   "disposition": "closed",
+   "disposition_detail": "roster erratum recorded append-only; receipt filled from real dispatch (34/34, real agent IDs)",
+   "evidence": [
+    "LOG.md r100 closure (AC-ROSTER)",
+    ".ufo/waves/round-100/receipt.json",
+    "commit 6f86bf2"
+   ]
+  },
+  {
+   "id": "r100-AC-BASELINE",
+   "origin_round": 100,
+   "source_id": "AC-BASELINE",
+   "group": "AC",
+   "title": "fe1ce46 baseline vs pre-dispatch commits b5fe472/ae67105",
+   "disposition": "closed",
+   "disposition_detail": "qualification recorded: both legitimate pre-dispatch lane history; fe1ce46 kept for fixture/pin comparison; V15 not re-rolled",
+   "evidence": [
+    "LOG.md r100 closure (AC-BASELINE)",
+    "commit b5fe472",
+    "commit ae67105"
+   ]
+  },
+  {
+   "id": "r100-AC-DOCS",
+   "origin_round": 100,
+   "source_id": "AC-DOCS",
+   "group": "AC",
+   "title": "closure docs due (fixtures README r100, corpus README, C9 row 9)",
+   "disposition": "closed",
+   "disposition_detail": "landed at closure: Round-100 section, census 174/40/134/421, freeze bullet repaired, C9 row 9",
+   "evidence": [
+    "commit 6f86bf2",
+    "LOG.md r100 closure (AC-DOCS)"
+   ]
+  },
+  {
+   "id": "r100-AC-RECEIPT-ERRATUM",
+   "origin_round": 100,
+   "source_id": "AC-RECEIPT-ERRATUM",
+   "group": "AC",
+   "title": "T2 report quotes two malformed relation digests",
+   "disposition": "closed",
+   "disposition_detail": "report-only erratum filed; actual relations.json SHA-256 recorded (c279254b...); fixture bytes and pins always correct",
+   "evidence": [
+    "LOG.md r100 closure (AC-RECEIPT-ERRATUM)"
+   ]
+  },
+  {
+   "id": "r100-AC-SCOPE",
+   "origin_round": 100,
+   "source_id": "AC-SCOPE",
+   "group": "AC",
+   "title": "semantic-first precedence; unpinned set; dossier-vs-pins distinction",
+   "disposition": "closed",
+   "disposition_detail": "recorded at closure; blind-spot rows 10-12 carry the three correction classes",
+   "evidence": [
+    "LOG.md r100 closure (AC-SCOPE)",
+    "corpus/knowledge/r99-gate-blind-spot-table.md rows 10-12"
+   ]
+  },
+  {
+   "id": "r100-AC-CLOSE",
+   "origin_round": 100,
+   "source_id": "AC-CLOSE",
+   "group": "AC",
+   "title": "closure battery + records on committed revision",
+   "disposition": "closed",
+   "disposition_detail": "battery re-ran green on committed revision (freeze 18/18, chain 7/7, map 25/25, boundary CERTIFIED, census 174, checker pin reproduced)",
+   "evidence": [
+    "LOG.md r100 closure (AC-CLOSE)"
+   ]
+  },
+  {
+   "id": "r100-FAIL-V15",
+   "origin_round": 100,
+   "source_id": "FAIL-V15",
+   "group": "FAIL",
+   "title": "strict allowlist FAIL (baseline attribution)",
+   "disposition": "addressed",
+   "disposition_detail": "qualified, not re-rolled (AC-BASELINE)",
+   "evidence": [
+    "LOG.md r100 closure"
+   ]
+  },
+  {
+   "id": "r100-FAIL-V18",
+   "origin_round": 100,
+   "source_id": "FAIL-V18",
+   "group": "FAIL",
+   "title": "roster FAIL",
+   "disposition": "closed",
+   "disposition_detail": "discharged by roster erratum + filled receipt",
+   "evidence": [
+    "LOG.md r100 closure"
+   ]
+  },
+  {
+   "id": "r100-FAIL-V20",
+   "origin_round": 100,
+   "source_id": "FAIL-V20",
+   "group": "FAIL",
+   "title": "shared closure surfaces FAIL",
+   "disposition": "closed",
+   "disposition_detail": "discharged by AC-DOCS closure docs",
+   "evidence": [
+    "LOG.md r100 closure"
+   ]
+  },
+  {
+   "id": "r100-QUAL-V21",
+   "origin_round": 100,
+   "source_id": "QUAL-V21",
+   "group": "QUAL",
+   "title": "literal-harness limit (two T4 harnesses not independently re-runnable)",
+   "disposition": "addressed",
+   "disposition_detail": "retained as standing convention in r100 and r101 operability rows",
+   "evidence": [
+    "SCORECARD.md r100/r101 operability rows"
+   ]
+  },
+  {
+   "id": "r100-QUAL-V30",
+   "origin_round": 100,
+   "source_id": "QUAL-V30",
+   "group": "QUAL",
+   "title": "cutoff accuracy",
+   "disposition": "addressed",
+   "disposition_detail": "recorded accurately in the closure record",
+   "evidence": [
+    "LOG.md r100 closure"
+   ]
+  },
+  {
+   "id": "r101-DEF-1",
+   "origin_round": 101,
+   "source_id": "DEF-1",
+   "group": "DEF",
+   "title": "entry cites r94 README:13 twice for a line-11 clause",
+   "disposition": "closed",
+   "disposition_detail": "repaired at closure (AC-1): :13->:11 at entry lines 58/81; paraphrase verified true at line 11",
+   "evidence": [
+    "LOG.md r101 closure (AC-1)",
+    "commit ceeef43",
+    "corpus/knowledge/r101-r10-register-first-entry.md"
+   ]
+  },
+  {
+   "id": "r101-DEF-2",
+   "origin_round": 101,
+   "source_id": "DEF-2",
+   "group": "DEF",
+   "title": "range-tail truncations :93-94/:99-100",
+   "disposition": "addressed",
+   "disposition_detail": "recorded (repair was optional per AC-1; anchoring unambiguous; not claimed done)",
+   "evidence": [
+    ".ufo/waves/round-101/seats/V24-adjudicator.md defect 2"
+   ]
+  },
+  {
+   "id": "r101-DEF-3",
+   "origin_round": 101,
+   "source_id": "DEF-3",
+   "group": "DEF",
+   "title": "entry metadata timestamps stale (verified-at 00:18 vs final 00:31)",
+   "disposition": "addressed",
+   "disposition_detail": "recorded; quoted receipts independently re-derived (V07/V09/V15)",
+   "evidence": [
+    ".ufo/waves/round-101/seats/V24-adjudicator.md defect 3"
+   ]
+  },
+  {
+   "id": "r101-DEF-4",
+   "origin_round": 101,
+   "source_id": "DEF-4",
+   "group": "DEF",
+   "title": "C3 delivered as docs-of-record, blind-spot row 2 byte-unchanged",
+   "disposition": "closed",
+   "disposition_detail": "literal row-2 close appended as dated integrator addendum at closure (AC-2); table was outside producer ownership",
+   "evidence": [
+    "LOG.md r101 closure (AC-2)",
+    "corpus/knowledge/r99-gate-blind-spot-table.md (row 2 dated addendum)"
+   ]
+  },
+  {
+   "id": "r101-DEF-5",
+   "origin_round": 101,
+   "source_id": "DEF-5",
+   "group": "DEF",
+   "title": "V13 final never delivered (stub)",
+   "disposition": "addressed",
+   "disposition_detail": "stands as filed; preliminaries corroborated by V17/V23; recorded not re-rolled (AC-4)",
+   "evidence": [
+    "LOG.md r101 closure (AC-4)"
+   ]
+  },
+  {
+   "id": "r101-DEF-6",
+   "origin_round": 101,
+   "source_id": "DEF-6",
+   "group": "DEF",
+   "title": "closure-bookkeeping pendings (README:42 bullet, C9 row 10)",
+   "disposition": "closed",
+   "disposition_detail": "landed at closure (AC-3): freeze bullet refreshed, C9 row 10 appended, closure commits",
+   "evidence": [
+    "LOG.md r101 closure (AC-3)",
+    "commit ceeef43",
+    "commit 542021a",
+    "commit 60e88bf"
+   ]
+  },
+  {
+   "id": "r101-AC-1",
+   "origin_round": 101,
+   "source_id": "AC-1",
+   "group": "AC",
+   "title": "entry citation repair (U2/integrator)",
+   "disposition": "closed",
+   "disposition_detail": "discharged at closure",
+   "evidence": [
+    "LOG.md r101 closure"
+   ]
+  },
+  {
+   "id": "r101-AC-2",
+   "origin_round": 101,
+   "source_id": "AC-2",
+   "group": "AC",
+   "title": "blind-spot row-2 record location (integrator)",
+   "disposition": "closed",
+   "disposition_detail": "discharged at closure (dated addendum)",
+   "evidence": [
+    "LOG.md r101 closure"
+   ]
+  },
+  {
+   "id": "r101-AC-3",
+   "origin_round": 101,
+   "source_id": "AC-3",
+   "group": "AC",
+   "title": "closure battery pendings",
+   "disposition": "closed",
+   "disposition_detail": "discharged (freeze bullet, C9 row 10, closure commit)",
+   "evidence": [
+    "LOG.md r101 closure"
+   ]
+  },
+  {
+   "id": "r101-AC-4",
+   "origin_round": 101,
+   "source_id": "AC-4",
+   "group": "AC",
+   "title": "records only (V13 stub, U2 overbroad claim, V26 probe, scratch variants)",
+   "disposition": "closed",
+   "disposition_detail": "recorded at closure, no action owed",
+   "evidence": [
+    "LOG.md r101 closure"
+   ]
+  }
+ ],
+ "carry_records": [
+  {
+   "id": "r95:CO-01",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-04 with r95 status",
+   "tracks": "r94-BR-04",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-02",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-06 with r95 status",
+   "tracks": "r94-BR-06",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-03",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-07 with r95 status",
+   "tracks": "r94-BR-07",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-04",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-08 with r95 status",
+   "tracks": "r94-BR-08",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-05",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-09 with r95 status",
+   "tracks": "r94-BR-09",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-06",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-10 with r95 status",
+   "tracks": "r94-BR-10",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-07",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-11 with r95 status",
+   "tracks": "r94-BR-11",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-08",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-12 with r95 status",
+   "tracks": "r94-BR-12",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-09",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-13 with r95 status",
+   "tracks": "r94-BR-13",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-10",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-14 with r95 status",
+   "tracks": "r94-BR-14",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-11",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-15 with r95 status",
+   "tracks": "r94-BR-15",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-12",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-19 + r94-BR-20 with r95 status",
+   "tracks": "r94-BR-19 + r94-BR-20",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-13",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-21 with r95 status",
+   "tracks": "r94-BR-21",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-14",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-CR-01 + r94-BR-18 with r95 status",
+   "tracks": "r94-CR-01 + r94-BR-18",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-15",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-CR-02 with r95 status",
+   "tracks": "r94-CR-02",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-16",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-CR-03 with r95 status",
+   "tracks": "r94-CR-03",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-17",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-CR-05 with r95 status",
+   "tracks": "r94-CR-05",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-18",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-CR-06 with r95 status",
+   "tracks": "r94-CR-06",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-19",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-CR-07 with r95 status",
+   "tracks": "r94-CR-07",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-20",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-CR-08 with r95 status",
+   "tracks": "r94-CR-08",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-21",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-27 with r95 status",
+   "tracks": "r94-BR-27",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-22",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-26 with r95 status",
+   "tracks": "r94-BR-26",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:CO-23",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "carried r94 item r94-BR-22 + r94-BR-23 + r94-BR-28 with r95 status",
+   "tracks": "r94-BR-22 + r94-BR-23 + r94-BR-28",
+   "status_seen_at_source": "carried/re-scoped at r95"
+  },
+  {
+   "id": "r95:NB-05",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "r95 restatement of r94-BR-01",
+   "tracks": "r94-BR-01",
+   "status_seen_at_source": "unchanged at r95"
+  },
+  {
+   "id": "r95:NB-06",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "r95 restatement of r94-BR-05",
+   "tracks": "r94-BR-05",
+   "status_seen_at_source": "unchanged at r95"
+  },
+  {
+   "id": "r95:NB-10",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "r95 restatement of r94-BR-16",
+   "tracks": "r94-BR-16",
+   "status_seen_at_source": "unchanged at r95"
+  },
+  {
+   "id": "r95:NB-11",
+   "source_ledger": ".ufo/waves/round-95/seats/V31-debt.json",
+   "text": "r95 restatement of r94-BR-17",
+   "tracks": "r94-BR-17",
+   "status_seen_at_source": "unchanged at r95"
+  },
+  {
+   "id": "r96:CO-01",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r95-NB-02",
+   "tracks": "r95-NB-02",
+   "status_seen_at_source": "ADDRESSED r96"
+  },
+  {
+   "id": "r96:CO-02",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r95-NB-07",
+   "tracks": "r95-NB-07",
+   "status_seen_at_source": "ADDRESSED r96"
+  },
+  {
+   "id": "r96:CO-03",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r95-NB-12",
+   "tracks": "r95-NB-12",
+   "status_seen_at_source": "ADDRESSED r96"
+  },
+  {
+   "id": "r96:CO-04",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r94-BR-01",
+   "tracks": "r94-BR-01",
+   "status_seen_at_source": "PARTIALLY ADDRESSED (JSON half)"
+  },
+  {
+   "id": "r96:CO-05",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r94-BR-05",
+   "tracks": "r94-BR-05",
+   "status_seen_at_source": "STILL OPEN, recurred"
+  },
+  {
+   "id": "r96:CO-06",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r95-NB-08",
+   "tracks": "r95-NB-08",
+   "status_seen_at_source": "RECURRED"
+  },
+  {
+   "id": "r96:CO-07",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r95-NB-09",
+   "tracks": "r95-NB-09",
+   "status_seen_at_source": "RECURRED"
+  },
+  {
+   "id": "r96:CO-08",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r95-NB-01 (+13/14)",
+   "tracks": "r95-NB-01 (+13/14)",
+   "status_seen_at_source": "UNCHANGED"
+  },
+  {
+   "id": "r96:CO-09",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r95-NB-03 (+10/11)",
+   "tracks": "r95-NB-03 (+10/11)",
+   "status_seen_at_source": "UNCHANGED"
+  },
+  {
+   "id": "r96:CO-10",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r94 carry-overs (CR/BR set)",
+   "tracks": "r94 carry-overs (CR/BR set)",
+   "status_seen_at_source": "UNADDRESSED except same-file touches"
+  },
+  {
+   "id": "r96:NB-07",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r94-BR-01",
+   "tracks": "r94-BR-01",
+   "status_seen_at_source": "prose half open"
+  },
+  {
+   "id": "r96:NB-18",
+   "source_ledger": ".ufo/waves/round-96/seats/V40-debt.json",
+   "text": "r96 status of r94-BR-05",
+   "tracks": "r94-BR-05",
+   "status_seen_at_source": "BR-05 recurred live in r96 (transient root scratch dirs)"
+  },
+  {
+   "id": "r97:CO-01",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-25",
+   "tracks": "r96-NB-25",
+   "status_seen_at_source": "CLOSED r97"
+  },
+  {
+   "id": "r97:CO-02",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-04",
+   "tracks": "r96-NB-04",
+   "status_seen_at_source": "CLOSED r97"
+  },
+  {
+   "id": "r97:CO-03",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-06",
+   "tracks": "r96-NB-06",
+   "status_seen_at_source": "CLOSED r97"
+  },
+  {
+   "id": "r97:CO-04",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-08",
+   "tracks": "r96-NB-08",
+   "status_seen_at_source": "CLOSED r97"
+  },
+  {
+   "id": "r97:CO-05",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-05",
+   "tracks": "r96-NB-05",
+   "status_seen_at_source": "CLOSED r97"
+  },
+  {
+   "id": "r97:CO-06",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-10a",
+   "tracks": "r96-NB-10a",
+   "status_seen_at_source": "CLOSED r97"
+  },
+  {
+   "id": "r97:CO-07",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-07 (r94-BR-01)",
+   "tracks": "r96-NB-07 (r94-BR-01)",
+   "status_seen_at_source": "OPEN"
+  },
+  {
+   "id": "r97:CO-08",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-09",
+   "tracks": "r96-NB-09",
+   "status_seen_at_source": "OPEN"
+  },
+  {
+   "id": "r97:CO-09",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-10",
+   "tracks": "r96-NB-10",
+   "status_seen_at_source": "OPEN (MALFORMED pin half)"
+  },
+  {
+   "id": "r97:CO-10",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-15",
+   "tracks": "r96-NB-15",
+   "status_seen_at_source": "2/3 CLOSED"
+  },
+  {
+   "id": "r97:CO-11",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-14 + r96-NB-26",
+   "tracks": "r96-NB-14 + r96-NB-26",
+   "status_seen_at_source": "r95/r96 OPEN; r97 corrected"
+  },
+  {
+   "id": "r97:CO-12",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-18 (r94-BR-05)",
+   "tracks": "r96-NB-18 (r94-BR-05)",
+   "status_seen_at_source": "OPEN, both tools"
+  },
+  {
+   "id": "r97:CO-13",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-17",
+   "tracks": "r96-NB-17",
+   "status_seen_at_source": "OPEN host"
+  },
+  {
+   "id": "r97:CO-14",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-20/NB-21",
+   "tracks": "r96-NB-20/NB-21",
+   "status_seen_at_source": "OPEN/accepted"
+  },
+  {
+   "id": "r97:CO-15",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-16",
+   "tracks": "r96-NB-16",
+   "status_seen_at_source": "NOT RAISED"
+  },
+  {
+   "id": "r97:CO-16",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96 BR-17 class",
+   "tracks": "r96 BR-17 class",
+   "status_seen_at_source": "RECURRED"
+  },
+  {
+   "id": "r97:CO-17",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-CL-04",
+   "tracks": "r96-CL-04",
+   "status_seen_at_source": "PROPOSED, not written"
+  },
+  {
+   "id": "r97:CO-18",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-CO-10",
+   "tracks": "r96-CO-10",
+   "status_seen_at_source": "UNADDRESSED except same-file"
+  },
+  {
+   "id": "r97:NB-10",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r94-BR-05",
+   "tracks": "r94-BR-05",
+   "status_seen_at_source": "BR-05 now both tools"
+  },
+  {
+   "id": "r97:NB-11",
+   "source_ledger": ".ufo/waves/round-97/seats/V37-debt.json",
+   "text": "r97 status of r96-NB-17",
+   "tracks": "r96-NB-17",
+   "status_seen_at_source": "/tmp restatement"
+  },
+  {
+   "id": "r98:CO-01",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-01",
+   "tracks": "r97-NB-01",
+   "status_seen_at_source": "closed (pinned r98)"
+  },
+  {
+   "id": "r98:CO-02",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r94-BR-01 (prose)",
+   "tracks": "r94-BR-01 (prose)",
+   "status_seen_at_source": "open_or_accepted"
+  },
+  {
+   "id": "r98:CO-03",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-03",
+   "tracks": "r97-NB-03",
+   "status_seen_at_source": "closed (S2 supersession)"
+  },
+  {
+   "id": "r98:CO-04",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-04",
+   "tracks": "r97-NB-04",
+   "status_seen_at_source": "open_or_accepted"
+  },
+  {
+   "id": "r98:CO-05",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-05",
+   "tracks": "r97-NB-05",
+   "status_seen_at_source": "open_or_accepted (due r98)"
+  },
+  {
+   "id": "r98:CO-06",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-06",
+   "tracks": "r97-NB-06",
+   "status_seen_at_source": "closed (S5 addenda)"
+  },
+  {
+   "id": "r98:CO-07",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-07",
+   "tracks": "r97-NB-07",
+   "status_seen_at_source": "open_or_accepted (caveat standing)"
+  },
+  {
+   "id": "r98:CO-08",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-08",
+   "tracks": "r97-NB-08",
+   "status_seen_at_source": "open_or_accepted"
+  },
+  {
+   "id": "r98:CO-09",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-09",
+   "tracks": "r97-NB-09",
+   "status_seen_at_source": "open_or_accepted"
+  },
+  {
+   "id": "r98:CO-10",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r94-BR-05",
+   "tracks": "r94-BR-05",
+   "status_seen_at_source": "gitignore half closed; wording half NB-01"
+  },
+  {
+   "id": "r98:CO-11",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r96-NB-17",
+   "tracks": "r96-NB-17",
+   "status_seen_at_source": "not_recurring (/tmp cleared)"
+  },
+  {
+   "id": "r98:CO-12",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-14",
+   "tracks": "r97-NB-14",
+   "status_seen_at_source": "not re-raised"
+  },
+  {
+   "id": "r98:CO-13",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-15",
+   "tracks": "r97-NB-15",
+   "status_seen_at_source": "recurring"
+  },
+  {
+   "id": "r98:CO-14",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-16",
+   "tracks": "r97-NB-16",
+   "status_seen_at_source": "recurring"
+  },
+  {
+   "id": "r98:CO-15",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-17",
+   "tracks": "r97-NB-17",
+   "status_seen_at_source": "open_or_accepted"
+  },
+  {
+   "id": "r98:CO-16",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r96-NB-09",
+   "tracks": "r96-NB-09",
+   "status_seen_at_source": "closed (C1a)"
+  },
+  {
+   "id": "r98:CO-17",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r97-NB-19",
+   "tracks": "r97-NB-19",
+   "status_seen_at_source": "recurring"
+  },
+  {
+   "id": "r98:CO-18",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r94-BR-17",
+   "tracks": "r94-BR-17",
+   "status_seen_at_source": "recurring"
+  },
+  {
+   "id": "r98:CO-19",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r94-BR-01 (prose)",
+   "tracks": "r94-BR-01 (prose)",
+   "status_seen_at_source": "open_or_accepted"
+  },
+  {
+   "id": "r98:CO-20",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r96-NB-10b",
+   "tracks": "r96-NB-10b",
+   "status_seen_at_source": "open_or_accepted"
+  },
+  {
+   "id": "r98:CO-21",
+   "source_ledger": ".ufo/waves/round-98/seats/V33-debt.json (bounds_carried)",
+   "text": "V33 carry-list disposition for r98 C9 row-7",
+   "tracks": "r98 C9 row-7",
+   "status_seen_at_source": "open_closure (landed at closure)"
+  },
+  {
+   "id": "r99:NB-07",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r94-BR-01 (prose)",
+   "tracks": "r94-BR-01 (prose)",
+   "status_seen_at_source": "r99 restatement of the BR-01 prose half"
+  },
+  {
+   "id": "r99:CO-01",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r94-BR-01 (prose)",
+   "tracks": "r94-BR-01 (prose)",
+   "status_seen_at_source": "not_closed_here"
+  },
+  {
+   "id": "r99:CO-02",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r99 ten-file pin record",
+   "tracks": "r99 ten-file pin record",
+   "status_seen_at_source": "not_closed_here (uncredited at compile)"
+  },
+  {
+   "id": "r99:CO-03",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r97-NB-15",
+   "tracks": "r97-NB-15",
+   "status_seen_at_source": "not_closed_here"
+  },
+  {
+   "id": "r99:CO-04",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r97-NB-09",
+   "tracks": "r97-NB-09",
+   "status_seen_at_source": "not_closed_here"
+  },
+  {
+   "id": "r99:CO-05",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r97-NB-08",
+   "tracks": "r97-NB-08",
+   "status_seen_at_source": "open_accepted"
+  },
+  {
+   "id": "r99:CO-06",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r96-NB-10b",
+   "tracks": "r96-NB-10b",
+   "status_seen_at_source": "open_accepted"
+  },
+  {
+   "id": "r99:CO-07",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r98-NB-11",
+   "tracks": "r98-NB-11",
+   "status_seen_at_source": "not_closed_here (wording)"
+  },
+  {
+   "id": "r99:CO-08",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r94-BR-05",
+   "tracks": "r94-BR-05",
+   "status_seen_at_source": "open_accepted (scratch at root)"
+  },
+  {
+   "id": "r99:CO-09",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for self-test consistency-not-truth bound",
+   "tracks": "self-test consistency-not-truth bound",
+   "status_seen_at_source": "open_accepted"
+  },
+  {
+   "id": "r99:CO-10",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for path-less pin needs --freeze",
+   "tracks": "path-less pin needs --freeze",
+   "status_seen_at_source": "open_accepted"
+  },
+  {
+   "id": "r99:CO-11",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r99-NB-09 (README exits)",
+   "tracks": "r99-NB-09 (README exits)",
+   "status_seen_at_source": "recurred"
+  },
+  {
+   "id": "r99:CO-12",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r98-NB-03 (placeholder poll)",
+   "tracks": "r98-NB-03 (placeholder poll)",
+   "status_seen_at_source": "recurred"
+  },
+  {
+   "id": "r99:CO-13",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r95-NB-09 (revision flux)",
+   "tracks": "r95-NB-09 (revision flux)",
+   "status_seen_at_source": "recurred"
+  },
+  {
+   "id": "r99:CO-14",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for C9 row-8",
+   "tracks": "C9 row-8",
+   "status_seen_at_source": "open_closure (landed)"
+  },
+  {
+   "id": "r99:CO-15",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for registry/README staleness",
+   "tracks": "registry/README staleness",
+   "status_seen_at_source": "open_closure (landed)"
+  },
+  {
+   "id": "r99:CO-16",
+   "source_ledger": ".ufo/waves/round-99/seats/V36-debt.json (bounds_carried)",
+   "text": "V36 carry-list disposition for r99-NB-06 (new fixture unpinned)",
+   "tracks": "r99-NB-06 (new fixture unpinned)",
+   "status_seen_at_source": "recurred (closed r100)"
+  }
+ ],
+ "anomalies": [
+  "r102 LOG declaration C2 cites 'r100 V33' as a source ledger: no V33 seat exists in round-100 (roster T1-T4 + V01-V30, receipt 34/34) and no round-100 debt file exists; the r100 debt surface is V29's conditions + recorded FAILs, used here",
+  "round-99 has a SECOND debt extraction, .ufo/waves/round-99/seats/V74-debt-2.md (markdown, merged against V36 by its seat); its additions (poll record, delivered hashes, C1 re-run) are reflected in r99 item evidence rather than double-counted",
+  "r98 V33-debt.json and r99 V36-debt.json use section structure (bounds_new/bounds_carried/closure_items) instead of an items array; counted per section with the bounds_carried buckets as carry records",
+  "r98 closure item CL-10 ('r98 fixture README replay exits') was listed as a closure item but was NOT landed: the r98 README still contains no recorded exits (verified by grep 2026-10-18); recorded as carried under the r94-BR-17 class rather than marked closed"
+ ],
+ "bottom_line": "264 items + 97 carry records = 361 source entries accounted; 0 silently dropped; every disposition carries an evidence pointer",
+ "closure_corrections": {
+  "date": "2026-10-18",
+  "by": "L1 closure integrator (r102 AC-4)",
+  "fixes": [
+   "D5 bottom_line",
+   "D7 r97-NB-20 carried_owner",
+   "D6 trail ref",
+   "D1/D2/D4 corrected in the synthesis dated addendum"
+  ],
+  "note": "Dated addendum per r102 adjudication AC-4; structured data corrections only, history preserved."
+ }
+}
