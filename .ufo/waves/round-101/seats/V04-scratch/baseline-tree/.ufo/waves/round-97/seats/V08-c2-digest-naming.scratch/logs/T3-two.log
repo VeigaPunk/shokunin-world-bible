@@ -1,3 +1,0 @@
-FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
-FINDING DIGEST-MISMATCH: content digest 39bffb8fdb9d5b3b77e9ebe10d3dae5a03c0498b0ed541f1e9938996cc1cae7c != pin d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9; changed: entities.json (sha256 026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b -> 709195124751f4096670a127158d4ff89577be239c86d07c7c6d579f83168c3e), sources.json (sha256 fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a -> 08cf9041be456f373d967be29c5f54f35ffce626574b892fc8b0b968b6997849); fixture bytes changed outside the frozen inventory
-RESULT ERROR

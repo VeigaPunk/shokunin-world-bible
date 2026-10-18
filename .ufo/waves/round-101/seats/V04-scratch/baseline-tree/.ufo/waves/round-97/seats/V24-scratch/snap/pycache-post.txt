@@ -1,4 +1,0 @@
-corpus/tools/__pycache__
-corpus/tools/__pycache__/boundary_doc_check.cpython-314.pyc
-corpus/tools/__pycache__/support_check.cpython-314.pyc
-corpus/tools/__pycache__/map_obligations.cpython-314.pyc

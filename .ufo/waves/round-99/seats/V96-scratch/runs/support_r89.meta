@@ -1,4 +1,0 @@
-CMD: python3 corpus/tools/support_check.py corpus/fixtures/r89-inspiration-paraphrase
-START: 2026-10-17T22:07:33-03:00
-EXIT:0
-END: 2026-10-17T22:07:33-03:00

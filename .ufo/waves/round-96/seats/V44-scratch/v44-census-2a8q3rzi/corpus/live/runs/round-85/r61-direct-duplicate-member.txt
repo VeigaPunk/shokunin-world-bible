@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-direct-duplicate-member
-exit_code=1
-VIOLATION: sources.json: duplicate object member 'id'; cannot load JSON
-1 violation(s); no canon changed

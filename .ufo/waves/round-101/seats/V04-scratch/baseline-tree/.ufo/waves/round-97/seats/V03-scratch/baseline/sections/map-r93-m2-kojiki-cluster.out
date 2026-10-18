@@ -1,7 +1,0 @@
-=== map-r93-m2-kojiki-cluster ===
-$ python3 corpus/tools/map_obligations.py corpus/fixtures/r93-m2-kojiki-cluster
-OBLIGATIONS raw=12 mapped=12
-INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
-RESULT PASS
-EXIT=0
-

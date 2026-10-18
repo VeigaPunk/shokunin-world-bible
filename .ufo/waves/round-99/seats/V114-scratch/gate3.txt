@@ -1,2 +1,0 @@
-excerpt_files=
-readme_line3=Fixture scaffolding only; not sourced story evidence.

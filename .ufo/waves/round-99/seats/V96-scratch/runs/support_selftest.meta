@@ -1,2 +1,0 @@
-EXIT:2
-CMD: python3 corpus/tools/support_check.py --self-test

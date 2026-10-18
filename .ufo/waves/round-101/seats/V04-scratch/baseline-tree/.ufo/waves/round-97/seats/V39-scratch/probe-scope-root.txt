@@ -1,2 +1,0 @@
-FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures itself; the frozen scope is corpus/fixtures/**
-RESULT ERROR

@@ -1,9 +1,0 @@
-$ cd /home/vgpnk/Projects/shokunin/lore-shokunin && python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V106-scratch/foreign/r98-clerk-filing
-# src=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing
-# dst=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V106-scratch/foreign/r98-clerk-filing
-# exit=2
---- stdout ---
-FINDING PATH-MISMATCH: pin r98-clerk-filing names corpus/fixtures/r98-clerk-filing (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V106-scratch/foreign/r98-clerk-filing
-RESULT ERROR
---- stderr ---
-

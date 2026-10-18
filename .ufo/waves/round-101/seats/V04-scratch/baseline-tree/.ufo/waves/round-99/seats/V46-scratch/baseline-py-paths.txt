@@ -1,7 +1,0 @@
-corpus/fixtures/check_bible.py
-corpus/live/rejected-r4/check_bible.py
-corpus/tools/boundary_doc_check.py
-corpus/tools/dependency_freeze.py
-corpus/tools/discriminate_check.py
-corpus/tools/map_obligations.py
-corpus/tools/support_check.py

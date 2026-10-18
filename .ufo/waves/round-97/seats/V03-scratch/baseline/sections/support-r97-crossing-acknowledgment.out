@@ -1,7 +1,0 @@
-=== support-r97-crossing-acknowledgment ===
-$ python3 corpus/tools/support_check.py corpus/fixtures/r97-crossing-acknowledgment
-FAIL: cluster directory not found: corpus/fixtures/r97-crossing-acknowledgment
-RESULT ERROR
-EXIT=2
-
-CAPTURE DONE 2026-10-17T18:42:51-03:00

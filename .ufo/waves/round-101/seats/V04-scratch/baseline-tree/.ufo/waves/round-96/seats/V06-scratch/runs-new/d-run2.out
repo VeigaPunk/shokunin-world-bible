@@ -1,6 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/map_obligations_r96.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/case-d
-OBLIGATIONS raw=12 mapped=12
-INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
-FINDING source_id_mismatch: entities.json#/0/first_appearance does not bind to 'm2-record-archive'
-RESULT FAIL
-EXIT=1

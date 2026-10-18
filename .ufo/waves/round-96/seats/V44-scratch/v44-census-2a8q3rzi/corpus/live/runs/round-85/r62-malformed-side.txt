@@ -1,7 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r62-malformed-side
-exit_code=1
-VIOLATION: timeline.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
-VIOLATION: contradictions[0].claim_a.field: expected one of ['depends_on', 'place_id', 'tick']
-VIOLATION: contradictions[0].claim_b.field: expected one of ['depends_on', 'place_id', 'tick']
-VIOLATION: contradictions[0]: claim_a and claim_b references must differ
-4 violation(s); no canon changed

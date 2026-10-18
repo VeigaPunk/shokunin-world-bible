@@ -1,7 +1,0 @@
-===== boundary_badflag =====
-EXIT:1
---- stdout ---
---- stderr ---
-usage: boundary_doc_check.py [-h] [--doc DOC] [--checker CHECKER]
-                             [--self-test]
-boundary_doc_check.py: error: unrecognized arguments: --selftest

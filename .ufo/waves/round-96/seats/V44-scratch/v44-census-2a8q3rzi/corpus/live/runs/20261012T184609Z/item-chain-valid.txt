@@ -1,3 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/item-chain-valid
-exit_code=0
-CLEAN: schema, citations, relations, timeline; 0 violations

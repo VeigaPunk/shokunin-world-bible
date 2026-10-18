@@ -1,6 +1,0 @@
-===== map_badflag =====
-EXIT:2
---- stdout ---
-FINDING invalid_arguments: unrecognized arguments: --selftest
-RESULT ERROR
---- stderr ---

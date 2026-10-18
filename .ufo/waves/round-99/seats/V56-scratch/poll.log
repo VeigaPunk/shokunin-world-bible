@@ -1,8 +1,0 @@
-start readme=1792283770 5829 32efc78f70e6 map=1792283770 15028 c1099d0ee9ee s4_glob=['S4-scratch']
-try=1 s4=False reports=[] readme_changed=False map_changed=False head='# Round 98 clerk-filing continuation' r=1792283770 5829 32efc78f70e6 m=1792283770 15028 c1099d0ee9ee
-try=2 s4=False reports=[] readme_changed=False map_changed=False head='# Round 98 clerk-filing continuation' r=1792283770 5829 32efc78f70e6 m=1792283770 15028 c1099d0ee9ee
-try=3 s4=False reports=[] readme_changed=False map_changed=False head='# Round 98 clerk-filing continuation' r=1792283770 5829 32efc78f70e6 m=1792283770 15028 c1099d0ee9ee
-try=4 s4=False reports=[] readme_changed=True map_changed=True head='# Round 99 window-lapse continuation' r=1792285375 6141 1c95ca05aab6 m=1792285360 17119 d2fe20e581d1
-POLL_HIT try=4
-try=5 reports=['S4-fixture-docs.md'] all_S_md=['S3-fixture-author.md', 'S4-fixture-docs.md'] head='# Round 99 window-lapse continuation' readme=6176 b93209417a918a88 map=17119 d2fe20e581d1c29b
-POLL_HIT_REPORT try=5

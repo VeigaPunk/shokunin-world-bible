@@ -1,5 +1,0 @@
-# r83 baseline reader
-
-The excerpt licenses only an attributed account: Vela says she stood on the Lantern Harbor east steps, heard two strokes that she took to be the registry bell during Bell-7, and did not see Sella or an envelope. The stated Bell-7 definition is part of what her testimony says; it does not independently establish that the strokes were objectively the registry bell, that Bell-7 occurred as described, or that Sella or an envelope was absent. It establishes no chronology beyond her reported hearing during the named Bell-7, and no canon, rights, or mechanics. The source ID `vela-note` supplies structural attribution only, not authentication or truth.
-
-**First editorial action:** add a provenance/status qualifier to the source field for both unchanged records, such as `vela-note — unverified fictional testimony; attribution only`. This prevents the citation from being mistaken for verification while preserving the IDs and the correctly attributed claims. Do not upgrade the reported interpretation or non-sighting into objective event facts without independent evidence.

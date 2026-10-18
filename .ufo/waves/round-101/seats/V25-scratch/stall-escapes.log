@@ -1,3 +1,0 @@
-STALL-ESCAPE-1: poll budget 1/2 exhausted at 03:19:16Z with 5/27 non-SELF reports present; trend rising; relaunching bounded poll 2/2
-STALL-ESCAPE-2: poll budget 2/2 exhausted at 03:32:50Z with 19/27 non-SELF reports; U2 report landed try 79; relaunching final bounded poll 3/3
-STALL-ESCAPE-3: budget 3/3 stopped early at 03:44Z — all 27 non-SELF roster reports present; its no-excess exit condition was unsatisfiable while the V28 roster erratum stands (recorded, not fatal)

@@ -1,3 +1,0 @@
-FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1
-FINDING DIGEST-MISMATCH: content digest ac372f2ccf46e58cbfced6d70b2ce7615eadd73c350f91ab8ccfa9bc0d895c6a != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> b8f436b78a84b9a4277cd9268dd6175e45e0331f8be21dec081cc501ad8ff4a9), fictional-excerpts.md (sha256 fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d -> 44f7b1326350dcfd264b554c3a352edf8ca308285665002590b780aa5ffeaa34); pinned-file bytes changed outside the semantic inventory
-RESULT ERROR

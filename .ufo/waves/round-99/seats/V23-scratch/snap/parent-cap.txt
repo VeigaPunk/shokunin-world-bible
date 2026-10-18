@@ -1,8 +1,0 @@
-?? .ufo/waves/round-99/seats/V69-scratch/before/baseline-root/corpus/tools/dependency-freeze-contract.json
-?? .ufo/waves/round-99/seats/V69-scratch/before/baseline-root/corpus/tools/dependency_freeze.py
-?? .ufo/waves/round-99/seats/V73-scratch/selftests/boundary.err
-?? .ufo/waves/round-99/seats/V73-scratch/selftests/boundary.out
-?? .ufo/waves/round-99/seats/V73-scratch/selftests/freeze.err
-?? .ufo/waves/round-99/seats/V73-scratch/selftests/freeze.out
-?? .ufo/waves/round-99/seats/V73-scratch/selftests/map.err
-?? .ufo/waves/round-99/seats/V73-scratch/selftests/map.out

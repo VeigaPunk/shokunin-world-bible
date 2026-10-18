@@ -1,7 +1,0 @@
-total 176
-drwxr-xr-x 1 vgpnk vgpnk   254 Oct 17 17:45 .
-drwxr-xr-x 1 vgpnk vgpnk   404 Oct 17 17:42 ..
--rw-r--r-- 1 vgpnk vgpnk 52190 Oct 17 14:04 boundary_doc_check.cpython-314.pyc
--rw-r--r-- 1 vgpnk vgpnk 34646 Oct 17 17:44 dependency_freeze.cpython-314.pyc
--rw-r--r-- 1 vgpnk vgpnk 57585 Oct 17 17:45 map_obligations.cpython-314.pyc
--rw-r--r-- 1 vgpnk vgpnk 24721 Oct 17 15:41 support_check.cpython-314.pyc

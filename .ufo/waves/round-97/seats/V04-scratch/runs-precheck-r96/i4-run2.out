@@ -1,6 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/map_obligations_r96.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/case-i4
-OBLIGATIONS raw=3 mapped=2
-FINDING dual_pointer: row P1 (line 7) names a second pointer token 'entities[0].claims[0]' alongside entities.json#/0/first_appearance
-FINDING missing_obligation: entities.json#/0/claims/0 has no map row
-RESULT FAIL
-EXIT=1

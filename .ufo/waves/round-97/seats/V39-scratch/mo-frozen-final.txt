@@ -1,5 +1,0 @@
-SNAPSHOT inputs=4 digests=verified
-OBLIGATIONS raw=12 mapped=12
-INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
-FROZEN expected=PASS/0 findings=none matched
-RESULT PASS

@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r9-dup-low-high
-exit_code=1
-VIOLATION: timeline[1].id: duplicate timeline id 'same'
-VIOLATION: timeline[2].depends_on[0]: ambiguous dependency event 'same'
-2 violation(s); no canon changed

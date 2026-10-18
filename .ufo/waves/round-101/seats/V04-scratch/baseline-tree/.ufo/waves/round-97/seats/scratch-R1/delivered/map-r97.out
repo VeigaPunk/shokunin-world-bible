@@ -1,5 +1,0 @@
-OBLIGATIONS raw=17 mapped=16
-INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18
-FINDING missing_obligation: timeline.json#/5 has no map row
-RESULT FAIL
-EXIT=1

@@ -1,3 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-valid-order
-exit_code=0
-CLEAN: schema, citations, relations, timeline; 0 violations

@@ -1,6 +1,0 @@
-=== map-r89-inspiration-paraphrase ===
-$ python3 corpus/tools/map_obligations.py corpus/fixtures/r89-inspiration-paraphrase
-FINDING unsupported_map: table needs one JSON fact pointer and one source-ID column
-RESULT ERROR
-EXIT=2
-

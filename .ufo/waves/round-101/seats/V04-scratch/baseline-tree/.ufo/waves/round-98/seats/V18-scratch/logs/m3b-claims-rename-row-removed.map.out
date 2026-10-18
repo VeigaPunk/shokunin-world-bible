@@ -1,5 +1,0 @@
-OBLIGATIONS raw=19 mapped=19
-INVENTORY JSON-FACTS 19/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 21/22 MISMATCH
-FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 20/2/22; observed 19/2/21
-FINDING schema_drift: entities.json#/5: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
-RESULT FAIL

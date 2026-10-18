@@ -1,4 +1,0 @@
-CMD: python3 corpus/tools/discriminate_check.py --checker not-a-rev
-START: 2026-10-17T22:13:03-03:00
-EXIT:2
-END: 2026-10-17T22:13:03-03:00

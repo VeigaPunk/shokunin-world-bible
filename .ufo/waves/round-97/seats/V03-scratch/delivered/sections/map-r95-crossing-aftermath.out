@@ -1,7 +1,0 @@
-=== map-r95-crossing-aftermath ===
-$ python3 corpus/tools/map_obligations.py corpus/fixtures/r95-crossing-aftermath
-OBLIGATIONS raw=15 mapped=15
-INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17
-RESULT PASS
-EXIT=0
-

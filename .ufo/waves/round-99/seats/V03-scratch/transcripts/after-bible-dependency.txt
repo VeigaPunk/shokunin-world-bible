@@ -1,8 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V03-scratch/after-mirror-dependency/corpus/fixtures/r94-paired-crossing
-# cwd=/home/vgpnk/Projects/shokunin/lore-shokunin
-RC=0
---- stdout ---
-CLEAN: schema, citations, relations, timeline; 0 violations
-
---- stderr ---
-

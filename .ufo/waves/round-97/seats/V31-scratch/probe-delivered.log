@@ -1,4 +1,0 @@
-tool sha256: 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9
-control: exit=0 result=['RESULT PASS'] findings=[] stderr=''
-m1-second-pointer: exit=1 result=['RESULT FAIL'] findings=["FINDING dual_pointer: row P1 (line 23) names a second pointer token 'entities[0].claims[0]' alongside entities.json#/0/first_appearance"] stderr=''
-m2-prose: exit=0 result=['RESULT PASS'] findings=[] stderr=''

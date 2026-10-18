@@ -1,5 +1,0 @@
-OBLIGATIONS raw=19 mapped=20
-INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22
-FINDING phantom_obligation: entities.json#/5/claims/0 is not a raw source-attributed obligation
-FINDING schema_drift: entities.json#/5: 1 sourced-claim-shaped record(s) under unexpected key 'assertions'
-RESULT FAIL

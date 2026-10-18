@@ -1,2 +1,0 @@
-=== census 2026-10-17T22:46:15-03:00 ===
-fixture_dirs 173 clean 39 negative 134 violation_lines 421 odd [] r99 True

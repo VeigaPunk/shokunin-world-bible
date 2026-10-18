@@ -1,4 +1,0 @@
-tracked files checked: 68
-worktree == 9a3d648 blobs for all pinned paths: True
-worktree == HEAD blobs for all pinned paths: True
-changed: []

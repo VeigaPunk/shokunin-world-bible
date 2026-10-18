@@ -1,4 +1,0 @@
-$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/followup/F11-scratch/base
-OBLIGATIONS raw=12 mapped=12
-RESULT PASS
-EXIT=0

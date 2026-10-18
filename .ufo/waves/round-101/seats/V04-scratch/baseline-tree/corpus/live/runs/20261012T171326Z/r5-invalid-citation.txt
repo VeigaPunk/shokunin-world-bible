@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r5-invalid-citation
-exit_code=1
-VIOLATION: relations[0].source_id: unknown in-world source 'absent-source'
-1 violation(s); no canon changed

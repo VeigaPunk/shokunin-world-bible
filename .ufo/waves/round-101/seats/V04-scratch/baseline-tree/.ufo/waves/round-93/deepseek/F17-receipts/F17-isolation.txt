@@ -1,4 +1,0 @@
-python3 -I corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster -> exit=0 stdout_cmp=IDENTICAL stderr_bytes=0
-python3 -I corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster -> exit=0 stdout_cmp=IDENTICAL stderr_bytes=0
-python3 -I corpus/tools/support_check.py corpus/fixtures/r89-inspiration-paraphrase -> exit=0 stdout_cmp=IDENTICAL stderr_bytes=0
-python3 -I corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster -> exit=0 stdout_cmp=IDENTICAL stderr_bytes=0

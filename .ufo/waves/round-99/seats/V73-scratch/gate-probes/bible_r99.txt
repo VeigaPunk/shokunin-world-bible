@@ -1,5 +1,0 @@
-===== bible_r99 =====
-EXIT:0
---- stdout ---
-CLEAN: schema, citations, relations, timeline; 0 violations
---- stderr ---

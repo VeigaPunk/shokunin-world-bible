@@ -1,9 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V02-scratch/runs/tamper-timeline.json/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V02-scratch/runs/tamper-timeline.json/corpus/fixtures/r94-paired-crossing
-(cwd=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V02-scratch/runs/tamper-timeline.json)
-exit=2
---- stdout ---
-FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
-FINDING DIGEST-MISMATCH: content digest ea609b5ad79814221ce266feeac45c1c47932c2dece6bd652a0e6dc11b409d74 != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: timeline.json (sha256 f0209f90a6ce795211369bd900ac1d333d16eb0af123f1b170831e192660533c -> 1be105e53b143382a06615b6999b02f03399e6dbd5de263660d09b38049ca07f); pinned-file bytes changed outside the semantic inventory
-RESULT ERROR
-
---- stderr ---

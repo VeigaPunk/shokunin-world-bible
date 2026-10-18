@@ -1,1 +1,0 @@
-I, Jorin, am a registrar, and I stood at the Lantern Harbor registry doorway. I saw Vela standing on the Lantern Harbor east steps during what I called Bell-7. I did not see who, if anyone, struck a bell.

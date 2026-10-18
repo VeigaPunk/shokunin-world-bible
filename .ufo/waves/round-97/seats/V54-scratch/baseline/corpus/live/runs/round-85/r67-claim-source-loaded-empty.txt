@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r67-claim-source-loaded-empty
-exit_code=1
-VIOLATION: entities[0].claims[0]: expected nonempty statement and source_id
-1 violation(s); no canon changed

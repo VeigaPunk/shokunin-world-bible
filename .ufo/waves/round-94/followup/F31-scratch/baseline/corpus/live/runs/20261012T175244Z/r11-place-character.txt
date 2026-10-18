@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r11-place-character
-exit_code=1
-VIOLATION: entities[2].id: duplicate entities id 'harbor'
-VIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'
-2 violation(s); no canon changed

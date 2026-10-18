@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r5-row-shape
-exit_code=1
-VIOLATION: contradictions[0]: expected object
-1 violation(s); no canon changed

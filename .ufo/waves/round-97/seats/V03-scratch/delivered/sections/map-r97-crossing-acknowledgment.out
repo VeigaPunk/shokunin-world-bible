@@ -1,7 +1,0 @@
-=== map-r97-crossing-acknowledgment ===
-$ python3 corpus/tools/map_obligations.py corpus/fixtures/r97-crossing-acknowledgment
-OBLIGATIONS raw=17 mapped=17
-INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19
-RESULT PASS
-EXIT=0
-

@@ -1,3 +1,0 @@
-/bin/bash
--c
-cd '/home/vgpnk/Projects/shokunin' && chmod +x /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V92-scratch/poll.sh && /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V92-scratch/poll.sh > /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V92-scratch/poll.stdout 2>&1

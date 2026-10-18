@@ -1,3 +1,0 @@
-PASS entities.json#/0/claims/0: retelling-support-only; anchor=not-found; mode=paraphrase
-SOURCE-SUPPORT 0/0; RETELLING-SUPPORT-ONLY 1 entries (0/1 anchors); MODES 1/1
-RESULT PASS

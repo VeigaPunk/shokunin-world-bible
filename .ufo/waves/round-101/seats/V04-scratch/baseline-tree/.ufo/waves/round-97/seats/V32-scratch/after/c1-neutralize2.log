@@ -1,3 +1,0 @@
-surgical emission neutralization exit: 2
-['SELF-TEST CASES 25/25 pinned']
-["SELF-TEST FAIL dual_pointer exit=1 findings=['dual_pointer_emission_neutralized']", "FINDING dual_pointer_emission_neutralized: row E1 (line 7) names a second pointer token 'entities[1].first_appearance' alongside entities.json#/0/first_appearance", 'RESULT FAIL', 'FINDING self_test_mismatch: isolated CLI outcomes differ from persisted expectations', 'RESULT ERROR']

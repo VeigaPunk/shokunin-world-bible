@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r5-missing-file
-exit_code=1
-VIOLATION: contradictions.json: cannot load JSON: [Errno 2] No such file or directory: '.shokunin/lore/corpus/fixtures/r5-missing-file/contradictions.json'
-1 violation(s); no canon changed

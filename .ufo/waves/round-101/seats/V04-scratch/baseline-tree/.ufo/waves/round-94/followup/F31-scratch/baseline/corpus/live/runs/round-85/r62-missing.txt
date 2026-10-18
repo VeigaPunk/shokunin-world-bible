@@ -1,6 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r62-missing
-exit_code=1
-VIOLATION: timeline.json: cannot load JSON: [Errno 2] No such file or directory: '.shokunin/lore/corpus/fixtures/r62-missing/timeline.json'
-VIOLATION: contradictions[0].claim_a.event_id: cannot assess event 'tarin-envelope-observation': timeline.json unavailable
-VIOLATION: contradictions[0].claim_b.event_id: cannot assess event 'sella-bell7-presence': timeline.json unavailable
-3 violation(s); no canon changed

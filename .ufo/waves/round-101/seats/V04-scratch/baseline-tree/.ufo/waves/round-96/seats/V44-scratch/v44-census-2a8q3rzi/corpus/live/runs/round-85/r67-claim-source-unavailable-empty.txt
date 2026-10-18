@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r67-claim-source-unavailable-empty
-exit_code=1
-VIOLATION: sources.json: cannot load JSON: [Errno 2] No such file or directory: '.shokunin/lore/corpus/fixtures/r67-claim-source-unavailable-empty/sources.json'
-VIOLATION: entities[0].claims[0]: expected nonempty statement and source_id
-2 violation(s); no canon changed

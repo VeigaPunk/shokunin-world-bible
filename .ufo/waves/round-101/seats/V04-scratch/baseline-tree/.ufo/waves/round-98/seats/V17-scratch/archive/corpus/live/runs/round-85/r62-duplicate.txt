@@ -1,7 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r62-duplicate
-exit_code=1
-VIOLATION: timeline[4].id: duplicate timeline id 'departure'
-VIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id
-VIOLATION: timeline[1].depends_on[0]: ambiguous dependency event 'departure'
-VIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'
-4 violation(s); no canon changed

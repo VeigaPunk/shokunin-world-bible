@@ -1,2 +1,0 @@
-FINDING self_test_contract: contract drops implemented self-test cases: schema_drift
-RESULT ERROR

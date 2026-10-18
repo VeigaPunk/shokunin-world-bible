@@ -1,5 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/draft-tool-86b52949.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/case-i7
-OBLIGATIONS raw=3 mapped=3
-FINDING dual_pointer: row P1 (line 7) names a second pointer token 'entities[00].claims[0]' alongside entities.json#/0/first_appearance
-RESULT FAIL
-EXIT=1

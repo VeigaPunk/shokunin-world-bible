@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r11-unique-nonplace
-exit_code=1
-VIOLATION: timeline[0].place_id: not a place 'mira'
-1 violation(s); no canon changed

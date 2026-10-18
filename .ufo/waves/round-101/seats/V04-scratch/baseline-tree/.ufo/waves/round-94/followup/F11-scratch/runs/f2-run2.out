@@ -1,4 +1,0 @@
-$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/followup/F11-scratch/case-f --map /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/followup/F11-scratch/outside-map/claim-excerpt-map.md
-FINDING foreign_path: map path is outside the cluster
-RESULT ERROR
-EXIT=2

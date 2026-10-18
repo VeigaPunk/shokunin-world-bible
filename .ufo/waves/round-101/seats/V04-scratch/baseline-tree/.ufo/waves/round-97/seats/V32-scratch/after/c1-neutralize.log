@@ -1,4 +1,0 @@
-occurrences of "dual_pointer" in tool source: 4
-neutralized exit: 2
-[]
-['FINDING self_test_contract: contract pins unimplemented self-test cases: dual_pointer', 'RESULT ERROR']

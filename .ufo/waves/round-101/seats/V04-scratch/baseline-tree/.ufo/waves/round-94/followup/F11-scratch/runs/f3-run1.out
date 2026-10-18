@@ -1,4 +1,0 @@
-$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/followup/F11-scratch/case-f --map ../outside-map/claim-excerpt-map.md
-FINDING unsafe_path: map path contains traversal
-RESULT ERROR
-EXIT=2

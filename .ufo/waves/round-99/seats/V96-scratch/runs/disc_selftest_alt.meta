@@ -1,2 +1,0 @@
-EXIT:2
-CMD: python3 corpus/tools/discriminate_check.py --selftest

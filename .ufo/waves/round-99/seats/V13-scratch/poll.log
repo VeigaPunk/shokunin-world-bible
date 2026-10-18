@@ -1,9 +1,0 @@
-POLL_START 2026-10-17T22:02:08-0300 r98map_md5=263403647097bcd6da3cdd524b7c4c73
-TRY 1 22:02:08 map_md5=263403647097bcd6da3cdd524b7c4c73 map_changed=0 readme_hit=0 exc_hit=1 tl_hit=1 s4_reports=none
-TRY 2 22:02:28 map_md5=263403647097bcd6da3cdd524b7c4c73 map_changed=0 readme_hit=0 exc_hit=1 tl_hit=1 s4_reports=none
-TRY 3 22:02:48 map_md5=263403647097bcd6da3cdd524b7c4c73 map_changed=0 readme_hit=0 exc_hit=1 tl_hit=1 s4_reports=none
-TRY 4 22:03:08 map_md5=e7676509c13df358a764580d1f330334 map_changed=1 readme_hit=1 exc_hit=1 tl_hit=1 s4_reports=none
-TRY 5 22:03:28 map_md5=e7676509c13df358a764580d1f330334 map_changed=1 readme_hit=1 exc_hit=1 tl_hit=1 s4_reports=none
-TRY 6 22:03:48 map_md5=e7676509c13df358a764580d1f330334 map_changed=1 readme_hit=1 exc_hit=1 tl_hit=1 s4_reports=none
-TRY 7 22:04:08 map_md5=e7676509c13df358a764580d1f330334 map_changed=1 readme_hit=1 exc_hit=1 tl_hit=1 s4_reports=S4-fixture-docs.md,
-POLL_HIT try=7 22:04:08

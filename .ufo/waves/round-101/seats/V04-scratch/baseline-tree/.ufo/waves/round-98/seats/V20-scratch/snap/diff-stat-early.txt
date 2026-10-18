@@ -1,3 +1,0 @@
- LOG.md                                             | 61 ++++++++++++++++++++++
- .../r95-crossing-aftermath/claim-excerpt-map.md    |  2 +-
- 2 files changed, 62 insertions(+), 1 deletion(-)

@@ -1,8 +1,0 @@
-case	check_bible	support_check	map_obligations	dependency_freeze	boundary_default
-control-base	0	0	0	0	0
-edge-reduction	0	0	0	1	0
-prose-word	0	1	0	2	0
-map-row-drop	0	1	1	2	0
-span-break	0	1	0	2	0
-source-id	0	0	1	2	0
-prose-word-nonanchor	0	0	0	2	0

@@ -1,5 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/map_obligations_r94.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/case-a
-OBLIGATIONS raw=13 mapped=12
-FINDING missing_obligation: entities.json#/0/claims/1 has no map row
-RESULT FAIL
-EXIT=1

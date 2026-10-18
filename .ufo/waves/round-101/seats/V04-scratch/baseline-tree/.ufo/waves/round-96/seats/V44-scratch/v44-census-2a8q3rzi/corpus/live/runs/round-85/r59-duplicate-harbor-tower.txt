@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r59-duplicate-harbor-tower
-exit_code=1
-VIOLATION: timeline.json: duplicate object member 'place_id'; cannot load JSON
-1 violation(s); no canon changed

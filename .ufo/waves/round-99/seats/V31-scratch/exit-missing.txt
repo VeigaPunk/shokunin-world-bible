@@ -1,2 +1,0 @@
-FINDING FIXTURE-MISSING: fixture directory not found: corpus/fixtures/no-such-dir/r98-clerk-filing
-RESULT ERROR

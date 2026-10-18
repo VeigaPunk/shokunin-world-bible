@@ -1,9 +1,0 @@
-=== all *.py under corpus/ vs 4265df5 ===
-UNCHANGED corpus/fixtures/check_bible.py base=20c56dbb90d9f59ca4fb85971154c0774f5ce0d0 cur=20c56dbb90d9f59ca4fb85971154c0774f5ce0d0
-UNCHANGED corpus/live/rejected-r4/check_bible.py base=072402681f7cbe153b72866772ce3e9a1abf612b cur=072402681f7cbe153b72866772ce3e9a1abf612b
-UNCHANGED corpus/tools/boundary_doc_check.py base=4daa9998023f247fef7ca07d7cf2723f95cab0be cur=4daa9998023f247fef7ca07d7cf2723f95cab0be
-UNCHANGED corpus/tools/dependency_freeze.py base=623b3501b580756d4ede9f93ba1227bad5696c66 cur=623b3501b580756d4ede9f93ba1227bad5696c66
-UNCHANGED corpus/tools/discriminate_check.py base=aa601eee3ec288eccf21e5bb78cd01caaacfea7c cur=aa601eee3ec288eccf21e5bb78cd01caaacfea7c
-UNCHANGED corpus/tools/map_obligations.py base=9509c849db222867896b32bbece568c92086bcba cur=9509c849db222867896b32bbece568c92086bcba
-UNCHANGED corpus/tools/support_check.py base=a69ae9d27ad1e848c3188fa832352d00b7c0ffc7 cur=a69ae9d27ad1e848c3188fa832352d00b7c0ffc7
-=== new py not in baseline ===

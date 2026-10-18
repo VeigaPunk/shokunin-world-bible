@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-mixed-edges
-exit_code=1
-VIOLATION: timeline[1].tick: must be nonnegative
-VIOLATION: timeline[2].depends_on: timeline inversion 'r20-valid-a' tick 2 not before 'r20-valid-c' tick 1
-2 violation(s); no canon changed

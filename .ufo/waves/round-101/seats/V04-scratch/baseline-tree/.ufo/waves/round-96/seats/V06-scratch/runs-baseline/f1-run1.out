@@ -1,4 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/map_obligations_r95.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/case-f --map missing-map.md
-FINDING map_missing: cannot resolve map: [Errno 2] No such file or directory: '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/case-f/missing-map.md'
-RESULT ERROR
-EXIT=2

@@ -1,4 +1,0 @@
-$ python3 corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-94/followup/F11-scratch/case-f --map .
-FINDING map_missing: map path is not a file
-RESULT ERROR
-EXIT=2

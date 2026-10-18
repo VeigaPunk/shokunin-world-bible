@@ -1,2 +1,0 @@
-FINDING FIXTURE-MISSING: self-test base fixture not found: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/scratch/V35/probes/stm-baseline/corpus/fixtures/r95-crossing-aftermath
-RESULT ERROR

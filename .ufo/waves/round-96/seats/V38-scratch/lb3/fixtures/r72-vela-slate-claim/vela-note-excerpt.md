@@ -1,1 +1,0 @@
-I, Vela, stood on the Lantern Harbor east steps and heard the registry bell strike twice during Bell-7, the sole seventh-watch registry-bell sounding on the seventh day of Embermonth, year 12. I did not see Sella or an envelope.

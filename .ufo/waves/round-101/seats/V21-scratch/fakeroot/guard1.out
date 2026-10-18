@@ -1,2 +1,0 @@
-FINDING SCOPE-REFUSED: --freeze refuses /tmp/definitely-outside-corpus (resolves to /tmp/definitely-outside-corpus); the frozen scope is corpus/fixtures/** (integration-time operation only)
-RESULT ERROR

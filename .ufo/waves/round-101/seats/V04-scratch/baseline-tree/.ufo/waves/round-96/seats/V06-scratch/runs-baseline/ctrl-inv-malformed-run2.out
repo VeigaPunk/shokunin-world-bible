@@ -1,5 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/map_obligations_r95.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-96/seats/V06-scratch/ctrl-inv-malformed
-OBLIGATIONS raw=12 mapped=12
-INVENTORY declaration-malformed
-RESULT PASS
-EXIT=0

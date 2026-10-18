@@ -1,3 +1,0 @@
-/bin/bash
-/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V123-scratch/poll.sh
-40

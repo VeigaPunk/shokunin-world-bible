@@ -1,4 +1,0 @@
-M	LOG.md
-M	SCORECARD.md
-M	corpus/tools/dependency-freeze-contract.json
-M	corpus/tools/dependency_freeze.py

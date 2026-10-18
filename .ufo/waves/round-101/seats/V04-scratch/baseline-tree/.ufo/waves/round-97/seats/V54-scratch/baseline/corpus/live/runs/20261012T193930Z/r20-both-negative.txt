@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r20-both-negative
-exit_code=1
-VIOLATION: timeline[0].tick: must be nonnegative
-VIOLATION: timeline[1].tick: must be nonnegative
-2 violation(s); no canon changed

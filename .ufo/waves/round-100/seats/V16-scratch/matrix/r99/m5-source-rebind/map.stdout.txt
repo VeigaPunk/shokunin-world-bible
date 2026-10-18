@@ -1,4 +1,0 @@
-OBLIGATIONS raw=21 mapped=21
-INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23
-FINDING source_id_mismatch: timeline.json#/7 does not bind to 'clerk-filing-note'
-RESULT FAIL

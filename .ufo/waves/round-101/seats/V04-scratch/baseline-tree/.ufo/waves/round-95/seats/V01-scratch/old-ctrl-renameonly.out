@@ -1,3 +1,0 @@
-OBLIGATIONS raw=13 mapped=14
-FINDING phantom_obligation: entities.json#/4/claims/0 is not a raw source-attributed obligation
-RESULT FAIL

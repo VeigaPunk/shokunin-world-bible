@@ -1,6 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/map_obligations_r96.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/ctrl-inv-malformed
-OBLIGATIONS raw=12 mapped=12
-INVENTORY declaration-malformed
-FINDING inventory_mismatch: map declares an **Expected inventory:** line whose counts cannot be parsed
-RESULT FAIL
-EXIT=1

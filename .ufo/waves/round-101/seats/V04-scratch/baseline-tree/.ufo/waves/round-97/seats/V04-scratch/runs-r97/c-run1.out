@@ -1,7 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/map_obligations_r97.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V04-scratch/case-c
-OBLIGATIONS raw=12 mapped=13
-INVENTORY JSON-FACTS 13/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 16/15 MISMATCH
-FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 12/3/15; observed 13/3/16
-FINDING phantom_obligation: entities.json#/99/first_appearance is not a raw source-attributed obligation
-RESULT FAIL
-EXIT=1

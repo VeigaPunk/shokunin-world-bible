@@ -1,3 +1,0 @@
-FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
-FINDING DIGEST-MISMATCH: content digest dbf67f5c107b19eea87ad5311e634db2ae54b8760a92c0430060e61635ad6102 != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> a89d278834f74cdeb87d0a46fca94cfd41a0f7cc4fa1c565b2b50c2b5912d7db); pinned-file bytes changed outside the semantic inventory
-RESULT ERROR

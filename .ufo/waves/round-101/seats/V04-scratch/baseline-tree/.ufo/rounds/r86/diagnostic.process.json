@@ -1,9 +1,0 @@
-{
-  "command": [
-    "python3",
-    ".ufo/rounds/r86/diagnose.py"
-  ],
-  "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
-  "exit_code": 0,
-  "stderr": ""
-}

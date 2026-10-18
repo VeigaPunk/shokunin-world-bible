@@ -1,7 +1,0 @@
-corpus/tools/dependency_freeze.py 6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067 29104 1792285653
-corpus/tools/dependency-freeze-contract.json 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628 25987 1792285726
-corpus/tools/README.md 294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207 32577 1792283525
-SKILL.md 22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5 16802 1792283663
-S ['S3-fixture-author.md', 'S4-fixture-docs.md']
-corpus/knowledge/r99-gate-blind-spot-table.md False
-corpus/knowledge/r99-lapse-scope-note.md False

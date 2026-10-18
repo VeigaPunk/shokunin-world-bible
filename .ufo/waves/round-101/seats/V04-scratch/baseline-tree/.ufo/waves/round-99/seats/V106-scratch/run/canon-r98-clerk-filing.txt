@@ -1,7 +1,0 @@
-$ cd /home/vgpnk/Projects/shokunin/lore-shokunin && python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing
-# exit=0
---- stdout ---
-FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
-DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
-RESULT PASS
---- stderr ---

@@ -1,5 +1,0 @@
-r87-myth-cluster
-r88-m3-maya-cluster
-r93-m2-kojiki-cluster
-r94-paired-crossing
-r95-crossing-aftermath

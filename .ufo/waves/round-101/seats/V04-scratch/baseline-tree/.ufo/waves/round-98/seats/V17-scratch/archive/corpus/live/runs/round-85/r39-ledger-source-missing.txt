@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r39-ledger-source-missing
-exit_code=1
-VIOLATION: contradictions[0].claim_b: event 'sella-bell7-presence' has no resolvable source_id
-VIOLATION: timeline[3].source_id: unknown in-world source 'missing-sella-note'
-2 violation(s); no canon changed

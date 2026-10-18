@@ -1,9 +1,0 @@
-$ cd /home/vgpnk/Projects/shokunin/lore-shokunin && python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V106-scratch/foreign/r97-crossing-acknowledgment
-# src=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r97-crossing-acknowledgment
-# dst=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V106-scratch/foreign/r97-crossing-acknowledgment
-# exit=2
---- stdout ---
-FINDING PATH-MISMATCH: pin r97-crossing-acknowledgment names corpus/fixtures/r97-crossing-acknowledgment (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r97-crossing-acknowledgment); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V106-scratch/foreign/r97-crossing-acknowledgment
-RESULT ERROR
---- stderr ---
-

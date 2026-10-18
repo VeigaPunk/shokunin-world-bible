@@ -1,5 +1,0 @@
-A legacy bracket grammar: exit=2 ['RESULT ERROR'] ['FINDING unsupported_map: co-mapped or unsupported pointer grammar']
-B co-mapped grammar: exit=2 ['RESULT ERROR'] ['FINDING unsupported_map: co-mapped or unsupported pointer grammar']
-C renamed claims key + row removed: exit=0 ['RESULT PASS'] []
-C2 renamed claims key, rows kept: exit=1 ['RESULT FAIL'] ['FINDING phantom_obligation: entities.json#/0/claims/0 is not a raw source-attributed obligation']
-D claims as object: exit=2 ['RESULT ERROR'] ['FINDING invalid_raw_data: entities.json#/0/claims must be an array']

@@ -1,2 +1,0 @@
-/bin/bash
-.ufo/waves/round-99/seats/V107-scratch/poll.sh

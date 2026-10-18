@@ -1,5 +1,0 @@
-r87-myth-cluster exit=2  
-r88-m3-maya-cluster exit=0 raw=10 mapped=10 
-r93-m2-kojiki-cluster exit=0 raw=12 mapped=12 
-r94-paired-crossing exit=0 raw=14 mapped=14 
-r95-crossing-aftermath exit=0 raw=15 mapped=15 

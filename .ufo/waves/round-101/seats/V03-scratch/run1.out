@@ -1,7 +1,0 @@
-EDIT clerk-review-first-passage depends_on ['clerk-lapse-recorded'] -> ["acknowledgment-aru-records"]
---- run on mirror ---
-FREEZE r100-docket-review: events 9/9; dependency-edges 8/8; relations 1/1
-FINDING ADDITION-DETECTED: event clerk-review-first-passage gained depends_on ['acknowledgment-aru-records']
-FINDING REDUCTION-DETECTED: event clerk-review-first-passage lost depends_on ['clerk-lapse-recorded']
-RESULT FAIL
-exit=1

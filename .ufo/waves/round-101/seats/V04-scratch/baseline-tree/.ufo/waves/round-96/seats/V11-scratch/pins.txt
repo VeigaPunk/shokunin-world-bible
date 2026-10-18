@@ -1,3 +1,0 @@
-711e59f0f69482c795d87b1b9261a843  corpus/fixtures/r96-crossing-response/claim-excerpt-map.md
-8760854b75221c941a5e58281a4511b7  corpus/fixtures/r96-crossing-response/fictional-excerpts.md
-b54e1d67f65bce6120086796499c0518  corpus/fixtures/r96-crossing-response/source-excerpt.md

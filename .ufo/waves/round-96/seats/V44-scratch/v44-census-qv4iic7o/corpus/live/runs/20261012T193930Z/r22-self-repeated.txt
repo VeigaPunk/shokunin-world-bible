@@ -1,8 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r22-self-repeated
-exit_code=1
-VIOLATION: timeline[1].depends_on: expected event-id strings
-VIOLATION: timeline[1].depends_on[0]: self dependency 'r20-dependent'
-VIOLATION: timeline[1].depends_on: timeline inversion 'r20-dependent' tick 1 not before 'r20-dependent' tick 1
-VIOLATION: timeline[1].depends_on[1]: self dependency 'r20-dependent'
-VIOLATION: timeline[1].depends_on[1]: repeated dependency 'r20-dependent'
-5 violation(s); no canon changed

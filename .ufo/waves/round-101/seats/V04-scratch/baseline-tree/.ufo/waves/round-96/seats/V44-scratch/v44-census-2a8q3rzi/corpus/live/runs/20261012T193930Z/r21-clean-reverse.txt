@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r21-clean-reverse
-exit_code=1
-VIOLATION: timeline[1]: double-booked 'mira' at tick 9 in timeline[0] ('harbor') and 'tower'
-1 violation(s); no canon changed

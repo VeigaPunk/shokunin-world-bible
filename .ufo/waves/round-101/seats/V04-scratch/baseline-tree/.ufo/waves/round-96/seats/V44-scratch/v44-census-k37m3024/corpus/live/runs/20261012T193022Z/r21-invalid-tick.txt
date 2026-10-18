@@ -1,6 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r21-invalid-tick
-exit_code=1
-VIOLATION: timeline[0].tick: must be nonnegative
-VIOLATION: timeline[1].tick: must be nonnegative
-VIOLATION: timeline[1].depends_on: expected event-id strings
-3 violation(s); no canon changed

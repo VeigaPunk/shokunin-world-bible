@@ -1,9 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-independent-unavailable
-exit_code=1
-VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
-VIOLATION: entities[0].provenance: only valid on item entities
-VIOLATION: entities[0].provenance[0].to_holder: dangling entity 'nobody'
-VIOLATION: entities[0].provenance[0].from_holder: dangling entity 'ghost'
-VIOLATION: timeline[0].tick: must be nonnegative
-VIOLATION: timeline[0].depends_on: unknown event 'missing-event'
-6 violation(s); no canon changed

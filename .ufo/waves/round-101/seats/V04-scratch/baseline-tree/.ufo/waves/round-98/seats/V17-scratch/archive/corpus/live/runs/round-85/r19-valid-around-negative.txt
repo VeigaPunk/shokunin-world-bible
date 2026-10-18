@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r19-valid-around-negative
-exit_code=1
-VIOLATION: timeline[1].tick: must be nonnegative
-VIOLATION: timeline[2]: double-booked 'mira' at tick 9 in timeline[0] ('tower') and 'harbor'
-2 violation(s); no canon changed

@@ -1,9 +1,0 @@
-=== map-frozen-r93 ===
-$ python3 corpus/tools/map_obligations.py --frozen .ufo/waves/round-94/frozen/map-obligations-r93
-SNAPSHOT inputs=4 digests=verified
-OBLIGATIONS raw=12 mapped=12
-INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
-FROZEN expected=PASS/0 findings=none matched
-RESULT PASS
-EXIT=0
-

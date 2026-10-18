@@ -1,6 +1,0 @@
-=== map-r87-myth-cluster ===
-$ python3 corpus/tools/map_obligations.py corpus/fixtures/r87-myth-cluster
-FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer
-RESULT ERROR
-EXIT=2
-

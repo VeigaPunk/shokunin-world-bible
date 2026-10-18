@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r13-missing-actor
-exit_code=1
-VIOLATION: timeline[0].entity_id: dangling entity 'unlisted'
-VIOLATION: timeline[1].entity_id: dangling entity 'unlisted'
-2 violation(s); no canon changed

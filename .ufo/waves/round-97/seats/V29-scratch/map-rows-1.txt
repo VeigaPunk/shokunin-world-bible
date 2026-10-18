@@ -1,5 +1,0 @@
-r96 row ids: ['J01', 'J02', 'J03', 'J04', 'J05', 'J06', 'J07', 'J08', 'J09', 'J10', 'J11', 'J12', 'J13', 'J14', 'J15', 'J16', 'S01', 'S02']
-r97 row ids: ['J01', 'J02', 'J03', 'J04', 'J05', 'J06', 'J07', 'J08', 'J09', 'J10', 'J11', 'J12', 'J13', 'J14', 'J15', 'J16', 'J17', 'S01', 'S02']
-new rows: ['J17'] gone rows: []
-inherited rows compared: 18; differing: 0
-new row J17: ['J17', '`timeline.json#/5` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`)', '`aru-acknowledgment-note`', '`r97-crossing-acknowledgment:aru-acknowledgment-note`', '`fictional-excerpts.md`', '44-53', '`verbatim`', "`Tick 13: I received Evin's response at the Chalk Stair.`"]

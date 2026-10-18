@@ -1,2 +1,0 @@
-FINDING UNPINNED-FIXTURE: no pin for 'shadow-tampered' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response'])
-RESULT ERROR

@@ -1,3 +1,0 @@
-FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
-DIGEST d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6
-RESULT PASS

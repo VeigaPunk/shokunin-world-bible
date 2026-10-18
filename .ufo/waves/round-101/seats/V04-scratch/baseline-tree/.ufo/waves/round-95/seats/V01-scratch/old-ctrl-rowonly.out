@@ -1,3 +1,0 @@
-OBLIGATIONS raw=14 mapped=13
-FINDING missing_obligation: entities.json#/4/claims/0 has no map row
-RESULT FAIL

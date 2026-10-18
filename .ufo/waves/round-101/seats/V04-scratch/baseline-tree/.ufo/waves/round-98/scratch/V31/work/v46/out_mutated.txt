@@ -1,3 +1,0 @@
-FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 4/5; relations 1/1
-FINDING REDUCTION-DETECTED: event acknowledgment-aru-records lost depends_on ['response-evin-salt-court']
-RESULT FAIL

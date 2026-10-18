@@ -1,8 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r61-ledger-unavailable
-exit_code=1
-VIOLATION: sources.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
-VIOLATION: contradictions[1].claim_b.event_id: expected exactly one timeline event 'absent-event'
-VIOLATION: relations[1].to: dangling entity 'missing-map'
-VIOLATION: timeline[1].depends_on: timeline inversion 'later' tick 3 not before 'arrival' tick 2
-VIOLATION: timeline[2]: double-booked 'mira' at tick 2 in timeline[1] ('tower') and 'harbor'
-5 violation(s); no canon changed

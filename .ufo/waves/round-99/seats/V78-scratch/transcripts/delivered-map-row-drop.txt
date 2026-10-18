@@ -1,9 +1,0 @@
-NOTE deleted claim-excerpt-map.md row J20; declaration left at 20
-FREEZE_EXIT 2
---- stdout ---
-FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
-FINDING DIGEST-MISMATCH: content digest e88875204a590b03ffc42f961ccc2d258b107ba69cdfdb742b272c87e718a58e != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> 3c8b2e4bb2208c03c7c4b3cfc430ad5b3d18d0c93875f74abfac1355ffe64ebe); fixture bytes changed outside the frozen inventory
-RESULT ERROR
-
---- stderr ---
-

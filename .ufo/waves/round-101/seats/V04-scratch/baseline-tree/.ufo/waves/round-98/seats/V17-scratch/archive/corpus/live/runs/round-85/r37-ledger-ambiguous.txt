@@ -1,5 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r37-ledger-ambiguous
-exit_code=1
-VIOLATION: timeline[4].id: duplicate timeline id 'tarin-envelope-observation'
-VIOLATION: contradictions[0].claim_a.event_id: expected exactly one timeline event 'tarin-envelope-observation'
-2 violation(s); no canon changed

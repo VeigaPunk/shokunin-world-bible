@@ -1,3 +1,0 @@
-FINDING invalid_arguments: --self-test cannot be combined with cluster, --map, or --frozen
-RESULT ERROR
-EXIT=2

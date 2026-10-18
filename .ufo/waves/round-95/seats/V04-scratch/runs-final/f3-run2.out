@@ -1,4 +1,0 @@
-$ python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/map_obligations.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-95/seats/V04-scratch/case-f --map ../outside-map/claim-excerpt-map.md
-FINDING unsafe_path: map path contains traversal
-RESULT ERROR
-EXIT=2

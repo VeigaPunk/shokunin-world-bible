@@ -1,1 +1,0 @@
-20fbefce007e457a50e4d5306f05e97d27369d5568300c811d3ea2c449addd4c  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V48-scratch/base-probe/fakerepo/corpus/tools/dependency-freeze-contract.json

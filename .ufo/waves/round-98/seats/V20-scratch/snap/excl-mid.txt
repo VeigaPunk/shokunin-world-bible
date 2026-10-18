@@ -1,3 +1,0 @@
-reports=29
-pattern_mismatch=[]
-header_seat_mismatch=[]

@@ -1,9 +1,0 @@
-common JSON-facts rows=16; differing cells=16; by column: {3: 16}
-  col 3 differs in 16 rows: ['J01', 'J02', 'J03', 'J04', 'J05', 'J06', 'J07', 'J08', 'J09', 'J10', 'J11', 'J12', 'J13', 'J14', 'J15', 'J16']
-sample J01 col3: '`r96-crossing-response:paired-clock`' -> '`r97-crossing-acknowledgment:paired-clock`'
-r97-only rows: ['J17'] | r96-only rows: []
---- editorial rows in-span (independent) ---
-S01 path=source-excerpt.md span=5 hits=[5] in-span=True
-S02 path=source-excerpt.md span=5 hits=[5] in-span=True
---- distinct anchors ---
-rows=19 distinct (path,anchor)=15  (declared 15)

@@ -1,3 +1,0 @@
-65c1ae309385feed37b859ff78a6f28eac168888095df61c3820ed5da7b87319  /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
-153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947  /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
-294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207  /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md

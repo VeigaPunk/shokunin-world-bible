@@ -1,3 +1,0 @@
-FINDING unsupported_map: pointer cells must contain one canonical inline-code pointer
-RESULT ERROR
-EXIT=2

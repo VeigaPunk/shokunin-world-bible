@@ -1,2 +1,0 @@
-FINDING PATH-MISMATCH: pin r96-crossing-response names corpus/fixtures/r96-crossing-response (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r96-crossing-response); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-97/seats/V39-scratch/shadow/r96-crossing-response
-RESULT ERROR

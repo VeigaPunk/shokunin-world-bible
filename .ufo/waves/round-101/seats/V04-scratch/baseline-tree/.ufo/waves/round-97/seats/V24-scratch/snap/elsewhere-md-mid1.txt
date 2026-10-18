@@ -1,8 +1,0 @@
-./corpus/fixtures/r96-crossing-response/claim-excerpt-map.md
-./corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
-./corpus/fixtures/r97-crossing-acknowledgment/inspiration-note.md
-./corpus/fixtures/r97-crossing-acknowledgment/source-excerpt.md
-./corpus/fixtures/r97-crossing-acknowledgment/README.md
-./corpus/fixtures/r97-crossing-acknowledgment/claim-excerpt-map.md
-./corpus/knowledge/r97-acknowledgment-scope-note.md
-./corpus/tools/README.md

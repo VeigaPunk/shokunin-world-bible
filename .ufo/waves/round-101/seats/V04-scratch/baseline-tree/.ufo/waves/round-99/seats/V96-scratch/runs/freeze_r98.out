@@ -1,2 +1,0 @@
-FINDING CONTRACT-INVALID: pin r98-clerk-filing payload_schema_version None != 2 (full-file pin of 10 files)
-RESULT ERROR

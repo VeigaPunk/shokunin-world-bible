@@ -1,9 +1,0 @@
-when=2026-10-17T22:03:20-03:00
-scripts=43
-all_reports_seats=V123,V58
-mutual_named_pairs=0
-  none
-unbounded_all_reports:
-  none
-self_inclusive_all_reports:
-  V123 .ufo/waves/round-99/seats/V123-scratch/poll.sh thr=128 tries=- bounded=YES

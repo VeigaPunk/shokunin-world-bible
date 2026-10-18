@@ -1,7 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r60-unavailable-independent
-exit_code=1
-VIOLATION: entities.json: cannot load JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
-VIOLATION: timeline[0].tick: must be nonnegative
-VIOLATION: timeline[1].source_id: unknown in-world source 'absent'
-VIOLATION: timeline[1].depends_on: unknown event 'missing'
-4 violation(s); no canon changed

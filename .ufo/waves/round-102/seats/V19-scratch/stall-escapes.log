@@ -1,4 +1,0 @@
-STALL-ESCAPE-1 budget1=1200s(60x20s) end_others=5 synth=absent ledger=present fresh=present — recorded, not fatal; launching budget2
-BUDGET2 POLL_HIT t=160s others=18 synth=present ledger=present fresh=present — poll condition met
-GRACE-WINDOW opened: poll condition (18 others) met at B2 t=160s but declared seats V12,V18 absent — 600s bounded grace for full roster
-GRACE_HIT t=360s: V12 landed t=80s, V18 landed t=360s — full declared roster present; closing grace window

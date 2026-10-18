@@ -1,8 +1,0 @@
-[
-  {
-    "from": "mira",
-    "to": "harbor",
-    "type": "carries",
-    "source_id": "courier-log"
-  }
-]

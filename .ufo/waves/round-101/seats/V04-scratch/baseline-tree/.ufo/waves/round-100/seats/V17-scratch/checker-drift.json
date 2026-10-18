@@ -1,6 +1,0 @@
-{
-  "command": "python3 corpus/tools/boundary_doc_check.py --checker .ufo/waves/round-100/seats/V17-scratch/checker-drift.py",
-  "exit": 1,
-  "stderr_bytes": 0,
-  "time": "2026-10-18T02:37:25.108301+00:00"
-}

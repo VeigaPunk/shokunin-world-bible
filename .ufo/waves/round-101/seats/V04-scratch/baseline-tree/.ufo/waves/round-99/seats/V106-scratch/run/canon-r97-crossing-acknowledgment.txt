@@ -1,7 +1,0 @@
-$ cd /home/vgpnk/Projects/shokunin/lore-shokunin && python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r97-crossing-acknowledgment
-# exit=0
---- stdout ---
-FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1
-DIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
-RESULT PASS
---- stderr ---

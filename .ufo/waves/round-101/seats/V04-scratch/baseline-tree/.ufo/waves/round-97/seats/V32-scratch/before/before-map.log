@@ -1,5 +1,0 @@
-baseline case count 24
---- drop schema_drift: exit=0 ['SELF-TEST CASES 23/24 pinned'] ['RESULT PASS'] stderr=''
---- drop inventory_mismatch: exit=0 ['SELF-TEST CASES 23/24 pinned'] ['RESULT PASS'] stderr=''
---- drop phantom: exit=2 [] ['FINDING self_test_contract: contract drops implemented self-test cases: phantom', 'RESULT ERROR'] stderr=''
---- restored: exit=0 ['SELF-TEST CASES 24/24 pinned'] ['RESULT PASS'] stderr=''

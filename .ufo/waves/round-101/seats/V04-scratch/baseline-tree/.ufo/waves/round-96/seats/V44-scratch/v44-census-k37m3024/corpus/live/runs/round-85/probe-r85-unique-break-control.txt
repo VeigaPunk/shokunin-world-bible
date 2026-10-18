@@ -1,4 +1,0 @@
-$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/live/runs/round-85/probe-inputs/r85-unique-break-control
-exit_code=1
-VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'
-1 violation(s); no canon changed

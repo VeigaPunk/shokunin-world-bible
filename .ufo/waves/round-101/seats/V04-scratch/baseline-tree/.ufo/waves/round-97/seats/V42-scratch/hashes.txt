@@ -1,4 +1,0 @@
-49d4834e124fa6cfaa1a73cd5d1a7bc2cb59711c6233b418fe7485a17eedc94f  corpus/fixtures/r97-crossing-acknowledgment/claim-excerpt-map.md
-8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c  corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md
-e851f068cfd7ed02c97054df18729c4c5a9b8bf60d99d7c9116f427d765440de  corpus/fixtures/r96-crossing-response/claim-excerpt-map.md
-06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3  corpus/fixtures/r96-crossing-response/fictional-excerpts.md

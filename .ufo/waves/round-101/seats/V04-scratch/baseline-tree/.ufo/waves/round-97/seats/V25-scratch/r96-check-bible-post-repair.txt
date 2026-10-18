@@ -1,2 +1,0 @@
-CLEAN: schema, citations, relations, timeline; 0 violations
-bible exit=0

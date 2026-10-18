@@ -1,7 +1,0 @@
-INVENTORY JSON-FACTS 1/1; EDITORIAL-ROWS 0/0; TOTAL-ROWS 1/1; DISTINCT-ANCHORS 1/1
-ANCHORS repeated-references=0; DUPLICATE-ROWS 0
-FAIL E1: source-support; mode=verbatim; anchor=found; 5:The bell rang once at the west stair.; span=2; outside-span=5
-RECEIPT JSON-FACTS 1; EDITORIAL-ROWS 0; TOTAL-ROWS 1
-SOURCE-SUPPORT 0/1; EDITORIAL-ANCHORS 0/0; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 1/1; VALIDATED-ROWS 0/1
-FAIL: E1: anchor hit outside declared line span 2 (hit lines: 5)
-RESULT FAIL

@@ -1,4 +1,0 @@
-OBLIGATIONS raw=14 mapped=14
-INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16
-FINDING source_id_mismatch: timeline.json#/2 does not bind to 'paired-clock'
-RESULT FAIL

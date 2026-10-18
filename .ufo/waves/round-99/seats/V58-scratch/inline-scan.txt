@@ -1,6 +1,0 @@
-# inline-scan 2026-10-17T22:04:05-03:00 rows=80
-high_threshold=1
-HIGH pid=1675229 seat=V54 thr=127 self=YES-generic tries=- bounded=NO counts_md=YES
-  head=/bin/bash -c cd '/home/vgpnk/Projects/shokunin' && mkdir -p /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V54-scratch && date -u +%Y-%m-%dT%H:%M:%SZ | tee /
-pollish_total=80
-self_inclusive_high=0

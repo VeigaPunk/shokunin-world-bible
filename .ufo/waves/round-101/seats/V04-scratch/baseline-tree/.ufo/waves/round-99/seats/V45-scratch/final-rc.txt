@@ -1,2 +1,0 @@
-delivered_rc=0
-control_rc=2

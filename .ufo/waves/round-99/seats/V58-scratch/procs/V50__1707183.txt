@@ -1,8 +1,0 @@
-/bin/bash
--c
-cd '/home/vgpnk/Projects/shokunin' && # append-only poll log continues; start a fresh 40-try poller
-nohup bash /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V50-scratch/poll.sh > /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V50-scratch/poll.stdout 2>&1 &
-echo "POLLER_PID=$!"
-disown
-sleep 0.3
-ps -p $! -o pid,etime,cmd | head -3

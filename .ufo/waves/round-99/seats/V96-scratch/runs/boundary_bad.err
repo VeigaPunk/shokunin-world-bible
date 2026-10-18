@@ -1,3 +1,0 @@
-usage: boundary_doc_check.py [-h] [--doc DOC] [--checker CHECKER]
-                             [--self-test]
-boundary_doc_check.py: error: unrecognized arguments: --selftest

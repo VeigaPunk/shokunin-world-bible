@@ -1,3 +1,0 @@
-VIOLATION: timeline[3].tick: must be nonnegative
-VIOLATION: timeline[4].tick: must be nonnegative
-2 violation(s); no canon changed
