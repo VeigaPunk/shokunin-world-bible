@@ -1,0 +1,54 @@
+round-85 author-lane run manifest (host: devin)
+================================================
+
+Baseline pin
+- Report-last HEAD at lane start: 3f601981b1a28299c0b5498d6070584f26de3428
+  (lore r84: record rejected report last)
+- Pinned corpus archive per r84 verifier: 596f70e417c794f6d09279ee26cf9a03dd17eea9
+- `git diff --stat 596f70e HEAD -- .shokunin/lore/corpus` : empty (corpus
+  byte-identical to the pinned archive; 1,368 files)
+- Active checker: .shokunin/lore/corpus/fixtures/check_bible.py
+  sha256 88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81
+  (unchanged; matches r83/r84 verifier-reported SHA)
+
+Baseline replay (this lane, root-relative argv, stdout captured, stderr empty)
+- 133/133 fixture dirs replayed into ./<fixture>.txt
+- tuple counts: 28 exit_code=0, 105 exit_code=1
+- matches r84 independent verifier pinned counts (28 exit0 / 105 exit1)
+- stderr: empty for all 133 runs
+
+Probe inputs (./probe-inputs/<name>/, clones of fixtures/item-chain-valid/)
+- each probe copies contradictions.json, relations.json, sources.json,
+  timeline.json byte-identical from item-chain-valid (cmp -s verified)
+- only entities.json differs per probe:
+  r85-control              entities.json identical to item-chain-valid
+  r85-harbor-repro         +1 duplicated 'harbor' entity row (r56 case repro)
+  r85-isolated-ambiguous   +2 'vault' rows (duplicate); vault referenced ONLY by
+                           provenance[2].to_holder (end of chain; collateral-free)
+  r85-masked-ambiguous     +2 'vault' rows (duplicate); provenance[1].to_holder
+                           'vault' (ambiguous), provenance[2].from_holder
+                           'harbor' = real continuity break
+  r85-unique-break-control +1 'vault' row (unique); same provenance as masked
+                           (break present, holder resolves uniquely)
+- entities.json sha256:
+  fc1d000f9a17ead19e0f541fffd9752710dcfc7a12d73ec9cbc2a78db5ced637  r85-control
+  ea80058a9277dce333b33f98672387297dc6d4eca83cd531fbd508e48d76e8b0  r85-harbor-repro
+  6ccaf656a3b646bb0fc76d77ae3324b214ad267ffabd035b2ca7f59cfbdb8087  r85-isolated-ambiguous
+  69dc7fd10052b6b6f5e57208cd29879cfa012b4d1983549a7a852fbb3f76ab0f  r85-masked-ambiguous
+  59655ce36bd63d2034ce5a0918744e9b3d51b259570fa0e3d3f7977ff47a28d1  r85-unique-break-control
+- masked vs unique entities.json diff: exactly 12 lines = one duplicated
+  'vault' object (lines 81-92); provenance records identical
+
+Probe outputs (./probe-<name>.txt)
+- probe-r85-control.txt               exit0 CLEAN
+- probe-r85-harbor-repro.txt          exit1, 2 violations:
+  entities[4].id duplicate 'harbor' + timeline[0].place_id ambiguous 'harbor'
+  (byte-matches r56 Sol recorded old-checker output)
+- probe-r85-isolated-ambiguous.txt    exit1, 1 violation:
+  entities[5].id duplicate 'vault' ONLY; zero findings at provenance records
+- probe-r85-masked-ambiguous.txt      exit1, 1 violation:
+  entities[5].id duplicate 'vault' ONLY; the real provenance[2] chain break
+  is completely masked (can_check_chain disabled silently)
+- probe-r85-unique-break-control.txt  exit1, 1 violation:
+  entities[3].provenance[2]: provenance chain break; expected from_holder
+  'vault', got 'harbor'  (same defect reported when holder unique)

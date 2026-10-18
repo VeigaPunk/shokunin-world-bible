@@ -1,0 +1,9 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r60-empty
+exit_code=1
+VIOLATION: relations[0].from: dangling entity 'mira'
+VIOLATION: relations[0].to: dangling entity 'seal'
+VIOLATION: timeline[0].entity_id: dangling entity 'mira'
+VIOLATION: timeline[0].place_id: dangling entity 'harbor'
+VIOLATION: timeline[1].entity_id: dangling entity 'mira'
+VIOLATION: timeline[1].place_id: dangling entity 'tower'
+6 violation(s); no canon changed

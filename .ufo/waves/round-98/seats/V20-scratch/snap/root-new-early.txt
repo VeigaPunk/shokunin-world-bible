@@ -1,0 +1,6 @@
+.
+./SCORECARD.md
+./.gitignore
+./SKILL.md
+./LOG.md
+./v05-self-test-scratch

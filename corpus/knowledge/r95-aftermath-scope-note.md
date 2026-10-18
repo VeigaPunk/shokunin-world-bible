@@ -55,3 +55,17 @@ Cited-path existence and inheritance checks (python3, this pass): every path nam
 ## Limits of this record
 
 This is an author-seat knowledge note, not independent verification, admission, or a non-author review. It does not authenticate the fictional sources, does not adjudicate any character, and does not extend to any record outside the cited paths. The r95 fixture is a declared continuation of `r94-paired-crossing`, itself a continuation of `r88-m3-maya-cluster`; source IDs remain cluster-local and path-qualified comparisons are not identity evidence. Rights and AI-training permission remain unassessed here.
+
+## Correction addendum (2026-10-17, round 98, S5 knowledge-notes seat)
+
+The receipts paragraph above is preserved unrewritten, but its tool-revision pin is stale. `map_obligations.py` `9224a684…` was an in-flight intermediate revision during round 95 and never entered the file's committed history (the committed revisions are `cc1df4dc…` r94, `d1c239cc…` r95, `2b0ba815…` r96, `86b52949…` r97). Current delivered revisions measured at this addendum's run time (2026-10-17T20:28:35-03:00, from the lane root):
+
+```sh
+sha256sum corpus/tools/map_obligations.py corpus/tools/map-obligations-contract.json
+# 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+# 2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41  corpus/tools/map-obligations-contract.json
+```
+
+`check_bible.py` `ff9fd2aa…` and `support_check.py` `55a5eb27…` named above are still current (re-measured the same pass). The three receipts above were re-derived at this current revision this pass and are unchanged: `check_bible` CLEAN exit 0; `support_check` `JSON-FACTS 15/15` / `EDITORIAL-ROWS 2/2` / `TOTAL-ROWS 17/17` / `RESULT PASS` exit 0; `map_obligations` `raw=15 mapped=15` / `RESULT PASS` exit 0.
+
+Instruction: on the next touch of this note, re-derive all three receipts and re-measure the tool revisions before citing them; do not cite `9224a684…` as current. Round 98's C1 work owns `corpus/tools/dependency_freeze.py` and `corpus/tools/dependency-freeze-contract.json`, not `map_obligations.py` or its contract, so the two hashes above should hold unless a later round changes them. The historical text above stays unrewritten; this addendum is the correction of record.

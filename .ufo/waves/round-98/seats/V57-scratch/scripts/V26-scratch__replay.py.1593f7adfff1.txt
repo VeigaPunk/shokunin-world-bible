@@ -1,0 +1,182 @@
+#!/usr/bin/env python3
+"""V26 chain replay + mirror mutation harness (read-only against the lane tree).
+
+Usage: python3 replay.py <mode>
+  chain   - replay dependency_freeze.py over the six-fixture chain
+  pins    - recompute each pin's content_sha256 from current fixture bytes
+  mirror  - mirror root: intact r97 verify + r97 edge-drop mutation + r98 edge-drop
+All measurements print command, exit code, and raw output.
+"""
+import hashlib
+import json
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+LANE = Path("/home/vgpnk/Projects/shokunin/lore-shokunin")
+SCRATCH = LANE / ".ufo/waves/round-98/seats/V26-scratch"
+TOOL = LANE / "corpus/tools/dependency_freeze.py"
+CONTRACT = LANE / "corpus/tools/dependency-freeze-contract.json"
+CHAIN = [
+    "r88-m3-maya-cluster",
+    "r94-paired-crossing",
+    "r95-crossing-aftermath",
+    "r96-crossing-response",
+    "r97-crossing-acknowledgment",
+    "r98-clerk-filing",
+]
+DATA_FILES = ("entities.json", "relations.json", "timeline.json", "sources.json", "contradictions.json")
+
+
+def sha256_bytes(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def run(label, argv, cwd=LANE):
+    result = subprocess.run(argv, cwd=cwd, capture_output=True, text=True)
+    print(f"### {label}")
+    print(f"$ {' '.join(str(a) for a in argv)}")
+    print(result.stdout, end="")
+    if result.stderr:
+        print("STDERR:", result.stderr, end="")
+    print(f"EXIT={result.returncode}")
+    return result
+
+
+def hash_pins():
+    for path in (TOOL, CONTRACT):
+        print(f"{sha256_bytes(path.read_bytes())}  {path.relative_to(LANE)}")
+    for name in CHAIN:
+        tl = LANE / "corpus/fixtures" / name / "timeline.json"
+        print(f"{sha256_bytes(tl.read_bytes())}  corpus/fixtures/{name}/timeline.json")
+
+
+def chain():
+    for name in CHAIN:
+        run(f"chain {name}", [sys.executable, str(TOOL), str(LANE / "corpus/fixtures" / name)])
+
+
+def pins():
+    contract = json.loads(CONTRACT.read_text(encoding="utf-8"))
+    for name, pin in sorted(contract["pins"].items()):
+        fixture = LANE / pin["fixture"]
+        files = {}
+        for fname in DATA_FILES:
+            candidate = fixture / fname
+            if candidate.is_file():
+                files[fname] = candidate.read_bytes()
+        payload = json.dumps({n: sha256_bytes(r) for n, r in files.items()},
+                             sort_keys=True, separators=(",", ":"))
+        digest = sha256_bytes(payload.encode("utf-8"))
+        match = digest == pin["content_sha256"]
+        print(f"PIN {name}: recorded {pin['content_sha256']}")
+        print(f"      recomputed {digest} match={match}")
+        # per-file digests
+        for fname, raw in sorted(files.items()):
+            recorded = pin["files"].get(fname)
+            ok = recorded == sha256_bytes(raw)
+            if not ok:
+                print(f"      FILE-DIGEST-MISMATCH {fname}: recorded {recorded} now {sha256_bytes(raw)}")
+        missing = sorted(set(pin["files"]) - set(files))
+        extra = sorted(set(files) - set(pin["files"]))
+        if missing:
+            print(f"      pinned files now absent: {missing}")
+        if extra:
+            print(f"      unpinned data files present: {extra}")
+
+
+def build_mirror():
+    root = SCRATCH / "mirror"
+    if root.exists():
+        shutil.rmtree(root)
+    (root / "corpus/tools").mkdir(parents=True)
+    (root / "corpus/fixtures").mkdir(parents=True)
+    shutil.copy2(TOOL, root / "corpus/tools/dependency_freeze.py")
+    shutil.copy2(CONTRACT, root / "corpus/tools/dependency-freeze-contract.json")
+    for name in ("r97-crossing-acknowledgment", "r98-clerk-filing"):
+        shutil.copytree(LANE / "corpus/fixtures" / name, root / "corpus/fixtures" / name)
+    return root
+
+
+def drop_edge(fixture, event_id, dep):
+    path = fixture / "timeline.json"
+    timeline = json.loads(path.read_text(encoding="utf-8"))
+    for record in timeline:
+        if record["id"] == event_id:
+            before = list(record["depends_on"])
+            record["depends_on"] = [d for d in record["depends_on"] if d != dep]
+            print(f"mutate {fixture.name}: {event_id} depends_on {before} -> {record['depends_on']}")
+    path.write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
+
+
+def mirror():
+    root = build_mirror()
+    tool = root / "corpus/tools/dependency_freeze.py"
+    mirror_contract = root / "corpus/tools/dependency-freeze-contract.json"
+    r97 = root / "corpus/fixtures/r97-crossing-acknowledgment"
+    r98 = root / "corpus/fixtures/r98-clerk-filing"
+    delivered = json.loads(CONTRACT.read_text(encoding="utf-8"))["pins"]
+
+    # 0. guard probe: out-of-scope --freeze target -> SCOPE-REFUSED, contract untouched
+    before = sha256_bytes(mirror_contract.read_bytes())
+    outside = SCRATCH / "mirror" / "outside-target"
+    outside.mkdir(exist_ok=True)
+    run("mirror guard probe (out-of-scope freeze)", [sys.executable, str(tool), "--freeze", str(outside)])
+    after = sha256_bytes(mirror_contract.read_bytes())
+    print(f"mirror contract unchanged by refused freeze: {before == after}")
+
+    # 1. intact r97 under mirror contract (path-bound) -> expect PASS
+    run("mirror r97 intact", [sys.executable, str(tool), str(r97)])
+    # 2. re-freeze r97 through the guarded path in the mirror -> digest must equal the delivered pin
+    run("mirror r97 re-freeze (guarded)", [sys.executable, str(tool), "--freeze", str(r97)])
+    frozen = json.loads(mirror_contract.read_text(encoding="utf-8"))["pins"]["r97-crossing-acknowledgment"]
+    print(f"mirror re-freeze digest {frozen['content_sha256']} == delivered pin "
+          f"{delivered['r97-crossing-acknowledgment']['content_sha256']}: "
+          f"{frozen['content_sha256'] == delivered['r97-crossing-acknowledgment']['content_sha256']}")
+    # 3. drop the r97 tick-13 edge (V46's mutation) -> expect REDUCTION-DETECTED exit 1
+    drop_edge(r97, "acknowledgment-aru-records", "response-evin-salt-court")
+    run("mirror r97 edge-dropped", [sys.executable, str(tool), str(r97)])
+    # 4. intact r98 -> expect PASS; re-freeze digest vs delivered pin
+    run("mirror r98 intact", [sys.executable, str(tool), str(r98)])
+    run("mirror r98 re-freeze (guarded)", [sys.executable, str(tool), "--freeze", str(r98)])
+    frozen98 = json.loads(mirror_contract.read_text(encoding="utf-8"))["pins"]["r98-clerk-filing"]
+    print(f"mirror re-freeze digest {frozen98['content_sha256']} == delivered pin "
+          f"{delivered['r98-clerk-filing']['content_sha256']}: "
+          f"{frozen98['content_sha256'] == delivered['r98-clerk-filing']['content_sha256']}")
+    # 5. drop the r98 tick-14 edge -> expect REDUCTION-DETECTED exit 1
+    drop_edge(r98, "clerk-filing-open", "acknowledgment-aru-records")
+    run("mirror r98 edge-dropped", [sys.executable, str(tool), str(r98)])
+
+    # 6. digest half: description byte change (not modeled) -> expect exit 2 DIGEST-MISMATCH
+    shutil.rmtree(r98)
+    shutil.copytree(LANE / "corpus/fixtures/r98-clerk-filing", r98)
+    timeline = json.loads((r98 / "timeline.json").read_text(encoding="utf-8"))
+    for record in timeline:
+        if record["id"] == "clerk-filing-open":
+            record["description"] = record["description"] + " V26 digest probe."
+    (r98 / "timeline.json").write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
+    run("mirror r98 description-tamper", [sys.executable, str(tool), str(r98)])
+
+    # 7. bound: markdown byte change is outside the pin payload -> expect still PASS exit 0
+    with open(r98 / "README.md", "a", encoding="utf-8") as handle:
+        handle.write("\nV26 markdown-unpinned bound probe.\n")
+    run("mirror r98 markdown-append", [sys.executable, str(tool), str(r98)])
+
+    # 8. control: delivered (unmutated) fixtures still clean after all mirror writes
+    for name in ("r97-crossing-acknowledgment", "r98-clerk-filing"):
+        run(f"delivered control {name}", [sys.executable, str(TOOL), str(LANE / "corpus/fixtures" / name)])
+
+
+if __name__ == "__main__":
+    mode = sys.argv[1] if len(sys.argv) > 1 else "chain"
+    print("== revision hashes ==")
+    hash_pins()
+    if mode == "chain":
+        chain()
+    elif mode == "pins":
+        pins()
+    elif mode == "mirror":
+        mirror()
+    else:
+        sys.exit(f"unknown mode {mode}")

@@ -1,0 +1,15 @@
+=== A: SCOPE-REFUSED (real tool, --freeze outside scope) ===
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/target (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/target); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+EXIT=2
+=== B: PATH-MISMATCH (real tool, foreign same-name copy) ===
+FINDING PATH-MISMATCH: pin r95-crossing-aftermath names corpus/fixtures/r95-crossing-aftermath (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V04-scratch/foreign/r95-crossing-aftermath
+RESULT ERROR
+EXIT=2
+=== G1: UNPINNED-FIXTURE (r97 not in baseline pin set) ===
+FINDING UNPINNED-FIXTURE: no pin for 'r97-crossing-acknowledgment' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response'])
+RESULT ERROR
+EXIT=2
+CONTRACT_BEFORE=27273be27d33ad864f06d656f28dca8eabc9d76f6ebe62583372a88c9e64e781
+CONTRACT_AFTER=27273be27d33ad864f06d656f28dca8eabc9d76f6ebe62583372a88c9e64e781
+CONTRACT_UNCHANGED=yes

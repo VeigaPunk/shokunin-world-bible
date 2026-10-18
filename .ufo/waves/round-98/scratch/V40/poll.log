@@ -1,0 +1,43 @@
+try=1 t=20:30:12 report=none tool=same contract=same
+try=2 t=20:30:25 report=none tool=same contract=same
+try=2 t=20:30:32 report=none tool=same contract=same
+try=3 t=20:30:45 report=none tool=same contract=same
+try=3 t=20:30:52 report=none tool=same contract=same
+try=4 t=20:31:05 report=none tool=same contract=same
+try=4 t=20:31:12 report=none tool=same contract=same
+try=5 t=20:31:25 report=none tool=changed contract=changed
+try=5 t=20:31:32 report=none tool=changed contract=changed
+try=6 t=20:31:45 report=none tool=changed contract=changed
+try=6 t=20:31:52 report=none tool=changed contract=changed
+try=7 t=20:32:05 report=none tool=changed contract=changed
+try=7 t=20:32:12 report=none tool=changed contract=changed
+try=8 t=20:32:25 report=none tool=changed contract=changed
+try=8 t=20:32:32 report=none tool=changed contract=changed
+try=9 t=20:32:45 report=none tool=changed contract=changed
+try=9 t=20:32:52 report=none tool=changed contract=changed
+try=10 t=20:33:05 report=none tool=changed contract=changed
+try=10 t=20:33:12 report=none tool=changed contract=changed
+try=11 t=20:33:25 report=none tool=changed contract=changed
+try=11 t=20:33:32 report=none tool=changed contract=changed
+try=12 t=20:33:45 report=none tool=changed contract=changed
+try=12 t=20:33:52 report=none tool=changed contract=changed
+try=13 t=20:34:05 report=none tool=changed contract=changed
+try=13 t=20:34:12 report=none tool=changed contract=changed
+try=14 t=20:34:25 report=none tool=changed contract=changed
+try=14 t=20:34:32 report=none tool=changed contract=changed
+try=15 t=20:34:45 report=none tool=changed contract=changed
+try=15 t=20:34:52 report=none tool=changed contract=changed
+try=16 t=20:35:05 report=none tool=changed contract=changed
+try=16 t=20:35:12 report=none tool=changed contract=changed
+try=17 t=20:35:25 report=.ufo/waves/round-98/seats/S1-freeze-hygiene.md tool=changed contract=changed
+try=17 t=20:35:32 report=.ufo/waves/round-98/seats/S1-freeze-hygiene.md tool=changed contract=changed
+STAB i=1 sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6 stable=0
+STAB i=1 sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6 stable=0
+STAB i=2 sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6 stable=1
+STAB i=2 sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6 stable=1
+STAB i=3 sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6 stable=2
+POLL_HIT try=17 report=.ufo/waves/round-98/seats/S1-freeze-hygiene.md tool=03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b contract=153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947
+POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6
+STAB i=3 sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6 stable=2
+POLL_HIT try=17 report=.ufo/waves/round-98/seats/S1-freeze-hygiene.md tool=03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b contract=153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947
+POLL_STABLE sha=3be4a9f15b385bf7c1257a771be127250b2926e6ce1e64ad194c1aeab639f4b6

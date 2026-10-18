@@ -1,0 +1,1 @@
+CENSUS dirs=172 clean=38 negative=134 other=0 violation_lines=421

@@ -1240,3 +1240,26 @@ Round 97 also hardened both corpus tools: `map_obligations` (persisted `dual_poi
 A full repo-relative corpus run at the r97 closure observed **171 fixture directories: 37 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-96 census (170/36/134/421). One directory added (`r97-crossing-acknowledgment`); zero inherited tuple changes.
 
 Dated pin note: this Round-97 append changes this file's bytes; the W05 pin for this file no longer matches (fourth consecutive round; census re-declarations above are the measured state at each closure).
+
+## Round 98 — `r98-clerk-filing` (2026-10-17)
+
+Added at round 98: a preserving continuation of `r97-crossing-acknowledgment`. The harbor clerk's authored filing note (`clerk-filing-note`) supports one new entity (`clerk-maren`, one role claim) and one tick-14 event (`clerk-filing-open`, actor `clerk-maren`, place `chalk-stair`, `depends_on: ["acknowledgment-aru-records"]`) recording that both pending accounts were filed and the matter stands OPEN — the clerk asserts no finding and no resolution. Inherited r97 records are parsed-value identical; the r97 fixture is untouched. Map: 20 obligations (17 inherited rows unchanged + first_appearance + claim + event rows). The r95 map's carried stale sentence was repaired this round (one line; data rows byte-unchanged, r95 receipts unchanged).
+
+Replay commands and receipts (measured at the r98 closure, HEAD cited in LOG.md):
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r98-clerk-filing
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r98-clerk-filing
+# OBLIGATIONS raw=20 mapped=20; INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22 / RESULT PASS   exit 0
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing
+# FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1   RESULT PASS   exit 0
+```
+
+Round 98 also hardened `dependency_freeze`: `SELF-TEST-MISMATCH` exits 2 (pinned by a persisted case; self-test now 17 cases), path-less legacy pins are migrated in place by `--freeze`, and the frozen chain is six fixtures — r88-m3, r94, r95, r96, r97, r98 — each pinned with repo-relative path binding, verifying 6/6 clean. See the tools README Round-98 addendum. Bounds: the pin payload covers the five JSON tables only (fixture Markdown is not pinned); BR-01's prose half remains open.
+
+### 2026-10-17 census re-declaration
+
+A full repo-relative corpus run at the r98 closure observed **172 fixture directories: 38 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-97 census (171/37/134/421). One directory added (`r98-clerk-filing`); zero inherited tuple changes.
+
+Dated pin note: this Round-98 append changes this file's bytes; the W05 pin for this file no longer matches (fifth consecutive round; census re-declarations above are the measured state at each closure).

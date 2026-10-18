@@ -1,0 +1,4 @@
+fence errors: []
+receipt fence line=355 command line=346 cases=['corpus/live/runs/round-85/probe-inputs/r85-control', 'corpus/live/runs/round-85/probe-inputs/r85-unique-break-control', 'corpus/live/runs/round-85/probe-inputs/r85-masked-ambiguous', 'corpus/live/runs/round-85/probe-inputs/r85-isolated-ambiguous', 'corpus/live/runs/round-85/probe-inputs/r85-harbor-repro']
+receipt fence line=406 command line=400 cases=['corpus/fixtures/r88-mixed-stop', 'corpus/fixtures/r88-nonholder-stop', 'corpus/fixtures/r88-shape-ambiguous-armed', 'corpus/fixtures/r89-f2-dangling-to', 'corpus/fixtures/r89-f2-dangling-from', 'corpus/fixtures/r89-f2-invalid-source-id']
+receipt fence line=462 command line=456 cases=['corpus/fixtures/r89-c1-multi-cause-valid', 'corpus/fixtures/r89-fn2-unresolved-chain-break', 'corpus/fixtures/r89-fn2-control']

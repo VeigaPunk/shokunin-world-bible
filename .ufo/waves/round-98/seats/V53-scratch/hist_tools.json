@@ -1,0 +1,275 @@
+{
+ "0008496a": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "5c8f5305",
+   "sha256": "0008496a65e6e069"
+  }
+ ],
+ "14638c47": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "9cacf566",
+   "sha256": "14638c4730500503"
+  }
+ ],
+ "27273be2": [
+  {
+   "path": "corpus/tools/dependency-freeze-contract.json",
+   "rev": "9d25df9b",
+   "sha256": "27273be27d33ad86"
+  }
+ ],
+ "29f3bdf8": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "5b6f9322",
+   "sha256": "29f3bdf8132533e5"
+  }
+ ],
+ "2b0ba815": [
+  {
+   "path": "corpus/tools/map_obligations.py",
+   "rev": "f3e09f93",
+   "sha256": "2b0ba815326b1cb3"
+  }
+ ],
+ "37a1b3a2": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "e319fb15",
+   "sha256": "37a1b3a23e5f4f89"
+  }
+ ],
+ "3ae4134d": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "03c6746e",
+   "sha256": "3ae4134d1d7d0f4b"
+  }
+ ],
+ "559f9cc2": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "410c0133",
+   "sha256": "559f9cc26376cd86"
+  }
+ ],
+ "55a5eb27": [
+  {
+   "path": "corpus/tools/support_check.py",
+   "rev": "c4d4823b",
+   "sha256": "55a5eb2753901be7"
+  }
+ ],
+ "5a389f1f": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "336fee0f",
+   "sha256": "5a389f1f5c0ccf10"
+  }
+ ],
+ "66a3c4bb": [
+  {
+   "path": "corpus/tools/support_check.py",
+   "rev": "ca7f9ef1",
+   "sha256": "66a3c4bb2ae7fc20"
+  }
+ ],
+ "6708bed3": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "9d3519be",
+   "sha256": "6708bed3bb665093"
+  }
+ ],
+ "7caf1933": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "d03fe9cd",
+   "sha256": "7caf1933f39d1103"
+  }
+ ],
+ "83f8b7dc": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "4c434098",
+   "sha256": "83f8b7dcaafdc60e"
+  }
+ ],
+ "86b52949": [
+  {
+   "path": "corpus/tools/map_obligations.py",
+   "rev": "9d25df9b",
+   "sha256": "86b529496214493f"
+  }
+ ],
+ "88c9b1d0": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "22a95ffe",
+   "sha256": "88c9b1d003f51738"
+  }
+ ],
+ "8ad68480": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "36ac0271",
+   "sha256": "8ad6848022410e8c"
+  }
+ ],
+ "8d5fa4e1": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "f7b0a09b",
+   "sha256": "8d5fa4e14f14156c"
+  }
+ ],
+ "8d891b54": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "b767a960",
+   "sha256": "8d891b54b733e7ad"
+  }
+ ],
+ "99e68a27": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "58a90206",
+   "sha256": "99e68a27eb8caeea"
+  }
+ ],
+ "9ab06792": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "ab44a0ac",
+   "sha256": "9ab0679201218b45"
+  }
+ ],
+ "9da149b8": [
+  {
+   "path": "corpus/tools/support_check.py",
+   "rev": "6332115f",
+   "sha256": "9da149b8e51f5c6c"
+  }
+ ],
+ "a3b57978": [
+  {
+   "path": "corpus/tools/dependency_freeze.py",
+   "rev": "f3e09f93",
+   "sha256": "a3b57978f0cbf314"
+  }
+ ],
+ "ae3ed2ee": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "8430c492",
+   "sha256": "ae3ed2eeb1d76933"
+  }
+ ],
+ "b06275f3": [
+  {
+   "path": "corpus/tools/dependency_freeze.py",
+   "rev": "9d25df9b",
+   "sha256": "b06275f3bbdeabaa"
+  }
+ ],
+ "b406ea69": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "703ef81d",
+   "sha256": "b406ea69a2e057e5"
+  }
+ ],
+ "ba2eb74d": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "068aa359",
+   "sha256": "ba2eb74dcd0f8293"
+  }
+ ],
+ "bf2061b5": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "9513acb4",
+   "sha256": "bf2061b5c6f4e5f6"
+  }
+ ],
+ "c65ac3bd": [
+  {
+   "path": "corpus/tools/dependency-freeze-contract.json",
+   "rev": "f3e09f93",
+   "sha256": "c65ac3bd4fc090d8"
+  }
+ ],
+ "cae2dc96": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "709459b3",
+   "sha256": "cae2dc969c2a2851"
+  }
+ ],
+ "cc1df4dc": [
+  {
+   "path": "corpus/tools/map_obligations.py",
+   "rev": "abbc3e01",
+   "sha256": "cc1df4dc406870b6"
+  }
+ ],
+ "d1c239cc": [
+  {
+   "path": "corpus/tools/map_obligations.py",
+   "rev": "dcb2d928",
+   "sha256": "d1c239ccb2140449"
+  }
+ ],
+ "d4aececf": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "5e6d7a07",
+   "sha256": "d4aececfb5a4260e"
+  }
+ ],
+ "dcacffd6": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "2ea9ef13",
+   "sha256": "dcacffd6981e1af5"
+  }
+ ],
+ "e2bb9639": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "1b09f3ff",
+   "sha256": "e2bb9639a3247284"
+  }
+ ],
+ "e8f24162": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "28706dc7",
+   "sha256": "e8f241623aa84eb1"
+  }
+ ],
+ "eaa2f117": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "65ac850b",
+   "sha256": "eaa2f1178c4571d8"
+  }
+ ],
+ "f0e87e2f": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "3791f4ce",
+   "sha256": "f0e87e2ff88529cd"
+  }
+ ],
+ "ff9fd2aa": [
+  {
+   "path": "corpus/fixtures/check_bible.py",
+   "rev": "ca7f9ef1",
+   "sha256": "ff9fd2aa6811a813"
+  }
+ ]
+}

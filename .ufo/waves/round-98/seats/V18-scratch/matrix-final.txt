@@ -1,0 +1,11 @@
+m0-baseline                          support=0 map=0
+m1-span-break                        support=1 map=0
+m2-row-drop                          support=1 map=1
+m2-row-drop-declared                 support=1 map=1
+m3a-claims-rename-keep-row           support=0 map=1
+m3b-claims-rename-row-removed        support=1 map=1
+m4-claims-row-deletion               support=1 map=1
+m5-deps-reduction                    support=0 map=0
+m5b-event-deletion-fully-declared    support=0 map=0
+m6-digest-tamper                     support=0 map=0
+MATRIX DONE

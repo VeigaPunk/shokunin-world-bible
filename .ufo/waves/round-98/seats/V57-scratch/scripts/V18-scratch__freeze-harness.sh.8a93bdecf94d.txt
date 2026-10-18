@@ -1,0 +1,124 @@
+#!/usr/bin/env bash
+# V18 freeze half on r98/r97 copies through the DELIVERED contract's pins.
+# Mirror-root harness: copy the delivered tool + contract byte-for-byte into a scratch
+# ROOT and place the fixture copies at the pin's repo-relative path, so the delivered
+# pin binds (binding is to the running tool's own ROOT).
+set -u
+REPO=/home/vgpnk/Projects/shokunin/lore-shokunin
+S="$REPO/.ufo/waves/round-98/seats/V18-scratch"
+H="$S/harness"
+LOG="$S/freeze-harness.log"
+: > "$LOG"
+run() { echo "\$ $*" >> "$LOG"; "$@" >> "$LOG" 2>&1; echo "exit=$?" >> "$LOG"; echo "---" >> "$LOG"; }
+cd "$REPO" || exit 1
+rm -rf "$H"
+mkdir -p "$H/corpus/tools" "$H/corpus/fixtures"
+cp corpus/tools/dependency_freeze.py "$H/corpus/tools/"
+cp corpus/tools/dependency-freeze-contract.json "$H/corpus/tools/"
+cp -r corpus/fixtures/r98-clerk-filing "$H/corpus/fixtures/"
+cp -r corpus/fixtures/r97-crossing-acknowledgment "$H/corpus/fixtures/"
+echo "delivered tool sha: $(sha256sum corpus/tools/dependency_freeze.py | cut -d' ' -f1)" >> "$LOG"
+echo "harness  tool sha: $(sha256sum $H/corpus/tools/dependency_freeze.py | cut -d' ' -f1)" >> "$LOG"
+echo "delivered contract sha: $(sha256sum corpus/tools/dependency-freeze-contract.json | cut -d' ' -f1)" >> "$LOG"
+echo "harness  contract sha: $(sha256sum $H/corpus/tools/dependency-freeze-contract.json | cut -d' ' -f1)" >> "$LOG"
+echo "---" >> "$LOG"
+
+TOOL="$H/corpus/tools/dependency_freeze.py"
+F98="$H/corpus/fixtures/r98-clerk-filing"
+F97="$H/corpus/fixtures/r97-crossing-acknowledgment"
+PRISTINE="$S/pristine-r98"
+PRISTINE97="$S/pristine-r97"
+rm -rf "$PRISTINE" "$PRISTINE97"
+cp -r "$F98" "$PRISTINE"
+cp -r "$F97" "$PRISTINE97"
+
+echo "== f0 baseline verify r98 (delivered pin binds) ==" >> "$LOG"
+run python3 "$TOOL" "$F98"
+echo "== f1 baseline verify r97 (delivered pin binds) ==" >> "$LOG"
+run python3 "$TOOL" "$F97"
+
+echo "== f2 r98 deps reduction in place ==" >> "$LOG"
+python3 - "$F98/timeline.json" <<'PY'
+import json,sys
+p=sys.argv[1]
+d=json.load(open(p))
+d[-1]["depends_on"]=[]
+open(p,"w").write(json.dumps(d,indent=2)+"\n")
+print("mutated:", d[-1]["id"], "depends_on ->", d[-1]["depends_on"])
+PY
+run python3 "$TOOL" "$F98"
+echo "== f2b same copy through map/support (expect 0/0) ==" >> "$LOG"
+run python3 "$REPO/corpus/tools/map_obligations.py" "$F98"
+run python3 "$REPO/corpus/tools/support_check.py" "$F98"
+
+echo "== f3 r98 fully self-consistent event deletion ==" >> "$LOG"
+rm -rf "$F98"; cp -r "$PRISTINE" "$F98"
+python3 - "$F98" "$REPO/corpus/tools/support_check.py" <<'PY'
+import importlib.util, json, re, sys
+from collections import Counter
+from pathlib import Path
+fixture=Path(sys.argv[1]); sc_path=sys.argv[2]
+tl=json.load(open(fixture/"timeline.json"))
+removed=tl.pop()
+open(fixture/"timeline.json","w").write(json.dumps(tl,indent=2)+"\n")
+m=(fixture/"claim-excerpt-map.md").read_text().splitlines()
+keep=[]; dropped=None
+for line in m:
+    if re.match(r"^\|\s*J[0-9]+\s*\|",line) and f"timeline.json#/{len(tl)}" in line:
+        dropped=line; continue
+    keep.append(line)
+(fixture/"claim-excerpt-map.md").write_text("\n".join(keep)+"\n")
+# recompute the declaration exactly as support_check observes it
+spec=importlib.util.spec_from_file_location("sc", sc_path)
+sc=importlib.util.module_from_spec(spec); spec.loader.exec_module(sc)
+facts, _, _ = sc.parse_map(fixture/"claim-excerpt-map.md")
+json_facts=[f for f in facts if f["kind"]=="json"]; editorial=[f for f in facts if f["kind"]=="editorial"]
+anchors=Counter((f["path"], f["anchor"]) for f in facts)
+lines=(fixture/"claim-excerpt-map.md").read_text().splitlines()
+out=[]
+for line in lines:
+    if line.startswith("**Expected inventory:**"):
+        line=re.sub(r"([0-9]+) JSON facts", f"{len(json_facts)} JSON facts", line)
+        line=re.sub(r"([0-9]+) editorial rows?", f"{len(editorial)} editorial rows", line)
+        line=re.sub(r"([0-9]+) total mapped rows", f"{len(facts)} total mapped rows", line)
+        line=re.sub(r"([0-9]+) distinct excerpt anchors", f"{len(anchors)} distinct excerpt anchors", line)
+        print("new declaration:", line)
+    out.append(line)
+(fixture/"claim-excerpt-map.md").write_text("\n".join(out)+"\n")
+print("removed event:", removed["id"], "| dropped row:", (dropped or "")[:60])
+PY
+run python3 "$TOOL" "$F98"
+echo "== f3b same copy through map/support ==" >> "$LOG"
+run python3 "$REPO/corpus/tools/map_obligations.py" "$F98"
+run python3 "$REPO/corpus/tools/support_check.py" "$F98"
+
+echo "== f4 r98 digest tamper (title case) ==" >> "$LOG"
+rm -rf "$F98"; cp -r "$PRISTINE" "$F98"
+python3 - "$F98/sources.json" <<'PY'
+import sys
+p=sys.argv[1]
+t=open(p).read()
+open(p,"w").write(t.replace("fictional","Fictional",1))
+print("tampered:", p)
+PY
+run python3 "$TOOL" "$F98"
+
+echo "== f5 r97 deps reduction in place (C2 discharge demo) ==" >> "$LOG"
+python3 - "$F97/timeline.json" <<'PY'
+import json,sys
+p=sys.argv[1]
+d=json.load(open(p))
+d[-1]["depends_on"]=[]
+open(p,"w").write(json.dumps(d,indent=2)+"\n")
+print("mutated:", d[-1]["id"], "depends_on ->", d[-1]["depends_on"])
+PY
+run python3 "$TOOL" "$F97"
+
+echo "== f6 foreign-path r98 copy through DELIVERED repo tool (expect PATH-MISMATCH) ==" >> "$LOG"
+FOREIGN="$S/foreign/r98-clerk-filing"
+rm -rf "$S/foreign"; mkdir -p "$S/foreign"
+cp -r "$REPO/corpus/fixtures/r98-clerk-filing" "$FOREIGN"
+run python3 "$REPO/corpus/tools/dependency_freeze.py" "$FOREIGN"
+
+echo "HARNESS DONE" >> "$LOG"
+echo "HARNESS DONE"

@@ -1,0 +1,31 @@
+FROZEN tool sha256=03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b
+FROZEN contract sha256=153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947
+
+A delivered FROZEN_CASES n=17 added=['self_test_mismatch'] removed=[]
+A contract expected n=17 added=['self_test_mismatch'] removed=[]
+A inherited expected entries changed vs baseline: []
+
+B frozen --self-test exit=0
+B tail: ['SELF-TEST 17/17', 'RESULT PASS']
+
+C tampered-expectation --self-test exit=2
+C  CASE clean: exit=0 expected=1 findings=[] MISMATCH
+C  CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+C  CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+C  CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+C  SELF-TEST 16/17
+C  FINDING SELF-TEST-MISMATCH: cases failed: ['clean']
+C  RESULT ERROR
+C traceback in output: False
+
+D path-less pin --freeze exit=0
+D out: ['MIGRATED r95-crossing-aftermath: path-less legacy pin now names corpus/fixtures/r95-crossing-aftermath', 'FROZEN r95-crossing-aftermath: events 4; dependency-edges 3; relations 1', 'DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9', 'FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1', 'DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9', 'RESULT PASS']
+D pin fixture after: 'corpus/fixtures/r95-crossing-aftermath'
+
+E path-bearing pin, same-named copy elsewhere --freeze exit=2
+E out: ["FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/elsewhere/r95-crossing-aftermath: pin r95-crossing-aftermath already names 'corpus/fixtures/r95-crossing-aftermath'; freezing a same-named path elsewhere would rewrite the delivered pin", 'RESULT ERROR']
+
+F baseline precedence: 'semantic inventory findings decide first (exit 1); a content digest change the frozen inventory does not model exits 2'
+F delivered precedence: "semantic inventory findings decide first (exit 1: REDUCTION-DETECTED, ADDITION-DETECTED, ENDPOINT-CHANGE); a content digest change the frozen inventory does not model exits 2 (DIGEST-MISMATCH). Exit-2 (could-not-evaluate) checks run in this order and the first failing check decides: UNPINNED-FIXTURE (no pin for the fixture name) or CONTRACT-INVALID (unreadable contract or invalid pin), FIXTURE-MISSING (fixture directory absent), PATH-MISMATCH (invoked path differs from the pin's recorded path), FILE-MISSING / MALFORMED-JSON / MALFORMED-MODEL (model build), DIGEST-MISMATCH (inventory clean, bytes changed outside the frozen inventory), INVALID-ARGUMENTS (CLI usage), SELF-TEST-MISMATCH (--self-test observed outcome differs from the persisted case expectation); --freeze additionally raises SCOPE-REFUSED (target outside corpus/fixtures/**, or a same-named in-scope target that would rewrite an existing pin's recorded path). A path-less legacy pin is migrated in place by --freeze instead of refused."
+
+G per-case rows baseline n=16 delivered n=0 differing={"addition_edge_phantom": [[1, "1", "['ADDITION-DETECTED']", "ok"], null], "clean": [[0, "1", "[]", "MISMATCH"], null], "digest_tamper": [[2, "2", "['DIGEST-MISMATCH']", "ok"], null], "event_endpoint_change": [[1, "1", "['ENDPOINT-CHANGE']", "ok"], null], "event_removed": [[1, "1", "['REDUCTION-DETECTED']", "ok"], null], "invalid_arguments": [[2, "2", "['INVALID-ARGUMENTS']", "ok"], null], "malformed_json": [[2, "2", "['MALFORMED-JSON']", "ok"], null], "missing_fixture": [[2, "2", "['FIXTURE-MISSING']", "ok"], null], "missing_timeline": [[2, "2", "['FILE-MISSING']", "ok"], null], "path_mismatch": [[2, "2", "['PATH-MISMATCH']", "ok"], null], "reduction_edge_drop": [[1, "1", "['REDUCTION-DETECTED']", "ok"], null], "relation_added": [[1, "1", "['ADDITION-DETECTED']", "ok"], null], "relation_endpoint_flip": [[1, "1", "['ENDPOINT-CHANGE']", "ok"], null], "relation_removed": [[1, "1", "['REDUCTION-DETECTED']", "ok"], null], "scope_refused": [[2, "2", "['SCOPE-REFUSED']", "ok"], null], "unpinned_fixture": [[2, "2", "['UNPINNED-FIXTURE']", "ok"], null]}

@@ -1,0 +1,15 @@
+== 23:34:43 extra probes ==
+--- N1: plain verify with path-less pin ---
+FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path
+RESULT ERROR
+N1-EXIT=2
+--- N2: map_obligations --self-test (unchanged claim) ---
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']
+RESULT PASS
+N2-PIPE-TAILED
+--- N3: tools diff scope ---
+ corpus/tools/README.md                       |  56 ++++++++
+ corpus/tools/dependency-freeze-contract.json | 193 ++++++++++++++++++++++++++-
+ corpus/tools/dependency_freeze.py            |  42 +++++-
+ 3 files changed, 281 insertions(+), 10 deletions(-)

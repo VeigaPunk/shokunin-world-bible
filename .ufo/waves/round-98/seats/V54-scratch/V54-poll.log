@@ -1,0 +1,8 @@
+try 1 23:30:31 missing: PINS:r97-crossing-acknowledgment,r98-clerk-filing reports: -S1 -S3 -S4 -S5
+try 2 23:30:51 missing: PINS:r97-crossing-acknowledgment,r98-clerk-filing reports: -S1 -S3 -S4 -S5
+try 3 23:31:11 missing: PINS:r97-crossing-acknowledgment,r98-clerk-filing reports: -S1 S3 -S4 -S5
+try 4 23:31:31 missing: PINS:r97-crossing-acknowledgment,r98-clerk-filing reports: -S1 S3 -S4 -S5
+try 5 23:31:51 missing: PINS:r97-crossing-acknowledgment,r98-clerk-filing reports: -S1 S3 -S4 -S5
+try 6 23:32:11 missing: PINS:r97-crossing-acknowledgment,r98-clerk-filing reports: -S1 S3 S4 -S5
+try 7 23:32:31 missing: PINS:r97-crossing-acknowledgment,r98-clerk-filing reports: -S1 S3 S4 -S5
+ARTIFACTS-PRESENT try 8 23:32:51 reports: -S1 S3 S4 -S5

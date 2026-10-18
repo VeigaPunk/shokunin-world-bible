@@ -1,0 +1,11 @@
+data_files: unchanged=True
+exit_codes: unchanged=True
+required_files: unchanged=True
+schema_version: unchanged=True
+scope: unchanged=True
+tool: unchanged=True
+pins inherited equal: True
+self_test.base_fixture unchanged: True
+inherited expected entries equal: True (16 entries)
+added expected entries: ['self_test_mismatch'] removed: []
+precedence changed: True

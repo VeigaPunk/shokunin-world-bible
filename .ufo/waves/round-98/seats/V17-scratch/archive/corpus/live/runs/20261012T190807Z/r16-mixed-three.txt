@@ -1,0 +1,5 @@
+$ python3 .shokunin/lore/corpus/fixtures/check_bible.py .shokunin/lore/corpus/fixtures/r16-mixed-three
+exit_code=1
+VIOLATION: timeline[1].place_id: dangling entity 'unlisted'
+VIOLATION: timeline[2]: double-booked 'mira' at tick 7 in timeline[0] ('harbor') and 'tower'
+2 violation(s); no canon changed

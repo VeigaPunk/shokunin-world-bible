@@ -1,0 +1,23 @@
+try 1 20:28:20 missing: corpus/fixtures/r98-clerk-filing/entities.json corpus/fixtures/r98-clerk-filing/sources.json corpus/fixtures/r98-clerk-filing/timeline.json corpus/fixtures/r98-clerk-filing/fictional-excerpts.md corpus/fixtures/r98-clerk-filing/README.md corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 2 20:28:40 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 3 20:29:00 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 4 20:29:20 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 5 20:29:40 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 6 20:30:00 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 7 20:30:20 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 8 20:30:40 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 9 20:31:00 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S3 REPORT:S4 REPORT:S5
+try 10 20:31:20 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5
+try 11 20:31:40 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5
+try 12 20:32:00 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S4 REPORT:S5
+try 13 20:32:20 missing: corpus/knowledge/r98-clerk-scope-note.md REPORT:S1 REPORT:S2 REPORT:S5
+try 14 20:32:40 missing: REPORT:S1 REPORT:S2 REPORT:S5
+try 15 20:33:00 missing: REPORT:S1 REPORT:S2 REPORT:S5
+try 16 20:33:20 missing: REPORT:S1 REPORT:S2 REPORT:S5
+try 17 20:33:40 missing: REPORT:S1 REPORT:S2
+try 18 20:34:00 missing: REPORT:S1 REPORT:S2
+try 19 20:34:20 missing: REPORT:S1 REPORT:S2
+try 20 20:34:40 missing: REPORT:S1
+try 21 20:35:00 missing: REPORT:S1
+try 22 20:35:20 missing: REPORT:S1
+try 23 20:35:40 missing:NONE

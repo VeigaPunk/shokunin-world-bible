@@ -1,0 +1,3 @@
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL

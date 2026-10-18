@@ -1,0 +1,10 @@
+POLL2 t=0s S1rep=no S2rep=no S5rep=no df=03d04365 readme=8678abc1
+POLL2 t=20s S1rep=no S2rep=no S5rep=no df=03d04365 readme=8678abc1
+POLL2 t=40s S1rep=no S2rep=no S5rep=yes df=03d04365 readme=8678abc1
+POLL2 t=60s S1rep=no S2rep=no S5rep=yes df=03d04365 readme=cefd7452
+POLL2 t=80s S1rep=no S2rep=no S5rep=yes df=03d04365 readme=1d299c16
+POLL2 t=100s S1rep=no S2rep=no S5rep=yes df=03d04365 readme=1d299c16
+POLL2 t=120s S1rep=no S2rep=yes S5rep=yes df=03d04365 readme=1d299c16
+POLL2 t=140s S1rep=no S2rep=yes S5rep=yes df=03d04365 readme=1d299c16
+POLL2 t=160s S1rep=yes S2rep=yes S5rep=yes df=03d04365 readme=1d299c16
+POLL2_HIT elapsed=160s

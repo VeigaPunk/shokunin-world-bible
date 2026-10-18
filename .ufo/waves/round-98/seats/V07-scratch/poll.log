@@ -1,0 +1,22 @@
+20:28:50 try=1 contract_changed=no r98_fixture=yes s1_report=no
+20:29:10 try=2 contract_changed=no r98_fixture=yes s1_report=no
+20:29:30 try=3 contract_changed=no r98_fixture=yes s1_report=no
+20:29:50 try=4 contract_changed=no r98_fixture=yes s1_report=no
+20:30:10 try=5 contract_changed=no r98_fixture=yes s1_report=no
+20:30:30 try=6 contract_changed=no r98_fixture=yes s1_report=no
+20:30:50 try=7 contract_changed=no r98_fixture=yes s1_report=no
+20:31:10 try=8 contract_changed=no r98_fixture=yes s1_report=no
+20:31:30 try=9 contract_changed=yes r98_fixture=yes s1_report=no
+20:31:50 try=10 contract_changed=yes r98_fixture=yes s1_report=no
+20:32:10 try=11 contract_changed=yes r98_fixture=yes s1_report=no
+20:32:30 try=12 contract_changed=yes r98_fixture=yes s1_report=no
+20:32:50 try=13 contract_changed=yes r98_fixture=yes s1_report=no
+20:33:10 try=14 contract_changed=yes r98_fixture=yes s1_report=no
+20:33:30 try=15 contract_changed=yes r98_fixture=yes s1_report=no
+20:33:50 try=16 contract_changed=yes r98_fixture=yes s1_report=no
+20:34:10 try=17 contract_changed=yes r98_fixture=yes s1_report=no
+20:34:30 try=18 contract_changed=yes r98_fixture=yes s1_report=no
+20:34:50 try=19 contract_changed=yes r98_fixture=yes s1_report=no
+20:35:10 try=20 contract_changed=yes r98_fixture=yes s1_report=no
+20:35:30 try=21 contract_changed=yes r98_fixture=yes s1_report=yes
+20:35:30 READY

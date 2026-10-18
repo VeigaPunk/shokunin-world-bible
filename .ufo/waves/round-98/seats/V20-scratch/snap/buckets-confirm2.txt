@@ -1,0 +1,12 @@
+{
+  "B0-orchestrator-declaration": 1,
+  "B1a-S1-freeze-contract": 1,
+  "B1a-S1-freeze-tool": 1,
+  "B1b-S2-tools-readme": 1,
+  "B1c-S3-r95-map-repair": 1,
+  "B1d-S3S4-r98-fixture": 10,
+  "B1e-S5-addenda": 2,
+  "B1e-S5-r98-note": 1,
+  "B2-seat-reports-scratch": 44788
+}
+OTHER:

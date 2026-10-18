@@ -1,0 +1,6 @@
+p1 20:32:49 pins=6 toolsREADME_changed=0 r98note=1 reports=7
+p2 20:33:09 pins=6 toolsREADME_changed=0 r98note=1 reports=12
+p3 20:33:30 pins=6 toolsREADME_changed=0 r98note=1 reports=13
+p4 20:33:50 pins=6 toolsREADME_changed=1 r98note=1 reports=15
+READY p4
+POLL3-DONE 20:33:50

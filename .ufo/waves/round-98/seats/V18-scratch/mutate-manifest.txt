@@ -1,0 +1,24 @@
+SOURCE r98-clerk-filing: entities=6 relations=1 events=7 sources=7
+  last event id=clerk-filing-open deps=['acknowledgment-aru-records']
+  last entity id=clerk-maren claims=1
+  map J-rows=20
+  declaration: **Expected inventory:** 20 JSON facts; 2 editorial rows; 22 total mapped rows; 18 distinct excerpt anchors.
+MUTANT m1-span-break: last JSON-facts row span 55-64 -> 1 (anchor now outside span)
+  | J20 | `timeline.json#/6` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `clerk-filing-note` | `r98-clerk-filing:clerk-filing-no
+MUTANT m2-row-drop: last JSON-facts row deleted; declaration untouched
+  | J20 | `timeline.json#/6` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `clerk-filing-note` | `r98-clerk-filing:clerk-filing-no
+MUTANT m2b-row-drop-declared: last row deleted + declaration downgraded to 19
+  **Expected inventory:** 19 JSON facts; 2 editorial rows; 21 total mapped rows; 18 distinct excerpt anchors.
+MUTANT m3a-claims-rename-keep-row: entities.json last entity 'clerk-maren' key claims -> assertions; map row kept
+  entities.json#/5/claims/0 row now phantom
+MUTANT m3b-claims-rename-row-removed: entities.json last entity 'clerk-maren' key claims -> assertions + map row removed; declaration untouched
+  | J19 | `entities.json#/5/claims/0` (`statement`, `source_id`) | `clerk-filing-note` | `r98-clerk-filing:clerk-filing-note` | `fictional-excerpts.md` | 59-60 | 
+MUTANT m4-claims-row-deletion: entities.json last entity 'clerk-maren' 'claims' key deleted + its map row deleted; declaration untouched
+  1 claim(s) removed; | J19 | `entities.json#/5/claims/0` (`statement`, `source_id`) | `clerk-filing-note` | `r98-clerk-filing:clerk-filing-note` | `fictional-exc
+MUTANT m5-deps-reduction: timeline.json record clerk-filing-open depends_on ['acknowledgment-aru-records'] -> []
+  {"id": "clerk-filing-open", "tick": 14, "entity_id": "clerk-maren", "place_id": "chalk-stair", "depends_on": [], "description": "At the Chalk Stair at tick 14, 
+MUTANT m5b-event-deletion-fully-declared: timeline.json record clerk-filing-open deleted + map row deleted + declaration downgraded (self-consistent)
+  **Expected inventory:** 19 JSON facts; 2 editorial rows; 21 total mapped rows; 17 distinct excerpt anchors.
+MUTANT m6-digest-tamper: sources.json title-case-only byte change
+  one 'fictional' -> 'Fictional' replacement
+MUTANTS READY under /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V18-scratch/mutants

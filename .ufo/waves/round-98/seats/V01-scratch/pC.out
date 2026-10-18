@@ -1,0 +1,4 @@
+EXIT=2
+--- stdout ---
+FINDING CONTRACT-INVALID: self-test expectation set mismatch; missing=[] extra=['self_test_mismatch']
+RESULT ERROR

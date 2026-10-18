@@ -1,0 +1,13 @@
+TRY 01 20:31:52 reports=1 tools_readme_mod=0 r98_scope_note=0 r98_readme=1 dep_freeze_mod=2
+TRY 02 20:32:12 reports=2 tools_readme_mod=0 r98_scope_note=0 r98_readme=1 dep_freeze_mod=2
+TRY 03 20:32:32 reports=2 tools_readme_mod=0 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 04 20:32:52 reports=2 tools_readme_mod=0 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 05 20:33:12 reports=2 tools_readme_mod=0 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 06 20:33:32 reports=2 tools_readme_mod=0 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 07 20:33:52 reports=3 tools_readme_mod=1 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 08 20:34:12 reports=3 tools_readme_mod=1 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 09 20:34:32 reports=3 tools_readme_mod=1 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 10 20:34:52 reports=4 tools_readme_mod=1 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 11 20:35:12 reports=4 tools_readme_mod=1 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+TRY 12 20:35:32 reports=5 tools_readme_mod=1 r98_scope_note=1 r98_readme=1 dep_freeze_mod=2
+POLL_DONE at try 12

@@ -1,0 +1,4 @@
+OBLIGATIONS raw=19 mapped=19
+INVENTORY JSON-FACTS 19/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 21/22 MISMATCH
+FINDING inventory_mismatch: declared JSON-facts/editorial-rows/total-rows 20/2/22; observed 19/2/21
+RESULT FAIL

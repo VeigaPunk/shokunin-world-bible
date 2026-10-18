@@ -1,0 +1,64 @@
+== A. mechanics/grant phrase scan on new bytes ==
+(rc=1)
+
+== B. mechanics/grant phrase scan on round diffs (tools + r95 map repair + r95/r96 addenda) ==
+(rc=1)
+
+== C. broader rights/permission/canon/training hits in new bytes ==
+corpus/fixtures/r98-clerk-filing/README.md:19:The copied Spence passage is his English prose about a story he labels “Kiche,” not an authenticated K'iche-language primary text. It is an editorial design prompt only: the comparison sets Spence's narrated naming/land appearance beside this invented crossing's name-without-map framing. It supplies no in-world witness, cultural authority, or fictional canon, and asserts no cultural meaning. Rights and AI-training permission remain unassessed; neither is granted or inferred here.
+corpus/fixtures/r98-clerk-filing/README.md:21:`claim-excerpt-map.md` has 20 source-attributed JSON pointer obligations (the 17 inherited rows carried unchanged plus the three new clerk rows: `clerk-maren`'s first-appearance pointer and claim, and the tick-14 filing event) and separately labeled editorial comparisons. The `support_check.py` receipt is lexical preflight only, not whole-claim entailment, source authentication, chronology truth, rights, permission, or canon review.
+corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md:1:# r98 clerk-filing: canonical claim-to-excerpt map
+corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md:3:Scope: all 20 source-attributed JSON obligations in this continuation (six first-appearance pointers, six entity claims, one relation, and seven timeline events), plus two separately labeled editorial comparisons. JSON pointers are relative to this fixture. `source_id` values remain cluster-local in JSON and are qualified in the map as `(cluster path, source ID)` pairs.
+corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md:16:## JSON facts (20 canonical pointers)
+corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md:45:These rows compare delivered Spence clauses with the fictional design; they do not make Spence an in-world witness, assign cultural meaning, or add canon. `verbatim` describes the English prose delivered in `source-excerpt.md`, not an authenticated K'iche-language text.
+corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md:64:J19's anchor is the filing sentence (line 59); its declared span 59-60 covers the filing sentence and the self-naming sentence that follows, whose remaining words carry the naming (`I am Maren, clerk of the Chalk Stair registry`, line 60) and the OPEN record (`and I record the matter OPEN.`, line 60). The claim records the note's attribution of the filing to Maren, the clerk of the Chalk Stair registry; it asserts no finding, no verdict, and no resolution.
+corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md:68:`support_check.py` checks declared row inventory, fixed-string anchors, spans, and R9 mode; its receipt is lexical preflight, not manual whole-claim entailment or a verdict on source authenticity, truth, rights, permission, or canon.
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:5:Newly authored fictional verse, attributed to in-world source ID `veil-verse`:
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:10:Newly authored fictional register, attributed to in-world source ID `paired-clock`, folio 3, lines 1–2:
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:15:Newly authored fictional minute, attributed to in-world source ID `crossing-minute`, folio 4, lines 1–4:
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:24:Newly authored fictional first-person note, attributed to in-world source ID `aru-aftermath-note`, folio 5, lines 1–4. This section is appended after the preserved r94 text above; the inherited wording is unchanged.
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:35:Newly authored fictional first-person note, attributed to in-world source ID `evin-response-note`, folio 6, lines 1–4. This section is appended after the preserved r95 text above; the inherited wording is unchanged.
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:46:Newly authored fictional first-person note, attributed to in-world source ID `aru-acknowledgment-note`, folio 7, lines 1–4. This section is appended after the preserved r96 text above; the inherited wording is unchanged.
+corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:57:Newly authored fictional first-person note, attributed to in-world source ID `clerk-filing-note`, folio 8, lines 1–4. This section is appended after the preserved r97 text above; the inherited wording is unchanged.
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:7:The excerpt reproduces Spence's English prose and his label “Kiche story.” This note attributes the quoted passage only to Spence's account; it does not treat it as a K'iche-language edition or authenticate the underlying narrative. It does not identify an original individual author, represent all Maya or K'iche traditions, or establish oral continuity. The fictional verse's “chalk stair” asks a limited design question about a name versus a place; it explicitly rejects the source passage's world-making outcome. It imports no named beings, plot, ritual, or cultural rule.
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:9:## Attribution question
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:11:The English prose and its interpretation as Spence's account are attributed to Lewis Spence and the cited 1913 edition, not to an identified ancient or contemporary K'iche author. The primary K'iche-language source is not reproduced or independently assessed here.
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:13:## Rights question
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:15:The rights status of this edition, its presentation, and the delivered excerpt has not been determined for all jurisdictions. Consult applicable terms before reuse. Neither age of the narrative nor public accessibility answers the rights question for this edition.
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:17:## AI-training-permission question
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:19:AI-training permission has not been assessed or established. Public accessibility, attribution, or a possible copyright conclusion does not imply permission for training; this question remains separate and unanswered.
+corpus/fixtures/r98-clerk-filing/inspiration-note.md:21:This note records sourced inspiration only. It is not an in-world source and supplies no fictional canon.
+corpus/knowledge/r98-clerk-scope-note.md:3:recheck: before integrating any r98 clerk-filing claim, and whenever the filing note, the tick-14 event, the new entity or its claim, the inherited r97 rows, the map rows, or the checker receipts change; independently inspect the note's whole proposition before making any finding, resolution, adjudication, breach, duty, performance, identity, or canon claim.
+corpus/knowledge/r98-clerk-scope-note.md:8:This is a bounded knowledge record, not merged canon, not a finding, not an adjudication, and not a verdict on any character. It names one new observation class and the exact records that carry it. The checker does not read prose; a clean run is structural only.
+corpus/knowledge/r98-clerk-scope-note.md:37:- **First-appearance bound.** `first_appearance: clerk-filing-note` identifies the source that first presents Maren as a named entity in this JSON bible; it asserts no office beyond the filing, no finding, and no other record (`README.md:15`; `claim-excerpt-map.md:62`). The office wording ("clerk of the Chalk Stair registry") is the note's own attributed self-description (`fictional-excerpts.md:60`), not independent identity proof.
+corpus/knowledge/r98-clerk-scope-note.md:39:- **Checker validates structure, not testimony.** `check_bible.py` validates schema, citations, relations, and timeline structure; `support_check.py` is a lexical/span/mode receipt; `map_obligations.py` covers raw-JSON↔map completeness and source-ID agreement only. None reads the note as testimony or decides truth, finding, chronology, adjudication, rights, permission, or canon.
+corpus/knowledge/r98-clerk-scope-note.md:45:- **r10 registry-witness precedent (the earlier institutional-record discipline).** `corpus/fixtures/r10-registry-witness/` adds an authored in-world registry account by a registrar: Sella's invented excerpt (`registrar-copy-excerpt.md`, source `registrar-copy` at `corpus/fixtures/r10-registry-witness/sources.json#/2`) is an authored second perspective, and its `registry-entry` event (`corpus/fixtures/r10-registry-witness/timeline.json#/2`) carries the registrar's act of recording with the destination deliberately left blank; the `records_departure` relation is `corpus/fixtures/r10-registry-witness/relations.json#/1`. The documented limits are the same discipline r98 applies: the entry "does **not** assert a different destination or settle whether Sella's report is true" (`corpus/fixtures/README.md:209-210`); the fixture is "an authored second perspective, not external corroboration or canon resolution" (`corpus/knowledge/2026-10-12-lore-decision-table.md:112`); and the checker "does not parse the excerpt or certify that source text entails the JSON" (`:112`). r98 applies that discipline to a different object: r10's registrar records a departure with a blank destination; r98's clerk files two pending accounts and records the matter OPEN, asserting no finding. Both are institutional records of an act of recording, not adjudications, and neither settles the truth of the accounts it carries. The two fixtures must not be read as the same class.
+corpus/knowledge/r98-clerk-scope-note.md:72:This is an author-seat knowledge note, not independent verification, admission, or a non-author review. It does not authenticate the fictional sources, does not adjudicate either character or the clerk, and does not extend to any record outside the cited paths. The r98 fixture is a declared continuation of `r97-crossing-acknowledgment`, itself a continuation of `r96-crossing-response`, `r95-crossing-aftermath`, `r94-paired-crossing`, and `r88-m3-maya-cluster`; source IDs remain cluster-local and path-qualified comparisons are not identity evidence. Rights and AI-training permission remain unassessed here.
+(rc=0)
+
+== D. adjacency-string scan (absolute paths / escapes / sibling lanes) in new bytes ==
+(rc=1)
+
+== E. sibling-lane names in round diffs ==
+(rc=1)
+
+== F. external-name scan in r98 JSON + knowledge note ==
+corpus/knowledge/r98-clerk-scope-note.md:72:This is an author-seat knowledge note, not independent verification, admission, or a non-author review. It does not authenticate the fictional sources, does not adjudicate either character or the clerk, and does not extend to any record outside the cited paths. The r98 fixture is a declared continuation of `r97-crossing-acknowledgment`, itself a continuation of `r96-crossing-response`, `r95-crossing-aftermath`, `r94-paired-crossing`, and `r88-m3-maya-cluster`; source IDs remain cluster-local and path-qualified comparisons are not identity evidence. Rights and AI-training permission remain unassessed here.
+(rc=0)
+
+== G. byte-copy integrity: r98 preserving copy vs baseline r97 ==
+DIFF  README.md r98=32efc78f70e6 r97=d9387b7d7326
+DIFF  claim-excerpt-map.md r98=c1099d0ee9ee r97=49d4834e124f
+SAME  contradictions.json 37517e5f3dc6
+DIFF  entities.json r98=db2d8e5d3866 r97=026af0bc2cda
+DIFF  fictional-excerpts.md r98=29e384bf2eb2 r97=8ba491cb249d
+SAME  inspiration-note.md 58f5390e5928
+SAME  relations.json c279254bc7de
+SAME  source-excerpt.md b5edc2fd3c2e
+DIFF  sources.json r98=32ee15b1f3d7 r97=438fb513a624
+DIFF  timeline.json r98=eb24e0848e59 r97=73063a863a68
+
+== H. fictional-excerpts prefix check (r97 3410B prefix of r98?) ==
+3410
+4187
+PREFIX-IDENTICAL

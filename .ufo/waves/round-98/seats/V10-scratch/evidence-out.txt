@@ -1,0 +1,66 @@
+### 0. baseline check
+9a3d648 lore r97: drop embedded scratch clone (V37 mirror-freeze gitlink) from the wave tree
+### 1. r97 dir byte-untouched vs 9a3d648
+(empty diff above = untouched)
+### 2. parsed-value parity r98 vs 9a3d648 r97
+PASS entities len==6 :: got 6
+PASS entities[:5] parsed-equal :: r97 len 5
+PASS entities[5].id==clerk-maren :: clerk-maren
+PASS entities[5].kind==character
+PASS entities[5] one claim citing new source
+PASS only new entity id
+PASS relations parsed-equal (len 1) :: r98 [{'from': 'aru', 'to': 'evin', 'type': 'agreed_co_stewardship_for_this_crossing', 'source_id': 'crossing-minute'}]
+PASS timeline len==7 :: got 7
+PASS timeline[:6] parsed-equal :: r97 len 6
+PASS timeline[6].id==clerk-filing-open :: clerk-filing-open
+PASS timeline[6].tick==14 :: 14
+PASS timeline[6].entity_id==clerk-maren :: clerk-maren
+PASS timeline[6].place_id==chalk-stair :: chalk-stair
+PASS timeline[6].depends_on==[acknowledgment-aru-records] :: ['acknowledgment-aru-records']
+PASS timeline[6].source_id==clerk-filing-note :: clerk-filing-note
+PASS sources len==7 :: got 7
+PASS sources[:6] parsed-equal :: r97 len 6
+PASS sources[6].id==clerk-filing-note :: clerk-filing-note
+PASS contradictions parsed-equal ([]) :: []
+FAILS: 0
+### 3. byte-prefix / insertion exactness
+entities.json: LCP=1446 == len(r97)-3 (1446) -> True; prefix_exact=True; r98[L:L+2]=b',\n'; r98_tail=b'\n]\n'
+sources.json: LCP=2232 == len(r97)-3 (2232) -> True; prefix_exact=True; r98[L:L+2]=b',\n'; r98_tail=b'\n]\n'
+timeline.json: LCP=2170 == len(r97)-3 (2170) -> True; prefix_exact=True; r98[L:L+2]=b',\n'; r98_tail=b'\n]\n'
+fictional-excerpts.md: strict byte-extension = True ; appended = 777 bytes
+### 4. per-file byte copies vs 9a3d648 r97 counterpart
+differs: claim-excerpt-map.md
+IDENTICAL: contradictions.json
+differs: entities.json
+differs: fictional-excerpts.md
+IDENTICAL: inspiration-note.md
+differs: README.md
+IDENTICAL: relations.json
+IDENTICAL: source-excerpt.md
+differs: sources.json
+differs: timeline.json
+### 5. receipts
+CLEAN: schema, citations, relations, timeline; 0 violations
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22
+RESULT PASS
+SOURCE-SUPPORT 20/20; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 22/22
+RESULT PASS
+### 6. map row diff (inherited 17 + new 3)
+r97 map JSON-fact rows=17  r98 map JSON-fact rows=20
+columns differing across inherited rows (col idx -> count): {3: 17}
+ col 3: 17 rows; sample: J01: '`r97-crossing-acknowledgment:paired-clock`' -> '`r98-clerk-filing:paired-clock`'
+byte-identical rows among first 17: 0
+NEW ROW: J18 | `entities.json#/5/first_appearance` (`clerk-maren`) | `r98-clerk-filing:clerk-filing-note`
+NEW ROW: J19 | `entities.json#/5/claims/0` (`statement`, `source_id`) | `r98-clerk-filing:clerk-filing-note`
+NEW ROW: J20 | `timeline.json#/6` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `r98-clerk-filing:clerk-filing-note`
+### 7. census
+baseline dirs: 171; worktree dirs: 172
+corpus/fixtures/r98-clerk-filing
+### 8. r95 repair (one line, receipts unchanged)
+ corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17
+RESULT PASS
+CLEAN: schema, citations, relations, timeline; 0 violations
+SOURCE-SUPPORT 15/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 17/17
+RESULT PASS

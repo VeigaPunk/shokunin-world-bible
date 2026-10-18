@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""V51 endgame-monitor sampler — landing curve + poll-script capture + terminal markers.
+
+Runs every 20 s. Writes:
+  V51-scratch/curve.log     — per-tick report count + new arrivals
+  V51-scratch/scripts/      — snapshot of every new/changed poll script (seat_mtime.sh)
+  V51-scratch/terminal.log  — terminal markers scraped from poll logs
+  V51-scratch/events.log    — script/scratch-dir appearances (watch-graph changes)
+"""
+import os, re, time, shutil, hashlib, glob, sys
+
+R = "/home/vgpnk/Projects/shokunin/lore-shokunin"
+SEATS = os.path.join(R, ".ufo/waves/round-98/seats")
+SCRATCH = os.path.join(R, ".ufo/waves/round-98/seats/V51-scratch")
+os.makedirs(os.path.join(SCRATCH, "scripts"), exist_ok=True)
+
+seen_reports = set()
+seen_scripts = {}   # path -> sha1
+seen_dirs = set()
+TERMINAL_RE = re.compile(r"POLL_HIT|ALL-PRESENT|POLL-TIMEOUT|TIMEOUT|CAP |POLL_TERMINAL|ABSENT|STALL|DEADLINE|READY|MUTUAL")
+last_term_line = {}
+
+def now():
+    return time.strftime("%Y-%m-%dT%H:%M:%S%z")
+
+def sha1(p):
+    try:
+        with open(p, "rb") as f:
+            return hashlib.sha1(f.read()).hexdigest()[:12]
+    except OSError:
+        return "?"
+
+cap = int(sys.argv[1]) if len(sys.argv) > 1 else 7200
+t0 = time.time()
+with open(os.path.join(SCRATCH, "curve.log"), "a") as cf:
+    cf.write(f"# sampler start {now()} cap={cap}s\n")
+while time.time() - t0 < cap:
+    try:
+        reports = sorted(glob.glob(os.path.join(SEATS, "*.md")))
+        names = set(os.path.basename(p) for p in reports)
+        new = sorted(names - seen_reports)
+        seen_reports = names
+        # scratch dirs (any *scratch* under seats)
+        dirs = set(glob.glob(os.path.join(SEATS, "*scratch*")))
+        newdirs = sorted(os.path.basename(d) for d in dirs - seen_dirs)
+        seen_dirs = dirs
+        with open(os.path.join(SCRATCH, "curve.log"), "a") as cf:
+            cf.write(f"{now()} epoch={int(time.time())} count={len(names)}"
+                     + (f" NEW={','.join(new)}" if new else "")
+                     + "\n")
+        if newdirs:
+            with open(os.path.join(SCRATCH, "events.log"), "a") as ef:
+                ef.write(f"{now()} scratchdirs={','.join(newdirs)}\n")
+        # snapshot poll scripts / sh files across all scratch dirs
+        for sh in glob.glob(os.path.join(SEATS, "*scratch*", "*.sh")) + \
+                  glob.glob(os.path.join(R, ".ufo/waves/round-98/scratch", "*", "*.sh")) + \
+                  glob.glob(os.path.join(R, ".ufo/waves/round-98", "*.sh")):
+            h = sha1(sh)
+            if seen_scripts.get(sh) != h:
+                seen_scripts[sh] = h
+                seat = os.path.basename(os.path.dirname(sh)) or "wave"
+                dst = os.path.join(SCRATCH, "scripts",
+                                   f"{seat}__{os.path.basename(sh)}__{h}.snap")
+                try:
+                    shutil.copy2(sh, dst)
+                except OSError:
+                    pass
+                with open(os.path.join(SCRATCH, "events.log"), "a") as ef:
+                    ef.write(f"{now()} script {sh} sha={h}\n")
+        # scrape poll logs for terminal markers (only new last lines)
+        for lg in glob.glob(os.path.join(SEATS, "*scratch*", "*.log")) + \
+                  glob.glob(os.path.join(R, ".ufo/waves/round-98", "*.log")):
+            if "V51-scratch" in lg:
+                continue
+            try:
+                with open(lg, "r", errors="replace") as f:
+                    lines = f.readlines()
+            except OSError:
+                continue
+            for ln in lines[-40:]:
+                if TERMINAL_RE.search(ln):
+                    key = (lg, ln.strip())
+                    if key not in last_term_line:
+                        last_term_line[key] = True
+                        with open(os.path.join(SCRATCH, "terminal.log"), "a") as tf:
+                            tf.write(f"{now()} {lg}: {ln.strip()}\n")
+        time.sleep(20)
+    except Exception as e:
+        with open(os.path.join(SCRATCH, "sampler.err"), "a") as ef:
+            ef.write(f"{now()} ERR {e!r}\n")
+        time.sleep(20)
+with open(os.path.join(SCRATCH, "curve.log"), "a") as cf:
+    cf.write(f"# sampler end {now()} after {cap}s count={len(seen_reports)}\n")

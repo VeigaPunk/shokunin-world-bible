@@ -3082,3 +3082,117 @@ revision: self-tests 25/25 + 16/16; chain 4/4; r97 CLEAN + 17/17; C9 pair
 green; census 171/37/134/421. SHONEN unchanged (four `[~]`, no `[x]`). No
 promotion, no push. r98 (fourth and final 64-seat deepseek-flash round) may
 start.
+
+## Round 98 — declaration before dispatch (2026-10-17)
+
+Operator 100-round regimen round 4 of 6 — the final 64-seat
+`opencode-go/deepseek-v4.1-flash` round. Baseline = r97 closure `9a3d648`.
+One batched AgentSwarm, 64 seats: 5 producer seats (exclusive
+byte-ownership) + 59 verifier/judge seats on the poll-wait protocol (20 s
+cadence, 40 tries; ABSENT, never verify a plan; ENDGAME CONVENTION: any
+all-reports poll must subtract SELF — the r96/r97 mutual-wait class).
+Seat reports exclusive under `.ufo/waves/round-98/seats/` (absolute paths).
+Scores remain unmeasured. Owned axis set: depth, coverage, calibration;
+operability/freshness/adjacency judged as witnessed.
+
+**C1 — calibration:** `dependency_freeze` self-test/contract hygiene. (a)
+`SELF-TEST-MISMATCH` exits 2 (today it exits 1 in dependency_freeze vs 2 in
+map_obligations — align to the could-not-evaluate contract), pinned by a
+persisted self-test case (16→17); (b) a path-less legacy pin is migrated in
+place by `--freeze` instead of failing (today: `SCOPE-REFUSED … already
+names None` — requires a manual contract edit); (c) the contract
+`precedence` text names the full exit-2 order and FINDING IDs. The 16
+inherited cases and the chain behavior must be unchanged.
+
+**C2 — coverage:** extend the frozen chain through the round's own
+fixture. After S3 authors `r98-clerk-filing`, S1 pins BOTH
+`r97-crossing-acknowledgment` and `r98-clerk-filing` via the guarded
+`--freeze`; the chain becomes six fixtures (r88-m3, r94, r95, r96, r97,
+r98) verifying 6/6 clean; V46's recorded FAIL (the r97 tick-13 edge
+unfrozen) is discharged by the pin, demonstrated by a scratch
+REDUCTION-DETECTED on the r97 edge.
+
+**C3 — depth:** fourth beat — an institutional record that asserts no
+finding. New fixture `corpus/fixtures/r98-clerk-filing/`: a preserving copy
+of `r97-crossing-acknowledgment` plus one new entity (`clerk-maren`, harbor
+clerk of the Chalk Stair registry, one role claim citing the new source),
+one authored source (`clerk-filing-note`), and one tick-14 event
+(`clerk-filing-open`, actor `clerk-maren`, place `chalk-stair`,
+`depends_on: ["acknowledgment-aru-records"]`) recording that the clerk filed
+both pending accounts and recorded the matter OPEN, explicitly asserting no
+finding and no resolution. Before: 5 entities / 1 relation / 6 events /
+6 sources at r97. After: 6/1/7, 7 sources, 20 map obligations (17
+inherited rows unchanged + first_appearance + claim + event rows),
+`check_bible` CLEAN, inherited rows parsed-value identical, census
+171→172. Also (same owner seat, repair half): fix the r95 map's carried
+stale sentence (the "new relation" wording where that round added an
+event) — data rows byte-unchanged, r95 receipts unchanged. No
+canon-truth, rights, or identity inference anywhere.
+
+**Admission rule:** admit iff C1, C2, C3 each verify on the delivered
+revision and no axis is harmed; per-axis verdicts, no scalars; harmed or
+unprovable claims reported as such. Same-lane rule. r99 (128-seat
+grok-4.7-fast) does not start on an unclosed r98. Producer byte-ownership:
+S1 `corpus/tools/dependency_freeze.py` +
+`corpus/tools/dependency-freeze-contract.json`; S2
+`corpus/tools/README.md`; S3 `corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md`
+(repair only) + `corpus/fixtures/r98-clerk-filing/` JSON tables +
+`fictional-excerpts.md`; S4 `corpus/fixtures/r98-clerk-filing/README.md` +
+`claim-excerpt-map.md`; S5 `corpus/knowledge/r98-clerk-scope-note.md` +
+dated correction addenda for the r95/r96 stale tool pins in
+`corpus/knowledge/r95-aftermath-scope-note.md` and
+`corpus/knowledge/r96-response-scope-note.md`. Everything else is read-only
+except seat reports.
+
+## Round 98 — errata, conditions, and closure (ADMITTED; 2026-10-17)
+
+**Two-wave dispatch record** (operator directive): the r98 main wave ran as
+one 64-seat AgentSwarm on `opencode-go/deepseek-v4.1-flash` (dispatch
+`tool_ep1mOgXhOeQq6Yjfix1J4anH`); a host interruption aborted six endgame
+seats {V20, V31, V36, V51, V57, V58} (V57's wait-graph audit: no mutual
+wait — the r98 subtract-SELF convention held; host fault, not deadlock).
+Per the operator directive ("on one of the 64 deepseek swarm rounds, use
+hyper"), the six seats were re-dispatched as a completion wave on
+`hyper/deepseek-v4.1-flash` (6/6 completed) — r98 is the hyper-varied
+round. Final collection 64/64; receipt rebuilt from both dispatch results.
+
+**Errata** (adjudication AC-2/AC-3, landed at closure): the tools README
+historical "not gitignored" sentence class is superseded (`*-self-test-*/`
+has been gitignored since the r97 closure; `git check-ignore -v`
+confirms), and any "lists only two files" sentence is corrected to the
+measured seven tracked modifications; the r98 knowledge note's in-flight
+contract pin `c435239d…` is corrected to the delivered `153ebc5b…` by a
+dated addendum (historical text unrewritten).
+
+**Closure.** V31 (completion-wave adjudicator): **ADMIT with six
+conditions**, all discharged here: (AC-1) receipt refreshed 61→64 with real
+agent IDs from both dispatches; (AC-2/AC-3) the errata above; (AC-4)
+cleanup landed — orphaned pollers killed (V31/V51/V57 pids), the parent-tree
+stray `baseline-analyze.txt` removed (attributed to V57's aborted session),
+the 243 MB `V37-scratch` mirror dropped, V14's three poll files relocated
+under its seat scratch; (AC-5) the closure doc pass (fixtures README
+Round-98 + census 172/38/134/421, corpus README bullets incl. the r97
+navigation bullet that had failed to persist, SKILL.md freeze row, C9 row
+7); (AC-6) this two-wave record.
+
+Per-axis verdicts: calibration improved (bounded — `SELF-TEST-MISMATCH`
+exits 2 pinned as case 17 with the r97 exit-1 form demonstrated as the
+before; path-less legacy pins migrated by `--freeze`; precedence text
+complete); coverage improved (bounded — chain extended to six fixtures
+verifying 6/6 through the guarded `--freeze`; r97's recorded V46 FAIL
+discharged by a reproduced `REDUCTION-DETECTED` on its exact mutation
+bytes); depth improved (bounded — the institutional-no-finding class:
+`r98-clerk-filing` 6/1/7, 20/20 obligations, the clerk asserts no finding,
+census 172; the r95 map's carried sentence repaired with receipts
+unchanged); operability improved (bounded); freshness improved (bounded —
+the two stale r95/r96 note tool pins corrected by dated addenda; first
+freshness improvement since the axis was witnessed); adjacency not harmed
+(charter byte-identical; the one parent stray was an aborted session's
+stderr file, removed and attributed; zero seat-intentional strays).
+Measurements re-run at closure on the committed revision: self-tests 17/17
++ 25/25; chain 6/6; `map_obligations` r98 20/20 + r95 15/15 (post-repair);
+`support_check` r98 20/20 + r95 15/15; `boundary_doc_check` CERTIFIED; C9
+pair green; checker pin `ff9fd2aa…` reproduced. SHONEN unchanged (four
+`[~]`, no `[x]`). No promotion, no push. r99 (128-seat
+xai-oauth/grok-4.7-fast xhigh) may start; then r100 (32-seat sol-max);
+then the operator-added r101–r102 (16–32-seat zai glm-5.3-flash each).

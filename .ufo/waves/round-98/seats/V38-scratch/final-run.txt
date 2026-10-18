@@ -1,0 +1,29 @@
+== V38 checker: NEW=r98-clerk-filing (22 rows: 20 json / 2 editorial) vs REF=r97-crossing-acknowledgment (19 rows) ==
+ref excerpt last line=53; new excerpt prefix-identical=True; new excerpt lines=64
+inventory declared=(20, 2, 22, 18) parsed=(20, 2, 22, 18)
+new rows (vs ref ids): ['J18', 'J19', 'J20']
+dropped ref ids: []
+J01  span=12 py=[12] grep=[12] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[12] == this=[12] same=True ptr=OK
+J02  span=13 py=[13] grep=[13] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[13] == this=[13] same=True ptr=OK
+J03  span=12 py=[12] grep=[12] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[12] == this=[12] same=True ptr=OK
+J04  span=13 py=[13] grep=[13] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[13] == this=[13] same=True ptr=OK
+J05  span=17 py=[17] grep=[17] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[17] == this=[17] same=True ptr=OK
+J06  span=12 py=[12] grep=[12] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[12] == this=[12] same=True ptr=OK
+J07  span=13 py=[13] grep=[13] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[13] == this=[13] same=True ptr=OK
+J08  span=12 py=[12] grep=[12] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[12] == this=[12] same=True ptr=OK
+J09  span=13 py=[13] grep=[13] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[13] == this=[13] same=True ptr=OK
+J10  span=18 py=[18] grep=[18] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[18] == this=[18] same=True ptr=OK
+J11  span=19 py=[19] grep=[19] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[19] == this=[19] same=True ptr=OK
+J12  span=12 py=[12] grep=[12] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[12] == this=[12] same=True ptr=OK
+J13  span=13 py=[13] grep=[13] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[13] == this=[13] same=True ptr=OK
+J14  span=18-20 py=[20] grep=[20] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[20] == this=[20] same=True ptr=OK
+J15  span=22-31 py=[26] grep=[26] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[26] == this=[26] same=True ptr=OK
+J16  span=33-42 py=[37] grep=[37] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[37] == this=[37] same=True ptr=OK
+J17  span=44-53 py=[48] grep=[48] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[48] == this=[48] same=True ptr=OK
+J18  span=60 py=[60] grep=[60] agree=True IN-SPAN=True outside=[] appended-only=True (ref file 53 lines) ptr=OK
+J19  span=59-60 py=[59] grep=[59] agree=True IN-SPAN=True outside=[] appended-only=True (ref file 53 lines) ptr=OK
+J20  span=55-64 py=[59] grep=[59] agree=True IN-SPAN=True outside=[] appended-only=True (ref file 53 lines) ptr=OK
+S01  span=5 py=[5] grep=[5] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[5] == this=[5] same=True
+S02  span=5 py=[5] grep=[5] agree=True IN-SPAN=True outside=[] vs-ref anchor-identical=True span-same=True path-same=True lines ref=[5] == this=[5] same=True
+NOTES: none
+RESULT ALL-ANCHOR-CHECKS-PASS

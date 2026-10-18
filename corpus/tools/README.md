@@ -226,3 +226,63 @@ Re-run on the delivered revision: r88 (10/10), r93 (12/12), r94 (14/14), r95 (15
 ### Round-97 supersession: dependency_freeze hazards closed
 
 The "Hazards (r97 debt)" paragraph of the Round-96 addendum above is superseded as of 2026-10-17 (round 97): `--freeze` is now scope-guarded to `corpus/fixtures/**` (foreign targets exit 2 `SCOPE-REFUSED` with no write); pins are path-bound (a byte-identical same-named copy at a foreign path exits 2 `PATH-MISMATCH`); `DIGEST-MISMATCH` names the changed file; the self-test carries 16 persisted cases. Remaining bounds (r98 candidates): the pin payload covers the five JSON tables only — fixture Markdown is not pinned (the r96 re-freeze was a revision-only refresh; the map digest `e851f068…` is deliberately not in the pin set); BR-01's markdown/prose half remains open; the frozen chain is the declared four fixtures (`r97-crossing-acknowledgment` unpinned). Both tools' self-test scratch directories are created at the repository root and covered by `.gitignore` (`*-self-test-*/`).
+
+### Round-98 addendum: `SELF-TEST-MISMATCH` exit 2, legacy pin migration, six-fixture chain, 17-case self-test (2026-10-17)
+
+This addendum extends the r97 instructions above; every earlier sentence remains as delivered history, including the open r94 residual BR-05 (the self-test scratch still lives under the repository root and is not gitignored — unchanged in r98).
+
+#### Superseded numbers (prior text kept as delivered history)
+
+- The Round-96 `dependency_freeze.py` paragraph above reads "self-test: `python3 corpus/tools/dependency_freeze.py --self-test` (14/14, persisted in the contract)" and "The chain `r88-m3-maya-cluster`, `r94-paired-crossing`, `r95-crossing-aftermath`, `r96-crossing-response` freezes 4/4 clean." Superseded 2026-10-17 (round 98): the persisted self-test carries 17 cases, and the chain is six fixtures verifying 6/6 clean.
+- The Round-97 supersession above reads "the self-test carries 16 persisted cases" and "the frozen chain is the declared four fixtures (`r97-crossing-acknowledgment` unpinned)". Superseded 2026-10-17 (round 98): 17 persisted cases, and `r97-crossing-acknowledgment` and `r98-clerk-filing` are now pinned, so the declared chain is six fixtures.
+- The rest of that supersession still stands: the pin payload covers the five JSON tables only (fixture Markdown is still not pinned) and BR-01's markdown/prose half remains open.
+
+#### `SELF-TEST-MISMATCH` exits 2 (aligned with `map_obligations`)
+
+Before (r97 revision, `git show 9a3d648:corpus/tools/dependency_freeze.py`), a persisted expectation that disagreed with the observed CLI outcome printed `SELF-TEST 15/16`, `FINDING SELF-TEST-MISMATCH: cases failed: ['clean']`, `RESULT FAIL` and exited 1 — the self-test could not evaluate its own contract, yet it reported the code this tool reserves for a detected reduction. After (delivered revision) the same disagreement prints `SELF-TEST 16/17`, the same finding, `RESULT ERROR` and exits 2, matching `map_obligations.py`'s could-not-evaluate treatment of its own self-test mismatch. Both runs used a scratch tree holding the revision beside a copy of the contract with one expectation flipped (`self_test.expected.clean.exit` 0 → 1); the delivered contract was not modified.
+
+#### Path-less legacy pins are migrated by `--freeze`
+
+Before, a pin written before r97's path binding records no fixture path and `--freeze` refused it:
+
+```
+FINDING SCOPE-REFUSED: --freeze refuses corpus/fixtures/r95-crossing-aftermath: pin r95-crossing-aftermath already names None; freezing a same-named path elsewhere would rewrite the delivered pin
+RESULT ERROR
+```
+
+exit 2 — the only route forward was a manual contract edit. After, the same invocation prints `MIGRATED r95-crossing-aftermath: path-less legacy pin now names corpus/fixtures/r95-crossing-aftermath`, freezes the pin and exits 0; the fixture then verifies `RESULT PASS` exit 0. Verification alone still fails closed until the migration runs (`FINDING CONTRACT-INVALID: pin r95-crossing-aftermath needs a repo-relative fixture path`, exit 2). The r97 same-named-path guard is unchanged: a pin that records a *different* path is still refused, exit 2 `SCOPE-REFUSED`. Demonstrated on a scratch tree whose contract copy carries `pins.r95-crossing-aftermath.fixture = null`; the delivered contract was not modified:
+
+```sh
+# inside a scratch tree holding its own copy of the tool and contract
+# (pins.r95-crossing-aftermath.fixture = null), run from that tree's root:
+python3 corpus/tools/dependency_freeze.py --freeze corpus/fixtures/r95-crossing-aftermath   # MIGRATED … / RESULT PASS, exit 0
+```
+
+#### Chain extended to six fixtures
+
+```sh
+for f in r88-m3-maya-cluster r94-paired-crossing r95-crossing-aftermath \
+         r96-crossing-response r97-crossing-acknowledgment r98-clerk-filing; do
+  python3 corpus/tools/dependency_freeze.py "corpus/fixtures/$f"; echo "$f exit=$?"
+done
+```
+
+All six print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0. The two added receipts are `FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1` (digest `3c922d20a01bbd3f…`) and `FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1` (digest `59a0f4fa3d4a47e0…`). The r97 pin discharges the r97 round's recorded unfrozen-edge finding (V46): on a scratch copy of the fixture with the tick-13 edge dropped — `acknowledgment-aru-records` losing `depends_on: ["response-evin-salt-court"]` — the pin reports `FINDING REDUCTION-DETECTED: event acknowledgment-aru-records lost depends_on ['response-evin-salt-court']` and exits 1, while the unmodified scratch copy exits 0. Before the pin existed that mutation was unreachable: the fixture only produced `UNPINNED-FIXTURE` exit 2.
+
+#### Contract `precedence` text and the 17th case
+
+`corpus/tools/dependency-freeze-contract.json` now spells out the exit-2 order and the finding IDs: semantic inventory findings decide first (exit 1: `REDUCTION-DETECTED`, `ADDITION-DETECTED`, `ENDPOINT-CHANGE`); then exit-2 (could-not-evaluate) checks run in order and the first failing check decides — `UNPINNED-FIXTURE` (no pin for the fixture name) or `CONTRACT-INVALID` (unreadable contract or invalid pin), `FIXTURE-MISSING`, `PATH-MISMATCH`, `FILE-MISSING` / `MALFORMED-JSON` / `MALFORMED-MODEL`, `DIGEST-MISMATCH`, `INVALID-ARGUMENTS`, `SELF-TEST-MISMATCH`; `--freeze` additionally raises `SCOPE-REFUSED`. The text also records that a path-less legacy pin is migrated in place by `--freeze` instead of refused.
+
+The persisted self-test carries 17 cases: the 16 inherited cases with byte-identical expectations (compared case-by-case against `git show 9a3d648:corpus/tools/dependency-freeze-contract.json`) plus `self_test_mismatch` (`exit: 2`, exactly `FINDING SELF-TEST-MISMATCH`), which exercises the class above.
+
+```sh
+python3 corpus/tools/dependency_freeze.py --self-test   # SELF-TEST 17/17 / RESULT PASS, exit 0
+```
+
+#### Unchanged
+
+`map_obligations.py` is unchanged in r98 (`--self-test` still prints `SELF-TEST CASES 25/25 pinned` … `RESULT PASS`, exit 0), as are `support_check.py` and `boundary_doc_check.py`; `git diff 9a3d648 -- corpus/tools/` lists only `dependency_freeze.py` and `dependency-freeze-contract.json`. The 0/1/2 exit contract, the `FREEZE` / `DIGEST` / `RESULT` receipt surface, and the scope and path-binding behavior are unchanged. The r94 BR-05 scratch-placement residual remains open.
+
+#### Dated correction (2026-10-17, round-98 closure, adjudication AC-2)
+
+Two sentence classes in the historical addenda above are factually stale on the delivered revision and are superseded as classes (prior text kept as delivered history): (1) every "the self-test scratch … is not gitignored" sentence (r94–r97 addenda) — the r97 closure added `*-self-test-*/` to `.gitignore`, so both tools' repo-root self-test scratch has been gitignored since then (`git check-ignore -v` confirms); the BR-05 bound survives only as "scratch is created at the repository root", not as a gitignore gap. (2) Any prior sentence reading that a round's change "lists only two files" is corrected to the measured counts (the r98 round modified seven tracked files: `dependency_freeze.py`, `dependency-freeze-contract.json`, this README, the r95 map, and the three knowledge notes; see V20-scope-creep's bucket table).

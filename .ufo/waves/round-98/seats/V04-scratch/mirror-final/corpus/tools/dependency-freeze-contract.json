@@ -1,0 +1,555 @@
+{
+  "schema_version": 1,
+  "tool": "corpus/tools/dependency_freeze.py",
+  "scope": "frozen per-fixture dependency-edge inventory (event id -> sorted depends_on set), event endpoints (tick, entity_id, place_id), relation endpoint triples (from, to, type), and JSON content digests for the crossing continuation chain; no chronology truth, entailment, source, rights, or canon judgment; --freeze is scope-guarded to corpus/fixtures/** and every pin records the fixture's repo-relative path, which verification enforces (SCOPE-REFUSED / PATH-MISMATCH)",
+  "precedence": "semantic inventory findings decide first (exit 1: REDUCTION-DETECTED, ADDITION-DETECTED, ENDPOINT-CHANGE); a content digest change the frozen inventory does not model exits 2 (DIGEST-MISMATCH). Exit-2 (could-not-evaluate) checks run in this order and the first failing check decides: UNPINNED-FIXTURE (no pin for the fixture name) or CONTRACT-INVALID (unreadable contract or invalid pin), FIXTURE-MISSING (fixture directory absent), PATH-MISMATCH (invoked path differs from the pin's recorded path), FILE-MISSING / MALFORMED-JSON / MALFORMED-MODEL (model build), DIGEST-MISMATCH (inventory clean, bytes changed outside the frozen inventory), INVALID-ARGUMENTS (CLI usage), SELF-TEST-MISMATCH (--self-test observed outcome differs from the persisted case expectation); --freeze additionally raises SCOPE-REFUSED (target outside corpus/fixtures/**, or a same-named in-scope target that would rewrite an existing pin's recorded path). A path-less legacy pin is migrated in place by --freeze instead of refused.",
+  "data_files": [
+    "entities.json",
+    "relations.json",
+    "timeline.json",
+    "sources.json",
+    "contradictions.json"
+  ],
+  "required_files": [
+    "relations.json",
+    "timeline.json"
+  ],
+  "exit_codes": {
+    "0": "PASS",
+    "1": "FAIL",
+    "2": "ERROR"
+  },
+  "revision": "dd4df1b36a64b513e75b46da04ee2f3f7f3eb6cb",
+  "pins": {
+    "r88-m3-maya-cluster": {
+      "fixture": "corpus/fixtures/r88-m3-maya-cluster",
+      "revision": "60dba0c2aa344860b10a2fc63e00468d1b134f27",
+      "content_sha256": "15ef230ef806ea7e7431f5afc7d999aee978b024cf47f2a20cbba726fc3fc279",
+      "files": {
+        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entities.json": "042b6cc0d70c4d747121d9b277ac031cf21e66822d3c9a3e5ffe0282bba2bddc",
+        "relations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "sources.json": "aa252416abc2c863ec4ae86cf25bd4f6e6e841d89e8586255b53362897282d63",
+        "timeline.json": "f74c664b17fd8d575235ab59432a0ce6f938380e9b5a8d07640aae1d38773493"
+      },
+      "events": {
+        "aru-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "aru",
+            "place_id": "quiet-rise"
+          }
+        },
+        "evin-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        }
+      },
+      "relations": [],
+      "counts": {
+        "events": 2,
+        "dependency_edges": 0,
+        "relations": 0,
+        "entities": 4,
+        "sources": 2
+      }
+    },
+    "r94-paired-crossing": {
+      "fixture": "corpus/fixtures/r94-paired-crossing",
+      "revision": "60dba0c2aa344860b10a2fc63e00468d1b134f27",
+      "content_sha256": "2527beb938b474a28d66e1c716f54ba829ae3cc2e616513cd2960a8f7ecebe75",
+      "files": {
+        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+        "sources.json": "2b627c4c166edf44e1e54bb006964a00e267ab4a4ce0b7b7c0681a0d9f0355d5",
+        "timeline.json": "f0209f90a6ce795211369bd900ac1d333d16eb0af123f1b170831e192660533c"
+      },
+      "events": {
+        "aru-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "aru",
+            "place_id": "quiet-rise"
+          }
+        },
+        "evin-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "paired-crossing-decision": {
+          "depends_on": [
+            "aru-ninth-bell",
+            "evin-ninth-bell"
+          ],
+          "endpoint": {
+            "tick": 10,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        }
+      },
+      "relations": [
+        [
+          "aru",
+          "evin",
+          "agreed_co_stewardship_for_this_crossing"
+        ]
+      ],
+      "counts": {
+        "events": 3,
+        "dependency_edges": 2,
+        "relations": 1,
+        "entities": 5,
+        "sources": 3
+      }
+    },
+    "r95-crossing-aftermath": {
+      "revision": "dd4df1b36a64b513e75b46da04ee2f3f7f3eb6cb",
+      "content_sha256": "d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9",
+      "files": {
+        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+        "sources.json": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+        "timeline.json": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177"
+      },
+      "events": {
+        "aru-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "aru",
+            "place_id": "quiet-rise"
+          }
+        },
+        "evin-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "paired-crossing-decision": {
+          "depends_on": [
+            "aru-ninth-bell",
+            "evin-ninth-bell"
+          ],
+          "endpoint": {
+            "tick": 10,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "aftermath-missing-evin": {
+          "depends_on": [
+            "paired-crossing-decision"
+          ],
+          "endpoint": {
+            "tick": 11,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        }
+      },
+      "relations": [
+        [
+          "aru",
+          "evin",
+          "agreed_co_stewardship_for_this_crossing"
+        ]
+      ],
+      "counts": {
+        "events": 4,
+        "dependency_edges": 3,
+        "relations": 1,
+        "entities": 5,
+        "sources": 4
+      }
+    },
+    "r96-crossing-response": {
+      "fixture": "corpus/fixtures/r96-crossing-response",
+      "revision": "2393934237ea076366f3db6dceeff033edb52ab1",
+      "content_sha256": "d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6",
+      "files": {
+        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+        "sources.json": "9f973f634cf325a33047020407ffb67b0a0f0a1643e507ebd3771abf9fabf32d",
+        "timeline.json": "ea0225f9270db79685ea6f55828c2031d7ac67cd413b04f28b25770b208815b9"
+      },
+      "events": {
+        "aru-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "aru",
+            "place_id": "quiet-rise"
+          }
+        },
+        "evin-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "paired-crossing-decision": {
+          "depends_on": [
+            "aru-ninth-bell",
+            "evin-ninth-bell"
+          ],
+          "endpoint": {
+            "tick": 10,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "aftermath-missing-evin": {
+          "depends_on": [
+            "paired-crossing-decision"
+          ],
+          "endpoint": {
+            "tick": 11,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "response-evin-salt-court": {
+          "depends_on": [
+            "aftermath-missing-evin"
+          ],
+          "endpoint": {
+            "tick": 12,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        }
+      },
+      "relations": [
+        [
+          "aru",
+          "evin",
+          "agreed_co_stewardship_for_this_crossing"
+        ]
+      ],
+      "counts": {
+        "events": 5,
+        "dependency_edges": 4,
+        "relations": 1,
+        "entities": 5,
+        "sources": 5
+      }
+    },
+    "r97-crossing-acknowledgment": {
+      "fixture": "corpus/fixtures/r97-crossing-acknowledgment",
+      "revision": "dd4df1b36a64b513e75b46da04ee2f3f7f3eb6cb",
+      "content_sha256": "3c922d20a01bbd3f7941ed64f5c8796a619699197ae89fb10fca317cf83abea6",
+      "files": {
+        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+        "sources.json": "438fb513a62496c41179ead3ea2a55a69ff4ce1fd191c3a7ebccb10651a8dc73",
+        "timeline.json": "73063a863a68fc4feae073ce74cfa9e5fddb4f9cc4060d12b333d495a255895b"
+      },
+      "events": {
+        "aru-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "aru",
+            "place_id": "quiet-rise"
+          }
+        },
+        "evin-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "paired-crossing-decision": {
+          "depends_on": [
+            "aru-ninth-bell",
+            "evin-ninth-bell"
+          ],
+          "endpoint": {
+            "tick": 10,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "aftermath-missing-evin": {
+          "depends_on": [
+            "paired-crossing-decision"
+          ],
+          "endpoint": {
+            "tick": 11,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "response-evin-salt-court": {
+          "depends_on": [
+            "aftermath-missing-evin"
+          ],
+          "endpoint": {
+            "tick": 12,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "acknowledgment-aru-records": {
+          "depends_on": [
+            "response-evin-salt-court"
+          ],
+          "endpoint": {
+            "tick": 13,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        }
+      },
+      "relations": [
+        [
+          "aru",
+          "evin",
+          "agreed_co_stewardship_for_this_crossing"
+        ]
+      ],
+      "counts": {
+        "events": 6,
+        "dependency_edges": 5,
+        "relations": 1,
+        "entities": 5,
+        "sources": 6
+      }
+    },
+    "r98-clerk-filing": {
+      "fixture": "corpus/fixtures/r98-clerk-filing",
+      "revision": "dd4df1b36a64b513e75b46da04ee2f3f7f3eb6cb",
+      "content_sha256": "59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133",
+      "files": {
+        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+        "sources.json": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+        "timeline.json": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af"
+      },
+      "events": {
+        "aru-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "aru",
+            "place_id": "quiet-rise"
+          }
+        },
+        "evin-ninth-bell": {
+          "depends_on": [],
+          "endpoint": {
+            "tick": 9,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "paired-crossing-decision": {
+          "depends_on": [
+            "aru-ninth-bell",
+            "evin-ninth-bell"
+          ],
+          "endpoint": {
+            "tick": 10,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "aftermath-missing-evin": {
+          "depends_on": [
+            "paired-crossing-decision"
+          ],
+          "endpoint": {
+            "tick": 11,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "response-evin-salt-court": {
+          "depends_on": [
+            "aftermath-missing-evin"
+          ],
+          "endpoint": {
+            "tick": 12,
+            "entity_id": "evin",
+            "place_id": "salt-court"
+          }
+        },
+        "acknowledgment-aru-records": {
+          "depends_on": [
+            "response-evin-salt-court"
+          ],
+          "endpoint": {
+            "tick": 13,
+            "entity_id": "aru",
+            "place_id": "chalk-stair"
+          }
+        },
+        "clerk-filing-open": {
+          "depends_on": [
+            "acknowledgment-aru-records"
+          ],
+          "endpoint": {
+            "tick": 14,
+            "entity_id": "clerk-maren",
+            "place_id": "chalk-stair"
+          }
+        }
+      },
+      "relations": [
+        [
+          "aru",
+          "evin",
+          "agreed_co_stewardship_for_this_crossing"
+        ]
+      ],
+      "counts": {
+        "events": 7,
+        "dependency_edges": 6,
+        "relations": 1,
+        "entities": 6,
+        "sources": 7
+      }
+    }
+  },
+  "self_test": {
+    "base_fixture": "r95-crossing-aftermath",
+    "expected": {
+      "reduction_edge_drop": {
+        "exit": 1,
+        "finding_ids": [
+          "REDUCTION-DETECTED"
+        ],
+        "forbid_traceback": true
+      },
+      "addition_edge_phantom": {
+        "exit": 1,
+        "finding_ids": [
+          "ADDITION-DETECTED"
+        ],
+        "forbid_traceback": true
+      },
+      "event_removed": {
+        "exit": 1,
+        "finding_ids": [
+          "REDUCTION-DETECTED"
+        ],
+        "forbid_traceback": true
+      },
+      "event_endpoint_change": {
+        "exit": 1,
+        "finding_ids": [
+          "ENDPOINT-CHANGE"
+        ],
+        "forbid_traceback": true
+      },
+      "relation_endpoint_flip": {
+        "exit": 1,
+        "finding_ids": [
+          "ENDPOINT-CHANGE"
+        ],
+        "forbid_traceback": true
+      },
+      "relation_removed": {
+        "exit": 1,
+        "finding_ids": [
+          "REDUCTION-DETECTED"
+        ],
+        "forbid_traceback": true
+      },
+      "relation_added": {
+        "exit": 1,
+        "finding_ids": [
+          "ADDITION-DETECTED"
+        ],
+        "forbid_traceback": true
+      },
+      "digest_tamper": {
+        "exit": 2,
+        "finding_ids": [
+          "DIGEST-MISMATCH"
+        ],
+        "forbid_traceback": true
+      },
+      "malformed_json": {
+        "exit": 2,
+        "finding_ids": [
+          "MALFORMED-JSON"
+        ],
+        "forbid_traceback": true
+      },
+      "missing_timeline": {
+        "exit": 2,
+        "finding_ids": [
+          "FILE-MISSING"
+        ],
+        "forbid_traceback": true
+      },
+      "unpinned_fixture": {
+        "exit": 2,
+        "finding_ids": [
+          "UNPINNED-FIXTURE"
+        ],
+        "forbid_traceback": true
+      },
+      "missing_fixture": {
+        "exit": 2,
+        "finding_ids": [
+          "FIXTURE-MISSING"
+        ],
+        "forbid_traceback": true
+      },
+      "invalid_arguments": {
+        "exit": 2,
+        "finding_ids": [
+          "INVALID-ARGUMENTS"
+        ],
+        "forbid_traceback": true
+      },
+      "scope_refused": {
+        "exit": 2,
+        "finding_ids": [
+          "SCOPE-REFUSED"
+        ],
+        "forbid_traceback": true
+      },
+      "path_mismatch": {
+        "exit": 2,
+        "finding_ids": [
+          "PATH-MISMATCH"
+        ],
+        "forbid_traceback": true
+      },
+      "self_test_mismatch": {
+        "exit": 2,
+        "finding_ids": [
+          "SELF-TEST-MISMATCH"
+        ],
+        "forbid_traceback": true
+      }
+    }
+  },
+  "provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-ownership breach, self-disclosed in V41-spec-conformance F1); frozen set is exactly the four declared chain fixtures. r97 (R3 freeze-hardening): --freeze is scope-guarded to corpus/fixtures/** and additionally refuses a same-named in-scope target that would rewrite an existing pin's recorded path; verify binds each fixture to its pin's repo-relative path (PATH-MISMATCH); DIGEST-MISMATCH names the changed file; self-test grew 14->16 cases (scope_refused and path_mismatch pinned in self_test.expected, scratch under the repo root as in map_obligations). pins.r96-crossing-response was re-frozen through the guarded --freeze path after R4's r97 cosmetic repair of claim-excerpt-map.md: that map is not a pinned data file, so the content digest d422a9b3d95c4e0b8aac98cc87806a94949896adb962a50d2d55a6c11657d7f6 is unchanged and only the pin revision moved 60dba0c2aa344860b10a2fc63e00468d1b134f27 -> 2393934237ea076366f3db6dceeff033edb52ab1; the file was rewritten by the tool's indent=2 writer (semantic content otherwise unchanged). r98 (S1 freeze-hygiene): SELF-TEST-MISMATCH now exits 2 (could-not-evaluate class, matching map_obligations.py) and is pinned as the 17th persisted self-test case (self_test_mismatch, 16->17); --freeze migrates a path-less legacy pin in place (MIGRATED line) and still refuses a same-named in-scope target that names a different path; the precedence text names the full exit-2 check order and finding IDs. r97-crossing-acknowledgment and r98-clerk-filing were pinned through the guarded --freeze at revision dd4df1b36a64b513e75b46da04ee2f3f7f3eb6cb (chain 6/6 clean; r97 digest 3c922d20a01bbd3f7941ed64f5c8796a619699197ae89fb10fca317cf83abea6 matches the bytes V46 froze in its r97 scratch mirror; r98 digest 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133), discharging V46's recorded r97 FAIL (tick-13 edge now frozen; the V46 mutation bytes, timeline sha 37a425b97af658d71b8dc8904f43fd75859905bac326489a71adb67004004eb1, exit 1 REDUCTION-DETECTED)."
+}

@@ -1,0 +1,24 @@
+#!/bin/sh
+# V11 poll for S4 (round 98). 20 s cadence, max 40 tries (~13 min).
+FIX=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing
+SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats
+LOG=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V11-scratch/poll.log
+i=1
+while [ "$i" -le 40 ]; do
+  ts=$(date +%H:%M:%S)
+  files=0
+  [ -f "$FIX/README.md" ] && files=$((files+1))
+  [ -f "$FIX/claim-excerpt-map.md" ] && files=$((files+1))
+  rep=$(ls "$SEATS"/S4* 2>/dev/null | head -1)
+  [ -n "$rep" ] || rep="none"
+  all=$(ls "$FIX" 2>/dev/null | wc -l)
+  echo "try=$i t=$ts files=$files/2 fixdir_entries=$all report=$rep" >> "$LOG"
+  if [ "$files" -eq 2 ] && [ "$rep" != "none" ]; then
+    echo "READY try=$i t=$ts report=$rep" >> "$LOG"
+    exit 0
+  fi
+  sleep 20
+  i=$((i+1))
+done
+echo "POLL_TERMINAL status=timeout tries=40" >> "$LOG"
+exit 0

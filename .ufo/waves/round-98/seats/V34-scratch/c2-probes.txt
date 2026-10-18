@@ -1,0 +1,21 @@
+== 0. mirror sanity: both verify clean ==
+r97: (0, 'FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nDIGEST 3c922d20a01bbd3f7941ed64f5c8796a619699197ae89fb10fca317cf83abea6\nRESULT PASS')
+r98: (0, 'FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133\nRESULT PASS')
+== 1. BEFORE (V46 state): r97 pin removed -> no protection ==
+edge dropped, unpinned: (2, "FINDING UNPINNED-FIXTURE: no pin for 'r97-crossing-acknowledgment' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r98-clerk-filing'])\nRESULT ERROR")
+restored: 0
+== 2. AFTER (discharge): r97 pinned, tick-13 edge dropped ==
+rc: 1
+FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 4/5; relations 1/1
+FINDING REDUCTION-DETECTED: event acknowledgment-aru-records lost depends_on ['response-evin-salt-court']
+RESULT FAIL
+== 3. r98 pinned, tick-14 edge dropped (bonus) ==
+rc: 1
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL
+== 4. r97 event removed entirely ==
+rc: 1
+FREEZE r97-crossing-acknowledgment: events 5/6; dependency-edges 4/5; relations 1/1
+FINDING REDUCTION-DETECTED: event acknowledgment-aru-records is missing; 1 frozen dependency edge(s) gone
+RESULT FAIL
