@@ -3196,3 +3196,94 @@ pair green; checker pin `ff9fd2aa…` reproduced. SHONEN unchanged (four
 `[~]`, no `[x]`). No promotion, no push. r99 (128-seat
 xai-oauth/grok-4.7-fast xhigh) may start; then r100 (32-seat sol-max);
 then the operator-added r101–r102 (16–32-seat zai glm-5.3-flash each).
+
+## Round 99 — declaration before dispatch (2026-10-17)
+
+Operator 100-round regimen round 5 — the 128-seat
+`xai-oauth/grok-4.7-fast` [xhigh] round, the largest wave of the push.
+Baseline = r98 closure `4265df5`. One batched AgentSwarm, 128 seats: 5
+producer seats (exclusive byte-ownership) + 123 verifier/judge seats on
+the poll-wait protocol (20 s cadence, 40 tries; ABSENT, never verify a
+plan; ENDGAME CONVENTION: all-reports polls subtract SELF). Seat reports
+exclusive under `.ufo/waves/round-99/seats/` (absolute paths). Scores
+remain unmeasured. Owned axis set: depth, coverage, calibration;
+operability/freshness/adjacency judged as witnessed.
+
+**C1 — calibration:** full-file freeze pinning — prose-edit
+detectability. Carried debt BR-01's prose half and the r98-recorded bound:
+the freeze pin payload covers the five JSON tables only, so editing fixture
+Markdown (including removing dependency wording from an excerpt) is
+invisible to every gate. After: each chain pin covers ALL ten files of its
+fixture (five JSON tables + README + claim-excerpt-map + fictional-
+excerpts + inspiration-note + source-excerpt); any edit to any pinned file
+→ exit 2 `DIGEST-MISMATCH` naming the file; the chain re-freezes through
+the guarded `--freeze` (payload schema versioned) and verifies 6/6 clean;
+one new persisted self-test case pins a Markdown-tamper detection (17→18).
+Demonstrated before/after on scratch copies: prose-wording removal was
+invisible to every gate before, named `DIGEST-MISMATCH` after.
+
+**C2 — depth, component 1:** fifth beat of the crossing arc — a lapse
+record that closes no one. New fixture `corpus/fixtures/r99-window-lapse/`:
+a preserving copy of `r98-clerk-filing` plus one authored source
+(`clerk-lapse-note`) and one tick-15 event (`clerk-lapse-recorded`, actor
+`clerk-maren`, place `chalk-stair`, `depends_on: ["clerk-filing-open"]`)
+recording that the crossing-window named in the original minute has closed:
+the agreement was unfulfilled, no claim was lodged, and the matter stands
+as a historical open entry — no resolution, no blame, no reconciliation
+asserted anywhere. Before: 6/1/7, 7 sources at r98. After: 6/1/8, 8
+sources, 21 map obligations (20 inherited rows unchanged + 1 new event
+row), `check_bible` CLEAN, inherited rows parsed-value identical, census
+172→173.
+
+**C2 — depth, component 2:** the consolidated blind-spot decision table.
+New knowledge record `corpus/knowledge/r99-gate-blind-spot-table.md` with
+one row per demonstrated blind spot accumulated across r94–r98 (emptied
+`depends_on`; wrong-but-earlier edge; deleted terminal row; the F15
+support_check-silent mutants; dependency-wording removal (now detectable
+via C1 — row records both the historical invisibility and the C1 close);
+the consistent-regeneration bound; the checker's frozen-pin status), each
+row carrying the mutation class, the gates that DO catch it, the gates
+that do NOT, and a replayed command with its observed output on the
+delivered revision (measured this round, not recollected). Before: blind
+spots scattered across four rounds' debt ledgers. After: one cited table,
+every row replay-verified by at least two seats.
+
+(C2's two components are one axis-move per the one-axis rule; they are
+causally separable and each carries its own falsifiable before→after.)
+
+**Admission rule:** admit iff C1 and C2 (both components) verify on the
+delivered revision and no axis is harmed; per-axis verdicts, no scalars;
+harmed or unprovable claims reported as such. Same-lane rule. r100 does
+not start on an unclosed r99. Producer byte-ownership: S1
+`corpus/tools/dependency_freeze.py` +
+`corpus/tools/dependency-freeze-contract.json`; S2
+`corpus/tools/README.md` + SKILL.md freeze row; S3
+`corpus/fixtures/r99-window-lapse/` JSON tables + `fictional-excerpts.md`
+(byte copies of r98's other 7 files); S4 `corpus/fixtures/r99-window-lapse/README.md`
++ `claim-excerpt-map.md`; S5 `corpus/knowledge/r99-gate-blind-spot-table.md`
++ `corpus/knowledge/r99-lapse-scope-note.md`. Everything else is read-only
+except seat reports.
+
+## Round 99 — blocked dispatch attempt; zero increment (2026-10-17)
+
+Declared r99 (128 seats, `xai-oauth/grok-4.7-fast` [xhigh], C1 full-file
+freeze pinning + C2 lapse fixture and blind-spot table) and dispatched one
+batched AgentSwarm; all 128 seats failed immediately with `502 "shim: token
+helper printed nothing"`. Diagnosis: the `xai-oauth` provider's token
+helper (`~/.local/bin/xai-oauth-token`) silent-exits because the credential
+pool `~/.hermes/auth.json` does not exist on this host; the local shim
+(`127.0.0.1:8790`, pid 1579) therefore cannot mint an upstream token, and
+`POST /v1/chat/completions` returns 502 for every request. This is an
+operator-side credential absence (xAI OAuth re-authentication required),
+not a lane defect and not model quota.
+
+Per the goal's stop rule (xai-oauth unreachable at r99 → stop and report,
+no silent substitution), no substitution was made and no seat output is
+credited. Increment from this attempt: zero (r86 precedent — a blocked
+attempt is not a completed round; the r99 declaration above remains the
+standing declaration). No corpus bytes were touched by the wave. Resolution
+path: the operator restores the xAI OAuth credentials (re-run the login
+that writes `~/.hermes/auth.json`), after which r99 re-dispatches on the
+same declaration; a re-dispatch will use a fresh receipt. Host state note:
+the failed dispatch's seat records exist only as error entries in the
+AgentSwarm result — no reports landed under `.ufo/waves/round-99/`.
