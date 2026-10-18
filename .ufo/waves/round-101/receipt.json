@@ -575,6 +575,14 @@
    "mtime_utc": "2026-10-18T03:18:18.502106+00:00"
   },
   {
+   "seat": "V27",
+   "agent_id": "agent-620",
+   "outcome": "completed",
+   "report_path": ".ufo/waves/round-101/seats/V27-presence-final.md",
+   "note": "row added by L1 at closure: absent from V25 skeleton",
+   "report_sha256": "77ad6e759badc8c58db81390ff3e365d2b5e1c06ae780fb03faff28aaa78495a"
+  },
+  {
    "seat": "V28",
    "agent_id": "agent-621",
    "outcome": "completed",
