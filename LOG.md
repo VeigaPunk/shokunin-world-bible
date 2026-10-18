@@ -3457,3 +3457,49 @@ read-only). V15/V18/V20 FAILs and V21/V30 qualifications stand recorded,
 discharged or bounded, none re-rolled. SHONEN unchanged (four `[~]`, no
 `[x]`). No promotion, no push. r101 (16–32-seat zai glm-5.3-flash) may
 start; r102 closes the goal.
+
+## Round 101 — declaration before dispatch (2026-10-17)
+
+Operator closing pair round 1 of 2 — 28 seats (2 producers + 26
+verifiers, counted at declaration) on `zai-coding-plan/glm-5.3-flash-low`.
+Baseline = r100 closure `6f86bf2`. One batched AgentSwarm; poll-wait
+protocol; seat reports exclusive under `.ufo/waves/round-101/seats/`
+(absolute paths; ENDGAME CONVENTION: all-reports polls subtract SELF).
+Scores remain unmeasured. Owned axis set: depth, coverage, calibration;
+operability/freshness/adjacency judged as witnessed.
+
+**C1 — coverage:** pin `r100-docket-review` into the frozen chain through
+the guarded `--freeze`; the chain becomes eight fixtures (r88-m3, r94,
+r95, r96, r97, r98, r99, r100) verifying 8/8 clean; no other pin's fields
+change (the writer-managed top-level `revision` refresh excepted, as
+disclosed since r100).
+
+**C2 — depth:** the R10 register's first worked entry — a demonstrated
+NON-conflict. `corpus/knowledge/r101-r10-register-first-entry.md` applies
+the r93 R10 procedure to the arc's two occasion-sharing accounts: the
+shared referent is demonstrated (the r94 crossing-scoped agreement
+relation), the shared field (performance status at the shared occasion,
+the agreed bell), and the examination shows the two claims COMPATIBLE
+(Aru: Evin did not come to the Chalk Stair; Evin: he was at Salt Court —
+both consistent with non-performance). The entry records "examined, shared
+referent demonstrated, no conflict, both claims preserved" — the register
+gains its first real exercise without choosing a winner or asserting
+world truth. No canon, testimony, or chronology inference.
+
+**C3 — calibration:** one new persisted `dependency_freeze` self-test case
+(18→19) pinning the repointed-edge class — one event's `depends_on`
+swapped from a correct predecessor to a different valid earlier event must
+produce BOTH `REDUCTION-DETECTED` (old edge) and `ADDITION-DETECTED`
+(new edge) in a single run, exit 1 — closing the blind-spot table's
+"wrong-but-earlier edge" row with the delivered gate (dated row update);
+tools README + SKILL.md case-count updates.
+
+**Admission rule:** admit iff C1/C2/C3 verify on the delivered revision and
+no axis is harmed; per-axis verdicts, no scalars; harmed or unprovable
+claims reported as such. Same-lane rule. r102 does not start on an
+unclosed r101. Producer byte-ownership: U1
+`corpus/tools/dependency_freeze.py` + `corpus/tools/dependency-freeze-contract.json`
+(guarded `--freeze` for the pin; direct edit for the self-test case) +
+`corpus/tools/README.md` + SKILL.md freeze row; U2
+`corpus/knowledge/r101-r10-register-first-entry.md`. Everything else is
+read-only except seat reports.
