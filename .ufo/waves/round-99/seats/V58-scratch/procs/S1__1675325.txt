@@ -1,0 +1,49 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && python3 - << 'PY'
+import json, time
+from pathlib import Path
+root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin")
+seats = root / ".ufo/waves/round-99/seats"
+cpath = root / "corpus/tools/dependency-freeze-contract.json"
+py = root / "corpus/tools/dependency_freeze.py"
+base_c = cpath.stat().st_mtime
+base_p = py.stat().st_mtime
+base_cs = cpath.stat().st_size
+base_ps = py.stat().st_size
+TEN = ["entities.json","relations.json","timeline.json","sources.json","contradictions.json","README.md","claim-excerpt-map.md","fictional-excerpts.md","inspiration-note.md","source-excerpt.md"]
+CHAIN = ["r88-m3-maya-cluster","r94-paired-crossing","r95-crossing-aftermath","r96-crossing-response","r97-crossing-acknowledgment","r98-clerk-filing"]
+print(f"POLL-START {time.strftime('%H:%M:%S')} base_c_mtime={base_c} base_p_mtime={base_p} sizes {base_cs}/{base_ps}", flush=True)
+landed = False
+for i in range(1, 41):
+    reports = []
+    if seats.exists():
+        reports = sorted(p.name for p in seats.iterdir() if p.is_file() and p.name.startswith("S1"))
+    c_m, p_m = cpath.stat().st_mtime, py.stat().st_mtime
+    c_s, p_s = cpath.stat().st_size, py.stat().st_size
+    changed = (c_m != base_c) or (p_m != base_p) or (c_s != base_cs) or (p_s != base_ps)
+    schema_hit = False
+    pin_ten = None
+    schema_val = None
+    if changed:
+        try:
+            data = json.loads(cpath.read_text())
+            schema_val = data.get("schema_version")
+            pins = data.get("pins", {})
+            pin_ten = {}
+            for name in list(pins):
+                files = (pins[name] or {}).get("files") or {}
+                pin_ten[name] = len(files)
+            schema_hit = any(n == 10 for n in pin_ten.values()) or (isinstance(schema_val, int) and schema_val != 1) or ("payload_schema_version" in data) or ("payload_schema" in data)
+        except Exception as e:
+            print(f"try {i} contract parse error {e}", flush=True)
+    print(f"try {i:02d} {time.strftime('%H:%M:%S')} reports={reports or '-'} changed={changed} c_size={c_s} p_size={p_s} schema_val={schema_val} pin_n={pin_ten}", flush=True)
+    if reports and changed:
+        landed = True
+        print("LANDED", flush=True)
+        break
+    if i < 40:
+        time.sleep(20)
+print("RESULT", "LANDED" if landed else "ABSENT", flush=True)
+PY
+

@@ -1,0 +1,307 @@
+QUOTE-BUNDLE 2026-10-17 22:17:07 -03
+cwd=/home/vgpnk/Projects/shokunin/lore-shokunin
+support_check=55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c  corpus/tools/support_check.py
+
+===== r87-myth-cluster pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r87-myth-cluster
+exit: EXIT=0
+sha256 pass1: 952354ac759646a2ee4b0f6c14c8ddf8202bb311d12aff11db8309a23e991b95  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r87-myth-cluster.pass1.out
+sha256 r98-pass2: 952354ac759646a2ee4b0f6c14c8ddf8202bb311d12aff11db8309a23e991b95  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r87-myth-cluster.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 8/8; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 22/22
+ANCHORS repeated-references=0; DUPLICATE-ROWS 0
+PASS E1: source-support; mode=verbatim; anchor=found; 7:> I am Hara, keeper of the Mother-Tide Gate.
+PASS E2: source-support; mode=verbatim; anchor=found; 7:> I, Sen, serve as recorder at Ash-Dune Sanctuary.
+PASS E3: source-support; mode=verbatim; anchor=found; 8:> Place of keeping: Ash-Dune Sanctuary is a record-keeping place.
+PASS E4: source-support; mode=verbatim; anchor=found; 9:> Shellweavers signed this charter as a signatory faction.
+PASS E5: source-support; mode=verbatim; anchor=found; 10:> Reedwardens signed this charter as a signatory faction.
+PASS E6: source-support; mode=verbatim; anchor=found; 11:| 1 | We carried the Reed Bell for the low-water signal. |
+PASS R1: source-support; mode=verbatim; anchor=found; 11:> By this charter, Shellweavers stand allied with Reedwardens.
+PASS R2: source-support; mode=verbatim; anchor=found; 12:> By this charter, Reedwardens stand allied with Shellweavers.
+PASS R3: source-support; mode=verbatim; anchor=found; 13:> Watch clause: Under this charter's pledge, Shellweavers keep watch with the Reed Bell.
+PASS R4: source-support; mode=verbatim; anchor=found; 9:> At Ash-Dune Sanctuary, Sen kept the register.
+PASS T1: source-support; mode=verbatim; anchor=found; 8:> I sounded the Reed Bell at the Mother-Tide Gate before the Moon-Basin Vow, at the first low-water bell.
+PASS T2: source-support; mode=verbatim; anchor=found; 12:| 2 | At Ash-Dune Sanctuary, Sen's tally records the return of the first low-water signal before the Moon-Basin Vow. |
+PASS T3: source-support; mode=verbatim; anchor=found; 9:> I record the single Moon-Basin Vow of Saltmonth 4 at the Mother-Tide Gate during the first low-water bell.
+PASS T4: source-support; mode=verbatim; anchor=found; 10:> I record that same single Moon-Basin Vow of Saltmonth 4 at Ash-Dune Sanctuary during the first low-water bell.
+PASS H1: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H2: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H3: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H4: editorial-row; mode=verbatim; anchor=found; 5:> At low water we set the shell ring beside the bowl at the Mother-Tide Gate.
+PASS H5: editorial-row; mode=verbatim; anchor=found; 6:> The bowl keeps no name, and no voice owns the tide.
+PASS H6: editorial-row; mode=verbatim; anchor=found; 6:> The bowl keeps no name, and no voice owns the tide.
+PASS H7: editorial-row; mode=verbatim; anchor=found; 7:> We pass the reed-bell hand to hand and let the water return it.
+PASS H8: editorial-row; mode=verbatim; anchor=found; 7:> We pass the reed-bell hand to hand and let the water return it.
+RECEIPT JSON-FACTS 14; EDITORIAL-ROWS 8; TOTAL-ROWS 22
+SOURCE-SUPPORT 14/14; EDITORIAL-ANCHORS 8/8; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 22/22
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r88-m3-maya-cluster pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r88-m3-maya-cluster
+exit: EXIT=0
+sha256 pass1: b5c4075d65284f3d73cde11bc09b6f3678010474a291705ed3fd7be6830e2e3b  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r88-m3-maya-cluster.pass1.out
+sha256 r98-pass2: b5c4075d65284f3d73cde11bc09b6f3678010474a291705ed3fd7be6830e2e3b  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r88-m3-maya-cluster.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 10/10; EDITORIAL-ROWS 2/2; TOTAL-ROWS 12/12; DISTINCT-ANCHORS 8/8
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS P1: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS P2: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS P3: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS P4: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS E1: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS E2: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS E3: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS E4: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS T1: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS T2: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS S1: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S2: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 10; EDITORIAL-ROWS 2; TOTAL-ROWS 12
+SOURCE-SUPPORT 10/10; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 12/12; VALIDATED-ROWS 12/12
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r89-inspiration-paraphrase pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r89-inspiration-paraphrase
+exit: EXIT=0
+sha256 pass1: ec3cd3fb29b7c0e619ed471ed02742b69dc7bfe9479944298919f131447786c8  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r89-inspiration-paraphrase.pass1.out
+sha256 r98-pass2: ec3cd3fb29b7c0e619ed471ed02742b69dc7bfe9479944298919f131447786c8  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r89-inspiration-paraphrase.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 1/1; EDITORIAL-ROWS 0/0; TOTAL-ROWS 1/1; DISTINCT-ANCHORS 1/1
+ANCHORS repeated-references=0; DUPLICATE-ROWS 0
+PASS entities.json#/0/claims/0: retelling-support-only; anchor=found; mode=paraphrase; 9:A modern paraphrase says that the keeper later summarized the ledger for the court: the tide-mark had been moved to the west stair.
+RECEIPT JSON-FACTS 1; EDITORIAL-ROWS 0; TOTAL-ROWS 1
+SOURCE-SUPPORT 0/0; EDITORIAL-ANCHORS 0/0; RETELLING-SUPPORT-ONLY 1 entries (1/1 anchors); MODES 1/1; VALIDATED-ROWS 1/1
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r93-m2-kojiki-cluster pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r93-m2-kojiki-cluster
+exit: EXIT=0
+sha256 pass1: 63f90ea53c14708882932dba8eb3c2ced411ea96008d127a86300abc90e7e6da  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r93-m2-kojiki-cluster.pass1.out
+sha256 r98-pass2: 63f90ea53c14708882932dba8eb3c2ced411ea96008d127a86300abc90e7e6da  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r93-m2-kojiki-cluster.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15; DISTINCT-ANCHORS 15/15
+ANCHORS repeated-references=0; DUPLICATE-ROWS 0
+PASS E1: source-support; mode=verbatim; anchor=found; 5:M-17 identifies Teva as the initial recorder and names the Slate Table as its filing place.
+PASS E2: source-support; mode=verbatim; anchor=found; 6:Teva names the paper folio "Lorn Index" as the sheet she opened for the check.
+PASS E3: source-support; mode=verbatim; anchor=found; 7:Orni writes on the margin: "not weighed; mark unmeasured."
+PASS E4: source-support; mode=verbatim; anchor=found; 8:The folio identifies Teva and Orni as its two annotators.
+PASS E5: source-support; mode=verbatim; anchor=found; 5:M-17 identifies Teva as the initial recorder and names the Slate Table as its filing place.
+PASS E6: source-support; mode=verbatim; anchor=found; 9:The inventory lists the Slate Table as the place holding the folio.
+PASS E7: source-support; mode=verbatim; anchor=found; 6:Teva names the paper folio "Lorn Index" as the sheet she opened for the check.
+PASS E8: source-support; mode=verbatim; anchor=found; 12:The register gives no measured weight for the Lorn Index.
+PASS E9: source-support; mode=verbatim; anchor=found; 10:Entry A: Teva files the Lorn Index on the Slate Table.
+PASS E10: source-support; mode=verbatim; anchor=found; 11:Entry B: after Entry A, Orni adds "not weighed; mark unmeasured" to the Lorn Index at the Slate Table.
+PASS E11: source-support; mode=verbatim; anchor=found; 10:Entry A: Teva files the Lorn Index on the Slate Table.
+PASS E12: source-support; mode=verbatim; anchor=found; 11:Entry B: after Entry A, Orni adds "not weighed; mark unmeasured" to the Lorn Index at the Slate Table.
+PASS S1: editorial-row; mode=translation; anchor=found; 8:> Then the whole Plain of High Heaven was obscured and all the Central Land of Reed-Plains darkened. Owing to this, eternal night prevailed.
+PASS S2: editorial-row; mode=translation; anchor=found; 9:> Therefore did the eight hundred myriad deities assemble in a divine assembly in the bed of the Tranquil River of Heaven, […]
+PASS S3: editorial-row; mode=translation; anchor=found; 10:> So when the Heaven-Shining-Great-August deity had come forth, both the Plain of High Heaven and the Central-Land-of-Reed-Plains of course again became light.
+RECEIPT JSON-FACTS 12; EDITORIAL-ROWS 3; TOTAL-ROWS 15
+SOURCE-SUPPORT 12/12; EDITORIAL-ANCHORS 3/3; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 15/15; VALIDATED-ROWS 15/15
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r94-paired-crossing pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r94-paired-crossing
+exit: EXIT=0
+sha256 pass1: d0ff69820d619bc5a5350efa96522effcb991f6243588ff3db16a4383ba17e15  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r94-paired-crossing.pass1.out
+sha256 r98-pass2: d0ff69820d619bc5a5350efa96522effcb991f6243588ff3db16a4383ba17e15  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r94-paired-crossing.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 14/14; EDITORIAL-ROWS 2/2; TOTAL-ROWS 16/16; DISTINCT-ANCHORS 12/12
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 14; EDITORIAL-ROWS 2; TOTAL-ROWS 16
+SOURCE-SUPPORT 14/14; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 16/16; VALIDATED-ROWS 16/16
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r95-crossing-aftermath pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r95-crossing-aftermath
+exit: EXIT=0
+sha256 pass1: efae7be25d213fea277cc1457413e65deb2720a56c20c594aa2a8b40673b9420  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r95-crossing-aftermath.pass1.out
+sha256 r98-pass2: efae7be25d213fea277cc1457413e65deb2720a56c20c594aa2a8b40673b9420  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r95-crossing-aftermath.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17; DISTINCT-ANCHORS 13/13
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 15; EDITORIAL-ROWS 2; TOTAL-ROWS 17
+SOURCE-SUPPORT 15/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 17/17
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r96-crossing-response pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r96-crossing-response
+exit: EXIT=0
+sha256 pass1: ca7a6815077f87e8e415588a312e3644ccaa44c5fbafb8ed3405a4b53aaf6be1  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r96-crossing-response.pass1.out
+sha256 r98-pass2: ca7a6815077f87e8e415588a312e3644ccaa44c5fbafb8ed3405a4b53aaf6be1  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r96-crossing-response.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 16/16; EDITORIAL-ROWS 2/2; TOTAL-ROWS 18/18; DISTINCT-ANCHORS 14/14
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 16; EDITORIAL-ROWS 2; TOTAL-ROWS 18
+SOURCE-SUPPORT 16/16; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 18/18; VALIDATED-ROWS 18/18
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r97-crossing-acknowledgment pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r97-crossing-acknowledgment
+exit: EXIT=0
+sha256 pass1: a109856d383efa18e6f19120f62aa81ac1bdcb6cfc3080703cbabfe151f921ba  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r97-crossing-acknowledgment.pass1.out
+sha256 r98-pass2: a109856d383efa18e6f19120f62aa81ac1bdcb6cfc3080703cbabfe151f921ba  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r97-crossing-acknowledgment.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 17/17; EDITORIAL-ROWS 2/2; TOTAL-ROWS 19/19; DISTINCT-ANCHORS 15/15
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 17; EDITORIAL-ROWS 2; TOTAL-ROWS 19
+SOURCE-SUPPORT 17/17; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 19/19; VALIDATED-ROWS 19/19
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r98-clerk-filing pass1 vs r98 V47 pass2 =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r98-clerk-filing
+exit: EXIT=0
+sha256 pass1: 090fa430b8a3aff279bbb09fb07060b0020e76d1fa4dda59db2cc278742e7926  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r98-clerk-filing.pass1.out
+sha256 r98-pass2: 090fa430b8a3aff279bbb09fb07060b0020e76d1fa4dda59db2cc278742e7926  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-98/seats/V47-scratch/receipts/r98-clerk-filing.pass2.out
+cmp: IDENTICAL
+----- stdout -----
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 18/18
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.
+PASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+PASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 20; EDITORIAL-ROWS 2; TOTAL-ROWS 22
+SOURCE-SUPPORT 20/20; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 22/22
+RESULT PASS
+----- stderr bytes: 0 -----
+
+===== r99-window-lapse passA (delivered map, pre-poll-close) =====
+cmd: python3 corpus/tools/support_check.py corpus/fixtures/r99-window-lapse
+exit: EXIT=0
+sha256: 03a1dfd5c7722eb7c2810871f6c693e1770b39086a37261262721053a5981f73  /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V49-scratch/receipts/r99-window-lapse.passA.out
+map sha at measurement: d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d
+----- stdout -----
+INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.
+PASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+PASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23
+SOURCE-SUPPORT 21/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 23/23
+RESULT PASS
+----- stderr bytes: 0 -----

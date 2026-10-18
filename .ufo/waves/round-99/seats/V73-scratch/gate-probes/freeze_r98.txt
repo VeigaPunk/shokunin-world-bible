@@ -1,0 +1,6 @@
+===== freeze_r98 =====
+EXIT:2
+--- stdout ---
+FINDING CONTRACT-INVALID: pin r98-clerk-filing payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+--- stderr ---

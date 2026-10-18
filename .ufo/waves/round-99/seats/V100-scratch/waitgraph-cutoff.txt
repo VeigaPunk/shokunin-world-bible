@@ -1,0 +1,59 @@
+live_scripts=79
+--- WAITS ---
+V08 allrep=False thresh=['2'] waits=['S1'] :: V08-scratch/poll.sh
+V100 allrep=True thresh=['100'] waits=[] :: V100-scratch/waitgraph.py
+V107 allrep=False thresh=['5'] waits=['V33'] :: V107-scratch/poll.sh
+V120 allrep=False thresh=[] waits=['S1', 'S2', 'S3', 'S4', 'S5', 'V107', 'V28', 'V29', 'V30', 'V31', 'V32', 'V33', 'V51', 'V52', 'V69', 'V82', 'V91'] :: V120-scratch/poll.sh
+V123 allrep=True thresh=['124'] waits=['S1', 'S2', 'S3', 'S4', 'S5', 'V101', 'V39', 'V99'] :: V123-scratch/audit.py
+V123 allrep=True thresh=['128'] waits=['V101', 'V39', 'V99'] :: V123-scratch/poll.sh
+V15 allrep=False thresh=[] waits=['S3', 'S4', 'S5'] :: V15-scratch/poll.sh
+V16 allrep=False thresh=['37'] waits=['S1'] :: V16-scratch/poll-pin.sh
+V16 allrep=False thresh=['1', '40'] waits=['S3'] :: V16-scratch/poll.sh
+V29 allrep=False thresh=['2'] waits=['S3'] :: V29-scratch/poll.sh
+V32 allrep=True thresh=['5'] waits=[] :: V32-scratch/poll.sh
+V33 allrep=True thresh=['120'] waits=[] :: V33-scratch/audit.py
+V38 allrep=False thresh=['1', '2'] waits=['S1', 'S2', 'S3', 'S4', 'S5'] :: V38-scratch/poll-cont.sh
+V38 allrep=False thresh=['2'] waits=['S1', 'S2', 'S3', 'S4', 'S5'] :: V38-scratch/poll.sh
+V44 allrep=True thresh=[] waits=[] :: V44-scratch/poll.sh
+V45 allrep=True thresh=[] waits=['S1', 'S2', 'S3', 'S4', 'S5', 'V22'] :: V45-scratch/poll.sh
+V46 allrep=False thresh=['10', '5'] waits=['S1', 'S2', 'S3', 'S4', 'S5'] :: V46-scratch/poll.sh
+V47 allrep=False thresh=['1', '40'] waits=['S3', 'S4'] :: V47-scratch/poll.sh
+V48 allrep=False thresh=[] waits=['S3', 'S4'] :: V48-scratch/poll.sh
+V52 allrep=False thresh=[] waits=['S1', 'S2'] :: V52-scratch/poll.sh
+V53 allrep=False thresh=[] waits=['S1', 'S2', 'S3', 'S4', 'S5'] :: V53-scratch/poll.sh
+V55 allrep=True thresh=['120'] waits=[] :: V55-scratch/audit.py
+V55 allrep=False thresh=['1', '40'] waits=['S1', 'S2', 'S3', 'S4', 'S5'] :: V55-scratch/poll.sh
+V58 allrep=True thresh=['128'] waits=['S1'] :: V58-scratch/sampler.py
+V58 allrep=True thresh=['50'] waits=[] :: V58-scratch/waitgraph.py
+V60 allrep=False thresh=[] waits=['S5'] :: V60-scratch/poll.sh
+V71 allrep=True thresh=['124', '128'] waits=[] :: V71-scratch/audit.py
+V71 allrep=True thresh=['200'] waits=['V39'] :: V71-scratch/poll.sh
+V75 allrep=True thresh=['1'] waits=['V38'] :: V75-scratch/poll.sh
+V78 allrep=False thresh=[] waits=['S1', 'S2', 'S3', 'S4', 'S5', 'V09'] :: V78-scratch/poll-continue.sh
+V78 allrep=False thresh=[] waits=['S1', 'S2', 'S3', 'S4', 'S5'] :: V78-scratch/poll.sh
+V78 allrep=False thresh=[] waits=['S1', 'S2', 'S3', 'S4', 'S5'] :: V78-scratch/poll2.sh
+V87 allrep=True thresh=['2026', '5'] waits=[] :: V87-scratch/audit.sh
+V91 allrep=True thresh=['5'] waits=['V32'] :: V91-scratch/poll.sh
+V95 allrep=False thresh=[] waits=['S3'] :: V95-scratch/poll.sh
+V96 allrep=True thresh=['1', '200'] waits=[] :: V96-scratch/poll.sh
+V99 allrep=True thresh=['1', '127', '2', '3', '8'] waits=['S1', 'S2', 'S3', 'S4', 'S5', 'V39'] :: V99-scratch/poll_and_build.py
+--- MUTUAL (direct, live scripts only) ---
+NONE
+--- ALL-REPORTS ---
+V100 thresh=['100'] V100-scratch/waitgraph.py
+V123 thresh=['124'] V123-scratch/audit.py
+V123 thresh=['128'] V123-scratch/poll.sh
+V32 thresh=['5'] V32-scratch/poll.sh
+V33 thresh=['120'] V33-scratch/audit.py
+V44 thresh=[] V44-scratch/poll.sh
+V45 thresh=[] V45-scratch/poll.sh
+V55 thresh=['120'] V55-scratch/audit.py
+V58 thresh=['128'] V58-scratch/sampler.py
+V58 thresh=['50'] V58-scratch/waitgraph.py
+V71 thresh=['124', '128'] V71-scratch/audit.py
+V71 thresh=['200'] V71-scratch/poll.sh
+V75 thresh=['1'] V75-scratch/poll.sh
+V87 thresh=['2026', '5'] V87-scratch/audit.sh
+V91 thresh=['5'] V91-scratch/poll.sh
+V96 thresh=['1', '200'] V96-scratch/poll.sh
+V99 thresh=['1', '127', '2', '3', '8'] V99-scratch/poll_and_build.py

@@ -1,0 +1,492 @@
+POLL 2026-10-17T22:03:24-0300 try=0
+-- producer reports --
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 5069 Oct 17 22:01 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-- artifacts --
+2026-10-17 22:03:21.845453846 -0300 29048 corpus/tools/dependency_freeze.py
+2026-10-17 20:33:36.611874789 -0300 19291 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+2026-10-17 22:01:13.842835114 -0300 3293 corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 2998 corpus/fixtures/r99-window-lapse/timeline.json
+2026-10-17 22:03:19.512442573 -0300 6176 corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 17119 corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+stat: cannot statx 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+stat: cannot statx 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+-- SKILL names --
+50:- **name:** `boundary_doc_check`
+61:- **name:** `discriminate_check`
+72:- **name:** `support_check`
+83:- **name:** `map_obligations`
+94:- **name:** `dependency_freeze`
+-- SKILL vs 4265df5 --
+SKILL.md IDENTICAL to 4265df5
+-- contract schema version grep --
+top_keys ['data_files', 'exit_codes', 'pins', 'precedence', 'provenance_note', 'required_files', 'revision', 'schema_version', 'scope', 'self_test', 'tool']
+self_test_cases 17
+pin_container dict 6
+
+POLL 2026-10-17T22:05:20-0300 try=1
+-- producer reports --
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 5069 Oct 17 22:01 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 Oct 17 22:03 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+-- artifacts --
+2026-10-17 22:03:21.845453846 -0300 29048 corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 21007 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+2026-10-17 22:01:13.842835114 -0300 3293 corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 2998 corpus/fixtures/r99-window-lapse/timeline.json
+2026-10-17 22:03:19.512442573 -0300 6176 corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 17119 corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+stat: cannot statx 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+stat: cannot statx 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+-- SKILL names --
+50:- **name:** `boundary_doc_check`
+61:- **name:** `discriminate_check`
+72:- **name:** `support_check`
+83:- **name:** `map_obligations`
+94:- **name:** `dependency_freeze`
+-- SKILL vs 4265df5 --
+SKILL.md IDENTICAL to 4265df5
+-- contract schema version grep --
+top_keys ['data_files', 'exit_codes', 'payload_schema_version', 'pinned_files', 'pins', 'precedence', 'provenance_note', 'required_files', 'revision', 'schema_version', 'scope', 'self_test', 'tool']
+self_test_cases 18
+pin_container dict 6
+
+POLL 2026-10-17T22:18:18-0300 try=2
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:18:38-0300 try=3
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:18:58-0300 try=4
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:19:18-0300 try=5
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:19:38-0300 try=6
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:19:58-0300 try=7
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:20:18-0300 try=8
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:20:38-0300 try=9
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:20:58-0300 try=10
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:21:18-0300 try=11
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:21:38-0300 try=12
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:21:58-0300 try=13
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:22:18-0300 try=14
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:22:38-0300 try=15
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:22:58-0300 try=16
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:23:18-0300 try=17
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:23:38-0300 try=18
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:23:58-0300 try=19
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:24:18-0300 try=20
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:24:38-0300 try=21
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:24:58-0300 try=22
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:25:18-0300 try=23
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:25:38-0300 try=24
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:25:58-0300 try=25
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:26:18-0300 try=26
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:26:38-0300 try=27
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:26:58-0300 try=28
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:27:18-0300 try=29
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:27:38-0300 try=30
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:27:58-0300 try=31
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:28:19-0300 try=32
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:28:39-0300 try=33
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:28:59-0300 try=34
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:29:19-0300 try=35
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:29:39-0300 try=36
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:29:59-0300 try=37
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:30:19-0300 try=38
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:30:39-0300 try=39
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+POLL 2026-10-17T22:30:59-0300 try=40
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S1*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S2*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S5*.md': No such file or directory
+2026-10-17 22:07:33.506669398 -0300 29104 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 25987 corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 32577 corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 16802 SKILL.md
+SKILL.md IDENTICAL to 4265df5
+schema 2 payload 2 cases 18 bytes 25987
+
+EXHAUSTED

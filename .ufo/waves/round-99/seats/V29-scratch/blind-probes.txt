@@ -1,0 +1,6 @@
+P0-control: exit=0 out=CLEAN: schema, citations, relations, timeline; 0 violations err=
+P5-emptied-depends_on: exit=0 out=CLEAN: schema, citations, relations, timeline; 0 violations err=
+P8-wrong-but-earlier: exit=0 out=CLEAN: schema, citations, relations, timeline; 0 violations err=
+P9-delete-terminal: exit=0 out=CLEAN: schema, citations, relations, timeline; 0 violations err=
+P1-drop-key: exit=1 out=VIOLATION: timeline[7].depends_on: required nonempty list | 1 violation(s); no canon changed err=
+P3-tick-inversion: exit=1 out=VIOLATION: timeline[7].depends_on: timeline inversion 'clerk-filing-open' tick 14 not before 'clerk-lapse-recorded' tick 14 | 1 violation(s); no canon changed err=

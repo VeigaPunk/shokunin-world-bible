@@ -1,0 +1,11 @@
+FINAL fixture_baseline_paths=1030 json=855 other=175 changed=0 missing=0 new=10
+NEW corpus/fixtures/r99-window-lapse/README.md
+NEW corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+NEW corpus/fixtures/r99-window-lapse/contradictions.json
+NEW corpus/fixtures/r99-window-lapse/entities.json
+NEW corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+NEW corpus/fixtures/r99-window-lapse/inspiration-note.md
+NEW corpus/fixtures/r99-window-lapse/relations.json
+NEW corpus/fixtures/r99-window-lapse/source-excerpt.md
+NEW corpus/fixtures/r99-window-lapse/sources.json
+NEW corpus/fixtures/r99-window-lapse/timeline.json

@@ -1,0 +1,230 @@
+=== V87 SCOPE-FINAL AUDIT 2026-10-17T22:27:08-03:00 ===
+pwd=/home/vgpnk/Projects/shokunin/lore-shokunin
+HEAD=337f0fa52b02626b7687eedbb2d99fab30446fe4
+HEAD_ONELINE=337f0fa lore r99: record blocked dispatch attempt (xai-oauth credential pool missing) — zero increment
+NAMED_BASELINE=4265df5e86e4121bde4125b649b89bb1676676a5
+commits HEAD not in 4265df5:
+337f0fa lore r99: record blocked dispatch attempt (xai-oauth credential pool missing) — zero increment
+111b9a3 lore r98: close round — SCORECARD admitted section
+
+=== 1. porcelain summary ===
+-- porcelain -uall line count --
+52718
+-- status letters --
+  52716 ??
+      2  M
+-- non-untracked (tracked changes) --
+ M corpus/tools/dependency-freeze-contract.json
+ M corpus/tools/dependency_freeze.py
+-- diff --stat vs HEAD --
+ corpus/tools/dependency-freeze-contract.json | 163 ++++++++++++++++++++++++---
+ corpus/tools/dependency_freeze.py            |  65 ++++++++++-
+ 2 files changed, 206 insertions(+), 22 deletions(-)
+-- diff --numstat vs HEAD --
+146	17	corpus/tools/dependency-freeze-contract.json
+60	5	corpus/tools/dependency_freeze.py
+
+=== 2. declared tracked ownership vs actual tracked dirt ===
+-- owned tracked status --
+ M corpus/tools/dependency-freeze-contract.json
+ M corpus/tools/dependency_freeze.py
+-- tracked dirt NOT in owned set --
+
+=== 3. untracked path classification ===
+untracked_count=52717
+bucket_counts:
+  fixture_r99: 10
+  knowledge_r99_declared: 0
+  seat_reports: 20
+  seat_scratch: 52687
+  wave_root_outside_seats: 0
+  other: 0
+fixture_files:
+  corpus/fixtures/r99-window-lapse/README.md
+  corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+  corpus/fixtures/r99-window-lapse/contradictions.json
+  corpus/fixtures/r99-window-lapse/entities.json
+  corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+  corpus/fixtures/r99-window-lapse/inspiration-note.md
+  corpus/fixtures/r99-window-lapse/relations.json
+  corpus/fixtures/r99-window-lapse/source-excerpt.md
+  corpus/fixtures/r99-window-lapse/sources.json
+  corpus/fixtures/r99-window-lapse/timeline.json
+knowledge_declared:
+seat_reports:
+  .ufo/waves/round-99/seats/S3-fixture-author.md
+  .ufo/waves/round-99/seats/S4-fixture-docs.md
+  .ufo/waves/round-99/seats/V10-c2-checker.md
+  .ufo/waves/round-99/seats/V105-c2-event-description.md
+  .ufo/waves/round-99/seats/V109-c2-inherited-map-rows.md
+  .ufo/waves/round-99/seats/V11-c2-inherited-equality.md
+  .ufo/waves/round-99/seats/V113-c2-inventory-line.md
+  .ufo/waves/round-99/seats/V116-c2-clerk-continuity.md
+  .ufo/waves/round-99/seats/V119-c2-anchors-3.md
+  .ufo/waves/round-99/seats/V12-c2-support-map.md
+  .ufo/waves/round-99/seats/V13-c2-anchors.md
+  .ufo/waves/round-99/seats/V41-anchor-replica-2.md
+  .ufo/waves/round-99/seats/V47-byte-prefix-2.md
+  .ufo/waves/round-99/seats/V68-adjacency-2.md
+  .ufo/waves/round-99/seats/V77-c2-map-inventory.md
+  .ufo/waves/round-99/seats/V80-c2-prose-prefix.md
+  .ufo/waves/round-99/seats/V86-c2-no-new-entity.md
+  .ufo/waves/round-99/seats/V90-c2-editorial-rows.md
+  .ufo/waves/round-99/seats/V95-c2-lapse-wording.md
+  .ufo/waves/round-99/seats/V98-c2-table-citations.md
+wave_root_outside_seats:
+OTHER (out of declared set):
+scratch_top_counts (top 30):
+   44825  V40-scratch
+    1836  V93-scratch
+    1835  V20-scratch
+    1050  V43-scratch
+    1047  V70-scratch
+     189  V110-scratch
+     135  V115-scratch
+     133  V30-scratch
+     105  V96-scratch
+      90  V58-scratch
+      87  V113-scratch
+      78  V29-scratch
+      76  V03-scratch
+      75  V108-scratch
+      74  V28-scratch
+      67  V44-scratch
+      65  V62-scratch
+      47  V69-scratch
+      45  V73-scratch
+      44  V49-scratch
+      42  V94-scratch
+      40  V74-scratch
+      36  V38-scratch
+      34  V42-scratch
+      27  V47-scratch
+      26  V104-scratch
+      24  V51-scratch
+      21  V35-scratch
+      20  V123-scratch
+      19  V11-scratch
+
+=== 4. expected fixture ten ===
+6176 2026-10-17 22:03:19.512442573 -0300 corpus/fixtures/r99-window-lapse/README.md
+17119 2026-10-17 22:02:39.612249741 -0300 corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+3 2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/contradictions.json
+1793 2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/entities.json
+5114 2026-10-17 22:01:13.842835114 -0300 corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+1956 2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/inspiration-note.md
+139 2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/relations.json
+640 2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/source-excerpt.md
+3293 2026-10-17 22:01:13.842835114 -0300 corpus/fixtures/r99-window-lapse/sources.json
+2998 2026-10-17 22:01:13.842835114 -0300 corpus/fixtures/r99-window-lapse/timeline.json
+-- extra files under fixture (not the ten) --
+
+=== 5. knowledge r99 ===
+ls: cannot access 'corpus/knowledge/r99*': No such file or directory
+
+=== 6. SKILL.md diff (freeze-row-only check) ===
+SKILL.md clean vs HEAD (S2 freeze row NOT landed or identical)
+=== 6b. tools README diff stat ===
+corpus/tools/README.md clean vs HEAD
+=== 6c. contract diff stat ===
+ corpus/tools/dependency-freeze-contract.json | 163 ++++++++++++++++++++++++---
+ 1 file changed, 146 insertions(+), 17 deletions(-)
+=== 6d. dependency_freeze.py diff stat ===
+ corpus/tools/dependency_freeze.py | 65 ++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 60 insertions(+), 5 deletions(-)
+
+=== 7. producer reports ===
+5069 f S3-fixture-author.md
+9303 f S4-fixture-docs.md
+
+=== 8. report-path exclusivity ===
+-- md files under round-99 not directly in seats/ --
+-- md directly in seats/ --
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+seat_md_count=20
+-- subtracting self --
+20
+
+=== 9. parent tree ===
+-- parent HEAD --
+9a74e25
+9a74e25 protocol: close lore r98 (admitted) — fleet report + MANIFEST ledger append
+-- parent porcelain -uall (first 80) --
+?? .ufo/waves/round-99/seats/V69-scratch/before/baseline-root/corpus/tools/dependency-freeze-contract.json
+?? .ufo/waves/round-99/seats/V69-scratch/before/baseline-root/corpus/tools/dependency_freeze.py
+?? .ufo/waves/round-99/seats/V73-scratch/selftests/boundary.err
+?? .ufo/waves/round-99/seats/V73-scratch/selftests/boundary.out
+?? .ufo/waves/round-99/seats/V73-scratch/selftests/freeze.err
+?? .ufo/waves/round-99/seats/V73-scratch/selftests/freeze.out
+?? .ufo/waves/round-99/seats/V73-scratch/selftests/map.err
+?? .ufo/waves/round-99/seats/V73-scratch/selftests/map.out
+parent_porcelain_count=8
+-- parent check-ignore lore-shokunin --
+.gitignore:1:*-shokunin/	lore-shokunin
+
+=== 10. ignored class created/touched since 22:00 local (wave window) ===
+-- git check-ignore samples --
+.gitignore:2:__pycache__/	corpus/tools/__pycache__
+.gitignore:4:*-self-test-*/	v05-self-test-scratch
+-- round-99 ignored --
+!! .ufo/waves/round-99/seats/V119-scratch/__pycache__/byte_window_anchors.cpython-314.pyc
+!! .ufo/waves/round-99/seats/V43-scratch/__pycache__/matrix.cpython-314.pyc
+!! .ufo/waves/round-99/seats/V75-scratch/probe-build-model/__pycache__/dependency_freeze.cpython-314.pyc
+!! .ufo/waves/round-99/seats/V75-scratch/probe-build-model2/__pycache__/dependency_freeze.cpython-314.pyc
+round99_ignored_count=4
+-- lane-root self-test dirs mtime --
+1792280176.0393150400 d ./v05-self-test-scratch
+-- corpus/tools __pycache__ mtime --
+1792285406.8581054210 corpus/tools/__pycache__
+1792256673.4073611860 52190 corpus/tools/__pycache__/boundary_doc_check.cpython-314.pyc
+1792262467.9801644220 24721 corpus/tools/__pycache__/support_check.cpython-314.pyc
+1792273778.3542188140 58629 corpus/tools/__pycache__/map_obligations.cpython-314.pyc
+1792279721.9179841870 8855 corpus/tools/__pycache__/discriminate_check.cpython-314.pyc
+1792285406.8581054210 44734 corpus/tools/__pycache__/dependency_freeze.cpython-314.pyc
+
+=== 11. scratch size (top 15 seat dirs) ===
+616K	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V28-scratch
+624K	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V108-scratch
+856K	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V30-scratch
+924K	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V27-scratch
+1.3M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V115-scratch
+1.7M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V110-scratch
+1.8M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V35-scratch
+4.6M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V43-scratch
+4.7M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V70-scratch
+6.2M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V71-scratch
+6.6M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V87-scratch
+6.7M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V23-scratch
+7.9M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20-scratch
+8.7M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V93-scratch
+308M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V40-scratch
+-- seats total --
+370M	/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats
+
+=== 12. diff vs named baseline 4265df5 (tracked, excluding .ufo) ===
+ LOG.md                                       |  91 +++++++++++++++
+ SCORECARD.md                                 |  32 ++++++
+ corpus/tools/dependency-freeze-contract.json | 163 ++++++++++++++++++++++++---
+ corpus/tools/dependency_freeze.py            |  65 ++++++++++-
+ 4 files changed, 329 insertions(+), 22 deletions(-)
+
+=== AUDIT-END 2026-10-17T22:27:08-03:00 ===

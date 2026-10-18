@@ -1,0 +1,136 @@
+MEASURE_START 2026-10-17 23:11:18 -0300 stamp=20261017T231118
+HEAD 337f0fa52b02626b7687eedbb2d99fab30446fe4
+BASE 4265df5 4265df5e86e4121bde4125b649b89bb1676676a5
+===== A1 charter =====
+94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa  PROVINCE.md
+94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa  -
+hash-object 7c599c395e1710b6a7c7aca6d485c373bed6deb7
+rev-parse  7c599c395e1710b6a7c7aca6d485c373bed6deb7
+diff-bytes 0
+IDENTICAL-BASE IDENTICAL-HEAD PROVINCE.md work=7c599c395e1710b6a7c7aca6d485c373bed6deb7 base=7c599c395e1710b6a7c7aca6d485c373bed6deb7 head=7c599c395e1710b6a7c7aca6d485c373bed6deb7
+IDENTICAL-BASE IDENTICAL-HEAD SHONEN.md work=561b3f8ce99e35200fcfa2269198a7f7f68f1a5e base=561b3f8ce99e35200fcfa2269198a7f7f68f1a5e head=561b3f8ce99e35200fcfa2269198a7f7f68f1a5e
+DIFF-BASE DIFF-HEAD SKILL.md work=c5d4b74177ae09fdcb748e34c6924d24dde0cc12 base=39d4c548926d7d184e3fa66c2e4a8404ff4a95a5 head=39d4c548926d7d184e3fa66c2e4a8404ff4a95a5
+IDENTICAL-BASE IDENTICAL-HEAD README.md work=7c46413cf7781ae3cdbaa7bae7e265f7ddcbbe70 base=7c46413cf7781ae3cdbaa7bae7e265f7ddcbbe70 head=7c46413cf7781ae3cdbaa7bae7e265f7ddcbbe70
+IDENTICAL-BASE IDENTICAL-HEAD l0-questions.md work=f9fdff500e043c63d7bbfd0ffad90f8cfd66de4e base=f9fdff500e043c63d7bbfd0ffad90f8cfd66de4e head=f9fdff500e043c63d7bbfd0ffad90f8cfd66de4e
+DIFF-BASE IDENTICAL-HEAD SCORECARD.md work=3dd12ed8134113125f9f0b7ece1770b050c486ab base=0bf27ca3c6ae589d7fcfeb6f019020d004b3abf6 head=3dd12ed8134113125f9f0b7ece1770b050c486ab
+SCORECARD-log 111b9a3 2026-10-17 21:37:06 -0300 lore r98: close round — SCORECARD admitted section
+LOG-vs-HEAD-bytes 0
+LOG-numstat-vs-4265
+91	0	LOG.md
+===== A2 tracked name-status =====
+-- vs 4265df5 --
+M	LOG.md
+M	SCORECARD.md
+M	SKILL.md
+M	corpus/tools/README.md
+M	corpus/tools/dependency-freeze-contract.json
+M	corpus/tools/dependency_freeze.py
+-- vs HEAD --
+M	SKILL.md
+M	corpus/tools/README.md
+M	corpus/tools/dependency-freeze-contract.json
+M	corpus/tools/dependency_freeze.py
+-- numstat vs HEAD --
+3	3	SKILL.md
+73	0	corpus/tools/README.md
+146	17	corpus/tools/dependency-freeze-contract.json
+61	6	corpus/tools/dependency_freeze.py
+===== A2 blob audit =====
+baseline non-ufo tracked files: 2840
+CHANGED (6):
+  LOG.md  cac8c721fefa -> bf9e60dce351
+  SCORECARD.md  0bf27ca3c6ae -> 3dd12ed81341
+  SKILL.md  39d4c548926d -> c5d4b74177ae
+  corpus/tools/README.md  0c4de1c84957 -> fb353e365454
+  corpus/tools/dependency-freeze-contract.json  d4553282f69b -> 7da596be4dc3
+  corpus/tools/dependency_freeze.py  623b3501b580 -> ac590a83445a
+MISSING (0):
+UNTRACKED non-ufo (12):
+  corpus/fixtures/r99-window-lapse/README.md
+  corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+  corpus/fixtures/r99-window-lapse/contradictions.json
+  corpus/fixtures/r99-window-lapse/entities.json
+  corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+  corpus/fixtures/r99-window-lapse/inspiration-note.md
+  corpus/fixtures/r99-window-lapse/relations.json
+  corpus/fixtures/r99-window-lapse/source-excerpt.md
+  corpus/fixtures/r99-window-lapse/sources.json
+  corpus/fixtures/r99-window-lapse/timeline.json
+  corpus/knowledge/r99-gate-blind-spot-table.md
+  corpus/knowledge/r99-lapse-scope-note.md
+===== A2 untracked outside wave (filtered) =====
+?? .ufo/waves/round-98/seats/V58-scratch/original-run-resume-note.md
+?? corpus/fixtures/r99-window-lapse/README.md
+?? corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+?? corpus/fixtures/r99-window-lapse/contradictions.json
+?? corpus/fixtures/r99-window-lapse/entities.json
+?? corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+?? corpus/fixtures/r99-window-lapse/inspiration-note.md
+?? corpus/fixtures/r99-window-lapse/relations.json
+?? corpus/fixtures/r99-window-lapse/source-excerpt.md
+?? corpus/fixtures/r99-window-lapse/sources.json
+?? corpus/fixtures/r99-window-lapse/timeline.json
+?? corpus/knowledge/r99-gate-blind-spot-table.md
+?? corpus/knowledge/r99-lapse-scope-note.md
+===== A2 parent stray =====
+/home/vgpnk/Projects/shokunin/.ufo/waves/round-99
+===== A2 reflog =====
+337f0fa HEAD@{0}: commit: lore r99: record blocked dispatch attempt (xai-oauth credential pool missing) — zero increment
+111b9a3 HEAD@{1}: commit: lore r98: close round — SCORECARD admitted section
+4265df5 HEAD@{2}: commit: lore r98: freeze admitted wave + closure docs (hyper completion wave, chain six, receipt 64/64)
+dd4df1b HEAD@{3}: commit: lore r97: close round — SCORECARD admitted section
+9a3d648 HEAD@{4}: commit: lore r97: drop embedded scratch clone (V37 mirror-freeze gitlink) from the wave tree
+===== A2 census =====
+fixture-dirs 173
+===== A2 modes/symlinks r99 fixture =====
+0
+0
+644 corpus/knowledge/r99-gate-blind-spot-table.md
+644 corpus/knowledge/r99-lapse-scope-note.md
+===== A2 chain fixtures vs 4265df5 =====
+chain-diff-files r88-m3-maya-cluster 0
+chain-diff-files r94-paired-crossing 0
+chain-diff-files r95-crossing-aftermath 0
+chain-diff-files r96-crossing-response 0
+chain-diff-files r97-crossing-acknowledgment 0
+chain-diff-files r98-clerk-filing 0
+===== hashes =====
+fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+837a7f5dfe913047530c7f92f3dd6b3df1b1a83c77ede12ba0c349cc134a049c  corpus/tools/README.md
+e0bcb61ab909146e34773dd56219cb1631070c1700a2481f8ad1181f3d864443  SKILL.md
+d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d  corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570  corpus/fixtures/r99-window-lapse/contradictions.json
+db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984  corpus/fixtures/r99-window-lapse/entities.json
+fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d  corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37  corpus/fixtures/r99-window-lapse/inspiration-note.md
+b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049  corpus/fixtures/r99-window-lapse/README.md
+c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9  corpus/fixtures/r99-window-lapse/relations.json
+b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd  corpus/fixtures/r99-window-lapse/source-excerpt.md
+8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15  corpus/fixtures/r99-window-lapse/sources.json
+2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069  corpus/fixtures/r99-window-lapse/timeline.json
+4670c0b71668c56c53c0bac90091531d3f0e881c7dcb2ac572d09f96ae22182e  corpus/knowledge/r99-gate-blind-spot-table.md
+96de708f8e984f6f61ee6387342c287a275328a6293da1d225b2ad00040ebb54  corpus/knowledge/r99-lapse-scope-note.md
+===== producer mtimes =====
+2026-10-17 22:38:11.814368253 -0300 corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 corpus/tools/dependency-freeze-contract.json
+2026-10-17 23:08:16.223169124 -0300 corpus/tools/README.md
+2026-10-17 22:51:39.344058326 -0300 SKILL.md
+2026-10-17 22:02:39.612249741 -0300 corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:03:19.512442573 -0300 corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 corpus/fixtures/r99-window-lapse/timeline.json
+2026-10-17 22:57:50.535756435 -0300 corpus/knowledge/r99-gate-blind-spot-table.md
+2026-10-17 22:57:50.535756435 -0300 corpus/knowledge/r99-lapse-scope-note.md
+2026-10-17 22:48:57.484913804 -0300 .ufo/waves/round-99/seats/S1-full-file-pins.md
+2026-10-17 23:10:49.303386521 -0300 .ufo/waves/round-99/seats/S2-tools-docs.md
+2026-10-17 22:01:40.692964933 -0300 .ufo/waves/round-99/seats/S3-fixture-author.md
+2026-10-17 22:03:54.733612762 -0300 .ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 23:10:56.965396640 -0300 .ufo/waves/round-99/seats/S5-knowledge-author.md
+MEASURE_END 2026-10-17 23:11:21 -0300

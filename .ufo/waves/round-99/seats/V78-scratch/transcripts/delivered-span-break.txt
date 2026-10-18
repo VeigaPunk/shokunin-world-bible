@@ -1,0 +1,9 @@
+NOTE J20 line span 55-64 -> 1
+FREEZE_EXIT 2
+--- stdout ---
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest a5e333be4dff6a040af5482d61aee19b47e305490cb5721879ca41582ab57715 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> 57de341ca1bea48c78a36ef49f678a05245f932bbc1ea8743a3051a9b1120a7f); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+
+--- stderr ---
+

@@ -1,0 +1,13 @@
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json

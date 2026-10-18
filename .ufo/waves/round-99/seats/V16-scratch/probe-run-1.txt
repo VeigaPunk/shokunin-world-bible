@@ -1,0 +1,32 @@
+LIVE /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse
+CHECKER /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/check_bible.py
+FREEZE /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+=== P0 control copy check_bible exit=0 ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+P1 mutation: dropped depends_on (was present=True) from clerk-lapse-recorded
+=== P1 drop depends_on check_bible exit=1 ===
+VIOLATION: timeline[7].depends_on: required nonempty list
+1 violation(s); no canon changed
+P2 mutation: clerk-lapse-recorded.depends_on = ['no-such-event-id']
+=== P2 unknown id check_bible exit=1 ===
+VIOLATION: timeline[7].depends_on: unknown event 'no-such-event-id'
+1 violation(s); no canon changed
+P3 before: clerk-lapse-recorded tick=15 depends_on=['clerk-filing-open']; clerk-filing-open tick=14
+P3 mutation: clerk-lapse-recorded.tick = 14 (dependency stays tick 14)
+=== P3 tick 14 inversion check_bible exit=1 ===
+VIOLATION: timeline[7].depends_on: timeline inversion 'clerk-filing-open' tick 14 not before 'clerk-lapse-recorded' tick 14
+1 violation(s); no canon changed
+P4 mutation: removed clerk-filing-open (8 -> 7 events); clerk-lapse-recorded still depends_on it
+=== P4 remove clerk-filing-open check_bible exit=1 ===
+VIOLATION: timeline[6].depends_on: unknown event 'clerk-filing-open'
+1 violation(s); no canon changed
+P5 mutation: clerk-lapse-recorded.depends_on ['clerk-filing-open'] -> [] (dropped edge, key retained)
+=== P5 emptied depends_on (bible, discrimination) check_bible exit=0 ===
+CLEAN: schema, citations, relations, timeline; 0 violations
+=== P5 dropped-edge copy dependency_freeze (live-tool) exit=2 ===
+FINDING UNPINNED-FIXTURE: no pin for 'r99-window-lapse' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'])
+RESULT ERROR
+=== P5b key-removed copy dependency_freeze (live-tool) exit=2 ===
+FINDING UNPINNED-FIXTURE: no pin for 'r99-window-lapse' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'])
+RESULT ERROR
+LIVE BYTE-STABLE True files_before=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json'] files_after=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']

@@ -1,0 +1,45 @@
+2026-10-17T22:01:28-03:00
+TRY 1 2026-10-17T22:01:28-03:00 wave-dir-created-by-V18-scratch; S5 artifacts ABSENT
+POLL_START 2026-10-17T22:04:23-03:00
+TRY 1 2026-10-17T22:04:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 2 2026-10-17T22:04:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 3 2026-10-17T22:05:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 4 2026-10-17T22:05:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 5 2026-10-17T22:05:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 6 2026-10-17T22:06:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 7 2026-10-17T22:06:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 8 2026-10-17T22:06:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 9 2026-10-17T22:07:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 10 2026-10-17T22:07:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 11 2026-10-17T22:07:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 12 2026-10-17T22:08:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 13 2026-10-17T22:08:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 14 2026-10-17T22:08:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 15 2026-10-17T22:09:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 16 2026-10-17T22:09:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 17 2026-10-17T22:09:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 18 2026-10-17T22:10:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 19 2026-10-17T22:10:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 20 2026-10-17T22:10:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 21 2026-10-17T22:11:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 22 2026-10-17T22:11:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 23 2026-10-17T22:11:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 24 2026-10-17T22:12:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 25 2026-10-17T22:12:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 26 2026-10-17T22:12:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 27 2026-10-17T22:13:03-03:00 table=no size=0 substantive=no reports=NONE
+TRY 28 2026-10-17T22:13:23-03:00 table=no size=0 substantive=no reports=NONE
+TRY 29 2026-10-17T22:13:43-03:00 table=no size=0 substantive=no reports=NONE
+TRY 30 2026-10-17T22:14:03-03:00 table=no size=0 substantive=no reports=NONE
+POLL_RESUME 2026-10-17T22:23:10-03:00 after harness timeout at try 30
+TRY 31 2026-10-17T22:23:10-03:00 table=no size=0 substantive=no reports=NONE
+TRY 32 2026-10-17T22:23:30-03:00 table=no size=0 substantive=no reports=NONE
+TRY 33 2026-10-17T22:23:50-03:00 table=no size=0 substantive=no reports=NONE
+TRY 34 2026-10-17T22:24:10-03:00 table=no size=0 substantive=no reports=NONE
+TRY 35 2026-10-17T22:24:30-03:00 table=no size=0 substantive=no reports=NONE
+TRY 36 2026-10-17T22:24:50-03:00 table=no size=0 substantive=no reports=NONE
+TRY 37 2026-10-17T22:25:10-03:00 table=no size=0 substantive=no reports=NONE
+TRY 38 2026-10-17T22:25:30-03:00 table=no size=0 substantive=no reports=NONE
+TRY 39 2026-10-17T22:25:50-03:00 table=no size=0 substantive=no reports=NONE
+TRY 40 2026-10-17T22:26:10-03:00 table=no size=0 substantive=no reports=NONE
+POLL_EXHAUSTED 2026-10-17T22:26:10-03:00

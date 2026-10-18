@@ -1,0 +1,101 @@
+python 3.14.7
+baseline dir /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V11-scratch/baseline-r98
+r99 dir /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse
+PASS entities len==6 :: got 6 r98=6
+PASS entities parsed-equal (all 6, key-order sensitive) :: r98 ids=['aru', 'evin', 'quiet-rise', 'salt-court', 'chalk-stair', 'clerk-maren'] r99 ids=['aru', 'evin', 'quiet-rise', 'salt-court', 'chalk-stair', 'clerk-maren']
+PASS entities[0] keys equal and ordered :: r98=['id', 'kind', 'name', 'first_appearance', 'claims'] r99=['id', 'kind', 'name', 'first_appearance', 'claims'] id98=aru id99=aru
+PASS entities[0].claims[0] key-order :: r98=['statement', 'source_id'] r99=['statement', 'source_id']
+PASS entities[1] keys equal and ordered :: r98=['id', 'kind', 'name', 'first_appearance', 'claims'] r99=['id', 'kind', 'name', 'first_appearance', 'claims'] id98=evin id99=evin
+PASS entities[1].claims[0] key-order :: r98=['statement', 'source_id'] r99=['statement', 'source_id']
+PASS entities[2] keys equal and ordered :: r98=['id', 'kind', 'name', 'first_appearance', 'claims'] r99=['id', 'kind', 'name', 'first_appearance', 'claims'] id98=quiet-rise id99=quiet-rise
+PASS entities[2].claims[0] key-order :: r98=['statement', 'source_id'] r99=['statement', 'source_id']
+PASS entities[3] keys equal and ordered :: r98=['id', 'kind', 'name', 'first_appearance', 'claims'] r99=['id', 'kind', 'name', 'first_appearance', 'claims'] id98=salt-court id99=salt-court
+PASS entities[3].claims[0] key-order :: r98=['statement', 'source_id'] r99=['statement', 'source_id']
+PASS entities[4] keys equal and ordered :: r98=['id', 'kind', 'name', 'first_appearance', 'claims'] r99=['id', 'kind', 'name', 'first_appearance', 'claims'] id98=chalk-stair id99=chalk-stair
+PASS entities[4].claims[0] key-order :: r98=['statement', 'source_id'] r99=['statement', 'source_id']
+PASS entities[5] keys equal and ordered :: r98=['id', 'kind', 'name', 'first_appearance', 'claims'] r99=['id', 'kind', 'name', 'first_appearance', 'claims'] id98=clerk-maren id99=clerk-maren
+PASS entities[5].claims[0] key-order :: r98=['statement', 'source_id'] r99=['statement', 'source_id']
+PASS relations len==1 :: got 1
+PASS relations parsed-equal (key-order sensitive) :: r99=[{"from": "aru", "to": "evin", "type": "agreed_co_stewardship_for_this_crossing", "source_id": "crossing-minute"}]
+PASS relations[0] keys ordered :: r98=['from', 'to', 'type', 'source_id'] r99=['from', 'to', 'type', 'source_id']
+PASS timeline len==8 :: got 8 r98=7
+PASS timeline[:7] parsed-equal (key-order sensitive) :: r98 len 7
+PASS timeline[0] keys equal and ordered id=aru-ninth-bell :: r98=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id'] r99=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[1] keys equal and ordered id=evin-ninth-bell :: r98=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id'] r99=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[2] keys equal and ordered id=paired-crossing-decision :: r98=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id'] r99=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[3] keys equal and ordered id=aftermath-missing-evin :: r98=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id'] r99=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[4] keys equal and ordered id=response-evin-salt-court :: r98=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id'] r99=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[5] keys equal and ordered id=acknowledgment-aru-records :: r98=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id'] r99=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[6] keys equal and ordered id=clerk-filing-open :: r98=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id'] r99=['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[7].id==clerk-lapse-recorded :: clerk-lapse-recorded
+PASS timeline[7].tick==15 :: 15
+PASS timeline[7].entity_id==clerk-maren :: clerk-maren
+PASS timeline[7].place_id==chalk-stair :: chalk-stair
+PASS timeline[7].depends_on==[clerk-filing-open] :: ['clerk-filing-open']
+PASS timeline[7].source_id==clerk-lapse-note :: clerk-lapse-note
+PASS timeline[7] key order :: ['id', 'tick', 'entity_id', 'place_id', 'depends_on', 'description', 'source_id']
+PASS timeline[7] description contains 'crossing-window named in the original minute has closed'
+PASS timeline[7] description contains 'agreement was unfulfilled'
+PASS timeline[7] description contains 'no claim was lodged'
+PASS timeline[7] description contains 'historical open entry'
+PASS timeline[7] description lacks 'resolved the matter'
+PASS timeline[7] description lacks 'blames'
+PASS timeline[7] description lacks 'reconciled the accounts'
+PASS sources len==8 :: got 8 r98=7
+PASS sources[:7] parsed-equal (key-order sensitive) :: r98 len 7
+PASS sources[0] keys equal and ordered id=veil-verse :: r98=['id', 'title', 'kind', 'reliability_note'] r99=['id', 'title', 'kind', 'reliability_note']
+PASS sources[1] keys equal and ordered id=paired-clock :: r98=['id', 'title', 'kind', 'reliability_note'] r99=['id', 'title', 'kind', 'reliability_note']
+PASS sources[2] keys equal and ordered id=crossing-minute :: r98=['id', 'title', 'kind', 'reliability_note'] r99=['id', 'title', 'kind', 'reliability_note']
+PASS sources[3] keys equal and ordered id=aru-aftermath-note :: r98=['id', 'title', 'kind', 'reliability_note'] r99=['id', 'title', 'kind', 'reliability_note']
+PASS sources[4] keys equal and ordered id=evin-response-note :: r98=['id', 'title', 'kind', 'reliability_note'] r99=['id', 'title', 'kind', 'reliability_note']
+PASS sources[5] keys equal and ordered id=aru-acknowledgment-note :: r98=['id', 'title', 'kind', 'reliability_note'] r99=['id', 'title', 'kind', 'reliability_note']
+PASS sources[6] keys equal and ordered id=clerk-filing-note :: r98=['id', 'title', 'kind', 'reliability_note'] r99=['id', 'title', 'kind', 'reliability_note']
+PASS sources[7].id==clerk-lapse-note :: clerk-lapse-note
+PASS sources[7].title :: Maren's Chalk Stair Lapse Note
+PASS sources[7].kind :: fictional first-person note
+PASS sources[7] key order :: ['id', 'title', 'kind', 'reliability_note']
+PASS contradictions parsed-equal ([]) :: []
+PASS contradictions is a list
+PASS no new entity id :: ['aru', 'evin', 'quiet-rise', 'salt-court', 'chalk-stair', 'clerk-maren']
+PASS only new source id is clerk-lapse-note :: ['veil-verse', 'paired-clock', 'crossing-minute', 'aru-aftermath-note', 'evin-response-note', 'aru-acknowledgment-note', 'clerk-filing-note', 'clerk-lapse-note']
+PASS only new timeline id is clerk-lapse-recorded :: ['aru-ninth-bell', 'evin-ninth-bell', 'paired-crossing-decision', 'aftermath-missing-evin', 'response-evin-salt-court', 'acknowledgment-aru-records', 'clerk-filing-open', 'clerk-lapse-recorded']
+--- byte prefix ---
+PASS sources.json baseline-extract == git show 4265df5 :: len 2725
+PASS sources.json LCP == len(r98)-3 and r98 tail is newline-bracket :: LCP=2722 len98=2725 len99=3293 r98_tail=b'\n]\n' r99_div=b',\n  {\n  ' r99_tail=b'}\n]\n'
+PASS sources.json r99 still ends with newline-bracket :: b'}\n]\n'
+PASS sources.json divergence starts with comma-newline :: b',\n'
+PASS timeline.json baseline-extract == git show 4265df5 :: len 2552
+PASS timeline.json LCP == len(r98)-3 and r98 tail is newline-bracket :: LCP=2549 len98=2552 len99=2998 r98_tail=b'\n]\n' r99_div=b',\n  {\n  ' r99_tail=b'}\n]\n'
+PASS timeline.json r99 still ends with newline-bracket :: b'}\n]\n'
+PASS timeline.json divergence starts with comma-newline :: b',\n'
+PASS fictional-excerpts.md baseline-extract == git show 4265df5 :: len 4187
+PASS fictional-excerpts.md strict byte-prefix (r99 startswith r98) :: len98=4187 len99=5114 appended=927
+PASS fictional-excerpts.md appended region starts with newline then Round 99 heading :: b'\n## Round 99 lapse note (2026-10-17)\n\nNewly authored fictional first-person note'
+--- copied files cmp ---
+PASS cmp README.md r99 == 4265df5 blob :: sha99=32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 shablob=32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926
+PASS cmp README.md r99 == worktree r98
+PASS cmp README.md baseline-extract == blob
+PASS cmp claim-excerpt-map.md r99 == 4265df5 blob :: sha99=c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba shablob=c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba
+PASS cmp claim-excerpt-map.md r99 == worktree r98
+PASS cmp claim-excerpt-map.md baseline-extract == blob
+PASS cmp contradictions.json r99 == 4265df5 blob :: sha99=37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 shablob=37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570
+PASS cmp contradictions.json r99 == worktree r98
+PASS cmp contradictions.json baseline-extract == blob
+PASS cmp entities.json r99 == 4265df5 blob :: sha99=db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 shablob=db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984
+PASS cmp entities.json r99 == worktree r98
+PASS cmp entities.json baseline-extract == blob
+PASS cmp inspiration-note.md r99 == 4265df5 blob :: sha99=58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 shablob=58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37
+PASS cmp inspiration-note.md r99 == worktree r98
+PASS cmp inspiration-note.md baseline-extract == blob
+PASS cmp relations.json r99 == 4265df5 blob :: sha99=c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9 shablob=c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9
+PASS cmp relations.json r99 == worktree r98
+PASS cmp relations.json baseline-extract == blob
+PASS cmp source-excerpt.md r99 == 4265df5 blob :: sha99=b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd shablob=b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd
+PASS cmp source-excerpt.md r99 == worktree r98
+PASS cmp source-excerpt.md baseline-extract == blob
+PASS sources.json is NOT byte-identical (extension expected) :: len99=3293 len98=2725
+PASS timeline.json is NOT byte-identical (extension expected) :: len99=2998 len98=2552
+PASS fictional-excerpts.md is NOT byte-identical (extension expected) :: len99=5114 len98=4187
+PASS harness: OrderedDict equality is key-order sensitive :: ['id', 'kind'] vs ['kind', 'id']
+FAILS: 0
+EXIT:0

@@ -1,0 +1,31 @@
+2026-10-17 22:07:51 -03
+try=1 artifacts present; sleeping 20s for stability
+2026-10-17 22:08:11 -03
+=== sha256 after wait ===
+2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069  corpus/fixtures/r99-window-lapse/timeline.json
+fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d  corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15  corpus/fixtures/r99-window-lapse/sources.json
+b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049  corpus/fixtures/r99-window-lapse/README.md
+d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d  corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+=== phrase ===
+corpus/fixtures/r99-window-lapse/timeline.json:84:    "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry.",
+corpus/fixtures/r99-window-lapse/fictional-excerpts.md:73:> The matter stands as a historical open entry.
+corpus/fixtures/r99-window-lapse/fictional-excerpts.md:76:Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation, and it creates no new duty; the crossing-scoped agreement above is unchanged, and the matter stays open.
+=== Chalk Stair in lapse section ===
+lapse_section_has_Chalk_Stair False
+lapse_section_has_chalk_stair_ci False
+=== reports ===
+.ufo/waves/round-99/seats/S3-fixture-author.md
+.ufo/waves/round-99/seats/S4-fixture-docs.md
+ls: cannot access '.ufo/waves/round-99/seats/S5-*.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-*': No such file or directory
+=== description line ===
+77:    "id": "clerk-lapse-recorded",
+78-    "tick": 15,
+79-    "entity_id": "clerk-maren",
+80-    "place_id": "chalk-stair",
+81-    "depends_on": [
+82-      "clerk-filing-open"
+83-    ],
+84-    "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry.",
+85-    "source_id": "clerk-lapse-note"

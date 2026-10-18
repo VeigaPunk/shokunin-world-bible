@@ -1,0 +1,9 @@
+NOTE removed word 'depends' from fictional-excerpts.md tick-10 sentence
+FREEZE_EXIT 2
+--- stdout ---
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 1ff39c53b95a1c343c58669aa35b2e2cfdea7d2170cac475953ef7373ec8ca8d != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> d36f183fce3ab088449e929cff7362ffa70b7f7ea9646ea64697eea8f399daf1); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+
+--- stderr ---
+

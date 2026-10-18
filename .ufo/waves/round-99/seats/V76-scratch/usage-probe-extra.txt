@@ -1,0 +1,136 @@
+PROBE_EXTRA 2026-10-17T22:03:20-03:00
+TOOL_SHA 65c1ae309385feed37b859ff78a6f28eac168888095df61c3820ed5da7b87319
+TOOL_BYTES 29211
+===== CASE verify-file-pin-basename =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V76-scratch/r95-crossing-aftermath
+EXIT 2
+--- stdout ---
+FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+===== CASE verify-missing =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V76-scratch/does-not-exist/r95-crossing-aftermath
+EXIT 2
+--- stdout ---
+FINDING CONTRACT-INVALID: pin r95-crossing-aftermath payload_schema_version None != 2 (full-file pin of 10 files)
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+===== CASE verify-missing-plain =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V76-scratch/no-such-fixture
+EXIT 2
+--- stdout ---
+FINDING UNPINNED-FIXTURE: no pin for 'no-such-fixture' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'])
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+===== CASE self-test-plus-fixture =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py --self-test /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath
+EXIT 2
+--- stdout ---
+FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+===== CASE self-test-plus-freeze =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py --self-test --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath
+EXIT 2
+--- stdout ---
+FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+===== CASE freeze-file =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath/timeline.json
+EXIT 2
+--- stdout ---
+FINDING FIXTURE-MISSING: fixture directory not found: /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath/timeline.json
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+CONTRACT_UNCHANGED_AFTER_FREEZE_FILE yes before=153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947 after=153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947
+===== CASE freeze-missing-dir =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-does-not-exist
+EXIT 2
+--- stdout ---
+FINDING FIXTURE-MISSING: fixture directory not found: /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-does-not-exist
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+CONTRACT_UNCHANGED_AFTER_FREEZE_MISSING yes
+===== CASE two-positionals =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r95-crossing-aftermath /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r94-paired-crossing
+EXIT 2
+--- stdout ---
+FINDING INVALID-ARGUMENTS: unrecognized arguments: /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r94-paired-crossing
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+===== CASE help-with-extra =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py --help --freeze
+EXIT 0
+--- stdout ---
+usage: dependency_freeze.py [-h] [--freeze DIR] [--self-test] [fixture]
+
+Freeze or verify per-fixture dependency inventories.
+
+positional arguments:
+  fixture       fixture directory to verify against its pin
+
+options:
+  -h, --help    show this help message and exit
+  --freeze DIR  (re)build the pin for DIR (delivery-time only)
+  --self-test   run isolated cases against persisted expectations
+--- stderr ---
+STDOUT_RESULT_COUNT 0
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 0
+TRACEBACK_HITS 0
+
+===== CASE unknown-equals =====
+CMD: python3 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py --nope=1
+EXIT 2
+--- stdout ---
+FINDING INVALID-ARGUMENTS: unrecognized arguments: --nope=1
+RESULT ERROR
+--- stderr ---
+STDOUT_RESULT_COUNT 1
+STDERR_RESULT_COUNT 0
+STDOUT_FINDING_COUNT 1
+TRACEBACK_HITS 0
+
+PROBE_EXTRA_END 2026-10-17T22:03:20-03:00
+TOOL_SHA_END 65c1ae309385feed37b859ff78a6f28eac168888095df61c3820ed5da7b87319

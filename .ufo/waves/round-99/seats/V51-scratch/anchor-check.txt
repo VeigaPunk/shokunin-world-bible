@@ -1,0 +1,22 @@
+OK J01 span=12 anchor_hits=[12] inside=[12] anchor='Aru carried the north lantern at Quiet Rise'
+OK J02 span=13 anchor_hits=[13] inside=[13] anchor='Evin held the south bell at Salt Court'
+OK J03 span=12 anchor_hits=[12] inside=[12] anchor='Aru carried the north lantern at Quiet Rise'
+OK J04 span=13 anchor_hits=[13] inside=[13] anchor='Evin held the south bell at Salt Court'
+OK J05 span=17 anchor_hits=[17] inside=[17] anchor='The Chalk Stair is the named rain-dark crossing between Quiet Rise and'
+OK J06 span=12 anchor_hits=[12] inside=[12] anchor='Tick 9: Aru carried the north lantern at Quiet Rise.'
+OK J07 span=13 anchor_hits=[13] inside=[13] anchor='Tick 9: Evin held the south bell at Salt Court.'
+OK J08 span=12 anchor_hits=[12] inside=[12] anchor='north lantern at Quiet Rise'
+OK J09 span=13 anchor_hits=[13] inside=[13] anchor='south bell at Salt Court'
+OK J10 span=18 anchor_hits=[18] inside=[18] anchor='After both Tick 9 entries above, Aru and Evin met at the Chalk Stair a'
+OK J11 span=19 anchor_hits=[19] inside=[19] anchor='There, they agreed, for this crossing only, to share stewardship of th'
+OK J12 span=12 anchor_hits=[12] inside=[12] anchor='Aru carried the north lantern at Quiet Rise'
+OK J13 span=13 anchor_hits=[13] inside=[13] anchor='Evin held the south bell at Salt Court'
+OK J14 span=18-20 anchor_hits=[20] inside=[20] anchor="Their tick-10 decision depends on both ninth-bell entries: Aru's north"
+OK J15 span=22-31 anchor_hits=[26] inside=[26] anchor='Tick 11: I waited at the Chalk Stair through the agreed bell.'
+OK J16 span=33-42 anchor_hits=[37] inside=[37] anchor='Tick 12: I was at Salt Court through the same agreed bell.'
+OK J17 span=44-53 anchor_hits=[48] inside=[48] anchor="Tick 13: I received Evin's response at the Chalk Stair."
+OK J18 span=60 anchor_hits=[60] inside=[60] anchor='I am Maren, clerk of the Chalk Stair registry'
+OK J19 span=59-60 anchor_hits=[59] inside=[59] anchor='I filed both pending accounts at the Chalk Stair registry.'
+OK J20 span=55-64 anchor_hits=[59] inside=[59] anchor='Tick 14: I filed both pending accounts at the Chalk Stair registry.'
+OK J21 span=66-76 anchor_hits=[70] inside=[70] anchor='Tick 15: The crossing-window named in the original minute has closed.'
+FAILS 0

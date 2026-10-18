@@ -1,0 +1,408 @@
+2026-10-17T22:02:39-03:00
+TRY 0 2026-10-17T22:02:39-03:00
+--- fixture ---
+total 60
+drwxr-xr-x 1 vgpnk vgpnk   314 2026-10-17 22:00:56.806752736 -0300 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 2026-10-17 22:00:56.784752629 -0300 ..
+-rw-r--r-- 1 vgpnk vgpnk 15028 2026-10-17 21:36:10.000000000 -0300 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 2026-10-17 21:36:10.000000000 -0300 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 2026-10-17 21:36:10.000000000 -0300 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 2026-10-17 22:01:13.842835114 -0300 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 2026-10-17 21:36:10.000000000 -0300 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  5829 2026-10-17 21:36:10.000000000 -0300 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 2026-10-17 21:36:10.000000000 -0300 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 2026-10-17 21:36:10.000000000 -0300 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 2026-10-17 22:01:13.842835114 -0300 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 2026-10-17 22:01:13.842835114 -0300 timeline.json
+--- knowledge r99 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- producer reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+--- V20 report ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- any seat md count ---
+1
+TRY 1 2026-10-17T22:03:12-03:00
+--- producer reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- fixture mtimes ---
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:02:54.530957303 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/timeline.json
+COUNTS s_reports=1 knowledge=0
+TRY 2 2026-10-17T22:03:32-03:00
+--- producer reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- fixture mtimes ---
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/timeline.json
+COUNTS s_reports=1 knowledge=0
+TRY 3 2026-10-17T22:03:52-03:00
+--- producer reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- fixture mtimes ---
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/timeline.json
+COUNTS s_reports=1 knowledge=0
+TRY 4 2026-10-17T22:04:12-03:00
+--- producer reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- fixture mtimes ---
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/timeline.json
+COUNTS s_reports=2 knowledge=0
+TRY 5 2026-10-17T22:04:32-03:00
+--- producer reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- fixture mtimes ---
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/timeline.json
+COUNTS s_reports=2 knowledge=0
+TRY 6 2026-10-17T22:04:52-03:00
+--- producer reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- fixture mtimes ---
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/timeline.json
+COUNTS s_reports=2 knowledge=0
+POLL_LOOP_DONE 2026-10-17T22:04:52-03:00
+TRY 7 2026-10-17T22:05:31-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:03:21.845453846 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+TRY 8 2026-10-17T22:05:51-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:03:21.845453846 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+TRY 9 2026-10-17T22:06:11-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:03:21.845453846 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+TRY 10 2026-10-17T22:06:31-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:03:21.845453846 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+TRY 11 2026-10-17T22:06:51-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:03:21.845453846 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+TRY 12 2026-10-17T22:07:11-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:03:21.845453846 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+TRY 13 2026-10-17T22:07:31-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:03:21.845453846 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+TRY 14 2026-10-17T22:07:51-03:00
+--- S reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+--- knowledge ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+--- V20 ---
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+--- tools mtimes ---
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:04:28.205774480 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+--- fixture docs mtimes ---
+2026-10-17 22:03:19.512442573 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 22:02:39.612249741 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+COUNTS s_reports=2 knowledge=0
+POLL_LOOP2_DONE 2026-10-17T22:07:51-03:00
+TRY 15 2026-10-17T22:12:21-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+TRY 16 2026-10-17T22:12:41-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+TRY 17 2026-10-17T22:13:01-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+TRY 18 2026-10-17T22:13:21-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+TRY 19 2026-10-17T22:13:41-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+TRY 20 2026-10-17T22:14:01-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+TRY 21 2026-10-17T22:14:21-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+TRY 22 2026-10-17T22:14:41-03:00
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+COUNTS s_reports=2 knowledge=0 v20=0
+POLL_LOOP3_DONE 2026-10-17T22:14:41-03:00
+TRY 23 2026-10-17T22:21:20-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 24 2026-10-17T22:21:40-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 25 2026-10-17T22:22:00-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 26 2026-10-17T22:22:20-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 27 2026-10-17T22:22:40-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 28 2026-10-17T22:23:00-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 29 2026-10-17T22:23:20-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 30 2026-10-17T22:23:40-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 31 2026-10-17T22:24:00-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+TRY 32 2026-10-17T22:24:20-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+2026-10-17 22:07:33.506669398 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency_freeze.py
+2026-10-17 22:08:46.248249589 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+2026-10-17 21:32:05.149195103 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/README.md
+2026-10-17 21:34:23.607913842 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/SKILL.md
+POLL_LOOP4_DONE 2026-10-17T22:24:20-03:00
+TRY 33 2026-10-17T22:31:57-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+TRY 34 2026-10-17T22:32:17-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+TRY 35 2026-10-17T22:32:37-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+TRY 36 2026-10-17T22:32:57-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+TRY 37 2026-10-17T22:33:17-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+TRY 38 2026-10-17T22:33:37-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+TRY 39 2026-10-17T22:33:57-03:00 s_reports=2 [S3-fixture-author.md S4-fixture-docs.md ] knowledge=0 [] v20=0 []
+POLL_BUDGET_DONE try=39 2026-10-17T22:33:57-03:00
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V20*.md': No such file or directory
+ls: cannot access '/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/knowledge/r99*': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 5069 2026-10-17 22:01:40.692964933 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S3-fixture-author.md
+-rw-r--r-- 1 vgpnk vgpnk 9303 2026-10-17 22:03:54.733612762 -0300 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/S4-fixture-docs.md
+41

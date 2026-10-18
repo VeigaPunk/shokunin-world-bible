@@ -1,0 +1,50 @@
+=== try=0 2026-10-17T22:01:25-0300 ===
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md size=-
+ABSENT corpus/knowledge/r99-lapse-scope-note.md size=-
+ABSENT .ufo/waves/round-99/seats/S5-gate-blind-spot.md size=-
+ABSENT .ufo/waves/round-99/seats/S5-lapse-scope.md size=-
+ABSENT .ufo/waves/round-99/seats/S5-knowledge.md size=-
+ABSENT .ufo/waves/round-99/seats/S5.md size=-
+seats-dir: S2-scratch S4-scratch V03-scratch V04-scratch V07-scratch V08-scratch V09-scratch V11-scratch V12-scratch V15-scratch V16-scratch V19-scratch V22-scratch V23-scratch V24-scratch V26-scratch V27-scratch V28-scratch V29-scratch V31-scratch V32-scratch V33-scratch V36-scratch V37-scratch V42-scratch V47-scratch V48-scratch V65-scratch V84-scratch
+S5-files: NONE
+knowledge-r99: NONE
+=== try=1 2026-10-17T22:02:13-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=77 ===
+=== try=2 2026-10-17T22:02:33-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=86 ===
+=== try=3 2026-10-17T22:02:53-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=95 ===
+=== try=4 2026-10-17T22:03:13-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=99 ===
+=== try=5 2026-10-17T22:03:33-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=103 ===
+=== try=6 2026-10-17T22:03:53-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=104 ===
+=== try=7 2026-10-17T22:04:13-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=106 ===
+=== try=8 2026-10-17T22:04:39-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=110 ===
+=== try=9 2026-10-17T22:04:59-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=113 ===
+=== try=10 2026-10-17T22:05:19-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=113 ===
+=== try=11 2026-10-17T22:05:39-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=114 ===
+=== try=12 2026-10-17T22:05:59-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=115 ===
+=== try=13 2026-10-17T22:06:19-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=115 ===
+=== try=14 2026-10-17T22:06:39-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=115 ===
+=== try=15 2026-10-17T22:06:59-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=115 ===
+=== try=16 2026-10-17T22:07:19-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=116 ===
+=== try=17 2026-10-17T22:07:39-0300 S5=NONE r99=NONE recent_knowledge=NONE fixture=Y seats=117 ===
+=== try=18 2026-10-17T22:09:19-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=121 ===
+=== try=19 2026-10-17T22:09:39-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=122 ===
+=== try=20 2026-10-17T22:09:59-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=122 ===
+=== try=21 2026-10-17T22:10:19-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=122 ===
+=== try=22 2026-10-17T22:10:39-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=122 ===
+=== try=23 2026-10-17T22:10:59-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=123 ===
+=== try=24 2026-10-17T22:11:19-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=124 ===
+=== try=25 2026-10-17T22:11:39-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=124 ===
+=== try=26 2026-10-17T22:11:59-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=125 ===
+=== try=27 2026-10-17T22:12:19-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=126 ===
+=== try=28 2026-10-17T22:12:39-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=126 ===
+=== try=29 2026-10-17T22:12:59-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=126 ===
+=== try=30 2026-10-17T22:13:19-0300 S5=NONE r99=NONE recent_knowledge=NONE seats=126 ===
+=== try=31 2026-10-17T22:21:57-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=131 ===
+=== try=32 2026-10-17T22:22:17-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=131 ===
+=== try=33 2026-10-17T22:22:37-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=131 ===
+=== try=34 2026-10-17T22:22:57-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=133 ===
+=== try=35 2026-10-17T22:23:17-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=133 ===
+=== try=36 2026-10-17T22:23:37-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=133 ===
+=== try=37 2026-10-17T22:23:57-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=133 ===
+=== try=38 2026-10-17T22:24:17-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=133 ===
+=== try=39 2026-10-17T22:24:37-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=134 ===
+=== try=40 2026-10-17T22:24:57-0300 S5ish=NONE r99=NONE notes=ABSENT Sreports=['S3-fixture-author.md', 'S4-fixture-docs.md'] seats=134 ===

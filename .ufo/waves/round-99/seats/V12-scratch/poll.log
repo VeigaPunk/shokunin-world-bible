@@ -1,0 +1,12 @@
+poll-start 22:01:11 r98_map=c1099d0ee9eece24 r98_readme=32efc78f70e6de4f
+try=1 t=22:01:11 map=same-as-r98 readme=same-as-r98 reports=none
+try=2 t=22:01:31 map=same-as-r98 readme=same-as-r98 reports=none
+try=3 t=22:01:51 map=same-as-r98 readme=same-as-r98 reports=none
+try=4 t=22:02:11 map=same-as-r98 readme=same-as-r98 reports=none
+try=5 t=22:02:31 map=same-as-r98 readme=same-as-r98 reports=none
+try=6 t=22:02:51 map=same-as-r98 readme=same-as-r98 reports=none
+try=7 t=22:03:11 map=moved readme=moved reports=none
+try=8 t=22:03:31 map=moved readme=moved reports=none
+try=9 t=22:03:51 map=moved readme=moved reports=none
+try=10 t=22:04:11 map=moved readme=moved reports=S4-fixture-docs.md
+READY try=10 t=22:04:11

@@ -1,0 +1,4 @@
+python3
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V58-scratch/sampler.py
+20
+800

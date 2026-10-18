@@ -1,0 +1,20 @@
+[
+  {
+    "id": "veil-verse",
+    "title": "Chalk Stair Verse",
+    "kind": "fictional poem",
+    "reliability_note": "Newly authored fictional verse; its metaphor is not an objective record or creation account."
+  },
+  {
+    "id": "paired-clock",
+    "title": "Ninth Bell Paired Clock Register",
+    "kind": "fictional register",
+    "reliability_note": "Newly authored fictional register; it records two entries at one tick but does not establish a wider chronology."
+  },
+  {
+    "id": "crossing-minute",
+    "title": "Chalk Stair Crossing Minute",
+    "kind": "fictional minute",
+    "reliability_note": "Newly authored fictional minute; it records one bounded crossing decision and agreement, not evidence of continuing performance, a standing alliance, or an external historical fact."
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "measured_commit": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+  "cwd": "lore-shokunin standalone repository root",
+  "command_template": "python3 corpus/fixtures/check_bible.py corpus/live/runs/round-85/probe-inputs/{case}",
+  "runs": [
+    {"case":"r85-control","returncode":0,"stdout":"CLEAN: schema, citations, relations, timeline; 0 violations\n","stderr":""},
+    {"case":"r85-unique-break-control","returncode":1,"stdout":"VIOLATION: entities[3].provenance[2]: provenance chain break; expected from_holder 'vault', got 'harbor'\n1 violation(s); no canon changed\n","stderr":""},
+    {"case":"r85-masked-ambiguous","returncode":1,"stdout":"VIOLATION: entities[5].id: duplicate entities id 'vault'\n1 violation(s); no canon changed\n","stderr":""},
+    {"case":"r85-isolated-ambiguous","returncode":1,"stdout":"VIOLATION: entities[5].id: duplicate entities id 'vault'\n1 violation(s); no canon changed\n","stderr":""},
+    {"case":"r85-harbor-repro","returncode":1,"stdout":"VIOLATION: entities[4].id: duplicate entities id 'harbor'\nVIOLATION: timeline[0].place_id: ambiguous place entity 'harbor'\n2 violation(s); no canon changed\n","stderr":""}
+  ]
+}

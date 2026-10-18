@@ -1,0 +1,2 @@
+?? .ufo/waves/round-99/seats/V69-scratch/before/baseline-root/corpus/tools/dependency-freeze-contract.json
+?? .ufo/waves/round-99/seats/V69-scratch/before/baseline-root/corpus/tools/dependency_freeze.py

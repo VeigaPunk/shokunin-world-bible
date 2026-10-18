@@ -3287,3 +3287,61 @@ that writes `~/.hermes/auth.json`), after which r99 re-dispatches on the
 same declaration; a re-dispatch will use a fresh receipt. Host state note:
 the failed dispatch's seat records exist only as error entries in the
 AgentSwarm result — no reports landed under `.ufo/waves/round-99/`.
+
+## Round 99 — provider repair, corrections, and closure (ADMITTED; 2026-10-17)
+
+**Provider repair record** (unblocking the blocked attempt above): the xAI
+OAuth credential pool `~/.hermes/auth.json` was missing; the lane repaired
+it from the operator's own live `~/.grok/auth.json` session (same OAuth
+client_id), and the config alias `xai-oauth/grok-4.7-fast` was repointed at
+the existing wire model `grok-4.7` (the `-fast` variant does not exist for
+this team upstream — recorded deviation, effort stays xhigh). The shim then
+minted tokens and r99 re-dispatched as one 128-seat AgentSwarm on
+`xai-oauth/grok-4.7-fast` (dispatch `tool_BnmgPDuFbqzhd6Iuc99nDFDi`,
+returned `completed: 128`; 128/128 reports).
+
+**Append-only corrections** (adjudication AC-1/AC-2/AC-3, qualified in
+place at README:310 and SKILL.md:100): (1) "any edit → exit 2
+`DIGEST-MISMATCH`" is qualified — semantic inventory findings
+(REDUCTION/ADDITION/ENDPOINT) decide first and exit 1 without a
+DIGEST-MISMATCH; the named-file finding requires a clean inventory. (2)
+"invisible to every gate" is scoped: removing a MAPPED VERBATIM ANCHOR was
+already `support_check` exit 1 before r99; the genuinely invisible class is
+non-anchor prose edits and coherent excerpt+anchor replacements (now caught
+by the ten-file pins). (3) The precedence prose does not describe a
+combined `fixture --freeze fixture` invocation (that exits 2
+INVALID-ARGUMENTS only).
+
+**Closure.** V34 all-axis adjudication: **ADMIT (bounded) with nine
+conditions**, all discharged here: (AC-1…AC-3) the corrections above;
+(AC-4) `r99-window-lapse` unpinned — recorded, the tick-15 edge is covered
+lexically (map 21/21) and structurally (check_bible), freeze coverage is on
+the pinned r98 twins; pin r99 is an r100 candidate; (AC-5) r88's
+`symbolism-clause-map.md` is outside the declared ten and unpinned — named
+bound; (AC-6) lapse-record wording bounds recorded (the "At the Chalk
+Stair" locative and "per the minute's terms" gloss are description/README
+wording, not quoted note clauses; lines 70–73 are impersonal framing, line
+74 is the first-person denial — no resolution/blame/reconciliation is
+positively asserted anywhere); (AC-7) parent-tree strays removed (V69
+0-byte copies, V73 wrong-cwd stderr) and four 100–300 MB seat archives
+dropped from the wave tree; (AC-8) closure doc pass (fixtures README
+Round-99 + census 173/39/134/421, corpus README bullet, C9 row 8,
+SCORECARD); (AC-9) receipt refreshed after all landings with real agent IDs.
+
+Per-axis verdicts: calibration improved (bounded — schema-2 ten-file pins,
+18/18 self-test with the markdown_tamper case, non-anchor prose edits now
+named, chain 6/6 re-frozen); depth improved (bounded — component 1: the
+lapse beat 6/1/7→6/1/8, 21/21 obligations, census 173, unresolved
+throughout; component 2: the blind-spot table replayed row-by-row with
+matching digests); coverage unchanged (not harmed — the chain is still the
+declared six; ten-file pinning is the calibration move); operability PASS
+(bounded); freshness improved (bounded — dated supersessions replaced the
+carried "five JSON tables / prose half open / 17 cases" sentences);
+adjacency not harmed (bounded — charter byte-identical; the parent strays
+were out-of-lane scratch, cleaned; eleven standing FAILs recorded, none
+re-rolled). Measurements re-run at closure on the delivered revision:
+self-test 18/18; chain 6/6; r99 CLEAN + 21/21 + support 23/23 rows; map
+self-test 25/25; boundary CERTIFIED; C9 pair green; census 173/39/134/421;
+checker pin `ff9fd2aa…` reproduced. SHONEN unchanged (four `[~]`, no `[x]`).
+No promotion, no push. r100 (32-seat `openai-codex/gpt-6.1-sol` max) may
+start; then r101–r102 (16–32-seat zai glm-5.3-flash each).

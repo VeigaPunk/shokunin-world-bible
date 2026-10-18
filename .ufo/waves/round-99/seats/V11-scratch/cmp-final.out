@@ -1,0 +1,33 @@
+CMP_AT 2026-10-17 22:04:55 -0300
+$ for f in contradictions.json entities.json inspiration-note.md relations.json source-excerpt.md; do cmp -s corpus/fixtures/r98-clerk-filing/$f corpus/fixtures/r99-window-lapse/$f && echo IDENTICAL $f || echo DIFFERS $f; done
+IDENTICAL contradictions.json
+IDENTICAL entities.json
+IDENTICAL inspiration-note.md
+IDENTICAL relations.json
+IDENTICAL source-excerpt.md
+$ cmp against git show 4265df5 for the five pure copies
+IDENTICAL-to-4265df5 contradictions.json
+IDENTICAL-to-4265df5 entities.json
+IDENTICAL-to-4265df5 inspiration-note.md
+IDENTICAL-to-4265df5 relations.json
+IDENTICAL-to-4265df5 source-excerpt.md
+$ cmp -n prefix of extended JSON (LIMIT = len(r98)-3, expect rc 0; whole-file cmp expect differ)
+-- sources.json len98=2725 limit=2722
+cmp -n 2722 rc=0
+whole cmp rc=1
+-- timeline.json len98=2552 limit=2549
+cmp -n 2549 rc=0
+whole cmp rc=1
+$ fictional-excerpts byte-prefix via cmp -n $(stat r98)
+len98=4187
+cmp -n rc=0
+whole cmp rc=1
+$ git diff --stat 4265df5 -- corpus/fixtures/r98-clerk-filing
+diff_stat_rc=0
+$ git diff --exit-code 4265df5 -- corpus/fixtures/r98-clerk-filing
+diff_exit=0
+$ git status --porcelain -- corpus/fixtures/r98-clerk-filing
+(empty above means untouched)
+$ python3 corpus/fixtures/check_bible.py corpus/fixtures/r99-window-lapse
+CLEAN: schema, citations, relations, timeline; 0 violations
+bible_exit=0

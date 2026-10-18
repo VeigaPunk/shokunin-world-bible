@@ -1,0 +1,155 @@
+BATTERY-START 2026-10-17 22:32:37 -0300
+=== frozen hashes ===
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+schema 2 payload 2 revision 337f0fa52b02626b7687eedbb2d99fab30446fe4
+pinned_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+PIN r88-m3-maya-cluster n=10 schema=2 digest=acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+  live-vs-pin MATCH
+PIN r94-paired-crossing n=10 schema=2 digest=048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+  live-vs-pin MATCH
+PIN r95-crossing-aftermath n=10 schema=2 digest=97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+  live-vs-pin MATCH
+PIN r96-crossing-response n=10 schema=2 digest=43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+  live-vs-pin MATCH
+PIN r97-crossing-acknowledgment n=10 schema=2 digest=a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+  live-vs-pin MATCH
+PIN r98-clerk-filing n=10 schema=2 digest=5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+  live-vs-pin MATCH
+self_test ['addition_edge_phantom', 'clean', 'digest_tamper', 'event_endpoint_change', 'event_removed', 'invalid_arguments', 'malformed_json', 'markdown_tamper', 'missing_fixture', 'missing_timeline', 'path_mismatch', 'reduction_edge_drop', 'relation_added', 'relation_endpoint_flip', 'relation_removed', 'scope_refused', 'self_test_mismatch', 'unpinned_fixture']
+markdown_tamper {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}
+=== git status before ===
+4 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/git-before.txt
+=== chain verify ===
+r88-m3-maya-cluster EXIT=0
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+RESULT PASS
+r94-paired-crossing EXIT=0
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+RESULT PASS
+r95-crossing-aftermath EXIT=0
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+RESULT PASS
+r96-crossing-response EXIT=0
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+RESULT PASS
+r97-crossing-acknowledgment EXIT=0
+FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1
+DIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+RESULT PASS
+r98-clerk-filing EXIT=0
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+RESULT PASS
+=== r99 verify (not claimed pinned) ===
+r99 EXIT=2
+FINDING UNPINNED-FIXTURE: no pin for 'r99-window-lapse' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'])
+RESULT ERROR
+=== self-test ===
+SELFTEST EXIT=0
+CASE clean: exit=0 expected=0 findings=[] ok
+CASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+CASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok
+CASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+CASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+SELF-TEST 18/18
+RESULT PASS
+=== exit contract live (no writes expected) ===
+noarg EXIT=2
+FINDING INVALID-ARGUMENTS: expected a fixture directory, --freeze DIR, or --self-test
+RESULT ERROR
+help EXIT=0
+misuse EXIT=2
+FINDING INVALID-ARGUMENTS: --self-test cannot be combined with a fixture or --freeze
+RESULT ERROR
+missing-pinned-name EXIT=2
+FINDING FIXTURE-MISSING: fixture directory not found: corpus/fixtures/no-such-dir/r98-clerk-filing
+RESULT ERROR
+scope EXIT=2
+FINDING SCOPE-REFUSED: --freeze refuses /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/not-a-fixture (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/not-a-fixture); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+contract-after-scope 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628
+=== mirror probes ===
+old_tool 03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b
+new_tool 6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067
+old_contract 153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947
+new_contract 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628
+BEFORE-README-WORDING-REMOVAL exit 0
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+AFTER-README-WORDING-REMOVAL exit 2
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 76fc144dae86cd6ea7dc58367f7fd75ea38a9d2752c8359ffe7a55693c4e548d != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> 4c814dfb94364100f2c8fac3e63ba1b7df341dbb08b6d3623ffcf22e4039cc3d); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+BEFORE-EXCERPT-SCOPE-WORDING exit 0
+['FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1', 'DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133', 'RESULT PASS']
+AFTER-EXCERPT-SCOPE-WORDING exit 2
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest e00a6c444aadaa54640c54f94e893e17632db875d5d2b77835cff009689566af != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> f083002dfb5a882dbc1a3ebac4e0f459a42793f9096a1b0fc8574d6bd257f7aa); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+OTHER-GATE check_bible.py exit 0 CLEAN: schema, citations, relations, timeline; 0 violations
+OTHER-GATE support_check.py exit 0 RESULT PASS
+OTHER-GATE map_obligations.py exit 0 RESULT PASS
+BEFORE-ANCHOR-REGEN exit 0
+['DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133', 'RESULT PASS']
+BEFORE-ANCHOR-REGEN support_check exit 0 RESULT PASS
+AFTER-ANCHOR-REGEN exit 2
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 1f73326f38eb20f75d6c2541df5ec67ae20e157e5b4c1053dc10464ae88d67f2 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> fc4633b90098539deb32566660ad7a6a4bd012595bc7985a7f78b9fd6d43e398), fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+AFTER-ANCHOR-REGEN support_check exit 0 RESULT PASS
+AFTER-ANCHOR-REGEN map 0 ['OBLIGATIONS raw=20 mapped=20', 'RESULT PASS']
+TAMPER entities.json exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest ad2e89633984b442ec70ce9c9604444c84992be0a1d59920089a17062e8ed33f != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457e41d31d3c78cdde591e532dc04083561d223705cb5d334d945885624242c3); fixture bytes changed outside the frozen inventory
+TAMPER relations.json exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest a7faed8bc46bd23dbd3d6ca409fa02dd0e614e9ee9bcaa7e55e15a589b740f58 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: relations.json (sha256 c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9 -> 811144128783ee753fa02b1612d4d560318e49685dc68360fd8766f130a9b086); fixture bytes changed outside the frozen inventory
+TAMPER timeline.json exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest d8079cd47135901304de8cccd75a347ae22297defc91dbbb9d43b759af149567 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: timeline.json (sha256 eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af -> d31f71fa5766e18980a56fe9001cf3ba6362a7f6bf4be7cc4475250221dcb566); fixture bytes changed outside the frozen inventory
+TAMPER sources.json exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest 8c6970fbb9d03fcf3ad230b1e551c9e2c0b334651efeeaa7e124c89681e46535 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: sources.json (sha256 32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3 -> dbc17d2fd3b0576035a5a79186b8de35a51f168b74466fbce30072ef6e34cda2); fixture bytes changed outside the frozen inventory
+TAMPER contradictions.json exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest ab3d05303db471923a8a2bdb7fd66223fd9e4356775ec6057f6dd4cf61780272 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: contradictions.json (sha256 37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 -> 5239a7754876b9a70871c45e41f1bd9abbd91ed2de67af926c1cfcc9c9377d51); fixture bytes changed outside the frozen inventory
+TAMPER README.md exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest 3322eda76a6885f76f251bb35651ada8dce3f853f344d653c43acf6843416f70 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> d2a1d6596c8e875bd54fd17d6695d7e90945867a724bc116daada2f653c48ffa); fixture bytes changed outside the frozen inventory
+TAMPER claim-excerpt-map.md exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest 466c8f7b77cf44090e9b5c81569612a7df16dd0696f81666d23e838dca8d5eb0 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> 76d3db9831b7d7e66f5a33584a62417d394ccb8a736f64461c4c41d83be375c5); fixture bytes changed outside the frozen inventory
+TAMPER fictional-excerpts.md exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest 3e992626a155faba83490f4810d2aa0b13bd1e51e2153e98e1e7af86c925beab != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> a6bff890dd8821e255896ccdf63426c725a2951a8a9111deed067339dd21ad2f); fixture bytes changed outside the frozen inventory
+TAMPER inspiration-note.md exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest 02fc00a950188f1433e2302946b41183c42b95df27dbe25730a579dfa2ffa20c != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> a1be0d5b00e0c695acbebbdee55d1fc00e8956e53f71ec8f6fde1157c055b3af); fixture bytes changed outside the frozen inventory
+TAMPER source-excerpt.md exit=2 names_file=True FINDING DIGEST-MISMATCH: content digest b413f00ea52299788617c551091e5fe6514935be43c6cf32967cf629ce22541a != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 5426ef14362d94f3388ec24a3d29973add977e369a368271a3ae50c4f0dfac3e); fixture bytes changed outside the frozen inventory
+EDGE-DROP exit 1
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']
+RESULT FAIL
+MISSING-MD exit 2
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 4683de06d5971b63fcad26a242159473bf5558b69b13243d9a3975f0330c6253 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> None); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+FOREIGN exit 2
+FINDING PATH-MISMATCH: pin r98-clerk-filing names corpus/fixtures/r98-clerk-filing (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/mirrors/foreign/corpus/fixtures/r98-clerk-filing); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/mirrors/foreign/foreign/r98-clerk-filing
+RESULT ERROR
+MIRRORS-DONE
+=== git status after ===
+GIT-STATUS-DIFF
+--- /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/git-before.txt	2026-10-17 22:32:37.917279110 -0300
++++ /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V31-scratch/git-after.txt	2026-10-17 22:32:40.339270714 -0300
+@@ -1,4 +1,5 @@
+  M corpus/tools/dependency-freeze-contract.json
+  M corpus/tools/dependency_freeze.py
++?? .ufo/waves/round-98/seats/V58-scratch/original-run-resume-note.md
+ ?? .ufo/waves/round-99/
+ ?? corpus/fixtures/r99-window-lapse/
+=== hashes after ===
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+BATTERY-END 2026-10-17 22:32:40 -0300

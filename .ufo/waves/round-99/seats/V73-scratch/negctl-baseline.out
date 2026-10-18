@@ -1,0 +1,13 @@
+FAIL title matches seed modulo <name>
+PASS seed frame (blank + manifest line)
+PASS four boxes, seed order and text
+PASS marks confined to box character
+PASS no [x] promotion claim present
+PASS at most one evidence line per box
+PASS both [~] boxes carry their required pointer
+PASS box2 evidence names the LOG.md entry
+PASS box2 evidence names reports/round-1/baseline-probes.json
+PASS box4 evidence cites PROVINCE.md:3-11 within range
+SHA256 SHONEN.md 03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1
+SHA256 SKILL.md 22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5
+SHA256 PROVINCE.md 94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa

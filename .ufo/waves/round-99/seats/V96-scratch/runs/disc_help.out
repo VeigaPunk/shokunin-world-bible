@@ -1,0 +1,9 @@
+usage: discriminate_check.py [-h] [--checker {delivered,e97613c}]
+                             [--repo-root REPO_ROOT]
+
+Discriminate the r90 checker repair using the r91 fixture pair
+
+options:
+  -h, --help            show this help message and exit
+  --checker {delivered,e97613c}
+  --repo-root REPO_ROOT

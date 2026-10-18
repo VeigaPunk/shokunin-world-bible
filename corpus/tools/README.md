@@ -286,3 +286,76 @@ python3 corpus/tools/dependency_freeze.py --self-test   # SELF-TEST 17/17 / RESU
 #### Dated correction (2026-10-17, round-98 closure, adjudication AC-2)
 
 Two sentence classes in the historical addenda above are factually stale on the delivered revision and are superseded as classes (prior text kept as delivered history): (1) every "the self-test scratch … is not gitignored" sentence (r94–r97 addenda) — the r97 closure added `*-self-test-*/` to `.gitignore`, so both tools' repo-root self-test scratch has been gitignored since then (`git check-ignore -v` confirms); the BR-05 bound survives only as "scratch is created at the repository root", not as a gitignore gap. (2) Any prior sentence reading that a round's change "lists only two files" is corrected to the measured counts (the r98 round modified seven tracked files: `dependency_freeze.py`, `dependency-freeze-contract.json`, this README, the r95 map, and the three knowledge notes; see V20-scope-creep's bucket table).
+
+### Round-99 addendum: full-file pin payload, Markdown-tamper detectability, 18-case self-test, chain re-frozen 6/6 (2026-10-17)
+
+This addendum extends the r98 instructions above; every earlier sentence remains as delivered history. The r94 BR-05 residual remains only as "scratch is created at the repository root" (the r98 dated correction on gitignore still stands).
+
+#### Superseded payload sentences (prior text kept as delivered history)
+
+- The Round-98 addendum above reads "The rest of that supersession still stands: the pin payload covers the five JSON tables only (fixture Markdown is still not pinned) and BR-01's markdown/prose half remains open." Superseded 2026-10-17 (round 99): the pin payload covers all ten declared files per fixture, and BR-01's prose half is edit-detectable, not semantics-provable.
+- The Round-97 supersession above reads "the pin payload covers the five JSON tables only — fixture Markdown is not pinned … BR-01's markdown/prose half remains open". That bound was still current at r98 and is superseded 2026-10-17 (round 99) by the same close.
+- The Round-98 sentence "The persisted self-test carries 17 cases" and the command comment `# SELF-TEST 17/17 / RESULT PASS, exit 0` are superseded 2026-10-17 (round 99): the persisted self-test carries 18 cases. The same command now prints `SELF-TEST 18/18`.
+
+#### Full-file pin payload (schema versioned)
+
+`corpus/tools/dependency-freeze-contract.json` is `schema_version` 2 and `payload_schema_version` 2. Each of the six chain pins carries `payload_schema_version` 2 and a sha256 for every declared file:
+
+`entities.json`, `relations.json`, `timeline.json`, `sources.json`, `contradictions.json`, `README.md`, `claim-excerpt-map.md`, `fictional-excerpts.md`, `inspiration-note.md`, `source-excerpt.md`.
+
+The five JSON-table digests are unchanged from the r98 pins (`git show 4265df5:corpus/tools/dependency-freeze-contract.json`); the content digest moved because the payload now includes the five Markdown files. The delivered pins record revision `337f0fa52b02626b7687eedbb2d99fab30446fe4`, written by the guarded `--freeze` (scope still `corpus/fixtures/**`; a target outside that scope exits 2 `SCOPE-REFUSED` with no write). `--freeze` rewrites the contract and is integration-time only — do not re-run it against the delivered contract to re-check. A pin whose `payload_schema_version` is not 2, or whose `files` object does not digest all ten, exits 2 `CONTRACT-INVALID`. `--freeze` also refuses when a declared pinned file is absent (`FILE-MISSING`).
+
+#### Markdown-tamper detectability
+
+BR-01's prose half is now "any prose edit is detectable", not "dependency semantics provable". When the semantic inventory is clean, any edit to any of the ten pinned files exits 2 `DIGEST-MISMATCH` naming that file; semantic findings (REDUCTION/ADDITION/ENDPOINT) still decide first and exit 1 without a DIGEST-MISMATCH (r99 AC-1 correction). The gate reports the byte change; it does not judge whether the remaining prose still states the dependency.
+
+Before, on a scratch tree holding `git show 4265df5:corpus/tools/dependency_freeze.py` and the matching contract, with a copy of `corpus/fixtures/r95-crossing-aftermath`: removing the first `depends on` from `fictional-excerpts.md` still printed `RESULT PASS` and exited 0 (digest `d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9`, unchanged). Command, from that scratch root:
+
+```sh
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
+```
+
+After, the same command in a scratch tree holding the delivered tool and contract, after the same removal:
+
+```
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 892d17d3a9a91aab99f1da6aaac66e3854d286dcba9a2178e3a0b8b034d011b8 != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> 4b13096081476ac2d92694ee26830d981c5095e786f06b64d67b34f9d4ce37fd); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+```
+
+exit 2. A trailing newline appended to each of the ten pinned files, each in its own scratch copy of r95, likewise exited 2 `DIGEST-MISMATCH` naming that file. The 18th persisted case, `markdown_tamper`, pins this class (`exit: 2`, finding `DIGEST-MISMATCH`, `names_file: fictional-excerpts.md`): the isolated case appends a newline to `fictional-excerpts.md`.
+
+That removal is not invisible to every gate. On the same tampered scratch copy, from the repository root:
+
+```sh
+python3 corpus/tools/support_check.py .ufo/waves/round-99/seats/S2-scratch/before-r95/corpus/fixtures/r95-crossing-aftermath
+python3 corpus/tools/map_obligations.py .ufo/waves/round-99/seats/S2-scratch/before-r95/corpus/fixtures/r95-crossing-aftermath
+python3 corpus/fixtures/check_bible.py .ufo/waves/round-99/seats/S2-scratch/before-r95/corpus/fixtures/r95-crossing-aftermath
+```
+
+`support_check` exited 1 (`SOURCE-SUPPORT 14/15`; `FAIL: J14: source-support anchor missing`). `map_obligations` exited 0 (`OBLIGATIONS raw=15 mapped=15`). `check_bible` exited 0 (`CLEAN: schema, citations, relations, timeline; 0 violations`). The r98 freeze gate did not see the edit; the delivered freeze gate names the file. Naming the file is not a judgment that the remaining prose still states the dependency.
+
+Bound: the declared ten are the pin set. `corpus/fixtures/r88-m3-maya-cluster/symbolism-clause-map.md` is outside that set; appending a marker to it on a scratch copy still printed `RESULT PASS` and exited 0 (digest `acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae`).
+
+#### Chain re-frozen 6/6
+
+```sh
+for f in r88-m3-maya-cluster r94-paired-crossing r95-crossing-aftermath \
+         r96-crossing-response r97-crossing-acknowledgment r98-clerk-filing; do
+  python3 corpus/tools/dependency_freeze.py "corpus/fixtures/$f"; echo "$f exit=$?"
+done
+```
+
+All six print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0. Digests on the delivered revision: r88 `acf677a7085be3f6…`, r94 `048b8ff39e4a5232…`, r95 `97cffd7bfe6e0c92…`, r96 `43911900923c110b…`, r97 `a28b9ea0d65ec355…`, r98 `5ecf84e19121ea12…`.
+
+#### Persisted self-test: 18 cases
+
+```sh
+python3 corpus/tools/dependency_freeze.py --self-test   # SELF-TEST 18/18 / RESULT PASS, exit 0
+```
+
+The run printed 18 `CASE … ok` lines, including the 17 prior case ids, then `SELF-TEST 18/18` and `RESULT PASS`, exit 0. `SELF-TEST-MISMATCH` still exits 2.
+
+#### Unchanged
+
+The 0/1/2 exit contract, the clean-run `FREEZE` / `DIGEST` / `RESULT` receipt surface, path binding (`PATH-MISMATCH`), and the `--freeze` scope guard are unchanged. Semantic inventory findings still decide first (exit 1). This addendum does not change `map_obligations.py`, `support_check.py`, or `boundary_doc_check.py`.

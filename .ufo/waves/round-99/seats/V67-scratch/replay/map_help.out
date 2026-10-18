@@ -1,0 +1,14 @@
+usage: map_obligations.py [-h] [--map MAP] [--frozen FROZEN] [--self-test]
+                          [cluster]
+
+Compare raw source-attributed JSON obligations with a canonical map
+
+positional arguments:
+  cluster          cluster directory
+
+options:
+  -h, --help       show this help message and exit
+  --map MAP        map path within the cluster
+  --frozen FROZEN  verify input SHA-256 pins and replay expected.json from
+                   this directory
+  --self-test      exercise isolated CLI cases

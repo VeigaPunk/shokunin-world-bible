@@ -1,0 +1,77 @@
+r98=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r98-clerk-filing r99=/home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse
+r99 exists=True files=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+OK byte-identical contradictions.json | r98=37517e5f3dc66819 r99=37517e5f3dc66819
+OK byte-identical entities.json | r98=db2d8e5d3866009b r99=db2d8e5d3866009b
+OK byte-identical inspiration-note.md | r98=58f5390e5928ebad r99=58f5390e5928ebad
+OK byte-identical relations.json | r98=c279254bc7de0636 r99=c279254bc7de0636
+OK byte-identical source-excerpt.md | r98=b5edc2fd3c2e3d4f r99=b5edc2fd3c2e3d4f
+OK entities 6->6 | 6->6
+OK relations 1 | 1|1
+OK timeline 7->8 | 7->8
+OK sources 7->8 | 7->8
+OK contradictions [] | []|[]
+OK entities parsed-equal
+OK relations parsed-equal
+OK sources[:7] parsed-equal
+OK timeline[:7] parsed-equal
+OK claims 6 | 6|6
+OK clerk-lapse-note id/title/kind | 'clerk-lapse-note' "Maren's Chalk Stair Lapse Note" 'fictional first-person note'
+OK reliability note contains 'crossing-window named in the original minute has closed'
+OK reliability note contains 'agreement was unfulfilled'
+OK reliability note contains 'no claim was lodged'
+OK reliability note contains 'historical open entry'
+OK reliability note contains 'no resolution'
+OK reliability note contains 'no blame'
+OK reliability note contains 'no reconciliation'
+OK event id | 'clerk-lapse-recorded'
+OK tick 15 | 15
+OK actor clerk-maren | 'clerk-maren'
+OK place chalk-stair | 'chalk-stair'
+OK depends_on | ['clerk-filing-open']
+OK source_id | 'clerk-lapse-note'
+OK event description contains 'crossing-window named in the original minute has closed'
+OK event description contains 'agreement was unfulfilled'
+OK event description contains 'no claim was lodged'
+OK event description contains 'historical open entry'
+OK ticks nondecreasing | [9, 9, 10, 11, 12, 13, 14, 15]
+OK unique event ids | 8/8
+OK edges strictly earlier | n=7 edges=[('paired-crossing-decision', 'aru-ninth-bell', True, True), ('paired-crossing-decision', 'evin-ninth-bell', True, True), ('aftermath-missing-evin', 'paired-crossing-decision', True, True), ('response-evin-salt-court', 'aftermath-missing-evin', True, True), ('acknowledgment-aru-records', 'response-evin-salt-court', True, True), ('clerk-filing-open', 'acknowledgment-aru-records', True, True), ('clerk-lapse-recorded', 'clerk-filing-open', True, True)]
+OK r98 excerpts is byte-prefix of r99 | r98=4187B r99=5114B delta=927B
+OK excerpt prefix form recorded
+OK obligation arithmetic == 21 | 6 fa + 6 claims + 1 rel + 8 ev = 21
+MAP sha=d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d
+MAP bytes=17119 lines=70
+MAP decl-ish:
+  Scope: all 21 source-attributed JSON obligations in this continuation (six first-appearance pointers, six entity claims, one relation, and eight timeline events), plus two separately labeled editorial comparisons. JSON pointers are relative to this fixture. `source_id` values remain cluster-local in JSON and are qualified in the map as `(cluster path, source ID)` pairs.
+  **Expected inventory:** 21 JSON facts; 2 editorial rows; 23 total mapped rows; 19 distinct excerpt anchors.
+  | `source-excerpt.md:5` | Lewis Spence, *The Myths of Mexico & Peru* (1913), English prose | `verbatim` | Delivered external comparison only; not an in-world source or support for JSON facts. The underlying K'iche primary text is not reproduced (`external-only`). |
+  ## JSON facts (21 canonical pointers)
+  | ID | JSON fact pointer and fields | In-world source ID | Path-qualified source namespace | Excerpt path | Line span | R9 delivery mode | Exact anchor |
+  ## Editorial rows (2 bounded Spence comparisons; not JSON facts)
+  J15's anchor is the tick-11 waiting sentence (line 26); its declared span 22-31 is exactly the inherited aftermath section, whose remaining quoted lines carry the non-arrival (`Evin did not come.`, line 27), the crossing-only bound, and the explicit no-other-duty/no-breach assertion (lines 28-29). The event records one non-arrival on one occasion: it asserts no breach, no continuing duty, and no obligation beyond this crossing, and the record supplies no other duty. The event's `entity_id` is Aru because the schema has one actor slot; its description names Evin's non-arrival, so the field does not exclude the second participant.
+  J16's anchor is the tick-12 response sentence (line 37); its declared span 33-42 is exactly the appended response section, whose remaining quoted lines carry the no-accusation assertion (`I make no accusation against Aru.`, line 38), the no-winner selection (`I select no winner between our two accounts.`, line 39), and the unresolved-status statement (`Both accounts stand unresolved.`, line 40). The event records one second account of the same occasion: Evin reports being at Salt Court through the same agreed bell, while Aru's inherited report placed himself at the Chalk Stair. The two accounts name different actors at different places, so no contradiction is asserted and `contradictions.json` remains empty; neither account is selected as winner, no accusation is made, and the record asserts no breach, no continuing duty, and no obligation beyond this crossing. The event's `entity_id` is Evin because the schema has one actor slot; its description names Aru's account, so the field does not exclude the other participant.
+  J17's anchor is the tick-13 receipt sentence (line 48); its declared span 44-53 is exactly the appended acknowledgment section, whose remaining quoted lines carry the retained account (`I hold to my own account; both accounts stand unresolved.`, line 49), the no-accusation/no-winner assertion (`I make no accusation against Evin, and I select no winner between us.`, line 50), and the no-reconciliation/no-new-duty statement (`I assert no reconciliation, no new duty, and no obligation beyond this crossing.`, line 51). The event records one acknowledgment of receipt: Aru reports receiving Evin's response while holding to his own account. It asserts no accusation and no reconciliation and selects no winner between the accounts; the two first-person accounts remain unresolved, and the record asserts no new duty, no continuing obligation, and no obligation beyond this crossing. The event's `entity_id` is Aru because the schema has one actor slot; its description names Evin's response, so the field does not exclude the other participant.
+  J20's anchor is the tick-14 filing sentence (line 59); its declared span 55-64 is exactly the appended clerk-filing section, whose remaining quoted lines carry the self-naming and OPEN record (line 60), the no-finding assertion (`I assert no finding.`, line 61), and the no-verdict/no-reconciliation statement (`I reach no verdict and reconcile nothing.`, line 62). The event records one institutional filing: the clerk filed both pending accounts and recorded the matter OPEN. It asserts no finding, no verdict, no reconciliation, and no resolution; the two first-person accounts stand unresolved, and the record asserts no new duty, no continuing obligation, and no obligation beyond this crossing. The event's `entity_id` is `clerk-maren` because the schema has one actor slot; its description names both pending accounts, so the field does not exclude the two participants.
+  J21's anchor is the tick-15 window-closed sentence (line 70); its declared span 66-76 is exactly the appended lapse section, whose remaining quoted lines carry the unfulfilled agreement (`The agreement was unfulfilled.`, line 71), the no-claim statement (`No claim was lodged.`, line 72), the open-entry statement (`The matter stands as a historical open entry.`, line 73), and the no-resolution/no-blame/no-reconciliation statement (`I record no resolution, assign no blame, and reconcile nothing.`, line 74). The event records one lapse: the clerk records that the crossing-window named in the original minute has closed per that minute's terms, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation; the matter stays open, and the record creates no new duty and no obligation beyond this crossing. The event's `entity_id` is `clerk-maren` because the schema has one actor slot; its description names the closed window and the unfulfilled agreement, so the field does not exclude the two participants and assigns blame to neither.
+MAP row ids (23): ['J01', 'J02', 'J03', 'J04', 'J05', 'J06', 'J07', 'J08', 'J09', 'J10', 'J11', 'J12', 'J13', 'J14', 'J15', 'J16', 'J17', 'J18', 'J19', 'J20', 'J21', 'S01', 'S02']
+MAP J=21 S=2
+inherited rows in r98 map=22 present in r99=22 ns-only-diffs=20 other-diffs=0
+new map rows vs r98: ['J21']
+NEWROW J21 line=42 cells=['J21', '`timeline.json#/7` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`)', '`clerk-lapse-note`', '`r99-window-lapse:clerk-lapse-note`', '`fictional-excerpts.md`', '66-76', '`verbatim`', '`Tick 15: The crossing-window named in the original minute has closed.`']
+--- NEW EXCERPT TAIL ---
+
+## Round 99 lapse note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `clerk-lapse-note`, folio 9, lines 1–5. This section is appended after the preserved r98 text above; the inherited wording is unchanged.
+
+> Tick 15: The crossing-window named in the original minute has closed.
+> The agreement was unfulfilled.
+> No claim was lodged.
+> The matter stands as a historical open entry.
+> I record no resolution, assign no blame, and reconcile nothing.
+
+Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation, and it creates no new duty; the crossing-scoped agreement above is unchanged, and the matter stays open.
+
+--- END TAIL ---
+FAILS: none
+EXIT:0

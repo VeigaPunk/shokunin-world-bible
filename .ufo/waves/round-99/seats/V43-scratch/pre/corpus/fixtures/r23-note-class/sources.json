@@ -1,0 +1,20 @@
+[
+  {
+    "id": "archive-ledger",
+    "title": "Lantern Harbor Registry, year 12",
+    "kind": "fictional municipal record",
+    "reliability_note": "in-world fiction; records movements, not omniscient truth"
+  },
+  {
+    "id": "courier-log",
+    "title": "Courier Mira\u2019s Route Log, year 12",
+    "kind": "fictional personal log",
+    "reliability_note": "in-world fiction; first-person account"
+  },
+  {
+    "id": "sella-absence-note",
+    "title": "Sella\u2019s rack note, year 12",
+    "kind": "fictional private note",
+    "reliability_note": "Newly authored fictional text for this fixture, not recovered. Sella reports that she did not find a named strip on the rack. That report is not proof the strip was absent as fact, and not a claim about Mira\u2019s Blue Seal."
+  }
+]

@@ -1,0 +1,2 @@
+M	corpus/tools/dependency-freeze-contract.json
+M	corpus/tools/dependency_freeze.py

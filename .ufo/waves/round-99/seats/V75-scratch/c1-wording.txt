@@ -1,0 +1,5 @@
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 3e992626a155faba83490f4810d2aa0b13bd1e51e2153e98e1e7af86c925beab != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> a6bff890dd8821e255896ccdf63426c725a2951a8a9111deed067339dd21ad2f); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+
+EXIT 2

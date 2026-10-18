@@ -1,0 +1,191 @@
+===== OPEN 2026-10-17T22:04:21-03:00 =====
+===== HEAD =====
+337f0fa52b02626b7687eedbb2d99fab30446fe4
+337f0fa52b02626b7687eedbb2d99fab30446fe4 lore r99: record blocked dispatch attempt (xai-oauth credential pool missing) — zero increment
+===== STATUS =====
+ M corpus/tools/dependency-freeze-contract.json
+ M corpus/tools/dependency_freeze.py
+?? .ufo/waves/round-99/
+?? corpus/fixtures/r99-window-lapse/
+===== DIFF STAT 4265df5..HEAD =====
+ LOG.md       | 91 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ SCORECARD.md | 32 +++++++++++++++++++++
+ 2 files changed, 123 insertions(+)
+===== SHOW 111b9a3 =====
+111b9a3b92f1ab3d44bbcd33cb44630e4581473e lore r98: close round — SCORECARD admitted section
+
+ SCORECARD.md | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+===== SHOW 337f0fa =====
+337f0fa52b02626b7687eedbb2d99fab30446fe4 lore r99: record blocked dispatch attempt (xai-oauth credential pool missing) — zero increment
+
+ LOG.md | 91 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 91 insertions(+)
+===== SHONEN DIFFS =====
+diff HEAD SHONEN lines: 0
+diff 4265df5 SHONEN lines: 0
+diff 9c2eea3 SHONEN lines: 0
+9c2eea3b58a090f8820c7a723d2f6a22b46ae52b lore r93: close verified claims and correct historical admission records
+===== CHECKER =====
+PASS title matches seed modulo <name>
+PASS seed frame (blank + manifest line)
+PASS four boxes, seed order and text
+PASS marks confined to box character
+PASS no [x] promotion claim present
+PASS at most one evidence line per box
+PASS both [~] boxes carry their required pointer
+PASS box2 evidence names the LOG.md entry
+PASS box2 evidence names reports/round-1/baseline-probes.json
+PASS box4 evidence cites PROVINCE.md:3-11 within range
+SHA256 SHONEN.md 03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1
+SHA256 SKILL.md 22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5
+SHA256 PROVINCE.md 94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa
+CHECKER_EXIT=0
+===== MARK CENSUS =====
+tilde: 4
+xmark: 0
+empty: 0
+anybox: 4
+--- grep -n x ---
+NO_X_MATCH exit=1
+===== HASHES =====
+03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1  SHONEN.md
+22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5  SKILL.md
+94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa  PROVINCE.md
+cb1223e7028468ba90ee1727bca130ea2920ba429dd1c4f929f21a67eaae0403  .ufo/waves/round-93/deepseek/F29-shonen-format-check.py
+===== SEED DIFF =====
+SEED_LINES:
+425:# <name> — Promotion checklist
+426:
+427:Promotion to shokunin requires all of:
+428:
+429:- [ ] SKILL.md contains real decision tables, error patterns, checklists, cited sources
+430:- [ ] At least one end-to-end domain task executed and logged in LOG.md
+431:- [ ] Instructions executable by an agent without oral context
+432:- [ ] No cross-domain bleed (PROVINCE.md still accurate)
+frame match: True
+ frame seed: ['# lore-shokunin — Promotion checklist', '', 'Promotion to shokunin requires all of:', '']
+ frame live: ['# lore-shokunin — Promotion checklist', '', 'Promotion to shokunin requires all of:', '']
+box texts match (marks/evidence excluded): True
+ seed boxes: ['SKILL.md contains real decision tables, error patterns, checklists, cited sources', 'At least one end-to-end domain task executed and logged in LOG.md', 'Instructions executable by an agent without oral context', 'No cross-domain bleed (PROVINCE.md still accurate)']
+ live boxes: ['SKILL.md contains real decision tables, error patterns, checklists, cited sources', 'At least one end-to-end domain task executed and logged in LOG.md', 'Instructions executable by an agent without oral context', 'No cross-domain bleed (PROVINCE.md still accurate)']
+seed marks all '[ ]': True [' ', ' ', ' ', ' ']
+live marks: ['~', '~', '~', '~']
+===== POINTERS =====
+OK SKILL.md
+OK LOG.md
+OK reports/round-1/baseline-probes.json
+OK PROVINCE.md
+OK .ufo/waves/round-93/recovery/R08-skill-check.py
+OK .ufo/waves/round-93/deepseek/F21.md
+OK .ufo/waves/round-93/deepseek/F29.md
+OK .ufo/waves/round-93/deepseek/F01.md
+OK .ufo/waves/round-93/deepseek/F25-replay.py
+OK .ufo/waves/round-93/deepseek/F31.md
+OK .ufo/waves/round-93/deepseek/F14-postrepair-check.py
+OK .ufo/waves/round-93/deepseek/F03.md
+OK .ufo/waves/round-93/deepseek/F24.md
+pointers 13/13
+LOG entry count: 1
+PROVINCE lines: 11
+--- PROVINCE 3-11 ---
+3:Owns: fictional-world records — entities (characters, places, factions, items), relations, timeline events — with consistency verification and sourced inspiration.
+4:
+5:Sources (read-only):
+6:- in-world documents under corpus/ (world bible, once rounds produce it)
+7:- real-world reference works, cited with the art ledger's discipline: attribution, rights, and AI-training permission kept as distinct questions
+8:
+9:Refuses: claiming canon without an in-world citation; silently resolving contradictions; real-world rights claims (art-east-asian-design); game mechanics verification (game-dev-2d).
+10:
+11:Only writes this standalone lane repository (`lore-shokunin/`), its own fleet round report, and allowed append-only L0 questions. Sibling repositories and domain source trees remain read-only.
+===== ANCESTOR 8e5a68d =====
+commit
+ANCESTOR_yes
+8e5a68d lore r93: record DeepSeek review and resolve source precision findings
+===== BASELINE HASHES 4265df5 =====
+4265df5e86e4121bde4125b649b89bb1676676a5
+03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b  corpus/tools/dependency_freeze.py
+153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947  corpus/tools/dependency-freeze-contract.json
+294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207  corpus/tools/README.md
+22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5  SKILL.md
+03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1  SHONEN.md
+94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa  PROVINCE.md
+===== HEAD vs 4265df5 producer paths =====
+ LOG.md       | 91 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ SCORECARD.md | 32 +++++++++++++++++++++
+ 2 files changed, 123 insertions(+)
+===== CURRENT WT HASHES =====
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+73b28933f1488280827b78f0e18d8aeea06695e5d4cebbef8114b5b0639341c4  corpus/tools/dependency-freeze-contract.json
+294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207  corpus/tools/README.md
+22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5  SKILL.md
+1f2ec354259ba6a4bebffe01fc949ef4ec8cd6a45fff512c8129adc05ee5f99a  LOG.md
+9c67f5c83c82562b19e8b90df401c937a57423920167dd4f08473f95618a3c0e  SCORECARD.md
+===== WATCHDOG LINES =====
+    14	LANES="protocol aggregator kasegi kengaku kake kumitate kotoba kagi kama"
+    40	  [kama]="operability + freshness (local model serving/endpoints)"
+    41	)
+    42	
+    43	round_of() { cat "$SK/.ufo/state/$1.round" 2>/dev/null || echo 0; }
+    44	mission_of() { cat "$SK/.ufo/state/$1.mission" 2>/dev/null; }
+    45	report_of() { [ -f "$SK/.ufo/reports/round-$2/$1.md" ]; }
+    46	
+    47	lane_prompt() {
+    48	  local lane="$1" n="$2"
+    49	  mkdir -p "$SK/.ufo/reports/round-$n"
+    50	  cat > "$SK/.ufo/prompts/${lane}-round-$n.md" <<EOF
+===== L0 =====
+33:lore | round-1 | Reconcile the relaunched counter, numeric rubric and craft dispatch contract before the next launch? The explicit fleet round-1 follows inherited r85 at 5eb9451baff217c19d5786405f9b2aa500b7c1b7, with all three scorecard axes unmeasured rather than numerically ranked. This round uses the declared most-falsifiable calibration tie-break and a bounded five-gate holder-disclosure sample, not a domain-mastery score. Please specify a broader numeric rubric if numerical cross-axis ranking is intended. The required planner is outside the generic UFO same-shape swarm taxonomy; one native nine-role craft task batch uses unchanged operator role routing, whose actual buckets differ from MISSION prose. No counter, driver, routing or domain-source mutation; work continues. Integrator owns durability of this append-only question.
+44:kotodama | round-2 | Confirm that the handoff packet format at kotodama-shokunin/examples/handoff-packet.sample.yml is consumable for world-bible intake. The sample is a non-canon envelope submitted under kotodama-shokunin/corpus/knowledge/synthesis/worldbible-integration-contract.md §4 (required envelope fields and frozen digest manifest); canon standing must read `not canonized` per §6, and this filing implies no import, since under §8 steps 1-4 submission is never acceptance and a lore receipt is required before any canonized import (§9 versioning; §13 kotodama proposes, lore records). Please answer: (a) are any §4 fields missing or indeterminate for your intake; (b) does lore require a §1 same-revision read record (lane, contract_id, revision, file_sha256, reader, read_at, evidence_pointer) filed by each lane before a real packet is sent; (c) on which lore-side surface should the returned receipt be staged? Kotodama makes no canon decision and will not edit any lore or world-bible file.
+45:kotodama | round-8 | worldbible-integration-contract digest drift vs lore's open round-93 ratification — who owns the contract digest update, and does lore's r93 ratification subsume it? Evidence: kotodama-shokunin/reports/round-8/adjacency.md
+===== PROMPTS =====
+-rw-r--r-- 1 vgpnk vgpnk 3424 Oct 15 01:50 lore-round-1.md
+NO_ROUND99_PROMPT
+===== FLEET REPORTS =====
+ls: cannot access '/home/vgpnk/Projects/shokunin/.ufo/reports/round-99': No such file or directory
+drwxr-xr-x 1 vgpnk vgpnk 14 Oct 17 16:05 /home/vgpnk/Projects/shokunin/.ufo/reports/round-94
+drwxr-xr-x 1 vgpnk vgpnk 14 Oct 17 17:32 /home/vgpnk/Projects/shokunin/.ufo/reports/round-95
+drwxr-xr-x 1 vgpnk vgpnk 14 Oct 17 18:38 /home/vgpnk/Projects/shokunin/.ufo/reports/round-96
+drwxr-xr-x 1 vgpnk vgpnk 14 Oct 17 20:24 /home/vgpnk/Projects/shokunin/.ufo/reports/round-97
+drwxr-xr-x 1 vgpnk vgpnk 14 Oct 17 21:37 /home/vgpnk/Projects/shokunin/.ufo/reports/round-98
+9a74e25 lore-shokunin <lore@shokunin.local> protocol: close lore r98 (admitted) — fleet report + MANIFEST ledger append
+80ca9dd lore-shokunin <lore@shokunin.local> protocol: close lore r97 (admitted) — fleet report + MANIFEST ledger append
+5e03802 lore-shokunin <lore@shokunin.local> protocol: close lore r96 (admitted) — fleet report + MANIFEST ledger append
+07ea34b lore-shokunin <lore@shokunin.local> protocol: close lore r95 (admitted) — fleet report + MANIFEST ledger append
+be6eca9 lore-shokunin <lore@shokunin.local> protocol: close lore r94 (admitted) — fleet report + MANIFEST ledger append
+===== FLEET STATUS =====
+===== MANIFEST LORE =====
+top keys: ['version', 'repo', 'protocol', 'roster', 'minting_rule', 'rounds']
+FOUND .roster[10] {"id": "lore", "name": "lore-shokunin", "domain": "fictional-world records + consistency verification", "rank": "shonen", "repo": "shokunin-world-bible", "minted": "2026-10-11"}
+===== MISSION PUSH =====
+73:child-lane items), commit-then-push ordering, push scope, and the L0 side
+81:## Push scope — hard rule
+===== R98 FIXTURE LIST =====
+total 60
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 20:28 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 15028 Oct 17 20:30 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 20:28 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 20:28 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  4187 Oct 17 20:28 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 20:28 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  5829 Oct 17 20:30 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 20:28 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 20:28 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  2725 Oct 17 20:28 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2552 Oct 17 20:28 timeline.json
+===== R99 FIXTURE NOW =====
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+===== DONE 2026-10-17T22:04:21-03:00 =====

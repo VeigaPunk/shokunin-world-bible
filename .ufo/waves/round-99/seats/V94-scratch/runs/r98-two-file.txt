@@ -1,0 +1,10 @@
+command: /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/fixtures/r98-clerk-filing
+cwd: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror
+exit: 2
+--- stdout ---
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest 9d89ba3f8e19d34394575a782b8a69c38e7a4ee94b823c0cd8912bafe05416ad != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: entities.json (sha256 db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984 -> 457e41d31d3c78cdde591e532dc04083561d223705cb5d334d945885624242c3), fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> c62880b9beab277b88dfa2321eef5fd4663b256b8189e9a1568d3cd824842c3c); fixture bytes changed outside the frozen inventory
+RESULT ERROR
+
+--- stderr ---
+

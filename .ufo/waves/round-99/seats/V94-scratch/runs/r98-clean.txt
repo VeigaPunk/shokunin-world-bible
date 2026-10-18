@@ -1,0 +1,10 @@
+command: /usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror/corpus/fixtures/r98-clerk-filing
+cwd: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V94-scratch/mirror
+exit: 0
+--- stdout ---
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+RESULT PASS
+
+--- stderr ---
+

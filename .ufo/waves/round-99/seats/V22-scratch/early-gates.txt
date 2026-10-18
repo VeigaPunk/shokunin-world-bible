@@ -1,0 +1,73 @@
+# Early gate runs, before producer settlement. Not the quoted final battery.
+# Lane root: /home/vgpnk/Projects/shokunin/lore-shokunin
+# Observed ~2026-10-18T01:01Z (first battery) and reconfirmed pins at 01:16:04Z.
+
+## python3 corpus/tools/boundary_doc_check.py
+CHECK pinned inputs: PASS
+CHECK receipt replay: PASS
+CHECK explicit anchor ranges: PASS
+CHECK document structure: PASS
+scope=frozen-document drift + receipts + explicit-anchor range + structure; not semantic or AST validation
+replay_receipts=3/3
+replay_cases=14/14
+anchors=2/2
+h1_count=1
+duplicate_headings=0
+instruction_markers=0
+CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)
+[rc=0]
+
+Two consecutive default runs byte-identical (449 stdout bytes, empty stderr, both rc=0).
+
+Receipt fences:
+receipt fence line=355 command line=346 cases=[r85-control, r85-unique-break-control, r85-masked-ambiguous, r85-isolated-ambiguous, r85-harbor-repro]
+receipt fence line=406 command line=400 cases=[r88-mixed-stop, r88-nonholder-stop, r88-shape-ambiguous-armed, r89-f2-dangling-to, r89-f2-dangling-from, r89-f2-invalid-source-id]
+receipt fence line=462 command line=456 cases=[r89-c1-multi-cause-valid, r89-fn2-unresolved-chain-break, r89-fn2-control]
+
+## python3 corpus/tools/boundary_doc_check.py --self-test
+SELF-TEST PASS anchor_range_control exit=1 findings=['anchor_range'] anchors=1/2 legacy_anchor=check_bible.py:212-224@5eb9451baff217c19d5786405f9b2aa500b7c1b7 baseline_lines=330
+SELF-TEST PASS committed_default exit=0 findings=none
+SELF-TEST PASS comment_parked_c9 exit=1 findings=['document_drift']
+SELF-TEST PASS wrong_bare_anchor exit=1 findings=['document_drift']
+SELF-TEST PASS checker_drift exit=1 findings=['checker_drift']
+SELF-TEST PASS missing_document exit=1 findings=['document_missing']
+SELF-TEST PASS missing_checker exit=1 findings=['checker_missing']
+SELF-TEST PASS receipt_drift exit=1 findings=['receipt_drift']
+SELF-TEST PASS
+[rc=0]
+
+## python3 corpus/tools/discriminate_check.py
+mode=delivered checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+[rc=0]
+
+## python3 corpus/tools/discriminate_check.py --checker e97613c
+mode=e97613c checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved — pinned delivered semantics not present
+[rc=2]
+
+## sha256sum
+ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e  corpus/knowledge/holder-assessment-boundary.md
+legacy git show 5eb9451b:corpus/fixtures/check_bible.py sha256 88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81
+e97613c blob sha256 e2bb9639a3247284e272200861a642829a39c97f01c60b80e507eb94f50e3556
+contract sha256 e89d2a76d3c8c5c4926c830f6576531d22cf9c18a370cf70ef2657eae1539871
+
+## mutated-doc control
+python3 corpus/tools/boundary_doc_check.py --doc .ufo/waves/round-99/seats/V22-scratch/doc-mutated.md
+CHECK pinned inputs: FAIL
+FINDING document_drift: document digest differs from pinned 65838f867d6ece8e7b8bdcc4ffc667a08a1b785e bytes
+CERTIFICATION FAIL
+[rc=1]
+
+## pin compare at 2026-10-18T01:16:04Z
+86 paths (5 gate files + 2 r91 READMEs + 79 receipt fixture files) worktree == 4265df5 == HEAD. bad=0.
+git status --porcelain of pin paths empty.

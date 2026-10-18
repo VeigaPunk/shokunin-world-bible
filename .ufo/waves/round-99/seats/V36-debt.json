@@ -1,0 +1,113 @@
+{
+  "seat": "V36",
+  "role": "debt-ledger",
+  "round": 99,
+  "lane": "lore-shokunin",
+  "compiled_at": "2026-10-18T01:56:04Z",
+  "lane_root": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+  "baseline": "4265df5",
+  "head_at_compile": "337f0fa",
+  "poll_record": {
+    "script": ".ufo/waves/round-99/seats/V36-scratch/poll.sh",
+    "log": ".ufo/waves/round-99/seats/V36-scratch/poll.log",
+    "result": "ABSENT after 40 tries at 2026-10-18T01:15:21Z",
+    "gate": "content-gated: producer reports, S1/S2 bytes vs 4265df5, lapse markers, README/map not r98 copies, both knowledge files",
+    "post_cap": "S1-full-file-pins.md mtime 2026-10-17T22:48:57-03 existed by 01:51:29Z. S2 report, S5 report, and both knowledge files still absent at 01:56:04Z. S1 recorded, not reproduced. No all-reports wait. SELF subtracted."
+  },
+  "not_run_by_this_seat": [
+    "dependency_freeze --self-test",
+    "dependency_freeze chain verify",
+    "check_bible",
+    "support_check",
+    "map_obligations"
+  ],
+  "measured": {
+    "census_dirs": 173,
+    "readme_exit_token": false,
+    "locative_in_lapse_section": false,
+    "historical_open_entry_in_note_and_description": true,
+    "readme_11_has_per_the_original_minutes_terms": true,
+    "map_69_has_per_that_minutes_terms": true
+  },
+  "snapshot_hashes": {
+    "corpus/tools/dependency_freeze.py": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+    "corpus/tools/dependency-freeze-contract.json": "8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628",
+    "corpus/tools/README.md": "294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207",
+    "SKILL.md": "22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5",
+    "note": "README and SKILL hashes are the 4265df5 bytes (git diff --name-status omitted them). Tool moved 1728ed89 -> 6f81f8be -> fb9bb9ff during the wave. Contract mtime 22:08:46."
+  },
+  "fixture_hashes_01_22Z": {
+    "claim-excerpt-map.md": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
+    "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+    "fictional-excerpts.md": "fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d",
+    "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "README.md": "b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049",
+    "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "sources.json": "8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15",
+    "timeline.json": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069"
+  },
+  "verdicts_recorded_not_adopted": {
+    "S1": "PASS post-cap, unreproduced; own bound on anchored vs non-anchor before-state; r99 not pinned on purpose",
+    "S3": "PASS 6/1/8 CLEAN; README/map clause stale after S4",
+    "S4": "PASS lexical 21/21; not a whole-claim pass",
+    "depth": "V29 INCONCLUSIVE; V51 INCONCLUSIVE; V105 FAIL; V14 FAIL; V95 FAIL",
+    "coverage_slice": "V63 FAIL unpinned tick-15; V81 same bound",
+    "calibration": "not scored; V52 ABSENT; 6f81f8be receipts stale vs fb9bb9ff",
+    "freshness": "V32 ABSENT; V91 ABSENT",
+    "operability": "V26 ABSENT for missing docs; S4 commands exit 0 as written",
+    "adjacency": "V33 ABSENT; V27 ABSENT; V68 PASS sibling logs",
+    "registry": "V73 FAIL; V96 FAIL (17 cases / five JSON tables vs executed 18/18 and ten-file pins)",
+    "presence": "V39 census stale; V123 INCONCLUSIVE at 73/127 before S1 report"
+  },
+  "bounds_new": [
+    {"id": "NB-01", "axis": "process", "summary": "S2 and S5 absent at cap and at 01:56Z; both knowledge files absent; C2 component 2 not delivered; S1 report post-cap only", "owner": "r99 L1; r100 if still missing"},
+    {"id": "NB-02", "axis": "depth", "summary": "description locative At the Chalk Stair not in the lapse note and unflagged", "owner": "r99 closure or r100"},
+    {"id": "NB-03", "axis": "depth/docs", "summary": "README:11 and map:69 minute-terms gloss and so nothing is resolved are not in the lapse quotes", "owner": "r99 closure or r100"},
+    {"id": "NB-04", "axis": "depth", "summary": "V95: lines 70-73 world-assertions; only line 74 clerk-record under that criterion", "owner": "r99 closure or r100 if the class is adopted"},
+    {"id": "NB-05", "axis": "depth", "summary": "V14 vs V105 diverge on the description's historical-open-entry clause; not smoothed", "owner": "same as NB-02"},
+    {"id": "NB-06", "axis": "coverage", "summary": "r99-window-lapse unpinned; UNPINNED-FIXTURE exit 2; S1 says intentional", "owner": "r100"},
+    {"id": "NB-07", "axis": "calibration/docs", "summary": "BR-01 prose half not closed in docs; anchored depends-on removal is not the invisible-before case", "owner": "S2 or r99 closure / r100"},
+    {"id": "NB-08", "axis": "freshness", "summary": "SKILL.md:98-100 and tools README still say 17 cases and five JSON tables", "owner": "S2 / r99 closure"},
+    {"id": "NB-09", "axis": "docs", "summary": "r99 README replay block records no exits; sixth recurrence", "owner": "r100"},
+    {"id": "NB-10", "axis": "process", "summary": "placeholder-poll hazard recurred on r99 README/map", "owner": "r100 wave design"},
+    {"id": "NB-11", "axis": "process", "summary": "tool hash flux 1728ed89 -> 6f81f8be -> fb9bb9ff; contract stable 8c2561b0", "owner": "r99 closure re-measure"},
+    {"id": "NB-12", "axis": "hygiene", "summary": "8 parent-repo files under .ufo/waves/round-99/seats (V69, V73)", "owner": "r99 closure L1"},
+    {"id": "NB-13", "axis": "process", "summary": "S3 README/map-still-r98 clause stale after S4", "owner": "record"},
+    {"id": "NB-14", "axis": "calibration", "summary": "markdown_tamper is a newline append; symbolism-clause-map.md is an unpinned eleventh file", "owner": "accepted; r100 only if eleventh file wanted"},
+    {"id": "NB-15", "axis": "process", "summary": "V92 quote mismatch on V105 IN_QUOTES fence; does not reverse the locative FAIL", "owner": "record"},
+    {"id": "NB-16", "axis": "freshness", "summary": "closure docs still at 4265df5; census 173 dirs on disk", "owner": "r99 closure or r100"}
+  ],
+  "bounds_carried": {
+    "not_closed_here": ["CO-01 BR-01 prose half", "CO-02 ten-file pin uncredited", "CO-03 checker blind spots", "CO-04 consistent regeneration", "CO-07 path-less migration wording"],
+    "open_accepted": ["CO-05 dual_pointer legacy scope", "CO-06 MALFORMED-MODEL unpinned", "CO-08 BR-05 scratch at root", "CO-09 self-test consistency not truth", "CO-10 path-less pin needs --freeze"],
+    "recurred": ["CO-11 README exits -> NB-09", "CO-12 placeholder poll -> NB-10", "CO-13 revision flux -> NB-11", "CO-16 new fixture unpinned -> NB-06"],
+    "open_closure": ["CO-14 C9 row-8", "CO-15 registry/README staleness"]
+  },
+  "closure_items": [
+    "CL-01 do not admit C2 component 2",
+    "CL-02 re-measure C1 on fb9bb9ff if admitting; do not use 6f81f8be receipts",
+    "CL-03 SKILL and tools README still 17/five-JSON",
+    "CL-04 fixtures README Round-99 + census 173/39/134/421",
+    "CL-05 corpus README bullets",
+    "CL-06 C9 row-8",
+    "CL-07 repair or bound NB-02..NB-05 without smoothing V105 and V14",
+    "CL-08 parent stray sweep",
+    "CL-09 roster reconcile; V39 and V123 censuses are stale",
+    "CL-10 do not silently pin r99"
+  ],
+  "post_write_02_06Z": {
+    "knowledge_files_present": true,
+    "s5_report_present": false,
+    "s2_report_present": false,
+    "not_replayed": true,
+    "hashes": {
+      "corpus/knowledge/r99-gate-blind-spot-table.md": "4670c0b71668c56c53c0bac90091531d3f0e881c7dcb2ac572d09f96ae22182e",
+      "corpus/knowledge/r99-lapse-scope-note.md": "96de708f8e984f6f61ee6387342c287a275328a6293da1d225b2ad00040ebb54"
+    },
+    "mtime": "2026-10-17T22:57:50-03",
+    "note": "01:56Z ls missed these files (mtime 22:57:50 is ~01:57:50Z). S5 report still absent at 02:06Z. Table not scored. Bottom line unchanged."
+  },
+  "bottom_line": "ABSENT — producer set incomplete after 40 content-gated tries (01:15:21Z) and still incomplete at 01:56Z (S2 report and bytes absent; S5 report absent); knowledge files appeared at 22:57:50-03 and were not replayed; S1 report landed after the cap and is recorded, not reproduced; V105, V14, and V95 FAILs stand; tick-15 edge unpinned (V63)."
+}

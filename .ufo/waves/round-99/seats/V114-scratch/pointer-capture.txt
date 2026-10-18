@@ -1,0 +1,31 @@
+=== watch tail ===
+
+Discriminator pair from the repository root: `python3 corpus/tools/discriminate_check.py` → `RESULT: DISCRIMINATION HELD` (exit 0); `python3 corpus/tools/discriminate_check.py --checker e97613c` → `REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved` (exit 2, expected control).
+
+| Date | Checker SHA-256 | Discrimination re-check |
+|---|---|---|
+| 2026-10-17 (r98) | `ff9fd2aa…d1421` | **DISCRIMINATION HELD** — re-check 7 (r98 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r99. |
+
+Gate 3 remains **not met**; the four-gate falsification trigger remains unsatisfied; nothing in r98 changes the sequence-scope evidence state.
+=== row count of dated check rows ===
+13
+=== last Next re-check only ===
+319:| 2026-10-17 (r98) | `ff9fd2aa…d1421` | **DISCRIMINATION HELD** — re-check 7 (r98 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r99. |
+=== watch vs 4265df5 ===
+worktree watch sha: ced043984ee1798de4442cf8a6a9f4eb2480244252eb9ae733b532ae327ab9dc
+4265df5 watch sha: ced043984ee1798de4442cf8a6a9f4eb2480244252eb9ae733b532ae327ab9dc
+=== discriminate PIN constant ===
+12:PIN = "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+13:BASELINE = "e97613cc276f5fa9cac49ff1900798cf6863c020"
+16:    r"## Expected output with (e97613c|the delivered checker) "
+25:    if len(matches) != 2 or set(result) != {"e97613c", "the delivered checker"}:
+47:        ["git", "show", f"{BASELINE}:corpus/fixtures/check_bible.py"],
+=== boundary contract checker sha if present ===
+FILE boundary-doc-contract.json 2359
+FILE boundary_doc_check.py 37198
+=== producer report names ===
+ls: cannot access '.ufo/waves/round-99/seats/V22*.md': No such file or directory
+.ufo/waves/round-99/seats/S3-fixture-author.md
+.ufo/waves/round-99/seats/S4-fixture-docs.md
+=== date ===
+2026-10-18T01:04:25Z

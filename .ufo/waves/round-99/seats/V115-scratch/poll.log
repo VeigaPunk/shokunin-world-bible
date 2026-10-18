@@ -1,0 +1,283 @@
+2026-10-17 22:02:55 -0300
+poll-start: S1 report absent; contract schema_version=1 pins=6 files=5; tool mtime newer than contract
+try 1 22:02:55
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=1 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:02:04.079077994 -0300 contract=2026-10-17 22:02:04.079077994 -0300
+mtime py=2026-10-17 20:33:36.611874789 -0300 contract=2026-10-17 20:33:36.611874789 -0300
+ready=WAIT s1=ABSENT
+try 2 22:03:15
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=1 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:02:04.079077994 -0300 contract=2026-10-17 22:02:04.079077994 -0300
+mtime py=2026-10-17 20:33:36.611874789 -0300 contract=2026-10-17 20:33:36.611874789 -0300
+ready=WAIT s1=ABSENT
+try 3 22:03:35
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=1 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 20:33:36.611874789 -0300 contract=2026-10-17 20:33:36.611874789 -0300
+ready=WAIT s1=ABSENT
+try 4 22:03:55
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=1 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 20:33:36.611874789 -0300 contract=2026-10-17 20:33:36.611874789 -0300
+ready=WAIT s1=ABSENT
+try 5 22:04:15
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:15.546713323 -0300 contract=2026-10-17 22:04:15.546713323 -0300
+ready=WAIT s1=ABSENT
+try 6 22:04:35
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 7 22:04:55
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 8 22:05:15
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 9 22:05:35
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 10 22:05:55
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 11 22:06:15
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 12 22:06:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 13 22:06:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 14 22:07:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:03:21.845453846 -0300 contract=2026-10-17 22:03:21.845453846 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 15 22:07:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 16 22:07:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 17 22:08:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 18 22:08:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=5 payload_schema=None has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:04:28.205774480 -0300 contract=2026-10-17 22:04:28.205774480 -0300
+ready=WAIT s1=ABSENT
+try 19 22:08:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 20 22:09:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 21 22:09:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 22 22:09:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 23 22:10:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 24 22:10:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 25 22:10:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 26 22:11:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 27 22:11:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 28 22:11:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 29 22:12:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 30 22:12:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 31 22:12:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 32 22:13:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 33 22:13:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 34 22:13:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 35 22:14:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 36 22:14:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 37 22:14:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 38 22:15:16
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 39 22:15:36
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+try 40 22:15:56
+ls: cannot access '.ufo/waves/round-99/seats/S1*.md': No such file or directory
+S1-report: ABSENT
+contract schema=2 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] files_n=10 payload_schema=2 has_r99=False
+mtime py=2026-10-17 22:07:33.506669398 -0300 contract=2026-10-17 22:07:33.506669398 -0300
+mtime py=2026-10-17 22:08:46.248249589 -0300 contract=2026-10-17 22:08:46.248249589 -0300
+ready=READY s1=ABSENT
+POLL-EXHAUSTED

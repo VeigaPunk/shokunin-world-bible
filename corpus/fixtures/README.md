@@ -1263,3 +1263,26 @@ Round 98 also hardened `dependency_freeze`: `SELF-TEST-MISMATCH` exits 2 (pinned
 A full repo-relative corpus run at the r98 closure observed **172 fixture directories: 38 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-97 census (171/37/134/421). One directory added (`r98-clerk-filing`); zero inherited tuple changes.
 
 Dated pin note: this Round-98 append changes this file's bytes; the W05 pin for this file no longer matches (fifth consecutive round; census re-declarations above are the measured state at each closure).
+
+## Round 99 — `r99-window-lapse` (2026-10-17)
+
+Added at round 99: a preserving continuation of `r98-clerk-filing`. The clerk's authored lapse note (`clerk-lapse-note`) supports one tick-15 event (`clerk-lapse-recorded`, actor `clerk-maren`, place `chalk-stair`, `depends_on: ["clerk-filing-open"]`) recording that the crossing-window named in the original minute has closed: the agreement was unfulfilled, no claim was lodged, and the matter stands as a historical open entry. The note records no resolution, assigns no blame, reconciles nothing. Inherited r98 records are parsed-value identical; the r98 fixture is untouched. Map: 21 obligations (20 inherited rows unchanged + the new event row).
+
+Replay commands and receipts (measured at the r99 closure, HEAD cited in LOG.md):
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r99-window-lapse
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r99-window-lapse
+# OBLIGATIONS raw=21 mapped=21; INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23 / RESULT PASS   exit 0
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing
+# FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1   RESULT PASS   exit 0
+```
+
+Round 99 also upgraded `dependency_freeze` to full-file pins: each chain pin covers all ten declared files (schema version 2), so non-semantic prose edits are detectable as `DIGEST-MISMATCH` (semantic findings still decide first — see the tools README Round-99 addendum). The blind-spot decision table at `corpus/knowledge/r99-gate-blind-spot-table.md` consolidates every demonstrated gate blind spot from r94–r98 with replayed commands. Bounds: `r99-window-lapse` is not yet pinned (r100 candidate); r88's `symbolism-clause-map.md` is outside the declared ten and unpinned.
+
+### 2026-10-17 census re-declaration
+
+A full repo-relative corpus run at the r99 closure observed **173 fixture directories: 39 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-98 census (172/38/134/421). One directory added (`r99-window-lapse`); zero inherited tuple changes.
+
+Dated pin note: this Round-99 append changes this file's bytes; the W05 pin for this file no longer matches (sixth consecutive round; census re-declarations above are the measured state at each closure).

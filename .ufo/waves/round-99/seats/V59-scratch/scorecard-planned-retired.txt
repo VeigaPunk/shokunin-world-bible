@@ -1,0 +1,171 @@
+12|planned: r85 (devin, ADMIT) — masked-defect calibration: holder dup silently latches can_check_chain=False hiding a real break; sealed-confirmed operative danger. r86 candidate: voiced ambiguous-entity repair + latch marker, needs 133-tuple replay.
+
+---
+
+13|planned: another independently falsifiable move only; source-text truth remains unverified, and the r15 blue mark must not be called a Blue Seal trace. Round-4 duplicate-name detector remains rejected; no active name check or alias coverage.
+
+---
+
+14|retired: hard-failing exact duplicate names without sourced uniqueness; round 4 showed calibration harm. Scores unchanged because the round was rejected.
+
+---
+
+26|planned: one calibration move — report ambiguous provenance holders locally
+27|and explicitly disclose the existing chain-assessment stop without resuming
+28|comparisons, choosing duplicate identities, or changing fictional records.
+29|Measure both holder directions, the masked-break pair, clean/broken unique
+30|controls, and all inherited fixture CLI triples. Establish a bounded,
+31|reproducible 0–10 rubric before recording new numeric scores; a sample's
+32|ceiling must not be called whole-domain saturation.
+
+---
+
+33|retired: no new retirement or split; the historical duplicate-name rejection
+34|above remains in force.
+
+---
+
+65|planned: authorized routing owner supplies content `@m_composer`, audit /
+66|review / scout / critic `@m_grok`, connector `@m_antigravity` with `@m_zfl`
+67|fallback on the canonical taxonomy surface. Then a fresh L1 session may
+68|continue the pending r86 candidate after reconciling this blocked attempt.
+69|Receipt authority and missing lane contracts are separate named debt.
+
+---
+
+70|retired: none added; no saturation or arbitrary round-count stop.
+
+---
+
+87|## Planned
+88|
+89|Populated by the lane at each round start per the `SCORECARD.md` contract; no entries declared by this rollout.
+
+---
+
+91|## Retired
+92|
+93|- none retired; record with justification when an axis is retired.
+
+---
+
+116|planned (r88, from Q3 with L1 adoption): (1) calibration — close the residual
+117|malformed-ambiguous path and stop-cause accuracy (lowest-axis obligation);
+118|(2) coverage — second sourced-mythology cluster with passage-level locators and
+119|a clause→element symbolism index, repairing OBS-1; (3) depth — sourced-inspiration
+120|decision table (closes S2's missing-precedent debt).
+
+---
+
+159|planned (r89, from Q1 with L1 adoption): (1) calibration — durable fixtures
+160|for the six unexercised first-cause branches + the multi-cause precedence
+161|question (extend the combined summary or narrow the claim) + FN-1/2/3 input
+162|shapes; (2) coverage — external-only marker on the ETCSL ledger row, support
+163|sweep of r87's remaining metadata-only facts under the R1B breadth; (3) depth —
+164|govern JDEP3's three uncovered inspired-content classes. Process: dependency
+165|barrier or calibrated wait deadlines (r88: 54% of seats missed a 60 s check;
+166|authors ran up to +24 min); roster-as-data with phase fields; freeze-then-verify
+167|the delivered revision after integrator amendments.
+
+---
+
+203|planned (r90, from Q1 with L1 adoption): (1) calibration — the null-holder
+204|predicate one-line fix (return None for `holder_id is None`), FN-1
+205|raw-present fixtures, FN-2 regression registration, multi-cause ≥3 durable
+206|fixture; (2) coverage — in-corpus claim→excerpt maps with delivery modes,
+207|one reproducible support command, R9 labels on the four excerpts; (3) depth —
+208|JDEP2's undecided sub-cases per R8/R9/R10, cross-cluster register first real
+209|entry. Process: poll loops within the tool cap with machine-checkable cadence
+210|(Q2-I1), hash-stamped freeze (Q2-I2), roster+lane-served+failover as data
+211|(Q2-I3 — this round exercised the failover for real).
+
+---
+
+245|planned (r91, from Q1 with L1 adoption): (1) calibration — durable
+246|discriminating fixtures for the repaired shapes (Q90-001) + the C9
+247|falsification watch; (2) coverage — support-script hardening (expected-inventory
+248|assertion, distinct-anchor reporting, retelling-anchor-miss warn) + the
+249|`22/22` receipt wording split; (3) depth — JDEP2's prospective edges (R8/R9/R10
+250|residuals) + register conventions on first real conflict. Process (Q2):
+251|committed poll helper (P1), machine-readable `wave-spec.json` + validator
+252|(P2), scratch budget + inode preflight (P3).
+
+---
+
+289|planned (r92, from Q1 with L1 adoption): (1) depth — the anchor-based boundary-doc
+290|re-derivation (the r92 head item; r91 deferred it explicitly) + JDEP2's residual edges;
+291|(2) coverage — the two Spence comparison rows in the r88-m3 map (closes the WARN) +
+292|M2 contract-deviation cleanup (RESULT FAIL/ERROR summaries; exit-code alignment);
+293|(3) calibration — the C9 watch's first periodic re-check + path-convention census note
+294|in the fixtures README. Process (Q2): commit the poll helper (still not landed),
+295|finish wave-spec.json + validator, scratch budgets with named thresholds.
+
+---
+
+324|planned (r93, from Q1 with L1 adoption): (1) depth — the R9 appendix venue
+325|repair + the R8 worked-example replay fixture + a post-landing certifier seat
+326|as standard practice; (2) coverage — none outstanding beyond named debt;
+327|(3) calibration — the C9 watch's second re-check. Substrate note: alibaba
+328|token-plan is quota-frozen until 2026-10-23 — r93's follow-up plans
+329|opencode-go unless the operator tops up. Process (Q2): freeze gate landed
+330|(SF1 caught the unstaged commit); roster arithmetic still prose (33 declared
+331|vs 31+2 delivered); scratch budgets still unnumbered.
+
+---
+
+363|planned (r94): depth — a measurable shared-crossing continuation in a new r94 fixture derived from the r88 paired accounts: source-backed co-stewardship relation, one place and a later event depending on both prior signals, with exact proposition/metadata distinctions (R25/R26 proposals, not implemented). Calibration — a bounded raw-JSON↔map obligation check with missing/duplicate/phantom-pointer controls, not lexical PASS mistaken for entailment. Operability candidate — self-invocation coverage for the two legacy gates; declare its scope/axis at r94 start before implementation. Preserve existing cluster snapshots and all source/rights boundaries; mythology connections and symbolism remain first-class content, not cultural facts inferred from analogy.
+
+---
+
+367|retired: no expertise axis newly retired or split; the historical duplicate-display-name hard-failure rule remains rejected. SHONEN: four `[~]` with resolvable evidence, no `[x]`, no promotion. r94–r98 remain unstarted at this closure.
+
+---
+
+379|planned: finish r94's 32–64-seat DeepSeek FOLLOW-UP on the committed candidate (planned authorized route `opencode-go/deepseek-v4.1-flash`), review all six axes, integrate W25's minimal docs/registry proposals and the C9 watch append, decide C1/C2 and capability admission, then file real closure artifacts. No final report or MANIFEST entry exists at this checkpoint. r95–r98 remain unstarted.
+
+---
+
+426|planned (r95): per the operator's 100-round regimen — r95–r98 are 64-seat
+427|`opencode-go/deepseek-v4.1-flash` swarm rounds; r99 is the 128-seat
+428|`xai-oauth/grok-4.7-fast` [xhigh] round; r100 is the 32-seat
+429|`openai-codex/gpt-6.1-sol` [max] round. Candidate claims from C-7/BR/CR:
+430|dependency-reduction detection (BR-01); schema-drift class (BR-02); self-test
+431|coverage gaps + scratch relocation (BR-03/BR-05); doc polish BR-07/08/11/12/19/20;
+432|carried r93 items CR-01/02/05/06/07. Process debts: poll helper (CR-07),
+433|r94-shape spec validator (CC-13 accepted), roster arithmetic as data.
+
+---
+
+461|planned (r96): second 64-seat deepseek-flash round. Debt head items:
+462|deletion class (silent PASS, MISMATCH-receipt-only); `schema_drift`
+463|self-test pinning; drift scope widening decision; V37-D1 legacy-dialect
+464|hidden-second-pointer; BR-01 dependency-reduction detection (carried since
+465|r94); BR-05 scratch relocation; poll-helper/process debts. saturation: not
+466|declared. retired: none.
+
+---
+
+492|planned (r97): third 64-seat deepseek-flash round. Debt head items:
+493|`--freeze` scope guard or delivery-time-only marking; path binding for
+494|freeze receipts; BR-01 prose half; `dual_pointer` self-test pin; droppable-pin
+495|loader tightening; cosmetic r96 map fixes; BR-05 scratch relocation;
+496|poll-helper hardening (mutual-wait escape); process: host `/tmp` inode
+497|exhaustion workaround. saturation: not declared. retired: none.
+
+---
+
+524|planned (r98): fourth and final 64-seat deepseek-flash round; then r99
+525|(128-seat grok-4.7-fast xhigh) and r100 (32-seat sol-max). Debt head items:
+526|pin r97-crossing-acknowledgment into the freeze chain; repair the r95 map
+527|carried sentence; stale knowledge-note tool pins; BR-01 prose half;
+528|`SELF-TEST-MISMATCH` exit-code alignment between tools; path-less legacy pin
+529|migration; the endgame poll-escape as a standing seat convention.
+
+---
+
+558|planned (r99): 128-seat `xai-oauth/grok-4.7-fast` [xhigh] — the largest
+559|wave; candidates: BR-01 prose half scoping, checker blind-spot
+560|documentation as decision-table rows, arc beat five. Then r100 (32-seat
+561|sol-max), then r101–r102 (16–32-seat zai glm-5.3-flash each, operator-added).
+
+---

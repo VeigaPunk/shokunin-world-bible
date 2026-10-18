@@ -1,0 +1,41 @@
+label=mid
+ts=2026-10-17T22:14:46-0300
+head=337f0fa52b02626b7687eedbb2d99fab30446fe4
+log=337f0fa52b02626b7687eedbb2d99fab30446fe4 2026-10-17 21:53:33 -0300 lore r99: record blocked dispatch attempt (xai-oauth credential pool missing) — zero increment
+porcelain_rc=0 lines=51743
+parent_rc=0 parent_lines=2 parent_err=''
+cached=''
+DIFF_NAME_STATUS:
+M	corpus/tools/dependency-freeze-contract.json
+M	corpus/tools/dependency_freeze.py
+NON_UNTRACKED:
+ M corpus/tools/dependency-freeze-contract.json
+ M corpus/tools/dependency_freeze.py
+COUNTS:
+  producer_tracked_or_untracked=2
+  fixture=10
+  knowledge=0
+  log_md=0
+  seat_reports=12
+  seat_scratch=51719
+  wave_other=0
+  other=0
+OTHER:
+(none)
+WAVE_OTHER:
+(none)
+PRODUCER_LINES:
+ M corpus/tools/dependency-freeze-contract.json
+ M corpus/tools/dependency_freeze.py
+KNOWLEDGE_LINES:
+(none)
+LOG_LINES:
+(none)
+FIXTURE_EXTRAS=[]
+FIXTURE_MISSING=[]
+SEAT_TOP_FILES=['S3-fixture-author.md', 'S4-fixture-docs.md', 'V10-c2-checker.md', 'V105-c2-event-description.md', 'V109-c2-inherited-map-rows.md', 'V11-c2-inherited-equality.md', 'V119-c2-anchors-3.md', 'V13-c2-anchors.md', 'V68-adjacency-2.md', 'V77-c2-map-inventory.md', 'V80-c2-prose-prefix.md', 'V86-c2-no-new-entity.md']
+SEAT_TOP_DIRS_N=115
+SEAT_NONSCRATCH_DIRS=[]
+SEAT_NON_MD_FILES=[]
+PYC_COMMITTABLE=[]
+PYC_INTEREST_N=15

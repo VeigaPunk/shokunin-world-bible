@@ -1,0 +1,49 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && SCRATCH=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V22-scratch
+SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats
+LANE=/home/vgpnk/Projects/shokunin/lore-shokunin
+LOG=$SCRATCH/poll.log
+: > "$LOG"
+for i in $(seq 1 40); do
+  ts=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+  present=""
+  missing=""
+  for s in S1-freeze-hygiene.md S2-tools-docs.md S3-fixture-author.md S4-fixture-docs.md S5-knowledge-notes.md; do
+    if [ -s "$SEATS/$s" ]; then present="$present $s"; else missing="$missing $s"; fi
+  done
+  arts=""
+  for a in \
+    corpus/tools/dependency_freeze.py \
+    corpus/tools/dependency-freeze-contract.json \
+    corpus/tools/README.md \
+    SKILL.md \
+    corpus/fixtures/r99-window-lapse/README.md \
+    corpus/fixtures/r99-window-lapse/claim-excerpt-map.md \
+    corpus/fixtures/r99-window-lapse/entities.json \
+    corpus/fixtures/r99-window-lapse/timeline.json \
+    corpus/fixtures/r99-window-lapse/sources.json \
+    corpus/fixtures/r99-window-lapse/relations.json \
+    corpus/fixtures/r99-window-lapse/contradictions.json \
+    corpus/fixtures/r99-window-lapse/fictional-excerpts.md \
+    corpus/fixtures/r99-window-lapse/inspiration-note.md \
+    corpus/fixtures/r99-window-lapse/source-excerpt.md \
+    corpus/knowledge/r99-gate-blind-spot-table.md \
+    corpus/knowledge/r99-lapse-scope-note.md
+  do
+    if [ -e "$LANE/$a" ]; then arts="$arts OK:$a"; else arts="$arts MISS:$a"; fi
+  done
+  echo "try=$i t=$ts present=[$present] missing=[$missing]" >> "$LOG"
+  echo "arts:$arts" >> "$LOG"
+  if [ -z "$missing" ]; then
+    echo "ALL-REPORTS-PRESENT try=$i" >> "$LOG"
+    echo "ALL-REPORTS-PRESENT try=$i"
+    exit 0
+  fi
+  # early escape note only; keep polling for reports
+  sleep 20
+done
+echo "POLL-EXHAUSTED" >> "$LOG"
+echo "POLL-EXHAUSTED"
+exit 0
+

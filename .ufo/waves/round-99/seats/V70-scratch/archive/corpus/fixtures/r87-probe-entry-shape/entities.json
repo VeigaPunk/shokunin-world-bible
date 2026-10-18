@@ -1,0 +1,128 @@
+[
+  {
+    "id": "mira",
+    "kind": "character",
+    "name": "Mira",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Mira is referenced.",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "harbor",
+    "kind": "place",
+    "name": "Lantern Harbor",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "Lantern Harbor is referenced.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "tower",
+    "kind": "place",
+    "name": "North Tower",
+    "first_appearance": "archive-ledger",
+    "claims": [
+      {
+        "statement": "North Tower is referenced.",
+        "source_id": "archive-ledger"
+      }
+    ]
+  },
+  {
+    "id": "seal",
+    "kind": "item",
+    "name": "Blue Seal",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Blue Seal is referenced.",
+        "source_id": "courier-log"
+      }
+    ],
+    "provenance": []
+  },
+  {
+    "id": "lamp",
+    "kind": "item",
+    "name": "Brass Lamp",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Brass Lamp is referenced.",
+        "source_id": "courier-log"
+      }
+    ],
+    "provenance": "courier-log"
+  },
+  {
+    "id": "rope",
+    "kind": "item",
+    "name": "Hemp Rope",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Hemp Rope is referenced.",
+        "source_id": "courier-log"
+      }
+    ],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "mira",
+        "source_id": "courier-log"
+      },
+      {
+        "tick": 3,
+        "from_holder": "mira",
+        "to_holder": "harbor",
+        "source_id": "courier-log"
+      },
+      {
+        "tick": 4,
+        "from_holder": "mira",
+        "to_holder": "tower",
+        "source_id": "courier-log"
+      }
+    ]
+  },
+  {
+    "id": "rope",
+    "kind": "item",
+    "name": "Second Hemp Rope (fixture row)",
+    "first_appearance": "courier-log",
+    "claims": [
+      {
+        "statement": "Second Hemp Rope (fixture row) is referenced.",
+        "source_id": "courier-log"
+      }
+    ],
+    "provenance": [
+      {
+        "tick": 0,
+        "from_holder": null,
+        "to_holder": "mira",
+        "source_id": "courier-log"
+      },
+      {
+        "tick": 3,
+        "from_holder": "mira",
+        "to_holder": "harbor",
+        "source_id": "courier-log"
+      },
+      {
+        "tick": 4,
+        "from_holder": "mira",
+        "to_holder": "tower",
+        "source_id": "courier-log"
+      }
+    ]
+  }
+]

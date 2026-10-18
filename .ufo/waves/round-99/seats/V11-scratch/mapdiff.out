@@ -1,0 +1,14 @@
+r98 map JSON-fact rows=20  r99 map JSON-fact rows=21
+columns differing across inherited rows (col idx -> count): {3: 20}
+ col 3: 20 rows; sample: J01: '`r98-clerk-filing:paired-clock`' -> '`r99-window-lapse:paired-clock`'
+  distinct substitutions: 6
+    '`r98-clerk-filing:aru-acknowledgment-note`' -> '`r99-window-lapse:aru-acknowledgment-note`'
+    '`r98-clerk-filing:aru-aftermath-note`' -> '`r99-window-lapse:aru-aftermath-note`'
+    '`r98-clerk-filing:clerk-filing-note`' -> '`r99-window-lapse:clerk-filing-note`'
+    '`r98-clerk-filing:evin-response-note`' -> '`r99-window-lapse:evin-response-note`'
+    '`r98-clerk-filing:paired-clock`' -> '`r99-window-lapse:paired-clock`'
+    '`r98-clerk-filing:crossing-minute`' -> '`r99-window-lapse:crossing-minute`'
+byte-identical rows among first 20: 0
+inherited rows equal after namespace substitution: 20/20; other=0
+NEW ROW: J21 | `timeline.json#/7` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `r99-window-lapse:clerk-lapse-note`
+editorial rows r98=2 r99=2 equal=True

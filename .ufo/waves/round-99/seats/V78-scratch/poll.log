@@ -1,0 +1,914 @@
+=== TRY 1 2026-10-18T01:04:18Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+73b28933f1488280827b78f0e18d8aeea06695e5d4cebbef8114b5b0639341c4  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=1
+=== TRY 2 2026-10-18T01:04:38Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=2
+=== TRY 3 2026-10-18T01:04:59Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=3
+=== TRY 4 2026-10-18T01:05:19Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=4
+=== TRY 5 2026-10-18T01:05:39Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=5
+=== TRY 6 2026-10-18T01:05:59Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=6
+=== TRY 7 2026-10-18T01:06:19Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=7
+=== TRY 8 2026-10-18T01:06:39Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=8
+=== TRY 9 2026-10-18T01:06:59Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=9
+=== TRY 10 2026-10-18T01:07:19Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+1728ed892442c49899942ce52dc509849b7053b738b0bbf05dcd53f56a90b579  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=10
+=== TRY 11 2026-10-18T01:07:39Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=11
+=== TRY 12 2026-10-18T01:07:59Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=12
+=== TRY 13 2026-10-18T01:08:19Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=13
+=== TRY 14 2026-10-18T01:08:39Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8f9c1f5316141b6147a68d938c946d858304b53afc2257a1921e1e2141f92258  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=14
+=== TRY 15 2026-10-18T01:08:59Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+WAITING try=15
+=== TRY 1 2026-10-18T01:15:23Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+FIXTURE_FILES 10
+total 64
+drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+-rw-r--r-- 1 vgpnk vgpnk 17119 Oct 17 22:02 claim-excerpt-map.md
+-rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+-rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+-rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+-rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+-rw-r--r-- 1 vgpnk vgpnk  6176 Oct 17 22:03 README.md
+-rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+-rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+-rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+-rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+CONTRACT schema 2 cases None expected {'clean': {'exit': 0, 'finding_ids': [], 'forbid_traceback': True}, 'reduction_edge_drop': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'addition_edge_phantom': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'event_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'event_endpoint_change': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_endpoint_flip': {'exit': 1, 'finding_ids': ['ENDPOINT-CHANGE'], 'forbid_traceback': True}, 'relation_removed': {'exit': 1, 'finding_ids': ['REDUCTION-DETECTED'], 'forbid_traceback': True}, 'relation_added': {'exit': 1, 'finding_ids': ['ADDITION-DETECTED'], 'forbid_traceback': True}, 'digest_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'forbid_traceback': True}, 'malformed_json': {'exit': 2, 'finding_ids': ['MALFORMED-JSON'], 'forbid_traceback': True}, 'missing_timeline': {'exit': 2, 'finding_ids': ['FILE-MISSING'], 'forbid_traceback': True}, 'unpinned_fixture': {'exit': 2, 'finding_ids': ['UNPINNED-FIXTURE'], 'forbid_traceback': True}, 'missing_fixture': {'exit': 2, 'finding_ids': ['FIXTURE-MISSING'], 'forbid_traceback': True}, 'invalid_arguments': {'exit': 2, 'finding_ids': ['INVALID-ARGUMENTS'], 'forbid_traceback': True}, 'scope_refused': {'exit': 2, 'finding_ids': ['SCOPE-REFUSED'], 'forbid_traceback': True}, 'path_mismatch': {'exit': 2, 'finding_ids': ['PATH-MISMATCH'], 'forbid_traceback': True}, 'self_test_mismatch': {'exit': 2, 'finding_ids': ['SELF-TEST-MISMATCH'], 'forbid_traceback': True}, 'markdown_tamper': {'exit': 2, 'finding_ids': ['DIGEST-MISMATCH'], 'names_file': 'fictional-excerpts.md', 'forbid_traceback': True}}
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+FILE_LIST_KEY required_files data_files
+=== TRY 16 2026-10-18T01:28:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=16
+=== TRY 17 2026-10-18T01:28:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=17
+=== TRY 18 2026-10-18T01:28:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=18
+=== TRY 19 2026-10-18T01:29:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=19
+=== TRY 20 2026-10-18T01:29:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=20
+=== TRY 21 2026-10-18T01:29:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=21
+=== TRY 22 2026-10-18T01:30:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=22
+=== TRY 23 2026-10-18T01:30:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=23
+=== TRY 24 2026-10-18T01:30:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=24
+=== TRY 25 2026-10-18T01:31:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=25
+=== TRY 26 2026-10-18T01:31:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=26
+=== TRY 27 2026-10-18T01:31:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=27
+=== TRY 28 2026-10-18T01:32:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=28
+=== TRY 29 2026-10-18T01:32:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=29
+=== TRY 30 2026-10-18T01:32:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=30
+=== TRY 31 2026-10-18T01:33:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=31
+=== TRY 32 2026-10-18T01:33:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=32
+=== TRY 33 2026-10-18T01:33:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=33
+=== TRY 34 2026-10-18T01:34:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=34
+=== TRY 35 2026-10-18T01:34:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=35
+=== TRY 36 2026-10-18T01:34:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=36
+=== TRY 37 2026-10-18T01:35:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=37
+=== TRY 38 2026-10-18T01:35:35Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=38
+=== TRY 39 2026-10-18T01:35:55Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=39
+=== TRY 40 2026-10-18T01:36:15Z ===
+ABSENT S1-freeze-hygiene.md
+ABSENT S2-tools-docs.md
+PRESENT S3-fixture-author.md 2026-10-17 22:01:40.692964933 -0300 5069
+PRESENT S4-fixture-docs.md 2026-10-17 22:03:54.733612762 -0300 9303
+ABSENT S5-knowledge-notes.md
+ABSENT V09-c1-cross-gates.md
+FIXTURE_FILES 10
+ABSENT corpus/knowledge/r99-gate-blind-spot-table.md
+ABSENT corpus/knowledge/r99-lapse-scope-note.md
+6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067  corpus/tools/dependency_freeze.py
+8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628  corpus/tools/dependency-freeze-contract.json
+PINS ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+R99_PINNED False
+NFILES {'r88-m3-maya-cluster': 10, 'r94-paired-crossing': 10, 'r95-crossing-aftermath': 10, 'r96-crossing-response': 10, 'r97-crossing-acknowledgment': 10, 'r98-clerk-filing': 10}
+EXPECTED 18
+SCHEMA 2
+WAITING try=40
+POLL-EXHAUSTED 2026-10-18T01:36:35Z

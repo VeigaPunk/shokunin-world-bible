@@ -1,0 +1,1357 @@
+POLL_START 2026-10-17T22:20:19-0300 max=40 sleep=20 self=V99
+--- TRY 1 2026-10-17T22:20:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=1 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=14 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 2 2026-10-17T22:20:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=2 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=14 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 3 2026-10-17T22:20:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=3 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=14 stable_receipt=0 stable_md=2
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 4 2026-10-17T22:21:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=4 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=14 stable_receipt=0 stable_md=3
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 5 2026-10-17T22:21:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=5 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=14 stable_receipt=0 stable_md=4
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 6 2026-10-17T22:21:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=6 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=15 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 7 2026-10-17T22:22:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=7 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=15 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 8 2026-10-17T22:22:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=8 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=16 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 9 2026-10-17T22:22:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=9 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=17 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 10 2026-10-17T22:23:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=10 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=17 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 11 2026-10-17T22:23:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=11 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=17 stable_receipt=0 stable_md=2
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 12 2026-10-17T22:23:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=12 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=17 stable_receipt=0 stable_md=3
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 13 2026-10-17T22:24:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=13 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=17 stable_receipt=0 stable_md=4
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 14 2026-10-17T22:24:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=14 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=18 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 15 2026-10-17T22:24:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=15 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=18 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 16 2026-10-17T22:25:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=16 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=18 stable_receipt=0 stable_md=2
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 17 2026-10-17T22:25:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=17 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=18 stable_receipt=0 stable_md=3
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 18 2026-10-17T22:25:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=18 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=19 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 19 2026-10-17T22:26:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=19 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=19 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 20 2026-10-17T22:26:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=20 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=19 stable_receipt=0 stable_md=2
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 21 2026-10-17T22:26:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=21 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=20 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 22 2026-10-17T22:27:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=22 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=20 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 23 2026-10-17T22:27:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=23 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=20 stable_receipt=0 stable_md=2
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 24 2026-10-17T22:27:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=24 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=21 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 25 2026-10-17T22:28:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=25 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=21 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 26 2026-10-17T22:28:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=26 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=21 stable_receipt=0 stable_md=2
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 27 2026-10-17T22:28:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=27 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=21 stable_receipt=0 stable_md=3
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 28 2026-10-17T22:29:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=28 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=22 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 29 2026-10-17T22:29:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=29 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=23 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 30 2026-10-17T22:29:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=30 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=23 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 31 2026-10-17T22:30:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V56-fixture-readme.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+ls: cannot access '.ufo/waves/round-99/seats/V39-receipt.md': No such file or directory
+exit 0
+STATUS try=31 producers_missing=3 artifacts_missing=2 receipt=False v39_md=False top_md=24 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 32 2026-10-17T22:30:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=32 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=26 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 33 2026-10-17T22:30:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=33 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=26 stable_receipt=0 stable_md=1
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 34 2026-10-17T22:31:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=34 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=26 stable_receipt=0 stable_md=2
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 35 2026-10-17T22:31:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V122-c2-table-vs-skill.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V14-c2-whole-claim.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V44-c2-table-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=35 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=29 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 36 2026-10-17T22:31:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V108-c1-tamper-restore.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V122-c2-table-vs-skill.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V14-c2-whole-claim.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V44-c2-table-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V91-crosscheck-freshness.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=36 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=31 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 37 2026-10-17T22:32:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V108-c1-tamper-restore.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V122-c2-table-vs-skill.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V14-c2-whole-claim.md
+V18-c2-table-completeness.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V44-c2-table-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V91-crosscheck-freshness.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=37 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=32 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 38 2026-10-17T22:32:39-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V108-c1-tamper-restore.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V122-c2-table-vs-skill.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V14-c2-whole-claim.md
+V18-c2-table-completeness.md
+V19-c2-note-review.md
+V32-verdict-freshness.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V44-c2-table-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V64-c2-lapse-scope.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V86-c2-no-new-entity.md
+V90-c2-editorial-rows.md
+V91-crosscheck-freshness.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=38 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=35 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 39 2026-10-17T22:32:59-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V108-c1-tamper-restore.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V115-c1-verify-vs-freeze.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V122-c2-table-vs-skill.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V14-c2-whole-claim.md
+V18-c2-table-completeness.md
+V19-c2-note-review.md
+V32-verdict-freshness.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V44-c2-table-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V64-c2-lapse-scope.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V84-pins-in-notes.md
+V86-c2-no-new-entity.md
+V89-c1-migration-preserved.md
+V90-c2-editorial-rows.md
+V91-crosscheck-freshness.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V97-c1-selftest-isolation.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=39 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=39 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+--- TRY 40 2026-10-17T22:33:19-0300 ---
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' -printf '%f\n' | sort
+S3-fixture-author.md
+S4-fixture-docs.md
+V07-c1-code-review.md
+V102-c1-doc-commands.md
+V105-c2-event-description.md
+V108-c1-tamper-restore.md
+V109-c2-inherited-map-rows.md
+V10-c2-checker.md
+V113-c2-inventory-line.md
+V115-c1-verify-vs-freeze.md
+V116-c2-clerk-continuity.md
+V119-c2-anchors-3.md
+V11-c2-inherited-equality.md
+V122-c2-table-vs-skill.md
+V12-c2-support-map.md
+V13-c2-anchors.md
+V14-c2-whole-claim.md
+V18-c2-table-completeness.md
+V19-c2-note-review.md
+V32-verdict-freshness.md
+V33-verdict-adjacency.md
+V39-receipt.md
+V41-anchor-replica-2.md
+V44-c2-table-2.md
+V47-byte-prefix-2.md
+V48-relation-scope-2.md
+V56-fixture-readme.md
+V64-c2-lapse-scope.md
+V68-adjacency-2.md
+V77-c2-map-inventory.md
+V80-c2-prose-prefix.md
+V84-pins-in-notes.md
+V86-c2-no-new-entity.md
+V89-c1-migration-preserved.md
+V90-c2-editorial-rows.md
+V91-crosscheck-freshness.md
+V94-c1-two-mutation.md
+V95-c2-lapse-wording.md
+V97-c1-selftest-isolation.md
+V98-c2-table-citations.md
+exit 0
+$ ls -l corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md .ufo/waves/round-99/receipt.json .ufo/waves/round-99/seats/V39-receipt.md 2>&1 || true
+ls: cannot access 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+ls: cannot access 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+ls: cannot access '.ufo/waves/round-99/receipt.json': No such file or directory
+-rw-r--r-- 1 vgpnk vgpnk 11188 Oct 17 22:30 .ufo/waves/round-99/seats/V39-receipt.md
+exit 0
+STATUS try=40 producers_missing=3 artifacts_missing=2 receipt=False v39_md=True top_md=40 stable_receipt=0 stable_md=0
+PRODUCER_MISSING S1-full-file-pins.md S2-tools-docs.md S5-knowledge-author.md
+ARTIFACT_MISSING corpus/knowledge/r99-gate-blind-spot-table.md corpus/knowledge/r99-lapse-scope-note.md
+EXHAUSTED 2026-10-17T22:33:19-0300
+$ git rev-parse HEAD
+337f0fa52b02626b7687eedbb2d99fab30446fe4
+exit 0
+$ git rev-parse 4265df5
+4265df5e86e4121bde4125b649b89bb1676676a5
+exit 0
+$ git merge-base --is-ancestor 4265df5 HEAD && echo yes || echo no
+yes
+exit 0
+$ git status --porcelain -- corpus SKILL.md .ufo/waves/round-99/receipt.json
+ M corpus/tools/dependency-freeze-contract.json
+ M corpus/tools/dependency_freeze.py
+?? corpus/fixtures/r99-window-lapse/
+exit 0
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name '*.md' | wc -l
+40
+exit 0
+$ find .ufo/waves/round-99/seats -maxdepth 1 -name 'S*.md' -printf '%f\n'
+S3-fixture-author.md
+S4-fixture-docs.md
+exit 0
+$ find corpus/fixtures -mindepth 1 -maxdepth 1 -type d | wc -l
+173
+exit 0
+BUILD reason=exhausted-after-40 present=40 excluding_self=40 missing_others=87 drifts=1 receipt=False v39_md=True

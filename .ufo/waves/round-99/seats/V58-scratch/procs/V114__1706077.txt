@@ -1,0 +1,32 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && SCR=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V114-scratch
+SEATS=/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats
+ROOT=/home/vgpnk/Projects/shokunin/lore-shokunin
+{
+  echo "poll-start $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  for i in $(seq 1 40); do
+    ts=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+    missing=""
+    present=""
+    for f in S1-freeze-hygiene.md S2-tools-docs.md S3-fixture-author.md S4-fixture-docs.md S5-knowledge-notes.md V22-gates-boundary.md; do
+      if [ -s "$SEATS/$f" ]; then present="$present $f"; else missing="$missing $f"; fi
+    done
+    arts=""
+    for a in corpus/knowledge/r91-c9-watch.md corpus/fixtures/check_bible.py corpus/tools/discriminate_check.py corpus/fixtures/r91-c1-null-chain corpus/fixtures/r91-c1-tick-unresolved; do
+      if [ -e "$ROOT/$a" ]; then arts="$arts OK:$a"; else arts="$arts MISS:$a"; fi
+    done
+    echo "try=$i t=$ts present=[$present] missing=[$missing]"
+    echo "arts:$arts"
+    if [ -z "$missing" ]; then
+      echo "ALL-PRESENT try=$i t=$ts"
+      exit 0
+    fi
+    if [ "$i" -eq 40 ]; then
+      echo "ABSENT-AFTER-40 try=$i t=$ts missing=[$missing]"
+      exit 2
+    fi
+    sleep 20
+  done
+} > "$SCR/poll.log" 2>&1
+echo "poll-exit=$?" >> "$SCR/poll.log"

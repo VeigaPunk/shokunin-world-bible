@@ -1,0 +1,2 @@
+/bin/sh
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V16-scratch/poll-pin.sh

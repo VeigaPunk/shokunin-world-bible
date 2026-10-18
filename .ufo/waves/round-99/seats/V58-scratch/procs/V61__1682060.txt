@@ -1,0 +1,58 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && set -u
+LANE=/home/vgpnk/Projects/shokunin/lore-shokunin
+SEATS="$LANE/.ufo/waves/round-99/seats"
+SCRATCH="$SEATS/V61-scratch"
+LOG="$SCRATCH/poll.log"
+CONTRACT="$LANE/corpus/tools/dependency-freeze-contract.json"
+TOOL="$LANE/corpus/tools/dependency_freeze.py"
+: > "$LOG"
+for try in $(seq 1 40); do
+  ts=$(date '+%Y-%m-%dT%H:%M:%S%z')
+  s1_hits=$(find "$SEATS" -maxdepth 1 -name 'S1*.md' -printf '%f\n' 2>/dev/null | sort | paste -sd, -)
+  [ -z "$s1_hits" ] && s1_hits=NONE
+  c_sha=$(sha256sum "$CONTRACT" | awk '{print $1}')
+  t_sha=$(sha256sum "$TOOL" | awk '{print $1}')
+  snap=$(python3 - "$CONTRACT" << 'PY'
+import json, sys
+p = sys.argv[1]
+try:
+    data = json.loads(open(p, encoding="utf-8").read())
+except Exception as e:
+    print(f"PARSE_FAIL {e}")
+    raise SystemExit(0)
+pins = data.get("pins") if isinstance(data, dict) else None
+if not isinstance(pins, dict):
+    print("pins=BAD schema=" + str(data.get("schema_version") if isinstance(data, dict) else None))
+    raise SystemExit(0)
+counts = []
+total = 0
+ten = True
+for name in sorted(pins):
+    files = pins[name].get("files") if isinstance(pins[name], dict) else None
+    n = len(files) if isinstance(files, dict) else -1
+    total += n if n > 0 else 0
+    if n != 10:
+        ten = False
+    counts.append(f"{name}:{n}")
+print(f"schema={data.get('schema_version')} pins={len(pins)} digests={total} ten={ten} detail={'|'.join(counts)}")
+PY
+)
+  line="try=$try ts=$ts s1=$s1_hits contract=$c_sha tool=$t_sha $snap"
+  echo "$line" | tee -a "$LOG"
+  if [ "$s1_hits" != NONE ] && echo "$snap" | grep -q 'digests=60'; then
+    echo "READY" | tee -a "$LOG"
+    exit 0
+  fi
+  # also ready if schema bumped and digest count is 60 even before report name is conventional
+  if echo "$snap" | grep -q 'digests=60'; then
+    echo "READY_CONTRACT_ONLY" | tee -a "$LOG"
+    exit 0
+  fi
+  if [ "$try" -lt 40 ]; then
+    sleep 20
+  fi
+done
+echo "ABSENT_AFTER_40" | tee -a "$LOG"
+exit 0

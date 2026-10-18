@@ -1,0 +1,35 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin' && set -u
+LANE=/home/vgpnk/Projects/shokunin/lore-shokunin
+SCR=$LANE/.ufo/waves/round-99/seats/V47-scratch
+cd "$LANE"
+date '+%Y-%m-%d %H:%M:%S %z' | tee "$SCR/freeze-start.txt"
+echo '=== hashes-2 ==='
+sha256sum corpus/fixtures/r99-window-lapse/* corpus/fixtures/r98-clerk-filing/* | sed "s|$LANE/||" | tee "$SCR/hashes-2.txt"
+echo '=== sleep 20 ==='
+sleep 20
+date '+%Y-%m-%d %H:%M:%S %z' | tee "$SCR/freeze-end.txt"
+echo '=== hashes-3 ==='
+sha256sum corpus/fixtures/r99-window-lapse/* corpus/fixtures/r98-clerk-filing/* | sed "s|$LANE/||" | tee "$SCR/hashes-3.txt"
+echo '=== hash delta 2 vs 3 ==='
+diff -u "$SCR/hashes-2.txt" "$SCR/hashes-3.txt" && echo STABLE
+echo '=== mtimes ==='
+stat -c '%y %s %n' corpus/fixtures/r99-window-lapse/* | tee "$SCR/mtimes-final.txt"
+echo '=== reports ==='
+stat -c '%y %s %n' .ufo/waves/round-99/seats/S3-fixture-author.md .ufo/waves/round-99/seats/S4-fixture-docs.md
+echo '=== parent porcelain ==='
+git -C /home/vgpnk/Projects/shokunin status --porcelain | tee "$SCR/parent-porcelain.txt"
+echo '=== lane porcelain fixtures/tools/knowledge ==='
+git status --porcelain -- corpus/fixtures corpus/tools corpus/knowledge | tee "$SCR/lane-porcelain.txt"
+echo '=== r98 vs 4265df5 ==='
+git diff --stat 4265df5 -- corpus/fixtures/r98-clerk-filing/ | tee "$SCR/r98-diffstat.txt"
+echo "(empty above means clean)"
+echo '=== HEAD ==='
+git rev-parse HEAD
+git log -1 --oneline
+git merge-base --is-ancestor 4265df5 HEAD && echo '4265df5 is ancestor of HEAD'
+git diff --stat 4265df5 HEAD -- corpus/fixtures/r98-clerk-filing/ | tee "$SCR/r98-head-diffstat.txt"
+echo '=== dir listing ==='
+ls -la corpus/fixtures/r99-window-lapse/ | tee "$SCR/listing.txt"
+

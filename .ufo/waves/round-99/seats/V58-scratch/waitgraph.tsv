@@ -1,0 +1,45 @@
+# waitgraph 2026-10-17T22:03:20-03:00 rows=43 scripts_seen=43
+seat	script	waits_reports	all_reports	threshold	subtract_self	tries	bounded	escape_tokens	targets	kind
+V08	.ufo/waves/round-99/seats/V08-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,exit 2	S1	artifacts|producers
+V100	.ufo/waves/round-99/seats/V100-scratch/waitgraph.py	no	no	100	YES-generic	-	NO	-	-	-
+V107	.ufo/waves/round-99/seats/V107-scratch/poll.sh	YES	no	-	NO	40	YES	TIMEOUT,exit 2,exit 1	V33	reports|artifacts
+V118	.ufo/waves/round-99/seats/V118-scratch/poll.sh	no	no	-	n/a	40	YES	EXHAUST,exit 2	S1	artifacts|producers
+V12	.ufo/waves/round-99/seats/V12-scratch/poll.sh	no	no	-	n/a	40	YES	ABSENT,exit 2	S4	artifacts|producers
+V123	.ufo/waves/round-99/seats/V123-scratch/poll.sh	YES	YES	128	NO	-	YES	DEADLINE	V101,V39,V99	all-reports|artifacts
+V15	.ufo/waves/round-99/seats/V15-scratch/poll.sh	no	no	-	n/a	40	YES	ABSENT,exit 2,exit 1	S3,S4,S5	artifacts|producers
+V16	.ufo/waves/round-99/seats/V16-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,break,exit 1	S3	artifacts|producers
+V20	.ufo/waves/round-99/seats/V20-scratch/compare.sh	no	no	-	n/a	-	NO	exit 1	-	artifacts
+V20	.ufo/waves/round-99/seats/V20-scratch/poll.sh	YES	no	-	NO	40	YES	EXHAUST,exit 2	S1,S2,S3,S4,S5	reports|artifacts|producers
+V23	.ufo/waves/round-99/seats/V23-scratch/poll.sh	YES	no	-	NO	40	YES	CAP,exit 2,exit 1	-	reports|artifacts
+V26	.ufo/waves/round-99/seats/V26-scratch/poll.sh	YES	no	-	NO	-	NO	ABSENT,exit 2	S1,S2,S3,S4,S5	reports|artifacts|producers
+V27	.ufo/waves/round-99/seats/V27-scratch/audit_tree.py	no	no	-	n/a	-	NO	-	-	-
+V27	.ufo/waves/round-99/seats/V27-scratch/freeze.sh	no	no	-	n/a	-	NO	ABSENT,exit 1	-	artifacts
+V27	.ufo/waves/round-99/seats/V27-scratch/outside_scan.sh	no	no	-	n/a	-	NO	exit 1	-	-
+V27	.ufo/waves/round-99/seats/V27-scratch/poll.sh	no	no	-	n/a	40	YES	ABSENT,exit 2,exit 1	-	artifacts
+V27	.ufo/waves/round-99/seats/V27-scratch/rights_scan.sh	no	no	-	n/a	-	NO	exit 1	-	artifacts
+V29	.ufo/waves/round-99/seats/V29-scratch/poll.sh	YES	no	-	NO	40	YES	EXHAUST,ABSENT,exit 1	S3,S4,S5	reports|artifacts|producers
+V30	.ufo/waves/round-99/seats/V30-scratch/poll.sh	YES	no	-	NO	-	NO	ABSENT,break,exit 1	S1,S3,S4,S5	reports|artifacts|producers
+V31	.ufo/waves/round-99/seats/V31-scratch/poll.sh	no	no	-	YES-generic	40	YES	ABSENT,break,exit 2,exit 1,sys.exit	S1,S2,S3,S4,S5	artifacts|producers
+V32	.ufo/waves/round-99/seats/V32-scratch/poll.sh	YES	no	-	YES-generic	40	YES	exit 2	-	reports|artifacts
+V33	.ufo/waves/round-99/seats/V33-scratch/audit.py	no	no	-	n/a	-	NO	ABSENT	-	artifacts
+V33	.ufo/waves/round-99/seats/V33-scratch/poll.sh	YES	no	-	NO	40	YES	TIMEOUT,exit 2,exit 1	-	reports|artifacts
+V36	.ufo/waves/round-99/seats/V36-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,exit 2,sys.exit	S1,S2,S3,S4,S5	artifacts|producers
+V43	.ufo/waves/round-99/seats/V43-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,exit 2	S1	artifacts|producers
+V47	.ufo/waves/round-99/seats/V47-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,break,exit 1	S3,S4	artifacts
+V48	.ufo/waves/round-99/seats/V48-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,exit 2	S3,S4	artifacts|producers
+V49	.ufo/waves/round-99/seats/V49-scratch/poll.sh	YES	no	-	YES-generic	40	YES	TIMEOUT,exit 1	S1,S2,S3,S4,S5	reports|artifacts|producers
+V50	.ufo/waves/round-99/seats/V50-scratch/poll.sh	YES	no	-	NO	40	YES	TIMEOUT,exit 2,exit 1	S1,S2,S3,S4,S5	reports|artifacts|producers
+V51	.ufo/waves/round-99/seats/V51-scratch/poll.sh	YES	no	-	NO	-	YES	EXHAUST,ABSENT,exit 2,exit 1	S1,S2,S3,S4,S5,V29	reports|artifacts|producers
+V52	.ufo/waves/round-99/seats/V52-scratch/poll.sh	no	no	-	YES-generic	40	YES	ABSENT,exit 2	S1,S2	artifacts|producers
+V53	.ufo/waves/round-99/seats/V53-scratch/poll.sh	no	no	-	YES-generic	40	YES	ABSENT,exit 2,exit 1	S1,S2,S3,S4,S5	artifacts|producers
+V55	.ufo/waves/round-99/seats/V55-scratch/audit.py	no	no	-	YES-generic	-	NO	-	-	artifacts
+V55	.ufo/waves/round-99/seats/V55-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,break,exit 1	S1,S2,S3,S4,S5	artifacts|producers
+V58	.ufo/waves/round-99/seats/V58-scratch/sampler.py	no	no	-	YES-generic	6	YES	TIMEOUT,DEADLINE,POLL-TIMEOUT,CAP,STALL,ABSENT,break	S1	artifacts|producers
+V58	.ufo/waves/round-99/seats/V58-scratch/waitgraph.py	YES	YES	50	YES-generic	-	YES	TIMEOUT,DEADLINE,EXHAUST,POLL_TERMINAL,POLL-TIMEOUT,CAP,HARD-CAP,HARD_CAP,STALL,ABSENT,break,exit 2,exit 1,sys.exit	S1	all-reports|artifacts
+V63	.ufo/waves/round-99/seats/V63-scratch/poll.sh	YES	no	-	NO	40	YES	EXHAUST,exit 1	S1,S3	reports|artifacts|producers
+V67	.ufo/waves/round-99/seats/V67-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,exit 1	S1,S2,S3,S4,S5	artifacts|producers
+V70	.ufo/waves/round-99/seats/V70-scratch/census.sh	no	no	-	n/a	-	NO	-	-	artifacts
+V74	.ufo/waves/round-99/seats/V74-scratch/poll.sh	no	no	-	n/a	-	NO	ABSENT,exit 2,sys.exit	S1,S2,S3,S4,S5,V36	artifacts|producers
+V75	.ufo/waves/round-99/seats/V75-scratch/poll.sh	no	no	-	YES-generic	40	YES	TIMEOUT,POLL-TIMEOUT,ABSENT,exit 2,exit 1	S1,S2,S3,S4,S5,V38	artifacts|producers
+V91	.ufo/waves/round-99/seats/V91-scratch/poll.sh	YES	no	-	YES-generic	40	YES	exit 2	S1,S5,V32	reports|artifacts|producers
+V98	.ufo/waves/round-99/seats/V98-scratch/poll.sh	YES	no	-	NO	40	YES	CAP,exit 2,exit 1	S5	reports|artifacts|producers

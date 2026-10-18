@@ -1,0 +1,258 @@
+{
+ "at": "2026-10-17T22:32:51.565655-03:00",
+ "n": 36,
+ "rows": [
+  {
+   "file": "S3-fixture-author.md",
+   "bytes": 5069,
+   "mtime": 1792285300.692965,
+   "sha256": "3d81a75e0f154ed6c2297da8a9521391797a81740e0ede5443070b0c471cf73a",
+   "first": "# S3 fixture-author \u2014 r99-window-lapse"
+  },
+  {
+   "file": "S4-fixture-docs.md",
+   "bytes": 9303,
+   "mtime": 1792285434.7336128,
+   "sha256": "61bfdec1f5b7bbcdda653230bb4be1b6c1913683af67e2ae02e4ee46a327f72f",
+   "first": "# S4 fixture-docs \u2014 round 99"
+  },
+  {
+   "file": "V10-c2-checker.md",
+   "bytes": 6894,
+   "mtime": 1792285479.5328293,
+   "sha256": "9ee8c876b7ff1be1481c7219b06307163ed5a0553ef168bdda23e677f99f7f45",
+   "first": "# V10 c2-checker \u2014 round 99"
+  },
+  {
+   "file": "V102-c1-doc-commands.md",
+   "bytes": 4526,
+   "mtime": 1792286948.8321435,
+   "sha256": "e7714246a1ac5ac897d708f0ebd3fe27e0bb255e57c54f9966d3681c5eef3422",
+   "first": "# V102 c1-doc-commands \u2014 round 99"
+  },
+  {
+   "file": "V105-c2-event-description.md",
+   "bytes": 9976,
+   "mtime": 1792285909.1651711,
+   "sha256": "3668a34e84ee36a5ce2e3cdbffe9ce4eb34982f786b53f13013b0bcf39d0d1e2",
+   "first": "# V105 c2-event-description \u2014 round 99"
+  },
+  {
+   "file": "V108-c1-tamper-restore.md",
+   "bytes": 7663,
+   "mtime": 1792287115.4634316,
+   "sha256": "9b686d6ef18f6a6ed4410178dbaa71004207074d3b1678ca3bb5dfddf35ab76b",
+   "first": "# V108 c1-tamper-restore"
+  },
+  {
+   "file": "V109-c2-inherited-map-rows.md",
+   "bytes": 5160,
+   "mtime": 1792286064.3927498,
+   "sha256": "8bcbd46a1f5888cc99bb7a8e29947a6ae5a81e5455b917ac00d7c5e25495c362",
+   "first": "# V109 c2-inherited-map-rows \u2014 round 99"
+  },
+  {
+   "file": "V11-c2-inherited-equality.md",
+   "bytes": 13546,
+   "mtime": 1792285914.2580042,
+   "sha256": "a2f60b65b440efd0b178c5c314fc51ded510e8b8bd80db3c0ce6fd87b2d20e03",
+   "first": "# V11 c2-inherited-equality \u2014 round 99"
+  },
+  {
+   "file": "V113-c2-inventory-line.md",
+   "bytes": 8621,
+   "mtime": 1792286568.113785,
+   "sha256": "b1e963422de1b54d3384c434a5aceb280c5c7231b670125909eb9a9866502101",
+   "first": "# V113 c2-support-inventory-line"
+  },
+  {
+   "file": "V116-c2-clerk-continuity.md",
+   "bytes": 10090,
+   "mtime": 1792286755.2592666,
+   "sha256": "0779931664e7fc0b8a4ca504c83f8b2aaea6228cc1c1cd8b71f813b798d9e737",
+   "first": "# V116 \u2014 c2-clerk-actor-continuity (round 99)"
+  },
+  {
+   "file": "V119-c2-anchors-3.md",
+   "bytes": 9125,
+   "mtime": 1792285861.222672,
+   "sha256": "9206493b7fe5fb982f53756d2f1d260d91e6ce265d3c7c7f14277a82efc66b35",
+   "first": "# V119 c2-map-anchors-3 \u2014 round 99"
+  },
+  {
+   "file": "V12-c2-support-map.md",
+   "bytes": 10805,
+   "mtime": 1792286510.5073655,
+   "sha256": "b559cdb76adbebc6791e3b784d92188437f4195a828120ac9c9b522028fc9246",
+   "first": "# V12 \u2014 c2-support-map (round 99)"
+  },
+  {
+   "file": "V122-c2-table-vs-skill.md",
+   "bytes": 6037,
+   "mtime": 1792287091.9195209,
+   "sha256": "1c402656a615eea28083415b3ae1915448f4c8965b1d492a21b62c914fcd5a54",
+   "first": "# V122 \u2014 c2-table-vs-skill (round 99)"
+  },
+  {
+   "file": "V13-c2-anchors.md",
+   "bytes": 12948,
+   "mtime": 1792285532.5930855,
+   "sha256": "a7ef2d47c29e97cfe41f93800f0fc1a24ca6ad6a636734f4517300d70c2778dd",
+   "first": "# V13 c2-anchors \u2014 round 99"
+  },
+  {
+   "file": "V14-c2-whole-claim.md",
+   "bytes": 15308,
+   "mtime": 1792287098.5734954,
+   "sha256": "abb85e5253be270b26cf80c0e340fadacb3b069e5a9e2a28c2409109060b0e25",
+   "first": "# V14 \u2014 c2-whole-claim (round 99)"
+  },
+  {
+   "file": "V18-c2-table-completeness.md",
+   "bytes": 4221,
+   "mtime": 1792287120.516413,
+   "sha256": "e562493941c02b28b2c3f5bfd897dffe8dc51d3476f9cb0e06b50d21633fea31",
+   "first": "# V18 c2-table-completeness \u2014 round 99"
+  },
+  {
+   "file": "V19-c2-note-review.md",
+   "bytes": 3464,
+   "mtime": 1792287144.4203265,
+   "sha256": "6383df9fffb776b25e7f22bd8b73390f15a645da512bb74195d4d3d9cd46e4b0",
+   "first": "# V19 \u2014 c2-note-review (round 99)"
+  },
+  {
+   "file": "V32-verdict-freshness.md",
+   "bytes": 5550,
+   "mtime": 1792287145.8093216,
+   "sha256": "e94a49e63825fcdeaad4561b45dec05d8676b255317dbe3008e778ca098ad711",
+   "first": "# V32 \u2014 verdict-freshness (round 99)"
+  },
+  {
+   "file": "V33-verdict-adjacency.md",
+   "bytes": 7506,
+   "mtime": 1792286878.0815113,
+   "sha256": "61ba3ac0f6f3aced04ff5d3764086f7136cb7869ccd5ab24a25b512ec9448138",
+   "first": "# V33 \u2014 adjacency verdict (round 99)"
+  },
+  {
+   "file": "V39-receipt.md",
+   "bytes": 11188,
+   "mtime": 1792287030.55877,
+   "sha256": "acee8ae147c65f11bf2e84c31c42735ca0ce20a458ac3337ca3af4cf21753525",
+   "first": "# V39 \u2014 receipt (round 99)"
+  },
+  {
+   "file": "V41-anchor-replica-2.md",
+   "bytes": 9792,
+   "mtime": 1792286226.3163373,
+   "sha256": "40af4141891fe1d0a91017080d5ce232e2e252743811ec61dc8c751e984ea0d6",
+   "first": "# V41 \u2014 anchor-replica-2 (round 99)"
+  },
+  {
+   "file": "V44-c2-table-2.md",
+   "bytes": 2483,
+   "mtime": 1792287081.7535603,
+   "sha256": "926689d83fd6b6ae25302178eae39c6112aff19d5be7ecea9820eb2a1afb5a7d",
+   "first": "# V44 c2-table-2 \u2014 round 99"
+  },
+  {
+   "file": "V47-byte-prefix-2.md",
+   "bytes": 14225,
+   "mtime": 1792286120.873439,
+   "sha256": "321491fb9b0757f867b5e0cc45338bc106960908f64eb3b8c37aed47ab8c5410",
+   "first": "# V47 byte-prefix-2 \u2014 round 99"
+  },
+  {
+   "file": "V48-relation-scope-2.md",
+   "bytes": 17233,
+   "mtime": 1792287023.0578022,
+   "sha256": "4dd088ed1e9fe021dc17dc43279339400b542ab5d4f68118c12b4e6181b5a4e0",
+   "first": "# V48 \u2014 relation-scope-2 (round 99)"
+  },
+  {
+   "file": "V56-fixture-readme.md",
+   "bytes": 15101,
+   "mtime": 1792287009.7218604,
+   "sha256": "32ad2bd635d605f2f67ea5ba27172b8f5c4ef63953abc06fe4ba58f31234ad0b",
+   "first": "# V56 fixture-readme-review \u2014 round 99"
+  },
+  {
+   "file": "V64-c2-lapse-scope.md",
+   "bytes": 6663,
+   "mtime": 1792287140.335341,
+   "sha256": "cb40cb22e96aeafe00bb0a574558c7f09690f22932b697481c47b1baf6bd2e7c",
+   "first": "# V64 \u2014 c2-lapse-scope (round 99)"
+  },
+  {
+   "file": "V68-adjacency-2.md",
+   "bytes": 7930,
+   "mtime": 1792285395.3674226,
+   "sha256": "d1ab2308693704bcb848559e051ede400414cac29807fe8a52f8a734b6d1ae97",
+   "first": "# V68 \u2014 adjacency-2 (round 99)"
+  },
+  {
+   "file": "V77-c2-map-inventory.md",
+   "bytes": 8641,
+   "mtime": 1792285852.6116304,
+   "sha256": "e51103276a7db11c4a5c9ed188ec396c34962d320efd1910f0cbea151c8ce7f1",
+   "first": "# V77 c2-map-inventory \u2014 r99 raw obligations"
+  },
+  {
+   "file": "V80-c2-prose-prefix.md",
+   "bytes": 7122,
+   "mtime": 1792285372.3473113,
+   "sha256": "aaf5b0d1c47b44478bcac40af92c81bb2bce1025d41add69e1494283b08d2cee",
+   "first": "# V80 c2-prose-prefix \u2014 round 99"
+  },
+  {
+   "file": "V84-pins-in-notes.md",
+   "bytes": 4224,
+   "mtime": 1792287169.0512407,
+   "sha256": "4ae504003ddd528831a7c2ba77d3d10d426e9f7d731950017fd712da12d8eade",
+   "first": "# V84 \u2014 pins-in-notes (round 99)"
+  },
+  {
+   "file": "V86-c2-no-new-entity.md",
+   "bytes": 9403,
+   "mtime": 1792285935.552324,
+   "sha256": "775bd16a31f906bc3cc2f4a14139504598ddd9c907725e4e864412d258b0a38f",
+   "first": "# V86 c2-no-new-entity \u2014 round 99"
+  },
+  {
+   "file": "V90-c2-editorial-rows.md",
+   "bytes": 6868,
+   "mtime": 1792286559.089872,
+   "sha256": "d454448ea3d7fe80132a62344f3a1df64e7fc1c67c53bfdd7721ade222147bfe",
+   "first": "# V90 c2-editorial-rows \u2014 round 99"
+  },
+  {
+   "file": "V91-crosscheck-freshness.md",
+   "bytes": 8228,
+   "mtime": 1792287117.0794256,
+   "sha256": "9b28f301cb2add447b5a01fdfdab8bde4a488e919467207d09f8fad62c4468dc",
+   "first": "# V91 \u2014 verdict-crosscheck-freshness (round 99)"
+  },
+  {
+   "file": "V94-c1-two-mutation.md",
+   "bytes": 10470,
+   "mtime": 1792286976.9620092,
+   "sha256": "2fe23cbb773962f93361ca343856559f124189affd7e52f5c59af6433480284f",
+   "first": "# V94 c1-two-mutation"
+  },
+  {
+   "file": "V95-c2-lapse-wording.md",
+   "bytes": 15612,
+   "mtime": 1792286663.1659503,
+   "sha256": "ca217cff89d10a58caf40703e8f7a55e36064fc77e198c402e70daccc0b2a11e",
+   "first": "# V95 \u2014 c2-lapse-wording (round 99)"
+  },
+  {
+   "file": "V98-c2-table-citations.md",
+   "bytes": 5185,
+   "mtime": 1792286804.7439425,
+   "sha256": "4b47296c3afab19be1f0ad4477607f83bdcdd51aba8283a1021fac24bc16b53b",
+   "first": "# V98 \u2014 c2-table-citations (round 99)"
+  }
+ ]
+}

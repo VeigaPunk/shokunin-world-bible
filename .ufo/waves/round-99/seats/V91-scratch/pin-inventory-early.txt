@@ -1,0 +1,141 @@
+# pin inventory against live bytes; baseline rev 4265df5
+HASH DIFF live=6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067 base=03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b corpus/tools/dependency_freeze.py
+HASH DIFF live=8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628 base=153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947 corpus/tools/dependency-freeze-contract.json
+HASH SAME live=294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207 base=294dd56f29ce1fd40be3a80d365b33724c9cd1969d3f7b7abb271fd1adaaa207 corpus/tools/README.md
+HASH SAME live=86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9 base=86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9 corpus/tools/map_obligations.py
+HASH SAME live=2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41 base=2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41 corpus/tools/map-obligations-contract.json
+HASH SAME live=55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c base=55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c corpus/tools/support_check.py
+HASH SAME live=ebb6a0843e67bfaa3118eda7fbf69bac124aca8f5b87cd0b9721b5e6346b0053 base=ebb6a0843e67bfaa3118eda7fbf69bac124aca8f5b87cd0b9721b5e6346b0053 corpus/tools/boundary_doc_check.py
+HASH SAME live=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 base=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 corpus/fixtures/check_bible.py
+HASH SAME live=22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5 base=22ffaa822ec7614fa85322f7fa07e6f369c0888e1107f9f297f76a14e18c20c5 SKILL.md
+HASH SAME live=e401cc64d1b79680153cc2d026ed7a3599974afd2e29ee080b492238d364c57b base=e401cc64d1b79680153cc2d026ed7a3599974afd2e29ee080b492238d364c57b corpus/fixtures/README.md
+HASH SAME live=dee558be7a819de16ec3922784cd7261956776bf2975aab6ab88460038de6076 base=dee558be7a819de16ec3922784cd7261956776bf2975aab6ab88460038de6076 corpus/README.md
+HASH DIFF live=9c67f5c83c82562b19e8b90df401c937a57423920167dd4f08473f95618a3c0e base=df80dc3d8447e5012721dfc4ee294372ca82b2840d92a54971942624e05ad0b6 SCORECARD.md
+HASH DIFF live=1f2ec354259ba6a4bebffe01fc949ef4ec8cd6a45fff512c8129adc05ee5f99a base=eba0a2cfc4b67b38aec32c1f6e30ecdc808d6a55d68f896931d102c7bf2b076c LOG.md
+HASH SAME live=8e9e1774c1072bd1476d86977804e945301e4583acbfcb80a81b37a2334d4827 base=8e9e1774c1072bd1476d86977804e945301e4583acbfcb80a81b37a2334d4827 corpus/knowledge/r95-aftermath-scope-note.md
+HASH SAME live=a9b51f8ccd78e0dcd8b5e890183068e48cdccd195065c43212211b65ee25f048 base=a9b51f8ccd78e0dcd8b5e890183068e48cdccd195065c43212211b65ee25f048 corpus/knowledge/r96-response-scope-note.md
+HASH SAME live=5e3b4225c30de8a2a75b675b59acb5c597b290e5a45f2caa01663da586e042b5 base=5e3b4225c30de8a2a75b675b59acb5c597b290e5a45f2caa01663da586e042b5 corpus/knowledge/r97-acknowledgment-scope-note.md
+HASH SAME live=47a5967bb0d674a6cc2c60d4be3150d315bd66578627c3192cde8fea1f4931a7 base=47a5967bb0d674a6cc2c60d4be3150d315bd66578627c3192cde8fea1f4931a7 corpus/knowledge/r98-clerk-scope-note.md
+HASH ABSENT live=- base=- corpus/knowledge/r99-lapse-scope-note.md
+HASH ABSENT live=- base=- corpus/knowledge/r99-gate-blind-spot-table.md
+HASH SAME live=ced043984ee1798de4442cf8a6a9f4eb2480244252eb9ae733b532ae327ab9dc base=ced043984ee1798de4442cf8a6a9f4eb2480244252eb9ae733b532ae327ab9dc corpus/knowledge/r91-c9-watch.md
+PIN_HITS 118
+MATCH	corpus/fixtures/README.md:1091	ff9fd2aa6811a813	m=1	`ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`; the
+UNMATCHED	corpus/fixtures/r93-m2-kojiki-cluster/README.md:20	65838f867d6ece8e	m=0	This entry supersedes the pending-review sentence above: “M6's current report reviews M1's distinct `r93-myth-cluster3` candidate, not this M-17 cluster; an independent M2-specific
+UNMATCHED	corpus/knowledge/2026-10-12-malformed-error-patterns.md:9	b6ca1e902f2bf08b	m=0	Each `r5-*` directory is a fresh copy of `consistent/` with exactly the single changed or missing path named below. These are fictional records. The checker is unchanged from basel
+UNMATCHED	corpus/knowledge/r87-provenance-chain-decision-table.md:9	2b48ca72033dfd10	m=0	Snapshot: `2b48ca72033dfd1060b6f81c4cf27ad83deae57f` (HEAD of the round-87
+UNMATCHED	corpus/knowledge/r87-provenance-chain-decision-table.md:11	3ae4134d1d7d0f4b	m=0	`3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237`).
+UNMATCHED	corpus/knowledge/holder-assessment-boundary.md:14	5eb9451baff217c1	m=0	baseline commit `5eb9451baff217c19d5786405f9b2aa500b7c1b7`; parent-reproduced
+MATCH	corpus/knowledge/holder-assessment-boundary.md:535	ff9fd2aa6811a813	m=1	lines, sha256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`):
+UNMATCHED	corpus/knowledge/r93-r8-worked-example.md:116	da934a7eea6d108f	m=0	EXPECTED_RECORD_SHA256 = 'da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05'
+UNMATCHED-HIST	corpus/knowledge/r91-c9-watch.md:5	a7c6a1773d599424	m=0	- Delivered checker: `corpus/fixtures/check_bible.py` at r90 closure `a7c6a1773d5994246a76e4eff30d645f161920e0`.
+MATCH	corpus/knowledge/r91-c9-watch.md:6	ff9fd2aa6811a813	m=1	- SHA-256: `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`.
+MATCH	corpus/knowledge/r91-c9-watch.md:49	ff9fd2aa6811a813	m=1	| 2026-10-17 | `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421` | **DISCRIMINATION HELD** — all four C5 scenarios retained their r91 distinctions; no drift alarm.
+UNMATCHED	corpus/knowledge/r91-c9-watch.md:54	396c568cbf86bba2	m=0	Run from `lore-shokunin/` at HEAD `396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f`. Readiness polls (both pinned artifacts were present immediately):
+MATCH	corpus/knowledge/r91-c9-watch.md:73	ff9fd2aa6811a813	m=1	ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+MATCH-HIST	corpus/knowledge/r91-c9-watch.md:213	ff9fd2aa6811a813	m=1	The row-2 checker abbreviation `ff9fd2aa…d1421` is replaced here by the full checker SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`. The historical comp
+UNMATCHED-HIST	corpus/knowledge/r91-c9-watch.md:213	e97613cc276f5fa9	m=0	The row-2 checker abbreviation `ff9fd2aa…d1421` is replaced here by the full checker SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`. The historical comp
+MATCH	corpus/knowledge/r91-c9-watch.md:226	ff9fd2aa6811a813	m=1	ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+UNMATCHED-HIST	corpus/knowledge/r91-c9-watch.md:257	396c568cbf86bba2	m=0	**Erratum (dated, append-only):** the first periodic re-check section above opens "Run from `lore-shokunin/` at HEAD `396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f`." That HEAD-bound pr
+MATCH	corpus/knowledge/r91-c9-watch.md:264	ff9fd2aa6811a813	m=1	ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+MATCH	corpus/knowledge/r91-c9-watch.md:280	ff9fd2aa6811a813	m=1	ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+MATCH	corpus/knowledge/r91-c9-watch.md:296	ff9fd2aa6811a813	m=1	ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+MATCH	corpus/knowledge/r91-c9-watch.md:312	ff9fd2aa6811a813	m=1	ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py
+MATCH	corpus/knowledge/r95-aftermath-scope-note.md:65	86b529496214493f	m=1	# 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+MATCH	corpus/knowledge/r95-aftermath-scope-note.md:66	2142b9917694dbec	m=1	# 2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41  corpus/tools/map-obligations-contract.json
+MATCH	corpus/knowledge/r96-response-scope-note.md:69	86b529496214493f	m=1	# 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py
+MATCH	corpus/knowledge/r96-response-scope-note.md:70	2142b9917694dbec	m=1	# 2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41  corpus/tools/map-obligations-contract.json
+UNMATCHED	corpus/tools/README.md:53	65838f867d6ece8e	m=0	The pins are recorded in `corpus/tools/boundary-doc-contract.json`. They cover every byte of the frozen boundary document, the delivered checker, and the legacy checker source. The
+UNMATCHED	corpus/tools/README.md:53	5eb9451baff217c1	m=0	The pins are recorded in `corpus/tools/boundary-doc-contract.json`. They cover every byte of the frozen boundary document, the delivered checker, and the legacy checker source. The
+UNMATCHED	corpus/tools/README.md:68	5eb9451baff217c1	m=0	Expect `FINDING document_drift` and exit 1. The `--self-test` command above loads the committed document, checker, legacy checker and receipt fixtures from the pinned Git revisions
+UNMATCHED	corpus/tools/README.md:270	3c922d20a01bbd3f	m=0	All six print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0. The two added receipts are `FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1` (di
+UNMATCHED	corpus/tools/README.md:270	59a0f4fa3d4a47e0	m=0	All six print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0. The two added receipts are `FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1` (di
+UNMATCHED	corpus/tools/boundary-doc-contract.json:6	65838f867d6ece8e	m=0	"revision": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+UNMATCHED	corpus/tools/boundary-doc-contract.json:7	7f815a9389c415de	m=0	"sha256": "7f815a9389c415de906ecd4fe14795ee30d5935ae0ed13ee0a5c6b06a74ec33e"
+UNMATCHED	corpus/tools/boundary-doc-contract.json:11	65838f867d6ece8e	m=0	"revision": "65838f867d6ece8e7b8bdcc4ffc667a08a1b785e",
+MATCH	corpus/tools/boundary-doc-contract.json:12	ff9fd2aa6811a813	m=1	"sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+UNMATCHED	corpus/tools/boundary-doc-contract.json:13	5eb9451baff217c1	m=0	"legacy_baseline_revision": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+UNMATCHED	corpus/tools/boundary-doc-contract.json:14	88c9b1d003f51738	m=0	"legacy_baseline_sha256": "88c9b1d003f51738b9fa9b2921a939f94e7ebbc2369c4445a947b282cfed9b81",
+UNMATCHED	corpus/tools/boundary-doc-contract.json:16	5eb9451baff217c1	m=0	"check_bible.py:212-224": "5eb9451baff217c19d5786405f9b2aa500b7c1b7"
+UNMATCHED	corpus/tools/boundary-doc-contract.json:64	5eb9451baff217c1	m=0	"legacy_revision": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:35	337f0fa52b02626b	m=0	"revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:39	337f0fa52b02626b	m=0	"revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:53	acf677a7085be3f6	m=0	"content_sha256": "acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae",
+MATCH	corpus/tools/dependency-freeze-contract.json:55	55c9ba57ad7af5db	m=1	"README.md": "55c9ba57ad7af5db0320fdc09142588c363c8b726d5ae1023dc01264f29b857c",
+MATCH	corpus/tools/dependency-freeze-contract.json:56	b3b79fe5b5b9272b	m=1	"claim-excerpt-map.md": "b3b79fe5b5b9272b898b5714291739503c4250c415b3959032fcdba84a73fd43",
+MATCH	corpus/tools/dependency-freeze-contract.json:57	37517e5f3dc66819	m=200	"contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+MATCH	corpus/tools/dependency-freeze-contract.json:58	042b6cc0d70c4d74	m=1	"entities.json": "042b6cc0d70c4d747121d9b277ac031cf21e66822d3c9a3e5ffe0282bba2bddc",
+MATCH	corpus/tools/dependency-freeze-contract.json:59	e456bb1204b88792	m=1	"fictional-excerpts.md": "e456bb1204b88792d4fe6396e9e8b0deb9ff6f47e1821b0e875738431b9bda89",
+MATCH	corpus/tools/dependency-freeze-contract.json:60	58f5390e5928ebad	m=7	"inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+MATCH	corpus/tools/dependency-freeze-contract.json:61	37517e5f3dc66819	m=200	"relations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+MATCH	corpus/tools/dependency-freeze-contract.json:62	b5edc2fd3c2e3d4f	m=7	"source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+MATCH	corpus/tools/dependency-freeze-contract.json:63	aa252416abc2c863	m=1	"sources.json": "aa252416abc2c863ec4ae86cf25bd4f6e6e841d89e8586255b53362897282d63",
+MATCH	corpus/tools/dependency-freeze-contract.json:64	f74c664b17fd8d57	m=1	"timeline.json": "f74c664b17fd8d575235ab59432a0ce6f938380e9b5a8d07640aae1d38773493"
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:95	337f0fa52b02626b	m=0	"revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:109	048b8ff39e4a5232	m=0	"content_sha256": "048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef",
+MATCH	corpus/tools/dependency-freeze-contract.json:111	36796479658cc4ea	m=1	"README.md": "36796479658cc4eaa95ac50cd38713a934df56d3c430f10b1bab6211ff2a360a",
+MATCH	corpus/tools/dependency-freeze-contract.json:112	ed9527c551049a69	m=1	"claim-excerpt-map.md": "ed9527c551049a6964adc872fbff722b4bdd6a53aa8713fbb6a5d92254e89a47",
+MATCH	corpus/tools/dependency-freeze-contract.json:113	37517e5f3dc66819	m=200	"contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+MATCH	corpus/tools/dependency-freeze-contract.json:114	026af0bc2cdab150	m=4	"entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+MATCH	corpus/tools/dependency-freeze-contract.json:115	585f4d0746eadffc	m=1	"fictional-excerpts.md": "585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2",
+MATCH	corpus/tools/dependency-freeze-contract.json:116	58f5390e5928ebad	m=7	"inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+MATCH	corpus/tools/dependency-freeze-contract.json:117	c279254bc7de0636	m=6	"relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+MATCH	corpus/tools/dependency-freeze-contract.json:118	b5edc2fd3c2e3d4f	m=7	"source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+MATCH	corpus/tools/dependency-freeze-contract.json:119	2b627c4c166edf44	m=1	"sources.json": "2b627c4c166edf44e1e54bb006964a00e267ab4a4ce0b7b7c0681a0d9f0355d5",
+MATCH	corpus/tools/dependency-freeze-contract.json:120	f0209f90a6ce7952	m=1	"timeline.json": "f0209f90a6ce795211369bd900ac1d333d16eb0af123f1b170831e192660533c"
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:168	337f0fa52b02626b	m=0	"revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:182	97cffd7bfe6e0c92	m=0	"content_sha256": "97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710",
+MATCH	corpus/tools/dependency-freeze-contract.json:184	9d27af4ac9644210	m=1	"README.md": "9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b",
+MATCH	corpus/tools/dependency-freeze-contract.json:185	80440d61122488a2	m=1	"claim-excerpt-map.md": "80440d61122488a267a4f0a58a55cb54d89c037d93160f1123e5fb3b2f396f61",
+MATCH	corpus/tools/dependency-freeze-contract.json:186	37517e5f3dc66819	m=200	"contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+MATCH	corpus/tools/dependency-freeze-contract.json:187	026af0bc2cdab150	m=4	"entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+MATCH	corpus/tools/dependency-freeze-contract.json:188	0ef6734ae52d2865	m=1	"fictional-excerpts.md": "0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282",
+MATCH	corpus/tools/dependency-freeze-contract.json:189	58f5390e5928ebad	m=7	"inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+MATCH	corpus/tools/dependency-freeze-contract.json:190	c279254bc7de0636	m=6	"relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+MATCH	corpus/tools/dependency-freeze-contract.json:191	b5edc2fd3c2e3d4f	m=7	"source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+MATCH	corpus/tools/dependency-freeze-contract.json:192	fd9e30e8d9ad4001	m=1	"sources.json": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+MATCH	corpus/tools/dependency-freeze-contract.json:193	3c0faad6bf32f944	m=1	"timeline.json": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177"
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:251	337f0fa52b02626b	m=0	"revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:265	43911900923c110b	m=0	"content_sha256": "43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c",
+MATCH	corpus/tools/dependency-freeze-contract.json:267	ff52ced48bf42147	m=1	"README.md": "ff52ced48bf4214721f248328d76da64a42773d44e78154ef1eaf6eb3558c456",
+MATCH	corpus/tools/dependency-freeze-contract.json:268	e851f068cfd7ed02	m=1	"claim-excerpt-map.md": "e851f068cfd7ed02c97054df18729c4c5a9b8bf60d99d7c9116f427d765440de",
+MATCH	corpus/tools/dependency-freeze-contract.json:269	37517e5f3dc66819	m=200	"contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+MATCH	corpus/tools/dependency-freeze-contract.json:270	026af0bc2cdab150	m=4	"entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+MATCH	corpus/tools/dependency-freeze-contract.json:271	06b11bec604f6d68	m=1	"fictional-excerpts.md": "06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3",
+MATCH	corpus/tools/dependency-freeze-contract.json:272	58f5390e5928ebad	m=7	"inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+MATCH	corpus/tools/dependency-freeze-contract.json:273	c279254bc7de0636	m=6	"relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+MATCH	corpus/tools/dependency-freeze-contract.json:274	b5edc2fd3c2e3d4f	m=7	"source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+MATCH	corpus/tools/dependency-freeze-contract.json:275	9f973f634cf325a3	m=1	"sources.json": "9f973f634cf325a33047020407ffb67b0a0f0a1643e507ebd3771abf9fabf32d",
+MATCH	corpus/tools/dependency-freeze-contract.json:276	ea0225f9270db796	m=1	"timeline.json": "ea0225f9270db79685ea6f55828c2031d7ac67cd413b04f28b25770b208815b9"
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:344	337f0fa52b02626b	m=0	"revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:358	a28b9ea0d65ec355	m=0	"content_sha256": "a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54",
+MATCH	corpus/tools/dependency-freeze-contract.json:360	d9387b7d73264dfc	m=1	"README.md": "d9387b7d73264dfc6c01d27cc6bf24c58ef6bdb4461d2ae8fbfdb6376d9e019f",
+MATCH	corpus/tools/dependency-freeze-contract.json:361	49d4834e124fa6cf	m=1	"claim-excerpt-map.md": "49d4834e124fa6cfaa1a73cd5d1a7bc2cb59711c6233b418fe7485a17eedc94f",
+MATCH	corpus/tools/dependency-freeze-contract.json:362	37517e5f3dc66819	m=200	"contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+MATCH	corpus/tools/dependency-freeze-contract.json:363	026af0bc2cdab150	m=4	"entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+MATCH	corpus/tools/dependency-freeze-contract.json:364	8ba491cb249dd57f	m=1	"fictional-excerpts.md": "8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c",
+MATCH	corpus/tools/dependency-freeze-contract.json:365	58f5390e5928ebad	m=7	"inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+MATCH	corpus/tools/dependency-freeze-contract.json:366	c279254bc7de0636	m=6	"relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+MATCH	corpus/tools/dependency-freeze-contract.json:367	b5edc2fd3c2e3d4f	m=7	"source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+MATCH	corpus/tools/dependency-freeze-contract.json:368	438fb513a62496c4	m=1	"sources.json": "438fb513a62496c41179ead3ea2a55a69ff4ce1fd191c3a7ebccb10651a8dc73",
+MATCH	corpus/tools/dependency-freeze-contract.json:369	73063a863a68fc4f	m=1	"timeline.json": "73063a863a68fc4feae073ce74cfa9e5fddb4f9cc4060d12b333d495a255895b"
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:447	337f0fa52b02626b	m=0	"revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+UNMATCHED	corpus/tools/dependency-freeze-contract.json:461	5ecf84e19121ea12	m=0	"content_sha256": "5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0",
+MATCH	corpus/tools/dependency-freeze-contract.json:463	32efc78f70e6de4f	m=1	"README.md": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+MATCH	corpus/tools/dependency-freeze-contract.json:464	c1099d0ee9eece24	m=1	"claim-excerpt-map.md": "c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba",
+MATCH	corpus/tools/dependency-freeze-contract.json:465	37517e5f3dc66819	m=200	"contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+MATCH	corpus/tools/dependency-freeze-contract.json:466	db2d8e5d3866009b	m=2	"entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+MATCH	corpus/tools/dependency-freeze-contract.json:467	29e384bf2eb2ab80	m=1	"fictional-excerpts.md": "29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de",
+MATCH	corpus/tools/dependency-freeze-contract.json:468	58f5390e5928ebad	m=7	"inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+MATCH	corpus/tools/dependency-freeze-contract.json:469	c279254bc7de0636	m=6	"relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+MATCH	corpus/tools/dependency-freeze-contract.json:470	b5edc2fd3c2e3d4f	m=7	"source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+MATCH	corpus/tools/dependency-freeze-contract.json:471	32ee15b1f3d72d94	m=1	"sources.json": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+MATCH	corpus/tools/dependency-freeze-contract.json:472	eb24e0848e597efa	m=1	"timeline.json": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af"
+UNMATCHED-HIST	corpus/tools/dependency-freeze-contract.json:689	d422a9b3d95c4e0b	m=0	"provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-own
+UNMATCHED-HIST	corpus/tools/dependency-freeze-contract.json:689	60dba0c2aa344860	m=0	"provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-own
+UNMATCHED-HIST	corpus/tools/dependency-freeze-contract.json:689	2393934237ea0763	m=0	"provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-own
+UNMATCHED-HIST	corpus/tools/dependency-freeze-contract.json:689	dd4df1b36a64b513	m=0	"provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-own
+UNMATCHED-HIST	corpus/tools/dependency-freeze-contract.json:689	3c922d20a01bbd3f	m=0	"provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-own
+UNMATCHED-HIST	corpus/tools/dependency-freeze-contract.json:689	59a0f4fa3d4a47e0	m=0	"provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-own
+UNMATCHED-HIST	corpus/tools/dependency-freeze-contract.json:689	37a425b97af658d7	m=0	"provenance_note": "pins.c3red removed at r96 closure (adjudication condition C-1): it was written by verifier seat V41's --freeze probe into this producer-owned contract (byte-own
+UNMATCHED_COUNT 42

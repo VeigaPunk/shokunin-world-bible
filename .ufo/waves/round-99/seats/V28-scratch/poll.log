@@ -1,0 +1,43 @@
+POLL-START 22:02:04
+try 1 22:02:04 tool=65c1ae309385 contract=153ebc5b2092 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: CONTRACT-UNCHANGED REPORT:S1 REPORT:S2
+try 2 22:02:24 tool=65c1ae309385 contract=153ebc5b2092 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: CONTRACT-UNCHANGED REPORT:S1 REPORT:S2
+try 3 22:02:44 tool=65c1ae309385 contract=153ebc5b2092 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: CONTRACT-UNCHANGED REPORT:S1 REPORT:S2
+try 4 22:03:04 tool=65c1ae309385 contract=153ebc5b2092 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: CONTRACT-UNCHANGED REPORT:S1 REPORT:S2
+try 5 22:03:25 tool=1728ed892442 contract=153ebc5b2092 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: CONTRACT-UNCHANGED REPORT:S1 REPORT:S2
+try 6 22:03:45 tool=1728ed892442 contract=153ebc5b2092 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: CONTRACT-UNCHANGED REPORT:S1 REPORT:S2
+try 7 22:04:05 tool=1728ed892442 contract=153ebc5b2092 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: CONTRACT-UNCHANGED REPORT:S1 REPORT:S2
+try 8 22:04:25 tool=1728ed892442 contract=73b28933f148 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 9 22:04:45 tool=1728ed892442 contract=8f9c1f531614 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 10 22:05:05 tool=1728ed892442 contract=8f9c1f531614 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 11 22:05:25 tool=1728ed892442 contract=8f9c1f531614 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 12 22:05:45 tool=1728ed892442 contract=8f9c1f531614 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 13 22:06:05 tool=1728ed892442 contract=8f9c1f531614 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 14 22:06:25 tool=1728ed892442 contract=8f9c1f531614 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 15 22:06:45 tool=1728ed892442 contract=8f9c1f531614 readme=294dd56f29ce skill=22ffaa822ec7 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+POLL-RESUME 22:11:39 after tool-timeout at try 15
+try 16 22:11:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 17 22:11:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 18 22:12:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 19 22:12:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 20 22:12:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 21 22:13:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 22 22:13:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 23 22:13:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 24 22:14:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 25 22:14:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 26 22:14:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 27 22:15:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 28 22:15:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 29 22:15:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 30 22:16:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 31 22:16:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 32 22:16:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 33 22:17:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 34 22:17:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 35 22:17:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 36 22:18:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 37 22:18:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 38 22:18:59 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 39 22:19:19 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+try 40 22:19:39 tool=6f81f8be1974 contract=8c2561b043c2 readme=294dd56f29ce skill=22ffaa822ec7 pins=10 s1=ABSENT s2=ABSENT missing: REPORT:S1 REPORT:S2
+POLL-EXHAUSTED 22:19:59

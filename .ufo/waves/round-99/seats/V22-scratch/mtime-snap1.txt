@@ -1,0 +1,23 @@
+2026-10-18T01:02:36Z
+1792285324 corpus/tools/dependency_freeze.py
+1792280016 corpus/tools/dependency-freeze-contract.json
+1792283525 corpus/tools/README.md
+1792283663 SKILL.md
+1792285256 corpus/fixtures/r99-window-lapse
+1792283770 corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+1792283770 corpus/fixtures/r99-window-lapse/contradictions.json
+1792283770 corpus/fixtures/r99-window-lapse/entities.json
+1792285273 corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+1792283770 corpus/fixtures/r99-window-lapse/inspiration-note.md
+1792283770 corpus/fixtures/r99-window-lapse/README.md
+1792283770 corpus/fixtures/r99-window-lapse/relations.json
+1792283770 corpus/fixtures/r99-window-lapse/source-excerpt.md
+1792285273 corpus/fixtures/r99-window-lapse/sources.json
+1792285273 corpus/fixtures/r99-window-lapse/timeline.json
+stat: cannot statx 'corpus/knowledge/r99-gate-blind-spot-table.md': No such file or directory
+stat: cannot statx 'corpus/knowledge/r99-lapse-scope-note.md': No such file or directory
+--- reports ---
+-rw-r--r-- 1 vgpnk vgpnk 5069 Oct 17 22:01 .ufo/waves/round-99/seats/S3-fixture-author.md
+--- poll log tail ---
+try=1 t=2026-10-18T01:02:17Z present=[ S3-fixture-author.md] missing=[ S1-freeze-hygiene.md S2-tools-docs.md S4-fixture-docs.md S5-knowledge-notes.md]
+arts: OK:corpus/tools/dependency_freeze.py OK:corpus/tools/dependency-freeze-contract.json OK:corpus/tools/README.md OK:SKILL.md OK:corpus/fixtures/r99-window-lapse/README.md OK:corpus/fixtures/r99-window-lapse/claim-excerpt-map.md OK:corpus/fixtures/r99-window-lapse/entities.json OK:corpus/fixtures/r99-window-lapse/timeline.json OK:corpus/fixtures/r99-window-lapse/sources.json OK:corpus/fixtures/r99-window-lapse/relations.json OK:corpus/fixtures/r99-window-lapse/contradictions.json OK:corpus/fixtures/r99-window-lapse/fictional-excerpts.md OK:corpus/fixtures/r99-window-lapse/inspiration-note.md OK:corpus/fixtures/r99-window-lapse/source-excerpt.md MISS:corpus/knowledge/r99-gate-blind-spot-table.md MISS:corpus/knowledge/r99-lapse-scope-note.md

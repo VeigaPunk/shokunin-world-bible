@@ -1,0 +1,811 @@
+{
+  "live_tool_sha_start": "6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067",
+  "live_contract_sha_start": "8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628",
+  "live_tool_sha_end": "6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067",
+  "live_contract_sha_end": "8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628",
+  "s1_reports": [],
+  "results": [
+    {
+      "case": "clean-copy",
+      "fixture": "r88-m3-maya-cluster",
+      "exit": 0,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nDIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "clean-copy",
+      "fixture": "r94-paired-crossing",
+      "exit": 0,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nDIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r94-paired-crossing"
+      ]
+    },
+    {
+      "case": "clean-copy",
+      "fixture": "r95-crossing-aftermath",
+      "exit": 0,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nDIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "clean-copy",
+      "fixture": "r96-crossing-response",
+      "exit": 0,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nDIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r96-crossing-response"
+      ]
+    },
+    {
+      "case": "clean-copy",
+      "fixture": "r97-crossing-acknowledgment",
+      "exit": 0,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nDIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r97-crossing-acknowledgment"
+      ]
+    },
+    {
+      "case": "clean-copy",
+      "fixture": "r98-clerk-filing",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r88-m3-maya-cluster",
+      "file": "README.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nFINDING DIGEST-MISMATCH: content digest 6cea86c0e748e56d3f57506c2b1d5655d17227b3afe04e47a1549610e94f2b56 != pin acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae; changed: README.md (sha256 55c9ba57ad7af5db0320fdc09142588c363c8b726d5ae1023dc01264f29b857c -> dccd8e6f068d0fb8d08263431aa8589d8b759db70244023e16ad5174c956e442); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r88-m3-maya-cluster",
+      "file": "claim-excerpt-map.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nFINDING DIGEST-MISMATCH: content digest a8bfaa95177dd0b4f9903f76df64e5516ff8b260a8b6ab2deded6a7d0146b120 != pin acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae; changed: claim-excerpt-map.md (sha256 b3b79fe5b5b9272b898b5714291739503c4250c415b3959032fcdba84a73fd43 -> bf3a3e47d284ad044f7a3ef4f16adaa59145213dd9e2e14409a6129c450ebc64); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r88-m3-maya-cluster",
+      "file": "fictional-excerpts.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nFINDING DIGEST-MISMATCH: content digest 7f3a943c81c6e25cfd7bceeaf39c488ff610310f75d75fd6845c22bf7e21000d != pin acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae; changed: fictional-excerpts.md (sha256 e456bb1204b88792d4fe6396e9e8b0deb9ff6f47e1821b0e875738431b9bda89 -> 0dffad3e85585a4cb345c1536c81dfa4529575b4dbfca4445ac6d7a745de4f73); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r88-m3-maya-cluster",
+      "file": "inspiration-note.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nFINDING DIGEST-MISMATCH: content digest 6b8d13aab275ebced3bebe5c58c512ef74b4ee19c991a0d8cdabfe629154752f != pin acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> 4b1f11f68e1015f0150352325397770c54fbc4990b470ffca19685efdbb834fc); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r88-m3-maya-cluster",
+      "file": "source-excerpt.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nFINDING DIGEST-MISMATCH: content digest ae77b80281156eb8951fd59eed0ff9ccd0d9596a88d9ff11c68f0eb08736bdb5 != pin acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 0c7cb81d915f0e7d570b6aa8b3ddabac352da7a2798dbbb6b4b8eca57637eb53); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r94-paired-crossing",
+      "file": "README.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 1ce076be0c6959e39e50487dbd116a3b14dafa2153fdcb2b084434aa4d4e12b0 != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: README.md (sha256 36796479658cc4eaa95ac50cd38713a934df56d3c430f10b1bab6211ff2a360a -> e9f7510723a9112fd59a644b77770ef5eaf7382a1d9c154e61ad4b2fe8725a2c); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r94-paired-crossing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r94-paired-crossing",
+      "file": "claim-excerpt-map.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 212660592fcdfa0f13dbec6262ce6e01cec5a4741dd041c2644c077c35168e80 != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: claim-excerpt-map.md (sha256 ed9527c551049a6964adc872fbff722b4bdd6a53aa8713fbb6a5d92254e89a47 -> 3a0f7adb00d770d4d8ab0f8b4b32533eab6eb14f33521c030f5157f72d6eebb7); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r94-paired-crossing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r94-paired-crossing",
+      "file": "fictional-excerpts.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 52f13ad2284c2515fda8ecd1eac5443aed8ab31ef574375f84a2a61f3598e2c1 != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: fictional-excerpts.md (sha256 585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2 -> 441b00a47954b0093675694dd1a41b9b38de9473600b68d54cc95591f37938a8); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r94-paired-crossing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r94-paired-crossing",
+      "file": "inspiration-note.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 487fa105c529ec76250b3e77eb3520d3cb87cbd6b2307b535f85d4986d00b1f5 != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> 4b1f11f68e1015f0150352325397770c54fbc4990b470ffca19685efdbb834fc); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r94-paired-crossing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r94-paired-crossing",
+      "file": "source-excerpt.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nFINDING DIGEST-MISMATCH: content digest cb72ef77de8e6a6d66ec9a3c80dbc2185daf3fd59095d8a0788cac34303a459b != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 0c7cb81d915f0e7d570b6aa8b3ddabac352da7a2798dbbb6b4b8eca57637eb53); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r94-paired-crossing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r95-crossing-aftermath",
+      "file": "README.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 7e7365f62e396318eb722cd71b65b4b45e3e669147414f9a1560e78ba86cbdfe != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: README.md (sha256 9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b -> 51ec1e75dc09fe97da4b3bb9693e65078538b64055270d70ce481ac5c6a5a9b8); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r95-crossing-aftermath",
+      "file": "claim-excerpt-map.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 50a907b9143cc00eb754c54336129aee52ee95b344076536106d30a9a50d4720 != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: claim-excerpt-map.md (sha256 80440d61122488a267a4f0a58a55cb54d89c037d93160f1123e5fb3b2f396f61 -> c39be890baaaf739ec2a6e92875a668e35ca9eae3e610041e8ae2222067a80de); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r95-crossing-aftermath",
+      "file": "fictional-excerpts.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 2d4fd9f19cec11c4fa1873185d69026f0516696ca9e9ccff110e2d239a8f5d1e != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> 504076d322bbde50cfa6b07e790a3f2b9e2ad9e6bc89c0d5f78ed936436def55); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r95-crossing-aftermath",
+      "file": "inspiration-note.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d34d736b04ccaf540227e11e571c1909729b9c8e22225b96bd27b2e9575d81aa != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> 4b1f11f68e1015f0150352325397770c54fbc4990b470ffca19685efdbb834fc); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r95-crossing-aftermath",
+      "file": "source-excerpt.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 3a7efb9cb1a1dc63ae0b29c9581c34bb889a0914772f960b240a7674a2ac6b4e != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 0c7cb81d915f0e7d570b6aa8b3ddabac352da7a2798dbbb6b4b8eca57637eb53); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r96-crossing-response",
+      "file": "README.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 3682c78defeb6d7e9ed8597ddaf3d06cd6ec2495d3b7d5fa2ac231c42878255b != pin 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c; changed: README.md (sha256 ff52ced48bf4214721f248328d76da64a42773d44e78154ef1eaf6eb3558c456 -> 67cd094e32986ee2b93b02ad7edba931743ced29038aa4ec81c7dc37f033a158); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r96-crossing-response"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r96-crossing-response",
+      "file": "claim-excerpt-map.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d7a999ad81f45c43401e0bf20c7ae3ed6723d39ceed0606e0f3c21d518b9fe57 != pin 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c; changed: claim-excerpt-map.md (sha256 e851f068cfd7ed02c97054df18729c4c5a9b8bf60d99d7c9116f427d765440de -> 8baea983e9c64d12731a151a6cc6dd307c9918fa568c3e0a1a15f0137e3b8b85); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r96-crossing-response"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r96-crossing-response",
+      "file": "fictional-excerpts.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 177c9f5619bd3992db260ec2d9e58954ff6412cc3feac5c36cd3ed856036287e != pin 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c; changed: fictional-excerpts.md (sha256 06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3 -> 0d61ee567737881935fe9ea9452f86d71f4e06cfdb6c0b9f09888d88a4df8984); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r96-crossing-response"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r96-crossing-response",
+      "file": "inspiration-note.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 029bcbef7b8e77ecec16b8dac5ed306168c56915e11c15a2f759b705610768c5 != pin 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> 4b1f11f68e1015f0150352325397770c54fbc4990b470ffca19685efdbb834fc); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r96-crossing-response"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r96-crossing-response",
+      "file": "source-excerpt.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 1e8902888ca90d5360dcd520bc4b07948078e0df16256b657501a7d70b731b8a != pin 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 0c7cb81d915f0e7d570b6aa8b3ddabac352da7a2798dbbb6b4b8eca57637eb53); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r96-crossing-response"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r97-crossing-acknowledgment",
+      "file": "README.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c4f9989cc0a02908b2ebdc045c3031cbb8182e26bd37c919d1496c28c05feaaf != pin a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54; changed: README.md (sha256 d9387b7d73264dfc6c01d27cc6bf24c58ef6bdb4461d2ae8fbfdb6376d9e019f -> 81283f8d7155deb5b79df777389677982e8a07b4e989d7fa434ab640747f8d69); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r97-crossing-acknowledgment"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r97-crossing-acknowledgment",
+      "file": "claim-excerpt-map.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 31932ec864baba0fda5d247a8a964d3a97748f7498111982836751f80baebb6d != pin a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54; changed: claim-excerpt-map.md (sha256 49d4834e124fa6cfaa1a73cd5d1a7bc2cb59711c6233b418fe7485a17eedc94f -> d052e6beb7bd2b6efecf7bedfa33f9d02eb83aacac4c6caec6c05913abec8e82); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r97-crossing-acknowledgment"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r97-crossing-acknowledgment",
+      "file": "fictional-excerpts.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nFINDING DIGEST-MISMATCH: content digest d95c8823983dfea4aef21f04d478e45c42bda27550f5826ea42696f58615ccec != pin a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54; changed: fictional-excerpts.md (sha256 8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c -> ea6570882f95a81f66236b06edefecc8293a5c4004d39a6a9cd51087dfc507ec); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r97-crossing-acknowledgment"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r97-crossing-acknowledgment",
+      "file": "inspiration-note.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 56a54289fe6466fa8a440efe9a36404266d89eb91fae12548fc794544f000fad != pin a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> 4b1f11f68e1015f0150352325397770c54fbc4990b470ffca19685efdbb834fc); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r97-crossing-acknowledgment"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r97-crossing-acknowledgment",
+      "file": "source-excerpt.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 6b3c554ac672f9a5bd443d7863b59ba7da57b4af6f8f16fe9909e24babd9f49e != pin a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 0c7cb81d915f0e7d570b6aa8b3ddabac352da7a2798dbbb6b4b8eca57637eb53); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r97-crossing-acknowledgment"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r98-clerk-filing",
+      "file": "README.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 2f63bab81919100d10a17fa9cf60f7775ae780dd72211735ceb802ab52a93b64 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> 33002e425ab6c6d4658dadd8b471848fc0c4acba2653ddf91f7fe2d0bf2e0771); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r98-clerk-filing",
+      "file": "claim-excerpt-map.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest f0332c79c4b75e2c88fe95beba94294893347d1a81a544e316f333c6ffc317bc != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> affac51c3c06adf56f029cc265fd0275434967a5aec618b205dc9f15bbef8c01); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r98-clerk-filing",
+      "file": "fictional-excerpts.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 6998ce39bd2d7f2ce70a867af01e7008fb1fa8ab6a5f8406456e478a25b7ace7 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> 4c73ebefff28c1e4c95befa7e00991b3b9a1c1f302915464b46a6a814f24f4f3); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r98-clerk-filing",
+      "file": "inspiration-note.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest e3c608ead6ced20cc394176fb5415d14018f1fb35d7ffd2dab8a12a7ff22fe89 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> 4b1f11f68e1015f0150352325397770c54fbc4990b470ffca19685efdbb834fc); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "md-interior",
+      "fixture": "r98-clerk-filing",
+      "file": "source-excerpt.md",
+      "delta": "insert V62 after byte 0",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 46235d22a64c11a0c3766b351fc786f006962f881a6781a8493a24b5a03a652c != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 0c7cb81d915f0e7d570b6aa8b3ddabac352da7a2798dbbb6b4b8eca57637eb53); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "wording-removal",
+      "fixture": "r95-crossing-aftermath",
+      "file": "fictional-excerpts.md",
+      "delta": "first 'depends on' -> 'follows'",
+      "exit": 2,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest b97a3b80df29110f6f369c7bd52ee09cd733e46f3f7d84420563c931744f7dca != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> b0725e215a8c51bd0dda5b384396913a6d8ea36e58caa928d5b0315d47fc1aae); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "wording-removal",
+      "fixture": "r98-clerk-filing",
+      "file": "fictional-excerpts.md",
+      "delta": "first 'depends on' -> 'follows'",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c811669ea2534d48122939e270599376160b8f5936eecb2e766c141464b6808b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "two-file",
+      "fixture": "r88-m3-maya-cluster",
+      "files": [
+        "README.md",
+        "fictional-excerpts.md"
+      ],
+      "delta": "append newline+V62-TWO to both",
+      "exit": 2,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nFINDING DIGEST-MISMATCH: content digest 1171e8a1becb6d1c9a28b3de36eebf996a472379a34b238ad90d28d9b140e30b != pin acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae; changed: README.md (sha256 55c9ba57ad7af5db0320fdc09142588c363c8b726d5ae1023dc01264f29b857c -> f711001a99d0c0c9eec1f6b6f5f5a7a5905e859b6e75964cce18bad83a5229c0), fictional-excerpts.md (sha256 e456bb1204b88792d4fe6396e9e8b0deb9ff6f47e1821b0e875738431b9bda89 -> 39bf13418ee5b34643fc473e6aab2dcc313e270d942eec81c357f9ba3961742f); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "two-file",
+      "fixture": "r94-paired-crossing",
+      "files": [
+        "README.md",
+        "fictional-excerpts.md"
+      ],
+      "delta": "append newline+V62-TWO to both",
+      "exit": 2,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 9d670f9175d361bd025d4503c7d3e0b7bc1ec47cd623cfe1a1f1e896bd59a2b9 != pin 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef; changed: README.md (sha256 36796479658cc4eaa95ac50cd38713a934df56d3c430f10b1bab6211ff2a360a -> df7daeb3e2a3656f2c9d79e62ff122a9cd348fa3af8b5c42942e477660184644), fictional-excerpts.md (sha256 585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2 -> 0b833032fcb1c74255c61f26d0cbd0f3ee1e506386cfbd1b3ca71debcfc2afad); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r94-paired-crossing"
+      ]
+    },
+    {
+      "case": "two-file",
+      "fixture": "r95-crossing-aftermath",
+      "files": [
+        "README.md",
+        "fictional-excerpts.md"
+      ],
+      "delta": "append newline+V62-TWO to both",
+      "exit": 2,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 5777800f4410ca5eee86c7f0be0733f809548c1a3c555eb4952c08ecd7f3e35d != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: README.md (sha256 9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b -> b51780509605bfd5c887c650bcc841d0789398f944bc29bd30fa845318ae9c1c), fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> 9f144ad0f3a5aa5dc8ae8bddddea75ef5b94fbf0cd40f54230df134f51298dbe); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r95-crossing-aftermath"
+      ]
+    },
+    {
+      "case": "two-file",
+      "fixture": "r96-crossing-response",
+      "files": [
+        "README.md",
+        "fictional-excerpts.md"
+      ],
+      "delta": "append newline+V62-TWO to both",
+      "exit": 2,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 419493ab082b4b07f2a9908fe9d083241967cfd6d8e340e367a2f3ef2f65e47a != pin 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c; changed: README.md (sha256 ff52ced48bf4214721f248328d76da64a42773d44e78154ef1eaf6eb3558c456 -> 988383ed9668203567f1d7d0569f6422a2ec2163bfffcd459f7dd567e07b9dc2), fictional-excerpts.md (sha256 06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3 -> b7abe0a58c67dfefa6b00e67c765eadc9b316694c4c9a79781c178fa11f35c78); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r96-crossing-response"
+      ]
+    },
+    {
+      "case": "two-file",
+      "fixture": "r97-crossing-acknowledgment",
+      "files": [
+        "README.md",
+        "fictional-excerpts.md"
+      ],
+      "delta": "append newline+V62-TWO to both",
+      "exit": 2,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nFINDING DIGEST-MISMATCH: content digest a96ab270c828dfef7e70799ba78f09938373374c6562143488860aa8fd8bd4f8 != pin a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54; changed: README.md (sha256 d9387b7d73264dfc6c01d27cc6bf24c58ef6bdb4461d2ae8fbfdb6376d9e019f -> 9a6e5613d34d37eec0f23d95a473f5315568a6d51a7850ab3a457de24feb09f5), fictional-excerpts.md (sha256 8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c -> fb4bec65a050b7444c206c417f5f30c7adcbf67c431a73f2e13c5974b39a1593); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r97-crossing-acknowledgment"
+      ]
+    },
+    {
+      "case": "two-file",
+      "fixture": "r98-clerk-filing",
+      "files": [
+        "README.md",
+        "fictional-excerpts.md"
+      ],
+      "delta": "append newline+V62-TWO to both",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 51dbd6788c22901dc611cca67d29c4c29239ea4c8e0df84c20499059fd09487a != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> 227c0ded19bb4981c7ffae247146694c0e5775c5a5b6d9f35cbcef3c8e7832a2), fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> 6feb5c36f26f9fe5a61765ae902cbffbacc98faab717ae3c893afd5550f09093); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "five-md",
+      "fixture": "r98-clerk-filing",
+      "files": [
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "delta": "append newline to all five",
+      "exit": 2,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest a4c9f7fe048280798385d71ab7c285bb13599e1c6cc0b48f32ce7cfe7a3b6919 != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: README.md (sha256 32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926 -> d2a1d6596c8e875bd54fd17d6695d7e90945867a724bc116daada2f653c48ffa), claim-excerpt-map.md (sha256 c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba -> 76d3db9831b7d7e66f5a33584a62417d394ccb8a736f64461c4c41d83be375c5), fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> a6bff890dd8821e255896ccdf63426c725a2951a8a9111deed067339dd21ad2f), inspiration-note.md (sha256 58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37 -> a1be0d5b00e0c695acbebbdee55d1fc00e8956e53f71ec8f6fde1157c055b3af), source-excerpt.md (sha256 b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd -> 5426ef14362d94f3388ec24a3d29973add977e369a368271a3ae50c4f0dfac3e); fixture bytes changed outside the frozen inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "perm-readable",
+      "fixture": "r98-clerk-filing",
+      "file": "README.md",
+      "mode_before": "0o644",
+      "mode_during": "0o600",
+      "mode_after": "0o644",
+      "sha_unchanged": true,
+      "sha": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "perm-readable",
+      "fixture": "r98-clerk-filing",
+      "file": "claim-excerpt-map.md",
+      "mode_before": "0o644",
+      "mode_during": "0o600",
+      "mode_after": "0o644",
+      "sha_unchanged": true,
+      "sha": "c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "perm-readable",
+      "fixture": "r98-clerk-filing",
+      "file": "fictional-excerpts.md",
+      "mode_before": "0o644",
+      "mode_during": "0o600",
+      "mode_after": "0o644",
+      "sha_unchanged": true,
+      "sha": "29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "perm-readable",
+      "fixture": "r98-clerk-filing",
+      "file": "inspiration-note.md",
+      "mode_before": "0o644",
+      "mode_during": "0o600",
+      "mode_after": "0o644",
+      "sha_unchanged": true,
+      "sha": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "perm-readable",
+      "fixture": "r98-clerk-filing",
+      "file": "source-excerpt.md",
+      "mode_before": "0o644",
+      "mode_during": "0o600",
+      "mode_after": "0o644",
+      "sha_unchanged": true,
+      "sha": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "perm-unreadable",
+      "fixture": "r98-clerk-filing",
+      "file": "README.md",
+      "mode_before": "0o644",
+      "mode_during": "0o0",
+      "mode_restored": "0o644",
+      "exit": 2,
+      "stdout": "FINDING FILE-MISSING: README.md is unreadable: [Errno 13] Permission denied: '/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing/README.md'\nRESULT ERROR\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "mtime-only",
+      "fixture": "r98-clerk-filing",
+      "file": "source-excerpt.md",
+      "mtime_changed": true,
+      "before": 1792286817252341259,
+      "after": 1792286817432863996,
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "unpinned-md",
+      "fixture": "r88-m3-maya-cluster",
+      "file": "symbolism-clause-map.md",
+      "delta": "append V62-UNPINNED",
+      "exit": 0,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nDIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r88-m3-maya-cluster"
+      ]
+    },
+    {
+      "case": "same-bytes-rewrite",
+      "fixture": "r98-clerk-filing",
+      "file": "inspiration-note.md",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/fixtures/r98-clerk-filing"
+      ]
+    },
+    {
+      "case": "self-test",
+      "cmd": [
+        "/usr/bin/python3",
+        "/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V62-scratch/mirror/corpus/tools/dependency_freeze.py",
+        "--self-test"
+      ],
+      "exit": 0,
+      "stdout": "CASE clean: exit=0 expected=0 findings=[] ok\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 18/18\nRESULT PASS\n",
+      "stderr": ""
+    }
+  ]
+}

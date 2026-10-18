@@ -1,0 +1,36 @@
+[
+  {
+    "id": "r89-c1-invalid-tick-mira",
+    "kind": "character",
+    "name": "Invalid Tick Mira",
+    "first_appearance": "r89-c1-invalid-tick-source",
+    "claims": [{"statement": "Fixture holder", "source_id": "r89-c1-invalid-tick-source"}]
+  },
+  {
+    "id": "r89-c1-invalid-tick-harbor",
+    "kind": "character",
+    "name": "Invalid Tick Harbor",
+    "first_appearance": "r89-c1-invalid-tick-source",
+    "claims": [{"statement": "Fixture holder", "source_id": "r89-c1-invalid-tick-source"}]
+  },
+  {
+    "id": "r89-c1-invalid-tick-tower",
+    "kind": "character",
+    "name": "Invalid Tick Tower",
+    "first_appearance": "r89-c1-invalid-tick-source",
+    "claims": [{"statement": "Fixture holder", "source_id": "r89-c1-invalid-tick-source"}]
+  },
+  {
+    "id": "r89-c1-invalid-tick-seal",
+    "kind": "item",
+    "name": "Invalid Tick Seal",
+    "first_appearance": "r89-c1-invalid-tick-source",
+    "claims": [{"statement": "Fixture item", "source_id": "r89-c1-invalid-tick-source"}],
+    "provenance": [
+      {"tick": 0, "from_holder": null, "to_holder": "r89-c1-invalid-tick-mira", "source_id": "r89-c1-invalid-tick-source"},
+      {"tick": -1, "from_holder": "r89-c1-invalid-tick-mira", "to_holder": "r89-c1-invalid-tick-harbor", "source_id": "r89-c1-invalid-tick-source"},
+      {"tick": 2, "from_holder": "r89-c1-invalid-tick-harbor", "to_holder": "r89-c1-invalid-tick-tower", "source_id": "r89-c1-invalid-tick-source"},
+      {"tick": 3, "from_holder": "r89-c1-invalid-tick-tower", "to_holder": "r89-c1-invalid-tick-mira", "source_id": "r89-c1-invalid-tick-source"}
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+
+## README.md (29 lines)
+  9: ['verdict'] | The inherited paired-clock entries remain distinct tick-9 events: Aru's north lantern at Quiet Rise and Evin's south bell at Salt Court. The inherited tick-10 meeting at the Chalk Stair remains ordered after and explicit
+  11: ['resolution', 'reconcil', 'finding', 'verdict', 'winner', 'breach'] | The clerk bound is explicit in the record: the filing note is an institutional filing record that asserts no finding and no resolution; it reaches no verdict, reconciles nothing, and selects no winner between the two fir
+  15: ['finding'] | `first_appearance: crossing-minute` identifies the source that first presents Chalk Stair as a specific place in the JSON bible, not the earliest occurrence of the words: the inherited r88 verse already uses “chalk stair
+
+## claim-excerpt-map.md (68 lines)
+  54: ['reconcil', 'finding', 'verdict', 'winner'] | The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` and `evin-ninth-bell`); the inherited tick-11 aftermath event 
+  56: ['breach'] | J15's anchor is the tick-11 waiting sentence (line 26); its declared span 22-31 is exactly the inherited aftermath section, whose remaining quoted lines carry the non-arrival (`Evin did not come.`, line 27), the crossing
+  58: ['accusation', 'winner', 'breach'] | J16's anchor is the tick-12 response sentence (line 37); its declared span 33-42 is exactly the appended response section, whose remaining quoted lines carry the no-accusation assertion (`I make no accusation against Aru
+  60: ['reconcil', 'accusation', 'winner'] | J17's anchor is the tick-13 receipt sentence (line 48); its declared span 44-53 is exactly the appended acknowledgment section, whose remaining quoted lines carry the retained account (`I hold to my own account; both acc
+  64: ['resolution', 'finding', 'verdict'] | J19's anchor is the filing sentence (line 59); its declared span 59-60 covers the filing sentence and the self-naming sentence that follows, whose remaining words carry the naming (`I am Maren, clerk of the Chalk Stair r
+  66: ['resolution', 'reconcil', 'finding', 'verdict'] | J20's anchor is the tick-14 filing sentence (line 59); its declared span 55-64 is exactly the appended clerk-filing section, whose remaining quoted lines carry the self-naming and OPEN record (line 60), the no-finding as
+  68: ['verdict'] | `support_check.py` checks declared row inventory, fixed-string anchors, spans, and R9 mode; its receipt is lexical preflight, not manual whole-claim entailment or a verdict on source authenticity, truth, rights, permissi
+
+## contradictions.json (1 lines)
+
+## entities.json (74 lines)
+
+## fictional-excerpts.md (76 lines)
+  29: ['breach'] | > I assert no other duty, no breach, and no obligation beyond this crossing.
+  31: ['breach'] | Scope: this appended section is Aru's first-person report of one non-arrival at the Chalk Stair. It asserts no breach and no perpetual or continuing obligation; the crossing-scoped agreement above is unchanged, and the r
+  38: ['accusation'] | > I make no accusation against Aru.
+  39: ['winner'] | > I select no winner between our two accounts.
+  42: ['accusation', 'winner', 'breach'] | Scope: this appended section is Evin's first-person report of one crossing occasion. It asserts no accusation and no breach, selects no winner, and does not resolve the two first-person accounts against each other; the c
+  50: ['accusation', 'winner'] | > I make no accusation against Evin, and I select no winner between us.
+  51: ['reconcil'] | > I assert no reconciliation, no new duty, and no obligation beyond this crossing.
+  53: ['reconcil', 'accusation', 'winner'] | Scope: this appended section is Aru's first-person acknowledgment that he received Evin's response. It records receipt only; it asserts no accusation, no reconciliation, no winner between the two accounts, and no new dut
+  61: ['finding'] | > I assert no finding.
+  62: ['reconcil', 'verdict'] | > I reach no verdict and reconcile nothing.
+  64: ['resolution', 'reconcil', 'finding', 'verdict'] | Scope: this appended section is the harbor clerk's first-person filing record. It is an institutional filing only: it asserts no finding and no resolution, reaches no verdict, and reconciles nothing; the two first-person
+  74: ['resolution', 'blame', 'reconcil'] | > I record no resolution, assign no blame, and reconcile nothing.
+  76: ['resolution', 'blame', 'reconcil'] | Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that t
+
+## inspiration-note.md (21 lines)
+
+## relations.json (8 lines)
+
+## source-excerpt.md (7 lines)
+
+## sources.json (50 lines)
+  24: ['breach'] |     "reliability_note": "Newly authored fictional note; Aru reports waiting at the Chalk Stair through the agreed bell and that Evin did not come. It records one crossing occasion only and is not evidence of a breach, a 
+  30: ['accusation', 'winner', 'breach'] |     "reliability_note": "Newly authored fictional note; Evin reports being at Salt Court through the same agreed bell. It asserts no accusation against Aru, selects no winner, and states that both first-person accounts s
+  36: ['resolution', 'reconcil', 'accusation', 'winner'] |     "reliability_note": "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of
+  42: ['resolution', 'reconcil', 'finding', 'verdict', 'winner', 'breach'] |     "reliability_note": "Newly authored fictional note; the clerk reports filing both pending accounts at the Chalk Stair registry and recording the matter OPEN. It asserts no finding, no verdict, no reconciliation, and 
+  48: ['resolution', 'blame', 'reconcil', 'finding', 'winner', 'breach'] |     "reliability_note": "Newly authored fictional note; the clerk reports that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matte
+
+## timeline.json (87 lines)
+  40: ['breach'] |     "description": "At the Chalk Stair at tick 11, Aru reports waiting through the agreed bell and that Evin did not come; the note scopes the agreement to this crossing only and asserts no other duty or breach.",
+  51: ['accusation', 'winner'] |     "description": "Evin reports being at Salt Court through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved.",
+  62: ['reconcil', 'accusation', 'winner'] |     "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between t
+  73: ['resolution', 'finding'] |     "description": "At the Chalk Stair at tick 14, the clerk filed both pending accounts and recorded the matter OPEN, asserting no finding and no resolution.",

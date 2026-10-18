@@ -1,0 +1,24 @@
+{
+ "exhausted": true,
+ "last": {
+  "try": 40,
+  "at": "2026-10-17T22:33:19-0300",
+  "producer_missing": [
+   "S1-full-file-pins.md",
+   "S2-tools-docs.md",
+   "S5-knowledge-author.md"
+  ],
+  "artifacts_missing": [
+   "corpus/knowledge/r99-gate-blind-spot-table.md",
+   "corpus/knowledge/r99-lapse-scope-note.md"
+  ],
+  "receipt": false,
+  "v39_md": true,
+  "top_md": 40,
+  "top_md_excluding_self_cap": 127,
+  "receipt_sha": null,
+  "stable_receipt_polls": 0,
+  "stable_md_polls": 0
+ },
+ "at": "2026-10-17T22:33:19-0300"
+}

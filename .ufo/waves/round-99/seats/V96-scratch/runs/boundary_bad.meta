@@ -1,0 +1,4 @@
+CMD: python3 corpus/tools/boundary_doc_check.py --selftest
+START: 2026-10-17T22:13:03-03:00
+EXIT:1
+END: 2026-10-17T22:13:03-03:00

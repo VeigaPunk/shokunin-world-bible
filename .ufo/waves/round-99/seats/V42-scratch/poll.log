@@ -1,0 +1,122 @@
+TRY 1 22:26:38
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 2 22:26:58
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 3 22:27:18
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 4 22:27:38
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 5 22:27:58
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 6 22:28:18
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 7 22:28:38
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 8 22:28:58
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 9 22:29:18
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 10 22:29:38
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 11 22:29:58
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 12 22:30:18
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 13 22:30:38
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 14 22:30:58
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 15 22:31:18
+reports S3-fixture-author.md, S4-fixture-docs.md
+knowledge r99-gate-blind-spot-table.md ABSENT
+knowledge r99-lapse-scope-note.md ABSENT
+contract 8c2561b043c25db7 pins=['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing'] schema=2 pin_versions=[2] nfiles=[10] self_test=18
+tool 6f81f8be19742372 mtime=22:07:33 size=29104
+fixture b93209417a91:README.md d2fe20e581d1:claim-excerpt-map.md 37517e5f3dc6:contradictions.json db2d8e5d3866:entities.json fefebaf93d14:fictional-excerpts.md 58f5390e5928:inspiration-note.md c279254bc7de:relations.json b5edc2fd3c2e:source-excerpt.md 8c215b38dc02:sources.json 2cdb9fda5baa:timeline.json
+TRY 24 22:46:30 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 25 22:46:50 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 26 22:47:10 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 27 22:47:30 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 28 22:47:50 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 29 22:48:10 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 30 22:48:30 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 31 22:48:50 reports=['S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 32 22:49:10 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 33 22:49:30 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 34 22:49:50 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 35 22:50:10 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT'] skill_changed=False readme_changed=False
+TRY 36 22:51:46 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT']
+TRY 37 22:52:06 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT']
+TRY 38 22:52:26 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT']
+TRY 39 22:52:46 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT']
+TRY 40 22:53:06 reports=['S1-full-file-pins.md', 'S3-fixture-author.md', 'S4-fixture-docs.md'] k=['r99-gate-blind-spot-table.md:ABSENT', 'r99-lapse-scope-note.md:ABSENT']

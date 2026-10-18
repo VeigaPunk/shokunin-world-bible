@@ -1,0 +1,18 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && mkdir -p .ufo/waves/round-99/seats/V64-scratch
+LOG=.ufo/waves/round-99/seats/V64-scratch/poll.log
+echo "=== V64 poll start $(date -Is) prior_tries_approx=6 ===" >> "$LOG"
+for i in $(seq 7 40); do
+  note=corpus/knowledge/r99-lapse-scope-note.md
+  s5=$(ls .ufo/waves/round-99/seats/S5*.md 2>/dev/null | head -1)
+  if [ -f "$note" ] && [ -n "$s5" ]; then
+    echo "POLL_HIT try=$i $(date -Is) note=$note s5=$s5" | tee -a "$LOG"
+    stat -c '%y %s %n' "$note" "$s5" | tee -a "$LOG"
+    exit 0
+  fi
+  echo "ABSENT try=$i $(date -Is) note_exists=$([ -f "$note" ] && echo yes || echo no) s5=${s5:-none}" >> "$LOG"
+  sleep 20
+done
+echo "POLL_EXHAUSTED try=40 $(date -Is)" | tee -a "$LOG"
+exit 2

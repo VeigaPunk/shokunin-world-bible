@@ -1,0 +1,156 @@
+# sampler start 2026-10-17T22:01:33-0300 cadence=20s cap=900s seat=V54
+2026-10-17T22:01:33-0300 count=0 new=-
+2026-10-17T22:01:53-0300 count=1 new=S3-fixture-author.md
+2026-10-17T22:02:13-0300 count=1 new=-
+2026-10-17T22:02:33-0300 count=1 new=-
+2026-10-17T22:02:53-0300 count=2 new=V80-c2-prose-prefix.md
+2026-10-17T22:03:13-0300 count=2 new=-
+2026-10-17T22:03:33-0300 count=3 new=V68-adjacency-2.md
+2026-10-17T22:03:53-0300 count=3 new=-
+2026-10-17T22:04:13-0300 count=4 new=S4-fixture-docs.md
+2026-10-17T22:04:33-0300 count=4 new=-
+2026-10-17T22:04:53-0300 count=5 new=V10-c2-checker.md
+2026-10-17T22:05:13-0300 count=5 new=-
+2026-10-17T22:05:33-0300 count=6 new=V13-c2-anchors.md
+2026-10-17T22:05:53-0300 count=6 new=-
+2026-10-17T22:06:13-0300 count=6 new=-
+2026-10-17T22:06:33-0300 count=6 new=-
+2026-10-17T22:06:53-0300 count=6 new=-
+2026-10-17T22:07:13-0300 count=6 new=-
+2026-10-17T22:07:33-0300 count=6 new=-
+2026-10-17T22:07:53-0300 count=6 new=-
+2026-10-17T22:08:13-0300 count=7 new=V11-c2-inherited-equality.md
+2026-10-17T22:08:33-0300 count=7 new=-
+2026-10-17T22:08:53-0300 count=7 new=-
+2026-10-17T22:09:13-0300 count=7 new=-
+2026-10-17T22:09:33-0300 count=7 new=-
+2026-10-17T22:09:53-0300 count=7 new=-
+2026-10-17T22:10:13-0300 count=7 new=-
+2026-10-17T22:10:33-0300 count=7 new=-
+2026-10-17T22:10:53-0300 count=8 new=V77-c2-map-inventory.md
+2026-10-17T22:11:13-0300 count=9 new=V119-c2-anchors-3.md
+# SAMPLER_HOST_TIMEOUT gap after 22:11:13; restart sample 2026-10-17T22:19:53-0300
+2026-10-17T22:19:53-0300 count=14 CATCHUP=S3-fixture-author.md,S4-fixture-docs.md,V10-c2-checker.md,V105-c2-event-description.md,V109-c2-inherited-map-rows.md,V11-c2-inherited-equality.md,V119-c2-anchors-3.md,V13-c2-anchors.md,V41-anchor-replica-2.md,V47-byte-prefix-2.md,V68-adjacency-2.md,V77-c2-map-inventory.md,V80-c2-prose-prefix.md,V86-c2-no-new-entity.md
+# FILE S3-fixture-author.md mtime=22:01:40 size=5069
+# FILE S4-fixture-docs.md mtime=22:03:54 size=9303
+# FILE V10-c2-checker.md mtime=22:04:39 size=6894
+# FILE V105-c2-event-description.md mtime=22:11:49 size=9976
+# FILE V109-c2-inherited-map-rows.md mtime=22:14:24 size=5160
+# FILE V11-c2-inherited-equality.md mtime=22:11:54 size=13546
+# FILE V119-c2-anchors-3.md mtime=22:11:01 size=9125
+# FILE V13-c2-anchors.md mtime=22:05:32 size=12948
+# FILE V41-anchor-replica-2.md mtime=22:17:06 size=9792
+# FILE V47-byte-prefix-2.md mtime=22:15:20 size=14225
+# FILE V68-adjacency-2.md mtime=22:03:15 size=7930
+# FILE V77-c2-map-inventory.md mtime=22:10:52 size=8641
+# FILE V80-c2-prose-prefix.md mtime=22:02:52 size=7122
+# FILE V86-c2-no-new-entity.md mtime=22:12:15 size=9403
+# sampler restart 2026-10-17T22:19:53-0300 cadence=20s cap=1500s seen=14 seat=V54
+2026-10-17T22:19:53-0300 count=14 new=-
+2026-10-17T22:20:13-0300 count=14 new=-
+2026-10-17T22:20:33-0300 count=14 new=-
+2026-10-17T22:20:53-0300 count=14 new=-
+2026-10-17T22:21:13-0300 count=14 new=-
+2026-10-17T22:21:33-0300 count=14 new=-
+2026-10-17T22:21:53-0300 count=15 new=V12-c2-support-map.md
+2026-10-17T22:22:13-0300 count=15 new=-
+2026-10-17T22:22:33-0300 count=15 new=-
+2026-10-17T22:22:53-0300 count=17 new=V113-c2-inventory-line.md,V90-c2-editorial-rows.md
+2026-10-17T22:23:13-0300 count=17 new=-
+2026-10-17T22:23:33-0300 count=17 new=-
+2026-10-17T22:23:53-0300 count=17 new=-
+2026-10-17T22:24:13-0300 count=17 new=-
+2026-10-17T22:24:33-0300 count=18 new=V95-c2-lapse-wording.md
+2026-10-17T22:24:53-0300 count=18 new=-
+2026-10-17T22:25:13-0300 count=18 new=-
+2026-10-17T22:25:33-0300 count=18 new=-
+2026-10-17T22:25:53-0300 count=18 new=-
+2026-10-17T22:26:13-0300 count=19 new=V116-c2-clerk-continuity.md
+2026-10-17T22:26:33-0300 count=19 new=-
+2026-10-17T22:26:53-0300 count=20 new=V98-c2-table-citations.md
+2026-10-17T22:27:13-0300 count=20 new=-
+2026-10-17T22:27:33-0300 count=20 new=-
+2026-10-17T22:27:53-0300 count=20 new=-
+2026-10-17T22:28:13-0300 count=21 new=V33-verdict-adjacency.md
+2026-10-17T22:28:33-0300 count=21 new=-
+2026-10-17T22:28:53-0300 count=21 new=-
+2026-10-17T22:29:13-0300 count=22 new=V102-c1-doc-commands.md
+2026-10-17T22:29:33-0300 count=22 new=-
+2026-10-17T22:29:53-0300 count=23 new=V94-c1-two-mutation.md
+2026-10-17T22:30:13-0300 count=24 new=V56-fixture-readme.md
+2026-10-17T22:30:33-0300 count=26 new=V39-receipt.md,V48-relation-scope-2.md
+2026-10-17T22:30:53-0300 count=26 new=-
+2026-10-17T22:31:13-0300 count=26 new=-
+2026-10-17T22:31:33-0300 count=28 new=V122-c2-table-vs-skill.md,V44-c2-table-2.md
+2026-10-17T22:31:54-0300 count=29 new=V14-c2-whole-claim.md
+2026-10-17T22:32:14-0300 count=32 new=V108-c1-tamper-restore.md,V18-c2-table-completeness.md,V91-crosscheck-freshness.md
+2026-10-17T22:32:34-0300 count=35 new=V19-c2-note-review.md,V32-verdict-freshness.md,V64-c2-lapse-scope.md
+2026-10-17T22:32:54-0300 count=37 new=V115-c1-verify-vs-freeze.md,V84-pins-in-notes.md
+2026-10-17T22:33:14-0300 count=40 new=V07-c1-code-review.md,V89-c1-migration-preserved.md,V97-c1-selftest-isolation.md
+2026-10-17T22:33:34-0300 count=40 new=-
+2026-10-17T22:33:54-0300 count=41 new=V29-verdict-depth.md
+2026-10-17T22:34:14-0300 count=41 new=-
+2026-10-17T22:34:34-0300 count=41 new=-
+2026-10-17T22:34:54-0300 count=41 new=-
+2026-10-17T22:35:14-0300 count=41 new=-
+2026-10-17T22:35:34-0300 count=42 new=V60-table-row-format.md
+2026-10-17T22:35:54-0300 count=43 new=V26-operability.md
+2026-10-17T22:36:14-0300 count=45 new=V06-c1-refreeze-scope.md,V65-freshness-2.md
+2026-10-17T22:36:34-0300 count=45 new=-
+2026-10-17T22:36:54-0300 count=46 new=V88-freshness-3.md
+2026-10-17T22:37:14-0300 count=46 new=-
+2026-10-17T22:37:34-0300 count=48 new=V76-c1-usage-surface.md,V93-census-4.md
+2026-10-17T22:37:54-0300 count=50 new=V106-c1-chain-foreign-all.md,V17-c2-table-audit.md
+2026-10-17T22:38:14-0300 count=53 new=V21-preservation-mutations.md,V27-adjacency.md,V52-crosscheck-calibration.md
+2026-10-17T22:38:34-0300 count=54 new=V62-c1-markdown-tamper-2.md
+2026-10-17T22:38:54-0300 count=55 new=V112-c1-payload-docs.md
+2026-10-17T22:39:14-0300 count=55 new=-
+2026-10-17T22:39:34-0300 count=57 new=V111-c2-arc-summary.md,V49-support-regression.md
+2026-10-17T22:39:54-0300 count=58 new=V25-doc-parity.md
+2026-10-17T22:40:14-0300 count=59 new=V103-c2-note-crossrefs.md
+2026-10-17T22:40:34-0300 count=60 new=V57-knowledge-note.md
+2026-10-17T22:40:54-0300 count=62 new=V15-c2-anti-overclaim.md,V46-inherited-tools.md
+2026-10-17T22:41:14-0300 count=63 new=V40-census-replica-2.md
+2026-10-17T22:41:34-0300 count=64 new=V51-crosscheck-depth.md
+2026-10-17T22:41:54-0300 count=65 new=V82-crosscheck-operability.md
+2026-10-17T22:42:14-0300 count=67 new=V22-gates-boundary.md,V73-shonen-2.md
+2026-10-17T22:42:34-0300 count=68 new=V20-preservation-census.md
+2026-10-17T22:42:54-0300 count=68 new=-
+2026-10-17T22:43:14-0300 count=69 new=V35-shonen-format.md
+2026-10-17T22:43:34-0300 count=69 new=-
+2026-10-17T22:43:54-0300 count=70 new=V70-census-3.md
+2026-10-17T22:44:14-0300 count=71 new=V63-c2-chain-order.md
+2026-10-17T22:44:34-0300 count=71 new=-
+# SAMPLER2_HOST_TIMEOUT observed restart-check 2026-10-17T22:48:51-0300 live_count=80
+# sampler3 start 2026-10-17T22:50:29-0300 cadence=20s cap=600s seen=82
+2026-10-17T22:50:29-0300 count=82 new=-
+2026-10-17T22:50:49-0300 count=83 new=V28-verdict-calibration.md
+2026-10-17T22:51:09-0300 count=85 new=V31-verdict-operability.md,V66-doc-parity-2.md
+2026-10-17T22:51:29-0300 count=85 new=-
+2026-10-17T22:51:49-0300 count=85 new=-
+2026-10-17T22:52:09-0300 count=85 new=-
+2026-10-17T22:52:29-0300 count=86 new=V110-c1-precedence-text.md
+2026-10-17T22:52:49-0300 count=86 new=-
+2026-10-17T22:53:09-0300 count=86 new=-
+2026-10-17T22:53:29-0300 count=86 new=-
+2026-10-17T22:53:49-0300 count=86 new=-
+2026-10-17T22:54:09-0300 count=86 new=-
+2026-10-17T22:54:29-0300 count=86 new=-
+2026-10-17T22:54:49-0300 count=86 new=-
+2026-10-17T22:55:09-0300 count=86 new=-
+2026-10-17T22:55:29-0300 count=87 new=V23-scope-creep.md
+2026-10-17T22:55:49-0300 count=87 new=-
+2026-10-17T22:56:09-0300 count=87 new=-
+2026-10-17T22:56:29-0300 count=89 new=V05-c1-chain.md,V85-c1-ten-file-proof.md
+2026-10-17T22:56:49-0300 count=90 new=V58-mutual-wait-guard.md
+2026-10-17T22:57:09-0300 count=90 new=-
+2026-10-17T22:57:29-0300 count=90 new=-
+2026-10-17T22:57:49-0300 count=90 new=-
+2026-10-17T22:58:09-0300 count=90 new=-
+2026-10-17T22:58:29-0300 count=91 new=V100-late-bookkeeper.md
+2026-10-17T22:58:49-0300 count=91 new=-
+2026-10-17T22:59:09-0300 count=91 new=-
+2026-10-17T22:59:29-0300 count=91 new=-
+2026-10-17T22:59:49-0300 count=93 new=V45-pins-c9.md,V79-c1-contract-validity.md
+2026-10-17T23:00:09-0300 count=93 new=-
+# SAMPLER3_CAP 2026-10-17T23:00:29-0300 count=93

@@ -1,0 +1,1800 @@
+{
+  "unique": 143,
+  "counts": {
+    "UNRESOLVED": 12,
+    "COMMIT": 67,
+    "CURRENT-FILE": 44,
+    "HISTORICAL-BLOB": 20
+  },
+  "rows": [
+    {
+      "file": "2026-10-12-malformed-error-patterns.md",
+      "line": 9,
+      "len": 40,
+      "tok": "b6ca1e902f2bf08b8acddaef665d9764f8636981",
+      "ctx": "Each `r5-*` directory is a fresh copy of `consistent/` with exactly the single changed or missing path named below. These are fictional records. The checker is unchanged from baseline report commit `b6ca1e902f2bf08b8acdd",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "2026-10-12-malformed-error-patterns.md",
+      "line": 9,
+      "len": 7,
+      "tok": "b6ca1e9",
+      "ctx": "Each `r5-*` directory is a fresh copy of `consistent/` with exactly the single changed or missing path named below. These are fictional records. The checker is unchanged from baseline report commit `b6ca1e902f2bf08b8acdd",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 5,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "output re-derived from the delivered tree at ca7f9ef (checker ff9fd2aa). -->",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 5,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "output re-derived from the delivered tree at ca7f9ef (checker ff9fd2aa). -->",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 14,
+      "len": 40,
+      "tok": "5eb9451baff217c19d5786405f9b2aa500b7c1b7",
+      "ctx": "baseline commit `5eb9451baff217c19d5786405f9b2aa500b7c1b7`; parent-reproduced",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 22,
+      "len": 7,
+      "tok": "03c6746",
+      "ctx": "(commit `03c6746`, delivered tree `2b48ca7`); round-88 seat C1 replaced the",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "03c6746e4f1c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 22,
+      "len": 7,
+      "tok": "2b48ca7",
+      "ctx": "(commit `03c6746`, delivered tree `2b48ca7`); round-88 seat C1 replaced the",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2b48ca72033d"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 24,
+      "len": 7,
+      "tok": "2ea9ef1",
+      "ctx": "from shape-invalid records (integrated in `2ea9ef1`); round-89 seat X1 added the",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2ea9ef13a928"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 27,
+      "len": 7,
+      "tok": "1b09f3f",
+      "ctx": "`1b09f3f`); round-90 composed seat X2's null guard \u2014 a null holder field never",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "1b09f3ff8016"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 32,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "`ca7f9ef`, checker `ff9fd2aa`). This revision was rewritten by round-90 seat",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 32,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "`ca7f9ef`, checker `ff9fd2aa`). This revision was rewritten by round-90 seat",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 33,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "CB1 against the delivered checker at `ca7f9ef`",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 36,
+      "len": 7,
+      "tok": "2b48ca7",
+      "ctx": "evidence at `2b48ca7` is preserved only in",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2b48ca72033d"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 39,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "verified-at: RUNTIME REPLAYED on the delivered tree at `ca7f9ef` by round-90 seat CB1;",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 47,
+      "len": 7,
+      "tok": "5eb9451",
+      "ctx": "baseline (`5eb9451`) triples remain as recorded in `reports/round-1/current-baseline.json`",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 61,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "contract does not exist at `ca7f9ef` (`python3",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 70,
+      "len": 7,
+      "tok": "5eb9451",
+      "ctx": "Baseline `5eb9451` behavior, kept: a duplicated holder ID inside an item's",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 81,
+      "len": 7,
+      "tok": "5eb9451",
+      "ctx": "re-checked against `git show 5eb9451:corpus/fixtures/check_bible.py`).",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 83,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "The delivered checker (`ff9fd2aa`, integrated at `ca7f9ef`) replaces the holder-only latch with a",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 83,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "The delivered checker (`ff9fd2aa`, integrated at `ca7f9ef`) replaces the holder-only latch with a",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 129,
+      "len": 7,
+      "tok": "1b09f3f",
+      "ctx": "preserved. Verified by CB1 for the 160 fixture directories at `1b09f3f`:",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "1b09f3ff8016"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 130,
+      "len": 8,
+      "tok": "dcacffd6",
+      "ctx": "the r88 checker (`dcacffd6`) and the delivered checker (`e2bb9639`), run",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "2ea9ef13a928:corpus/fixtures/check_bible.py:dcacffd6981e"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 130,
+      "len": 8,
+      "tok": "e2bb9639",
+      "ctx": "the r88 checker (`dcacffd6`) and the delivered checker (`e2bb9639`), run",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "1b09f3ff8016:corpus/fixtures/check_bible.py:e2bb9639a324"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 143,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "Round-90 verification (seat CB1, `ca7f9ef`): the r89 checker (`e2bb9639`) and the delivered",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 143,
+      "len": 8,
+      "tok": "e2bb9639",
+      "ctx": "Round-90 verification (seat CB1, `ca7f9ef`): the r89 checker (`e2bb9639`) and the delivered",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "1b09f3ff8016:corpus/fixtures/check_bible.py:e2bb9639a324"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 144,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "checker (`ff9fd2aa`), run against the same 160 fixture directories, produced 0 exit-code",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 161,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "## First-stop causes (delivered `ca7f9ef`)",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 258,
+      "len": 7,
+      "tok": "1b09f3f",
+      "ctx": "notice at `1b09f3f`.",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "1b09f3ff8016"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 293,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "- The two r89 hedged shapes are repaired at `ca7f9ef`: a `from_holder: null` follow-on and a",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 337,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "external reader changed behavior. No such score exists for `ca7f9ef`:",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 343,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "`ca7f9ef` (run from the lane root; baseline triples for the same five inputs",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 493,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "(`.ufo/waves/round-90/F1.md`) and replayed by CB1 at `ca7f9ef`. Still scratch-only, with no",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 517,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "That helper does not exist at `ca7f9ef` \u2014 `python3",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 525,
+      "len": 7,
+      "tok": "5eb9451",
+      "ctx": "- Checker at baseline `5eb9451`: `corpus/fixtures/check_bible.py` \u2014 holder",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 532,
+      "len": 7,
+      "tok": "5eb9451",
+      "ctx": "`git show 5eb9451:corpus/fixtures/check_bible.py` (330 lines) by round-89",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 534,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "- Checker at the r90-delivered tree `ca7f9ef` (`corpus/fixtures/check_bible.py`, 428",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 535,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "lines, sha256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`):",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 544,
+      "len": 7,
+      "tok": "396c568",
+      "ctx": "behavior `:418-428`. The checker stayed byte-identical through r91 closure `396c568`.",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "396c568cbf86"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 556,
+      "len": 7,
+      "tok": "2b48ca7",
+      "ctx": "`.ufo/waves/round-87/followup/I2.md` (delivered-tree replay at `2b48ca7`,",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2b48ca72033d"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 560,
+      "len": 7,
+      "tok": "28706dc",
+      "ctx": "is a pre-C1 replay of the five probes at `28706dc`.",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "28706dc73a9b"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 567,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "- In-tree provenance fixtures at the r90-delivered tree `ca7f9ef`: 33 directories carry",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 568,
+      "len": 7,
+      "tok": "1b09f3f",
+      "ctx": "`provenance` (29 at `1b09f3f`); 13 provenance records across ten of them reference a duplicated",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "1b09f3ff8016"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 586,
+      "len": 7,
+      "tok": "5eb9451",
+      "ctx": "`5eb9451`; all recorded stderr empty); `reports/round-1/critic.md`",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 593,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "sections. There was no `## Round 90` section at `ca7f9ef`; it landed in the subsequent r90",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 594,
+      "len": 7,
+      "tok": "a7c6a17",
+      "ctx": "closure at `a7c6a17` and documents the r90 fixtures. The r87 decision table",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "a7c6a1773d59"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 602,
+      "len": 7,
+      "tok": "1b09f3f",
+      "ctx": "- OBSERVED on the delivered trees (round-89 seat CB1 at `1b09f3f`; round-90 seat CB1 at",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "1b09f3ff8016"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 603,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "`ca7f9ef`; exact commands and output in \"Commands\" and the respective CB1 reports): the five",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 611,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "independently replayed against both the e97613c and delivered checkers, and differ only on the",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 613,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "- OBSERVED only in scratch probes at `ca7f9ef` (no durable fixture): the observed-side and",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 619,
+      "len": 7,
+      "tok": "2ea9ef1",
+      "ctx": "- OBSERVED only in round-88 scratch probes at `2ea9ef1` (no durable fixture of their own; some",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2ea9ef13a928"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 624,
+      "len": 7,
+      "tok": "5eb9451",
+      "ctx": "- OBSERVED at baseline `5eb9451` (parent-recorded JSON): masked and isolated emitted ONLY the",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "5eb9451baff2"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 627,
+      "len": 7,
+      "tok": "2b48ca7",
+      "ctx": "- SUPERSEDED: the r87 two-notice contract (`2b48ca7`) and its replay block; preserved in",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2b48ca72033d"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 630,
+      "len": 7,
+      "tok": "1b09f3f",
+      "ctx": "notice strings (measured at `1b09f3f`: `:60`, `:61`, `:99`, `:169-172`, `:179-182`,",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "1b09f3ff8016"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 634,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "- REPLAYED, not scored: no five-gate `passed` count exists for `ca7f9ef`; the documented helper",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "holder-assessment-boundary.md",
+      "line": 643,
+      "len": 7,
+      "tok": "ca7f9ef",
+      "ctx": "No five-gate score is recorded for the delivered tree `ca7f9ef`: the documented measurement",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "ca7f9ef1646c"
+    },
+    {
+      "file": "r87-provenance-chain-decision-table.md",
+      "line": 1,
+      "len": 7,
+      "tok": "2b48ca7",
+      "ctx": "<!-- SUPERSEDED (round-88 closure): this table pins the r87 checker at `2b48ca7` and its",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2b48ca72033d"
+    },
+    {
+      "file": "r87-provenance-chain-decision-table.md",
+      "line": 3,
+      "len": 7,
+      "tok": "2ea9ef1",
+      "ctx": "was replaced at `2ea9ef1` by the first-stop cause template; the current contract is",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2ea9ef13a928"
+    },
+    {
+      "file": "r87-provenance-chain-decision-table.md",
+      "line": 9,
+      "len": 40,
+      "tok": "2b48ca72033dfd1060b6f81c4cf27ad83deae57f",
+      "ctx": "Snapshot: `2b48ca72033dfd1060b6f81c4cf27ad83deae57f` (HEAD of the round-87",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2b48ca72033d"
+    },
+    {
+      "file": "r87-provenance-chain-decision-table.md",
+      "line": 11,
+      "len": 64,
+      "tok": "3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237",
+      "ctx": "`3ae4134d1d7d0f4b72f5ed0b344de54e886b60ab7cacd8e8ab0008521efcb237`).",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "03c6746e4f1c:corpus/fixtures/check_bible.py:3ae4134d1d7d"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r88-sourced-inspiration-decision-table.md",
+      "line": 16,
+      "len": 7,
+      "tok": "2ea9ef1",
+      "ctx": "| An in-world claim is attributed to a delivered excerpt | Resolve its `source_id` to the in-world source record and map the claim to the exact delivered excerpt path and line span. For every claim, record a distinctive ",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2ea9ef13a928"
+    },
+    {
+      "file": "r88-sourced-inspiration-decision-table.md",
+      "line": 17,
+      "len": 7,
+      "tok": "2ea9ef1",
+      "ctx": "| A real-world reference is used | Register one Markdown row in `corpus/knowledge/reference-ledger.md`, even when one or more questions remain open. Use the existing four-column header: Work / attribution; Rights questio",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "2ea9ef13a928"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 5,
+      "len": 40,
+      "tok": "a7c6a1773d5994246a76e4eff30d645f161920e0",
+      "ctx": "- Delivered checker: `corpus/fixtures/check_bible.py` at r90 closure `a7c6a1773d5994246a76e4eff30d645f161920e0`.",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "a7c6a1773d59"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 6,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "- SHA-256: `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`.",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 20,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "The hash command must print the pinned SHA-256 above. The null-chain fixture must report `provenance chain break; expected from_holder 'mira', got None` (exit 1, one violation). The unresolved-tick fixture must emit the ",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 49,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "| 2026-10-17 | `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421` | **DISCRIMINATION HELD** \u2014 all four C5 scenarios retained their r91 distinctions; no drift alarm. |",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 50,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "| 2026-10-17 (r93) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 2 (seat X1, r93): all four gates reproduce; gate 3 not met; trigger unsatisfied; ruling retained. Next re-check: r94. |",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 54,
+      "len": 40,
+      "tok": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+      "ctx": "Run from `lore-shokunin/` at HEAD `396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f`. Readiness polls (both pinned artifacts were present immediately):",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "396c568cbf86"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 73,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 213,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "The row-2 checker abbreviation `ff9fd2aa\u2026d1421` is replaced here by the full checker SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`. The historical comparison baseline is commit `e97613cc276f5",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 213,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "The row-2 checker abbreviation `ff9fd2aa\u2026d1421` is replaced here by the full checker SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`. The historical comparison baseline is commit `e97613cc276f5",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 213,
+      "len": 40,
+      "tok": "e97613cc276f5fa9cac49ff1900798cf6863c020",
+      "ctx": "The row-2 checker abbreviation `ff9fd2aa\u2026d1421` is replaced here by the full checker SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421`. The historical comparison baseline is commit `e97613cc276f5",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 215,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "The phrase `all four gates reproduce` in row 2 is superseded as ambiguous: the r93 discriminator commands below verify the two stable fixtures, not the four falsification-trigger gates. From `lore-shokunin/`, `python3 co",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 226,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 242,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "python3 corpus/tools/discriminate_check.py --checker e97613c",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 253,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "| 2026-10-17 (r94) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 3 (r94 closure): delivered discrimination held; the `e97613c` control reported REGRESSION-DETECTED as expected; ruling retained. Next re-check: r",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 253,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "| 2026-10-17 (r94) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 3 (r94 closure): delivered discrimination held; the `e97613c` control reported REGRESSION-DETECTED as expected; ruling retained. Next re-check: r",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 257,
+      "len": 40,
+      "tok": "396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f",
+      "ctx": "**Erratum (dated, append-only):** the first periodic re-check section above opens \"Run from `lore-shokunin/` at HEAD `396c568cbf86bba2c4b7a4ce8bd69fc38bb33d1f`.\" That HEAD-bound premise is stale at the delivered revision",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "396c568cbf86"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 264,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 267,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "Discriminator pair from the repository root: `python3 corpus/tools/discriminate_check.py` \u2192 `RESULT: DISCRIMINATION HELD` (exit 0); `python3 corpus/tools/discriminate_check.py --checker e97613c` \u2192 `REGRESSION-DETECTED on",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 271,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "| 2026-10-17 (r95) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 4 (r95 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r96. |",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 271,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "| 2026-10-17 (r95) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 4 (r95 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r96. |",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 280,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 283,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "Discriminator pair from the repository root: `python3 corpus/tools/discriminate_check.py` \u2192 `RESULT: DISCRIMINATION HELD` (exit 0); `python3 corpus/tools/discriminate_check.py --checker e97613c` \u2192 `REGRESSION-DETECTED on",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 287,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "| 2026-10-17 (r96) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 5 (r96 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r97. |",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 287,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "| 2026-10-17 (r96) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 5 (r96 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r97. |",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 296,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 299,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "Discriminator pair from the repository root: `python3 corpus/tools/discriminate_check.py` \u2192 `RESULT: DISCRIMINATION HELD` (exit 0); `python3 corpus/tools/discriminate_check.py --checker e97613c` \u2192 `REGRESSION-DETECTED on",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 303,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "| 2026-10-17 (r97) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 6 (r97 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r98. |",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 303,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "| 2026-10-17 (r97) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 6 (r97 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r98. |",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 312,
+      "len": 64,
+      "tok": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "ctx": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421  corpus/fixtures/check_bible.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 315,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "Discriminator pair from the repository root: `python3 corpus/tools/discriminate_check.py` \u2192 `RESULT: DISCRIMINATION HELD` (exit 0); `python3 corpus/tools/discriminate_check.py --checker e97613c` \u2192 `REGRESSION-DETECTED on",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 319,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "| 2026-10-17 (r98) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 7 (r98 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r99. |",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r91-c9-watch.md",
+      "line": 319,
+      "len": 7,
+      "tok": "e97613c",
+      "ctx": "| 2026-10-17 (r98) | `ff9fd2aa\u2026d1421` | **DISCRIMINATION HELD** \u2014 re-check 7 (r98 closure): delivered discrimination held; `e97613c` control REGRESSION-DETECTED as expected; ruling retained. Next re-check: r99. |",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "e97613cc276f"
+    },
+    {
+      "file": "r93-r8-worked-example.md",
+      "line": 116,
+      "len": 64,
+      "tok": "da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05",
+      "ctx": "EXPECTED_RECORD_SHA256 = 'da934a7eea6d108f60c71534e8beb218a532eb55b20217a04ab86d82bc6c7e05'",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 51,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 51,
+      "len": 8,
+      "tok": "55a5eb27",
+      "ctx": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/support_check.py"
+      ],
+      "hist": [
+        "c4d4823b9a81:corpus/tools/support_check.py:55a5eb275390"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 51,
+      "len": 8,
+      "tok": "9224a684",
+      "ctx": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 51,
+      "len": 8,
+      "tok": "cc1df4dc",
+      "ctx": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "abbc3e0186c8:corpus/tools/map_obligations.py:cc1df4dc4068"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 51,
+      "len": 8,
+      "tok": "ca05159e",
+      "ctx": "Tool revisions at these receipts (2026-10-17T16:25-03:00): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `9224a684\u2026`. The C1 tool revision was still in flight during this round",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 61,
+      "len": 8,
+      "tok": "9224a684",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but its tool-revision pin is stale. `map_obligations.py` `9224a684\u2026` was an in-flight intermediate revision during round 95 and never entered the file's committed hi",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 61,
+      "len": 8,
+      "tok": "cc1df4dc",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but its tool-revision pin is stale. `map_obligations.py` `9224a684\u2026` was an in-flight intermediate revision during round 95 and never entered the file's committed hi",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "abbc3e0186c8:corpus/tools/map_obligations.py:cc1df4dc4068"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 61,
+      "len": 8,
+      "tok": "d1c239cc",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but its tool-revision pin is stale. `map_obligations.py` `9224a684\u2026` was an in-flight intermediate revision during round 95 and never entered the file's committed hi",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "dcb2d928f53f:corpus/tools/map_obligations.py:d1c239ccb214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 61,
+      "len": 8,
+      "tok": "2b0ba815",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but its tool-revision pin is stale. `map_obligations.py` `9224a684\u2026` was an in-flight intermediate revision during round 95 and never entered the file's committed hi",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "f3e09f93ce9f:corpus/tools/map_obligations.py:2b0ba815326b"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 61,
+      "len": 8,
+      "tok": "86b52949",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but its tool-revision pin is stale. `map_obligations.py` `9224a684\u2026` was an in-flight intermediate revision during round 95 and never entered the file's committed hi",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map_obligations.py"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map_obligations.py:86b529496214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 65,
+      "len": 64,
+      "tok": "86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9",
+      "ctx": "# 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map_obligations.py"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map_obligations.py:86b529496214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 66,
+      "len": 64,
+      "tok": "2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41",
+      "ctx": "# 2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41  corpus/tools/map-obligations-contract.json",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map-obligations-contract.json"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map-obligations-contract.json:2142b9917694"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 69,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "`check_bible.py` `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` named above are still current (re-measured the same pass). The three receipts above were re-derived at this current revision this pass and are unchanged: `c",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 69,
+      "len": 8,
+      "tok": "55a5eb27",
+      "ctx": "`check_bible.py` `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` named above are still current (re-measured the same pass). The three receipts above were re-derived at this current revision this pass and are unchanged: `c",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/support_check.py"
+      ],
+      "hist": [
+        "c4d4823b9a81:corpus/tools/support_check.py:55a5eb275390"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r95-aftermath-scope-note.md",
+      "line": 71,
+      "len": 8,
+      "tok": "9224a684",
+      "ctx": "Instruction: on the next touch of this note, re-derive all three receipts and re-measure the tool revisions before citing them; do not cite `9224a684\u2026` as current. Round 98's C1 work owns `corpus/tools/dependency_freeze.",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 55,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 55,
+      "len": 8,
+      "tok": "55a5eb27",
+      "ctx": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/support_check.py"
+      ],
+      "hist": [
+        "c4d4823b9a81:corpus/tools/support_check.py:55a5eb275390"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 55,
+      "len": 8,
+      "tok": "6634e176",
+      "ctx": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 55,
+      "len": 8,
+      "tok": "8173bb97",
+      "ctx": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "dcb2d928f53f:corpus/tools/map-obligations-contract.json:8173bb97592a"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 55,
+      "len": 8,
+      "tok": "d1c239cc",
+      "ctx": "Tool revisions at these receipts: `check_bible.py` sha256 `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` at `2026-10-17T17:43-03:00`; the `map_obligations.py` line was re-run at `17:46-03:00` at revision `6634e176\u2026` (the",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "dcb2d928f53f:corpus/tools/map_obligations.py:d1c239ccb214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 8,
+      "tok": "6634e176",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 8,
+      "tok": "cc1df4dc",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "abbc3e0186c8:corpus/tools/map_obligations.py:cc1df4dc4068"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 8,
+      "tok": "d1c239cc",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "dcb2d928f53f:corpus/tools/map_obligations.py:d1c239ccb214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 8,
+      "tok": "2b0ba815",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "f3e09f93ce9f:corpus/tools/map_obligations.py:2b0ba815326b"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 8,
+      "tok": "86b52949",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map_obligations.py"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map_obligations.py:86b529496214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 8,
+      "tok": "8173bb97",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "dcb2d928f53f:corpus/tools/map-obligations-contract.json:8173bb97592a"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 7,
+      "tok": "dcb2d92",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "COMMIT",
+      "wt": [],
+      "hist": [],
+      "commit": "dcb2d928f53f"
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 65,
+      "len": 8,
+      "tok": "97b76bb8",
+      "ctx": "The receipts paragraph above is preserved unrewritten, but both of its tool-revision pins are stale. `map_obligations.py` `6634e176\u2026` was an in-flight intermediate revision during round 96 and never entered the file's co",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "f3e09f93ce9f:corpus/tools/map-obligations-contract.json:97b76bb8b1fe"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 69,
+      "len": 64,
+      "tok": "86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9",
+      "ctx": "# 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9  corpus/tools/map_obligations.py",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map_obligations.py"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map_obligations.py:86b529496214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 70,
+      "len": 64,
+      "tok": "2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41",
+      "ctx": "# 2142b9917694dbec7d2d3f925720bc5a03ca8c861789de3f9b68a6ddf1db2c41  corpus/tools/map-obligations-contract.json",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map-obligations-contract.json"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map-obligations-contract.json:2142b9917694"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 73,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "`check_bible.py` `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` named above are still current (re-measured the same pass). The three receipts above were re-derived at this current revision this pass and are unchanged: `c",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 73,
+      "len": 8,
+      "tok": "55a5eb27",
+      "ctx": "`check_bible.py` `ff9fd2aa\u2026` and `support_check.py` `55a5eb27\u2026` named above are still current (re-measured the same pass). The three receipts above were re-derived at this current revision this pass and are unchanged: `c",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/support_check.py"
+      ],
+      "hist": [
+        "c4d4823b9a81:corpus/tools/support_check.py:55a5eb275390"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 75,
+      "len": 8,
+      "tok": "6634e176",
+      "ctx": "Instruction: on the next touch of this note, re-derive all three receipts and re-measure the tool revisions before citing them; do not cite `6634e176\u2026` or `8173bb97\u2026` as current. Round 98's C1 work owns `corpus/tools/dep",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r96-response-scope-note.md",
+      "line": 75,
+      "len": 8,
+      "tok": "8173bb97",
+      "ctx": "Instruction: on the next touch of this note, re-derive all three receipts and re-measure the tool revisions before citing them; do not cite `6634e176\u2026` or `8173bb97\u2026` as current. Round 98's C1 work owns `corpus/tools/dep",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "dcb2d928f53f:corpus/tools/map-obligations-contract.json:8173bb97592a"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r97-acknowledgment-scope-note.md",
+      "line": 32,
+      "len": 8,
+      "tok": "5093d72e",
+      "ctx": "`corpus/fixtures/r96-crossing-response/claim-excerpt-map.md` was repaired this round in two cosmetic cells only, so the frozen r96 record's map is internally consistent: the editorial-table delimiter row at `:44` was cor",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "f3e09f93ce9f:corpus/fixtures/r96-crossing-response/claim-excerpt-map.md:5093d72eb3f2"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r97-acknowledgment-scope-note.md",
+      "line": 32,
+      "len": 8,
+      "tok": "e851f068",
+      "ctx": "`corpus/fixtures/r96-crossing-response/claim-excerpt-map.md` was repaired this round in two cosmetic cells only, so the frozen r96 record's map is internally consistent: the editorial-table delimiter row at `:44` was cor",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/r96-crossing-response/claim-excerpt-map.md"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/fixtures/r96-crossing-response/claim-excerpt-map.md:e851f068cfd7"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r97-acknowledgment-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "Tool revisions at these receipts (2026-10-17, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (an earlier run the same pass at `70795150\u2026` gave t",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r97-acknowledgment-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "55a5eb27",
+      "ctx": "Tool revisions at these receipts (2026-10-17, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (an earlier run the same pass at `70795150\u2026` gave t",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/support_check.py"
+      ],
+      "hist": [
+        "c4d4823b9a81:corpus/tools/support_check.py:55a5eb275390"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r97-acknowledgment-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "86b52949",
+      "ctx": "Tool revisions at these receipts (2026-10-17, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (an earlier run the same pass at `70795150\u2026` gave t",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map_obligations.py"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map_obligations.py:86b529496214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "ff9fd2aa",
+      "ctx": "Tool revisions at these receipts (2026-10-17T20:31-03:00, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (contract `2142b991\u2026`). The r95/r96 rec",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/fixtures/check_bible.py"
+      ],
+      "hist": [
+        "ca7f9ef1646c:corpus/fixtures/check_bible.py:ff9fd2aa6811"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "55a5eb27",
+      "ctx": "Tool revisions at these receipts (2026-10-17T20:31-03:00, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (contract `2142b991\u2026`). The r95/r96 rec",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/support_check.py"
+      ],
+      "hist": [
+        "c4d4823b9a81:corpus/tools/support_check.py:55a5eb275390"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "86b52949",
+      "ctx": "Tool revisions at these receipts (2026-10-17T20:31-03:00, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (contract `2142b991\u2026`). The r95/r96 rec",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map_obligations.py"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map_obligations.py:86b529496214"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "2142b991",
+      "ctx": "Tool revisions at these receipts (2026-10-17T20:31-03:00, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (contract `2142b991\u2026`). The r95/r96 rec",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/map-obligations-contract.json"
+      ],
+      "hist": [
+        "9d25df9b0e6e:corpus/tools/map-obligations-contract.json:2142b9917694"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "03d04365",
+      "ctx": "Tool revisions at these receipts (2026-10-17T20:31-03:00, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (contract `2142b991\u2026`). The r95/r96 rec",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "4265df5e86e4:corpus/tools/dependency_freeze.py:03d04365cf00"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 64,
+      "len": 8,
+      "tok": "c435239d",
+      "ctx": "Tool revisions at these receipts (2026-10-17T20:31-03:00, from the lane root): `check_bible.py` sha256 `ff9fd2aa\u2026`, `support_check.py` `55a5eb27\u2026`, `map_obligations.py` `86b52949\u2026` (contract `2142b991\u2026`). The r95/r96 rec",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 77,
+      "len": 8,
+      "tok": "03d04365",
+      "ctx": "tool revisions in flight as `dependency_freeze.py` `03d04365\u2026`, contract",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "4265df5e86e4:corpus/tools/dependency_freeze.py:03d04365cf00"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 78,
+      "len": 8,
+      "tok": "c435239d",
+      "ctx": "`c435239d\u2026` (20:32:51 -03:00). The delivered r98 revisions are",
+      "class": "UNRESOLVED",
+      "wt": [],
+      "hist": [],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 79,
+      "len": 8,
+      "tok": "03d04365",
+      "ctx": "`dependency_freeze.py` `03d04365\u2026` and contract `153ebc5b\u2026` (the contract",
+      "class": "HISTORICAL-BLOB",
+      "wt": [],
+      "hist": [
+        "4265df5e86e4:corpus/tools/dependency_freeze.py:03d04365cf00"
+      ],
+      "commit": null
+    },
+    {
+      "file": "r98-clerk-scope-note.md",
+      "line": 79,
+      "len": 8,
+      "tok": "153ebc5b",
+      "ctx": "`dependency_freeze.py` `03d04365\u2026` and contract `153ebc5b\u2026` (the contract",
+      "class": "CURRENT-FILE",
+      "wt": [
+        "corpus/tools/dependency-freeze-contract.json"
+      ],
+      "hist": [
+        "4265df5e86e4:corpus/tools/dependency-freeze-contract.json:153ebc5b2092"
+      ],
+      "commit": null
+    }
+  ]
+}

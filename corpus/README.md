@@ -23,6 +23,7 @@ Paths below are relative to `corpus/`. This section supplements, and does not re
 - `fixtures/r96-crossing-response/README.md` — second account, same occasion, unresolved: Evin's response note records he was at Salt Court through the same agreed bell (tick-12 event depending on the tick-11 aftermath). No accusation, no winner, no contradiction asserted. Navigate `claim-excerpt-map.md` (16 obligations) and `fictional-excerpts.md`.
 - `fixtures/r97-crossing-acknowledgment/README.md` — third beat: Aru's tick-13 acknowledgment records receipt of Evin's response with both accounts standing; no resolution, accusation, or reconciliation is claimed. Navigate `claim-excerpt-map.md` (17 obligations) and `fictional-excerpts.md`.
 - `fixtures/r98-clerk-filing/README.md` — fourth beat, institutional: the harbor clerk files both pending accounts and records the matter OPEN, explicitly asserting no finding. Adds one entity (`clerk-maren`) and one tick-14 event. Navigate `claim-excerpt-map.md` (20 obligations) and `fictional-excerpts.md`.
+- `fixtures/r99-window-lapse/README.md` — fifth beat: the clerk records the crossing-window's close per the original minute (agreement unfulfilled, no claim lodged); the matter stands as a historical open entry — nothing resolved, no blame assigned. Navigate `claim-excerpt-map.md` (21 obligations) and `fictional-excerpts.md`.
 
 ### Source, boundary and calibration records
 

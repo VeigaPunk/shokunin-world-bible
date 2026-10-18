@@ -1,0 +1,26 @@
+baseline_paths=1826
+[corpus-other] paths=741 changed=0 missing_in_class=see MISSING
+[fixture-json] paths=855 changed=0 missing_in_class=see MISSING
+[fixture-other] paths=174 changed=0 missing_in_class=see MISSING
+[live-json] paths=45 changed=0 missing_in_class=see MISSING
+[named-tools] paths=6 changed=0 missing_in_class=see MISSING
+[tool-contract-json] paths=3 changed=0 missing_in_class=see MISSING
+[tool-other] paths=2 changed=1 missing_in_class=see MISSING
+MISSING count=0
+CHANGED[tool-other] corpus/tools/dependency_freeze.py base=623b3501b580756d4ede9f93ba1227bad5696c66 cur=90cfaacf7c4699719e81be59e3a875caa087e55e
+NEW count=15
+  NEW corpus/fixtures/r99-window-lapse/README.md
+  NEW corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+  NEW corpus/fixtures/r99-window-lapse/contradictions.json
+  NEW corpus/fixtures/r99-window-lapse/entities.json
+  NEW corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+  NEW corpus/fixtures/r99-window-lapse/inspiration-note.md
+  NEW corpus/fixtures/r99-window-lapse/relations.json
+  NEW corpus/fixtures/r99-window-lapse/source-excerpt.md
+  NEW corpus/fixtures/r99-window-lapse/sources.json
+  NEW corpus/fixtures/r99-window-lapse/timeline.json
+  NEW corpus/tools/__pycache__/boundary_doc_check.cpython-314.pyc
+  NEW corpus/tools/__pycache__/dependency_freeze.cpython-314.pyc
+  NEW corpus/tools/__pycache__/discriminate_check.cpython-314.pyc
+  NEW corpus/tools/__pycache__/map_obligations.cpython-314.pyc
+  NEW corpus/tools/__pycache__/support_check.cpython-314.pyc

@@ -1,0 +1,15 @@
+=== baseline self-test + markdown invisibility ===
+--- baseline self-test exit 2 ---
+FINDING FIXTURE-MISSING: self-test base fixture not found: /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V117-scratch/baseline-mirror/corpus/fixtures/r95-crossing-aftermath
+RESULT ERROR
+--- baseline control exit 0 ---
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+
+--- baseline excerpt tamper exit 0 ---
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 59a0f4fa3d4a47e03649a54d1815c45ee1eef641b63a59ebe7210bc9d9b9b133
+RESULT PASS
+
+STDERR 

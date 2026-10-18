@@ -1,0 +1,26 @@
+[
+  {
+    "id": "same-tick-location",
+    "claim_a": {
+      "event_id": "arrival",
+      "field": "place_id"
+    },
+    "claim_b": {
+      "event_id": "false-sighting",
+      "field": "place_id"
+    },
+    "why": "Mira is recorded at tower and harbor at the same tick 2; retain both cited event records for review."
+  },
+  {
+    "id": "inverted-dependency",
+    "claim_a": {
+      "event_id": "arrival",
+      "field": "depends_on"
+    },
+    "claim_b": {
+      "event_id": "absent-event",
+      "field": "tick"
+    },
+    "why": "Arrival depends on later even though the later event is tick 3 and arrival is tick 2; retain both cited records for review."
+  }
+]

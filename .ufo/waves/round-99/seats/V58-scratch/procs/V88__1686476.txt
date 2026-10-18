@@ -1,0 +1,51 @@
+/bin/bash
+-c
+cd '/home/vgpnk/Projects/shokunin/lore-shokunin' && mkdir -p /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V88-scratch && date -Is > /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V88-scratch/poll-start.txt && python3 - << 'PY'
+import os, time
+from pathlib import Path
+root = Path("/home/vgpnk/Projects/shokunin/lore-shokunin")
+log = root / ".ufo/waves/round-99/seats/V88-scratch/poll.log"
+arts = [
+    "corpus/tools/dependency_freeze.py",
+    "corpus/tools/dependency-freeze-contract.json",
+    "corpus/tools/README.md",
+    "SKILL.md",
+    "corpus/fixtures/r99-window-lapse",
+    "corpus/knowledge/r99-gate-blind-spot-table.md",
+    "corpus/knowledge/r99-lapse-scope-note.md",
+]
+seats = ["S1", "S2", "S3", "S4", "S5"]
+seat_dir = root / ".ufo/waves/round-99/seats"
+with log.open("a") as f:
+    f.write(f"POLL-START {time.strftime('%Y-%m-%dT%H:%M:%S%z')}\n")
+    for i in range(1, 41):
+        ts = time.strftime("%H:%M:%S")
+        present = {}
+        for a in arts:
+            p = root / a
+            present[a] = p.exists()
+        reports = {}
+        for s in seats:
+            hits = list(seat_dir.glob(f"{s}*.md"))
+            reports[s] = [str(h.relative_to(root)) for h in hits]
+        fixture_files = []
+        fx = root / "corpus/fixtures/r99-window-lapse"
+        if fx.is_dir():
+            fixture_files = sorted(p.name for p in fx.iterdir() if p.is_file())
+        line = f"try={i} ts={ts} arts={sum(1 for v in present.values() if v)}/{len(arts)} reports={ {k: bool(v) for k,v in reports.items()} } fixture_files={fixture_files}\n"
+        f.write(line)
+        f.flush()
+        missing_arts = [a for a,v in present.items() if not v]
+        missing_reports = [s for s,v in reports.items() if not v]
+        if not missing_arts and not missing_reports and len(fixture_files) >= 8:
+            f.write(f"ALL-PRESENT try={i} ts={ts}\n")
+            f.flush()
+            break
+        if i == 40:
+            f.write(f"TIMEOUT missing_arts={missing_arts} missing_reports={missing_reports} fixture_files={fixture_files}\n")
+            f.flush()
+            break
+        time.sleep(20)
+PY
+echo POLL_DONE
+tail -5 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V88-scratch/poll.log

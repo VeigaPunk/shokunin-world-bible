@@ -1,0 +1,6 @@
+===== map-tamper =====
+EXIT=0
+--- stdout ---
+OBLIGATIONS raw=20 mapped=20
+INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22
+RESULT PASS

@@ -1,0 +1,30 @@
+{
+  "entities.json": {
+    "r99": 6,
+    "r98": 6,
+    "prefix_equal": true,
+    "r99_tail_ids": []
+  },
+  "sources.json": {
+    "r99": 8,
+    "r98": 7,
+    "prefix_equal": true,
+    "r99_tail_ids": [
+      "clerk-lapse-note"
+    ]
+  },
+  "timeline.json": {
+    "r99": 8,
+    "r98": 7,
+    "prefix_equal": true,
+    "r99_tail_ids": [
+      "clerk-lapse-recorded"
+    ]
+  },
+  "relations.json": {
+    "r99": 1,
+    "r98": 1,
+    "prefix_equal": true,
+    "r99_tail_ids": []
+  }
+}

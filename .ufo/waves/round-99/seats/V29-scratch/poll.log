@@ -1,0 +1,62 @@
+=== POLL 2026-10-17T22:01:47-03:00 try=0 ===
+-- fixture --
+  total 60
+  drwxr-xr-x 1 vgpnk vgpnk   314 Oct 17 22:00 .
+  drwxr-xr-x 1 vgpnk vgpnk  6676 Oct 17 22:00 ..
+  -rw-r--r-- 1 vgpnk vgpnk 15028 Oct 17 21:36 claim-excerpt-map.md
+  -rw-r--r-- 1 vgpnk vgpnk     3 Oct 17 21:36 contradictions.json
+  -rw-r--r-- 1 vgpnk vgpnk  1793 Oct 17 21:36 entities.json
+  -rw-r--r-- 1 vgpnk vgpnk  5114 Oct 17 22:01 fictional-excerpts.md
+  -rw-r--r-- 1 vgpnk vgpnk  1956 Oct 17 21:36 inspiration-note.md
+  -rw-r--r-- 1 vgpnk vgpnk  5829 Oct 17 21:36 README.md
+  -rw-r--r-- 1 vgpnk vgpnk   139 Oct 17 21:36 relations.json
+  -rw-r--r-- 1 vgpnk vgpnk   640 Oct 17 21:36 source-excerpt.md
+  -rw-r--r-- 1 vgpnk vgpnk  3293 Oct 17 22:01 sources.json
+  -rw-r--r-- 1 vgpnk vgpnk  2998 Oct 17 22:01 timeline.json
+-- knowledge --
+  ls: cannot access 'corpus/knowledge/r99-*': No such file or directory
+-- producer reports --
+  -rw-r--r-- 1 vgpnk vgpnk 5069 Oct 17 22:01 .ufo/waves/round-99/seats/S3-fixture-author.md
+-- seat md count --
+1
+POLL 2026-10-17T22:02:11-03:00 try=1 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=ABSENT S5=ABSENT seat_md=1
+POLL 2026-10-17T22:02:31-03:00 try=2 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=ABSENT S5=ABSENT seat_md=1
+POLL 2026-10-17T22:02:51-03:00 try=3 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=ABSENT S5=ABSENT seat_md=1
+POLL 2026-10-17T22:03:11-03:00 try=4 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=ABSENT S5=ABSENT seat_md=2
+POLL 2026-10-17T22:03:31-03:00 try=5 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=ABSENT S5=ABSENT seat_md=3
+POLL 2026-10-17T22:03:51-03:00 try=6 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=ABSENT S5=ABSENT seat_md=3
+POLL 2026-10-17T22:04:11-03:00 try=7 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=4
+POLL 2026-10-17T22:04:31-03:00 try=8 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=4
+POLL 2026-10-17T22:04:51-03:00 try=9 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=5
+POLL 2026-10-17T22:05:11-03:00 try=10 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=5
+POLL 2026-10-17T22:05:31-03:00 try=11 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=5
+POLL 2026-10-17T22:05:51-03:00 try=12 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=6
+POLL 2026-10-17T22:06:11-03:00 try=13 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=6
+POLL 2026-10-17T22:06:31-03:00 try=14 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=6
+POLL 2026-10-17T22:06:51-03:00 try=15 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=6
+POLL 2026-10-17T22:07:11-03:00 try=16 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=6
+POLL 2026-10-17T22:07:31-03:00 try=17 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=6
+POLL 2026-10-17T22:07:51-03:00 try=18 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=6
+POLL 2026-10-17T22:08:11-03:00 try=19 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:08:31-03:00 try=20 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:08:51-03:00 try=21 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:09:11-03:00 try=22 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:09:31-03:00 try=23 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:09:51-03:00 try=24 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:10:11-03:00 try=25 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:10:31-03:00 try=26 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:10:51-03:00 try=27 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=7
+POLL 2026-10-17T22:11:11-03:00 try=28 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=9
+POLL 2026-10-17T22:11:31-03:00 try=29 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=9
+POLL 2026-10-17T22:11:51-03:00 try=30 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=10
+POLL 2026-10-17T22:12:11-03:00 try=31 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=10
+POLL 2026-10-17T22:12:31-03:00 try=32 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=11
+POLL 2026-10-17T22:12:51-03:00 try=33 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=11
+POLL 2026-10-17T22:13:11-03:00 try=34 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=11
+POLL 2026-10-17T22:13:31-03:00 try=35 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=11
+POLL 2026-10-17T22:13:51-03:00 try=36 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=11
+POLL 2026-10-17T22:14:11-03:00 try=37 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=11
+POLL 2026-10-17T22:14:31-03:00 try=38 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=12
+POLL 2026-10-17T22:14:51-03:00 try=39 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=12
+POLL 2026-10-17T22:15:11-03:00 try=40 fixture_files=10 knowledge=0 S3=.ufo/waves/round-99/seats/S3-fixture-author.md S4=.ufo/waves/round-99/seats/S4-fixture-docs.md S5=ABSENT seat_md=12
+POLL-EXHAUSTED 2026-10-17T22:15:12-03:00

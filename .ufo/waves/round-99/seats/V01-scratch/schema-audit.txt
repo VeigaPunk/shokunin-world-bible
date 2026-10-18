@@ -1,0 +1,433 @@
+CONTRACT /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/tools/dependency-freeze-contract.json
+bytes 25987
+sha256 8c2561b043c25db77f2628e02c38ba0691cbf7123c37bf295350479f7c197628
+py_sha256 6f81f8be19742372ddc6819f6cf50dad985fe2bca2bee2b6e7c579613f5f4067
+py_bytes 29104
+TOP_KEYS ['schema_version', 'payload_schema_version', 'tool', 'scope', 'precedence', 'data_files', 'pinned_files', 'required_files', 'exit_codes', 'revision', 'pins', 'self_test', 'provenance_note']
+schema_version 2
+payload_schema_version 2
+data_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json']
+pinned_files ['entities.json', 'relations.json', 'timeline.json', 'sources.json', 'contradictions.json', 'README.md', 'claim-excerpt-map.md', 'fictional-excerpts.md', 'inspiration-note.md', 'source-excerpt.md']
+required_files ['relations.json', 'timeline.json']
+revision 337f0fa52b02626b7687eedbb2d99fab30446fe4
+tool corpus/tools/dependency_freeze.py
+PIN_COUNT 6
+PIN_NAMES ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing']
+PY DATA_FILES = ("entities.json", "relations.json", "timeline.json", "sources.json", "contradictions.json")
+PY MARKDOWN_FILES = (
+PY PINNED_FILES = DATA_FILES + MARKDOWN_FILES
+PY PAYLOAD_SCHEMA_VERSION = 2
+PY_MARKDOWN_BLOCK
+MARKDOWN_FILES = (
+    "README.md",
+    "claim-excerpt-map.md",
+    "fictional-excerpts.md",
+    "inspiration-note.md",
+    "source-excerpt.md",
+)
+PY_PINNED ['DATA_FILES = ("entities.json", "relations.json", "timeline.json", "sources.json", "contradictions.json")', 'PINNED_FILES = DATA_FILES + MARKDOWN_FILES', 'PAYLOAD_SCHEMA_VERSION = 2']
+DECLARED_EQUALS_TEN True
+DECLARED_LEN 10
+PIN r88-m3-maya-cluster
+  fixture=corpus/fixtures/r88-m3-maya-cluster
+  payload_schema_version=2
+  pinned_files_eq_ten=True
+  pinned_files_eq_contract=True
+  file_count=10
+  file_keys=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+  missing_from_ten=[]
+  extra=[]
+  bad_digest_shape=[]
+  disk_missing=[]
+  digest_mismatch_vs_disk=[]
+  content_sha256=acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+  recomputed_content_sha256=acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+  content_match=True
+PIN r94-paired-crossing
+  fixture=corpus/fixtures/r94-paired-crossing
+  payload_schema_version=2
+  pinned_files_eq_ten=True
+  pinned_files_eq_contract=True
+  file_count=10
+  file_keys=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+  missing_from_ten=[]
+  extra=[]
+  bad_digest_shape=[]
+  disk_missing=[]
+  digest_mismatch_vs_disk=[]
+  content_sha256=048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+  recomputed_content_sha256=048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+  content_match=True
+PIN r95-crossing-aftermath
+  fixture=corpus/fixtures/r95-crossing-aftermath
+  payload_schema_version=2
+  pinned_files_eq_ten=True
+  pinned_files_eq_contract=True
+  file_count=10
+  file_keys=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+  missing_from_ten=[]
+  extra=[]
+  bad_digest_shape=[]
+  disk_missing=[]
+  digest_mismatch_vs_disk=[]
+  content_sha256=97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+  recomputed_content_sha256=97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+  content_match=True
+PIN r96-crossing-response
+  fixture=corpus/fixtures/r96-crossing-response
+  payload_schema_version=2
+  pinned_files_eq_ten=True
+  pinned_files_eq_contract=True
+  file_count=10
+  file_keys=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+  missing_from_ten=[]
+  extra=[]
+  bad_digest_shape=[]
+  disk_missing=[]
+  digest_mismatch_vs_disk=[]
+  content_sha256=43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+  recomputed_content_sha256=43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+  content_match=True
+PIN r97-crossing-acknowledgment
+  fixture=corpus/fixtures/r97-crossing-acknowledgment
+  payload_schema_version=2
+  pinned_files_eq_ten=True
+  pinned_files_eq_contract=True
+  file_count=10
+  file_keys=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+  missing_from_ten=[]
+  extra=[]
+  bad_digest_shape=[]
+  disk_missing=[]
+  digest_mismatch_vs_disk=[]
+  content_sha256=a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+  recomputed_content_sha256=a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+  content_match=True
+PIN r98-clerk-filing
+  fixture=corpus/fixtures/r98-clerk-filing
+  payload_schema_version=2
+  pinned_files_eq_ten=True
+  pinned_files_eq_contract=True
+  file_count=10
+  file_keys=['README.md', 'claim-excerpt-map.md', 'contradictions.json', 'entities.json', 'fictional-excerpts.md', 'inspiration-note.md', 'relations.json', 'source-excerpt.md', 'sources.json', 'timeline.json']
+  missing_from_ten=[]
+  extra=[]
+  bad_digest_shape=[]
+  disk_missing=[]
+  digest_mismatch_vs_disk=[]
+  content_sha256=5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+  recomputed_content_sha256=5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+  content_match=True
+PINS_WITH_SCHEMA_OR_FILE_GAPS []
+ALL_PINS_TEN_AND_VERSION True
+R99_PINNED False
+STRUCTURE_QUOTE_TOP
+{
+  "schema_version": 2,
+  "payload_schema_version": 2,
+  "tool": "corpus/tools/dependency_freeze.py",
+  "data_files": [
+    "entities.json",
+    "relations.json",
+    "timeline.json",
+    "sources.json",
+    "contradictions.json"
+  ],
+  "pinned_files": [
+    "entities.json",
+    "relations.json",
+    "timeline.json",
+    "sources.json",
+    "contradictions.json",
+    "README.md",
+    "claim-excerpt-map.md",
+    "fictional-excerpts.md",
+    "inspiration-note.md",
+    "source-excerpt.md"
+  ],
+  "required_files": [
+    "relations.json",
+    "timeline.json"
+  ],
+  "exit_codes": {
+    "0": "PASS",
+    "1": "FAIL",
+    "2": "ERROR"
+  },
+  "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+  "pins": {
+    "r88-m3-maya-cluster": {
+      "fixture": "corpus/fixtures/r88-m3-maya-cluster",
+      "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+      "payload_schema_version": 2,
+      "pinned_files": [
+        "entities.json",
+        "relations.json",
+        "timeline.json",
+        "sources.json",
+        "contradictions.json",
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "content_sha256": "acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae",
+      "files_keys": [
+        "README.md",
+        "claim-excerpt-map.md",
+        "contradictions.json",
+        "entities.json",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "relations.json",
+        "source-excerpt.md",
+        "sources.json",
+        "timeline.json"
+      ],
+      "files_n": 10,
+      "event_ids": [
+        "aru-ninth-bell",
+        "evin-ninth-bell"
+      ],
+      "relations_n": 0,
+      "counts": {
+        "events": 2,
+        "dependency_edges": 0,
+        "relations": 0,
+        "entities": 4,
+        "sources": 2
+      }
+    },
+    "r94-paired-crossing": {
+      "fixture": "corpus/fixtures/r94-paired-crossing",
+      "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+      "payload_schema_version": 2,
+      "pinned_files": [
+        "entities.json",
+        "relations.json",
+        "timeline.json",
+        "sources.json",
+        "contradictions.json",
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "content_sha256": "048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef",
+      "files_keys": [
+        "README.md",
+        "claim-excerpt-map.md",
+        "contradictions.json",
+        "entities.json",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "relations.json",
+        "source-excerpt.md",
+        "sources.json",
+        "timeline.json"
+      ],
+      "files_n": 10,
+      "event_ids": [
+        "aru-ninth-bell",
+        "evin-ninth-bell",
+        "paired-crossing-decision"
+      ],
+      "relations_n": 1,
+      "counts": {
+        "events": 3,
+        "dependency_edges": 2,
+        "relations": 1,
+        "entities": 5,
+        "sources": 3
+      }
+    },
+    "r95-crossing-aftermath": {
+      "fixture": "corpus/fixtures/r95-crossing-aftermath",
+      "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+      "payload_schema_version": 2,
+      "pinned_files": [
+        "entities.json",
+        "relations.json",
+        "timeline.json",
+        "sources.json",
+        "contradictions.json",
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "content_sha256": "97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710",
+      "files_keys": [
+        "README.md",
+        "claim-excerpt-map.md",
+        "contradictions.json",
+        "entities.json",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "relations.json",
+        "source-excerpt.md",
+        "sources.json",
+        "timeline.json"
+      ],
+      "files_n": 10,
+      "event_ids": [
+        "aftermath-missing-evin",
+        "aru-ninth-bell",
+        "evin-ninth-bell",
+        "paired-crossing-decision"
+      ],
+      "relations_n": 1,
+      "counts": {
+        "events": 4,
+        "dependency_edges": 3,
+        "relations": 1,
+        "entities": 5,
+        "sources": 4
+      }
+    },
+    "r96-crossing-response": {
+      "fixture": "corpus/fixtures/r96-crossing-response",
+      "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+      "payload_schema_version": 2,
+      "pinned_files": [
+        "entities.json",
+        "relations.json",
+        "timeline.json",
+        "sources.json",
+        "contradictions.json",
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "content_sha256": "43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c",
+      "files_keys": [
+        "README.md",
+        "claim-excerpt-map.md",
+        "contradictions.json",
+        "entities.json",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "relations.json",
+        "source-excerpt.md",
+        "sources.json",
+        "timeline.json"
+      ],
+      "files_n": 10,
+      "event_ids": [
+        "aftermath-missing-evin",
+        "aru-ninth-bell",
+        "evin-ninth-bell",
+        "paired-crossing-decision",
+        "response-evin-salt-court"
+      ],
+      "relations_n": 1,
+      "counts": {
+        "events": 5,
+        "dependency_edges": 4,
+        "relations": 1,
+        "entities": 5,
+        "sources": 5
+      }
+    },
+    "r97-crossing-acknowledgment": {
+      "fixture": "corpus/fixtures/r97-crossing-acknowledgment",
+      "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+      "payload_schema_version": 2,
+      "pinned_files": [
+        "entities.json",
+        "relations.json",
+        "timeline.json",
+        "sources.json",
+        "contradictions.json",
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "content_sha256": "a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54",
+      "files_keys": [
+        "README.md",
+        "claim-excerpt-map.md",
+        "contradictions.json",
+        "entities.json",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "relations.json",
+        "source-excerpt.md",
+        "sources.json",
+        "timeline.json"
+      ],
+      "files_n": 10,
+      "event_ids": [
+        "acknowledgment-aru-records",
+        "aftermath-missing-evin",
+        "aru-ninth-bell",
+        "evin-ninth-bell",
+        "paired-crossing-decision",
+        "response-evin-salt-court"
+      ],
+      "relations_n": 1,
+      "counts": {
+        "events": 6,
+        "dependency_edges": 5,
+        "relations": 1,
+        "entities": 5,
+        "sources": 6
+      }
+    },
+    "r98-clerk-filing": {
+      "fixture": "corpus/fixtures/r98-clerk-filing",
+      "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
+      "payload_schema_version": 2,
+      "pinned_files": [
+        "entities.json",
+        "relations.json",
+        "timeline.json",
+        "sources.json",
+        "contradictions.json",
+        "README.md",
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "source-excerpt.md"
+      ],
+      "content_sha256": "5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0",
+      "files_keys": [
+        "README.md",
+        "claim-excerpt-map.md",
+        "contradictions.json",
+        "entities.json",
+        "fictional-excerpts.md",
+        "inspiration-note.md",
+        "relations.json",
+        "source-excerpt.md",
+        "sources.json",
+        "timeline.json"
+      ],
+      "files_n": 10,
+      "event_ids": [
+        "acknowledgment-aru-records",
+        "aftermath-missing-evin",
+        "aru-ninth-bell",
+        "clerk-filing-open",
+        "evin-ninth-bell",
+        "paired-crossing-decision",
+        "response-evin-salt-court"
+      ],
+      "relations_n": 1,
+      "counts": {
+        "events": 7,
+        "dependency_edges": 6,
+        "relations": 1,
+        "entities": 6,
+        "sources": 7
+      }
+    }
+  }
+}

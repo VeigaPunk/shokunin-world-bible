@@ -1,0 +1,2 @@
+/bin/bash
+/home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V51-scratch/poll.sh

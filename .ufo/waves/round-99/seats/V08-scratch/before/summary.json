@@ -1,0 +1,101 @@
+{
+  "tool": "03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b",
+  "contract": "153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947",
+  "rows": [
+    {
+      "name": "before_clean",
+      "status": "MATCH",
+      "exit": 0,
+      "ids": [],
+      "expect_exit": 0,
+      "expect_ids": [],
+      "same_ids": true,
+      "same_bytes": true,
+      "named": true,
+      "traceback": false,
+      "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/clean/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/clean/corpus/fixtures/r95-crossing-aftermath"
+    },
+    {
+      "name": "before_md_README.md",
+      "status": "MATCH",
+      "exit": 0,
+      "ids": [],
+      "expect_exit": 0,
+      "expect_ids": [],
+      "same_ids": true,
+      "same_bytes": true,
+      "named": true,
+      "traceback": false,
+      "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-README.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-README.md/corpus/fixtures/r95-crossing-aftermath"
+    },
+    {
+      "name": "before_md_claim-excerpt-map.md",
+      "status": "MATCH",
+      "exit": 0,
+      "ids": [],
+      "expect_exit": 0,
+      "expect_ids": [],
+      "same_ids": true,
+      "same_bytes": true,
+      "named": true,
+      "traceback": false,
+      "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-claim-excerpt-map.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-claim-excerpt-map.md/corpus/fixtures/r95-crossing-aftermath"
+    },
+    {
+      "name": "before_md_fictional-excerpts.md",
+      "status": "MATCH",
+      "exit": 0,
+      "ids": [],
+      "expect_exit": 0,
+      "expect_ids": [],
+      "same_ids": true,
+      "same_bytes": true,
+      "named": true,
+      "traceback": false,
+      "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-fictional-excerpts.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-fictional-excerpts.md/corpus/fixtures/r95-crossing-aftermath"
+    },
+    {
+      "name": "before_md_inspiration-note.md",
+      "status": "MATCH",
+      "exit": 0,
+      "ids": [],
+      "expect_exit": 0,
+      "expect_ids": [],
+      "same_ids": true,
+      "same_bytes": true,
+      "named": true,
+      "traceback": false,
+      "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-inspiration-note.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-inspiration-note.md/corpus/fixtures/r95-crossing-aftermath"
+    },
+    {
+      "name": "before_md_source-excerpt.md",
+      "status": "MATCH",
+      "exit": 0,
+      "ids": [],
+      "expect_exit": 0,
+      "expect_ids": [],
+      "same_ids": true,
+      "same_bytes": true,
+      "named": true,
+      "traceback": false,
+      "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-source-excerpt.md/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/md-source-excerpt.md/corpus/fixtures/r95-crossing-aftermath"
+    },
+    {
+      "name": "before_json_timeline",
+      "status": "MATCH",
+      "exit": 2,
+      "ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "expect_exit": 2,
+      "expect_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "same_ids": true,
+      "same_bytes": true,
+      "named": true,
+      "traceback": false,
+      "cmd": "/usr/bin/python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/json-timeline/corpus/tools/dependency_freeze.py /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-99/seats/V08-scratch/before/cases/json-timeline/corpus/fixtures/r95-crossing-aftermath"
+    }
+  ]
+}

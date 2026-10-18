@@ -1,0 +1,10 @@
+2026-10-17 22:02:39.612249741 -0300 17119 corpus/fixtures/r99-window-lapse/claim-excerpt-map.md
+2026-10-17 21:36:10.000000000 -0300 3 corpus/fixtures/r99-window-lapse/contradictions.json
+2026-10-17 21:36:10.000000000 -0300 1793 corpus/fixtures/r99-window-lapse/entities.json
+2026-10-17 22:01:13.842835114 -0300 5114 corpus/fixtures/r99-window-lapse/fictional-excerpts.md
+2026-10-17 21:36:10.000000000 -0300 1956 corpus/fixtures/r99-window-lapse/inspiration-note.md
+2026-10-17 22:03:19.512442573 -0300 6176 corpus/fixtures/r99-window-lapse/README.md
+2026-10-17 21:36:10.000000000 -0300 139 corpus/fixtures/r99-window-lapse/relations.json
+2026-10-17 21:36:10.000000000 -0300 640 corpus/fixtures/r99-window-lapse/source-excerpt.md
+2026-10-17 22:01:13.842835114 -0300 3293 corpus/fixtures/r99-window-lapse/sources.json
+2026-10-17 22:01:13.842835114 -0300 2998 corpus/fixtures/r99-window-lapse/timeline.json

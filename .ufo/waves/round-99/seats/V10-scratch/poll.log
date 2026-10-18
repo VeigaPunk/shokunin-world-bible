@@ -1,0 +1,7 @@
+try=1 2026-10-17T22:02:24
+fixture_dir True
+s3_report True bytes 5069
+s3_is_plan False
+s3_has_PASS_line True
+s3_mentions_check_bible True
+POLL-DONE try=1 — S3 report present (finished, not a plan) and r99-window-lapse directory present
