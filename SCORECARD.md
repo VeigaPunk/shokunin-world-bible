@@ -628,3 +628,36 @@ planned (r101–r102): two rounds of 16–32 seats on
 Candidates: pin r100 into the chain (eight fixtures), SHONEN/promotion
 assessment as a named question for the operator, BR-01 semantics follow-ups.
 saturation: not declared. retired: none.
+
+## Round 101 — closed, ADMITTED (2026-10-18)
+
+First closing-pair round on `zai-coding-plan/glm-5.3-flash-low`. ROSTER
+ERRATUM (append-only in LOG, same class as r100): declared 28, dispatched
+30 (2 producers + 28 verifiers); 30/30 reports; receipt filled from the
+real dispatch (V27's row L1-added after V25's skeleton omitted it).
+Baseline `6f86bf2` (+ declaration `ebec6bb`); closure `ceeef43` + `542021a`.
+V24 adjudication: ADMITTED with four non-blocking conditions, all
+discharged. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| coverage | improved (bounded) | C1: `r100-docket-review` pinned through the unchanged guarded writer; eight fixtures 8/8 clean; seven inherited pins field-identical; the additive-only delta disclosed (writer-managed `revision` refresh). Bounds: r101 fixtures unpinned. |
+| depth | improved (bounded) | C2: the R10 register's first worked entry — shared referent demonstrated byte-exact (the r94 agreement relation across seven snapshots), shared occasion shown by common reference (not tick equality), claims correctly derived COMPATIBLE, both preserved, no winner, the register file correctly left uncreated. Residue: two wrong citation locators, repaired at closure (AC-1); entry metadata timestamps stale (recorded). |
+| calibration | improved (bounded) | C3: `repointed_edge` persisted 18→19 — a repointed valid-earlier edge yields REDUCTION + ADDITION in one run, exit 1, fail-closed both directions; the blind-spot table's row 2 closed by a dated integrator addendum (AC-2 — the table was outside producer ownership). |
+| operability | unchanged (not harmed) | Documented commands replay; V21's literal-harness limit carried as convention. |
+| freshness | unchanged (not harmed) | Closure docs landed (freeze bullet, C9 row 10); all delivered bytes in-window. |
+| adjacency | unchanged (not harmed) | Charter byte-identical; ownership exactly the declared 4+1 files; the disclosed V26 probe was reverted; scratch-location variants recorded as hygiene. |
+
+Learning trends: expansion improved (eight-fixture chain); quality improved
+(repointed-edge pin; additive-only pin discipline); discernment improved
+(V24 reconciled the GLM wave's slower landing curve without re-rolling a
+single cutoff artifact; the second roster-arithmetic erratum was caught by
+the adjudicator's count work and recorded the same way as r100 — the
+correction class is now a standing convention).
+
+planned (r102 — FINAL round of the operator's loop): 16–32 seats on
+`zai-coding-plan/glm-5.3-flash-low`. Candidates: a synthesis/capstone
+knowledge record across the eight-round push (r95–r102), the SHONEN
+assessment as a named operator question, debt-ledger consolidation, and
+honest closure of the 100-round regimen narrative. saturation: not
+declared. retired: none.
