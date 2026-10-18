@@ -528,3 +528,35 @@ carried sentence; stale knowledge-note tool pins; BR-01 prose half;
 `SELF-TEST-MISMATCH` exit-code alignment between tools; path-less legacy pin
 migration; the endgame poll-escape as a standing seat convention.
 saturation: not declared. retired: none.
+
+## Round 98 — closed, ADMITTED (2026-10-17)
+
+Two-wave round per operator directive: main 64-seat swarm on
+`opencode-go/deepseek-v4.1-flash` (6 seats host-aborted at the endgame) +
+6-seat completion wave on `hyper/deepseek-v4.1-flash` (the hyper-varied
+round). 64/64 reports; receipt rebuilt from both dispatches. Baseline
+`9a3d648`; closure `4265df5`. V31 (completion-wave adjudicator): ADMIT
+with six conditions, all discharged. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: `SELF-TEST-MISMATCH` exits 2 (pinned as case 17; the r97 exit-1 form demonstrated as the before on `git show 9a3d648` bytes); path-less legacy pins migrated in place by `--freeze` (SCOPE-REFUSED→MIGRATED, before/after quoted); contract precedence names the full exit-2 order; self-test 17/17 with all inherited cases unchanged. Bounds: self-test binds consistency, not truth. |
+| coverage | improved (bounded) | C2: the frozen chain extends to six fixtures (r88/r94/r95/r96/r97/r98) pinned through the guarded `--freeze`, verifying 6/6 clean; r97's recorded V46 FAIL discharged — the exact r97 mutation bytes now exit 1 `REDUCTION-DETECTED` while companion gates stay green; path binding holds (foreign copy exit 2). Bounds: pin payload covers the five JSON tables only; BR-01 prose half open. |
+| depth | improved (bounded) | C3: `corpus/fixtures/r98-clerk-filing/` — the institutional-no-finding class: clerk-maren files both accounts, matter OPEN, no finding asserted; 5/1/6→6/1/7, sources 6→7, 20/20 obligations (17 inherited unchanged + first_appearance + claim + event), CLEAN, census 171→172, zero inherited changes. The r95 map's carried sentence repaired — exactly one line, data rows byte-unchanged, r95 receipts identical pre/post. Bounds: the clerk's record asserts no world truth; editorial alignments. |
+| operability | improved (bounded) | Self-tests 17/17 + 25/25 replay; every documented command runs as written; migration path demonstrated. Bounds: self-test scratch at repo root (gitignored); path-less pins outside `--freeze` still need the migration run. |
+| freshness | improved (bounded) | First freshness improvement on record: the two stale r95/r96 knowledge-note tool pins corrected by dated append-only addenda with current hashes; the r98 note's in-flight contract pin corrected the same way; C9 row 7 appended. Bounds: historical note text unrewritten by design. |
+| adjacency | unchanged (not harmed) | PROVINCE byte-identical; change set exactly the declared ownership; the single parent stray was an aborted session's stderr file (removed, attributed); zero seat-intentional strays; no commits by seats. |
+
+Learning trends: expansion improved (172 dirs; institutional class; six
+fixture chain); quality improved (pinned mismatch class; guarded chain
+extension; byte-minimal repair discipline); discernment improved (V31
+reconciled the two-wave evidence including a superseded skeleton receipt;
+V57 proved the abort was host fault not deadlock; the subtract-SELF
+convention held; a 243 MB mirror and an orphaned-process class caught at
+closure).
+
+planned (r99): 128-seat `xai-oauth/grok-4.7-fast` [xhigh] — the largest
+wave; candidates: BR-01 prose half scoping, checker blind-spot
+documentation as decision-table rows, arc beat five. Then r100 (32-seat
+sol-max), then r101–r102 (16–32-seat zai glm-5.3-flash each, operator-added).
+saturation: not declared. retired: none.
