@@ -560,3 +560,36 @@ wave; candidates: BR-01 prose half scoping, checker blind-spot
 documentation as decision-table rows, arc beat five. Then r100 (32-seat
 sol-max), then r101–r102 (16–32-seat zai glm-5.3-flash each, operator-added).
 saturation: not declared. retired: none.
+
+## Round 99 — closed, ADMITTED (2026-10-17)
+
+128-seat swarm on `xai-oauth/grok-4.7-fast` [xhigh] after a provider-lane
+repair (the blocked attempt above): the operator's `~/.grok` OAuth session
+restored the missing `~/.hermes/auth.json` pool, and the alias was
+repointed at the existing wire model `grok-4.7` (`-fast` unavailable for
+this team — recorded deviation). 128/128 reports; receipt rebuilt from the
+dispatch. Baseline `4265df5` + blocked-record `337f0fa`; closure `fe1ce46`.
+V34 all-axis adjudication: ADMIT (bounded) with nine conditions, all
+discharged. Scores remain unmeasured.
+
+| Axis | Verdict | Evidence and bound |
+|---|---|---|
+| calibration | improved (bounded) | C1: pin payload extended to all ten declared files per chain fixture (schema version 2); 18/18 self-test with the persisted `markdown_tamper` case; non-anchor/coherent prose edits — the class every prior gate missed — now exit 2 `DIGEST-MISMATCH` naming the file (before/after reproduced with matching digests); chain re-frozen 6/6 clean. Corrections (AC-1/2/3): semantic findings decide first (exit 1, no DIGEST-MISMATCH); mapped-verbatim-anchor removal was already support_check-visible pre-r99; combined-invocation precedence documented. Bounds: r99-window-lapse unpinned (r100 candidate); r88 `symbolism-clause-map.md` outside the declared ten. |
+| depth | improved (bounded) | C2 component 1: `r99-window-lapse` — the lapse beat; 6/1/7→6/1/8, sources 7→8, 21/21 obligations, CLEAN, census 172→173, no resolution/blame/reconciliation positively asserted (wording bounds AC-6 recorded). Component 2: `r99-gate-blind-spot-table.md` — consolidated blind-spot decision table; the adjudicator replayed every row with quote-identical digests. |
+| coverage | unchanged (not harmed) | The chain remains the declared six, 6/6 clean; ten-file pinning is the calibration move, not a new lore-rule class. |
+| operability | improved (bounded) | Documented commands replay as written; the false universal at README:310/SKILL:100 qualified in place. |
+| freshness | improved (bounded) | The carried "five JSON tables / prose half open / 17 cases" sentences superseded by dated Round-99 text; C9 row 8 appended. |
+| adjacency | unchanged (not harmed) | Charter byte-identical; the parent strays were out-of-lane seat scratch (cleaned); eleven standing FAILs recorded, none re-rolled. |
+
+Learning trends: expansion unchanged in count classes but qualitatively
+new (the blind-spot table is the lane's first consolidated limit-record);
+quality improved (schema-2 pins; row-replayed table); discernment improved
+(V34 reconciled an 11-FAIL census without re-rolling any; three declaration
+overclaims corrected in place; the wave landed 128/128 after a genuine
+provider outage repaired from the operator's own session).
+
+planned (r100): 32-seat `openai-codex/gpt-6.1-sol` [max] — the flagship
+round; candidates: pin r99-window-lapse into the chain (seven fixtures),
+the arc's sixth beat or a synthesis record, BR-01 semantics boundary
+documentation. Then r101–r102 (16–32-seat zai glm-5.3-flash each).
+saturation: not declared. retired: none.
