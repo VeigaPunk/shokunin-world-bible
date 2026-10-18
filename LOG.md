@@ -3402,3 +3402,58 @@ r101 does not start on an unclosed r100. Producer byte-ownership: T1
 + `corpus/knowledge/r100-provenance-semantics-boundary.md` + dated
 addenda rows in `corpus/knowledge/r99-gate-blind-spot-table.md`. Everything
 else is read-only except seat reports.
+
+## Round 100 — roster erratum, qualifications, and closure (ADMITTED; 2026-10-17)
+
+**Roster erratum (AC-ROSTER, append-only):** the declaration above says "one
+batched AgentSwarm, 32 seats: 4 producer seats + 28 verifier seats" — the
+arithmetic is wrong. The dispatched roster was **34 seats** (4 producers
+T1–T4 + 30 verifiers V01–V30, the verifier count mis-summed at declaration
+time); the dispatch returned `completed: 34` and all 34 reports landed.
+The operator-phase intent "a swarm of 32 subagents" is recorded as intent;
+the actual count is 34, named in the receipt and ledger. V18's and V29's
+roster FAILs are discharged by this erratum plus the filled receipt — no
+report was dropped or relabeled.
+
+**Baseline qualification (AC-BASELINE):** `fe1ce46` remains the
+fixture/pin comparison baseline. The two commits between it and the wave —
+`b5fe472` (this declaration) and `ae67105` (the r99 SCORECARD closure) —
+are legitimate pre-dispatch lane history, not wave writes; V15's strict
+allowlist FAIL stands recorded and is qualified, not re-rolled.
+
+**Report-only erratum (AC-RECEIPT-ERRATUM):** T2's report quotes two
+malformed relation digests (lines 66/153, truncated to 55 chars); the
+actual `relations.json` SHA-256 is
+`c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9` — the
+fixture bytes and pins were always correct. T1's own disclosed QA
+correction (a truncated digest in its first report version, fixed before
+closure) is retained as history.
+
+**Closure.** V29 adjudication: all substantive claims verify on the
+delivered bytes (chain 7/7 with the guarded r99 pin and the r99 bound
+discharged; the docket-review beat 6/1/9 with 22/22 obligations and census
+174; the arc synthesis dossier with 6/6 preservation steps; the semantics
+boundary + three dated blind-spot addenda replayed 9/9) — admission was
+WITHHELD only for the roster/baseline/docs conditions above, all of which
+are discharged here: (AC-DOCS) fixtures README Round-100 + census
+174/40/134/421, corpus README r100 bullet + the stale freeze bullet
+repaired (18 cases / ten files / seven fixtures), C9 row 9 above;
+(AC-SCOPE) r100 and the r88 symbolism file stay unpinned, semantic-first
+precedence and the dossier-vs-pins distinction recorded; (AC-CLOSE) the
+closure battery re-ran green on the committed revision (freeze self-test
+18/18; chain 7/7; r100 CLEAN + 22/22 + support 24/24 rows; map self-test
+25/25; boundary CERTIFIED; C9 pair green; census 174/40/134/421; checker
+pin `ff9fd2aa…` reproduced), the receipt carries the 34 real agent IDs.
+
+Per-axis verdicts: coverage improved (bounded — the seven-fixture chain,
+r99 bound discharged); depth improved (bounded — beat six + the
+six-continuation dossier, unresolved throughout, non-establishment bounds
+explicit); calibration improved (bounded — byte-detectability vs semantics
+separated, three correction classes pinned as dated table rows);
+operability not harmed (bounded — V21's literal-harness limit retained);
+freshness unchanged (bounded — closure docs landed here); adjacency not
+harmed (bounded — charter byte-identical; the parent probes were
+read-only). V15/V18/V20 FAILs and V21/V30 qualifications stand recorded,
+discharged or bounded, none re-rolled. SHONEN unchanged (four `[~]`, no
+`[x]`). No promotion, no push. r101 (16–32-seat zai glm-5.3-flash) may
+start; r102 closes the goal.

@@ -359,3 +359,63 @@ The run printed 18 `CASE … ok` lines, including the 17 prior case ids, then `S
 #### Unchanged
 
 The 0/1/2 exit contract, the clean-run `FREEZE` / `DIGEST` / `RESULT` receipt surface, path binding (`PATH-MISMATCH`), and the `--freeze` scope guard are unchanged. Semantic inventory findings still decide first (exit 1). This addendum does not change `map_obligations.py`, `support_check.py`, or `boundary_doc_check.py`.
+
+### Round-100 addendum: r99 pinned, seven-fixture chain, r99 unfrozen-edge bound discharged (2026-10-17)
+
+#### Dated supersession (prior text kept as delivered history)
+
+The current chain is seven fixtures. Earlier chain-size wording, including Round-98's "six fixtures" and Round-99's "Each of the six chain pins", "Chain re-frozen 6/6", and "All six", is superseded as of 2026-10-17 (round 100); those receipts remain historical measurements of their revisions. Round-99 closure's AC-4 bound (`r99-window-lapse` unpinned; tick-15 edge unfrozen, `LOG.md`) is discharged by the guarded pin addition below. This is coverage, not a new dependency-semantics or chronology-truth claim.
+
+#### Guarded r99 pin addition
+
+The integration-time operation was run once from the repository root; this is not a verification command and must not be rerun to check a delivery:
+
+```sh
+python3 corpus/tools/dependency_freeze.py --freeze corpus/fixtures/r99-window-lapse
+```
+
+Observed output (exit 0):
+
+```
+FROZEN r99-window-lapse: events 8; dependency-edges 7; relations 1
+DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e
+FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1
+DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e
+RESULT PASS
+```
+
+The new pin records `corpus/fixtures/r99-window-lapse`, revision `b5fe472957ab1e4e9c90f5613acc14cd24a288ae`, payload schema 2, all ten declared filenames and matching per-file SHA-256 values, 8 events / 7 dependency edges / 1 relation / 6 entities / 8 sources, and the tick-15 edge `clerk-lapse-recorded` → `clerk-filing-open`. The declared ten-file set is unchanged from r99.
+
+`git diff fe1ce46 -- corpus/tools/dependency-freeze-contract.json` shows the r99 pin addition plus the guarded writer's top-level `revision` refresh (`337f0fa52b02626b7687eedbb2d99fab30446fe4` → `b5fe472957ab1e4e9c90f5613acc14cd24a288ae`). Every field of every existing pin is unchanged from that r99 closure; none was re-frozen. The Round-99 sentence that the delivered pins record revision `337f0fa…` now applies to the inherited six only. No contract bytes were hand-edited.
+
+#### Seven-fixture verification (read-only)
+
+Run from the repository root:
+
+```sh
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse
+```
+
+All seven print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0 (7/7 clean). The six inherited digests are exactly the Round-99 values above; the r99 digest is `7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`.
+
+The tick-15 bound was also checked on an isolated mirror of the delivered tool, contract, and r99 fixture, under `.ufo/waves/round-100/seats/T1-scratch/`. The mirror's clean fixture passed with the same digest. After removing only `clerk-filing-open` from the mirror event's `depends_on`, this repository-root command:
+
+```sh
+python3 .ufo/waves/round-100/seats/T1-scratch/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T1-scratch/corpus/fixtures/r99-window-lapse
+```
+
+printed (exit 1):
+
+```
+FREEZE r99-window-lapse: events 8/8; dependency-edges 6/7; relations 1/1
+FINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']
+RESULT FAIL
+```
+
+The delivered fixture was never changed. The same byte-identical tool and contract mirror's `--self-test` still prints `SELF-TEST 18/18` and `RESULT PASS`, exit 0; the case set and expectations are unchanged. The 0/1/2 contract, semantic-finding precedence, scope guard, path binding, and all semantic/non-establishment bounds remain unchanged. `r100-docket-review` is not part of this seven-fixture frozen chain; the pin addition covers r99, not the new continuation.

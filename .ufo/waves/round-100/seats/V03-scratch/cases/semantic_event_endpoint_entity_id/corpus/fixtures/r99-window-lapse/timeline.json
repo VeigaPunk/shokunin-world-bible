@@ -1,0 +1,87 @@
+[
+  {
+    "id": "aru-ninth-bell",
+    "tick": 9,
+    "entity_id": "aru",
+    "place_id": "quiet-rise",
+    "depends_on": [],
+    "description": "Aru carries the north lantern at Quiet Rise.",
+    "source_id": "paired-clock"
+  },
+  {
+    "id": "evin-ninth-bell",
+    "tick": 9,
+    "entity_id": "evin",
+    "place_id": "salt-court",
+    "depends_on": [],
+    "description": "Evin holds the south bell at Salt Court.",
+    "source_id": "paired-clock"
+  },
+  {
+    "id": "paired-crossing-decision",
+    "tick": 10,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "aru-ninth-bell",
+      "evin-ninth-bell"
+    ],
+    "description": "At the Chalk Stair, Aru and Evin agree to share stewardship for this crossing only, then chalk one temporary route mark.",
+    "source_id": "crossing-minute"
+  },
+  {
+    "id": "aftermath-missing-evin",
+    "tick": 11,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "paired-crossing-decision"
+    ],
+    "description": "At the Chalk Stair at tick 11, Aru reports waiting through the agreed bell and that Evin did not come; the note scopes the agreement to this crossing only and asserts no other duty or breach.",
+    "source_id": "aru-aftermath-note"
+  },
+  {
+    "id": "response-evin-salt-court",
+    "tick": 12,
+    "entity_id": "evin",
+    "place_id": "salt-court",
+    "depends_on": [
+      "aftermath-missing-evin"
+    ],
+    "description": "Evin reports being at Salt Court through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved.",
+    "source_id": "evin-response-note"
+  },
+  {
+    "id": "acknowledgment-aru-records",
+    "tick": 13,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "response-evin-salt-court"
+    ],
+    "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.",
+    "source_id": "aru-acknowledgment-note"
+  },
+  {
+    "id": "clerk-filing-open",
+    "tick": 14,
+    "entity_id": "clerk-maren",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "acknowledgment-aru-records"
+    ],
+    "description": "At the Chalk Stair at tick 14, the clerk filed both pending accounts and recorded the matter OPEN, asserting no finding and no resolution.",
+    "source_id": "clerk-filing-note"
+  },
+  {
+    "id": "clerk-lapse-recorded",
+    "tick": 15,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "clerk-filing-open"
+    ],
+    "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry.",
+    "source_id": "clerk-lapse-note"
+  }
+]

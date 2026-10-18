@@ -1,0 +1,46 @@
+{
+  "case_id": "freeze_missing_pinned_markdown",
+  "expected_exit": 2,
+  "expected_ids": [
+    "FILE-MISSING"
+  ],
+  "mode": "freeze",
+  "names_file": "README.md",
+  "runs": [
+    {
+      "repeat": 1,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 2,
+      "finding_ids": [
+        "FILE-MISSING"
+      ],
+      "results": [
+        "RESULT ERROR"
+      ],
+      "stdout": "FINDING FILE-MISSING: --freeze refuses corpus/fixtures/r99-window-lapse: pinned file(s) missing: README.md\nRESULT ERROR\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    },
+    {
+      "repeat": 2,
+      "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V03-scratch/cases/freeze_missing_pinned_markdown/corpus/fixtures/r99-window-lapse",
+      "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+      "exit": 2,
+      "finding_ids": [
+        "FILE-MISSING"
+      ],
+      "results": [
+        "RESULT ERROR"
+      ],
+      "stdout": "FINDING FILE-MISSING: --freeze refuses corpus/fixtures/r99-window-lapse: pinned file(s) missing: README.md\nRESULT ERROR\n",
+      "stderr": "",
+      "expected_matches": true,
+      "contract_unchanged": true
+    }
+  ],
+  "ids_stable": true,
+  "output_byte_stable": true,
+  "ok": true
+}

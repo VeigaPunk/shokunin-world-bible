@@ -1,0 +1,972 @@
+
+=== DIFF SKILL.md ===
+diff --git c/SKILL.md w/SKILL.md
+index 2cc9b17..27b9b6f 100644
+--- c/SKILL.md
++++ w/SKILL.md
+@@ -96 +96 @@ Rows follow the fleet schema in `../PROTOCOL.md:360-406`. `boundary_doc_check` n
+-- **entry command:** `python3 corpus/tools/dependency_freeze.py <fixture-dir>` (repository root; frozen chain: r88-m3-maya-cluster, r94-paired-crossing, r95-crossing-aftermath, r96-crossing-response, r97-crossing-acknowledgment, r98-clerk-filing)
++- **entry command:** `python3 corpus/tools/dependency_freeze.py <fixture-dir>` (repository root; frozen chain: r88-m3-maya-cluster, r94-paired-crossing, r95-crossing-aftermath, r96-crossing-response, r97-crossing-acknowledgment, r98-clerk-filing, r99-window-lapse)
+@@ -99 +99 @@ Rows follow the fleet schema in `../PROTOCOL.md:360-406`. `boundary_doc_check` n
+-- **pinned-values path:** `corpus/tools/dependency-freeze-contract.json` — `schema_version` 2 / `payload_schema_version` 2; per-fixture repo-relative path binding, event→depends_on edge sets, relation endpoint triples, and content SHA-256 over all ten declared files per fixture (five JSON tables + `README.md` + `claim-excerpt-map.md` + `fictional-excerpts.md` + `inspiration-note.md` + `source-excerpt.md`); exactly the six chain fixtures (a foreign `c3red` scratch pin written by an r96 verifier probe was removed at r96 closure, adjudication condition C-1; r97/r98 pinned at r98 through the guarded path, discharging r97's recorded V46 FAIL; the six were re-frozen at r99 through the same guarded `--freeze`).
++- **pinned-values path:** `corpus/tools/dependency-freeze-contract.json` — `schema_version` 2 / `payload_schema_version` 2; per-fixture repo-relative path binding, event→depends_on edge sets, relation endpoint triples, and content SHA-256 over all ten declared files per fixture (five JSON tables + `README.md` + `claim-excerpt-map.md` + `fictional-excerpts.md` + `inspiration-note.md` + `source-excerpt.md`); exactly the seven chain fixtures, verifying 7/7 clean (a foreign `c3red` scratch pin written by an r96 verifier probe was removed at r96 closure, adjudication condition C-1; r97/r98 pinned at r98 through the guarded path, discharging r97's recorded V46 FAIL; the six were re-frozen at r99 through the same guarded `--freeze`; r99-window-lapse pinned at r100 through that guarded path, discharging r99's AC-4 tick-15 unfrozen-edge bound). The six existing pins retain every field from r99 closure `fe1ce46`; the guarded writer also refreshes the contract's top-level revision metadata.
+@@ -101,0 +102 @@ Rows follow the fleet schema in `../PROTOCOL.md:360-406`. `boundary_doc_check` n
++- **dated supersession (2026-10-17, round 100):** the former "exactly the six chain fixtures" wording and r99's recorded unpinned-fixture bound are superseded by the seven-fixture chain above. The r99 pin has payload schema 2, all ten file digests, and `clerk-lapse-recorded` depending on `clerk-filing-open`; no semantics, chronology-truth, or canon claim is added.
+
+=== DIFF corpus/tools/README.md ===
+diff --git c/corpus/tools/README.md w/corpus/tools/README.md
+index 45119aa..309341b 100644
+--- c/corpus/tools/README.md
++++ w/corpus/tools/README.md
+@@ -361,0 +362,60 @@ The 0/1/2 exit contract, the clean-run `FREEZE` / `DIGEST` / `RESULT` receipt su
++
++### Round-100 addendum: r99 pinned, seven-fixture chain, r99 unfrozen-edge bound discharged (2026-10-17)
++
++#### Dated supersession (prior text kept as delivered history)
++
++The current chain is seven fixtures. Earlier chain-size wording, including Round-98's "six fixtures" and Round-99's "Each of the six chain pins", "Chain re-frozen 6/6", and "All six", is superseded as of 2026-10-17 (round 100); those receipts remain historical measurements of their revisions. Round-99 closure's AC-4 bound (`r99-window-lapse` unpinned; tick-15 edge unfrozen, `LOG.md`) is discharged by the guarded pin addition below. This is coverage, not a new dependency-semantics or chronology-truth claim.
++
++#### Guarded r99 pin addition
++
++The integration-time operation was run once from the repository root; this is not a verification command and must not be rerun to check a delivery:
++
++```sh
++python3 corpus/tools/dependency_freeze.py --freeze corpus/fixtures/r99-window-lapse
++```
++
++Observed output (exit 0):
++
++```
++FROZEN r99-window-lapse: events 8; dependency-edges 7; relations 1
++DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e
++FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1
++DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e
++RESULT PASS
++```
++
++The new pin records `corpus/fixtures/r99-window-lapse`, revision `b5fe472957ab1e4e9c90f5613acc14cd24a288ae`, payload schema 2, all ten declared filenames and matching per-file SHA-256 values, 8 events / 7 dependency edges / 1 relation / 6 entities / 8 sources, and the tick-15 edge `clerk-lapse-recorded` → `clerk-filing-open`. The declared ten-file set is unchanged from r99.
++
++`git diff fe1ce46 -- corpus/tools/dependency-freeze-contract.json` shows the r99 pin addition plus the guarded writer's top-level `revision` refresh (`337f0fa52b02626b7687eedbb2d99fab30446fe4` → `b5fe472957ab1e4e9c90f5613acc14cd24a288ae`). Every field of every existing pin is unchanged from that r99 closure; none was re-frozen. The Round-99 sentence that the delivered pins record revision `337f0fa…` now applies to the inherited six only. No contract bytes were hand-edited.
++
++#### Seven-fixture verification (read-only)
++
++Run from the repository root:
++
++```sh
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse
++```
++
++All seven print `FREEZE …`, `DIGEST …`, `RESULT PASS` and exit 0 (7/7 clean). The six inherited digests are exactly the Round-99 values above; the r99 digest is `7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`.
++
++The tick-15 bound was also checked on an isolated mirror of the delivered tool, contract, and r99 fixture, under `.ufo/waves/round-100/seats/T1-scratch/`. The mirror's clean fixture passed with the same digest. After removing only `clerk-filing-open` from the mirror event's `depends_on`, this repository-root command:
++
++```sh
++python3 .ufo/waves/round-100/seats/T1-scratch/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T1-scratch/corpus/fixtures/r99-window-lapse
++```
++
++printed (exit 1):
++
++```
++FREEZE r99-window-lapse: events 8/8; dependency-edges 6/7; relations 1/1
++FINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']
++RESULT FAIL
++```
++
++The delivered fixture was never changed. The same byte-identical tool and contract mirror's `--self-test` still prints `SELF-TEST 18/18` and `RESULT PASS`, exit 0; the case set and expectations are unchanged. The 0/1/2 contract, semantic-finding precedence, scope guard, path binding, and all semantic/non-establishment bounds remain unchanged. `r100-docket-review` is not part of this seven-fixture frozen chain; the pin addition covers r99, not the new continuation.
+
+=== DIFF corpus/tools/dependency-freeze-contract.json ===
+diff --git c/corpus/tools/dependency-freeze-contract.json w/corpus/tools/dependency-freeze-contract.json
+index 7da596b..936a208 100644
+--- c/corpus/tools/dependency-freeze-contract.json
++++ w/corpus/tools/dependency-freeze-contract.json
+@@ -35 +35 @@
+-  "revision": "337f0fa52b02626b7687eedbb2d99fab30446fe4",
++  "revision": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
+@@ -556,0 +557,123 @@
++    },
++    "r99-window-lapse": {
++      "fixture": "corpus/fixtures/r99-window-lapse",
++      "revision": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
++      "payload_schema_version": 2,
++      "pinned_files": [
++        "entities.json",
++        "relations.json",
++        "timeline.json",
++        "sources.json",
++        "contradictions.json",
++        "README.md",
++        "claim-excerpt-map.md",
++        "fictional-excerpts.md",
++        "inspiration-note.md",
++        "source-excerpt.md"
++      ],
++      "content_sha256": "7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e",
++      "files": {
++        "README.md": "b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049",
++        "claim-excerpt-map.md": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
++        "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
++        "entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
++        "fictional-excerpts.md": "fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d",
++        "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
++        "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
++        "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
++        "sources.json": "8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15",
++        "timeline.json": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069"
++      },
++      "events": {
++        "aru-ninth-bell": {
++          "depends_on": [],
++          "endpoint": {
++            "tick": 9,
++            "entity_id": "aru",
++            "place_id": "quiet-rise"
++          }
++        },
++        "evin-ninth-bell": {
++          "depends_on": [],
++          "endpoint": {
++            "tick": 9,
++            "entity_id": "evin",
++            "place_id": "salt-court"
++          }
++        },
++        "paired-crossing-decision": {
++          "depends_on": [
++            "aru-ninth-bell",
++            "evin-ninth-bell"
++          ],
++          "endpoint": {
++            "tick": 10,
++            "entity_id": "aru",
++            "place_id": "chalk-stair"
++          }
++        },
++        "aftermath-missing-evin": {
++          "depends_on": [
++            "paired-crossing-decision"
++          ],
++          "endpoint": {
++            "tick": 11,
++            "entity_id": "aru",
++            "place_id": "chalk-stair"
++          }
++        },
++        "response-evin-salt-court": {
++          "depends_on": [
++            "aftermath-missing-evin"
++          ],
++          "endpoint": {
++            "tick": 12,
++            "entity_id": "evin",
++            "place_id": "salt-court"
++          }
++        },
++        "acknowledgment-aru-records": {
++          "depends_on": [
++            "response-evin-salt-court"
++          ],
++          "endpoint": {
++            "tick": 13,
++            "entity_id": "aru",
++            "place_id": "chalk-stair"
++          }
++        },
++        "clerk-filing-open": {
++          "depends_on": [
++            "acknowledgment-aru-records"
++          ],
++          "endpoint": {
++            "tick": 14,
++            "entity_id": "clerk-maren",
++            "place_id": "chalk-stair"
++          }
++        },
++        "clerk-lapse-recorded": {
++          "depends_on": [
++            "clerk-filing-open"
++          ],
++          "endpoint": {
++            "tick": 15,
++            "entity_id": "clerk-maren",
++            "place_id": "chalk-stair"
++          }
++        }
++      },
++      "relations": [
++        [
++          "aru",
++          "evin",
++          "agreed_co_stewardship_for_this_crossing"
++        ]
++      ],
++      "counts": {
++        "events": 8,
++        "dependency_edges": 7,
++        "relations": 1,
++        "entities": 6,
++        "sources": 8
++      }
+
+=== DIFF corpus/knowledge/r99-gate-blind-spot-table.md ===
+diff --git c/corpus/knowledge/r99-gate-blind-spot-table.md w/corpus/knowledge/r99-gate-blind-spot-table.md
+index ab63cd3..d794e0e 100644
+--- c/corpus/knowledge/r99-gate-blind-spot-table.md
++++ w/corpus/knowledge/r99-gate-blind-spot-table.md
+@@ -270,0 +271,105 @@ Scratch command paths under `.ufo/waves/round-99/seats/S5-scratch/` are this sea
++
++## Dated addendum — 2026-10-17, round 100
++
++The r99 text above is preserved unrewritten. These three measured rows scope its overbroad prose in accordance with r99 adjudication AC-1/AC-2/AC-3 (`LOG.md:3303-3313`). They add no new checker behavior. Commands below were run from `/home/vgpnk/Projects/shokunin/lore-shokunin` with `python3` on this delivered revision, using path-bound mirrors under `.ufo/waves/round-100/seats/T4-scratch/replays/`; no live fixture was mutated and no live contract was re-frozen by this author. The delivered freeze tool SHA-256 was `fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c`; the contract was `ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5` before and after all replays. Complete stdout and exact exits: `.ufo/waves/round-100/seats/T4-scratch/replay-output.txt`; rerun harness: `python3 .ufo/waves/round-100/seats/T4-scratch/replay.py run` (exit 0, `REPLAY failures=[]`).
++
++| # | Date / round | Mutation or invocation class | Catches / observed exit | Does not establish / scoped bound |
++|---|---|---|---|---|
++| 10 | 2026-10-17 / r100 | Mapped-verbatim-anchor removal, excerpt-only; r99 AC-2 | Pre-r99 `4265df5` and delivered `support_check`: `FAIL: J14: source-support anchor missing`, `RESULT FAIL`, exit 1. Delivered freeze: `DIGEST-MISMATCH` naming `fictional-excerpts.md`, exit 2. Commands and control below. | “Invisible to every gate” never covered an unmatched mapped anchor. Historical JSON-only freeze passes this edit, but support checking does not. Row 6's all-green historical bound is non-anchor prose or a coherent excerpt+anchor replacement; no gate here proves prose entailment. |
++| 11 | 2026-10-17 / r100 | Simultaneous dropped edge and prose edit; r99 AC-1 | Delivered freeze: only `REDUCTION-DETECTED`, `RESULT FAIL`, exit 1; no `DIGEST-MISMATCH`. Prose-only twin: named `DIGEST-MISMATCH`, `RESULT ERROR`, exit 2. Commands below. | Semantic-inventory findings precede digest reporting after the verification guards. “Any edit → exit 2” is conditional on a clean modeled inventory, not a universal exit rule and not natural-language semantics. |
++| 12 | 2026-10-17 / r100 | Combined `fixture --freeze fixture`; r99 AC-3 | Delivered CLI: only `INVALID-ARGUMENTS`, `RESULT ERROR`, exit 2; live contract hash unchanged. Exact command below. | The historical precedence list does not describe an invalid combined invocation. This receipt exercises neither inventory verification nor the guarded freeze write. Exit 2 alone is not a digest finding. |
++
++### Row 10 replay — the mapped-anchor class was already visible
++
++Two r95 mirrors received exactly the same mutation: in `fictional-excerpts.md` line 20, replace `depends on both ninth-bell entries` with `follows both ninth-bell entries`, leaving the map's J14 anchor and every JSON byte unchanged. This removes the mapped verbatim anchor by replacement, not a dependency edge. The historical mirror's tools and contract were extracted with `git show 4265df5:<path>`; its `support_check.py` SHA-256 is the same as delivered, `55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c`. Its freeze tool is `03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b`, contract `153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947`.
++
++```sh
++python3 .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/tools/support_check.py .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/fixtures/r95-crossing-aftermath
++python3 corpus/tools/support_check.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath
++```
++
++Both printed these observed lines and exited 1 (other unchanged PASS rows omitted):
++
++```text
++FAIL J14: source-support; mode=verbatim; anchor=not-found
++SOURCE-SUPPORT 14/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 16/17
++FAIL: J14: source-support anchor missing
++RESULT FAIL
++```
++
++Historical freeze control:
++
++```sh
++python3 .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/fixtures/r95-crossing-aftermath
++```
++
++```text
++FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
++DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
++RESULT PASS
++```
++
++Exit 0. This is a freeze blind spot, not evidence that every historical gate passed. Delivered freeze, same mutation:
++
++```sh
++python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath
++```
++
++```text
++FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
++FINDING DIGEST-MISMATCH: content digest b97a3b80df29110f6f369c7bd52ee09cd733e46f3f7d84420563c931744f7dca != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> b0725e215a8c51bd0dda5b384396913a6d8ea36e58caa928d5b0315d47fc1aae); pinned-file bytes changed outside the semantic inventory
++RESULT ERROR
++```
++
++Exit 2. Delivered `python3 corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath` printed `CLEAN: schema, citations, relations, timeline; 0 violations`, exit 0. Delivered `python3 corpus/tools/map_obligations.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath` printed `OBLIGATIONS raw=15 mapped=15` / `RESULT PASS`, exit 0.
++
++### Row 11 replay — semantic findings precede a digest mismatch
++
++In a path-bound r98 mirror, reduce `paired-crossing-decision.depends_on` from `["aru-ninth-bell", "evin-ninth-bell"]` to `["aru-ninth-bell"]` and make the same excerpt-only prose replacement as row 10. A separate r98 twin has only that prose replacement and retains every JSON byte.
++
++```sh
++python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-precedence/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-precedence/corpus/fixtures/r98-clerk-filing
++```
++
++Observed complete stdout, exit 1:
++
++```text
++FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
++FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
++RESULT FAIL
++```
++
++No `DIGEST-MISMATCH` was emitted despite the additional prose edit. Inventory-clean prose-only control:
++
++```sh
++python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-prose-control/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-prose-control/corpus/fixtures/r98-clerk-filing
++```
++
++Observed complete stdout, exit 2:
++
++```text
++FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
++FINDING DIGEST-MISMATCH: content digest c811669ea2534d48122939e270599376160b8f5936eecb2e766c141464b6808b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26); pinned-file bytes changed outside the semantic inventory
++RESULT ERROR
++```
++
++The finding is byte-level, not proof that the changed sentence lost its dependency meaning. “Semantic-first” refers to modeled JSON inventory comparison, not prose interpretation (`corpus/knowledge/r100-provenance-semantics-boundary.md`).
++
++### Row 12 replay — combined invocation is invalid only
++
++```sh
++python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing --freeze corpus/fixtures/r98-clerk-filing
++```
++
++Observed complete stdout, exit 2:
++
++```text
++FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both
++RESULT ERROR
++```
++
++There was exactly one FINDING, no FREEZE/DIGEST receipt, no semantic or digest finding, and no contract write: SHA-256 remained `ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5`. The invalid-argument check runs before the selected operation, so this is not an exception to valid-verification semantic precedence.
++
++### Dated coverage supersession (2026-10-17, r100)
++
++The old “r99 unpinned / six fixtures” sentences in this file describe the r99 pass, not current coverage. On this pass `python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse` printed `FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1`, `DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`, `RESULT PASS`, exit 0. The other six named pins also passed, for 7/7. This discharges the r99 coverage bound without changing the table's semantic limits; no claim is made that r100 is pinned.
+
+=== FULL corpus/knowledge/r100-crossing-arc-synthesis.md ===
+source: `corpus/fixtures/r94-paired-crossing/{README.md,entities.json,relations.json,timeline.json,sources.json,contradictions.json,claim-excerpt-map.md,fictional-excerpts.md}`; `corpus/fixtures/r95-crossing-aftermath/{README.md,entities.json,relations.json,timeline.json,sources.json,contradictions.json,claim-excerpt-map.md,fictional-excerpts.md}`; `corpus/fixtures/r96-crossing-response/{README.md,entities.json,relations.json,timeline.json,sources.json,contradictions.json,claim-excerpt-map.md,fictional-excerpts.md}`; `corpus/fixtures/r97-crossing-acknowledgment/{README.md,entities.json,relations.json,timeline.json,sources.json,contradictions.json,claim-excerpt-map.md,fictional-excerpts.md}`; `corpus/fixtures/r98-clerk-filing/{README.md,entities.json,relations.json,timeline.json,sources.json,contradictions.json,claim-excerpt-map.md,fictional-excerpts.md}`; `corpus/fixtures/r99-window-lapse/{README.md,entities.json,relations.json,timeline.json,sources.json,contradictions.json,claim-excerpt-map.md,fictional-excerpts.md}`; `corpus/fixtures/r100-docket-review/{README.md,entities.json,relations.json,timeline.json,sources.json,contradictions.json,claim-excerpt-map.md,fictional-excerpts.md,inspiration-note.md,source-excerpt.md}`; `corpus/knowledge/r98-clerk-scope-note.md`; `corpus/knowledge/r99-lapse-scope-note.md`; `corpus/knowledge/r100-provenance-semantics-boundary.md`; `corpus/tools/dependency-freeze-contract.json`
+verified-at: 2026-10-17 — read the delivered excerpts, maps, README bounds, and source/event records; counted the raw tables and obligations; compared inherited JSON values and excerpt-byte prefixes on all six continuation steps this pass. Cited paths and ranges were checked locally; no external URL was fetched. This is an author-seat dossier, not an independent admission or canon finding.
+recheck: before integrating any crossing-arc claim, and whenever a cited fixture, map, excerpt, source attribution, gate, pin, or receipt changes. Reinspect the whole proposition and its non-establishment bounds; a retained anchor is not whole-claim entailment.
+citation-convention: in each table row, bare `file.json#/pointer` references and source IDs resolve inside that row's full fixture path. Other citations use lane-root-relative paths; ranges refer to the delivered file, not a web edition. Source IDs are cluster-local, so compare path-qualified pairs rather than bare IDs.
+
+# Crossing-arc synthesis — seed and six continuation beats
+
+The round's “six-beat arc” means the six continuation beats r95–r100 after the r94 minute. Its complete dossier therefore has **seven snapshot records**, not six: r94 minute → r95 aftermath → r96 response → r97 acknowledgment → r98 filing → r99 lapse → r100 review. This follows the earlier notes' numbering: r98 is the fourth continuation (`corpus/knowledge/r98-clerk-scope-note.md:14`), r99 the fifth (`corpus/knowledge/r99-lapse-scope-note.md:14`), and r100 the sixth. The inherited r88 paired-clock register is the precursor, not an extra continuation beat.
+
+This is an arc of attributed records, not a progression toward a verdict. Its invariant is **unresolved throughout**: no continuation selects a winner, reconciles the two accounts, records a finding, or converts the crossing-only agreement into a standing duty. “Unresolved” describes the records' non-adjudication; it is not a testimony-truth finding or a claim that an OPEN docket literally existed before its r98 filing.
+
+## Per-record docket
+
+Counts `E/R/T` mean entities / relations / timeline events in that snapshot; sources count all records in `sources.json`; obligations count source-attributed JSON pointers, not narrative sentences or external editorial comparisons. The source and event pointer columns identify the record introduced at that step; inherited records remain in each later snapshot.
+
+| Record | Fixture | Added event (pointer, editorial tick) | Added in-world source | E/R/T | Sources | Map obligations |
+|---|---|---|---|---:|---:|---:|
+| Seed — minute | `corpus/fixtures/r94-paired-crossing/` | `paired-crossing-decision`, `timeline.json#/2`, tick 10 | `crossing-minute`, `sources.json#/2` | 5/1/3 | 3 | 14 |
+| Beat 1 — aftermath | `corpus/fixtures/r95-crossing-aftermath/` | `aftermath-missing-evin`, `timeline.json#/3`, tick 11 | `aru-aftermath-note`, `sources.json#/3` | 5/1/4 | 4 | 15 |
+| Beat 2 — response | `corpus/fixtures/r96-crossing-response/` | `response-evin-salt-court`, `timeline.json#/4`, tick 12 | `evin-response-note`, `sources.json#/4` | 5/1/5 | 5 | 16 |
+| Beat 3 — acknowledgment | `corpus/fixtures/r97-crossing-acknowledgment/` | `acknowledgment-aru-records`, `timeline.json#/5`, tick 13 | `aru-acknowledgment-note`, `sources.json#/5` | 5/1/6 | 6 | 17 |
+| Beat 4 — filing | `corpus/fixtures/r98-clerk-filing/` | `clerk-filing-open`, `timeline.json#/6`, tick 14 | `clerk-filing-note`, `sources.json#/6` | 6/1/7 | 7 | 20 |
+| Beat 5 — lapse | `corpus/fixtures/r99-window-lapse/` | `clerk-lapse-recorded`, `timeline.json#/7`, tick 15 | `clerk-lapse-note`, `sources.json#/7` | 6/1/8 | 8 | 21 |
+| Beat 6 — first-passage review | `corpus/fixtures/r100-docket-review/` | `clerk-review-first-passage`, `timeline.json#/8`, tick 16 | `clerk-review-note`, `sources.json#/8` | 6/1/9 | 9 | 22 |
+
+The r98 obligation increase is three, not one: the new `clerk-maren` entity contributes its first appearance and one sourced claim, in addition to the filing event. The other continuation steps add one event obligation and one source apiece. The new r100 review adds neither an entity, a claim, a relation, nor a contradiction. Its 22 raw obligations are six first appearances + six claims + one relation + nine events; its two editorial comparison rows are counted separately.
+
+## What each beat records, without upgrading its testimony
+
+All seven excerpt sections remain present in the delivered `corpus/fixtures/r100-docket-review/fictional-excerpts.md` at the inherited line numbers:
+
+- **Seed / r94 minute, lines 15–20.** One bounded agreement: “for this crossing only,” followed by one temporary route mark. The tick-10 decision names both inherited tick-9 entries as dependencies. It neither promises continuing performance nor contains the later lapse assertions; the minute does not itself say the crossing-window closed. The original record is `corpus/fixtures/r94-paired-crossing/fictional-excerpts.md:15-20`.
+- **Beat 1 / r95 aftermath, lines 22–31.** Aru reports waiting at the Chalk Stair through the agreed bell and says Evin did not come. “I assert no other duty, no breach, and no obligation beyond this crossing” bounds that report. It is reported non-arrival, not proof of a breach or a verdict against Evin (`corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md:26-31`).
+- **Beat 2 / r96 response, lines 33–42.** Evin reports being at Salt Court through the same agreed bell, makes no accusation, selects no winner, and states “Both accounts stand unresolved.” This is the first explicit two-account unresolved statement, not a correction of Aru's earlier report (`corpus/fixtures/r96-crossing-response/fictional-excerpts.md:37-42`).
+- **Beat 3 / r97 acknowledgment, lines 44–53.** Aru records receipt of Evin's response while holding to his own account. Receipt does not mean agreement, corroboration, retraction, reconciliation, accusation, or selection of a winner (`corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md:48-53`).
+- **Beat 4 / r98 filing, lines 55–64.** The clerk files both pending accounts and records the matter OPEN; “I assert no finding” and “I reach no verdict and reconcile nothing” delimit the institutional act. Filing is not adjudication. Maren's office is the note's attributed self-description, not independently authenticated authority (`corpus/fixtures/r98-clerk-filing/fictional-excerpts.md:59-64`).
+- **Beat 5 / r99 lapse, lines 66–76.** The clerk's record says the crossing-window closed, the agreement was unfulfilled, no claim was lodged, and the matter stands as a historical open entry. “I record no resolution, assign no blame, and reconcile nothing” is a negation, not a positive resolution. **Window closed is not matter closed**; the lapse closes no one (`corpus/fixtures/r99-window-lapse/fictional-excerpts.md:70-76`).
+- **Beat 6 / r100 review, lines 78–88.** The clerk records a first-passage docket review “After my lapse record.” “The entry remains open,” “No new filings have been lodged,” “I make no finding and resolve nothing,” and “Both accounts stand unresolved” are the delivered note's own assertions. Review is not a new filing, renewed agreement, finding, resolution, or reconciliation (`corpus/fixtures/r100-docket-review/fictional-excerpts.md:82-88`).
+
+The review source's reliability note is `corpus/fixtures/r100-docket-review/sources.json:51-54`; its exact new event is `corpus/fixtures/r100-docket-review/timeline.json:88-96`: actor `clerk-maren`, place `chalk-stair`, tick 16, `depends_on: ["clerk-lapse-recorded"]`, `source_id: clerk-review-note`. Map row J22 is `corpus/fixtures/r100-docket-review/claim-excerpt-map.md:43`, span 78–88, exact anchor at excerpt line 82; its whole-proposition bounds are at map line 72. The anchor does not by itself establish the other four quoted sentences; those must be read in the delivered section.
+
+## Preservation and the unresolved-throughout invariant
+
+On each adjacent snapshot step r94→r95→r96→r97→r98→r99→r100, this author compared the inherited entity prefix, the full relation table, the inherited timeline/source prefixes, and the entire previous fictional excerpt as a byte prefix: all were preserved. The external `source-excerpt.md` and `inspiration-note.md` bytes were also unchanged at every step. Earlier records were accumulated, not rewritten into later conclusions.
+
+The stronger r99→r100 check has six entity rows, one relation, eight timeline rows, and eight source rows inherited unchanged. `contradictions.json`, `entities.json`, `relations.json`, `inspiration-note.md`, and `source-excerpt.md` are byte-identical between these two fixtures; the 5,114-byte r99 fictional excerpt is an exact prefix of the 5,961-byte r100 file. The clerk's `first_appearance` remains `clerk-filing-note`; the review is not a second first appearance. The reviewed relation is still the one crossing-only agreement sourced to `crossing-minute`.
+
+The invariant has a bounded temporal reading: r94 sets the crossing-only agreement and r95 introduces the first report, so neither can literally adjudicate a pair of accounts not yet present. From r96 onward the two-account unresolved status is explicit or inherited and reasserted. The later receipt, institutional filing, recorded lapse, and docket review add no verdict and revise neither account. OPEN is first recorded at r98, remains a historical open entry at r99, and remains open at r100. Closing the named crossing-window does not close the entry.
+
+Every snapshot's `contradictions.json` is `[]`. This is a fact about the authored records, not a logical proof that no incompatibility could ever be found. Aru's account places Aru at the Chalk Stair; Evin's account places Evin at Salt Court. Different actors at different places do not, by themselves, assert one actor's incompatible occupancy, and this arc files no contradiction between them.
+
+## Non-establishment bounds
+
+- **No testimony truth.** The dossier records who says what. It authenticates neither the reports, the filing, the lapse, the review, the alleged absence, nor the clerk's identity or authority. Neither account is chosen as true or false. “No claim was lodged” and “No new filings have been lodged” are statements in their respective notes, not proof of a global absence in every possible record.
+- **No chronology authentication.** Integer ticks, event IDs, and `depends_on` arrays are editorial normalizations of excerpt labels and order/dependence wording, not literal JSON quotations or independently authenticated dates. The new edge encodes the note's “After my lapse record”; it does not independently establish the history it models. An inherited empty list means no earlier dependency is represented in this sequence, not that nothing earlier ever occurred.
+- **No expansion of duty.** The original relation covers this crossing only. Non-performance, response, receipt, filing, lapse, and review supply no standing alliance, perpetual performance, breach finding, renewed agreement, continuing obligation, blame, or adjudication. The single `entity_id` actor slot does not exclude the other participants or assign fault.
+- **No automatic source identity.** Reused IDs are intentional continuation-local lookups. Compare, for example, `(r99-window-lapse, clerk-lapse-note)` with `(r100-docket-review, clerk-lapse-note)` as path-qualified records; neither bare-name equality nor namespace changes are independent identity evidence. The inherited “chalk stair” verse is not retroactively a map or a first presentation of a specific place.
+- **No semantic or canon certification by gates.** Structural CLEAN, lexical support, obligation completeness, and byte identity establish different bounded properties. None proves whole-claim entailment, dependency meaning, source authenticity, truth, chronology, rights, permission, or canon. The exact distinction and r99 AC-1/AC-2 corrections are in `corpus/knowledge/r100-provenance-semantics-boundary.md`.
+- **Rights and AI-training permission unassessed.** The copied design prompt is Spence's English prose, not an authenticated K'iche-language primary text. It is external editorial comparison, not an in-world witness, a cultural rule, or fictional canon (`corpus/fixtures/r100-docket-review/README.md:19`; `corpus/fixtures/r100-docket-review/inspiration-note.md:7-21`; `corpus/fixtures/r100-docket-review/source-excerpt.md:3-7`). Attribution, age, public access, and a byte pin do not grant reuse or AI-training permission.
+
+## Coverage boundary
+
+The seven dossier snapshots r94–r100 are **not the same set** as the seven frozen-chain fixtures. The delivered pin set is r88 plus r94–r99; r99's lapse is now pinned, while r100's review is not (`corpus/tools/dependency-freeze-contract.json`, `pins`; current-chain receipt in `corpus/knowledge/r100-provenance-semantics-boundary.md`). This dossier does not silently claim freeze coverage for the new tick-16 edge. Coverage and the arc's increased authored depth remain separate claims.
+
+This author-seat synthesis is bounded to the cited local records. It neither admits the round independently nor promotes an authored report, a clean gate result, or a byte-preserved snapshot into a resolved world fact.
+
+## Delivered-revision receipts (2026-10-17)
+
+The producer artifacts and reports existed before this final replay: T2 was ready at poll 6/40 (100 seconds) and T3 at poll 7/40 (120 seconds), with 20-second spacing. This is a replay of delivered bytes, not a verification of a producer plan. The author ran this command from `/home/vgpnk/Projects/shokunin/lore-shokunin`:
+
+```sh
+python3 .ufo/waves/round-100/seats/T4-scratch/arc_audit.py
+```
+
+Observed exit 0, `ARC-AUDIT failures=[]`. The harness ran `check_bible.py`, `support_check.py`, and `map_obligations.py` concurrently against each of the seven full fixture paths in the docket table. All 21 real gate calls exited 0: every checker run printed `CLEAN: schema, citations, relations, timeline; 0 violations`; every support/map run printed `RESULT PASS`. Map receipts were `OBLIGATIONS raw=14 mapped=14`, `15/15`, `16/16`, `17/17`, `20/20`, `21/21`, and `22/22` respectively (the latter pairs abbreviate the same `raw=N mapped=N` output form). All six steps' inherited map rows matched after normalizing only the namespace column, and all eight preservation checks per step were `True`.
+
+The exact r100 calls and selected observed output were:
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r100-docket-review
+```
+
+```text
+CLEAN: schema, citations, relations, timeline; 0 violations
+```
+
+Exit 0.
+
+```sh
+python3 corpus/tools/support_check.py corpus/fixtures/r100-docket-review
+```
+
+```text
+INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20
+SOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24
+RESULT PASS
+```
+
+Exit 0. Individual PASS rows are omitted here, not counted as semantic findings.
+
+```sh
+python3 corpus/tools/map_obligations.py corpus/fixtures/r100-docket-review
+```
+
+```text
+OBLIGATIONS raw=22 mapped=22
+INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24
+RESULT PASS
+```
+
+Exit 0. The harness counted `CENSUS 174` fixture directories, compared with 173 recorded at r99 closure (`LOG.md:3343-3344`): one new fixture. The census is a directory count, not evidence of greater truth or resolution. The delivered tools at these receipts were SHA-256 `ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421` (`corpus/fixtures/check_bible.py`), `55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c` (`corpus/tools/support_check.py`), and `86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9` (`corpus/tools/map_obligations.py`). Complete commands, stdout, exits, raw counts, preservation checks, and final r100 file digests are in `.ufo/waves/round-100/seats/T4-scratch/arc-output.txt` and `.ufo/waves/round-100/seats/T4-scratch/arc-results.json`. These scratch receipts are measurements of this pass; regenerate them if the scratch tree is absent or any cited input changes.
+
+=== FULL corpus/knowledge/r100-provenance-semantics-boundary.md ===
+source: `corpus/tools/dependency_freeze.py`; `corpus/tools/dependency-freeze-contract.json`; `corpus/tools/support_check.py`; `corpus/tools/map_obligations.py`; `corpus/fixtures/check_bible.py`; `corpus/tools/README.md` (Round-99 addendum); `corpus/knowledge/r99-gate-blind-spot-table.md` (row 6 and dated round-100 rows 10–12); `LOG.md:3303-3313` (r99 AC-1/AC-2/AC-3 corrections); `corpus/fixtures/r95-crossing-aftermath/{fictional-excerpts.md,claim-excerpt-map.md}`; `corpus/fixtures/r98-clerk-filing/{timeline.json,fictional-excerpts.md}`
+verified-at: 2026-10-17 — the three correction classes and a prose-only control were replayed this pass on isolated copies of the delivered tool and contract; the pre-r99 comparison used `git show 4265df5:<path>`. Every cited local path was checked; no network request, live fixture mutation, or live `--freeze` write was made by this author.
+recheck: whenever a cited tool, pin, payload schema, fixture, or correction changes, and before treating a receipt as evidence for any semantic claim. Re-run on the delivered revision; this record is not a new gate or independent admission.
+citation-convention: bare tool filenames resolve to the full paths in `source:` above; a bare `:NN` continues the preceding tool path in the same sentence. The ten bare payload filenames are relative to the invoked pinned fixture, not to this knowledge directory.
+
+# Provenance is not semantics — round 100
+
+**BR-01's prose half is byte-change-detectable, not dependency-semantics-provable.** Full-file pinning records identity to selected bytes. A prose edit can be detected without the checker understanding either the removed sentence or its replacement. In the tool's term “semantic inventory,” semantic means a modeled JSON inventory, not natural-language understanding.
+
+## What the delivered pin establishes
+
+The schema-2 pin in `corpus/tools/dependency-freeze-contract.json` names a repo-relative fixture path and hashes these ten declared files: `entities.json`, `relations.json`, `timeline.json`, `sources.json`, `contradictions.json`, `README.md`, `claim-excerpt-map.md`, `fictional-excerpts.md`, `inspiration-note.md`, and `source-excerpt.md`. The tool requires that payload shape (`dependency_freeze.py:297-337`), enforces the named path (`:340-355`), builds the fixture model, then compares it with the recorded inventory (`:370-398`).
+
+For a valid verification invocation whose pin, path, files, and model can be evaluated:
+
+- **Byte identity, bounded to the declared set.** A clean inventory plus equal content digest produces `RESULT PASS`, exit 0. The content digest is SHA-256 over the sorted file-name→SHA-256 payload (`dependency_freeze.py:109-116`). This is an identity check against recorded bytes, not source authentication or an endorsement of the bytes.
+- **Named-file change detectability.** If the modeled inventory is clean but a pinned file's bytes differ, verification reports `DIGEST-MISMATCH`, exit 2 `RESULT ERROR`, naming the changed file and its before/after hashes (`dependency_freeze.py:358-367`, `:388-394`). The name locates a byte difference; it does not identify which proposition changed or whether the replacement entails the JSON.
+- **Modeled-inventory precedence.** Lost/gained dependency edges, modeled event endpoints, and relation triples are compared first (`dependency_freeze.py:220-262`). A finding such as `REDUCTION-DETECTED`, `ADDITION-DETECTED`, or `ENDPOINT-CHANGE` produces exit 1 `RESULT FAIL` before the digest branch (`:384-387`), even if prose bytes changed too. No named `DIGEST-MISMATCH` is promised in that case. This is r99 **AC-1**, recorded at `LOG.md:3303-3307` and qualified in `corpus/tools/README.md:310`.
+
+The initial guards and CLI validation still matter. A malformed or missing model, invalid contract, wrong path, or invalid invocation is not a clean-inventory prose comparison. In particular, r99 **AC-3** (`LOG.md:3311-3313`) scopes the historical precedence prose: `fixture --freeze fixture` is rejected before verification or freezing (`dependency_freeze.py:640-648`), with only `INVALID-ARGUMENTS` and exit 2.
+
+## What it does not establish
+
+- **Dependency meaning or adequacy.** A frozen `depends_on` list can be preserved exactly while the source does not entail it. The tool compares recorded sets and fields; it does not infer a causal relation, choose the correct predecessor from the prose, or establish that a pin was semantically correct when written. Re-freezing can record new bytes; it does not prove the old or new record true.
+- **Whole-claim entailment.** A hash cannot tell whether a note supports a description, whether a paraphrase is faithful, or whether an exact lexical anchor supports the whole mapped proposition. `support_check.py` supplies fixed-string/span/mode/inventory receipts; `map_obligations.py` supplies raw-pointer completeness and source-ID binding receipts; neither turns byte identity into semantic proof.
+- **Testimony truth or chronology authentication.** `check_bible.py` checks schema, citations, relations, and timeline structure. Editorial tick integers, event IDs, and recorded edge order are not authenticated chronology. Neither a structural CLEAN nor a byte-identical fixture decides whose account is true, resolves a dispute, establishes identity or institutional authority, assigns blame, or supplies canon.
+- **Unlimited file coverage or permanent immutability.** The pin covers the declared ten, not every neighboring file. `corpus/fixtures/r88-m3-maya-cluster/symbolism-clause-map.md` is outside that set (the measured bound in `corpus/tools/README.md:338`). The guarded `--freeze` is an integration-time contract-writing operation, not a read-only verification command or an independently authenticated history.
+- **Rights or permission.** No receipt establishes copyright status, reuse permission, AI-training permission, cultural authority, or source authenticity. These remain separate, unassessed questions; public accessibility and attribution do not settle them.
+
+## The historical “invisible to every gate” bound
+
+The r98-era prose blind spot is preserved as **row 6** in `corpus/knowledge/r99-gate-blind-spot-table.md:158-194`. That row distinguishes coherent excerpt+anchor replacements and non-anchor prose edits from excerpt-only removal of a mapped verbatim anchor. It is not a separate r98 table file.
+
+r99 **AC-2** (`LOG.md:3308-3311`) corrects the overbroad phrase: removing a mapped verbatim anchor was already visible to `support_check`, exit 1, before full-file pinning. The historical freeze's JSON-only payload missed that edit, but not every gate did. The genuinely all-green historical class was prose outside checked anchors or a coherent excerpt+anchor replacement. Delivered full-file pinning detects the bytes of such edits on pinned fixtures; it still does not validate dependency semantics.
+
+The distinction is lexical, not semantic: a missing fixed string fails even when its replacement might mean the same thing; a coherent restatement can retain all lexical receipts without proving the JSON proposition. Row 6's before/after measurements and round-100 row 10 must be read with that scope, not as claims that `support_check` understands dependency meaning.
+
+## Replays on this delivered revision
+
+Commands were run from `/home/vgpnk/Projects/shokunin/lore-shokunin` with `python3`. The delivered freeze tool was SHA-256 `fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c`; the contract was `ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5` both before and after the replay. Complete commands/stdout/exits are in `.ufo/waves/round-100/seats/T4-scratch/replay-output.txt`; mutation definitions and individual commands are also recorded in dated rows 10–12 of `corpus/knowledge/r99-gate-blind-spot-table.md`.
+
+```sh
+python3 .ufo/waves/round-100/seats/T4-scratch/replay.py run
+```
+
+Observed, exit 0 for the replay harness (the negative probes' own expected non-zero exits are shown separately):
+
+- **AC-2 / mapped-anchor control:** replace only excerpt wording `depends on both ninth-bell entries` with `follows both ninth-bell entries` in an r95 copy, leaving J14 unchanged. The `4265df5` support tool and the delivered support tool each printed `FAIL: J14: source-support anchor missing`, `RESULT FAIL`, exit 1. They are byte-identical, SHA-256 `55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c`. The historical freeze printed `RESULT PASS`, exit 0; the delivered freeze printed `DIGEST-MISMATCH` naming `fictional-excerpts.md`, exit 2. Delivered `check_bible` stayed CLEAN, exit 0; `map_obligations` stayed `OBLIGATIONS raw=15 mapped=15` / `RESULT PASS`, exit 0.
+- **AC-1 / simultaneous edge+prose edit:** drop `evin-ninth-bell` from `paired-crossing-decision.depends_on` in an r98 mirror and make the same prose replacement. The delivered freeze printed `FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1`, `FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']`, `RESULT FAIL`, exit 1, with no `DIGEST-MISMATCH`. The prose-only twin, with its inventory unchanged, printed `DIGEST-MISMATCH` naming `fictional-excerpts.md`, `RESULT ERROR`, exit 2.
+- **AC-3 / invalid combined invocation:** `python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing --freeze corpus/fixtures/r98-clerk-filing` printed only `FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both` and `RESULT ERROR`, exit 2. The live contract hash was unchanged.
+- **Persisted regression control:** the byte-identical delivered tool and contract ran `--self-test` inside `.ufo/waves/round-100/seats/T4-scratch/replays/delivered-self-test/`, with its own r95 base and temporary files contained under this seat's scratch. It printed `SELF-TEST 18/18`, `RESULT PASS`, exit 0, including `markdown_tamper` with exit 2 and finding `DIGEST-MISMATCH`. This is capability evidence, not semantic certification.
+
+## Coverage is a separate claim
+
+This pass independently ran `python3 corpus/tools/dependency_freeze.py corpus/fixtures/<name>` for the delivered names `r88-m3-maya-cluster`, `r94-paired-crossing`, `r95-crossing-aftermath`, `r96-crossing-response`, `r97-crossing-acknowledgment`, `r98-clerk-filing`, and `r99-window-lapse`: all seven printed `RESULT PASS`, exit 0. The r99 receipt was `FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1`, digest `7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`. This supersedes the old r99-unpinned/six-fixture statements as current coverage; their dated historical text remains intact. It establishes pin coverage through r99, not that the new r100 review fixture is pinned or that any testimony is true.
+
+=== FULL corpus/fixtures/r100-docket-review/README.md ===
+# Round 100 docket-review continuation
+
+This is an explicit continuation of `r99-window-lapse`, itself a continuation of `r98-clerk-filing`, `r97-crossing-acknowledgment`, `r96-crossing-response`, `r95-crossing-aftermath`, `r94-paired-crossing`, and `r88-m3-maya-cluster`; it is not an unrelated bible and not a rewrite of any snapshot. The six inherited entity records, the one inherited relation, the eight inherited events, and the eight inherited sources are copied by JSON value; their source IDs, all inherited fictional excerpt bytes and line numbers, the Spence excerpt, and the inspiration context are retained. The added tick-16 review event and its note move the counts from 6 entities / 1 relation / 8 events / 8 sources to 6 entities / 1 relation / 9 events / 9 sources (6/1/9).
+
+## Namespace and occasion comparison
+
+Source IDs are cluster-local. Compare them as path-qualified pairs, for example `(r99-window-lapse, paired-clock)` and `(r100-docket-review, paired-clock)`, not by bare ID alone. This continuation intentionally reuses the inherited IDs and records; path qualification names the lookup namespace and does not imply a separate source, entity identity, or contradiction. The added source is `clerk-review-note`, the clerk's first-person docket review record. No entity is added: the actor remains `clerk-maren`. The added event is `clerk-review-first-passage`.
+
+The inherited paired-clock entries remain distinct tick-9 events: Aru's north lantern at Quiet Rise and Evin's south bell at Salt Court. The inherited tick-10 meeting at the Chalk Stair remains ordered after and explicitly dependent on both named tick-9 entries. The inherited tick-11 event is ordered after and depends on the tick-10 decision (`paired-crossing-decision`), and it records only Aru's report that he waited through the agreed bell and that Evin did not come. The inherited tick-12 event is ordered after and depends on that tick-11 report (`aftermath-missing-evin`), and it records only Evin's second account of the same occasion: that he was at Salt Court through the same agreed bell. The inherited tick-13 event is ordered after and depends on that tick-12 response (`response-evin-salt-court`), and it records only Aru's acknowledgment that he received Evin's response while holding to his own account. The inherited tick-14 event is ordered after and depends on the tick-13 acknowledgment (`acknowledgment-aru-records`), and it records only that the clerk filed both pending accounts and recorded the matter OPEN. The inherited tick-15 event is ordered after and depends on the tick-14 filing (`clerk-filing-open`), and records the closed crossing-window, the unfulfilled agreement, no lodged claim, and the historical open entry. The new tick-16 event is ordered after and depends on that lapse record (`clerk-lapse-recorded`), and records only the clerk's first-passage docket review at the Chalk Stair. It adds one review record; it does not change earlier locations, resolve or create a contradiction, assign blame, or convert either account into a verdict.
+
+The review bound is explicit in `fictional-excerpts.md:82-86`: the entry remains open; no new filings have been lodged; the clerk makes no finding and resolves nothing; both accounts stand unresolved. This is a review of the existing entry, not a new filing, a renewed agreement, a resolution, or reconciliation. The lapse record remains unchanged: the crossing-window closed, the agreement was unfulfilled, no claim was lodged, and the matter stands as a historical open entry. The review settles neither account and changes no term of the crossing-scoped agreement. The accounts name different actors at different places (Aru at the Chalk Stair, Evin at Salt Court), so no contradiction is asserted and `contradictions.json` remains empty. The crossing-only bound is retained: no new duty, no breach finding, no continuing obligation, and no obligation beyond this crossing are established. The review is not evidence of testimony truth, an authenticated chronology, an alliance, a continuing practice, perpetual performance, a standing duty, an adjudication, or an external historical fact. The tick-16 event's `entity_id` is `clerk-maren` because the schema has one actor slot; the reviewed entry concerns both pending accounts, so that field does not exclude either participant or assign blame.
+
+The integer ticks and event-ID edges in `timeline.json` are editorial encodings of the excerpts' tick labels and stated order/dependence, not literal JSON wording in the sources or authenticated chronology. Inherited empty `depends_on` arrays mean no earlier dependency is represented for those entries in this mapped sequence; they do not assert that no earlier event exists anywhere. The note's “After my lapse record” wording supports the encoded order; the event ID `clerk-lapse-recorded` is editorial syntax, not a verbatim quotation.
+
+`first_appearance: crossing-minute` identifies the source that first presents Chalk Stair as a specific place in the JSON bible, not the earliest occurrence of the words: the inherited r88 verse already uses “chalk stair” as an unowned crossing metaphor. That image is retained and is not retroactively made a map/location record. Likewise, `first_appearance: clerk-filing-note` identifies the source that first presents the clerk Maren as a named entity in this JSON bible; the lapse and review notes do not re-present that first appearance, and the review asserts no additional office, no finding, and no resolution.
+
+## Bounded external design prompt
+
+The copied Spence passage is his English prose about a story he labels “Kiche,” not an authenticated K'iche-language primary text. It is an editorial design prompt only: the comparison sets Spence's narrated naming/land appearance beside this invented crossing's name-without-map framing. It supplies no in-world witness, cultural authority, or fictional canon, and asserts no cultural meaning. Rights and AI-training permission remain unassessed; neither is granted or inferred here.
+
+`claim-excerpt-map.md` has 22 source-attributed JSON pointer obligations (the 21 inherited rows' pointers, source IDs, anchors, spans, and delivery modes unchanged, with this fixture's path qualification, plus the new tick-16 review event at `timeline.json#/8`) and two separately labeled editorial comparisons: 24 mapped rows and 20 distinct excerpt anchors. The new event's span is only the appended review section, `fictional-excerpts.md:78-88`, and its exact anchor occurs at line 82. The `support_check.py` receipt is lexical preflight only, not whole-claim entailment, source authentication, chronology truth, rights, permission, or canon review; `map_obligations.py` checks one-to-one pointer/source inventory, not prose semantics.
+
+Replay from the repository root:
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r100-docket-review
+python3 corpus/tools/support_check.py corpus/fixtures/r100-docket-review
+python3 corpus/tools/map_obligations.py corpus/fixtures/r100-docket-review
+```
+
+=== FULL corpus/fixtures/r100-docket-review/claim-excerpt-map.md ===
+# r100 docket-review: canonical claim-to-excerpt map
+
+Scope: all 22 source-attributed JSON obligations in this continuation (six first-appearance pointers, six entity claims, one relation, and nine timeline events), plus two separately labeled editorial comparisons. JSON pointers are relative to this fixture. `source_id` values remain cluster-local in JSON and are qualified in the map as `(cluster path, source ID)` pairs.
+
+**Expected inventory:** 22 JSON facts; 2 editorial rows; 24 total mapped rows; 20 distinct excerpt anchors.
+
+## R9 excerpt declarations
+
+| Excerpt path | Source namespace / citation | Delivery mode | Status |
+|---|---|---|---|
+| `fictional-excerpts.md:12-86` | `r100-docket-review:paired-clock`; `r100-docket-review:crossing-minute`; `r100-docket-review:aru-aftermath-note`; `r100-docket-review:evin-response-note`; `r100-docket-review:aru-acknowledgment-note`; `r100-docket-review:clerk-filing-note`; `r100-docket-review:clerk-lapse-note`; `r100-docket-review:clerk-review-note` | `verbatim` | Newly authored fictional register, minute, aftermath note, response note, acknowledgment note, clerk filing note, clerk lapse note, and clerk review note; JSON sources in this fixture. The seven inherited mapped source IDs were qualified under `r99-window-lapse` in the prior snapshot; their earlier namespaces and delivered wording are retained there. Path qualification names this continuation's lookup namespace, not a separate source or newly authenticated testimony. |
+| `source-excerpt.md:5` | Lewis Spence, *The Myths of Mexico & Peru* (1913), English prose | `verbatim` | Delivered external comparison only; not an in-world source or support for JSON facts. The underlying K'iche primary text is not reproduced (`external-only`). |
+
+`verbatim` names the delivered wording, not a claim that every normalized JSON field is a literal quotation. Review each whole proposition and its bounded scope.
+
+## JSON facts (22 canonical pointers)
+
+The 21 inherited rows carry the r99 JSON pointers, raw source IDs, excerpt anchors, spans, and delivery modes unchanged, at the same map-row positions and excerpt line numbers; only the path-qualification column names this fixture's cluster path. For example, the inherited local ID `paired-clock` resolves here as `r100-docket-review:paired-clock`, previously `r99-window-lapse:paired-clock`. The new row J22 is appended after the inherited rows; it resolves as `r100-docket-review:clerk-review-note` and is anchored only in the appended Round 100 review section (lines 78-88).
+
+| ID | JSON fact pointer and fields | In-world source ID | Path-qualified source namespace | Excerpt path | Line span | R9 delivery mode | Exact anchor |
+|---|---|---|---|---|---:|---|---|
+| J01 | `entities.json#/0/first_appearance` (`aru`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Aru carried the north lantern at Quiet Rise` |
+| J02 | `entities.json#/1/first_appearance` (`evin`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
+| J03 | `entities.json#/2/first_appearance` (`quiet-rise`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Aru carried the north lantern at Quiet Rise` |
+| J04 | `entities.json#/3/first_appearance` (`salt-court`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
+| J05 | `entities.json#/4/first_appearance` (`chalk-stair`) | `crossing-minute` | `r100-docket-review:crossing-minute` | `fictional-excerpts.md` | 17 | `verbatim` | `The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.` |
+| J06 | `entities.json#/0/claims/0` (`statement`, `source_id`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Tick 9: Aru carried the north lantern at Quiet Rise.` |
+| J07 | `entities.json#/1/claims/0` (`statement`, `source_id`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Tick 9: Evin held the south bell at Salt Court.` |
+| J08 | `entities.json#/2/claims/0` (`statement`, `source_id`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `north lantern at Quiet Rise` |
+| J09 | `entities.json#/3/claims/0` (`statement`, `source_id`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `south bell at Salt Court` |
+| J10 | `entities.json#/4/claims/0` (`statement`, `source_id`) | `crossing-minute` | `r100-docket-review:crossing-minute` | `fictional-excerpts.md` | 18 | `verbatim` | `After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.` |
+| J11 | `relations.json#/0` (`from`, `to`, `type`, `source_id`) | `crossing-minute` | `r100-docket-review:crossing-minute` | `fictional-excerpts.md` | 19 | `verbatim` | `There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.` |
+| J12 | `timeline.json#/0` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 12 | `verbatim` | `Aru carried the north lantern at Quiet Rise` |
+| J13 | `timeline.json#/1` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `paired-clock` | `r100-docket-review:paired-clock` | `fictional-excerpts.md` | 13 | `verbatim` | `Evin held the south bell at Salt Court` |
+| J14 | `timeline.json#/2` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `crossing-minute` | `r100-docket-review:crossing-minute` | `fictional-excerpts.md` | 18-20 | `verbatim` | `Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.` |
+| J15 | `timeline.json#/3` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `aru-aftermath-note` | `r100-docket-review:aru-aftermath-note` | `fictional-excerpts.md` | 22-31 | `verbatim` | `Tick 11: I waited at the Chalk Stair through the agreed bell.` |
+| J16 | `timeline.json#/4` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `evin-response-note` | `r100-docket-review:evin-response-note` | `fictional-excerpts.md` | 33-42 | `verbatim` | `Tick 12: I was at Salt Court through the same agreed bell.` |
+| J17 | `timeline.json#/5` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `aru-acknowledgment-note` | `r100-docket-review:aru-acknowledgment-note` | `fictional-excerpts.md` | 44-53 | `verbatim` | `Tick 13: I received Evin's response at the Chalk Stair.` |
+| J18 | `entities.json#/5/first_appearance` (`clerk-maren`) | `clerk-filing-note` | `r100-docket-review:clerk-filing-note` | `fictional-excerpts.md` | 60 | `verbatim` | `I am Maren, clerk of the Chalk Stair registry` |
+| J19 | `entities.json#/5/claims/0` (`statement`, `source_id`) | `clerk-filing-note` | `r100-docket-review:clerk-filing-note` | `fictional-excerpts.md` | 59-60 | `verbatim` | `I filed both pending accounts at the Chalk Stair registry.` |
+| J20 | `timeline.json#/6` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `clerk-filing-note` | `r100-docket-review:clerk-filing-note` | `fictional-excerpts.md` | 55-64 | `verbatim` | `Tick 14: I filed both pending accounts at the Chalk Stair registry.` |
+| J21 | `timeline.json#/7` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `clerk-lapse-note` | `r100-docket-review:clerk-lapse-note` | `fictional-excerpts.md` | 66-76 | `verbatim` | `Tick 15: The crossing-window named in the original minute has closed.` |
+| J22 | `timeline.json#/8` (`tick`, `entity_id`, `place_id`, `depends_on`, `description`, `source_id`) | `clerk-review-note` | `r100-docket-review:clerk-review-note` | `fictional-excerpts.md` | 78-88 | `verbatim` | `Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.` |
+
+## Editorial rows (2 bounded Spence comparisons; not JSON facts)
+
+These rows compare delivered Spence clauses with the fictional design; they do not make Spence an in-world witness, assign cultural meaning, or add canon. `verbatim` describes the English prose delivered in `source-excerpt.md`, not an authenticated K'iche-language text.
+
+| ID | Bounded editorial comparison | Source citation | Excerpt path | Line span | R9 delivery mode | Exact anchor |
+|---|---|---|---:|---|---|---|
+| S01 | Spence's phrase has the narrator call out “Earth”; the fiction's named Chalk Stair is a bounded crossing, not a world-making act. | Lewis Spence (1913), cited above | `source-excerpt.md` | 5 | `verbatim` | `He called out “Earth,”` |
+| S02 | Spence says solid land appeared; the fiction's chalk stair remains “a crossing, never a map,” a limited design contrast rather than a shared cosmology. | Lewis Spence (1913), cited above | `source-excerpt.md` | 5 | `verbatim` | `and the solid land appeared.` |
+
+## Timeline normalization and scope
+
+The inherited tick-9 entries are separate occasions at distinct places; the inherited tick-10 decision is ordered after and depends on both (`aru-ninth-bell` and `evin-ninth-bell`); the inherited tick-11 aftermath event is ordered after and depends on the tick-10 decision (`paired-crossing-decision`); the inherited tick-12 response event is ordered after and depends on the tick-11 report (`aftermath-missing-evin`); the inherited tick-13 acknowledgment event is ordered after and depends on the tick-12 response (`response-evin-salt-court`); the inherited tick-14 filing event is ordered after and depends on the tick-13 acknowledgment (`acknowledgment-aru-records`); the inherited tick-15 lapse event is ordered after and depends on the tick-14 filing (`clerk-filing-open`); the new tick-16 review event is ordered after and depends on the tick-15 lapse record (`clerk-lapse-recorded`). The tick integers and `depends_on` event IDs are editorial encodings of the excerpts' explicit tick/order/dependence wording, not literal JSON syntax in the sources or authenticated chronology. Each inherited empty dependency list means no earlier dependency is represented in this mapped sequence, not that no earlier event exists anywhere. The inherited tick-14 event encodes only the clerk's filing of both pending accounts and the OPEN status; it asserts no finding, no verdict, no reconciliation, no winner between the accounts, and adds no duty beyond this crossing. The inherited tick-15 event encodes only that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry; it asserts no resolution, no blame, and no reconciliation, and it closes no one. The new tick-16 event encodes only a first-passage docket review after that lapse record; the entry remains open, no new filings have been lodged, and the clerk makes no finding and resolves nothing. Both accounts remain unresolved; no agreement is renewed and no new duty is established.
+
+J15's anchor is the tick-11 waiting sentence (line 26); its declared span 22-31 is exactly the inherited aftermath section, whose remaining quoted lines carry the non-arrival (`Evin did not come.`, line 27), the crossing-only bound, and the explicit no-other-duty/no-breach assertion (lines 28-29). The event records one non-arrival on one occasion: it asserts no breach, no continuing duty, and no obligation beyond this crossing, and the record supplies no other duty. The event's `entity_id` is Aru because the schema has one actor slot; its description names Evin's non-arrival, so the field does not exclude the second participant.
+
+J16's anchor is the tick-12 response sentence (line 37); its declared span 33-42 is exactly the appended response section, whose remaining quoted lines carry the no-accusation assertion (`I make no accusation against Aru.`, line 38), the no-winner selection (`I select no winner between our two accounts.`, line 39), and the unresolved-status statement (`Both accounts stand unresolved.`, line 40). The event records one second account of the same occasion: Evin reports being at Salt Court through the same agreed bell, while Aru's inherited report placed himself at the Chalk Stair. The two accounts name different actors at different places, so no contradiction is asserted and `contradictions.json` remains empty; neither account is selected as winner, no accusation is made, and the record asserts no breach, no continuing duty, and no obligation beyond this crossing. The event's `entity_id` is Evin because the schema has one actor slot; its description names Aru's account, so the field does not exclude the other participant.
+
+J17's anchor is the tick-13 receipt sentence (line 48); its declared span 44-53 is exactly the appended acknowledgment section, whose remaining quoted lines carry the retained account (`I hold to my own account; both accounts stand unresolved.`, line 49), the no-accusation/no-winner assertion (`I make no accusation against Evin, and I select no winner between us.`, line 50), and the no-reconciliation/no-new-duty statement (`I assert no reconciliation, no new duty, and no obligation beyond this crossing.`, line 51). The event records one acknowledgment of receipt: Aru reports receiving Evin's response while holding to his own account. It asserts no accusation and no reconciliation and selects no winner between the accounts; the two first-person accounts remain unresolved, and the record asserts no new duty, no continuing obligation, and no obligation beyond this crossing. The event's `entity_id` is Aru because the schema has one actor slot; its description names Evin's response, so the field does not exclude the other participant.
+
+J18's anchor is the self-naming sentence (line 60); its declared span 60 is that sentence alone, which names Maren as clerk of the Chalk Stair registry and records the matter OPEN. The record's `first_appearance` is `clerk-filing-note`, the source that first presents the clerk as a named entity in this JSON bible; it does not assert that no other record anywhere names a clerk, and it assigns no authority beyond the filing itself.
+
+J19's anchor is the filing sentence (line 59); its declared span 59-60 covers the filing sentence and the self-naming sentence that follows, whose remaining words carry the naming (`I am Maren, clerk of the Chalk Stair registry`, line 60) and the OPEN record (`and I record the matter OPEN.`, line 60). The claim records the note's attribution of the filing to Maren, the clerk of the Chalk Stair registry; it asserts no finding, no verdict, and no resolution.
+
+J20's anchor is the tick-14 filing sentence (line 59); its declared span 55-64 is exactly the appended clerk-filing section, whose remaining quoted lines carry the self-naming and OPEN record (line 60), the no-finding assertion (`I assert no finding.`, line 61), and the no-verdict/no-reconciliation statement (`I reach no verdict and reconcile nothing.`, line 62). The event records one institutional filing: the clerk filed both pending accounts and recorded the matter OPEN. It asserts no finding, no verdict, no reconciliation, and no resolution; the two first-person accounts stand unresolved, and the record asserts no new duty, no continuing obligation, and no obligation beyond this crossing. The event's `entity_id` is `clerk-maren` because the schema has one actor slot; its description names both pending accounts, so the field does not exclude the two participants.
+
+J21's anchor is the tick-15 window-closed sentence (line 70); its declared span 66-76 is exactly the appended lapse section, whose remaining quoted lines carry the unfulfilled agreement (`The agreement was unfulfilled.`, line 71), the no-claim statement (`No claim was lodged.`, line 72), the open-entry statement (`The matter stands as a historical open entry.`, line 73), and the no-resolution/no-blame/no-reconciliation statement (`I record no resolution, assign no blame, and reconcile nothing.`, line 74). The event records one lapse: the clerk records that the crossing-window named in the original minute has closed per that minute's terms, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation; the matter stays open, and the record creates no new duty and no obligation beyond this crossing. The event's `entity_id` is `clerk-maren` because the schema has one actor slot; its description names the closed window and the unfulfilled agreement, so the field does not exclude the two participants and assigns blame to neither.
+
+J22's anchor is the tick-16 review sentence (line 82); its declared span 78-88 is exactly the appended review section and no inherited section. The rest of the quotation carries the open-entry statement (`The entry remains open.`, line 83), the no-new-filings statement (`No new filings have been lodged.`, line 84), the no-finding/no-resolution statement (`I make no finding and resolve nothing.`, line 85), and the unresolved-accounts statement (`Both accounts stand unresolved.`, line 86). “After my lapse record” is the note's order wording; `clerk-lapse-recorded` is the editorial event ID used to encode it. The event records the clerk's first-passage docket review only: no new filing, no finding, no resolution, no reconciliation, no winner between the accounts, and no new duty or obligation beyond this crossing are established. It does not authenticate chronology or establish either testimony's truth. The event's `entity_id` is `clerk-maren` because the schema has one actor slot; the reviewed entry concerns both pending accounts, so the field does not exclude either participant or assign blame.
+
+`support_check.py` checks declared row inventory, fixed-string anchors, spans, and R9 mode; its receipt is lexical preflight, not manual whole-claim entailment or a verdict on source authenticity, truth, rights, permission, or canon. `map_obligations.py` compares raw source-attributed pointers and source IDs one-to-one with these rows; it does not prove dependency semantics or prose entailment.
+
+=== FULL corpus/fixtures/r100-docket-review/contradictions.json ===
+[]
+
+=== FULL corpus/fixtures/r100-docket-review/entities.json ===
+[
+  {
+    "id": "aru",
+    "kind": "character",
+    "name": "Aru",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register places Aru carrying the north lantern at Quiet Rise at tick 9.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "evin",
+    "kind": "character",
+    "name": "Evin",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register places Evin holding the south bell at Salt Court at tick 9.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "quiet-rise",
+    "kind": "place",
+    "name": "Quiet Rise",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register locates Aru's north-lantern entry at Quiet Rise.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "salt-court",
+    "kind": "place",
+    "name": "Salt Court",
+    "first_appearance": "paired-clock",
+    "claims": [
+      {
+        "statement": "The register locates Evin's south-bell entry at Salt Court.",
+        "source_id": "paired-clock"
+      }
+    ]
+  },
+  {
+    "id": "chalk-stair",
+    "kind": "place",
+    "name": "Chalk Stair",
+    "first_appearance": "crossing-minute",
+    "claims": [
+      {
+        "statement": "The crossing minute places Aru and Evin together at the Chalk Stair after both tick-9 entries.",
+        "source_id": "crossing-minute"
+      }
+    ]
+  },
+  {
+    "id": "clerk-maren",
+    "kind": "character",
+    "name": "Maren",
+    "first_appearance": "clerk-filing-note",
+    "claims": [
+      {
+        "statement": "The filing note names Maren, the clerk of the Chalk Stair registry, as the officer who filed both pending accounts.",
+        "source_id": "clerk-filing-note"
+      }
+    ]
+  }
+]
+
+=== FULL corpus/fixtures/r100-docket-review/fictional-excerpts.md ===
+# Authored in-world excerpts
+
+**Delivery mode (R9):** `verbatim` — newly authored fictional text.
+
+Newly authored fictional verse, attributed to in-world source ID `veil-verse`:
+
+> The chalk stair stays a crossing, never a map.
+> We leave its name unowned in the rain.
+
+Newly authored fictional register, attributed to in-world source ID `paired-clock`, folio 3, lines 1–2:
+
+> Tick 9: Aru carried the north lantern at Quiet Rise.
+> Tick 9: Evin held the south bell at Salt Court.
+
+Newly authored fictional minute, attributed to in-world source ID `crossing-minute`, folio 4, lines 1–4:
+
+> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+
+## Round 95 aftermath note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `aru-aftermath-note`, folio 5, lines 1–4. This section is appended after the preserved r94 text above; the inherited wording is unchanged.
+
+> Tick 11: I waited at the Chalk Stair through the agreed bell.
+> Evin did not come.
+> The agreement we chalked covered this crossing only.
+> I assert no other duty, no breach, and no obligation beyond this crossing.
+
+Scope: this appended section is Aru's first-person report of one non-arrival at the Chalk Stair. It asserts no breach and no perpetual or continuing obligation; the crossing-scoped agreement above is unchanged, and the record supplies no other duty.
+
+## Round 96 response note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `evin-response-note`, folio 6, lines 1–4. This section is appended after the preserved r95 text above; the inherited wording is unchanged.
+
+> Tick 12: I was at Salt Court through the same agreed bell.
+> I make no accusation against Aru.
+> I select no winner between our two accounts.
+> Both accounts stand unresolved.
+
+Scope: this appended section is Evin's first-person report of one crossing occasion. It asserts no accusation and no breach, selects no winner, and does not resolve the two first-person accounts against each other; the crossing-scoped agreement above is unchanged, and the record supplies no other duty.
+
+## Round 97 acknowledgment note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `aru-acknowledgment-note`, folio 7, lines 1–4. This section is appended after the preserved r96 text above; the inherited wording is unchanged.
+
+> Tick 13: I received Evin's response at the Chalk Stair.
+> I hold to my own account; both accounts stand unresolved.
+> I make no accusation against Evin, and I select no winner between us.
+> I assert no reconciliation, no new duty, and no obligation beyond this crossing.
+
+Scope: this appended section is Aru's first-person acknowledgment that he received Evin's response. It records receipt only; it asserts no accusation, no reconciliation, no winner between the two accounts, and no new duty, and the crossing-scoped agreement above is unchanged.
+
+## Round 98 clerk filing (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `clerk-filing-note`, folio 8, lines 1–4. This section is appended after the preserved r97 text above; the inherited wording is unchanged.
+
+> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+> I assert no finding.
+> I reach no verdict and reconcile nothing.
+
+Scope: this appended section is the harbor clerk's first-person filing record. It is an institutional filing only: it asserts no finding and no resolution, reaches no verdict, and reconciles nothing; the two first-person accounts stand unresolved, and the crossing-scoped agreement above is unchanged.
+
+## Round 99 lapse note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `clerk-lapse-note`, folio 9, lines 1–5. This section is appended after the preserved r98 text above; the inherited wording is unchanged.
+
+> Tick 15: The crossing-window named in the original minute has closed.
+> The agreement was unfulfilled.
+> No claim was lodged.
+> The matter stands as a historical open entry.
+> I record no resolution, assign no blame, and reconcile nothing.
+
+Scope: this appended section is the clerk's first-person lapse record. It records that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation, and it creates no new duty; the crossing-scoped agreement above is unchanged, and the matter stays open.
+
+## Round 100 docket review note (2026-10-17)
+
+Newly authored fictional first-person note, attributed to in-world source ID `clerk-review-note`, folio 10, lines 1–5. This section is appended after the preserved r99 text above; the inherited wording is unchanged.
+
+> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.
+> The entry remains open.
+> No new filings have been lodged.
+> I make no finding and resolve nothing.
+> Both accounts stand unresolved.
+
+Scope: this appended section is the clerk's first-person docket review record. It records review only: the entry remains open, nothing new has been lodged, and the clerk makes no finding and resolves nothing. It settles neither account, creates no new duty, and changes no term of the crossing-scoped agreement above; both accounts remain unresolved.
+
+=== FULL corpus/fixtures/r100-docket-review/inspiration-note.md ===
+# Sourced inspiration note
+
+## Parallel cited
+
+Lewis Spence, *The Myths of Mexico & Peru* (London: George G. Harrap & Co., 1913), Chapter V, “The Maya,” subsection “The Creation-Story,” printed p. 209. The quoted lines are delivered in `source-excerpt.md`; the online text is [Project Gutenberg eBook 53080](https://www.gutenberg.org/ebooks/53080), full text at <https://www.gutenberg.org/files/53080/53080-h/53080-h.htm>.
+
+The excerpt reproduces Spence's English prose and his label “Kiche story.” This note attributes the quoted passage only to Spence's account; it does not treat it as a K'iche-language edition or authenticate the underlying narrative. It does not identify an original individual author, represent all Maya or K'iche traditions, or establish oral continuity. The fictional verse's “chalk stair” asks a limited design question about a name versus a place; it explicitly rejects the source passage's world-making outcome. It imports no named beings, plot, ritual, or cultural rule.
+
+## Attribution question
+
+The English prose and its interpretation as Spence's account are attributed to Lewis Spence and the cited 1913 edition, not to an identified ancient or contemporary K'iche author. The primary K'iche-language source is not reproduced or independently assessed here.
+
+## Rights question
+
+The rights status of this edition, its presentation, and the delivered excerpt has not been determined for all jurisdictions. Consult applicable terms before reuse. Neither age of the narrative nor public accessibility answers the rights question for this edition.
+
+## AI-training-permission question
+
+AI-training permission has not been assessed or established. Public accessibility, attribution, or a possible copyright conclusion does not imply permission for training; this question remains separate and unanswered.
+
+This note records sourced inspiration only. It is not an in-world source and supplies no fictional canon.
+
+=== FULL corpus/fixtures/r100-docket-review/relations.json ===
+[
+  {
+    "from": "aru",
+    "to": "evin",
+    "type": "agreed_co_stewardship_for_this_crossing",
+    "source_id": "crossing-minute"
+  }
+]
+
+=== FULL corpus/fixtures/r100-docket-review/source-excerpt.md ===
+# Delivered source excerpt
+
+Lewis Spence, *The Myths of Mexico & Peru* (1913), Chapter V, “The Maya,” “The Creation-Story,” printed p. 209; Project Gutenberg eBook 53080, <https://www.gutenberg.org/files/53080/53080-h/53080-h.htm>.
+
+> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+
+This is Spence's English prose about a story he labels “Kiche,” not a quotation from a K'iche-language edition. The locator resolves to the printed-page marker `[209]` in the linked text.
+
+=== FULL corpus/fixtures/r100-docket-review/sources.json ===
+[
+  {
+    "id": "veil-verse",
+    "title": "Chalk Stair Verse",
+    "kind": "fictional poem",
+    "reliability_note": "Newly authored fictional verse; its metaphor is not an objective record or creation account."
+  },
+  {
+    "id": "paired-clock",
+    "title": "Ninth Bell Paired Clock Register",
+    "kind": "fictional register",
+    "reliability_note": "Newly authored fictional register; it records two entries at one tick but does not establish a wider chronology."
+  },
+  {
+    "id": "crossing-minute",
+    "title": "Chalk Stair Crossing Minute",
+    "kind": "fictional minute",
+    "reliability_note": "Newly authored fictional minute; it records one bounded crossing decision and agreement, not evidence of continuing performance, a standing alliance, or an external historical fact."
+  },
+  {
+    "id": "aru-aftermath-note",
+    "title": "Aru's Chalk Stair Aftermath Note",
+    "kind": "fictional first-person note",
+    "reliability_note": "Newly authored fictional note; Aru reports waiting at the Chalk Stair through the agreed bell and that Evin did not come. It records one crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an external historical fact."
+  },
+  {
+    "id": "evin-response-note",
+    "title": "Evin's Salt Court Response Note",
+    "kind": "fictional first-person note",
+    "reliability_note": "Newly authored fictional note; Evin reports being at Salt Court through the same agreed bell. It asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved. It records one crossing occasion only and is not evidence of a breach, a continuing duty, a perpetual obligation, or an external historical fact."
+  },
+  {
+    "id": "aru-acknowledgment-note",
+    "title": "Aru's Chalk Stair Acknowledgment Note",
+    "kind": "fictional first-person note",
+    "reliability_note": "Newly authored fictional note; Aru reports receiving Evin's response at the Chalk Stair and states that both first-person accounts stand unresolved. It records receipt only and is not evidence of a resolution, a reconciliation, an accusation, a winner between the accounts, a continuing duty, or an external historical fact."
+  },
+  {
+    "id": "clerk-filing-note",
+    "title": "Maren's Chalk Stair Registry Filing Note",
+    "kind": "fictional first-person note",
+    "reliability_note": "Newly authored fictional note; the clerk reports filing both pending accounts at the Chalk Stair registry and recording the matter OPEN. It asserts no finding, no verdict, no reconciliation, and no resolution; it is not evidence of a breach, a continuing duty, a winner between the accounts, or an external historical fact."
+  },
+  {
+    "id": "clerk-lapse-note",
+    "title": "Maren's Chalk Stair Lapse Note",
+    "kind": "fictional first-person note",
+    "reliability_note": "Newly authored fictional note; the clerk reports that the crossing-window named in the original minute has closed, that the agreement was unfulfilled, that no claim was lodged, and that the matter stands as a historical open entry. It asserts no resolution, no blame, and no reconciliation; it is not evidence of a breach finding, a continuing duty, a winner between the accounts, or an external historical fact."
+  },
+  {
+    "id": "clerk-review-note",
+    "title": "Maren's Chalk Stair Docket Review Note",
+    "kind": "fictional first-person note",
+    "reliability_note": "Newly authored fictional note; the clerk reports a first-passage docket review after the lapse record: the entry remains open, no new filings have been lodged, and the clerk makes no finding and resolves nothing. Both accounts stand unresolved; the note is not evidence of testimony truth, an authenticated chronology, a breach finding, a continuing duty, a winner between the accounts, or an external historical fact."
+  }
+]
+
+=== FULL corpus/fixtures/r100-docket-review/timeline.json ===
+[
+  {
+    "id": "aru-ninth-bell",
+    "tick": 9,
+    "entity_id": "aru",
+    "place_id": "quiet-rise",
+    "depends_on": [],
+    "description": "Aru carries the north lantern at Quiet Rise.",
+    "source_id": "paired-clock"
+  },
+  {
+    "id": "evin-ninth-bell",
+    "tick": 9,
+    "entity_id": "evin",
+    "place_id": "salt-court",
+    "depends_on": [],
+    "description": "Evin holds the south bell at Salt Court.",
+    "source_id": "paired-clock"
+  },
+  {
+    "id": "paired-crossing-decision",
+    "tick": 10,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "aru-ninth-bell",
+      "evin-ninth-bell"
+    ],
+    "description": "At the Chalk Stair, Aru and Evin agree to share stewardship for this crossing only, then chalk one temporary route mark.",
+    "source_id": "crossing-minute"
+  },
+  {
+    "id": "aftermath-missing-evin",
+    "tick": 11,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "paired-crossing-decision"
+    ],
+    "description": "At the Chalk Stair at tick 11, Aru reports waiting through the agreed bell and that Evin did not come; the note scopes the agreement to this crossing only and asserts no other duty or breach.",
+    "source_id": "aru-aftermath-note"
+  },
+  {
+    "id": "response-evin-salt-court",
+    "tick": 12,
+    "entity_id": "evin",
+    "place_id": "salt-court",
+    "depends_on": [
+      "aftermath-missing-evin"
+    ],
+    "description": "Evin reports being at Salt Court through the same agreed bell; the note asserts no accusation against Aru, selects no winner, and states that both first-person accounts stand unresolved.",
+    "source_id": "evin-response-note"
+  },
+  {
+    "id": "acknowledgment-aru-records",
+    "tick": 13,
+    "entity_id": "aru",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "response-evin-salt-court"
+    ],
+    "description": "At the Chalk Stair at tick 13, Aru reports receiving Evin's response and states that both first-person accounts stand unresolved; the note asserts no accusation, no reconciliation, no winner between the accounts, and no new duty beyond this crossing.",
+    "source_id": "aru-acknowledgment-note"
+  },
+  {
+    "id": "clerk-filing-open",
+    "tick": 14,
+    "entity_id": "clerk-maren",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "acknowledgment-aru-records"
+    ],
+    "description": "At the Chalk Stair at tick 14, the clerk filed both pending accounts and recorded the matter OPEN, asserting no finding and no resolution.",
+    "source_id": "clerk-filing-note"
+  },
+  {
+    "id": "clerk-lapse-recorded",
+    "tick": 15,
+    "entity_id": "clerk-maren",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "clerk-filing-open"
+    ],
+    "description": "At the Chalk Stair at tick 15, the clerk records that the crossing-window named in the original minute has closed; the agreement was unfulfilled; no claim was lodged; the matter stands as a historical open entry.",
+    "source_id": "clerk-lapse-note"
+  },
+  {
+    "id": "clerk-review-first-passage",
+    "tick": 16,
+    "entity_id": "clerk-maren",
+    "place_id": "chalk-stair",
+    "depends_on": [
+      "clerk-lapse-recorded"
+    ],
+    "description": "At the Chalk Stair at tick 16, the clerk makes a first-passage docket review after the lapse record; the entry remains open, no new filings have been lodged, and the clerk makes no finding and resolves nothing.",
+    "source_id": "clerk-review-note"
+  }
+]

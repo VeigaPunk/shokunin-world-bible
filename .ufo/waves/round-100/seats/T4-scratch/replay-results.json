@@ -1,0 +1,93 @@
+{
+  "root": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+  "contract_sha256_before": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+  "contract_sha256_after": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+  "tool_sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+  "support_sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+  "baseline_support_sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+  "baseline_freeze_sha256": "03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b",
+  "baseline_contract_sha256": "153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947",
+  "commands": [
+    {
+      "label": "A1-pre-r99-support",
+      "command": "python3 .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/tools/support_check.py .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/fixtures/r95-crossing-aftermath",
+      "stdout": "INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17; DISTINCT-ANCHORS 13/13\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nFAIL J14: source-support; mode=verbatim; anchor=not-found\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nRECEIPT JSON-FACTS 15; EDITORIAL-ROWS 2; TOTAL-ROWS 17\nSOURCE-SUPPORT 14/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 16/17\nFAIL: J14: source-support anchor missing\nRESULT FAIL\n",
+      "stderr": "",
+      "exit": 1,
+      "expected": 1
+    },
+    {
+      "label": "A2-pre-r99-freeze",
+      "command": "python3 .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/fixtures/r95-crossing-aftermath",
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nDIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9\nRESULT PASS\n",
+      "stderr": "",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "label": "A3-delivered-support",
+      "command": "python3 corpus/tools/support_check.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath",
+      "stdout": "INVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17; DISTINCT-ANCHORS 13/13\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nFAIL J14: source-support; mode=verbatim; anchor=not-found\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nRECEIPT JSON-FACTS 15; EDITORIAL-ROWS 2; TOTAL-ROWS 17\nSOURCE-SUPPORT 14/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 16/17\nFAIL: J14: source-support anchor missing\nRESULT FAIL\n",
+      "stderr": "",
+      "exit": 1,
+      "expected": 1
+    },
+    {
+      "label": "A4-delivered-freeze",
+      "command": "python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath",
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nFINDING DIGEST-MISMATCH: content digest b97a3b80df29110f6f369c7bd52ee09cd733e46f3f7d84420563c931744f7dca != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> b0725e215a8c51bd0dda5b384396913a6d8ea36e58caa928d5b0315d47fc1aae); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "label": "A5-delivered-check-bible",
+      "command": "python3 corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath",
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": "",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "label": "A6-delivered-map",
+      "command": "python3 corpus/tools/map_obligations.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath",
+      "stdout": "OBLIGATIONS raw=15 mapped=15\nINVENTORY JSON-FACTS 15/15; EDITORIAL-ROWS 2/2; TOTAL-ROWS 17/17\nRESULT PASS\n",
+      "stderr": "",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "label": "B1-semantic-precedence",
+      "command": "python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-precedence/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-precedence/corpus/fixtures/r98-clerk-filing",
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1\nFINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']\nRESULT FAIL\n",
+      "stderr": "",
+      "exit": 1,
+      "expected": 1
+    },
+    {
+      "label": "B2-prose-control",
+      "command": "python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-prose-control/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-prose-control/corpus/fixtures/r98-clerk-filing",
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c811669ea2534d48122939e270599376160b8f5936eecb2e766c141464b6808b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+      "stderr": "",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "label": "C1-combined-invalid",
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing --freeze corpus/fixtures/r98-clerk-filing",
+      "stdout": "FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both\nRESULT ERROR\n",
+      "stderr": "",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "label": "SELF-delivered-freeze",
+      "command": "python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-self-test/corpus/tools/dependency_freeze.py --self-test",
+      "stdout": "CASE clean: exit=0 expected=0 findings=[] ok\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 18/18\nRESULT PASS\n",
+      "stderr": "",
+      "exit": 0,
+      "expected": 0
+    }
+  ],
+  "failures": []
+}

@@ -268,3 +268,108 @@ Unknown-id and dangling-entity are caught. An emptied list, a wrong-but-earlier 
 ## Limits
 
 Scratch command paths under `.ufo/waves/round-99/seats/S5-scratch/` are this seat's replay trees, not corpus. Re-run the mutation on a fresh copy if those trees are gone; the quoted outputs are this pass's measurements, not a promise that the scratch still exists. This table does not authenticate sources, does not decide the lapse, and does not extend a clean gate run into a finding, a resolution, or a canon claim. `r99-window-lapse` remains unpinned: freeze catches the classes above only on the six pinned chain fixtures.
+
+## Dated addendum — 2026-10-17, round 100
+
+The r99 text above is preserved unrewritten. These three measured rows scope its overbroad prose in accordance with r99 adjudication AC-1/AC-2/AC-3 (`LOG.md:3303-3313`). They add no new checker behavior. Commands below were run from `/home/vgpnk/Projects/shokunin/lore-shokunin` with `python3` on this delivered revision, using path-bound mirrors under `.ufo/waves/round-100/seats/T4-scratch/replays/`; no live fixture was mutated and no live contract was re-frozen by this author. The delivered freeze tool SHA-256 was `fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c`; the contract was `ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5` before and after all replays. Complete stdout and exact exits: `.ufo/waves/round-100/seats/T4-scratch/replay-output.txt`; rerun harness: `python3 .ufo/waves/round-100/seats/T4-scratch/replay.py run` (exit 0, `REPLAY failures=[]`).
+
+| # | Date / round | Mutation or invocation class | Catches / observed exit | Does not establish / scoped bound |
+|---|---|---|---|---|
+| 10 | 2026-10-17 / r100 | Mapped-verbatim-anchor removal, excerpt-only; r99 AC-2 | Pre-r99 `4265df5` and delivered `support_check`: `FAIL: J14: source-support anchor missing`, `RESULT FAIL`, exit 1. Delivered freeze: `DIGEST-MISMATCH` naming `fictional-excerpts.md`, exit 2. Commands and control below. | “Invisible to every gate” never covered an unmatched mapped anchor. Historical JSON-only freeze passes this edit, but support checking does not. Row 6's all-green historical bound is non-anchor prose or a coherent excerpt+anchor replacement; no gate here proves prose entailment. |
+| 11 | 2026-10-17 / r100 | Simultaneous dropped edge and prose edit; r99 AC-1 | Delivered freeze: only `REDUCTION-DETECTED`, `RESULT FAIL`, exit 1; no `DIGEST-MISMATCH`. Prose-only twin: named `DIGEST-MISMATCH`, `RESULT ERROR`, exit 2. Commands below. | Semantic-inventory findings precede digest reporting after the verification guards. “Any edit → exit 2” is conditional on a clean modeled inventory, not a universal exit rule and not natural-language semantics. |
+| 12 | 2026-10-17 / r100 | Combined `fixture --freeze fixture`; r99 AC-3 | Delivered CLI: only `INVALID-ARGUMENTS`, `RESULT ERROR`, exit 2; live contract hash unchanged. Exact command below. | The historical precedence list does not describe an invalid combined invocation. This receipt exercises neither inventory verification nor the guarded freeze write. Exit 2 alone is not a digest finding. |
+
+### Row 10 replay — the mapped-anchor class was already visible
+
+Two r95 mirrors received exactly the same mutation: in `fictional-excerpts.md` line 20, replace `depends on both ninth-bell entries` with `follows both ninth-bell entries`, leaving the map's J14 anchor and every JSON byte unchanged. This removes the mapped verbatim anchor by replacement, not a dependency edge. The historical mirror's tools and contract were extracted with `git show 4265df5:<path>`; its `support_check.py` SHA-256 is the same as delivered, `55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c`. Its freeze tool is `03d04365cf00903e783562d8d760a0f751e477af218b79e6484ab34a9315a24b`, contract `153ebc5b2092948ef43a8693bc1ebd6a0ace80d798210a8d54c96d6e0573a947`.
+
+```sh
+python3 .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/tools/support_check.py .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/fixtures/r95-crossing-aftermath
+python3 corpus/tools/support_check.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath
+```
+
+Both printed these observed lines and exited 1 (other unchanged PASS rows omitted):
+
+```text
+FAIL J14: source-support; mode=verbatim; anchor=not-found
+SOURCE-SUPPORT 14/15; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 17/17; VALIDATED-ROWS 16/17
+FAIL: J14: source-support anchor missing
+RESULT FAIL
+```
+
+Historical freeze control:
+
+```sh
+python3 .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/pre-r99-anchor/corpus/fixtures/r95-crossing-aftermath
+```
+
+```text
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST d541ae641f3189e1586f011ec565ee8982a389949580d2b052b9b9e8e66d2ec9
+RESULT PASS
+```
+
+Exit 0. This is a freeze blind spot, not evidence that every historical gate passed. Delivered freeze, same mutation:
+
+```sh
+python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath
+```
+
+```text
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+FINDING DIGEST-MISMATCH: content digest b97a3b80df29110f6f369c7bd52ee09cd733e46f3f7d84420563c931744f7dca != pin 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710; changed: fictional-excerpts.md (sha256 0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282 -> b0725e215a8c51bd0dda5b384396913a6d8ea36e58caa928d5b0315d47fc1aae); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+```
+
+Exit 2. Delivered `python3 corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath` printed `CLEAN: schema, citations, relations, timeline; 0 violations`, exit 0. Delivered `python3 corpus/tools/map_obligations.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-anchor/corpus/fixtures/r95-crossing-aftermath` printed `OBLIGATIONS raw=15 mapped=15` / `RESULT PASS`, exit 0.
+
+### Row 11 replay — semantic findings precede a digest mismatch
+
+In a path-bound r98 mirror, reduce `paired-crossing-decision.depends_on` from `["aru-ninth-bell", "evin-ninth-bell"]` to `["aru-ninth-bell"]` and make the same excerpt-only prose replacement as row 10. A separate r98 twin has only that prose replacement and retains every JSON byte.
+
+```sh
+python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-precedence/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-precedence/corpus/fixtures/r98-clerk-filing
+```
+
+Observed complete stdout, exit 1:
+
+```text
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1
+FINDING REDUCTION-DETECTED: event paired-crossing-decision lost depends_on ['evin-ninth-bell']
+RESULT FAIL
+```
+
+No `DIGEST-MISMATCH` was emitted despite the additional prose edit. Inventory-clean prose-only control:
+
+```sh
+python3 .ufo/waves/round-100/seats/T4-scratch/replays/delivered-prose-control/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/T4-scratch/replays/delivered-prose-control/corpus/fixtures/r98-clerk-filing
+```
+
+Observed complete stdout, exit 2:
+
+```text
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+FINDING DIGEST-MISMATCH: content digest c811669ea2534d48122939e270599376160b8f5936eecb2e766c141464b6808b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26); pinned-file bytes changed outside the semantic inventory
+RESULT ERROR
+```
+
+The finding is byte-level, not proof that the changed sentence lost its dependency meaning. “Semantic-first” refers to modeled JSON inventory comparison, not prose interpretation (`corpus/knowledge/r100-provenance-semantics-boundary.md`).
+
+### Row 12 replay — combined invocation is invalid only
+
+```sh
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing --freeze corpus/fixtures/r98-clerk-filing
+```
+
+Observed complete stdout, exit 2:
+
+```text
+FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both
+RESULT ERROR
+```
+
+There was exactly one FINDING, no FREEZE/DIGEST receipt, no semantic or digest finding, and no contract write: SHA-256 remained `ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5`. The invalid-argument check runs before the selected operation, so this is not an exception to valid-verification semantic precedence.
+
+### Dated coverage supersession (2026-10-17, r100)
+
+The old “r99 unpinned / six fixtures” sentences in this file describe the r99 pass, not current coverage. On this pass `python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse` printed `FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1`, `DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e`, `RESULT PASS`, exit 0. The other six named pins also passed, for 7/7. This discharges the r99 coverage bound without changing the table's semantic limits; no claim is made that r100 is pinned.

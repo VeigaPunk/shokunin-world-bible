@@ -1,0 +1,36 @@
+{
+  "try": 23,
+  "time": "2026-10-18T02:40:25.136424+00:00",
+  "missing_artifacts": [],
+  "missing_reports": [],
+  "reports": {
+    "T1": [
+      ".ufo/waves/round-100/seats/T1-chain-seven.md"
+    ],
+    "T2": [
+      ".ufo/waves/round-100/seats/T2-fixture-author.md"
+    ],
+    "T3": [
+      ".ufo/waves/round-100/seats/T3-fixture-docs.md"
+    ],
+    "T4": [
+      ".ufo/waves/round-100/seats/T4-knowledge-author.md"
+    ]
+  },
+  "contract_keys": [
+    "schema_version",
+    "payload_schema_version",
+    "tool",
+    "scope",
+    "precedence",
+    "data_files",
+    "pinned_files",
+    "required_files",
+    "exit_codes",
+    "revision",
+    "pins",
+    "self_test",
+    "provenance_note"
+  ],
+  "ready": true
+}

@@ -1,0 +1,8 @@
+{
+  "command": "python3 corpus/tools/discriminate_check.py --checker e97613c",
+  "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+  "start": "2026-10-18T02:33:25.314710+00:00",
+  "end": "2026-10-18T02:33:25.443235+00:00",
+  "exit": 2,
+  "stderr_bytes": 0
+}

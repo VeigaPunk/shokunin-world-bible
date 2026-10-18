@@ -1286,3 +1286,24 @@ Round 99 also upgraded `dependency_freeze` to full-file pins: each chain pin cov
 A full repo-relative corpus run at the r99 closure observed **173 fixture directories: 39 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-98 census (172/38/134/421). One directory added (`r99-window-lapse`); zero inherited tuple changes.
 
 Dated pin note: this Round-99 append changes this file's bytes; the W05 pin for this file no longer matches (sixth consecutive round; census re-declarations above are the measured state at each closure).
+
+## Round 100 — `r100-docket-review` (2026-10-17)
+
+Added at round 100: a preserving continuation of `r99-window-lapse`. The clerk's authored review note (`clerk-review-note`) supports one tick-16 event (`clerk-review-first-passage`, actor `clerk-maren`, place `chalk-stair`, `depends_on: ["clerk-lapse-recorded"]`) recording the first-passage docket review: the entry remains open, no new filings, no finding, nothing resolved. Inherited r99 records are parsed-value identical; the r99 fixture is untouched. Map: 22 obligations (21 inherited rows unchanged + the new event row). Round 100 also delivered the six-beat arc synthesis dossier (`corpus/knowledge/r100-crossing-arc-synthesis.md`) and the provenance-semantics boundary note (`corpus/knowledge/r100-provenance-semantics-boundary.md`), and pinned `r99-window-lapse` into the frozen chain — now seven fixtures verifying 7/7.
+
+Replay commands and receipts (measured at the r100 closure, HEAD cited in LOG.md):
+
+```sh
+python3 corpus/fixtures/check_bible.py corpus/fixtures/r100-docket-review
+# CLEAN: schema, citations, relations, timeline; 0 violations   exit 0
+python3 corpus/tools/map_obligations.py corpus/fixtures/r100-docket-review
+# OBLIGATIONS raw=22 mapped=22; INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24 / RESULT PASS   exit 0
+python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse
+# FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1   RESULT PASS   exit 0
+```
+
+### 2026-10-17 census re-declaration
+
+A full repo-relative corpus run at the r100 closure observed **174 fixture directories: 40 clean (exit 0), 134 intentional negative (exit 1), 421 violation lines, zero non-0/1 exits**. Supersedes the Round-99 census (173/39/134/421). One directory added (`r100-docket-review`); zero inherited tuple changes.
+
+Dated pin note: this Round-100 append changes this file's bytes; the W05 pin for this file no longer matches (seventh consecutive round; census re-declarations above are the measured state at each closure).

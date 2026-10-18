@@ -1,0 +1,74 @@
+[
+  {
+    "command": [
+      "python3",
+      "corpus/fixtures/check_bible.py",
+      ".ufo/waves/round-100/seats/V27-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 0,
+    "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "corpus/tools/map_obligations.py",
+      ".ufo/waves/round-100/seats/V27-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=20 mapped=20\nINVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "corpus/tools/support_check.py",
+      ".ufo/waves/round-100/seats/V27-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 1,
+    "stdout": "INVENTORY JSON-FACTS 20/20; EDITORIAL-ROWS 2/2; TOTAL-ROWS 22/22; DISTINCT-ANCHORS 18/18\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nFAIL J14: source-support; mode=verbatim; anchor=not-found\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nRECEIPT JSON-FACTS 20; EDITORIAL-ROWS 2; TOTAL-ROWS 22\nSOURCE-SUPPORT 19/20; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 22/22; VALIDATED-ROWS 21/22\nFAIL: J14: source-support anchor missing\nRESULT FAIL\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      ".ufo/waves/round-100/seats/V27-scratch/mapped-anchor-removal/corpus/tools/dependency_freeze.py",
+      ".ufo/waves/round-100/seats/V27-scratch/mapped-anchor-removal/corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 2,
+    "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nFINDING DIGEST-MISMATCH: content digest c811669ea2534d48122939e270599376160b8f5936eecb2e766c141464b6808b != pin 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0; changed: fictional-excerpts.md (sha256 29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de -> dbcd5f11f4260f0e85c3271698afe1bac79ace52c31e9b651187371fb79e4b26); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "corpus/fixtures/check_bible.py",
+      ".ufo/waves/round-100/seats/V27-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 0,
+    "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      ".ufo/waves/round-100/seats/V27-scratch/semantic-precedence/corpus/tools/dependency_freeze.py",
+      ".ufo/waves/round-100/seats/V27-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 1,
+    "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 5/6; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-filing-open lost depends_on ['acknowledgment-aru-records']\nRESULT FAIL\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      ".ufo/waves/round-100/seats/V27-scratch/semantic-precedence/corpus/tools/dependency_freeze.py",
+      ".ufo/waves/round-100/seats/V27-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing",
+      "--freeze",
+      ".ufo/waves/round-100/seats/V27-scratch/semantic-precedence/corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 2,
+    "stdout": "FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both\nRESULT ERROR\n",
+    "stderr": ""
+  }
+]

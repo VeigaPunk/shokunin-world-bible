@@ -1,0 +1,1289 @@
+{
+ "record_type": "round-100-receipt",
+ "round": 100,
+ "phase": "single-wave-32-seat",
+ "requested_model": "openai-codex/gpt-6.1-sol",
+ "dispatch_model_alias_declared": "openai-codex/gpt-6.1-sol-max",
+ "requested_effort": "max",
+ "requested_seats": 32,
+ "dispatch_tool_call_id": "tool_d8f74YJKGRvGRx0OFxKhB0Um",
+ "returned_summary": null,
+ "served_backend_echo": null,
+ "baseline_commit": "fe1ce466e9d7427948c0abe4ecfbf961880b72ff",
+ "baseline_is_ancestor_of_head": true,
+ "head_at_snapshot": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
+ "receipt_snapshot_utc": "2026-10-18T02:53:02.463109+00:00",
+ "git_status_short": [
+  " M SKILL.md",
+  " M corpus/knowledge/r99-gate-blind-spot-table.md",
+  " M corpus/tools/README.md",
+  " M corpus/tools/dependency-freeze-contract.json",
+  "?? .ufo/waves/round-100/",
+  "?? .ufo/waves/round-98/seats/V58-scratch/original-run-resume-note.md",
+  "?? corpus/fixtures/r100-docket-review/",
+  "?? corpus/knowledge/r100-crossing-arc-synthesis.md",
+  "?? corpus/knowledge/r100-provenance-semantics-boundary.md"
+ ],
+ "candidate_revision_pinned": {
+  "corpus/tools/dependency-freeze-contract.json": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+  "corpus/tools/README.md": "c99217cd0663125214cee7007951a1b9ae98f466f7081344c03ad0f45f87f399",
+  "SKILL.md": "09b2949ae26ec5e257fce0e879749d8abccaf75c888151159ef857597f418ac6",
+  "corpus/fixtures/r100-docket-review/README.md": "a312a364d4d9476e98c0fae3f62b23bf72e73a06c508aac04ffe48cf9cf4c5fa",
+  "corpus/fixtures/r100-docket-review/claim-excerpt-map.md": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
+  "corpus/fixtures/r100-docket-review/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "corpus/fixtures/r100-docket-review/entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+  "corpus/fixtures/r100-docket-review/fictional-excerpts.md": "d01825a7e3c8f4af549b7acdde7eb8e1b9074a6eccb8ce6d12401cea19745705",
+  "corpus/fixtures/r100-docket-review/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+  "corpus/fixtures/r100-docket-review/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+  "corpus/fixtures/r100-docket-review/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+  "corpus/fixtures/r100-docket-review/sources.json": "effa5160eb7a6b228d52a972bf52beeffc1544d3cb1f6c5edb2850f88bd2d22e",
+  "corpus/fixtures/r100-docket-review/timeline.json": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+  "corpus/knowledge/r100-crossing-arc-synthesis.md": "6fcffc8154a11419adbcaefba6d728ee544af831cb5e1b999429404c3b243acc",
+  "corpus/knowledge/r100-provenance-semantics-boundary.md": "29cc7d856b2600bbb03dec577487bc0f09525ab444a3e3109ef0040ab7edeb36",
+  "corpus/knowledge/r99-gate-blind-spot-table.md": "f1b3719a3954bbae44562f9e01b99434327ff50fba0c3a0755634dc9d76830ff"
+ },
+ "candidate_revision_meta": {
+  "corpus/tools/dependency-freeze-contract.json": {
+   "sha256": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+   "bytes": 29815,
+   "mtime_utc": "2026-10-18T02:32:05.987667+00:00"
+  },
+  "corpus/tools/README.md": {
+   "sha256": "c99217cd0663125214cee7007951a1b9ae98f466f7081344c03ad0f45f87f399",
+   "bytes": 43660,
+   "mtime_utc": "2026-10-18T02:33:36.053075+00:00"
+  },
+  "SKILL.md": {
+   "sha256": "09b2949ae26ec5e257fce0e879749d8abccaf75c888151159ef857597f418ac6",
+   "bytes": 18051,
+   "mtime_utc": "2026-10-18T02:32:58.170984+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/README.md": {
+   "sha256": "a312a364d4d9476e98c0fae3f62b23bf72e73a06c508aac04ffe48cf9cf4c5fa",
+   "bytes": 7074,
+   "mtime_utc": "2026-10-18T02:35:32.293340+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/claim-excerpt-map.md": {
+   "sha256": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
+   "bytes": 18555,
+   "mtime_utc": "2026-10-18T02:35:32.293340+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/contradictions.json": {
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "bytes": 3,
+   "mtime_utc": "2026-10-18T02:32:11.145071+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/entities.json": {
+   "sha256": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+   "bytes": 1793,
+   "mtime_utc": "2026-10-18T02:32:11.145896+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/fictional-excerpts.md": {
+   "sha256": "d01825a7e3c8f4af549b7acdde7eb8e1b9074a6eccb8ce6d12401cea19745705",
+   "bytes": 5961,
+   "mtime_utc": "2026-10-18T02:32:26.219905+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/inspiration-note.md": {
+   "sha256": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+   "bytes": 1956,
+   "mtime_utc": "2026-10-18T02:32:11.147591+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/relations.json": {
+   "sha256": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+   "bytes": 139,
+   "mtime_utc": "2026-10-18T02:32:11.147867+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/source-excerpt.md": {
+   "sha256": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+   "bytes": 640,
+   "mtime_utc": "2026-10-18T02:32:11.149219+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/sources.json": {
+   "sha256": "effa5160eb7a6b228d52a972bf52beeffc1544d3cb1f6c5edb2850f88bd2d22e",
+   "bytes": 3876,
+   "mtime_utc": "2026-10-18T02:32:26.219905+00:00"
+  },
+  "corpus/fixtures/r100-docket-review/timeline.json": {
+   "sha256": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+   "bytes": 3452,
+   "mtime_utc": "2026-10-18T02:32:26.219905+00:00"
+  },
+  "corpus/knowledge/r100-crossing-arc-synthesis.md": {
+   "sha256": "6fcffc8154a11419adbcaefba6d728ee544af831cb5e1b999429404c3b243acc",
+   "bytes": 17698,
+   "mtime_utc": "2026-10-18T02:38:32.885720+00:00"
+  },
+  "corpus/knowledge/r100-provenance-semantics-boundary.md": {
+   "sha256": "29cc7d856b2600bbb03dec577487bc0f09525ab444a3e3109ef0040ab7edeb36",
+   "bytes": 10815,
+   "mtime_utc": "2026-10-18T02:35:26.772328+00:00"
+  },
+  "corpus/knowledge/r99-gate-blind-spot-table.md": {
+   "sha256": "f1b3719a3954bbae44562f9e01b99434327ff50fba0c3a0755634dc9d76830ff",
+   "bytes": 29433,
+   "mtime_utc": "2026-10-18T02:35:03.825277+00:00"
+  }
+ },
+ "missing_candidate_paths": [],
+ "fixture_files": [
+  "README.md",
+  "claim-excerpt-map.md",
+  "contradictions.json",
+  "entities.json",
+  "fictional-excerpts.md",
+  "inspiration-note.md",
+  "relations.json",
+  "source-excerpt.md",
+  "sources.json",
+  "timeline.json"
+ ],
+ "pin_inventory": {
+  "count": 7,
+  "names": [
+   "r88-m3-maya-cluster",
+   "r94-paired-crossing",
+   "r95-crossing-aftermath",
+   "r96-crossing-response",
+   "r97-crossing-acknowledgment",
+   "r98-clerk-filing",
+   "r99-window-lapse"
+  ],
+  "new_pins": [
+   "r99-window-lapse"
+  ],
+  "removed_pins": [],
+  "inherited_changed": [],
+  "top_level_changed_fields": [
+   "revision"
+  ],
+  "r99_pin": {
+   "fixture": "corpus/fixtures/r99-window-lapse",
+   "revision": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
+   "payload_schema_version": 2,
+   "pinned_files": [
+    "entities.json",
+    "relations.json",
+    "timeline.json",
+    "sources.json",
+    "contradictions.json",
+    "README.md",
+    "claim-excerpt-map.md",
+    "fictional-excerpts.md",
+    "inspiration-note.md",
+    "source-excerpt.md"
+   ],
+   "content_sha256": "7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e",
+   "files": {
+    "README.md": "b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049",
+    "claim-excerpt-map.md": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
+    "contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+    "fictional-excerpts.md": "fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d",
+    "inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "sources.json": "8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15",
+    "timeline.json": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069"
+   },
+   "events": {
+    "aru-ninth-bell": {
+     "depends_on": [],
+     "endpoint": {
+      "tick": 9,
+      "entity_id": "aru",
+      "place_id": "quiet-rise"
+     }
+    },
+    "evin-ninth-bell": {
+     "depends_on": [],
+     "endpoint": {
+      "tick": 9,
+      "entity_id": "evin",
+      "place_id": "salt-court"
+     }
+    },
+    "paired-crossing-decision": {
+     "depends_on": [
+      "aru-ninth-bell",
+      "evin-ninth-bell"
+     ],
+     "endpoint": {
+      "tick": 10,
+      "entity_id": "aru",
+      "place_id": "chalk-stair"
+     }
+    },
+    "aftermath-missing-evin": {
+     "depends_on": [
+      "paired-crossing-decision"
+     ],
+     "endpoint": {
+      "tick": 11,
+      "entity_id": "aru",
+      "place_id": "chalk-stair"
+     }
+    },
+    "response-evin-salt-court": {
+     "depends_on": [
+      "aftermath-missing-evin"
+     ],
+     "endpoint": {
+      "tick": 12,
+      "entity_id": "evin",
+      "place_id": "salt-court"
+     }
+    },
+    "acknowledgment-aru-records": {
+     "depends_on": [
+      "response-evin-salt-court"
+     ],
+     "endpoint": {
+      "tick": 13,
+      "entity_id": "aru",
+      "place_id": "chalk-stair"
+     }
+    },
+    "clerk-filing-open": {
+     "depends_on": [
+      "acknowledgment-aru-records"
+     ],
+     "endpoint": {
+      "tick": 14,
+      "entity_id": "clerk-maren",
+      "place_id": "chalk-stair"
+     }
+    },
+    "clerk-lapse-recorded": {
+     "depends_on": [
+      "clerk-filing-open"
+     ],
+     "endpoint": {
+      "tick": 15,
+      "entity_id": "clerk-maren",
+      "place_id": "chalk-stair"
+     }
+    }
+   },
+   "relations": [
+    [
+     "aru",
+     "evin",
+     "agreed_co_stewardship_for_this_crossing"
+    ]
+   ],
+   "counts": {
+    "events": 8,
+    "dependency_edges": 7,
+    "relations": 1,
+    "entities": 6,
+    "sources": 8
+   }
+  }
+ },
+ "protected_files": {
+  "PROVINCE.md": {
+   "sha256": "94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa",
+   "bytes": 802,
+   "mtime_utc": "2026-10-15T04:49:26.872024+00:00",
+   "baseline_sha256": "94a7a77e1810f37fff6aa89d427f6b0bdc2894ecb3527f598a045afda27262aa",
+   "same_as_baseline": true
+  },
+  "SHONEN.md": {
+   "sha256": "03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1",
+   "bytes": 1422,
+   "mtime_utc": "2026-10-17T17:26:20.578635+00:00",
+   "baseline_sha256": "03b832c75efbf81300e87f6a95713a48b21b00d654c1222aee251a27c103d7d1",
+   "same_as_baseline": true
+  },
+  "README.md": {
+   "sha256": "ad4adb1e6cfbec41c83281aa7dfe1439d453ab5cb4290a9d8c25c1a1b06c2caf",
+   "bytes": 1178,
+   "mtime_utc": "2026-10-17T18:19:44.096107+00:00",
+   "baseline_sha256": "ad4adb1e6cfbec41c83281aa7dfe1439d453ab5cb4290a9d8c25c1a1b06c2caf",
+   "same_as_baseline": true
+  },
+  "l0-questions.md": {
+   "sha256": "93105c95247bb80e6f2c4df0fca7f8cc31b271ca3f1777aa69302a9ea8d0cfdf",
+   "bytes": 4503,
+   "mtime_utc": "2026-10-17T17:00:54.764796+00:00",
+   "baseline_sha256": "93105c95247bb80e6f2c4df0fca7f8cc31b271ca3f1777aa69302a9ea8d0cfdf",
+   "same_as_baseline": true
+  },
+  "corpus/fixtures/check_bible.py": {
+   "sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+   "bytes": 22880,
+   "mtime_utc": "2026-10-17T09:50:47.957955+00:00",
+   "baseline_sha256": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+   "same_as_baseline": true
+  },
+  "corpus/tools/dependency_freeze.py": {
+   "sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+   "bytes": 29110,
+   "mtime_utc": "2026-10-18T01:38:11.814368+00:00",
+   "baseline_sha256": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+   "same_as_baseline": true
+  },
+  "corpus/tools/support_check.py": {
+   "sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+   "bytes": 17006,
+   "mtime_utc": "2026-10-17T13:00:58.070058+00:00",
+   "baseline_sha256": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+   "same_as_baseline": true
+  },
+  "corpus/tools/map_obligations.py": {
+   "sha256": "86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9",
+   "bytes": 38693,
+   "mtime_utc": "2026-10-17T21:45:37.483544+00:00",
+   "baseline_sha256": "86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9",
+   "same_as_baseline": true
+  },
+  "corpus/tools/boundary_doc_check.py": {
+   "sha256": "ebb6a0843e67bfaa3118eda7fbf69bac124aca8f5b87cd0b9721b5e6346b0053",
+   "bytes": 37198,
+   "mtime_utc": "2026-10-17T16:40:47.417066+00:00",
+   "baseline_sha256": "ebb6a0843e67bfaa3118eda7fbf69bac124aca8f5b87cd0b9721b5e6346b0053",
+   "same_as_baseline": true
+  }
+ },
+ "collection_snapshot": {
+  "reports_expected": 32,
+  "reports_present": 34,
+  "reports_present_excl_self": 33,
+  "reports_missing_count": 0,
+  "reports_excess_count": 2,
+  "producer_count": 4,
+  "verifier_count": 30,
+  "present": [
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "V01",
+   "V02",
+   "V03",
+   "V04",
+   "V05",
+   "V06",
+   "V07",
+   "V08",
+   "V09",
+   "V10",
+   "V11",
+   "V12",
+   "V13",
+   "V14",
+   "V15",
+   "V16",
+   "V17",
+   "V18",
+   "V19",
+   "V20",
+   "V21",
+   "V22",
+   "V23",
+   "V24",
+   "V25",
+   "V26",
+   "V27",
+   "V28",
+   "V29",
+   "V30"
+  ],
+  "expected_roster_provided_by_dispatch": null,
+  "missing_seat_ids_not_inferred": true,
+  "scratch_directories_without_report_not_credited": [],
+  "producer_present": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "producer_absent": [],
+  "duplicate_report_prefixes": {},
+  "header_seat_mismatches": [],
+  "header_token_misses_first20": [],
+  "empty_reports": [],
+  "tiny_reports_under_200_bytes": [],
+  "unexpected_md_in_seats_dir": [],
+  "non_report_top_level": [
+   "T1-scratch",
+   "T4-scratch",
+   "V02-c1-discharge-scratch",
+   "V03-scratch",
+   "V07-scratch",
+   "V11-scratch",
+   "V12-scratch",
+   "V16-scratch",
+   "V17-scratch",
+   "V18-scope-creep-scratch",
+   "V21-scratch",
+   "V23-scratch",
+   "V25-scratch",
+   "V26-scratch",
+   "V27-scratch",
+   "V28-scratch",
+   "V29-scratch",
+   "V30-scratch"
+  ],
+  "parent_tree_files": [],
+  "conclusions_observed_not_adjudicated": {
+   "T1": [
+    "PASS \u2014 r99 guarded pin added; seven live fixtures clean; six existing pins unchanged; schema-2 ten-file payload and tick-15 reduction detection verified; dated documentation updated; top-level revision refresh disclosed."
+   ],
+   "T2": [
+    "PASS \u2014 T2 fixture payload delivered: CLEAN exit 0, 6/1/9 with 9 sources and 22 raw obligations; inherited rows and excerpt byte-prefix preserved, review leaves the entry open and resolves nothing; T3 map/README certification remains outside this seat."
+   ],
+   "T3": [
+    "PASS \u2014 T3 README and canonical map delivered: 22/22 obligations, 22/22 lexical source support, 24/24 validated rows, CLEAN; 21 inherited anchor outputs and line numbers preserved with namespace-only qualification, and the isolated tick-16 review leaves the entry open and resolves nothing."
+   ],
+   "T4": [
+    "PASS \u2014 T4's three owned knowledge deliverables landed; seven-record/six-continuation dossier, three freshly replayed dated corrections, all 21 arc gates and 7 chain verifications green, self-tests 18/18 and 25/25, historical table preserved, cited paths checked, and no unresolved seat blocker."
+   ],
+   "V01": [
+    "PASS \u2014 C1 has exactly seven clean live fixtures, all ten independently recomputed r99 digests match, and all six inherited pins are unchanged; guarded-writer top-level revision refresh explicitly qualified."
+   ],
+   "V02": [
+    "PASS \u2014 r99 is clean; dropping its tick-15 edge produces REDUCTION-DETECTED exit 1, and a fictional-excerpts.md prose edit produces named DIGEST-MISMATCH exit 2 against the delivered schema-2 ten-file pin."
+   ],
+   "V03": [
+    "PASS \u2014 73/73 negative/control scenarios matched twice (146 CLI calls); all three semantic IDs and all eleven documented exit-2 IDs stable, including real non-chain UNPINNED; no delivered bytes changed."
+   ],
+   "V04": [
+    "PASS \u2014 C1's r99 schema-2 ten-file pin and seven clean live receipts verified; all inherited pins and Python tools unchanged; documentation freeze-scoped; expected guarded root-revision refresh explicitly qualified."
+   ],
+   "V05": [
+    "PASS \u2014 assigned C2 structural checks: r100 CLEAN, 6/1/9 with 9 sources, exact tick-16 review dependency, no dangling references or duplicates; r99 CLEAN and 10/10 baseline-identical; bounded poll correction and T2 receipt typo recorded above."
+   ],
+   "V06": [
+    "PASS \u2014 V06 scope: every inherited JSON row is identical (23/23), all ten r99 baseline files are unchanged, five whole-file copies and the 5,114-byte excerpt prefix pass cmp, and r100 is CLEAN; T3 documentation and other round claims remain outside this verdict."
+   ],
+   "V07": [
+    "PASS \u2014 after T3's delivered artifacts and report appeared, r100 support_check returned 22/22 source support and 24/24 validated rows, and map_obligations returned raw=22 mapped=22; both RESULT PASS, exit 0, empty stderr, with byte-identical reruns on unchanged fixture/tool/report snapshots."
+   ],
+   "V08": [
+    "PASS \u2014 22/22 JSON anchors are independently in-span; inherited excerpt/map line numbers and anchor fields are preserved; J22 is the sole new row/anchor and occurs only at review line 82 within section 78\u201388; all three delivered fixture gates pass."
+   ],
+   "V09": [
+    "PASS \u2014 C2 review note is whole-proposition supported by excerpt lines 82-86 and JSON/map rows; entry remains open, no new filing or finding is introduced, nothing is resolved, and the description remains explicitly bounded."
+   ],
+   "V10": [
+    "PASS \u2014 no supported closure/resolution reading found in the delivered new bytes; the crossing-only relation is byte-identical, the dossier preserves non-adjudication bounds, 21/21 arc gates and 7/7 chain checks pass, and all nine correction replays match their bounded outcomes."
+   ],
+   "V11": [
+    "PASS \u2014 the delivered dossier's seven records/six continuation beats match fixture bytes, counts, events, sources, obligations, and preserved maps; unresolved non-adjudication holds throughout, explicit non-establishment bounds are present, all cited paths resolve, and all 21 live gate calls pass."
+   ],
+   "V12": [
+    "PASS \u2014 the delivered semantics-boundary note is artifact-backed, preserves all r99 AC distinctions, reproduces the claimed gate behavior, and makes no byte-identity-to-semantics overclaim."
+   ],
+   "V13": [
+    "PASS \u2014 all three dated C3 addenda independently reproduce, exact commands/stdout/stderr/exits match 9/9, all 20,526 historical table bytes remain unchanged, and delivered table/tool/contract hashes stay stable."
+   ],
+   "V14": [
+    "PASS \u2014 exactly three dated data rows added by git diff; every historical byte preserved; all three new rows carry resolvable r99 AC debt pointers."
+   ],
+   "V15": [
+    "FAIL \u2014 census 174 and inherited fixture preservation pass, but strict comparison with fe1ce46 finds two additional inherited changes, LOG.md and SCORECARD.md, already committed before dispatch; producer-only worktree scope passes."
+   ],
+   "V16": [
+    "PASS \u2014 six accumulated mutation classes preserved with 56/56 expected CLI outcomes, pinned-r99 prose edits detected by named-file DIGEST-MISMATCH, r100 explicitly unpinned, regression suites 18/18 and 25/25 green, and 31/31 live inputs unchanged."
+   ],
+   "V17": [
+    "PASS \u2014 after all four producer reports landed (poll 23), boundary default CERTIFIED rc=0 with receipts 3/3, cases 14/14 and anchors 2/2; self-test 8/8 rc=0; delivered discrimination HELD rc=0 and distinct historical control REGRESSION-DETECTED rc=2; checker pin ff9fd2aa\u2026d1421 reproduced; all 96 boundary/discriminator paths match fe1ce46 and HEAD; both scratch-only byte-drift controls fail closed as expected."
+   ],
+   "V18": [
+    "FAIL \u2014 33 unique reports are delivered against the declared 32-seat total, with an additional V29 scratch namespace still unreported; production ownership, parent-stray, protected-byte, and scratch-size checks pass on the delivered snapshot."
+   ],
+   "V19": [
+    "PASS \u2014 delivered new-corpus freshness and 4/4 digest spots pass; seven pins and C9 behavior are fresh, with C9/navigation closure bookkeeping and T2's report-only digest transcription explicitly left for authorized follow-up."
+   ],
+   "V20": [
+    "FAIL \u2014 pre-integration doc parity is not yet landed: missing fixtures Round-100/census section, missing corpus r100/current-seven-chain navigation, and missing C9 r100 row; delivered census 174/40/134/421, seven freeze receipts, and r100 structural/map/lexical gates all pass."
+   ],
+   "V21": [
+    "INCONCLUSIVE \u2014 21/21 ownership-safe literal commands matched and both relocated harnesses passed, but the universal literal-command requirement is not fully verified because T4's two logging harness commands would overwrite T4-owned scratch; the explicitly historical guarded freeze was not rerun."
+   ],
+   "V22": [
+    "PASS \u2014 bounded adjacency: PROVINCE byte-identical; no observed lore-owned outside-lane delta; authorized production/report/scratch paths only; rights and AI-training refusals preserved, no game-mechanics claim introduced; concurrent independent sibling drift explicitly excluded from any machine-wide no-write guarantee."
+   ],
+   "V23": [
+    "PASS \u2014 COVERAGE improved from six to seven clean frozen fixtures; r99 tick-15 bound discharged; all six inherited pins preserved; guarded revision refresh, unpinned r100, and semantic/non-establishment bounds explicit."
+   ],
+   "V24": [
+    "PASS \u2014 depth improved (bounded): both C2 components verify on the delivered bytes, inherited records and unresolved non-adjudication are preserved, and the two independent replay groups pass; r100 remains unpinned, semantic/truth claims remain unestablished, and global baseline/doc-closure findings are not waived."
+   ],
+   "V25": [
+    "PASS \u2014 CALIBRATION improved, bounded: C3's boundary and three dated corrections independently verify on stable delivered bytes; byte detection is not semantics, and V15's separate strict-baseline FAIL remains for parent adjudication."
+   ],
+   "V26": [
+    "PASS \u2014 OPERABILITY is not harmed on the delivered revision: new-fixture replay works, frozen chain verifies 7/7, all 24 command expectations match, regression suites pass, scope/path/usage guards retain their contracts, and 94 monitored delivered inputs remain unchanged."
+   ],
+   "V27": [
+    "PASS \u2014 FRESHNESS unchanged (bounded): delivered pins and dated replay records are current and stable; carried index/closure debt and the T1/T2 quoted-hash defects are explicitly flagged, not certified or erased."
+   ],
+   "V28": [
+    "PASS \u2014 ADJACENCY unchanged / not harmed on the delivered r100 bytes: charter and prior fixtures preserved, changes confined to declared ownership, no lore-attributable parent/sibling breach found, external material remains editorial-only, rights/mechanics/authentication refusals hold, and the full running battery plus negative-boundary controls match their declared bounded outcomes."
+   ],
+   "V29": [
+    "INCONCLUSIVE \u2014 WITHHOLD round-100 admission: C1/C2(both components)/C3 verify on stable delivered bytes, but 33 other reports/34 including SELF contradict the declared 32-seat collection; V15/V18/V20 FAILs and V21/V30 unresolved qualifications remain, and AC-ROSTER through AC-CLOSE are not discharged."
+   ],
+   "V30": [
+    "FAIL \u2014 declared 32-report collection is contradicted by 34 distinct reports (T1\u2013T4 + V01\u2013V30); all producer/artifact paths are present, but dispatch identities and roster reconciliation remain L1 work."
+   ]
+  },
+  "snapshot_utc": "2026-10-18T02:53:02.463109+00:00",
+  "snapshot_owner": "V30-receipt-presence",
+  "self_subtracted": true,
+  "poll": {
+   "cadence_seconds": 20,
+   "producer_protocol_max_tries": 40,
+   "endgame_limit_seconds": 1200,
+   "endgame_threshold_others": 30,
+   "self_subtracted": true,
+   "tries_run": 34,
+   "artifacts_ready_try": 21,
+   "producer_protocol_exhausted_without_ready": false,
+   "phase_40_state": null,
+   "stopped_reason": "threshold_met_30_others_and_producer_artifacts",
+   "elapsed_seconds": 660.033,
+   "final": {
+    "utc": "2026-10-18T02:44:37.033657+00:00",
+    "reports_present": 30,
+    "reports_present_excl_self": 30,
+    "present": [
+     "T1",
+     "T2",
+     "T3",
+     "T4",
+     "V01",
+     "V02",
+     "V03",
+     "V04",
+     "V05",
+     "V06",
+     "V07",
+     "V08",
+     "V09",
+     "V10",
+     "V11",
+     "V12",
+     "V13",
+     "V14",
+     "V15",
+     "V16",
+     "V17",
+     "V19",
+     "V20",
+     "V21",
+     "V22",
+     "V23",
+     "V25",
+     "V26",
+     "V27",
+     "V28"
+    ],
+    "producer_missing": [],
+    "artifact_missing": [],
+    "r99_pin_present": true,
+    "contract_error": null,
+    "self_subtracted": true,
+    "duplicates": {},
+    "empty_reports": [],
+    "unexpected_md": [],
+    "reports": {
+     "T1": [
+      {
+       "path": ".ufo/waves/round-100/seats/T1-chain-seven.md",
+       "bytes": 18771,
+       "sha256": "0bdb417bdb792fc8f1385c70424a70b06adc5bde472e15238a85987e6076d7b0"
+      }
+     ],
+     "T2": [
+      {
+       "path": ".ufo/waves/round-100/seats/T2-fixture-author.md",
+       "bytes": 11564,
+       "sha256": "2ce0a9055e60fd4082bafb5070f7ac9ef426a5f0a32c23cd6173014ab6bf550c"
+      }
+     ],
+     "T3": [
+      {
+       "path": ".ufo/waves/round-100/seats/T3-fixture-docs.md",
+       "bytes": 19055,
+       "sha256": "50f29495e995ba9ca3cb06cbd4bef9b80da44d7614e27aefb7d1e179509468d4"
+      }
+     ],
+     "T4": [
+      {
+       "path": ".ufo/waves/round-100/seats/T4-knowledge-author.md",
+       "bytes": 14319,
+       "sha256": "c21e79918c4f47af16e15d3ed8553b3275556699dd56cc46572db5dc1f73a0d4"
+      }
+     ],
+     "V01": [
+      {
+       "path": ".ufo/waves/round-100/seats/V01-c1-chain.md",
+       "bytes": 19817,
+       "sha256": "f1481c4434a3934b157a0d3662bb54643c8a3003ef0b6bffe1ea3ca2b2e2aff1"
+      }
+     ],
+     "V02": [
+      {
+       "path": ".ufo/waves/round-100/seats/V02-c1-discharge.md",
+       "bytes": 14058,
+       "sha256": "8382d7f839bb51c92583ed2be3d340ec46adaf9f36dd7482112222ba2d8c5ed8"
+      }
+     ],
+     "V03": [
+      {
+       "path": ".ufo/waves/round-100/seats/V03-c1-negative.md",
+       "bytes": 13664,
+       "sha256": "fb1025cdbe782ea3d043db258087b0f65629e41b4f83d08a07e292e24140d3a2"
+      }
+     ],
+     "V04": [
+      {
+       "path": ".ufo/waves/round-100/seats/V04-c1-code-review.md",
+       "bytes": 17819,
+       "sha256": "44b94d19b92899c729d7624c822c4292cd4fb2fc368a413a3a8b2b940bb7ea02"
+      }
+     ],
+     "V05": [
+      {
+       "path": ".ufo/waves/round-100/seats/V05-c2-checker.md",
+       "bytes": 11952,
+       "sha256": "c4ea99b8f5ffd995633554162ce22d458ef90d3f011e986ce202c9f0a8074c3d"
+      }
+     ],
+     "V06": [
+      {
+       "path": ".ufo/waves/round-100/seats/V06-c2-inherited-equality.md",
+       "bytes": 18878,
+       "sha256": "58f6defed27e597cb9bfc450ea9b1d9281e0a9bbb00aeaadc9b0a3a314b3bba5"
+      }
+     ],
+     "V07": [
+      {
+       "path": ".ufo/waves/round-100/seats/V07-c2-support-map.md",
+       "bytes": 18817,
+       "sha256": "8d78198a9c86493b8702acaa3836bc7095692a50338d7cce4f26866021a12ee9"
+      }
+     ],
+     "V08": [
+      {
+       "path": ".ufo/waves/round-100/seats/V08-c2-anchors.md",
+       "bytes": 14204,
+       "sha256": "c679496c01d39343f6beb6c94394a55c4162f8ee5cb6bee989291f6207b4a916"
+      }
+     ],
+     "V09": [
+      {
+       "path": ".ufo/waves/round-100/seats/V09-c2-whole-claim.md",
+       "bytes": 17718,
+       "sha256": "391bf3735af17a1b8056cc073652dd5eab9776a34d3b0a6991f29223addd53bc"
+      }
+     ],
+     "V10": [
+      {
+       "path": ".ufo/waves/round-100/seats/V10-c2-anti-overclaim.md",
+       "bytes": 27820,
+       "sha256": "eed824322fa174ca8d3bdce8fbd447c3bcac7be22fb7186d9edb1661e7f7c6e7"
+      }
+     ],
+     "V11": [
+      {
+       "path": ".ufo/waves/round-100/seats/V11-c2-synthesis.md",
+       "bytes": 15980,
+       "sha256": "2e82c0a1024960dd96553537b017fbf42e6d675bb061102268adfa1160f4cb55"
+      }
+     ],
+     "V12": [
+      {
+       "path": ".ufo/waves/round-100/seats/V12-c3-boundary.md",
+       "bytes": 14327,
+       "sha256": "1e41ef1bba281efecde5bcf2d241ce74d78a8241ee3bd5c13bbfcba8852c62ed"
+      }
+     ],
+     "V13": [
+      {
+       "path": ".ufo/waves/round-100/seats/V13-c3-addenda.md",
+       "bytes": 13860,
+       "sha256": "71459c0951a3f4bf792c5c5bf1bc1d4442776be6d910bf01b7b38c7d2430d7a5"
+      }
+     ],
+     "V14": [
+      {
+       "path": ".ufo/waves/round-100/seats/V14-c3-addenda-scope.md",
+       "bytes": 11700,
+       "sha256": "184c6623551e466d10beed6b9ef9d5ec21bbd450cd6aa67b042b0e49079bb19c"
+      }
+     ],
+     "V15": [
+      {
+       "path": ".ufo/waves/round-100/seats/V15-preservation-census.md",
+       "bytes": 25669,
+       "sha256": "a33385f09a08ab7aeb6bba07112963da803b36e904c4044161e044f98b70eef5"
+      }
+     ],
+     "V16": [
+      {
+       "path": ".ufo/waves/round-100/seats/V16-preservation-mutations.md",
+       "bytes": 17738,
+       "sha256": "08f4202b124e3418d2b32b6fec441980dc8816548145b67ee07458158337f108"
+      }
+     ],
+     "V17": [
+      {
+       "path": ".ufo/waves/round-100/seats/V17-gates-boundary.md",
+       "bytes": 13732,
+       "sha256": "9a535a85fb595374d99957e1a41498ee716951f5e8ea0f506cf2118c5481b9dd"
+      }
+     ],
+     "V19": [
+      {
+       "path": ".ufo/waves/round-100/seats/V19-freshness.md",
+       "bytes": 15839,
+       "sha256": "58bc37f9a4e4380160d415e9994ffff3f3d4996a0e5ddfa4d09e8f4bff5b56b4"
+      }
+     ],
+     "V20": [
+      {
+       "path": ".ufo/waves/round-100/seats/V20-doc-parity.md",
+       "bytes": 20456,
+       "sha256": "b9fc3b0128d9504e2097a87b1de8fde34274a124a01e13c2a817de24a88789dc"
+      }
+     ],
+     "V21": [
+      {
+       "path": ".ufo/waves/round-100/seats/V21-operability.md",
+       "bytes": 18043,
+       "sha256": "0727aeed2b2a01b01cb83ee78750cddd63dede635efb8ab3792719af225d61b3"
+      }
+     ],
+     "V22": [
+      {
+       "path": ".ufo/waves/round-100/seats/V22-adjacency.md",
+       "bytes": 16592,
+       "sha256": "c955a899850502597d8e88f806716e51baa32e059c4074d07049489f653198af"
+      }
+     ],
+     "V23": [
+      {
+       "path": ".ufo/waves/round-100/seats/V23-verdict-coverage.md",
+       "bytes": 16053,
+       "sha256": "61123e04d4e7f4541652a1bcc89dcbb4d5293014a7db6e171a3cde9aa5cb13c6"
+      }
+     ],
+     "V25": [
+      {
+       "path": ".ufo/waves/round-100/seats/V25-verdict-calibration.md",
+       "bytes": 16451,
+       "sha256": "686f67268b16614356ab6a63b5e3c384456e48c001247dfcf2fe074c672e97c2"
+      }
+     ],
+     "V26": [
+      {
+       "path": ".ufo/waves/round-100/seats/V26-verdict-operability.md",
+       "bytes": 17396,
+       "sha256": "1465952ebcd0e61d77bdfe6230a311b067960af13eadf800bd80e59ec21fedc3"
+      }
+     ],
+     "V27": [
+      {
+       "path": ".ufo/waves/round-100/seats/V27-verdict-freshness.md",
+       "bytes": 13658,
+       "sha256": "a9808812670801b1fc89aaff4d5babb7c9748e648a3648c2fef77fe33ad44b74"
+      }
+     ],
+     "V28": [
+      {
+       "path": ".ufo/waves/round-100/seats/V28-verdict-adjacency.md",
+       "bytes": 17333,
+       "sha256": "ee897bbab4c3a8d1b8c8bdfb7b97af1b857e91406f199d8f0ca2e861f816e076"
+      }
+     ]
+    },
+    "try_number": 34,
+    "elapsed_seconds": 660.033
+   }
+  },
+  "declared_producer_count": 4,
+  "declared_verifier_count": 28,
+  "declared_roster_status": "MISMATCH",
+  "followup_evidence": {
+   "followup-poll.json": {
+    "path": ".ufo/waves/round-100/seats/V30-scratch/followup-poll.json",
+    "sha256": "2a8e904eefc5d46822bd34e068b5d84a4a46837fb7723bb8a10b9c45829f26a1"
+   },
+   "roster-poll.json": {
+    "path": ".ufo/waves/round-100/seats/V30-scratch/roster-poll.json",
+    "sha256": "6ad4c787ccc255d197d6fbc16ceb28703c3c1fe09a321ec07951c8ab0a561ea4"
+   },
+   "stability.json": {
+    "path": ".ufo/waves/round-100/seats/V30-scratch/stability.json",
+    "sha256": "a3b18acb9603e3c0fa05a9b5bef334087685bb254756178246f2058ad8ed3a43"
+   },
+   "stability-final.json": {
+    "path": ".ufo/waves/round-100/seats/V30-scratch/stability-final.json",
+    "sha256": "8c6296bdd66ce50bac9d8a64f77ee4ab389a870f6776ee648760d09c95122906"
+   }
+  },
+  "snapshot_note": "Presence and bytes only, not proof of report truth or completed dispatch. agent_id, outcome, dispatch metadata and served backend echo stay null for L1. The task declares 32 seats but all observed report rows are retained even when that count disagrees; no report is dropped to fit the declaration. Absent identifiers are not invented. SHA-256 rows are this snapshot only."
+ },
+ "known_seat_output_defects": [
+  {
+   "type": "reports_excess_count",
+   "observed": 2
+  }
+ ],
+ "seats": [
+  {
+   "seat": "T1",
+   "agent_id": "agent-558",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/T1-chain-seven.md",
+   "report_sha256": "0bdb417bdb792fc8f1385c70424a70b06adc5bde472e15238a85987e6076d7b0",
+   "reports": {
+    "T1-chain-seven.md": "0bdb417bdb792fc8f1385c70424a70b06adc5bde472e15238a85987e6076d7b0"
+   },
+   "bytes": 18771,
+   "mtime_utc": "2026-10-18T02:35:33.507343+00:00"
+  },
+  {
+   "seat": "T2",
+   "agent_id": "agent-559",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/T2-fixture-author.md",
+   "report_sha256": "2ce0a9055e60fd4082bafb5070f7ac9ef426a5f0a32c23cd6173014ab6bf550c",
+   "reports": {
+    "T2-fixture-author.md": "2ce0a9055e60fd4082bafb5070f7ac9ef426a5f0a32c23cd6173014ab6bf550c"
+   },
+   "bytes": 11564,
+   "mtime_utc": "2026-10-18T02:33:39.600083+00:00"
+  },
+  {
+   "seat": "T3",
+   "agent_id": "agent-560",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/T3-fixture-docs.md",
+   "report_sha256": "50f29495e995ba9ca3cb06cbd4bef9b80da44d7614e27aefb7d1e179509468d4",
+   "reports": {
+    "T3-fixture-docs.md": "50f29495e995ba9ca3cb06cbd4bef9b80da44d7614e27aefb7d1e179509468d4"
+   },
+   "bytes": 19055,
+   "mtime_utc": "2026-10-18T02:37:15.388561+00:00"
+  },
+  {
+   "seat": "T4",
+   "agent_id": "agent-561",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/T4-knowledge-author.md",
+   "report_sha256": "c21e79918c4f47af16e15d3ed8553b3275556699dd56cc46572db5dc1f73a0d4",
+   "reports": {
+    "T4-knowledge-author.md": "c21e79918c4f47af16e15d3ed8553b3275556699dd56cc46572db5dc1f73a0d4"
+   },
+   "bytes": 14319,
+   "mtime_utc": "2026-10-18T02:40:12.515917+00:00"
+  },
+  {
+   "seat": "V01",
+   "agent_id": "agent-562",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V01-c1-chain.md",
+   "report_sha256": "f1481c4434a3934b157a0d3662bb54643c8a3003ef0b6bffe1ea3ca2b2e2aff1",
+   "reports": {
+    "V01-c1-chain.md": "f1481c4434a3934b157a0d3662bb54643c8a3003ef0b6bffe1ea3ca2b2e2aff1"
+   },
+   "bytes": 19817,
+   "mtime_utc": "2026-10-18T02:36:40.105487+00:00"
+  },
+  {
+   "seat": "V02",
+   "agent_id": "agent-563",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V02-c1-discharge.md",
+   "report_sha256": "8382d7f839bb51c92583ed2be3d340ec46adaf9f36dd7482112222ba2d8c5ed8",
+   "reports": {
+    "V02-c1-discharge.md": "8382d7f839bb51c92583ed2be3d340ec46adaf9f36dd7482112222ba2d8c5ed8"
+   },
+   "bytes": 14058,
+   "mtime_utc": "2026-10-18T02:37:10.484551+00:00"
+  },
+  {
+   "seat": "V03",
+   "agent_id": "agent-564",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V03-c1-negative.md",
+   "report_sha256": "fb1025cdbe782ea3d043db258087b0f65629e41b4f83d08a07e292e24140d3a2",
+   "reports": {
+    "V03-c1-negative.md": "fb1025cdbe782ea3d043db258087b0f65629e41b4f83d08a07e292e24140d3a2"
+   },
+   "bytes": 13664,
+   "mtime_utc": "2026-10-18T02:36:44.407496+00:00"
+  },
+  {
+   "seat": "V04",
+   "agent_id": "agent-565",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V04-c1-code-review.md",
+   "report_sha256": "44b94d19b92899c729d7624c822c4292cd4fb2fc368a413a3a8b2b940bb7ea02",
+   "reports": {
+    "V04-c1-code-review.md": "44b94d19b92899c729d7624c822c4292cd4fb2fc368a413a3a8b2b940bb7ea02"
+   },
+   "bytes": 17819,
+   "mtime_utc": "2026-10-18T02:37:05.284540+00:00"
+  },
+  {
+   "seat": "V05",
+   "agent_id": "agent-566",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V05-c2-checker.md",
+   "report_sha256": "c4ea99b8f5ffd995633554162ce22d458ef90d3f011e986ce202c9f0a8074c3d",
+   "reports": {
+    "V05-c2-checker.md": "c4ea99b8f5ffd995633554162ce22d458ef90d3f011e986ce202c9f0a8074c3d"
+   },
+   "bytes": 11952,
+   "mtime_utc": "2026-10-18T02:38:08.227670+00:00"
+  },
+  {
+   "seat": "V06",
+   "agent_id": "agent-567",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V06-c2-inherited-equality.md",
+   "report_sha256": "58f6defed27e597cb9bfc450ea9b1d9281e0a9bbb00aeaadc9b0a3a314b3bba5",
+   "reports": {
+    "V06-c2-inherited-equality.md": "58f6defed27e597cb9bfc450ea9b1d9281e0a9bbb00aeaadc9b0a3a314b3bba5"
+   },
+   "bytes": 18878,
+   "mtime_utc": "2026-10-18T02:35:40.638358+00:00"
+  },
+  {
+   "seat": "V07",
+   "agent_id": "agent-568",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V07-c2-support-map.md",
+   "report_sha256": "8d78198a9c86493b8702acaa3836bc7095692a50338d7cce4f26866021a12ee9",
+   "reports": {
+    "V07-c2-support-map.md": "8d78198a9c86493b8702acaa3836bc7095692a50338d7cce4f26866021a12ee9"
+   },
+   "bytes": 18817,
+   "mtime_utc": "2026-10-18T02:38:52.282759+00:00"
+  },
+  {
+   "seat": "V08",
+   "agent_id": "agent-569",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V08-c2-anchors.md",
+   "report_sha256": "c679496c01d39343f6beb6c94394a55c4162f8ee5cb6bee989291f6207b4a916",
+   "reports": {
+    "V08-c2-anchors.md": "c679496c01d39343f6beb6c94394a55c4162f8ee5cb6bee989291f6207b4a916"
+   },
+   "bytes": 14204,
+   "mtime_utc": "2026-10-18T02:38:24.099702+00:00"
+  },
+  {
+   "seat": "V09",
+   "agent_id": "agent-570",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V09-c2-whole-claim.md",
+   "report_sha256": "391bf3735af17a1b8056cc073652dd5eab9776a34d3b0a6991f29223addd53bc",
+   "reports": {
+    "V09-c2-whole-claim.md": "391bf3735af17a1b8056cc073652dd5eab9776a34d3b0a6991f29223addd53bc"
+   },
+   "bytes": 17718,
+   "mtime_utc": "2026-10-18T02:38:50.545755+00:00"
+  },
+  {
+   "seat": "V10",
+   "agent_id": "agent-571",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V10-c2-anti-overclaim.md",
+   "report_sha256": "eed824322fa174ca8d3bdce8fbd447c3bcac7be22fb7186d9edb1661e7f7c6e7",
+   "reports": {
+    "V10-c2-anti-overclaim.md": "eed824322fa174ca8d3bdce8fbd447c3bcac7be22fb7186d9edb1661e7f7c6e7"
+   },
+   "bytes": 27820,
+   "mtime_utc": "2026-10-18T02:43:47.882318+00:00"
+  },
+  {
+   "seat": "V11",
+   "agent_id": "agent-572",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V11-c2-synthesis.md",
+   "report_sha256": "2e82c0a1024960dd96553537b017fbf42e6d675bb061102268adfa1160f4cb55",
+   "reports": {
+    "V11-c2-synthesis.md": "2e82c0a1024960dd96553537b017fbf42e6d675bb061102268adfa1160f4cb55"
+   },
+   "bytes": 15980,
+   "mtime_utc": "2026-10-18T02:42:59.946231+00:00"
+  },
+  {
+   "seat": "V12",
+   "agent_id": "agent-573",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V12-c3-boundary.md",
+   "report_sha256": "1e41ef1bba281efecde5bcf2d241ce74d78a8241ee3bd5c13bbfcba8852c62ed",
+   "reports": {
+    "V12-c3-boundary.md": "1e41ef1bba281efecde5bcf2d241ce74d78a8241ee3bd5c13bbfcba8852c62ed"
+   },
+   "bytes": 14327,
+   "mtime_utc": "2026-10-18T02:42:47.280208+00:00"
+  },
+  {
+   "seat": "V13",
+   "agent_id": "agent-574",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V13-c3-addenda.md",
+   "report_sha256": "71459c0951a3f4bf792c5c5bf1bc1d4442776be6d910bf01b7b38c7d2430d7a5",
+   "reports": {
+    "V13-c3-addenda.md": "71459c0951a3f4bf792c5c5bf1bc1d4442776be6d910bf01b7b38c7d2430d7a5"
+   },
+   "bytes": 13860,
+   "mtime_utc": "2026-10-18T02:41:53.147108+00:00"
+  },
+  {
+   "seat": "V14",
+   "agent_id": "agent-575",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V14-c3-addenda-scope.md",
+   "report_sha256": "184c6623551e466d10beed6b9ef9d5ec21bbd450cd6aa67b042b0e49079bb19c",
+   "reports": {
+    "V14-c3-addenda-scope.md": "184c6623551e466d10beed6b9ef9d5ec21bbd450cd6aa67b042b0e49079bb19c"
+   },
+   "bytes": 11700,
+   "mtime_utc": "2026-10-18T02:41:41.599086+00:00"
+  },
+  {
+   "seat": "V15",
+   "agent_id": "agent-576",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V15-preservation-census.md",
+   "report_sha256": "a33385f09a08ab7aeb6bba07112963da803b36e904c4044161e044f98b70eef5",
+   "reports": {
+    "V15-preservation-census.md": "a33385f09a08ab7aeb6bba07112963da803b36e904c4044161e044f98b70eef5"
+   },
+   "bytes": 25669,
+   "mtime_utc": "2026-10-18T02:42:13.673146+00:00"
+  },
+  {
+   "seat": "V16",
+   "agent_id": "agent-577",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V16-preservation-mutations.md",
+   "report_sha256": "08f4202b124e3418d2b32b6fec441980dc8816548145b67ee07458158337f108",
+   "reports": {
+    "V16-preservation-mutations.md": "08f4202b124e3418d2b32b6fec441980dc8816548145b67ee07458158337f108"
+   },
+   "bytes": 17738,
+   "mtime_utc": "2026-10-18T02:42:48.539210+00:00"
+  },
+  {
+   "seat": "V17",
+   "agent_id": "agent-578",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V17-gates-boundary.md",
+   "report_sha256": "9a535a85fb595374d99957e1a41498ee716951f5e8ea0f506cf2118c5481b9dd",
+   "reports": {
+    "V17-gates-boundary.md": "9a535a85fb595374d99957e1a41498ee716951f5e8ea0f506cf2118c5481b9dd"
+   },
+   "bytes": 13732,
+   "mtime_utc": "2026-10-18T02:41:30.134065+00:00"
+  },
+  {
+   "seat": "V18",
+   "agent_id": "agent-579",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V18-scope-creep.md",
+   "report_sha256": "5e98ac8761efc126705c8da40aa873e9bad96bbe38bd8523d8e2bfceb4642296",
+   "reports": {
+    "V18-scope-creep.md": "5e98ac8761efc126705c8da40aa873e9bad96bbe38bd8523d8e2bfceb4642296"
+   },
+   "bytes": 16376,
+   "mtime_utc": "2026-10-18T02:48:16.160789+00:00"
+  },
+  {
+   "seat": "V19",
+   "agent_id": "agent-580",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V19-freshness.md",
+   "report_sha256": "58bc37f9a4e4380160d415e9994ffff3f3d4996a0e5ddfa4d09e8f4bff5b56b4",
+   "reports": {
+    "V19-freshness.md": "58bc37f9a4e4380160d415e9994ffff3f3d4996a0e5ddfa4d09e8f4bff5b56b4"
+   },
+   "bytes": 15839,
+   "mtime_utc": "2026-10-18T02:43:17.063262+00:00"
+  },
+  {
+   "seat": "V20",
+   "agent_id": "agent-581",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V20-doc-parity.md",
+   "report_sha256": "b9fc3b0128d9504e2097a87b1de8fde34274a124a01e13c2a817de24a88789dc",
+   "reports": {
+    "V20-doc-parity.md": "b9fc3b0128d9504e2097a87b1de8fde34274a124a01e13c2a817de24a88789dc"
+   },
+   "bytes": 20456,
+   "mtime_utc": "2026-10-18T02:42:08.477136+00:00"
+  },
+  {
+   "seat": "V21",
+   "agent_id": "agent-582",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V21-operability.md",
+   "report_sha256": "0727aeed2b2a01b01cb83ee78750cddd63dede635efb8ab3792719af225d61b3",
+   "reports": {
+    "V21-operability.md": "0727aeed2b2a01b01cb83ee78750cddd63dede635efb8ab3792719af225d61b3"
+   },
+   "bytes": 18043,
+   "mtime_utc": "2026-10-18T02:43:04.728240+00:00"
+  },
+  {
+   "seat": "V22",
+   "agent_id": "agent-583",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V22-adjacency.md",
+   "report_sha256": "c955a899850502597d8e88f806716e51baa32e059c4074d07049489f653198af",
+   "reports": {
+    "V22-adjacency.md": "c955a899850502597d8e88f806716e51baa32e059c4074d07049489f653198af"
+   },
+   "bytes": 16592,
+   "mtime_utc": "2026-10-18T02:42:39.576194+00:00"
+  },
+  {
+   "seat": "V23",
+   "agent_id": "agent-584",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V23-verdict-coverage.md",
+   "report_sha256": "61123e04d4e7f4541652a1bcc89dcbb4d5293014a7db6e171a3cde9aa5cb13c6",
+   "reports": {
+    "V23-verdict-coverage.md": "61123e04d4e7f4541652a1bcc89dcbb4d5293014a7db6e171a3cde9aa5cb13c6"
+   },
+   "bytes": 16053,
+   "mtime_utc": "2026-10-18T02:38:32.698720+00:00"
+  },
+  {
+   "seat": "V24",
+   "agent_id": "agent-585",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V24-verdict-depth.md",
+   "report_sha256": "698fcc54704e9e41faa07f45bdefe60a1f603cc3b61f31f47827a3628a6f7209",
+   "reports": {
+    "V24-verdict-depth.md": "698fcc54704e9e41faa07f45bdefe60a1f603cc3b61f31f47827a3628a6f7209"
+   },
+   "bytes": 35631,
+   "mtime_utc": "2026-10-18T02:45:57.990550+00:00"
+  },
+  {
+   "seat": "V25",
+   "agent_id": "agent-586",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V25-verdict-calibration.md",
+   "report_sha256": "686f67268b16614356ab6a63b5e3c384456e48c001247dfcf2fe074c672e97c2",
+   "reports": {
+    "V25-verdict-calibration.md": "686f67268b16614356ab6a63b5e3c384456e48c001247dfcf2fe074c672e97c2"
+   },
+   "bytes": 16451,
+   "mtime_utc": "2026-10-18T02:44:23.098382+00:00"
+  },
+  {
+   "seat": "V26",
+   "agent_id": "agent-587",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V26-verdict-operability.md",
+   "report_sha256": "1465952ebcd0e61d77bdfe6230a311b067960af13eadf800bd80e59ec21fedc3",
+   "reports": {
+    "V26-verdict-operability.md": "1465952ebcd0e61d77bdfe6230a311b067960af13eadf800bd80e59ec21fedc3"
+   },
+   "bytes": 17396,
+   "mtime_utc": "2026-10-18T02:41:36.871077+00:00"
+  },
+  {
+   "seat": "V27",
+   "agent_id": "agent-588",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V27-verdict-freshness.md",
+   "report_sha256": "a9808812670801b1fc89aaff4d5babb7c9748e648a3648c2fef77fe33ad44b74",
+   "reports": {
+    "V27-verdict-freshness.md": "a9808812670801b1fc89aaff4d5babb7c9748e648a3648c2fef77fe33ad44b74"
+   },
+   "bytes": 13658,
+   "mtime_utc": "2026-10-18T02:42:39.123193+00:00"
+  },
+  {
+   "seat": "V28",
+   "agent_id": "agent-589",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V28-verdict-adjacency.md",
+   "report_sha256": "ee897bbab4c3a8d1b8c8bdfb7b97af1b857e91406f199d8f0ca2e861f816e076",
+   "reports": {
+    "V28-verdict-adjacency.md": "ee897bbab4c3a8d1b8c8bdfb7b97af1b857e91406f199d8f0ca2e861f816e076"
+   },
+   "bytes": 17333,
+   "mtime_utc": "2026-10-18T02:43:17.203263+00:00"
+  },
+  {
+   "seat": "V29",
+   "agent_id": "agent-590",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V29-adjudicator.md",
+   "report_sha256": "decc178fd37064b15f78216ab608bcaf7ac3d521a5aec6424fd260609d8facbf",
+   "reports": {
+    "V29-adjudicator.md": "decc178fd37064b15f78216ab608bcaf7ac3d521a5aec6424fd260609d8facbf"
+   },
+   "bytes": 28745,
+   "mtime_utc": "2026-10-18T02:51:32.132118+00:00"
+  },
+  {
+   "seat": "V30",
+   "agent_id": "agent-591",
+   "outcome": "completed",
+   "report_status": "present",
+   "report_path": ".ufo/waves/round-100/seats/V30-receipt-presence.md",
+   "report_sha256": "b013c64047759fbdde52b49571aa54d2897d69b75f2c5086c85cfaa692e159c2",
+   "reports": {
+    "V30-receipt-presence.md": "b013c64047759fbdde52b49571aa54d2897d69b75f2c5086c85cfaa692e159c2"
+   },
+   "bytes": 13748,
+   "mtime_utc": "2026-10-18T02:52:57.598260+00:00"
+  }
+ ],
+ "state": "completed \u2014 agent IDs/outcomes filled from the AgentSwarm dispatch result (tool_call_id tool_d8f74YJKGRvGRx0OFxKhB0Um, returned completed: 34). ROSTER ERRATUM: the LOG declaration says 32 seats; the dispatched roster was 34 (4 producers + 30 verifiers); actual count recorded here and in the LOG closure. No IDs invented.",
+ "l1_follow_up": [
+  "Fill agent_id and outcome from the actual dispatch result, never from report existence.",
+  "Fill dispatch_tool_call_id and returned_summary from the real single-wave dispatch.",
+  "Reconcile the declared 32-seat wave with all 34 observed report identifiers; explain the deviation without dropping reports.",
+  "Refresh report and candidate hashes after final report landings or closure edits.",
+  "Adjudicate claims from verifier evidence; receipt presence does not admit the round."
+ ]
+}

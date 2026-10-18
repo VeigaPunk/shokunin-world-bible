@@ -1,0 +1,51 @@
+$ python3 .ufo/waves/round-100/seats/V16-scratch/regression/corpus/tools/dependency_freeze.py --self-test
+CASE clean: exit=0 expected=0 findings=[] ok
+CASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+CASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok
+CASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+CASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+SELF-TEST 18/18
+RESULT PASS
+observed_exit=0
+$ python3 .ufo/waves/round-100/seats/V16-scratch/regression/corpus/tools/map_obligations.py --self-test
+SELF-TEST CASES 25/25 pinned
+SELF-TEST PASS complete exit=0 findings=none
+SELF-TEST PASS missing exit=1 findings=['missing_obligation']
+SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']
+SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']
+SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']
+SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']
+SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']
+SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_complete exit=0 findings=none
+SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']
+SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']
+SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']
+RESULT PASS
+observed_exit=0

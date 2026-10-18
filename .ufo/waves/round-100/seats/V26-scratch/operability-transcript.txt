@@ -1,0 +1,308 @@
+## chain-r88-m3-maya-cluster
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0
+DIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## chain-r94-paired-crossing
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1
+DIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## chain-r95-crossing-aftermath
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1
+DIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## chain-r96-crossing-response
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1
+DIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## chain-r97-crossing-acknowledgment
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1
+DIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## chain-r98-clerk-filing
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1
+DIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## chain-r99-window-lapse
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1
+DIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## new-schema
+$ python3 corpus/fixtures/check_bible.py corpus/fixtures/r100-docket-review
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+CLEAN: schema, citations, relations, timeline; 0 violations
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## new-map
+$ python3 corpus/tools/map_obligations.py corpus/fixtures/r100-docket-review
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+OBLIGATIONS raw=22 mapped=22
+INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## new-support
+$ python3 corpus/tools/support_check.py corpus/fixtures/r100-docket-review
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20
+ANCHORS repeated-references=4; DUPLICATE-ROWS 0
+PASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.
+PASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.
+PASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.
+PASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.
+PASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.
+PASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.
+PASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.
+PASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.
+PASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.
+PASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.
+PASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.
+PASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.
+PASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.
+PASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+PASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.
+RECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24
+SOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## new-freeze-bound
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r100-docket-review
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])
+RESULT ERROR
+STDERR ''
+EXIT 2 EXPECTED 2 MATCH True
+
+## freeze-self-test-isolated
+$ python3 .ufo/waves/round-100/seats/V26-scratch/mirror/corpus/tools/dependency_freeze.py --self-test
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+CASE clean: exit=0 expected=0 findings=[] ok
+CASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok
+CASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok
+CASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok
+CASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+CASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok
+CASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok
+CASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok
+CASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok
+CASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok
+CASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok
+CASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok
+CASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok
+CASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok
+SELF-TEST 18/18
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## map-self-test-isolated
+$ python3 .ufo/waves/round-100/seats/V26-scratch/mirror/corpus/tools/map_obligations.py --self-test
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+SELF-TEST CASES 25/25 pinned
+SELF-TEST PASS complete exit=0 findings=none
+SELF-TEST PASS missing exit=1 findings=['missing_obligation']
+SELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']
+SELF-TEST PASS phantom exit=1 findings=['phantom_obligation']
+SELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']
+SELF-TEST PASS malformed_json exit=2 findings=['malformed_json']
+SELF-TEST PASS map_missing exit=2 findings=['map_missing']
+SELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']
+SELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']
+SELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']
+SELF-TEST PASS foreign_path exit=2 findings=['foreign_path']
+SELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']
+SELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']
+SELF-TEST PASS frozen_complete exit=0 findings=none
+SELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']
+SELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']
+SELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']
+SELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']
+SELF-TEST PASS schema_drift exit=1 findings=['schema_drift']
+SELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']
+SELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## boundary-default
+$ python3 corpus/tools/boundary_doc_check.py
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+CHECK pinned inputs: PASS
+CHECK receipt replay: PASS
+CHECK explicit anchor ranges: PASS
+CHECK document structure: PASS
+scope=frozen-document drift + receipts + explicit-anchor range + structure; not semantic or AST validation
+replay_receipts=3/3
+replay_cases=14/14
+anchors=2/2
+h1_count=1
+duplicate_headings=0
+instruction_markers=0
+CERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## boundary-self-test
+$ python3 corpus/tools/boundary_doc_check.py --self-test
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+SELF-TEST PASS anchor_range_control exit=1 findings=['anchor_range'] anchors=1/2 legacy_anchor=check_bible.py:212-224@5eb9451baff217c19d5786405f9b2aa500b7c1b7 baseline_lines=330
+SELF-TEST PASS committed_default exit=0 findings=none
+SELF-TEST PASS comment_parked_c9 exit=1 findings=['document_drift']
+SELF-TEST PASS wrong_bare_anchor exit=1 findings=['document_drift']
+SELF-TEST PASS checker_drift exit=1 findings=['checker_drift']
+SELF-TEST PASS missing_document exit=1 findings=['document_missing']
+SELF-TEST PASS missing_checker exit=1 findings=['checker_missing']
+SELF-TEST PASS receipt_drift exit=1 findings=['receipt_drift']
+SELF-TEST PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## discriminator-default
+$ python3 corpus/tools/discriminate_check.py
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+mode=delivered checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=PASS
+RESULT: DISCRIMINATION HELD — silent-revert check would fail on regression
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## discriminator-negative
+$ python3 corpus/tools/discriminate_check.py --checker e97613c
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+mode=e97613c checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True
+r91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+r91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)
+  pinned_semantic_gate=FAIL
+REGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved — pinned delivered semantics not present
+STDERR ''
+EXIT 2 EXPECTED 2 MATCH True
+
+## map-frozen-r93
+$ python3 corpus/tools/map_obligations.py --frozen .ufo/waves/round-94/frozen/map-obligations-r93
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+SNAPSHOT inputs=4 digests=verified
+OBLIGATIONS raw=12 mapped=12
+INVENTORY JSON-FACTS 12/12; EDITORIAL-ROWS 3/3; TOTAL-ROWS 15/15
+FROZEN expected=PASS/0 findings=none matched
+RESULT PASS
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## freeze-invalid-combined
+$ python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse --freeze corpus/fixtures/r99-window-lapse
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FINDING INVALID-ARGUMENTS: pass either a fixture (verify) or --freeze DIR, not both
+RESULT ERROR
+STDERR ''
+EXIT 2 EXPECTED 2 MATCH True
+
+## freeze-foreign-path
+$ python3 corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V26-scratch/foreign/r99-window-lapse
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FINDING PATH-MISMATCH: pin r99-window-lapse names corpus/fixtures/r99-window-lapse (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/corpus/fixtures/r99-window-lapse); invoked fixture resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V26-scratch/foreign/r99-window-lapse
+RESULT ERROR
+STDERR ''
+EXIT 2 EXPECTED 2 MATCH True
+
+## freeze-foreign-scope-isolated
+$ python3 .ufo/waves/round-100/seats/V26-scratch/mirror/corpus/tools/dependency_freeze.py --freeze .ufo/waves/round-100/seats/V26-scratch/foreign/r99-window-lapse
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FINDING SCOPE-REFUSED: --freeze refuses .ufo/waves/round-100/seats/V26-scratch/foreign/r99-window-lapse (resolves to /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V26-scratch/foreign/r99-window-lapse); the frozen scope is corpus/fixtures/** (integration-time operation only)
+RESULT ERROR
+STDERR ''
+EXIT 2 EXPECTED 2 MATCH True
+
+## freeze-help
+$ python3 corpus/tools/dependency_freeze.py --help
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+usage: dependency_freeze.py [-h] [--freeze DIR] [--self-test] [fixture]
+
+Freeze or verify per-fixture dependency inventories.
+
+positional arguments:
+  fixture       fixture directory to verify against its pin
+
+options:
+  -h, --help    show this help message and exit
+  --freeze DIR  (re)build the pin for DIR (delivery-time only)
+  --self-test   run isolated cases against persisted expectations
+STDERR ''
+EXIT 0 EXPECTED 0 MATCH True
+
+## map-invalid-missing
+$ python3 corpus/tools/map_obligations.py
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+FINDING invalid_arguments: cluster directory is required
+RESULT ERROR
+STDERR ''
+EXIT 2 EXPECTED 2 MATCH True
+
+## support-invalid-missing
+$ python3 corpus/tools/support_check.py
+CWD /home/vgpnk/Projects/shokunin/lore-shokunin
+RESULT ERROR
+STDERR 'usage: support_check.py [-h] [--map MAP] cluster\nsupport_check.py: error: the following arguments are required: cluster\n'
+EXIT 2 EXPECTED 2 MATCH True
+
+DELIVERED FILES CHANGED DURING REPLAY []
+ISOLATED GUARD LEFT CONTRACT UNCHANGED True
+CHECKS 24/24 expectations matched

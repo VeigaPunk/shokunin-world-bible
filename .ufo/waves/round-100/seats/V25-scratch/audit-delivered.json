@@ -1,0 +1,265 @@
+{
+  "checks": [
+    {
+      "label": "DELIVERED-SHA256",
+      "passed": true,
+      "detail": "corpus/knowledge/r100-crossing-arc-synthesis.md 6fcffc8154a11419adbcaefba6d728ee544af831cb5e1b999429404c3b243acc"
+    },
+    {
+      "label": "TEXT-HYGIENE",
+      "passed": true,
+      "detail": "corpus/knowledge/r100-crossing-arc-synthesis.md"
+    },
+    {
+      "label": "DELIVERED-SHA256",
+      "passed": true,
+      "detail": "corpus/knowledge/r100-provenance-semantics-boundary.md 29cc7d856b2600bbb03dec577487bc0f09525ab444a3e3109ef0040ab7edeb36"
+    },
+    {
+      "label": "TEXT-HYGIENE",
+      "passed": true,
+      "detail": "corpus/knowledge/r100-provenance-semantics-boundary.md"
+    },
+    {
+      "label": "DELIVERED-SHA256",
+      "passed": true,
+      "detail": "corpus/knowledge/r99-gate-blind-spot-table.md f1b3719a3954bbae44562f9e01b99434327ff50fba0c3a0755634dc9d76830ff"
+    },
+    {
+      "label": "TEXT-HYGIENE",
+      "passed": true,
+      "detail": "corpus/knowledge/r99-gate-blind-spot-table.md"
+    },
+    {
+      "label": "DELIVERED-SHA256",
+      "passed": true,
+      "detail": "corpus/tools/dependency-freeze-contract.json ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5"
+    },
+    {
+      "label": "TEXT-HYGIENE",
+      "passed": true,
+      "detail": "corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "TABLE-HISTORICAL-PREFIX",
+      "passed": true,
+      "detail": "baseline_bytes=20526 added_bytes=8907"
+    },
+    {
+      "label": "TABLE-THREE-DATED-ROWS",
+      "passed": true,
+      "detail": [
+        "| 10 | 2026-10-17 / r100 | Mapped-verbatim-anchor removal, excerpt-only; r99 AC-2 | Pre-r99 `4265df5` and delivered `support_check`: `FAIL: J14: source-support anchor missing`, `RESULT FAIL`, exit 1. Delivered freeze: `DIGEST-MISMATCH` naming `fictional-excerpts.md`, exit 2. Commands and control below. | \u201cInvisible to every gate\u201d never covered an unmatched mapped anchor. Historical JSON-only freeze passes this edit, but support checking does not. Row 6's all-green historical bound is non-anchor prose or a coherent excerpt+anchor replacement; no gate here proves prose entailment. |",
+        "| 11 | 2026-10-17 / r100 | Simultaneous dropped edge and prose edit; r99 AC-1 | Delivered freeze: only `REDUCTION-DETECTED`, `RESULT FAIL`, exit 1; no `DIGEST-MISMATCH`. Prose-only twin: named `DIGEST-MISMATCH`, `RESULT ERROR`, exit 2. Commands below. | Semantic-inventory findings precede digest reporting after the verification guards. \u201cAny edit \u2192 exit 2\u201d is conditional on a clean modeled inventory, not a universal exit rule and not natural-language semantics. |",
+        "| 12 | 2026-10-17 / r100 | Combined `fixture --freeze fixture`; r99 AC-3 | Delivered CLI: only `INVALID-ARGUMENTS`, `RESULT ERROR`, exit 2; live contract hash unchanged. Exact command below. | The historical precedence list does not describe an invalid combined invocation. This receipt exercises neither inventory verification nor the guarded freeze write. Exit 2 alone is not a digest finding. |"
+      ]
+    },
+    {
+      "label": "TOOL-BASELINE-IDENTITY",
+      "passed": true,
+      "detail": "corpus/tools/dependency_freeze.py fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c"
+    },
+    {
+      "label": "TOOL-BASELINE-IDENTITY",
+      "passed": true,
+      "detail": "corpus/tools/support_check.py 55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c"
+    },
+    {
+      "label": "TOOL-BASELINE-IDENTITY",
+      "passed": true,
+      "detail": "corpus/tools/map_obligations.py 86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9"
+    },
+    {
+      "label": "TOOL-BASELINE-IDENTITY",
+      "passed": true,
+      "detail": "corpus/fixtures/check_bible.py ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421"
+    },
+    {
+      "label": "HISTORICAL-SUPPORT-IDENTITY",
+      "passed": true,
+      "detail": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c"
+    },
+    {
+      "label": "SAVED-REPLAY-RECEIPTS",
+      "passed": true,
+      "detail": "17/17 expected observations; tracked live and mirror hashes unchanged"
+    },
+    {
+      "label": "SAVED-CONTROL-RECEIPTS",
+      "passed": true,
+      "detail": "7/7 expected observations; contract unchanged"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": "corpus/tools/dependency_freeze.py"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": "corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": "corpus/tools/support_check.py"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": "corpus/tools/map_obligations.py"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": "corpus/fixtures/check_bible.py"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": "corpus/knowledge/r100-provenance-semantics-boundary.md"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": "corpus/knowledge/r99-gate-blind-spot-table.md"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": ".ufo/waves/round-100/seats/V25-scratch/clean/corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": ".ufo/waves/round-100/seats/V25-scratch/coherent-prose/corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": ".ufo/waves/round-100/seats/V25-scratch/combined-arguments/corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": ".ufo/waves/round-100/seats/V25-scratch/mapped-anchor-removal/corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": ".ufo/waves/round-100/seats/V25-scratch/r95-delivered-anchor-removal/corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": ".ufo/waves/round-100/seats/V25-scratch/r95-historical-anchor-removal/corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "REPLAY-INPUT-STABILITY",
+      "passed": true,
+      "detail": ".ufo/waves/round-100/seats/V25-scratch/semantic-precedence/corpus/tools/dependency-freeze-contract.json"
+    },
+    {
+      "label": "PIN-SCOPE-BOUND",
+      "passed": true,
+      "detail": [
+        "r88-m3-maya-cluster",
+        "r94-paired-crossing",
+        "r95-crossing-aftermath",
+        "r96-crossing-response",
+        "r97-crossing-acknowledgment",
+        "r98-clerk-filing",
+        "r99-window-lapse"
+      ]
+    },
+    {
+      "label": "LIVE-PIN-BOUND-REPLAYS",
+      "passed": true,
+      "detail": "7 pinned PASS; r100 UNPINNED-FIXTURE exit 2"
+    },
+    {
+      "label": "POST-AUDIT-SHA256",
+      "passed": true,
+      "detail": "corpus/knowledge/r100-crossing-arc-synthesis.md"
+    },
+    {
+      "label": "POST-AUDIT-SHA256",
+      "passed": true,
+      "detail": "corpus/knowledge/r100-provenance-semantics-boundary.md"
+    },
+    {
+      "label": "POST-AUDIT-SHA256",
+      "passed": true,
+      "detail": "corpus/knowledge/r99-gate-blind-spot-table.md"
+    },
+    {
+      "label": "POST-AUDIT-SHA256",
+      "passed": true,
+      "detail": "corpus/tools/dependency-freeze-contract.json"
+    }
+  ],
+  "gate_receipts": [
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster",
+      "exit": 0,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nDIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae\nRESULT PASS\n",
+      "stderr": "",
+      "expected_match": true
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing",
+      "exit": 0,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nDIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef\nRESULT PASS\n",
+      "stderr": "",
+      "expected_match": true
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath",
+      "exit": 0,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nDIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710\nRESULT PASS\n",
+      "stderr": "",
+      "expected_match": true
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response",
+      "exit": 0,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nDIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c\nRESULT PASS\n",
+      "stderr": "",
+      "expected_match": true
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment",
+      "exit": 0,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nDIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54\nRESULT PASS\n",
+      "stderr": "",
+      "expected_match": true
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": "",
+      "expected_match": true
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+      "stderr": "",
+      "expected_match": true
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": "",
+      "expected_match": true
+    }
+  ],
+  "expected_sha256": {
+    "corpus/knowledge/r100-crossing-arc-synthesis.md": "6fcffc8154a11419adbcaefba6d728ee544af831cb5e1b999429404c3b243acc",
+    "corpus/knowledge/r100-provenance-semantics-boundary.md": "29cc7d856b2600bbb03dec577487bc0f09525ab444a3e3109ef0040ab7edeb36",
+    "corpus/knowledge/r99-gate-blind-spot-table.md": "f1b3719a3954bbae44562f9e01b99434327ff50fba0c3a0755634dc9d76830ff",
+    "corpus/tools/dependency-freeze-contract.json": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5"
+  }
+}

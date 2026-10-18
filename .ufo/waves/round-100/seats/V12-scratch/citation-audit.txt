@@ -1,0 +1,28 @@
+CITED_ARTIFACTS: PASS 14 paths; missing=[]
+CITED_RANGES: PASS 16 full/continued ranges; invalid=[]
+NOTE_DELIVERED_HASH: PASS 29cc7d856b2600bbb03dec577487bc0f09525ab444a3e3109ef0040ab7edeb36
+CONTRACT_DELIVERED_HASH: PASS ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5
+T4_MIRROR delivered-anchor/corpus/tools/dependency_freeze.py: PASS
+T4_MIRROR delivered-anchor/corpus/tools/dependency-freeze-contract.json: PASS
+T4_MIRROR delivered-anchor/corpus/tools/support_check.py: PASS
+T4_MIRROR delivered-precedence/corpus/tools/dependency_freeze.py: PASS
+T4_MIRROR delivered-precedence/corpus/tools/dependency-freeze-contract.json: PASS
+T4_MIRROR delivered-precedence/corpus/tools/support_check.py: PASS
+T4_MIRROR delivered-prose-control/corpus/tools/dependency_freeze.py: PASS
+T4_MIRROR delivered-prose-control/corpus/tools/dependency-freeze-contract.json: PASS
+T4_MIRROR delivered-prose-control/corpus/tools/support_check.py: PASS
+T4_MIRROR delivered-self-test/corpus/tools/dependency_freeze.py: PASS
+T4_MIRROR delivered-self-test/corpus/tools/dependency-freeze-contract.json: PASS
+T4_MIRROR delivered-self-test/corpus/tools/support_check.py: PASS
+T4_HISTORICAL corpus/tools/dependency_freeze.py: PASS
+T4_HISTORICAL corpus/tools/dependency-freeze-contract.json: PASS
+T4_HISTORICAL corpus/tools/support_check.py: PASS
+PRE_R99_SUPPORT_UNCHANGED: PASS
+HISTORICAL_TABLE_PREFIX: PASS 20526 baseline bytes
+EXCERPT_ONLY pre-r99-anchor: PASS
+EXCERPT_ONLY delivered-anchor: PASS
+EXCERPT_ONLY delivered-prose-control: PASS
+SIMULTANEOUS_EDGE_AND_PROSE: PASS
+EXACT_SEVEN_PIN_BOUND: PASS
+R88_EXTRA_FILE_UNPINNED: PASS
+BOUNDARY-AUDIT PASS failures=[]

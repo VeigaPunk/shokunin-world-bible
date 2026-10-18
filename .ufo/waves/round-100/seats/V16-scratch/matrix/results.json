@@ -1,0 +1,1241 @@
+{
+  "metadata": {
+    "observed_at": "2026-10-17T23:40:39.487099-03:00",
+    "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+    "producer_reports": {
+      "T1": [
+        ".ufo/waves/round-100/seats/T1-chain-seven.md"
+      ],
+      "T2": [
+        ".ufo/waves/round-100/seats/T2-fixture-author.md"
+      ],
+      "T3": [
+        ".ufo/waves/round-100/seats/T3-fixture-docs.md"
+      ],
+      "T4": [
+        ".ufo/waves/round-100/seats/T4-knowledge-author.md"
+      ]
+    },
+    "input_sha256": {
+      "corpus/fixtures/check_bible.py": "ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421",
+      "corpus/tools/support_check.py": "55a5eb2753901be70f2647008fc6379626654922fe94aed141e7f3a3be2b442c",
+      "corpus/tools/map_obligations.py": "86b529496214493f918836e908fe1c2e57c9561da06a088f03500b9a943a74a9",
+      "corpus/tools/dependency_freeze.py": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+      "corpus/tools/dependency-freeze-contract.json": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+      "corpus/fixtures/r100-docket-review/entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+      "corpus/fixtures/r100-docket-review/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "corpus/fixtures/r100-docket-review/timeline.json": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+      "corpus/fixtures/r100-docket-review/sources.json": "effa5160eb7a6b228d52a972bf52beeffc1544d3cb1f6c5edb2850f88bd2d22e",
+      "corpus/fixtures/r100-docket-review/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "corpus/fixtures/r100-docket-review/README.md": "a312a364d4d9476e98c0fae3f62b23bf72e73a06c508aac04ffe48cf9cf4c5fa",
+      "corpus/fixtures/r100-docket-review/claim-excerpt-map.md": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
+      "corpus/fixtures/r100-docket-review/fictional-excerpts.md": "d01825a7e3c8f4af549b7acdde7eb8e1b9074a6eccb8ce6d12401cea19745705",
+      "corpus/fixtures/r100-docket-review/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "corpus/fixtures/r100-docket-review/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "corpus/fixtures/r99-window-lapse/entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+      "corpus/fixtures/r99-window-lapse/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+      "corpus/fixtures/r99-window-lapse/timeline.json": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069",
+      "corpus/fixtures/r99-window-lapse/sources.json": "8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15",
+      "corpus/fixtures/r99-window-lapse/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "corpus/fixtures/r99-window-lapse/README.md": "b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049",
+      "corpus/fixtures/r99-window-lapse/claim-excerpt-map.md": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
+      "corpus/fixtures/r99-window-lapse/fictional-excerpts.md": "fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d",
+      "corpus/fixtures/r99-window-lapse/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+      "corpus/fixtures/r99-window-lapse/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+      "corpus/knowledge/r100-crossing-arc-synthesis.md": "6fcffc8154a11419adbcaefba6d728ee544af831cb5e1b999429404c3b243acc",
+      "corpus/knowledge/r100-provenance-semantics-boundary.md": "29cc7d856b2600bbb03dec577487bc0f09525ab444a3e3109ef0040ab7edeb36",
+      ".ufo/waves/round-100/seats/T1-chain-seven.md": "0bdb417bdb792fc8f1385c70424a70b06adc5bde472e15238a85987e6076d7b0",
+      ".ufo/waves/round-100/seats/T2-fixture-author.md": "2ce0a9055e60fd4082bafb5070f7ac9ef426a5f0a32c23cd6173014ab6bf550c",
+      ".ufo/waves/round-100/seats/T3-fixture-docs.md": "50f29495e995ba9ca3cb06cbd4bef9b80da44d7614e27aefb7d1e179509468d4",
+      ".ufo/waves/round-100/seats/T4-knowledge-author.md": "c21e79918c4f47af16e15d3ed8553b3275556699dd56cc46572db5dc1f73a0d4"
+    },
+    "pins": [
+      "r88-m3-maya-cluster",
+      "r94-paired-crossing",
+      "r95-crossing-aftermath",
+      "r96-crossing-response",
+      "r97-crossing-acknowledgment",
+      "r98-clerk-filing",
+      "r99-window-lapse"
+    ]
+  },
+  "mutations": [
+    {
+      "fixture": "r100",
+      "case": "control",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/fixtures/r100-docket-review",
+      "changed_files": [],
+      "changed_sha256": {}
+    },
+    {
+      "fixture": "r100",
+      "case": "m1-empty-deps",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/fixtures/r100-docket-review",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+          "after": "3f4dea5b1bb81f00a3cf820288e35d1c8d34f94d732fc3573f7495bfd0af4b72"
+        }
+      }
+    },
+    {
+      "fixture": "r100",
+      "case": "m2-wrong-earlier",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/fixtures/r100-docket-review",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+          "after": "e03c0fb24a81e5f5a5cac7492cc2c67d4165af5e52b28a00d1f3a655bd583808"
+        }
+      }
+    },
+    {
+      "fixture": "r100",
+      "case": "m3-delete-terminal",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/fixtures/r100-docket-review",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+          "after": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069"
+        }
+      }
+    },
+    {
+      "fixture": "r100",
+      "case": "m4-span-break",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/fixtures/r100-docket-review",
+      "changed_files": [
+        "claim-excerpt-map.md"
+      ],
+      "changed_sha256": {
+        "claim-excerpt-map.md": {
+          "before": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
+          "after": "7ef66319057811c7af7a258c77ab396f2a397085172159355b3b9455a4ee8dd7"
+        }
+      }
+    },
+    {
+      "fixture": "r100",
+      "case": "m5-source-rebind",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/fixtures/r100-docket-review",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "008a1ff8dbef63e552e271f1be8eb536b1361c5a0fe83f008423b06d505ab7f8",
+          "after": "53f32fdf09d4908b1e9123a7f0d46ed3291b103299a29e5f6e6ce090b807e27e"
+        }
+      }
+    },
+    {
+      "fixture": "r100",
+      "case": "m6-coherent-prose",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/fixtures/r100-docket-review",
+      "changed_files": [
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md"
+      ],
+      "changed_sha256": {
+        "claim-excerpt-map.md": {
+          "before": "16981162f8476a8fcc1bd892ac0b1b9e6cb916e1d45e6f2ea392a5eeca769244",
+          "after": "91c819b476915c937c39f45bfca8ddaabfd547d732be86958e6b4356e586e703"
+        },
+        "fictional-excerpts.md": {
+          "before": "d01825a7e3c8f4af549b7acdde7eb8e1b9074a6eccb8ce6d12401cea19745705",
+          "after": "035ce3223fb4cdcca7d5a8271a111d6f8ee787887cf7d746ca12db6c225d7a9a"
+        }
+      }
+    },
+    {
+      "fixture": "r99",
+      "case": "control",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/fixtures/r99-window-lapse",
+      "changed_files": [],
+      "changed_sha256": {}
+    },
+    {
+      "fixture": "r99",
+      "case": "m1-empty-deps",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/fixtures/r99-window-lapse",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069",
+          "after": "6d4654151342be9f69534c2a4e5bca31ec34c7968e758509e73c316e3fd70b45"
+        }
+      }
+    },
+    {
+      "fixture": "r99",
+      "case": "m2-wrong-earlier",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/fixtures/r99-window-lapse",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069",
+          "after": "6f30701487dc17358aa104fcc22430322636da52328c8d892f6ed84555bf60c2"
+        }
+      }
+    },
+    {
+      "fixture": "r99",
+      "case": "m3-delete-terminal",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/fixtures/r99-window-lapse",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069",
+          "after": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af"
+        }
+      }
+    },
+    {
+      "fixture": "r99",
+      "case": "m4-span-break",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/fixtures/r99-window-lapse",
+      "changed_files": [
+        "claim-excerpt-map.md"
+      ],
+      "changed_sha256": {
+        "claim-excerpt-map.md": {
+          "before": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
+          "after": "eb0f223ba9e6da300576cd3e23fd31df6625a27287ba0c7b2ad6f1062b3b0022"
+        }
+      }
+    },
+    {
+      "fixture": "r99",
+      "case": "m5-source-rebind",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/fixtures/r99-window-lapse",
+      "changed_files": [
+        "timeline.json"
+      ],
+      "changed_sha256": {
+        "timeline.json": {
+          "before": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069",
+          "after": "332f6e424a07379b1d620a2c73b22902a1c2496f070cb5e75d8a6c898a9b48ad"
+        }
+      }
+    },
+    {
+      "fixture": "r99",
+      "case": "m6-coherent-prose",
+      "path": ".ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/fixtures/r99-window-lapse",
+      "changed_files": [
+        "claim-excerpt-map.md",
+        "fictional-excerpts.md"
+      ],
+      "changed_sha256": {
+        "claim-excerpt-map.md": {
+          "before": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
+          "after": "b8f436b78a84b9a4277cd9268dd6175e45e0331f8be21dec081cc501ad8ff4a9"
+        },
+        "fictional-excerpts.md": {
+          "before": "fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d",
+          "after": "44f7b1326350dcfd264b554c3a352edf8ca308285665002590b780aa5ffeaa34"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "fixture": "r100",
+      "case": "control",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "control",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "control",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=22 mapped=22",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=22 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "control",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/control/corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_fragments": [
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m1-empty-deps",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m1-empty-deps",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m1-empty-deps",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=22 mapped=22",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=22 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m1-empty-deps",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m1-empty-deps/corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_fragments": [
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m2-wrong-earlier",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m2-wrong-earlier",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m2-wrong-earlier",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=22 mapped=22",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=22 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m2-wrong-earlier",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m2-wrong-earlier/corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_fragments": [
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m3-delete-terminal",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m3-delete-terminal",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m3-delete-terminal",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/fixtures/r100-docket-review",
+      "exit": 1,
+      "finding_ids": [
+        "phantom_obligation"
+      ],
+      "expected_exit": 1,
+      "expected_finding_ids": [
+        "phantom_obligation"
+      ],
+      "expected_fragments": [
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=21 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nFINDING phantom_obligation: timeline.json#/8 is not a raw source-attributed obligation\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m3-delete-terminal",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m3-delete-terminal/corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_fragments": [
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m4-span-break",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m4-span-break",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/fixtures/r100-docket-review",
+      "exit": 1,
+      "finding_ids": [],
+      "expected_exit": 1,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "FAIL: J05: anchor hit outside declared line span 20",
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nFAIL J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.; span=20; outside-span=17\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 21/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 23/24\nFAIL: J05: anchor hit outside declared line span 20 (hit lines: 17)\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m4-span-break",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=22 mapped=22",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=22 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m4-span-break",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m4-span-break/corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_fragments": [
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m5-source-rebind",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m5-source-rebind",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m5-source-rebind",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/fixtures/r100-docket-review",
+      "exit": 1,
+      "finding_ids": [
+        "source_id_mismatch"
+      ],
+      "expected_exit": 1,
+      "expected_finding_ids": [
+        "source_id_mismatch"
+      ],
+      "expected_fragments": [
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=22 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nFINDING source_id_mismatch: timeline.json#/8 does not bind to 'clerk-lapse-note'\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m5-source-rebind",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m5-source-rebind/corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_fragments": [
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m6-coherent-prose",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m6-coherent-prose",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision follows both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m6-coherent-prose",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/fixtures/r100-docket-review",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=22 mapped=22",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=22 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r100",
+      "case": "m6-coherent-prose",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r100/m6-coherent-prose/corpus/fixtures/r100-docket-review",
+      "exit": 2,
+      "finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "UNPINNED-FIXTURE"
+      ],
+      "expected_fragments": [
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FINDING UNPINNED-FIXTURE: no pin for 'r100-docket-review' in corpus/tools/dependency-freeze-contract.json (pinned: ['r88-m3-maya-cluster', 'r94-paired-crossing', 'r95-crossing-aftermath', 'r96-crossing-response', 'r97-crossing-acknowledgment', 'r98-clerk-filing', 'r99-window-lapse'])\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "control",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "control",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23\nSOURCE-SUPPORT 21/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "control",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=21 mapped=21",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=21 mapped=21\nINVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "control",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/control/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m1-empty-deps",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m1-empty-deps",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23\nSOURCE-SUPPORT 21/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m1-empty-deps",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=21 mapped=21",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=21 mapped=21\nINVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m1-empty-deps",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m1-empty-deps/corpus/fixtures/r99-window-lapse",
+      "exit": 1,
+      "finding_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "expected_exit": 1,
+      "expected_finding_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "expected_fragments": [
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m2-wrong-earlier",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m2-wrong-earlier",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23\nSOURCE-SUPPORT 21/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m2-wrong-earlier",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=21 mapped=21",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=21 mapped=21\nINVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m2-wrong-earlier",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m2-wrong-earlier/corpus/fixtures/r99-window-lapse",
+      "exit": 1,
+      "finding_ids": [
+        "ADDITION-DETECTED",
+        "REDUCTION-DETECTED"
+      ],
+      "expected_exit": 1,
+      "expected_finding_ids": [
+        "ADDITION-DETECTED",
+        "REDUCTION-DETECTED"
+      ],
+      "expected_fragments": [
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING ADDITION-DETECTED: event clerk-lapse-recorded gained depends_on ['acknowledgment-aru-records']\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded lost depends_on ['clerk-filing-open']\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m3-delete-terminal",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m3-delete-terminal",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23\nSOURCE-SUPPORT 21/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m3-delete-terminal",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/fixtures/r99-window-lapse",
+      "exit": 1,
+      "finding_ids": [
+        "phantom_obligation"
+      ],
+      "expected_exit": 1,
+      "expected_finding_ids": [
+        "phantom_obligation"
+      ],
+      "expected_fragments": [
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=20 mapped=21\nINVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23\nFINDING phantom_obligation: timeline.json#/7 is not a raw source-attributed obligation\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m3-delete-terminal",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m3-delete-terminal/corpus/fixtures/r99-window-lapse",
+      "exit": 1,
+      "finding_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "expected_exit": 1,
+      "expected_finding_ids": [
+        "REDUCTION-DETECTED"
+      ],
+      "expected_fragments": [
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "FREEZE r99-window-lapse: events 7/8; dependency-edges 6/7; relations 1/1\nFINDING REDUCTION-DETECTED: event clerk-lapse-recorded is missing; 1 frozen dependency edge(s) gone\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m4-span-break",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m4-span-break",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/fixtures/r99-window-lapse",
+      "exit": 1,
+      "finding_ids": [],
+      "expected_exit": 1,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "FAIL: J05: anchor hit outside declared line span 20",
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nFAIL J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.; span=20; outside-span=17\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23\nSOURCE-SUPPORT 20/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 22/23\nFAIL: J05: anchor hit outside declared line span 20 (hit lines: 17)\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m4-span-break",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=21 mapped=21",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=21 mapped=21\nINVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m4-span-break",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m4-span-break/corpus/fixtures/r99-window-lapse",
+      "exit": 2,
+      "finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "expected_fragments": [
+        "claim-excerpt-map.md",
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest a9718342a70863ffa0a71ef82b5df5b428b9f45f2d15d91b9465434fa3306b4b != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> eb0f223ba9e6da300576cd3e23fd31df6625a27287ba0c7b2ad6f1062b3b0022); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m5-source-rebind",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m5-source-rebind",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23\nSOURCE-SUPPORT 21/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m5-source-rebind",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/fixtures/r99-window-lapse",
+      "exit": 1,
+      "finding_ids": [
+        "source_id_mismatch"
+      ],
+      "expected_exit": 1,
+      "expected_finding_ids": [
+        "source_id_mismatch"
+      ],
+      "expected_fragments": [
+        "RESULT FAIL"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=21 mapped=21\nINVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23\nFINDING source_id_mismatch: timeline.json#/7 does not bind to 'clerk-filing-note'\nRESULT FAIL\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m5-source-rebind",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m5-source-rebind/corpus/fixtures/r99-window-lapse",
+      "exit": 2,
+      "finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "expected_fragments": [
+        "timeline.json",
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest 88d0f9eb20a46380a6db697de408a923d776e6c4d7d0e030a80ab89e23c02301 != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: timeline.json (sha256 2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069 -> 332f6e424a07379b1d620a2c73b22902a1c2496f070cb5e75d8a6c898a9b48ad); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m6-coherent-prose",
+      "gate": "bible",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/fixtures/check_bible.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "CLEAN: schema, citations, relations, timeline; 0 violations"
+      ],
+      "matches": true,
+      "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m6-coherent-prose",
+      "gate": "support",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/tools/support_check.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "INVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23; DISTINCT-ANCHORS 19/19\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision follows both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. […] He called out “Earth,” and the solid land appeared.\nRECEIPT JSON-FACTS 21; EDITORIAL-ROWS 2; TOTAL-ROWS 23\nSOURCE-SUPPORT 21/21; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 23/23; VALIDATED-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m6-coherent-prose",
+      "gate": "map",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/tools/map_obligations.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "finding_ids": [],
+      "expected_exit": 0,
+      "expected_finding_ids": [],
+      "expected_fragments": [
+        "OBLIGATIONS raw=21 mapped=21",
+        "RESULT PASS"
+      ],
+      "matches": true,
+      "stdout": "OBLIGATIONS raw=21 mapped=21\nINVENTORY JSON-FACTS 21/21; EDITORIAL-ROWS 2/2; TOTAL-ROWS 23/23\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "r99",
+      "case": "m6-coherent-prose",
+      "gate": "freeze",
+      "command": "python3 .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/tools/dependency_freeze.py .ufo/waves/round-100/seats/V16-scratch/matrix/r99/m6-coherent-prose/corpus/fixtures/r99-window-lapse",
+      "exit": 2,
+      "finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "expected_exit": 2,
+      "expected_finding_ids": [
+        "DIGEST-MISMATCH"
+      ],
+      "expected_fragments": [
+        "fictional-excerpts.md",
+        "RESULT ERROR"
+      ],
+      "matches": true,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nFINDING DIGEST-MISMATCH: content digest ac372f2ccf46e58cbfced6d70b2ce7615eadd73c350f91ab8ccfa9bc0d895c6a != pin 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e; changed: claim-excerpt-map.md (sha256 d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d -> b8f436b78a84b9a4277cd9268dd6175e45e0331f8be21dec081cc501ad8ff4a9), fictional-excerpts.md (sha256 fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d -> 44f7b1326350dcfd264b554c3a352edf8ca308285665002590b780aa5ffeaa34); pinned-file bytes changed outside the semantic inventory\nRESULT ERROR\n",
+      "stderr": ""
+    }
+  ],
+  "input_drift_during_run": {}
+}

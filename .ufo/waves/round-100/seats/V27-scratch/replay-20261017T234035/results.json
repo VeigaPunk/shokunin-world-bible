@@ -1,0 +1,176 @@
+[
+  {
+    "label": "freeze-r88-m3-maya-cluster",
+    "command": [
+      "python3",
+      "corpus/tools/dependency_freeze.py",
+      "corpus/fixtures/r88-m3-maya-cluster"
+    ],
+    "exit": 0,
+    "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nDIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "freeze-r94-paired-crossing",
+    "command": [
+      "python3",
+      "corpus/tools/dependency_freeze.py",
+      "corpus/fixtures/r94-paired-crossing"
+    ],
+    "exit": 0,
+    "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nDIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "freeze-r95-crossing-aftermath",
+    "command": [
+      "python3",
+      "corpus/tools/dependency_freeze.py",
+      "corpus/fixtures/r95-crossing-aftermath"
+    ],
+    "exit": 0,
+    "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nDIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "freeze-r96-crossing-response",
+    "command": [
+      "python3",
+      "corpus/tools/dependency_freeze.py",
+      "corpus/fixtures/r96-crossing-response"
+    ],
+    "exit": 0,
+    "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nDIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "freeze-r97-crossing-acknowledgment",
+    "command": [
+      "python3",
+      "corpus/tools/dependency_freeze.py",
+      "corpus/fixtures/r97-crossing-acknowledgment"
+    ],
+    "exit": 0,
+    "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nDIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "freeze-r98-clerk-filing",
+    "command": [
+      "python3",
+      "corpus/tools/dependency_freeze.py",
+      "corpus/fixtures/r98-clerk-filing"
+    ],
+    "exit": 0,
+    "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "freeze-r99-window-lapse",
+    "command": [
+      "python3",
+      "corpus/tools/dependency_freeze.py",
+      "corpus/fixtures/r99-window-lapse"
+    ],
+    "exit": 0,
+    "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "r100-bible",
+    "command": [
+      "python3",
+      "corpus/fixtures/check_bible.py",
+      "corpus/fixtures/r100-docket-review"
+    ],
+    "exit": 0,
+    "stdout": "CLEAN: schema, citations, relations, timeline; 0 violations\n",
+    "stderr": ""
+  },
+  {
+    "label": "r100-map",
+    "command": [
+      "python3",
+      "corpus/tools/map_obligations.py",
+      "corpus/fixtures/r100-docket-review"
+    ],
+    "exit": 0,
+    "stdout": "OBLIGATIONS raw=22 mapped=22\nINVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "r100-support",
+    "command": [
+      "python3",
+      "corpus/tools/support_check.py",
+      "corpus/fixtures/r100-docket-review"
+    ],
+    "exit": 0,
+    "stdout": "INVENTORY JSON-FACTS 22/22; EDITORIAL-ROWS 2/2; TOTAL-ROWS 24/24; DISTINCT-ANCHORS 20/20\nANCHORS repeated-references=4; DUPLICATE-ROWS 0\nPASS J01: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J02: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J03: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J04: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J05: source-support; mode=verbatim; anchor=found; 17:> The Chalk Stair is the named rain-dark crossing between Quiet Rise and Salt Court.\nPASS J06: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J07: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J08: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J09: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J10: source-support; mode=verbatim; anchor=found; 18:> After both Tick 9 entries above, Aru and Evin met at the Chalk Stair at tick 10.\nPASS J11: source-support; mode=verbatim; anchor=found; 19:> There, they agreed, for this crossing only, to share stewardship of the Chalk Stair.\nPASS J12: source-support; mode=verbatim; anchor=found; 12:> Tick 9: Aru carried the north lantern at Quiet Rise.\nPASS J13: source-support; mode=verbatim; anchor=found; 13:> Tick 9: Evin held the south bell at Salt Court.\nPASS J14: source-support; mode=verbatim; anchor=found; 20:> Their tick-10 decision depends on both ninth-bell entries: Aru's north-lantern entry at Quiet Rise and Evin's south-bell entry at Salt Court. After agreeing to share stewardship for this crossing only, they chalked one temporary route mark together at the midpoint.\nPASS J15: source-support; mode=verbatim; anchor=found; 26:> Tick 11: I waited at the Chalk Stair through the agreed bell.\nPASS J16: source-support; mode=verbatim; anchor=found; 37:> Tick 12: I was at Salt Court through the same agreed bell.\nPASS J17: source-support; mode=verbatim; anchor=found; 48:> Tick 13: I received Evin's response at the Chalk Stair.\nPASS J18: source-support; mode=verbatim; anchor=found; 60:> I am Maren, clerk of the Chalk Stair registry, and I record the matter OPEN.\nPASS J19: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J20: source-support; mode=verbatim; anchor=found; 59:> Tick 14: I filed both pending accounts at the Chalk Stair registry.\nPASS J21: source-support; mode=verbatim; anchor=found; 70:> Tick 15: The crossing-window named in the original minute has closed.\nPASS J22: source-support; mode=verbatim; anchor=found; 82:> Tick 16: After my lapse record, I made the first-passage docket review at the Chalk Stair.\nPASS S01: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nPASS S02: editorial-row; mode=verbatim; anchor=found; 5:> The beginning of this interesting book is taken up with the Kiche story of the creation, and what occurred directly subsequent to that event. [\u2026] He called out \u201cEarth,\u201d and the solid land appeared.\nRECEIPT JSON-FACTS 22; EDITORIAL-ROWS 2; TOTAL-ROWS 24\nSOURCE-SUPPORT 22/22; EDITORIAL-ANCHORS 2/2; RETELLING-SUPPORT-ONLY 0 entries (0/0 anchors); MODES 24/24; VALIDATED-ROWS 24/24\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "boundary",
+    "command": [
+      "python3",
+      "corpus/tools/boundary_doc_check.py"
+    ],
+    "exit": 0,
+    "stdout": "CHECK pinned inputs: PASS\nCHECK receipt replay: PASS\nCHECK explicit anchor ranges: PASS\nCHECK document structure: PASS\nscope=frozen-document drift + receipts + explicit-anchor range + structure; not semantic or AST validation\nreplay_receipts=3/3\nreplay_cases=14/14\nanchors=2/2\nh1_count=1\nduplicate_headings=0\ninstruction_markers=0\nCERTIFIED (bounded: frozen-document drift + receipts + explicit-anchor range + structure; no semantic/AST validation)\n",
+    "stderr": ""
+  },
+  {
+    "label": "c9-delivered",
+    "command": [
+      "python3",
+      "corpus/tools/discriminate_check.py"
+    ],
+    "exit": 0,
+    "stdout": "mode=delivered checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True\nr91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=PASS\nr91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=True baseline_README_exact=True changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=PASS\nRESULT: DISCRIMINATION HELD \u2014 silent-revert check would fail on regression\n",
+    "stderr": ""
+  },
+  {
+    "label": "c9-control",
+    "command": [
+      "python3",
+      "corpus/tools/discriminate_check.py",
+      "--checker",
+      "e97613c"
+    ],
+    "exit": 2,
+    "stdout": "mode=e97613c checker_sha256=ff9fd2aa6811a813a20bf74d3931d299378bff7f6925576243d2413b857d1421 matches_pin=True\nr91-c1-null-chain: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=FAIL\nr91-c1-tick-unresolved: run_exit=1 stderr_empty=True README_exact=False baseline_README_exact=True changed_line_pairs=1/1 (old<->new)\n  pinned_semantic_gate=FAIL\nREGRESSION-DETECTED on r91-c1-null-chain,r91-c1-tick-unresolved \u2014 pinned delivered semantics not present\n",
+    "stderr": ""
+  },
+  {
+    "label": "r10-replay",
+    "command": [
+      "python3",
+      ".ufo/waves/round-93/deepseek/F14-postrepair-check.py"
+    ],
+    "exit": 0,
+    "stdout": "MEASURED_REVISION b5fe472957ab1e4e9c90f5613acc14cd24a288ae\nMEASURED_TREE 80582422ecb29c71013c1c21011b9b5c4d89682b\nNOTE no HEAD assertion by design: assertions below are content/tool based.\n\n-- input hash pins --\nPASS file sha256 r93-m2-kojiki-cluster/archive-record-excerpt.md\nPASS file sha256 r93-m2-kojiki-cluster/claim-excerpt-map.md\nPASS file sha256 r93-m2-kojiki-cluster/contradictions.json\nPASS file sha256 r93-m2-kojiki-cluster/entities.json\nPASS file sha256 r93-m2-kojiki-cluster/inspiration-note.md\nPASS file sha256 r93-m2-kojiki-cluster/kojiki-chamberlain-excerpt.md\nPASS file sha256 r93-m2-kojiki-cluster/README.md\nPASS file sha256 r93-m2-kojiki-cluster/relations.json\nPASS file sha256 r93-m2-kojiki-cluster/sources.json\nPASS file sha256 r93-m2-kojiki-cluster/symbolism-clause-map.md\nPASS file sha256 r93-m2-kojiki-cluster/timeline.json\nPASS tree sha256 r93-m2-kojiki-cluster :: full=854092b4e6145736 excl_readme=72e4b2b82840318e\nPASS file sha256 r87-myth-cluster/claim-excerpt-map.md\nPASS file sha256 r87-myth-cluster/contradictions.json\nPASS file sha256 r87-myth-cluster/dune-register-excerpt.md\nPASS file sha256 r87-myth-cluster/entities.json\nPASS file sha256 r87-myth-cluster/gate-witness-excerpt.md\nPASS file sha256 r87-myth-cluster/inspiration-note.md\nPASS file sha256 r87-myth-cluster/lowwater-hymn-excerpt.md\nPASS file sha256 r87-myth-cluster/README.md\nPASS file sha256 r87-myth-cluster/relations.json\nPASS file sha256 r87-myth-cluster/shell-charter-excerpt.md\nPASS file sha256 r87-myth-cluster/sources.json\nPASS file sha256 r87-myth-cluster/symbolism-clause-map.md\nPASS file sha256 r87-myth-cluster/tide-bell-tally-excerpt.md\nPASS file sha256 r87-myth-cluster/timeline.json\nPASS tree sha256 r87-myth-cluster :: full=c07d286df828d7c2 excl_readme=997472173c520108\nPASS file sha256 r88-m3-maya-cluster/claim-excerpt-map.md\nPASS file sha256 r88-m3-maya-cluster/contradictions.json\nPASS file sha256 r88-m3-maya-cluster/entities.json\nPASS file sha256 r88-m3-maya-cluster/fictional-excerpts.md\nPASS file sha256 r88-m3-maya-cluster/inspiration-note.md\nPASS file sha256 r88-m3-maya-cluster/README.md\nPASS file sha256 r88-m3-maya-cluster/relations.json\nPASS file sha256 r88-m3-maya-cluster/source-excerpt.md\nPASS file sha256 r88-m3-maya-cluster/sources.json\nPASS file sha256 r88-m3-maya-cluster/symbolism-clause-map.md\nPASS file sha256 r88-m3-maya-cluster/timeline.json\nPASS tree sha256 r88-m3-maya-cluster :: full=edc94bc5b7b3e311 excl_readme=0bb9084f5945951f\n\n-- declared finite cluster records --\nPASS declared referent set r93-m2-kojiki-cluster :: ids=['lorn-index', 'orni', 'slate-table', 'teva']\nPASS declared referent set r87-myth-cluster :: ids=['ash-dune-sanctuary', 'hara', 'mother-tide-gate', 'reed-bell', 'reedwardens', 'sen', 'shellweavers']\nPASS declared referent set r88-m3-maya-cluster :: ids=['aru', 'evin', 'quiet-rise', 'salt-court']\nPASS M2 JSON file set complete :: ['contradictions.json', 'entities.json', 'relations.json', 'sources.json', 'timeline.json']\nPASS M2 contradictions.json empty\n\n-- independent namespace comparison (filed first-capture script) --\nPASS scan script exit 0 :: exit=0\nPASS normalized key intersections r93-m2-kojiki-cluster vs r87-myth-cluster :: nonempty={'entity_kind_kind': ['character', 'item', 'place']}\nPASS generic kind vocabulary only r87-myth-cluster\nPASS claim/event token n-gram overlap >=3 r87-myth-cluster\nPASS prior display names inside M2 only in README r87-myth-cluster :: files=['README.md']\nPASS Reed lookalike text only external excerpt + README r87-myth-cluster :: files=['README.md', 'kojiki-chamberlain-excerpt.md']\nPASS no M2 name inside prior cluster r87-myth-cluster\nPASS normalized key intersections r93-m2-kojiki-cluster vs r88-m3-maya-cluster :: nonempty={'entity_kind_kind': ['character', 'place']}\nPASS generic kind vocabulary only r88-m3-maya-cluster\nPASS claim/event token n-gram overlap >=3 r88-m3-maya-cluster\nPASS prior display names inside M2 only in README r88-m3-maya-cluster :: files=['README.md']\nPASS Reed lookalike text only external excerpt + README r88-m3-maya-cluster :: files=['README.md', 'kojiki-chamberlain-excerpt.md']\nPASS no M2 name inside prior cluster r88-m3-maya-cluster\nPASS no alias/epithet fields r93-m2-kojiki-cluster\nPASS no alias/epithet fields r87-myth-cluster\nPASS no alias/epithet fields r88-m3-maya-cluster\nPASS register file absent\nPASS M6 target path absent from repo\nPASS delivered cluster is not M6 target\nPASS superseded sentence verbatim + superseded\nPASS M2 files never reference the register path\nPASS r89 demo disclaims register status\nPASS README cites the current content-pinned replay + receipt\nPASS R10.md erratum supersedes the original active command\nPASS R10.md original command bytes retained (not rewritten)\n\n-- R10 receipt cross-check (r87/r88 unchanged; M2 post-dates the capture) --\nPASS R10 recorded input hash still live r87-myth-cluster\nPASS R10 recorded input hash still live r88-m3-maya-cluster\nINFO R10 recorded M2 input hash 599d2507c26c57b7 vs post-repair 72e4b2b82840318e (2026-10-17 corrections landed after the R10 capture; comparison re-run above)\n\n-- project tools --\nPASS check_bible M2 CLEAN exit 0 :: exit=0\nPASS support_check M2 12 facts + 3 editorial + PASS exit 0 :: exit=0\nPASS check_bible r87-myth-cluster CLEAN exit 0 :: exit=0\nPASS check_bible r88-m3-maya-cluster CLEAN exit 0 :: exit=0\n\nRESULT ALL CHECKS HELD\nchecks_failed=0\n",
+    "stderr": ""
+  },
+  {
+    "label": "freeze-selftest",
+    "command": [
+      "python3",
+      ".ufo/waves/round-100/seats/V27-scratch/replay-20261017T234035/selftest-mirror/corpus/tools/dependency_freeze.py",
+      "--self-test"
+    ],
+    "exit": 0,
+    "stdout": "CASE clean: exit=0 expected=0 findings=[] ok\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 18/18\nRESULT PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "map-selftest",
+    "command": [
+      "python3",
+      ".ufo/waves/round-100/seats/V27-scratch/replay-20261017T234035/selftest-mirror/corpus/tools/map_obligations.py",
+      "--self-test"
+    ],
+    "exit": 0,
+    "stdout": "SELF-TEST CASES 25/25 pinned\nSELF-TEST PASS complete exit=0 findings=none\nSELF-TEST PASS missing exit=1 findings=['missing_obligation']\nSELF-TEST PASS duplicate exit=1 findings=['duplicate_mapping']\nSELF-TEST PASS phantom exit=1 findings=['phantom_obligation']\nSELF-TEST PASS source_id_mismatch exit=1 findings=['source_id_mismatch']\nSELF-TEST PASS malformed_json exit=2 findings=['malformed_json']\nSELF-TEST PASS map_missing exit=2 findings=['map_missing']\nSELF-TEST PASS co_mapped_grammar exit=2 findings=['unsupported_map']\nSELF-TEST PASS legacy_grammar exit=2 findings=['unsupported_map']\nSELF-TEST PASS invalid_pointer exit=2 findings=['invalid_pointer']\nSELF-TEST PASS empty_segment exit=2 findings=['invalid_pointer']\nSELF-TEST PASS noncanonical_index exit=2 findings=['invalid_pointer']\nSELF-TEST PASS noncanonical_claim_index exit=2 findings=['invalid_pointer']\nSELF-TEST PASS foreign_path exit=2 findings=['foreign_path']\nSELF-TEST PASS traversal_path exit=2 findings=['unsafe_path']\nSELF-TEST PASS symlink_path exit=2 findings=['unsafe_path']\nSELF-TEST PASS invalid_arguments exit=2 findings=['invalid_arguments']\nSELF-TEST PASS frozen_complete exit=0 findings=none\nSELF-TEST PASS frozen_tampered exit=2 findings=['snapshot_tampered']\nSELF-TEST PASS frozen_missing_digests exit=2 findings=['unpinned']\nSELF-TEST PASS frozen_expected_failure exit=1 findings=['missing_obligation']\nSELF-TEST PASS frozen_verdict_mismatch exit=2 findings=['frozen_verdict_mismatch']\nSELF-TEST PASS schema_drift exit=1 findings=['schema_drift']\nSELF-TEST PASS inventory_mismatch exit=1 findings=['inventory_mismatch']\nSELF-TEST PASS dual_pointer exit=1 findings=['dual_pointer']\nRESULT PASS\n",
+    "stderr": ""
+  }
+]

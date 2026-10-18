@@ -1,0 +1,8 @@
+{
+  "command": "python3 corpus/tools/boundary_doc_check.py --self-test",
+  "cwd": "/home/vgpnk/Projects/shokunin/lore-shokunin",
+  "start": "2026-10-18T02:33:25.314302+00:00",
+  "end": "2026-10-18T02:33:26.366328+00:00",
+  "exit": 0,
+  "stderr_bytes": 0
+}

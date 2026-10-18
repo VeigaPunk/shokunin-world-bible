@@ -1,0 +1,3 @@
+CHECK pinned inputs: FAIL
+FINDING document_drift: document digest differs from pinned 65838f867d6ece8e7b8bdcc4ffc667a08a1b785e bytes
+CERTIFICATION FAIL

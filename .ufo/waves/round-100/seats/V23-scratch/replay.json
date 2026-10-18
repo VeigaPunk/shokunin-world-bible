@@ -1,0 +1,168 @@
+{
+  "head": "b5fe472957ab1e4e9c90f5613acc14cd24a288ae",
+  "comparison": {
+    "baseline_pin_names": [
+      "r88-m3-maya-cluster",
+      "r94-paired-crossing",
+      "r95-crossing-aftermath",
+      "r96-crossing-response",
+      "r97-crossing-acknowledgment",
+      "r98-clerk-filing"
+    ],
+    "delivered_pin_names": [
+      "r88-m3-maya-cluster",
+      "r94-paired-crossing",
+      "r95-crossing-aftermath",
+      "r96-crossing-response",
+      "r97-crossing-acknowledgment",
+      "r98-clerk-filing",
+      "r99-window-lapse"
+    ],
+    "unchanged_prior_pins": {
+      "r88-m3-maya-cluster": true,
+      "r94-paired-crossing": true,
+      "r95-crossing-aftermath": true,
+      "r96-crossing-response": true,
+      "r97-crossing-acknowledgment": true,
+      "r98-clerk-filing": true
+    },
+    "new_pin_names": [
+      "r99-window-lapse"
+    ],
+    "removed_pin_names": [],
+    "other_top_level_changes": [],
+    "tool_unchanged_from_fe1ce46": true
+  },
+  "chain_results": [
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r88-m3-maya-cluster",
+      "exit": 0,
+      "stdout": "FREEZE r88-m3-maya-cluster: events 2/2; dependency-edges 0/0; relations 0/0\nDIGEST acf677a7085be3f6b72e3435a7e72bb1f0503359b5178dd88e433c8a9af96aae\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r94-paired-crossing",
+      "exit": 0,
+      "stdout": "FREEZE r94-paired-crossing: events 3/3; dependency-edges 2/2; relations 1/1\nDIGEST 048b8ff39e4a5232641940df7f25b7e43073847f9d1c3c073d56ce015bf153ef\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r95-crossing-aftermath",
+      "exit": 0,
+      "stdout": "FREEZE r95-crossing-aftermath: events 4/4; dependency-edges 3/3; relations 1/1\nDIGEST 97cffd7bfe6e0c926f5b771eaf2d712dddbc25c00eb00ca6813042721120c710\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r96-crossing-response",
+      "exit": 0,
+      "stdout": "FREEZE r96-crossing-response: events 5/5; dependency-edges 4/4; relations 1/1\nDIGEST 43911900923c110b3b67a0ad2f5f7c46c0bba2d112294f1ca4828e9da044aa7c\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r97-crossing-acknowledgment",
+      "exit": 0,
+      "stdout": "FREEZE r97-crossing-acknowledgment: events 6/6; dependency-edges 5/5; relations 1/1\nDIGEST a28b9ea0d65ec355dd9a28098e935c15605c84fed58fdd4d3f867c706cb01d54\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r98-clerk-filing",
+      "exit": 0,
+      "stdout": "FREEZE r98-clerk-filing: events 7/7; dependency-edges 6/6; relations 1/1\nDIGEST 5ecf84e19121ea1283ec99bd8104b93da182a5de28a16642727fb85caf0495f0\nRESULT PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 corpus/tools/dependency_freeze.py corpus/fixtures/r99-window-lapse",
+      "exit": 0,
+      "stdout": "FREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+      "stderr": ""
+    }
+  ],
+  "reconstruction": {
+    "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V23-scratch/guarded-reconstruction/corpus/tools/dependency_freeze.py --freeze /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V23-scratch/guarded-reconstruction/corpus/fixtures/r99-window-lapse",
+    "exit": 0,
+    "stdout": "FROZEN r99-window-lapse: events 8; dependency-edges 7; relations 1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nFREEZE r99-window-lapse: events 8/8; dependency-edges 7/7; relations 1/1\nDIGEST 7fe7e3b065088e59863697bdf8223eef9b91ba44efce5c696d0986fb506e470e\nRESULT PASS\n",
+    "stderr": ""
+  },
+  "reconstruction_byte_identical": true,
+  "self_test_in_owned_scratch": {
+    "command": "python3 /home/vgpnk/Projects/shokunin/lore-shokunin/.ufo/waves/round-100/seats/V23-scratch/guarded-reconstruction/corpus/tools/dependency_freeze.py --self-test",
+    "exit": 0,
+    "stdout": "CASE clean: exit=0 expected=0 findings=[] ok\nCASE reduction_edge_drop: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE addition_edge_phantom: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE event_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE event_endpoint_change: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_endpoint_flip: exit=1 expected=1 findings=['ENDPOINT-CHANGE'] ok\nCASE relation_removed: exit=1 expected=1 findings=['REDUCTION-DETECTED'] ok\nCASE relation_added: exit=1 expected=1 findings=['ADDITION-DETECTED'] ok\nCASE digest_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nCASE malformed_json: exit=2 expected=2 findings=['MALFORMED-JSON'] ok\nCASE missing_timeline: exit=2 expected=2 findings=['FILE-MISSING'] ok\nCASE unpinned_fixture: exit=2 expected=2 findings=['UNPINNED-FIXTURE'] ok\nCASE missing_fixture: exit=2 expected=2 findings=['FIXTURE-MISSING'] ok\nCASE invalid_arguments: exit=2 expected=2 findings=['INVALID-ARGUMENTS'] ok\nCASE scope_refused: exit=2 expected=2 findings=['SCOPE-REFUSED'] ok\nCASE path_mismatch: exit=2 expected=2 findings=['PATH-MISMATCH'] ok\nCASE self_test_mismatch: exit=2 expected=2 findings=['SELF-TEST-MISMATCH'] ok\nCASE markdown_tamper: exit=2 expected=2 findings=['DIGEST-MISMATCH'] ok\nSELF-TEST 18/18\nRESULT PASS\n",
+    "stderr": ""
+  },
+  "live_inputs_stable": true,
+  "input_fingerprints": {
+    "corpus/tools/dependency-freeze-contract.json": "ea012b9c362bac369056e67f55b6e0d258cb0956194ca66922a35b31f26104a5",
+    "corpus/tools/dependency_freeze.py": "fb9bb9ff608c3333cdc3a5daba49c68c2424940d6bf4cdcdf0af80636310131c",
+    "corpus/fixtures/r88-m3-maya-cluster/entities.json": "042b6cc0d70c4d747121d9b277ac031cf21e66822d3c9a3e5ffe0282bba2bddc",
+    "corpus/fixtures/r88-m3-maya-cluster/relations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r88-m3-maya-cluster/timeline.json": "f74c664b17fd8d575235ab59432a0ce6f938380e9b5a8d07640aae1d38773493",
+    "corpus/fixtures/r88-m3-maya-cluster/sources.json": "aa252416abc2c863ec4ae86cf25bd4f6e6e841d89e8586255b53362897282d63",
+    "corpus/fixtures/r88-m3-maya-cluster/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r88-m3-maya-cluster/README.md": "55c9ba57ad7af5db0320fdc09142588c363c8b726d5ae1023dc01264f29b857c",
+    "corpus/fixtures/r88-m3-maya-cluster/claim-excerpt-map.md": "b3b79fe5b5b9272b898b5714291739503c4250c415b3959032fcdba84a73fd43",
+    "corpus/fixtures/r88-m3-maya-cluster/fictional-excerpts.md": "e456bb1204b88792d4fe6396e9e8b0deb9ff6f47e1821b0e875738431b9bda89",
+    "corpus/fixtures/r88-m3-maya-cluster/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r88-m3-maya-cluster/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r94-paired-crossing/entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+    "corpus/fixtures/r94-paired-crossing/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r94-paired-crossing/timeline.json": "f0209f90a6ce795211369bd900ac1d333d16eb0af123f1b170831e192660533c",
+    "corpus/fixtures/r94-paired-crossing/sources.json": "2b627c4c166edf44e1e54bb006964a00e267ab4a4ce0b7b7c0681a0d9f0355d5",
+    "corpus/fixtures/r94-paired-crossing/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r94-paired-crossing/README.md": "36796479658cc4eaa95ac50cd38713a934df56d3c430f10b1bab6211ff2a360a",
+    "corpus/fixtures/r94-paired-crossing/claim-excerpt-map.md": "ed9527c551049a6964adc872fbff722b4bdd6a53aa8713fbb6a5d92254e89a47",
+    "corpus/fixtures/r94-paired-crossing/fictional-excerpts.md": "585f4d0746eadffcdd13a12aa4068392820201ae668dc9b66e9154beccf495c2",
+    "corpus/fixtures/r94-paired-crossing/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r94-paired-crossing/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r95-crossing-aftermath/entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+    "corpus/fixtures/r95-crossing-aftermath/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r95-crossing-aftermath/timeline.json": "3c0faad6bf32f944f9f2a20f3bd15829044afa04f1a8837601903433b00ea177",
+    "corpus/fixtures/r95-crossing-aftermath/sources.json": "fd9e30e8d9ad40013be2172781d13d84ba219377c8433ff6e529ea8e1927e64a",
+    "corpus/fixtures/r95-crossing-aftermath/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r95-crossing-aftermath/README.md": "9d27af4ac9644210d3ee1df26938a4a5592b8cbcfdb5d6fb880de6ccdb1bdd0b",
+    "corpus/fixtures/r95-crossing-aftermath/claim-excerpt-map.md": "80440d61122488a267a4f0a58a55cb54d89c037d93160f1123e5fb3b2f396f61",
+    "corpus/fixtures/r95-crossing-aftermath/fictional-excerpts.md": "0ef6734ae52d28656e75869d942d6b1e8e324b116977a2811b3b36dc0880b282",
+    "corpus/fixtures/r95-crossing-aftermath/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r95-crossing-aftermath/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r96-crossing-response/entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+    "corpus/fixtures/r96-crossing-response/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r96-crossing-response/timeline.json": "ea0225f9270db79685ea6f55828c2031d7ac67cd413b04f28b25770b208815b9",
+    "corpus/fixtures/r96-crossing-response/sources.json": "9f973f634cf325a33047020407ffb67b0a0f0a1643e507ebd3771abf9fabf32d",
+    "corpus/fixtures/r96-crossing-response/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r96-crossing-response/README.md": "ff52ced48bf4214721f248328d76da64a42773d44e78154ef1eaf6eb3558c456",
+    "corpus/fixtures/r96-crossing-response/claim-excerpt-map.md": "e851f068cfd7ed02c97054df18729c4c5a9b8bf60d99d7c9116f427d765440de",
+    "corpus/fixtures/r96-crossing-response/fictional-excerpts.md": "06b11bec604f6d68e4d4bc43e78093c00ce7fb8fb86c8cac153e24ee41cb2fe3",
+    "corpus/fixtures/r96-crossing-response/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r96-crossing-response/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r97-crossing-acknowledgment/entities.json": "026af0bc2cdab1509f58f0a8235731de681e5ba8e68cc09f952818b5792ae03b",
+    "corpus/fixtures/r97-crossing-acknowledgment/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r97-crossing-acknowledgment/timeline.json": "73063a863a68fc4feae073ce74cfa9e5fddb4f9cc4060d12b333d495a255895b",
+    "corpus/fixtures/r97-crossing-acknowledgment/sources.json": "438fb513a62496c41179ead3ea2a55a69ff4ce1fd191c3a7ebccb10651a8dc73",
+    "corpus/fixtures/r97-crossing-acknowledgment/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r97-crossing-acknowledgment/README.md": "d9387b7d73264dfc6c01d27cc6bf24c58ef6bdb4461d2ae8fbfdb6376d9e019f",
+    "corpus/fixtures/r97-crossing-acknowledgment/claim-excerpt-map.md": "49d4834e124fa6cfaa1a73cd5d1a7bc2cb59711c6233b418fe7485a17eedc94f",
+    "corpus/fixtures/r97-crossing-acknowledgment/fictional-excerpts.md": "8ba491cb249dd57f6aee8ca216133b07c06287c0240be658ea2e68da0cf5703c",
+    "corpus/fixtures/r97-crossing-acknowledgment/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r97-crossing-acknowledgment/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r98-clerk-filing/entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+    "corpus/fixtures/r98-clerk-filing/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r98-clerk-filing/timeline.json": "eb24e0848e597efa29ed858cb8557d8f3126a47e1231f9469d719257e191e7af",
+    "corpus/fixtures/r98-clerk-filing/sources.json": "32ee15b1f3d72d94f4228cbc9cefa69b7185d18b47bbe219833d7aaf30eed0f3",
+    "corpus/fixtures/r98-clerk-filing/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r98-clerk-filing/README.md": "32efc78f70e6de4f9670134080711923199e8693015d3ebea75a4a1ca6362926",
+    "corpus/fixtures/r98-clerk-filing/claim-excerpt-map.md": "c1099d0ee9eece241ea1f796320a84453dfc6b6aec33b7b9dd7e39bbef4a94ba",
+    "corpus/fixtures/r98-clerk-filing/fictional-excerpts.md": "29e384bf2eb2ab80858ace9423f29088a552553f87da7f6a9b694cbb050666de",
+    "corpus/fixtures/r98-clerk-filing/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r98-clerk-filing/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd",
+    "corpus/fixtures/r99-window-lapse/entities.json": "db2d8e5d3866009bd5f98121080eb89eddb21adf58f20b803e58ae0c26872984",
+    "corpus/fixtures/r99-window-lapse/relations.json": "c279254bc7de0636d91823b6bf336edc780fad4aade9c63cc4b0ac65cc4a6ff9",
+    "corpus/fixtures/r99-window-lapse/timeline.json": "2cdb9fda5baae1a496b31c004a7e0a9345ac580b257da0d9a04c045214c4c069",
+    "corpus/fixtures/r99-window-lapse/sources.json": "8c215b38dc02400910ff935eab46ecf82b0381b63a75d092b03bd601a9915f15",
+    "corpus/fixtures/r99-window-lapse/contradictions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "corpus/fixtures/r99-window-lapse/README.md": "b93209417a918a88231dc12ba72b7314db5bf24eeaa52fbab761acadbe777049",
+    "corpus/fixtures/r99-window-lapse/claim-excerpt-map.md": "d2fe20e581d1c29bdc22f9018f4bcc111c425c64132227d2868ff15cf1476e3d",
+    "corpus/fixtures/r99-window-lapse/fictional-excerpts.md": "fefebaf93d148dbe3304ef473602c91287b45b52841638c4348f0f065d32002d",
+    "corpus/fixtures/r99-window-lapse/inspiration-note.md": "58f5390e5928ebad9b7feb3d60d1351919226a4bb00e2e3b9c4a5457bcc82d37",
+    "corpus/fixtures/r99-window-lapse/source-excerpt.md": "b5edc2fd3c2e3d4fed0f1c98c17f38f69fc0f4d3c385001db292b79b4d76d4cd"
+  }
+}
