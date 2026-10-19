@@ -1,0 +1,41 @@
+# Round 103 sealed adjudication — Q06
+
+Q06 is `corpus/QUALITY.md:17`; comparison rule follows the r82 sealed-reader precedent (`LOG.md:1530, 1534, 1538`): wording or operational detail is not a delta unless the first record/checker/routing action changes materially. Baseline/proposal gists below are from the corresponding `R103Sealed{A,C,E}-{baseline,proposal}.md` receipts.
+
+| q | Baseline first-action gist | Proposal first-action gist | Grade | Why |
+|---|---|---|---|---|
+| qA1 | Keep both Ilse rows and their claims; flag collision in cluster README. | Keep both rows, distinguish by IDs and sourced claim; no merge/rejection. | SAME | Both preserve two entities and do not infer identity from the shared label. README flag vs claim emphasis does not establish a contrary row action; the proposal does not forbid the baseline's flag. |
+| qA2 | Add a sourced claim for Tam Rook's register usage; no alias field or Grey-Factor entity. | Keep preferred name and add the `register-14` sourced alternate-name claim. | SAME | Same claim-row decision and no new entity; the exact claim wording is not a different first action. |
+| qA3 | Record gossip as its own sourced claim, leave identity unresolved, route candidate to editorial review. | Record the qualified gossip assertion, leave unresolved, add no timeline-ledger row. | SAME | Both preserve attribution and decline to choose an identity. The baseline's own-judgment editorial-review route is not contradicted by the proposal; omission is not a different route. |
+| qA4 | Leave checker unchanged; no duplicate-name hard failure; keep question open for calibrated probe. | Leave checker unchanged; defer warn/convention design to L0. | SAME | Same checker and routing outcome; proposal's extra design boundary is explicitness, not a new action. |
+| qA5 | Do not attach signing to Tam; keep a `letter-9`-attributed assertion and identity unresolved. | Do not attach signing to Tam; keep unresolved candidate pending referent/field/occasion evidence. | SAME | Both reject identity transfer and retain the matter unresolved. The proposal does not prohibit preserving the letter's attributed assertion; no contrary record/routing choice is stated. |
+| qC1 | Add two source-attributed rows at editorial ticks 8 and 6, on opposite sides of tower tick 7. | Add two source-attributed rows on opposite sides of tick 7, without decoding dates into ticks. | SAME | The baseline's exact 6/8 choices satisfy the proposal's below/above ordering; the different precision does not change the record decision. The baseline marked those exact values own judgment. |
+| qC2 | Keep “third winter after the Salt Accord” as claim wording; no tick arithmetic or dependency. | Add `depends_on` from chronicle row to Salt Accord; keep tick gap editorial and do no arithmetic. | DIFFERENT | The proposal adds a concrete relation absent from the baseline. This is a real timeline/checker-visible record change, and the entry's relative-time rule expressly maps “after” to an ordering edge (`r103-in-world-dating-and-uncertain-time.md:30`). |
+| qC3 | Preserve both source wordings verbatim in descriptions with their own source IDs; no date field. | Preserve wording/source; identify Lantern calendar and allow only editorial bounds if “late thaw” is treated as approximate. | SAME | “Lantern year 12” is already retained in the baseline wording; optional bounds have no specified values and do not require a different first record. |
+| qC4 | Add unresolved contradiction pair for the two sourced tick/order claims; leave tower at 7. | Keep both attributed orderings and add a contradiction pair; do not choose/merge/drop either. | SAME | Same pair, unresolved status, and preservation action; proposal's clearer formulation is not a new ledger decision. |
+| qC5 | Add no date/calendar field or checker rule; retain integer-tick behavior. | Leave checker unchanged and keep entry as editorial encoding method. | SAME | Both reject a checker/schema change this round. |
+| qE1 | Preserve docket-1 unchanged; docket-2 alone refers back through `depends_on`. | Preserve docket-1 byte-exact and append docket-2 beside it. | SAME | Both keep the earlier record intact and append the later one. The proposal does not direct rewriting/deletion or a different supersession status. |
+| qE2 | Add docket-2 source/event, with amendment text in its sourced event description and a `depends_on` to docket-1. | Add docket-2 event and, separately, a sourced supersession statement or relation citing docket-2. | DIFFERENT | The separate declaration/relation is an additional sourced record, not just wording: it explicitly links the declaring source to the earlier account. The candidate requires this declaration as its own sourced statement/relation (`r103-canon-status-and-supersession.md:36-39,47`); the baseline's event description and ordering edge do not encode that distinct relation. |
+| qE3 | Keep author note out of in-world sources; make an editorial note and route unresolved policy to L0. | Record the note as a dated editorial addendum/convention outside sources, without overwriting dockets. | SAME | Both use an out-of-world editorial record, keep it out of `sources.json`, and leave the in-world dockets intact. Naming the addendum's contents is more specific, not a different venue/action. |
+| qE4 | Add contradiction row pairing the two place claims; neither wins. | Add unresolved place-pair row even though docket-2 declares amendment. | SAME | Both preserve the two reports and add the same place-field contradiction; neither resolves it. |
+| qE5 | Add no canon/source-precedence order; route policy to L0. | Record desired author-note > later-docket > earlier-docket order only as a declared convention; no hard checker failure absent it. | DIFFERENT | The proposal creates a convention record where the baseline explicitly defers and adds none. This changes both the bible's policy record and the next route; it matters because the entry says declared conventions are the condition that makes tier ordering operative (`r103-canon-status-and-supersession.md:49`). |
+
+## Own-judgment count
+
+Counted baseline answers that explicitly mark any part of the answer as `corpus silent / own judgment`: **8/15** — A: 3 (qA2 wording, qA3 routing artifact, qA5 attach-vs-hold weighting); C: 3 (qC1 exact ticks/split, qC4 exact pair, qC5 absence of conversion source); E: 2 (qE3 venue, qE4 amendment-specific pair). This is a secondary count, not itself a delta; grounded portions of those answers were still compared above.
+
+## Sealing check
+
+No breach is evident in the six receipts' `sealed-inputs` declarations. A-baseline declares pinned-base reads and no proposal/round-103 read; A-proposal declares the allowed A entry plus listed base material. C-baseline declares pinned-base inputs and excludes the proposal; C-proposal declares the allowed C entry plus listed base material. E-baseline explicitly excludes the proposal, round-103 files, QUALITY, SOURCES, lessons, and other receipts; E-proposal declares the allowed E entry plus listed base material. None declares reading another seat receipt or a forbidden candidate/round file.
+
+## Per-entry Q06 verdicts
+
+- **A — REJECT.** qA1–qA5 are SAME: the baseline already preserves distinct entities and sourced assertions, declines identity transfer, and leaves checker/routing choices materially aligned with the proposal.
+- **C — ADMIT.** Decisive qC2: only the proposal adds the `depends_on` record for relative “after” time; it changes the timeline relation rather than merely making the baseline's no-arithmetic answer more explicit.
+- **E — ADMIT.** Decisive qE2 and qE5: a separate sourced supersession declaration and a declared precedence-convention record are additional bible records; the baseline instead has only the amendment event/defer-to-L0 actions.
+
+## Overall conclusion
+
+A is rejected: its sealed first actions materially match the proposal.
+C is admitted: qC2 changes the timeline by adding a `depends_on` edge.
+E is admitted: qE2 and qE5 add a sourced supersession declaration and a precedence convention record.
