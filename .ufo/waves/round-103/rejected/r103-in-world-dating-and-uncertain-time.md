@@ -91,3 +91,11 @@ A `calendar` or `date` column in `timeline.json` would tempt exactly the silent 
 ## Adjacent
 
 Boundary, reported not absorbed: kotodama-shokunin owns calendar and era **design** for generated worlds (`kotodama-shokunin/corpus/knowledge/culture-material/calendar-festival-systems.md`, `kotodama-shokunin/corpus/knowledge/culture-material/era-periodization-models.md`, verified present under the fleet kaika worktree). Lore owns **recorded chronology**: ticks, dated in-world claims, and ordering in `timeline.json`. This entry imports none of kotodama's design rules; a fictional calendar authored by generation work is treated here as a named TRS string like any other sourced claim.
+
+## Rejected at post-review re-grade (round 103, 2026-10-19 — appended; text above stands)
+
+Admitted in `33173138` and withdrawn here. The decisive rule (decision table, row "Relative time") writes `depends_on` for pure temporal precedence. In this lane `depends_on` lists **stated prerequisites**: "direction is `depends_on` (prerequisite → event)" (`corpus/knowledge/2026-10-12-lore-decision-table.md:19`; inversion row at `:12`). "Three winters after X" orders two events; it does not say X is a prerequisite. Encoding it as one asserts more than the excerpt supports — the M04 class, now criterion Q13 in `corpus/QUALITY.md`.
+
+The sealed comparison admitted this entry only on qC2 (`.ufo/waves/round-103/seats/R103Adjudicator.md:13`), and qC2 is exactly that edge. Under the corrected rule the proposal action equals the baseline's: keep the phrase in the sourced description, place the event at an editorial tick on the stated side of its anchor, add no edge. With qC2 SAME, every question is SAME and the entry fails Q11 (supersedes Q06). It moved here from `corpus/knowledge/` by `git mv`; the bytes and history are kept.
+
+Corrected rule for a future entry: relative time → editorial tick order only; `depends_on` only where the excerpt states a prerequisite; a stated span never becomes a tick-gap magnitude. Flip: a sealed case on which the base corpus decides wrongly — for example, an author who converts a named-calendar date into a tick without a sourced correlation.

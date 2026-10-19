@@ -32,3 +32,4 @@ Only writes this standalone lane repository (`lore-shokunin/`), its own fleet ro
 
 - 2026-10-19: the refusal line above names `art-east-asian-design`, a lane absent from the fleet roster — from the fleet root, `grep -c 'art-east-asian' MANIFEST.json` → 0. The rights/permission refusal stands unchanged; only the named owner does not resolve to a lane.
 - 2026-10-19: the Sources line "in-world documents under corpus/ (world bible, once rounds produce it)" is stale — fixture bibles now exist: `echo $(( $(find corpus/fixtures -maxdepth 1 -type d | wc -l) - 1 ))` → 174 (K15 census).
+- 2026-10-19 (round 103 post-review): CM-c is withdrawn from Core. Its entry was rejected at re-grade (`corpus/lessons/round-103.md` `## Post-review corrections`). Of this round's method coverage, only CM-e stays in Core; CM-c is partial again and back on the frontier.

@@ -723,3 +723,20 @@ Learning trends (self, pending non-author): expansion improved (two entries admi
 saturation: none declared; stagnation window N=3 stands (line "saturation: no reproducible…" above). The nudge stays disabled.
 planned (r104): (1) coverage CM-a — re-attempt only with a seeded case the base corpus decides wrongly (the r103 rejection's flip); (2) adjacency CM-g — record the kotodama-lore-adjacency acknowledgement at the current digest; (3) freshness — dated addenda for the 24 dead seat-scratch pointers (`git show 099b4bc:<path>`).
 retired: none.
+
+
+## Round 103 — post-review corrections (2026-10-19 — appended; the round 103 section above stands)
+
+Trigger: the orchestrator's non-author adjudication (the reviewer reproduced the counts and held for corrections; the critic would reject as claimed). Corrections are in the commit that follows `74384c94`; the lesson record is `corpus/lessons/round-103.md` `## Post-review corrections`.
+
+**Line-shift note.** `74384c94` inserted the capability row at `SCORECARD.md:80`. Every citation of `SCORECARD.md:N` with N ≥ 80 written before that commit (r103 lesson, `corpus/QUALITY.md`, earlier rounds' records) now resolves at N+1. The r103 citations are re-pointed in the lesson (M13; criterion Q12).
+
+| Claim | Axis | Restated before → after (`bash .ufo/waves/round-103/measure.sh 6cec83a` vs the post-review commit) | Self-verdict (pending non-author) |
+|---|---|---|---|
+| C1 | coverage | Credited only with independently verifiable work: coverage map 0 → 19 rows (all `verify` cells replay); `## Frontier` 0 → 1 (5 rows, CM-c returned to it); PROVINCE Core/Frontier/Adjacent 0 → 3. Admissions are joint C1+C2+C3 and not credited here; after corrections, governed CM-a..g rows = 1 (CM-e) | improved (bounded) |
+| C2 | calibration | Q rows 0 → 13 (Q01–Q10 plus Q11–Q13, which supersede Q06, Q09 and Q04; Q06 and Q09 restored to their first text); M rows 0 → 13, all captured; final-bar re-grade: CM-a rejected, CM-c rejected (was admitted; the Q13 encoding miss), CM-e admitted | improved (bounded) — the outside check disagreed on one admit; the disagreement is learned (M12 → Q13; M11 → Q11) |
+| C3 | depth (capability) | SOURCES rows 0 → 32 (S032 supersedes S023's anchor); admitted entries fully traced 0/0 → 1/1 (the capability row's "2/2" was correct at `33173138` and is 1/1 after the CM-c rejection); fleet census `TZ=UTC … sources-census.sh validate` exits 1: E04 S017 (shares its URL with S012 for a different scope; append-only forbids editing it) and W01 S027 (tier C, mined, not sole support) | contested; the operator rules (critic: bookkeeping, not a capability) |
+
+Harm check: operability unchanged (gate battery re-run on the post-review commit); `SKILL.md:27` was withdrawn in place, keeping later anchors stable, and its old text is quoted in the lesson. Adjacency unchanged. Freshness unchanged (bounded): S023's lifecycle was re-opened and corrected by S032.
+
+planned (r104) — supersedes the r104 list above: (1) coverage CM-c or CM-a, only with a seeded case the base corpus decides wrongly; (2) adjacency CM-g, the kotodama contract acknowledgement at the current digest; (3) freshness, the 24 dead seat-scratch pointers and the pre-`74384c94` `SCORECARD.md:N≥80` anchors in older records.

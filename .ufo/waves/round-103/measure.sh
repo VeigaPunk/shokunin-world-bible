@@ -32,3 +32,12 @@ for f in $(files corpus/knowledge | grep -E 'knowledge/r103-.*\.md$'); do
   done
   [ "$good" = 1 ] && ok=$((ok+1))
 done; echo "$ok/$tot"
+
+# --- appended round 103 post-review (2026-10-19): correction-aware coverage metric.
+# A CM-a..g row counts only while the r103 entry it names still exists under corpus/knowledge.
+printf 'after corrections — CM-a..g rows governed by an existing admitted entry: '
+n=0
+for e in $(show corpus/README.md | grep -E '^\| CM-[a-g] ' | grep -F '| governed-' | grep -oE 'corpus/knowledge/r103-[a-z0-9-]+\.md' | sort -u); do
+  files corpus/knowledge | grep -qxF "$e" && n=$((n+1))
+done; echo "$n"
+printf 'QUALITY rows superseding an earlier row: '; show corpus/QUALITY.md | grep -cE '^\| Q[0-9]{2} \| Supersedes Q[0-9]{2} '

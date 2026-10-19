@@ -3653,3 +3653,20 @@ Recorded for the ledger (previously unlogged, STATE dossier §1/K19): post-r102 
 Falsifiable next iteration: CM-a is admitted only if a seeded integration case shows the base corpus deciding wrongly (Q06); the kotodama contract acknowledgement either records digest `5f4c02bf…` per its §1 fields, or the CM-g row stays uncovered.
 
 No promotion, no push (standing operator no-push rule; operator-gated). SHONEN four `[~]`, no `[x]`. Non-author verification (≥1 admit and ≥1 reject spot-checked, ≥3 SOURCES rows re-opened, counting commands re-run) is the orchestrator's, after landing.
+
+
+## Round 103 — post-review corrections (2026-10-19)
+
+Trigger: the orchestrator's adjudication of r103 (non-author reviewer and critic) after `33173138` and `74384c94` landed. Required: restore Q06 history; re-grade the sealed cases; fix CM-c's relative-time rule or reject it; S012/S017 duplicate URL; S023 recheck and lifecycle; S027 not sole support; the five early SCORECARD pointers; restate C1.
+
+Action → outcome (all appended except the noted in-place edits):
+- `corpus/QUALITY.md`: Q06 and Q09 restored to their first text (in place, as required, so the history row is truthful). Q11, Q12 and Q13 appended, superseding Q06, Q09 and Q04, plus a restoration note.
+- **CM-c rejected.** Its decisive rule encoded relative time as `depends_on`, which lists stated prerequisites (`corpus/knowledge/2026-10-12-lore-decision-table.md:19`). With the rule corrected, qC2 matches the baseline, so CM-c fails Q11. The entry moved by `git mv` to `.ufo/waves/round-103/rejected/` with an appended reason.
+- `SKILL.md:27` was replaced in place by a WITHDRAWN row so later anchors stay stable (M13); the old text is quoted in the lesson.
+- **CM-e re-graded and still admitted** on qE2. An appended correction states that S027 is never sole support.
+- `corpus/SOURCES.md`, in-place cells (rule 2, logged in the lesson): S020–S023 mined → queued with used-by → —; S023 recheck annual → 365d. S032 appended (supersedes S023; opened via two Wayback captures with sha256). The S012/S017 shared URL is explained in `## Search log`.
+- Fleet census exit 1, with E04 S017 and W01 S027 only, both explained.
+- Lesson: M11–M13 appended, the corrected SCORECARD pointers (cause: the `74384c94` insertion at `SCORECARD.md:80`), a 15-question re-grade table, the C1 restatement and the SOURCES change log.
+- `corpus/README.md`, `PROVINCE.md`, `SCORECARD.md`: appended corrections. `.ufo/waves/round-103/measure.sh`: appended a correction-aware metric.
+
+Falsifiable next iteration: a CM-c entry is admitted only if a sealed case shows the base corpus deciding wrongly, and its rules pass Q13 field by field.

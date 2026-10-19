@@ -101,3 +101,88 @@ Round 103 gate, run by L1 lore against `corpus/QUALITY.md` Q01–Q10 (2026-10-19
 ### Spot-check
 
 Pending: a non-author (the orchestrator) spot-checks ≥1 admit and ≥1 reject after the round lands (`corpus/QUALITY.md` `## Admission procedure` step 4). The lane's own critic, adjudicator and reviewer seats are still the lane (LEARNING.md "Discernment is checked from outside") and are not counted as the spot-check.
+
+
+## Post-review corrections (round 103, 2026-10-19 — appended; everything above stands)
+
+Trigger: the orchestrator's adjudication after landing (a non-author reviewer reproduced the counts and held for corrections; a non-author critic would reject as claimed). Work commits under review: `33173138`, `74384c94`.
+
+### Mistakes (appended)
+
+| M## | class | evidence pointer (file:line + verbatim fragment) | captured-by criterion | fix |
+|---|---|---|---|---|
+| M11 | Criterion rewritten in place after results: a gate criterion edited once the outcomes it would decide were known | corpus/QUALITY.md Q06 at `33173138` — "Explicitness is not a delta" — wording added after `.ufo/waves/round-103/seats/R103Adjudicator.md:25` counted 8/15 own-judgment answers | Q11 (supersedes Q06; restoration note in corpus/QUALITY.md) | criteria are frozen before a gate runs; a change after results is a new row naming the row it replaces, dated, with its direction (stricter or looser) stated |
+| M12 | Gate applied the encoding bar to fixture data but not to a method entry's own rules | `.ufo/waves/round-103/rejected/r103-in-world-dating-and-uncertain-time.md:30` — "a `depends_on` edge (or an existing event reference) gives precedence"; the field means "prerequisite → event" (`corpus/knowledge/2026-10-12-lore-decision-table.md:19`) | Q13 (supersedes Q04) | every rule an entry tells authors to encode is checked against the declared meaning of the field it writes |
+| M13 | Line-anchor drift from an in-ledger insertion | `74384c94` inserted `SCORECARD.md:80` (capability row), so every cited SCORECARD line ≥80 moved down by one, including the five in M07/M08 | Q12 (supersedes Q09) | append below cited content; after any insertion, re-resolve every `file:N` anchor into that file |
+
+### Corrected pointers (appended; the original cells above stand)
+
+Cause: M13. Each fragment was re-printed at the new line on `74384c94`.
+
+| where cited | was | now | fragment at the new line |
+|---|---|---|---|
+| lesson M07 (and QUALITY Q07) | SCORECARD.md:356 | SCORECARD.md:357 | "r89 calibration is **harmed**" |
+| lesson M08 | SCORECARD.md:383 | SCORECARD.md:384 | "32 tool-terminal `completed` labels do not mean 32 usable reviews" |
+| lesson M08 (and QUALITY Q08) | SCORECARD.md:600 | SCORECARD.md:601 | "ROSTER ERRATUM (recorded append-only in LOG)" |
+| lesson M08 (and QUALITY Q08) | SCORECARD.md:634 | SCORECARD.md:636 | "declared 28, dispatched" (the R103Reviewer-pre seat already had 634 one line early, SHIFTED(635), before the insertion) |
+| lesson M08 (and QUALITY Q08) | SCORECARD.md:667 | SCORECARD.md:668 | "ROSTER ERRATUM (third of" |
+| outside checks r89 / r94 / r96 / r97 / r99 / r100 | SCORECARD.md:356, 408-409, 480, 544, 582, 616 | SCORECARD.md:357, 409-410, 481, 545, 583, 617 | same fragments as quoted in `### Outside checks that disagreed with the gate` |
+
+### Q06 history and the re-grade against the final bar
+
+`corpus/QUALITY.md` Q06 is restored to its first text. Q11 supersedes it with the post-results wording, which is stricter. Q13 supersedes Q04. Re-grade of all 15 sealed questions under Q11 and Q13 (receipts: `.ufo/waves/round-103/seats/R103Sealed{A,C,E}-{baseline,proposal}.md`; first grades: `R103Adjudicator.md`):
+
+| q | first grade | final grade | reason |
+|---|---|---|---|
+| qA1–qA5 | SAME ×5 | SAME ×5 | unchanged; no record, checker or routing difference |
+| qC1, qC3, qC4, qC5 | SAME | SAME | unchanged |
+| qC2 | DIFFERENT | SAME (proposal action fails Q13) | the proposal's `depends_on` edge to the Salt Accord encodes a prerequisite the chronicle does not state; under the corrected rule the action is the baseline's (phrase kept, no edge) |
+| qE1, qE3, qE4 | SAME | SAME | unchanged |
+| qE2 | DIFFERENT | DIFFERENT | a separate sourced declaration citing `docket-2`; the excerpt "entry 1 amended" supports it; the field stays within its meaning (Q13) |
+| qE5 | DIFFERENT | DIFFERENT (not decisive) | a declared editorial convention record; acceptable only when labelled editorial (Q13), so admission rests on qE2 |
+
+Result under the final bar: CM-a **rejected** (unchanged); CM-c **rejected** (was admitted); CM-e **admitted** (qE2 decisive). Under the first Q06 text the outcome is the same, because the CM-c change comes from Q13, not from the Q06 wording.
+
+### CM-c rejection (append-only record)
+
+- The entry moved by `git mv` from `corpus/knowledge/` to `.ufo/waves/round-103/rejected/r103-in-world-dating-and-uncertain-time.md`, with an appended rejection section. Bytes and history are kept.
+- `SKILL.md:27` was replaced in place by a WITHDRAWN row with the corrected guidance. This is the one non-append edit of this pass. Inserting a correction row would have shifted every later SKILL line anchor (M13); leaving the row would have left a falsified rule standing (PROTOCOL.md §Evidence standard, "Corrections sweep every mention"). The withdrawn row's verbatim text (pipes escaped `\|` only):
+
+  \| A source dates an event in a named in-world calendar, approximately, or relative to another event \| Keep the date string verbatim in the sourced claim, naming its calendar; never convert between calendars or into a tick without a sourced in-world correlation. Relative time ("three winters after X") becomes a `depends_on` edge to X's existing event id (it must resolve and sit at an earlier tick), never a tick-gap magnitude. Uncertain dates get editorial-labelled bounds in the clause map only — never a point, never a new timeline field. \| `corpus/knowledge/r103-in-world-dating-and-uncertain-time.md:21-31` (CM-c). \|
+
+- Downstream corrections are appended: `corpus/README.md` `## Coverage map corrections`, `PROVINCE.md` (last Corrections bullet), `corpus/SOURCES.md` (Paths correction bullet), `SCORECARD.md`, `LOG.md`.
+
+### SOURCES cell changes (contract rule 2, logged old → new)
+
+| row | cell | old | new | reason |
+|---|---|---|---|---|
+| S020, S021, S022, S023 | status | mined | queued | their only citing entry (CM-c) was rejected |
+| S020, S021, S022, S023 | used-by | corpus/knowledge/r103-in-world-dating-and-uncertain-time.md | — | path no longer in corpus/knowledge |
+| S023 | recheck | annual | 365d | cadence normalised to the census form |
+
+New row **S032** (`supersedes S023 —`). Gate record:
+
+- S032 — https://www.iso.org/standard/70908.html — accessed 2026-10-19 via Wayback captures 20241230054021 and 20260102081905 (live page behind a bot challenge) — "This publication was last reviewed and confirmed in 2024. Therefore this version remains current." (General information / lifecycle, both captures)
+
+S023's anchor "confirmed 2024-12-05" appears in neither capture. The 2026-01-02 capture shows "ISO 8601-2:2019/Amd 1:2025", so the seat's first "Amendment 1:2025 noted" was supported by the later page. The pre-commit rewrite to "Amd 1 under development" described the 2024 capture only. S032 records both.
+
+**S012 and S017** share `https://arxiv.org/html/2603.05890` and both stand: they have different scopes (§2.2 taxonomy, tier A, queued; §2.3 LLM judge as canon authority, tier C, rejected). The fleet census flags S017 E04, and append-only rule 2 forbids editing S017's source cell; the explanation is in `corpus/SOURCES.md` `## Search log`.
+
+**S027** (tier C, mined; census W01) is not sole support for any admitted entry: CM-e's tier rule rests on Q01 and S025 (appended correction in `corpus/knowledge/r103-canon-status-and-supersession.md`).
+
+Census: `TZ=UTC bash /home/vgpnk/Projects/shokunin/.tower/worktrees/kaika/fleet-census/scripts/sources-census.sh validate .` from the lane root prints `E04 S017` and `W01 S027` and exits 1. Both findings are explained above; no other finding is printed.
+
+### Q01 and Q05 test commands — first text (pre-commit spelling repairs, meaning unchanged)
+
+- Q01 test, first text: enumerate the checker's fail classes — `grep -nE 'VIOLATION\|sys.exit\|exit\(' corpus/fixtures/check_bible.py` — each must name its declared convention; a name/alias-style predicate has none, so it may only warn or become an L0 question
+- Q05 test, first text: the candidate names its sweep pattern; replay it — e.g. `grep -nE 'already (exercised\|admitted\|corrected)\|prior art' LOG.md` — and confirm no hit repeats the claim
+
+(Pipes are escaped `\|` here only. The repairs replaced in-cell `|` alternation, which split the table columns, with `grep -e` forms.)
+
+### C1 restated
+
+C1 (coverage) is credited only with work a reader can verify without C2 or C3: the coverage map (0 → 19 rows; all `verify` cells replay their stated exits), `## Frontier` (0 → 1, 5 rows, plus CM-c returned), and PROVINCE Core/Frontier/Adjacent (0 → 3). The admission (now CM-e only) is a joint C1+C2+C3 outcome and is not credited to C1.
+
+### Spot-check (post-review)
+
+The orchestrator's non-author reviewer and critic reviewed this round after landing. They disagreed with the gate on one admit (CM-c). That disagreement is learned here as M12 → Q13, and as M11 → Q11 for the post-results wording. The required non-author spot-check of ≥1 admit (CM-e) and ≥1 reject (CM-a or CM-c) on the corrected record remains the orchestrator's.

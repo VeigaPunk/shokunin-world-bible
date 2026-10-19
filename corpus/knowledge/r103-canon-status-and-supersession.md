@@ -95,3 +95,9 @@ S027 is tier-C illustration: community/secondary art informs method and never es
 
 S024–S026 describe real-world data models; they shape this entry's *method* (rank, revision, invalidation, alternate), not any fictional content. Real-world source appraisal remains chousa's province (SKILL.md:7-9).
 
+
+## Correction (round 103 post-review, 2026-10-19 — appended; text above stands)
+
+- **S027 is never sole support.** The canon-tier row ("A tier ordering is a *declared convention*") rests on Q01 (`corpus/QUALITY.md`, lesson M01: the r4 homonym rejection, LOG.md:54) and on S025's rank semantics: ranks "are not a way of asserting your view for a disputed value". S027 (tier C, community) only illustrates that a franchise declared its tiers.
+- **Re-graded under Q11 and Q13.** qE2 (the amendment encoded as its own sourced declaration citing `docket-2`) remains DIFFERENT. It writes a sourced claim, or a relation whose `type` is a free string the checker does not interpret, and the excerpt "entry 1 amended" supports it. Admission stands on qE2. qE5 (a precedence recorded only as a declared editorial convention) is DIFFERENT but weaker: such a record is an editorial act and must be labelled editorial (Q13). It is not decisive on its own.
+- **The R10 register file** `corpus/knowledge/cross-cluster-contradictions.md` still does not exist; see the dated note at line 66.
