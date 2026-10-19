@@ -3632,3 +3632,24 @@ history, six registry gates, an eight-fixture frozen chain, and a
 consolidated, machine-checkable debt ledger. Scores remain unmeasured; no
 rubric was invented; every round's harms and errata stand in the
 append-only record.
+
+
+## Round 103 — kaika campaign: declaration, gate and landing (2026-10-19)
+
+Trigger: steered round 103 (fleet `.ufo/waves/kaika/steer.md`, `kaika/ledger`); W1 dossiers `.ufo/waves/kaika-w1/lore-state.md` and `lore-art.md` (fleet repo). The lane had stood at rest since r102. The STATE dossier found no `corpus/QUALITY.md`, no `corpus/lessons/`, no `corpus/SOURCES.md`, no coverage map or frontier, and PROVINCE without Core/Frontier/Adjacent (dossier §5, D1–D5).
+
+Declared claims (1–3, distinct owned axes): C1 coverage (lowest owned axis by prior trend), C2 calibration, C3 depth via the capability "source-traced admission". Dispatch: 12 L2 seats in one batched call (planner, connector, scout, scribe, 6 executors, reviewer, critic), then 6 sealed readers, 1 adjudicator, 2 SOURCES re-dispatches and 3 post-landing reviewers — 24 seats, receipt `.ufo/waves/round-103/receipt.md`. Provider capacity killed two executor seats (`resource_exhausted`; `turn_rate_limit_exceeded`); the third dispatch delivered.
+
+What moved the gate (evidence, not opinion): the pre-registration critic showed the declared Q06 exempted uncovered ground from the r82 decision-delta test (`.ufo/waves/round-103/seats/R103Critic-pre.md`); Q06 was rewritten before any entry was judged, and sealed baseline-vs-proposal readers were dispatched for all three candidate entries. Adjudication (`R103Adjudicator.md`): CM-a aliases 5/5 SAME → REJECTED (preserved at `.ufo/waves/round-103/rejected/`); CM-c dating qC2 DIFFERENT → admitted; CM-e supersession qE2, qE5 DIFFERENT → admitted. Q06 wording on own-judgment matches was tightened after the results, in the stricter direction, and disclosed in `corpus/lessons/round-103.md` `## Gate`.
+
+Landed in `33173138d2ece2ea1060ac6fbb1200a3c76f6ebd`: `corpus/QUALITY.md` (Q01–Q10, each citing `corpus/lessons/round-103.md` M01–M10); `corpus/lessons/round-103.md` (`## Mistakes`, `## Gate` with all 31 source gate records); `corpus/SOURCES.md` (31 opened rows, A=23 B=3 C=5, mined=16 queued=12 rejected=3, Paths, Search log, Leads); two knowledge entries (CM-c, CM-e); `corpus/README.md` appended coverage map (19 rows, every `verify` cell replayed), Known gaps, Frontier (5 rows); `PROVINCE.md` appended Core/Frontier/Adjacent plus two dated corrections (the unresolvable `art-east-asian-design` owner; the stale Sources line); `SKILL.md` two decision rows and a one-line pointer to QUALITY/SOURCES; `SHONEN.md` regenerated from the canonical seed (marks `[~]` only, evidence lines without extra prose); round receipts under `.ufo/waves/round-103/`.
+
+Before → after (`bash .ufo/waves/round-103/measure.sh 6cec83a` vs `… 33173138`): CM rows 0→19; governed CM-a..g rows 0→2; coverage-row entries 0→2; Frontier 0→1 (5 rows); PROVINCE sections 0→3; Q rows 0→10; lesson-cited Q rows 0→10; captured mistake classes 0→10; SOURCES rows 0→31; traced admitted entries 0/0→2/2. Gate battery unchanged (all exit 0 as at base).
+
+Post-landing review: reviewer (`R103ReviewerPost.md`) found 11 defects — a quote not verbatim, a gate quote typo, wrong SKILL anchors, a frontier row cited to an unrelated entry, a self-violating Q09 test, and a literal vault-scheme string in a persisted seat copy; all were fixed before the commit. The source re-open seat (`R103SourceRecheck.md`) re-fetched 12 rows with sha256 and found 9 defects (S012 cited /abs/ for HTML-only text; S023's Wayback read undisclosed and an unsupported "Amendment 1:2025"; S014 overstated "superseded"; S004 anchor range); all were fixed before the commit. Critic (`R103CriticPost.md`): C1 holds-bounded, C2 holds-bounded, C3 breaks as a capability claim; admissions are a coupled C1+C2+C3 outcome. These verdicts are recorded in SCORECARD for the operator.
+
+Recorded for the ledger (previously unlogged, STATE dossier §1/K19): post-r102 cleanup commits `f553a27` (deleted 153,283 files of seat scratch), `1659a42` (374 files) and `6cec83a` (`.gitignore`). `f553a27` left 24 durable pointers dead (dossier D7); they are listed in `corpus/README.md` `## Known gaps`, and the repair is planned for r104.
+
+Falsifiable next iteration: CM-a is admitted only if a seeded integration case shows the base corpus deciding wrongly (Q06); the kotodama contract acknowledgement either records digest `5f4c02bf…` per its §1 fields, or the CM-g row stays uncovered.
+
+No promotion, no push (standing operator no-push rule; operator-gated). SHONEN four `[~]`, no `[x]`. Non-author verification (≥1 admit and ≥1 reject spot-checked, ≥3 SOURCES rows re-opened, counting commands re-run) is the orchestrator's, after landing.

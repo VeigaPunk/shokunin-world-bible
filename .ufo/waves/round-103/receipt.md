@@ -29,7 +29,7 @@ Counts below are computed from this table (Q08), not typed. Every seat is a leaf
 | 23 | R103CriticPost | critic | batch 3 | completed | seats/R103CriticPost.md |
 | 24 | R103SourceRecheck | reviewer | batch 3 | completed | seats/R103SourceRecheck.md |
 
-- Seats dispatched: 24 (batch 1 = 12 in one batched call, meeting the ≥8 floor with planner, connector, scout, scribe, 5 executors, reviewer, critic).
+- Seats dispatched: 24 (batch 1 = 12 in one batched call, meeting the ≥8 floor with planner, connector, scout, scribe, 6 executors, reviewer, critic; corrected 2026-10-19 from "5 executors" in `33173138` — the table rows 5–10 are six executor seats).
 - Completed: 22. Failed on provider capacity: 2 (#5, #20), both re-dispatched; #21 delivered the work.
 - Roles: planner 1, connector 1, scout 1, scribe 1, executor 7 (incl. 2 failed), task-as-executor 1, labrat 6, reviewer 3, critic 3.
 - "Persisted by L1": read-only seats return their result as a message; L1 wrote it verbatim under seats/ with a header comment. Two persisted copies (R103Planner, R103ReviewerPost) had the literal vault-reference scheme string replaced by `[vault-ref-scheme]` so the credential sweep prints nothing; no credential was present.
