@@ -3670,3 +3670,11 @@ Action → outcome (all appended except the noted in-place edits):
 - `corpus/README.md`, `PROVINCE.md`, `SCORECARD.md`: appended corrections. `.ufo/waves/round-103/measure.sh`: appended a correction-aware metric.
 
 Falsifiable next iteration: a CM-c entry is admitted only if a sealed case shows the base corpus deciding wrongly, and its rules pass Q13 field by field.
+
+
+## 2026-11-12: publish reviewed curation notes
+
+Published 2 independently reviewed original reading note(s) from the saved curation copies. The note text and source/rights boundaries are preserved exactly. Notes carrying publication holds were excluded. This entry records publication only, not source-code reuse, capability admission, training, or assimilation. No private receipts or source captures are included.
+
+- `considerthese/2026-11-11-identifier-recognition.md`: source `Shokunin-Lore-Identifier-Recognition-2026-11-11.md`; SHA-256 `33bbd9135c4fd4db51cb6aa547ea828a434238887d3292775224816126ac5c41`.
+- `considerthese/2026-11-11-encoding-confidence.md`: source `Shokunin-Lore-Encoding-Confidence-2026-11-11.md`; SHA-256 `2943ec8f8f4853a8b0e5a2a8816bdadf7f450f7290d0719be0e9e1a80c906b55`.
